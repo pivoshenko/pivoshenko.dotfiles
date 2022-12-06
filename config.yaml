@@ -16,9 +16,14 @@ dotfiles:
   d_helix:
     dst: ~/.config/helix
     src: helix
+  
+  d_btop:
+    dst: ~/.config/btop
+    src: btop
 
 profiles:
   base:
     dotfiles:
       - f_starship
       - d_helix
+      - d_btop
