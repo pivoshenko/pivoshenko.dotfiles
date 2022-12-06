@@ -33,6 +33,10 @@ dotfiles:
     dst: ~/.zshrc
     src: .zshrc
 
+  f_p10k:
+    dst: ~/.p10k.zsh
+    src: .p10k.zsh
+
   d_helix:
     dst: ~/.config/helix
     src: helix
@@ -49,6 +53,7 @@ profiles:
       - f_bat
       - f_vim
       - f_zsh
+      - f_p10k
       - f_tmux
       - d_helix
       - d_btop
