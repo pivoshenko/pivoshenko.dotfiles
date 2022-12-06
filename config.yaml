@@ -17,6 +17,10 @@ dotfiles:
     dst: ~/.ipython/profile_default/startup/start.py
     src: ipython/start.py
 
+  f_bat:
+    dst: ~/.config/bat/config
+    src: bat/config
+
   d_helix:
     dst: ~/.config/helix
     src: helix
@@ -30,5 +34,6 @@ profiles:
     dotfiles:
       - f_starship
       - f_ipython
+      - f_bat
       - d_helix
       - d_btop
