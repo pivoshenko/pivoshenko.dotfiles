@@ -13,6 +13,10 @@ dotfiles:
     dst: ~/.config/starship.toml
     src: starship.toml
 
+  f_ipython:
+    dst: ~/.ipython/profile_default/startup/start.py
+    src: ipython/start.py
+
   d_helix:
     dst: ~/.config/helix
     src: helix
@@ -25,5 +29,6 @@ profiles:
   base:
     dotfiles:
       - f_starship
+      - f_ipython
       - d_helix
       - d_btop
