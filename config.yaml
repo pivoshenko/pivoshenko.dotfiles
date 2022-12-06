@@ -25,6 +25,10 @@ dotfiles:
     dst: ~/.vimrc
     src: .vimrc
 
+  f_tmux:
+    dst: ~/.tmux.conf
+    src: .tmux.conf
+
   d_helix:
     dst: ~/.config/helix
     src: helix
@@ -40,5 +44,6 @@ profiles:
       - f_ipython
       - f_bat
       - f_vim
+      - f_tmux
       - d_helix
       - d_btop
