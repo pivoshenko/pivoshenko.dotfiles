@@ -1,0 +1,24 @@
+config:
+  backup: true
+  banner: true
+  create: true
+  dotpath: dotfiles
+  keepdot: false
+  link_dotfile_default: nolink
+  link_on_import: nolink
+  longkey: false
+
+dotfiles:
+  f_starship:
+    dst: ~/.config/starship.toml
+    src: starship.toml
+
+  d_helix:
+    dst: ~/.config/helix
+    src: helix
+
+profiles:
+  base:
+    dotfiles:
+      - f_starship
+      - d_helix
