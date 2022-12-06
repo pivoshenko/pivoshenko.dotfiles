@@ -1,0 +1,29 @@
+theme = "onedark"
+
+[editor]
+line-number = "relative"
+mouse = true
+shell = ["zsh", "-c"]
+
+[editor.file-picker]
+hidden = false
+
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["file-name"]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+newline = "none"
+
+[editor.whitespace.characters]
+space = "·"
+nbsp = "⍽"
+tab = "→"
+tabpad = "·"
+
+[editor.indent-guides]
+render = true
