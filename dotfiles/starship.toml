@@ -8,9 +8,6 @@ force_display = true
 symbol = "\ufd03 "
 disabled = false
 
-[buf]
-symbol = " "
-
 [c]
 symbol = "\ue61d "
 
