@@ -1,89 +1,143 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
-[kubernetes]
-disabled = false
-
 [aws]
-symbol = "  "
+symbol = "\uf662 "
+force_display = true
+
+[azure]
+symbol = "\ufd03 "
+disabled = false
 
 [buf]
 symbol = " "
 
 [c]
-symbol = " "
+symbol = "\ue61d "
 
 [conda]
-symbol = " "
+symbol = "\uf10c "
+
+[cmd_duration]
+min_time = 500
 
 [dart]
-symbol = " "
+symbol = "\ue798 "
 
 [directory]
-read_only = " "
+read_only = " \uf83d "
 
 [docker_context]
-symbol = " "
+symbol = "\uf308 "
+
+[dotnet]
+symbol = "\uf81a "
 
 [elixir]
-symbol = " "
+symbol = "\ue62d "
 
 [elm]
-symbol = " "
+symbol = "\ue62c "
+
+[erlang]
+symbol = "\ue7b1 "
+
+[gcloud]
+symbol = "\ue7b2 "
 
 [git_branch]
-symbol = " "
+symbol = "\ue725 "
+
+[git_commit]
+tag_symbol = "\uf02b "
+tag_disabled = false
+
+[git_metrics]
+disabled = false
 
 [golang]
-symbol = " "
+symbol = "\ue724 "
 
 [haskell]
-symbol = " "
+symbol = "\ue777 "
+
+[hostname]
+ssh_only = true
+ssh_symbol = "\ueb01 "
 
 [hg_branch]
-symbol = " "
+symbol = "\ue725 "
 
 [java]
-symbol = " "
+symbol = "\ue738 "
 
 [julia]
-symbol = " "
+symbol = "\ue624 "
+
+[kotlin]
+symbol = "\ue634 "
+
+[kubernetes]
+symbol = "\ufd31 "
+disabled = false
 
 [lua]
-symbol = " "
+symbol = "\ue620 "
 
 [memory_usage]
-symbol = " "
+symbol = "\uf85a "
+disabled = false
 
 [meson]
-symbol = "喝 "
+symbol = "\ufa36 "
 
 [nim]
-symbol = " "
+symbol = "\uf6a4 "
 
 [nix_shell]
-symbol = " "
+symbol = "\uf2dc "
 
 [nodejs]
-symbol = " "
+symbol = "\ue719 "
+
+[openstack]
+symbol = "\ue771 "
 
 [package]
-symbol = " "
+symbol = "\uf8d6 "
+
+[php]
+symbol = "\ue76e "
 
 [python]
-symbol = " "
+symbol = "\ue235 "
 style = "green bold"
 
 [rlang]
 symbol = "ﳒ "
 
 [ruby]
-symbol = " "
+symbol = "\ue791 "
 
 [rust]
-symbol = " "
+symbol = "\ue7a8 "
 
 [scala]
-symbol = " "
+symbol = "\ue737 "
 
-[spack]
-symbol = "🅢 "
+[shell]
+zsh_indicator = "\uf79f"
+style = "green bold"
+disabled = false
+
+[status]
+symbol = "\uf467 "
+success_symbol = ""
+not_executable_symbol = "\uebd6 "
+map_symbol = false
+disabled = false
+
+[swift]
+symbol = "\ue755 "
+
+[terraform]
+symbol = "\ufa08 "
