@@ -17,9 +17,6 @@ symbol = "\ue61d "
 [conda]
 symbol = "\uf10c "
 
-[cmd_duration]
-min_time = 500
-
 [dart]
 symbol = "\ue798 "
 
