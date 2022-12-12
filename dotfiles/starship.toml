@@ -9,7 +9,7 @@ symbol = "\ufd03 "
 disabled = false
 
 [buf]
-symbol = " "
+symbol = "\uf15a "
 
 [c]
 symbol = "\ue61d "
@@ -110,7 +110,7 @@ symbol = "\ue235 "
 style = "green bold"
 
 [rlang]
-symbol = "ﳒ "
+symbol = "\ufcd2 "
 
 [ruby]
 symbol = "\ue791 "
