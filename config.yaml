@@ -36,6 +36,10 @@ dotfiles:
   f_p10k:
     dst: ~/.p10k.zsh
     src: .p10k.zsh
+  
+  f_hyper_js:
+    dst: ~/.hyper.js
+    src: .hyper.js
 
   d_helix:
     dst: ~/.config/helix

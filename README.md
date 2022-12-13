@@ -7,5 +7,3 @@
 ```shell
 dotdrop install -p base
 ```
-
-**Add a new config**
