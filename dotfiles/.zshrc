@@ -2,7 +2,7 @@
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-	source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 # If you come from bash you might have to change your $PATH.
@@ -83,38 +83,38 @@ export ZSH_WAKATIME_PROJECT_DETECTION=true
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-	aws
-	brew
-	celery
-	copypath
-	colorize
-	docker
-	docker-compose
-	git
-	gcloud
-	gh
-	helm
-	history
-	heroku
-	jfrog
-	kubectl
-	mvn
-	minikube
-	npm
-	python
-	poetry
-	pip
-	redis-cli
-	rust
-	sbt
-	scala
-	spring
-	tmux
-	thefuck
-	vscode
-	zsh-autosuggestions
-	zsh-vi-mode
-  zsh-wakatime
+    aws
+    brew
+    celery
+    copypath
+    colorize
+    docker
+    docker-compose
+    git
+    gcloud
+    gh
+    helm
+    history
+    heroku
+    jfrog
+    kubectl
+    mvn
+    minikube
+    npm
+    python
+    poetry
+    pip
+    redis-cli
+    rust
+    sbt
+    scala
+    spring
+    tmux
+    thefuck
+    vscode
+    zsh-autosuggestions
+    zsh-vi-mode
+    zsh-wakatime
 )
 
 source $ZSH/oh-my-zsh.sh

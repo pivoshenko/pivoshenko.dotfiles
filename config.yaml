@@ -49,6 +49,10 @@ dotfiles:
     dst: ~/.config/btop
     src: btop
 
+  d_xplr:
+    dst: ~/.config/xplr
+    src: xplr
+
 profiles:
   base:
     dotfiles:
@@ -59,5 +63,7 @@ profiles:
       - f_zsh
       - f_p10k
       - f_tmux
+      - f_hyper_js
       - d_helix
       - d_btop
+      - d_xplr
