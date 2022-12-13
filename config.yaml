@@ -56,6 +56,10 @@ dotfiles:
   d_xplr:
     dst: ~/.config/xplr
     src: xplr
+  
+  d_karabiner:
+    dst: ~/.config/karabiner
+    src: karabiner
 
 profiles:
   base:
@@ -66,8 +70,10 @@ profiles:
       - f_vim
       - f_zsh
       - f_p10k
+      - f_git
       - f_tmux
       - f_hyper_js
       - d_helix
       - d_btop
       - d_xplr
+      - d_karabiner
