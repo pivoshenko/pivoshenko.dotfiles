@@ -40,6 +40,10 @@ dotfiles:
   f_hyper_js:
     dst: ~/.hyper.js
     src: .hyper.js
+  
+  f_git:
+    dst: ~/.gitconfig
+    src: .gitconfig
 
   d_helix:
     dst: ~/.config/helix

@@ -1,0 +1,10 @@
+[user]
+    name = Volodymyr Pivoshenko
+    email = volodymyr.pivoshenko@gmail.com
+
+[core]
+    autocrlf = input
+    editor = hx
+
+[credential]
+    helper = store
