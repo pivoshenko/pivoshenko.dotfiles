@@ -182,4 +182,6 @@ source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export PATH=$PATH:$HOME/.spicetify
 
+alias ls="exa --tree --level=1 --icons"
+
 eval "$(starship init zsh)"
