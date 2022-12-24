@@ -1,3 +1,5 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -182,6 +184,19 @@ source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export PATH=$PATH:$HOME/.spicetify
 
+eval "$(starship init zsh)"
+
+export EDITOR=hx
+export VISUAL="$EDITOR"
+
+add-zsh-hook -Uz chpwd(){ source <(tea -Eds) }  #tea
 alias ls="exa --tree --level=1 --icons"
 
-eval "$(starship init zsh)"
+source "$HOME/.docker/init-zsh.sh" || true # Added by Docker Desktop
+
+# Hishtory Config:
+export PATH="$PATH:$HOME/.hishtory"
+source "$HOME/.hishtory/config.zsh"
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
