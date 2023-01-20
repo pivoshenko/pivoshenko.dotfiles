@@ -3,7 +3,7 @@
 🏗️ Configs and dotfiles.
 
 
-## 🧝🏻‍♀️ Installation
+## 🧑🏻‍💻 Installation
 
 1. Install [`dotdrop`][dotdrop].
 
