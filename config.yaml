@@ -61,6 +61,10 @@ dotfiles:
     dst: ~/.config/karabiner
     src: karabiner
 
+  d_fig:
+    dst: ~/.fig
+    src: .fig
+
 profiles:
   base:
     dotfiles:
@@ -77,3 +81,4 @@ profiles:
       - d_btop
       - d_xplr
       - d_karabiner
+      - d_fig
