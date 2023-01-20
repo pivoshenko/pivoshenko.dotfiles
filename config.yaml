@@ -11,15 +11,15 @@ config:
 dotfiles:
   f_starship:
     dst: ~/.config/starship.toml
-    src: starship.toml
+    src: .config/starship.toml
 
   f_ipython:
     dst: ~/.ipython/profile_default/startup/start.py
-    src: .ipython/start.py
+    src: .ipython/profile_default/startup/start.py
 
   f_bat:
     dst: ~/.config/bat/config
-    src: bat/config
+    src: .config/bat/config
 
   f_vim:
     dst: ~/.vimrc
@@ -47,19 +47,19 @@ dotfiles:
 
   d_helix:
     dst: ~/.config/helix
-    src: helix
+    src: .config/helix
   
   d_btop:
     dst: ~/.config/btop
-    src: btop
+    src: .config/btop
 
   d_xplr:
     dst: ~/.config/xplr
-    src: xplr
+    src: .config/xplr
   
   d_karabiner:
     dst: ~/.config/karabiner
-    src: karabiner
+    src: .config/karabiner
 
   d_fig:
     dst: ~/.fig
