@@ -25,6 +25,6 @@ A clear and concise description of any alternative solutions or features you've 
 
 Add any other context or screenshots about the feature request here.
 
-[issues]: {{ https://github.com/volopivoshenko/cookiecutter-poetry/issues }}
+[issues]: https://github.com/volopivoshenko/dotfiles/issues
 
-[latest]: {{ https://github.com/volopivoshenko/cookiecutter-poetry }}
+[latest]: https://github.com/volopivoshenko/dotfiles

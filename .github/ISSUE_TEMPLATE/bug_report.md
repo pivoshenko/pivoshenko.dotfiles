@@ -31,7 +31,7 @@ If applicable, add screenshots to help explain your problem.
 
 - OS: e.g. `MacOS BigSur 11.6.1`.
 - Python version: e.g. `3.8.12`.
-- `cookiecutter-poetry` version: e.g. `1.0.0`.
+- `dotfiles` version: e.g. `1.0.0`.
 - Link of a [gist] with the contents of your `pyproject.toml` file.
 
 **Additional context**
@@ -40,6 +40,6 @@ Add any other context about the problem here.
 
 [gist]: https://gist.github.com
 
-[issues]: {{ https://github.com/volopivoshenko/cookiecutter-poetry/issues }}
+[issues]: https://github.com/volopivoshenko/dotfiles/issues
 
-[latest]: {{ https://github.com/volopivoshenko/cookiecutter-poetry }}
+[latest]: https://github.com/volopivoshenko/dotfiles
