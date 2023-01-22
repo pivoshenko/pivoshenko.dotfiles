@@ -27,4 +27,4 @@ Add any other context or screenshots about the feature request here.
 
 [issues]: https://github.com/volopivoshenko/dotfiles/issues
 
-[latest]: https://github.com/volopivoshenko/dotfiles
+[documentation]: https://github.com/volopivoshenko/dotfiles
