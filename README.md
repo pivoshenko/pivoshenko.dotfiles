@@ -4,7 +4,7 @@ Set of the configs and dotfiles for the tooling.
 
 ## 🧑🏻‍💻 Installation
 
-1. Install [`dotdrop`][dotdrop].
+1. Install [`dotdrop`][dotdrop]
 
 2. Run the following command to install the necessary configs:
 
