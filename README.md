@@ -1,6 +1,6 @@
 # 🏗️ Configs and Dotfiles
 
-🏗️ Set of the configs and dotfiles for the tooling.
+Set of the configs and dotfiles for the tooling.
 
 ## 🧑🏻‍💻 Installation
 

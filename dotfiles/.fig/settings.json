@@ -1,7 +1,0 @@
-{
-  "ai.terminal-hash-sub": false,
-  "app.preferredTerminal": "iTerm2",
-  "autocomplete.fontFamily": "JetBrainsMono Nerd Font",
-  "autocomplete.theme": "github-dark",
-  "dotfiles.syncImmediately": false
-}
