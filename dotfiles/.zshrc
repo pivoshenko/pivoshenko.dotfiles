@@ -1,5 +1,3 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -150,21 +148,6 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by "conda init" !!
-__conda_setup="$("$HOME/opt/anaconda3/bin/conda" "shell.zsh" "hook" 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "$HOME/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "$HOME/opt/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="$HOME/opt/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 # The next line updates PATH for the Google Cloud SDK.
@@ -173,32 +156,36 @@ if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/
 # The next line enables shell command completion for gcloud.
 if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
 
+# pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
+# AWS
 export AWS_PROFILE="default"
+
+# zsh-syntax-highlighting
 source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# autojump
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
+# spotify
 export PATH=$PATH:$HOME/.spicetify
 
+# promt
 eval "$(starship init zsh)"
 
 export EDITOR=hx
 export VISUAL="$EDITOR"
 
-add-zsh-hook -Uz chpwd(){ source <(tea -Eds) }  #tea
+# tea
+add-zsh-hook -Uz chpwd(){ source <(tea -Eds) }  
 alias ls="exa --tree --level=1 --icons"
 
-source "$HOME/.docker/init-zsh.sh" || true # Added by Docker Desktop
+# Added by Docker Desktop
+source "$HOME/.docker/init-zsh.sh" || true 
 
 # Hishtory Config:
 export PATH="$PATH:$HOME/.hishtory"
 source "$HOME/.hishtory/config.zsh"
-
-eval "$(zoxide init zsh)"
-
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
