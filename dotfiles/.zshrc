@@ -47,13 +47,13 @@ source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 eval "$(starship init zsh)"
 
 # update PATH for the Google Cloud SDK
-if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
+# if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
 
 # enable shell command completion for gcloud
-if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
+# if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
 
 # set default AWS profile
-export AWS_PROFILE="default"
+# export AWS_PROFILE="default"
 
 # enable pyenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -62,8 +62,8 @@ eval "$(pyenv init -)"
 
 # enable nvm
 export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"                                       # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
 
 # enable autojump
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
@@ -79,8 +79,7 @@ export VISUAL="$EDITOR"
 alias ls="exa --tree --level=1 --icons"
 
 # enable Docker Desktop
-source "$HOME/.docker/init-zsh.sh" || true
+# source "$HOME/.docker/init-zsh.sh" || true
 
-# enable hishtory
-export PATH="$PATH:$HOME/.hishtory"
-source "$HOME/.hishtory/config.zsh"
+# enable history
+eval "$(atuin init zsh)"

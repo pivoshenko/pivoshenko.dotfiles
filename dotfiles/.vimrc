@@ -1,3 +1,4 @@
+" plugins
 call plug#begin('~/.vim/plugged')
 Plug 'frazrepo/vim-rainbow'
 Plug 'vim-airline/vim-airline'
