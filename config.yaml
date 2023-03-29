@@ -36,19 +36,23 @@ dotfiles:
   f_p10k:
     dst: ~/.p10k.zsh
     src: .p10k.zsh
-  
+
   f_hyper_js:
     dst: ~/.hyper.js
     src: .hyper.js
-  
+
   f_git:
     dst: ~/.gitconfig
     src: .gitconfig
 
+  d_atuin:
+    dst: ~/.config/atuin
+    src: .config/atuin
+
   d_helix:
     dst: ~/.config/helix
     src: .config/helix
-  
+
   d_btop:
     dst: ~/.config/btop
     src: .config/btop
@@ -56,7 +60,7 @@ dotfiles:
   d_xplr:
     dst: ~/.config/xplr
     src: .config/xplr
-  
+
   d_karabiner:
     dst: ~/.config/karabiner
     src: .config/karabiner
@@ -73,6 +77,7 @@ profiles:
       - f_git
       - f_tmux
       - f_hyper_js
+      - d_atuin
       - d_helix
       - d_btop
       - d_xplr
