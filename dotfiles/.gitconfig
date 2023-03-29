@@ -1,10 +1,29 @@
 [user]
-    name = Volodymyr Pivoshenko
-    email = volodymyr.pivoshenko@gmail.com
+name = Volodymyr Pivoshenko
+email = volodymyr.pivoshenko@gmail.com
 
 [core]
-    autocrlf = input
-    editor = hx
+autocrlf = input
+editor = hx
+pager = delta
+
+[interactive]
+diffFilter = delta --color-only
+
+[delta]
+navigate = true
+light = false
+theme = OneHalfDark
+line-numbers = true
+side-by-side = true
+hyperlinks = true
+hyperlinks-file-link-format = "file-line://{path}:{line}"
+
+[merge]
+conflictstyle = diff3
+
+[diff]
+colorMoved = default
 
 [credential]
-    helper = store
+helper = store
