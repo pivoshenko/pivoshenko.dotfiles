@@ -29,7 +29,6 @@ plugins=(
     nvm
     python
     poetry
-    pyenv
     pip
     redis-cli
     rust
