@@ -57,6 +57,10 @@ dotfiles:
     dst: ~/.config/btop
     src: .config/btop
 
+  d_neofetch:
+    dst: ~/.config/neofetch
+    src: .config/neofetch
+
   d_xplr:
     dst: ~/.config/xplr
     src: .config/xplr
@@ -80,5 +84,6 @@ profiles:
       - d_atuin
       - d_helix
       - d_btop
+      - d_neofetch
       - d_xplr
       - d_karabiner
