@@ -18,6 +18,7 @@ plugins=(
     docker
     docker-compose
     git
+    git-auto-fetch
     gcloud
     gh
     helm
@@ -25,8 +26,10 @@ plugins=(
     kubectl
     minikube
     npm
+    nvm
     python
     poetry
+    pyenv
     pip
     redis-cli
     rust
@@ -79,7 +82,12 @@ export VISUAL="$EDITOR"
 alias ls="exa --tree --level=1 --icons"
 
 # enable Docker Desktop
-# source "$HOME/.docker/init-zsh.sh" || true
+source "$HOME/.docker/init-zsh.sh" || true
 
 # enable history
 eval "$(atuin init zsh)"
+alias history="atuin search -i"
+alias h="atuin search -i"
+
+# run neofetch
+fastfetch
