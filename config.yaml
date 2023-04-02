@@ -57,6 +57,10 @@ dotfiles:
     dst: ~/.config/btop
     src: .config/btop
 
+  d_fastfetch:
+    dst: ~/.config/fastfetch
+    src: .config/fastfetch
+
   d_neofetch:
     dst: ~/.config/neofetch
     src: .config/neofetch
@@ -84,6 +88,7 @@ profiles:
       - d_atuin
       - d_helix
       - d_btop
+      - d_fastfetch
       - d_neofetch
       - d_xplr
       - d_karabiner
