@@ -35,15 +35,13 @@ plugins=(
     tmux
     thefuck
     vscode
+    zsh-syntax-highlighting
     zsh-autosuggestions
     zsh-vi-mode
 )
 
 # load oh-my-zsh's library
 source $ZSH/oh-my-zsh.sh
-
-# enable zsh-syntax-highlighting
-source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # enable starship promt
 eval "$(starship init zsh)"
@@ -90,3 +88,6 @@ alias h="atuin search -i"
 
 # run neofetch
 fastfetch
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
