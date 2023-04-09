@@ -33,10 +33,6 @@ dotfiles:
     dst: ~/.zshrc
     src: .zshrc
 
-  f_p10k:
-    dst: ~/.p10k.zsh
-    src: .p10k.zsh
-
   f_hyper_js:
     dst: ~/.hyper.js
     src: .hyper.js
@@ -77,7 +73,6 @@ profiles:
       - f_bat
       - f_vim
       - f_zsh
-      - f_p10k
       - f_git
       - f_tmux
       - f_hyper_js

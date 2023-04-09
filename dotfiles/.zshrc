@@ -38,7 +38,7 @@ plugins=(
     vault
     vscode
     virtualenv
-    zsh-syntax-highlighting
+    fast-syntax-highlighting
     zsh-autosuggestions
     zsh-vi-mode
 )
