@@ -27,6 +27,7 @@ plugins=(
     minikube
     npm
     nvm
+    node
     python
     poetry
     pip
@@ -34,7 +35,9 @@ plugins=(
     rust
     tmux
     thefuck
+    vault
     vscode
+    virtualenv
     zsh-syntax-highlighting
     zsh-autosuggestions
     zsh-vi-mode

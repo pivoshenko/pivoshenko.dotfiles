@@ -1,7 +1,7 @@
 module.exports = {
     config: {
-        fontFamily: "JetBrainsMono Nerd Font",
-        fontSize: 14,
+        fontFamily: "MesloLGM Nerd Font",
+        fontSize: 13,
     },
 
     plugins: ["hyper-one-dark", "hyper-tabs-enhanced"],
