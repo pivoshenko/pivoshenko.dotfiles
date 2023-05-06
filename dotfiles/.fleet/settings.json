@@ -1,0 +1,9 @@
+{
+  "theme": "catppuccin-macchiato",
+  "fus.sendAllowed": false,
+  "keymap": "macos-vscode",
+  "vimEmulationEnabled": true,
+  "editor.renderWhitespace": "All",
+  "editor.alwaysShowHorizontalScrollbar": true,
+  "showShortcuts": true
+}

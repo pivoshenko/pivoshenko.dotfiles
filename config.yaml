@@ -17,10 +17,6 @@ dotfiles:
     dst: ~/.ipython/profile_default/startup/start.py
     src: .ipython/profile_default/startup/start.py
 
-  f_bat:
-    dst: ~/.config/bat/config
-    src: .config/bat/config
-
   f_vim:
     dst: ~/.vimrc
     src: .vimrc
@@ -49,6 +45,10 @@ dotfiles:
     dst: ~/.config/helix
     src: .config/helix
 
+  d_bat:
+    dst: ~/.config/bat
+    src: .config/bat
+
   d_btop:
     dst: ~/.config/btop
     src: .config/btop
@@ -65,12 +65,47 @@ dotfiles:
     dst: ~/.config/karabiner
     src: .config/karabiner
 
+  d_k9s:
+    dst: ~/.config/k9s
+    src: .config/k9s
+
+  d_mc:
+    dst: ~/.config/mc
+    src: .config/mc
+
+  d_mc_skins:
+    dst: ~/.local/share/mc/skins
+    src: .local/share/mc/skins
+
+  d_warp:
+    dst: ~/.warp
+    src: .warp
+
+  d_spotify_tui:
+    dst: ~/.config/spotify-tui
+    src: .config/spotify-tui
+
+  d_spicetify:
+    dst: ~/.config/spicetify
+    src: .config/spicetify
+
+  d_fleet:
+    dst: ~/.fleet
+    src: .fleet
+
+  d_qbit:
+    dst: ~/.config/qBittorrent
+    src: .config/qBittorrent
+
+  d_nvim:
+    dst: ~/.config/nvim
+    src: .config/nvim
+
 profiles:
   base:
     dotfiles:
       - f_starship
       - f_ipython
-      - f_bat
       - f_vim
       - f_zsh
       - f_git
@@ -78,7 +113,17 @@ profiles:
       - f_hyper_js
       - d_atuin
       - d_helix
+      - d_bat
       - d_btop
       - d_fastfetch
       - d_xplr
       - d_karabiner
+      - d_k9s
+      - d_mc
+      - d_mc_skins
+      - d_warp
+      - d_spotify_tui
+      - d_spicetify
+      - d_fleet
+      - d_qbit
+      - d_nvim
