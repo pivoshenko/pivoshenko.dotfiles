@@ -81,6 +81,9 @@ export VISUAL="$EDITOR"
 # enable exa
 alias ls="exa --tree --level=1 --icons"
 
+# enable bat
+alias cat="bat -p"
+
 # enable Docker Desktop
 source "$HOME/.docker/init-zsh.sh" || true
 
