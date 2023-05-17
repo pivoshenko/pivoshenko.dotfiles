@@ -1,9 +1,13 @@
 module.exports = {
-    config: {
-        fontFamily: "MesloLGM Nerd Font",
-        fontSize: 13,
-        catppuccinTheme: "macchiato",
+  config: {
+    fontFamily: "MesloLGM Nerd Font",
+    fontSize: 14,
+    catppuccinTheme: "macchiato",
+    hyperTabs: {
+      trafficButtons: true,
+      tabIconsColored: true,
     },
+  },
 
-    plugins: ["hyper-one-dark", "hyper-tabs-enhanced", "hypurr#latest", "hyper-font-smoothing"],
+  plugins: ["hyper-tabs-enhanced", "hypurr", "hyper-font-smoothing", "hyper-search", "hyper-pane"],
 };
