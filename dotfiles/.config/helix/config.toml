@@ -4,9 +4,14 @@ theme = "catppuccin_macchiato"
 line-number = "relative"
 mouse = true
 shell = ["zsh", "-c"]
+true-color = true
 
 [editor.file-picker]
 hidden = false
+
+[editor.lsp]
+display-messages = true
+display-inlay-hints = true
 
 [editor.statusline]
 left = ["mode", "spinner"]
