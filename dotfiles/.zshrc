@@ -84,6 +84,9 @@ alias ls="exa --tree --level=1 --icons"
 # enable bat
 alias cat="bat -p"
 
+# enable ripgrep
+alias grep="rg"
+
 # enable Docker Desktop
 source "$HOME/.docker/init-zsh.sh" || true
 
