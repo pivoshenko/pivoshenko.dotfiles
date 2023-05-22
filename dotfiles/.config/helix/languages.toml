@@ -25,7 +25,6 @@ name = "python"
 roots = ["pyproject.toml"]
 auto-format = true
 formatter = { command = "black", args = ["-", "-q"] }
-language-server = { command = "pyright-langserver", args = ["--stdio"] }
 
 [[language]]
 name = "html"
