@@ -20,11 +20,17 @@ formatter = { command = 'prettier', args = ["--parser", "json"] }
 name = "dhall"
 formatter = { command = "dhall" , args = ["format"] }
 
+[language-server.ruff-lsp]
+command = "ruff-lsp"
+
 [[language]]
 name = "python"
 roots = ["pyproject.toml"]
-auto-format = true
 formatter = { command = "black", args = ["-", "-q"] }
+# language-server = { command = "ruff-lsp" }
+config = { settings = { args = [] } }
+scope ="source.python"
+auto-format = true
 
 [[language]]
 name = "html"
@@ -43,4 +49,3 @@ auto-format = true
 name = "typescript"
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 auto-format = true
-
