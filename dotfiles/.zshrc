@@ -87,6 +87,9 @@ alias cat="bat -p"
 # enable ripgrep
 alias grep="rg"
 
+# enable commitizen
+alias czc="cz c"
+
 # enable Docker Desktop
 source "$HOME/.docker/init-zsh.sh" || true
 
@@ -100,3 +103,6 @@ fastfetch
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+
+# enable fast-syntax-highlighting
+source $HOME/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
