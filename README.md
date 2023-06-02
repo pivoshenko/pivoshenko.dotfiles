@@ -1,3 +1,9 @@
+<div align="center">
+    <a href="https://github.com/volopivoshenko/dotfiles">
+        <img alt="logo" src="https://github.com/volopivoshenko/dotfiles/blob/main/docs/static/assets/logo.svg?raw=True" height=200>
+    </a>
+</div>
+
 # 🏗️ Configs and Dotfiles
 
 <p align="center">
