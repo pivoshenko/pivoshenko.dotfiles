@@ -37,6 +37,14 @@ dotfiles:
     dst: ~/.gitconfig
     src: .gitconfig
 
+  f_yabai:
+    dst: ~/.config/yabai/yabairc
+    src: .config/yabai/yabairc
+
+  f_skhd:
+    dst: ~/.config/skhd/skhdrc
+    src: .config/skhd/skhdrc
+
   d_atuin:
     dst: ~/.config/atuin
     src: .config/atuin
@@ -111,6 +119,8 @@ profiles:
       - f_git
       - f_tmux
       - f_hyper_js
+      - f_yabai
+      - f_skhd
       - d_atuin
       - d_helix
       - d_bat
