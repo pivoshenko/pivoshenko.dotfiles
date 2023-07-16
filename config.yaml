@@ -112,28 +112,28 @@ dotfiles:
 profiles:
   base:
     dotfiles:
-      - f_starship
-      - f_ipython
-      - f_vim
-      - f_zsh
-      - f_git
-      - f_tmux
-      - f_hyper_js
-      - d_yabai
-      - d_skhd
       - d_atuin
-      - d_helix
       - d_bat
       - d_btop
       - d_fastfetch
-      - d_xplr
-      - d_karabiner
+      - d_fleet
+      - d_helix
       - d_k9s
+      - d_karabiner
       - d_mc
       - d_mc_skins
-      - d_warp
-      - d_spotify_tui
-      - d_spicetify
-      - d_fleet
-      - d_qbit
       - d_nvim
+      - d_qbit
+      - d_skhd
+      - d_spicetify
+      - d_spotify_tui
+      - d_warp
+      - d_xplr
+      - d_yabai
+      - f_git
+      - f_hyper_js
+      - f_ipython
+      - f_starship
+      - f_tmux
+      - f_vim
+      - f_zsh
