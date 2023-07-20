@@ -38,6 +38,7 @@ plugins=(
     vault
     vscode
     virtualenv
+    wakatime
     fast-syntax-highlighting
     zsh-autosuggestions
     zsh-vi-mode
