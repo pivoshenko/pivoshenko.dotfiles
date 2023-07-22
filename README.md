@@ -14,6 +14,9 @@
     <a href="https://stand-with-ukraine.pp.ua">
         <img alt="standwithukraine" src="https://img.shields.io/badge/made_in-Ukraine-ffd700.svg?labelColor=0057b7">
     </a>
+    <a href="https://wakatime.com/badge/user/9862508c-0a86-427a-929c-46186f2d191a/project/24b39197-a8f6-4f01-80d7-3b47449a9d04">
+        <img alt="wakatime" src="https://wakatime.com/badge/user/9862508c-0a86-427a-929c-46186f2d191a/project/24b39197-a8f6-4f01-80d7-3b47449a9d04.svg">
+    </a>
 </p>
 
 # 🏗️ Configs and Dotfiles
