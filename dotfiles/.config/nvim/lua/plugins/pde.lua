@@ -42,4 +42,5 @@ return {
             require("toggleterm").setup()
         end,
     },
+    { "wakatime/vim-wakatime" },
 }

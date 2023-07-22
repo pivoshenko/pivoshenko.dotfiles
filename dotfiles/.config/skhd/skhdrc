@@ -39,18 +39,18 @@ ctrl + alt - h : yabai -m window --warp west
 ctrl + alt - l : yabai -m window --warp east
 
 # move window to display left and right
-shift + alt - s : yabai -m window --display west; yabai -m display --focus west;
-shift + alt - g : yabai -m window --display east; yabai -m display --focus east;
+shift + alt - s : yabai -m window --display west ; yabai -m display --focus west;
+shift + alt - g : yabai -m window --display east ; yabai -m display --focus east;
 
 # move window to prev and next space
-shift + alt - p : yabai -m window --space prev;
-shift + alt - n : yabai -m window --space next;
+shift + alt - p : yabai -m window --space prev ;
+shift + alt - n : yabai -m window --space next ;
 
 # move window to space #
-shift + alt - 1 : yabai -m window --space 1;
-shift + alt - 2 : yabai -m window --space 2;
-shift + alt - 3 : yabai -m window --space 3;
-shift + alt - 4 : yabai -m window --space 4;
-shift + alt - 5 : yabai -m window --space 5;
-shift + alt - 6 : yabai -m window --space 6;
-shift + alt - 7 : yabai -m window --space 7;
+shift + alt - 1 : yabai -m window --space 1 ;
+shift + alt - 2 : yabai -m window --space 2 ;
+shift + alt - 3 : yabai -m window --space 3 ;
+shift + alt - 4 : yabai -m window --space 4 ;
+shift + alt - 5 : yabai -m window --space 5 ;
+shift + alt - 6 : yabai -m window --space 6 ;
+shift + alt - 7 : yabai -m window --space 7 ;

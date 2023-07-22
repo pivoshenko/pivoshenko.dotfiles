@@ -1,43 +1,43 @@
 /* Color Pallette */
 /* Note: These variables should be used ONLY when needed across ALL of the color palettes. */
 :root {
-  --flamingo: #eebebe;
-  --mauve: #ca9ee6;
-  --pink: #f4b8e4;
-  --maroon: #ea999c;
-  --red: #e78284;
-  --peach: #ef9f76;
-  --yellow: #e5c890;
-  --green: #a6d189;
-  --teal: #81c8be;
-  --blue: #8caaee;
-  --sky: #99dadb;
-  --crust: #232634;
-  --mantle: #292c3c;
-  --base: #303446;
-  --surface0: #414559;
-  --surface1: #51576d;
-  --overlay0: #737994;
-  ---overlay1: #838ba7;
-  --overlay2: #949cbb;
-  --text: #c6d0f5;
-  --lavender: #babbf1;
-  --rosewater: #f2d5cf;
+    --flamingo: #eebebe;
+    --mauve: #ca9ee6;
+    --pink: #f4b8e4;
+    --maroon: #ea999c;
+    --red: #e78284;
+    --peach: #ef9f76;
+    --yellow: #e5c890;
+    --green: #a6d189;
+    --teal: #81c8be;
+    --blue: #8caaee;
+    --sky: #99dadb;
+    --crust: #232634;
+    --mantle: #292c3c;
+    --base: #303446;
+    --surface0: #414559;
+    --surface1: #51576d;
+    --overlay0: #737994;
+    ---overlay1: #838ba7;
+    --overlay2: #949cbb;
+    --text: #c6d0f5;
+    --lavender: #babbf1;
+    --rosewater: #f2d5cf;
 }
 
 /* Buttons */
-.main-shuffleButton-button:focus:not(:focus-visible,:hover) {
-  color: var(--surface1);
+.main-shuffleButton-button:focus:not(:focus-visible, :hover) {
+    color: var(--surface1);
 }
 .main-shuffleButton-button:hover {
-  color: var(--spice-text);
+    color: var(--spice-text);
 }
 .main-shuffleButton-button.main-shuffleButton-active {
-  color: var(--text);
+    color: var(--text);
 }
 
 .main-skipBackButton-button {
-  color: var(--text);
+    color: var(--text);
 }
 .main-playButton-PlayButton.main-playButton-primary {
     color: var(--spice-player);
@@ -53,20 +53,20 @@
 }
 
 .main-skipForwardButton-button {
-  color: var(--text);
+    color: var(--text);
 }
 
 /* Generic control buttons */
 .Button-sm-16-buttonTertiary-iconOnly-isUsingKeyboard-useBrowserDefaultFocusStyle {
-  color: var(--text) !important;
+    color: var(--text) !important;
 }
 
 /* Connect to device etc. */
 .control-button {
-  color: var(--text);
+    color: var(--text);
 }
 
-.main-view-container button:hover > div[class^='ButtonInner-sc-'] {
+.main-view-container button:hover > div[class^="ButtonInner-sc-"] {
     background-color: var(--spice-button);
 }
 
@@ -90,20 +90,20 @@
 /* Top bars */
 
 .main-topBar-topBarContainer {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
 .main-topBar-background {
-  background-color: var(--mantle) !important;
+    background-color: var(--mantle) !important;
 }
 .Svg-img-24-icon.home-active-icon {
-  color: var(--spice-player);
+    color: var(--spice-player);
 }
 
 /* Search bar */
 .x-searchInput-searchInputInput {
-  background-color: var(--text);
-  color: var(--crust) !important;
+    background-color: var(--text);
+    color: var(--crust) !important;
 }
 
 .main-entityHeader-backgroundColor,
@@ -133,20 +133,20 @@
 
 /* Your collection, marketplace and lyrics app buttons */
 .main-navBar-navBarLink {
-  color: var(--spice-text);
+    color: var(--spice-text);
 }
 
 /* Your collection svg */
 .Svg-img-24-icon.collection-icon {
-  color: var(--spice-text);
+    color: var(--spice-text);
 }
 
 .main-createPlaylistButton-button {
-  color: var(--spice-text);
+    color: var(--spice-text);
 }
 
 .main-navBar-navBarLinkActive {
-  background-color: var(--spice-tab-active);
+    background-color: var(--spice-tab-active);
 }
 
 /* Scrollbar */
@@ -155,14 +155,8 @@
     padding: 4px;
 }
 
-.os-theme-spotify.os-host-transition
-    > .os-scrollbar-horizontal
-    > .os-scrollbar-track
-    > .os-scrollbar-handle,
-.os-theme-spotify.os-host-transition
-    > .os-scrollbar-vertical
-    > .os-scrollbar-track
-    > .os-scrollbar-handle {
+.os-theme-spotify.os-host-transition > .os-scrollbar-horizontal > .os-scrollbar-track > .os-scrollbar-handle,
+.os-theme-spotify.os-host-transition > .os-scrollbar-vertical > .os-scrollbar-track > .os-scrollbar-handle {
     background-color: var(--decorative-base);
     border-radius: 6px;
 }
@@ -180,16 +174,10 @@
     display: none;
 }
 
-.main-home-content
-    > section:first-child
-    > .main-gridContainer-gridContainer
-    > div {
+.main-home-content > section:first-child > .main-gridContainer-gridContainer > div {
     background-color: var(--spice-card);
 }
-.main-home-content
-    > section:first-child
-    > .main-gridContainer-gridContainer
-    > div:hover {
+.main-home-content > section:first-child > .main-gridContainer-gridContainer > div:hover {
     background-color: var(--spice-misc);
 }
 
@@ -215,12 +203,12 @@
 /* New artist side bar */
 
 .Button-textSubdued-sm-16-buttonTertiary-condensed-useBrowserDefaultFocusStyle {
-  color: var(--spice-text) !important;
+    color: var(--spice-text) !important;
 }
 
 /* The artist venue/date and next in queue name of artist */
 .TypeElement-mesto-type {
-  color: var(--text);
+    color: var(--text);
 }
 
 .artist-artistOnTour-timeAndVenue.artist-artistOnTour-condensed {
@@ -228,7 +216,7 @@
 }
 
 .Button-textSubdued-sm-16-buttonTertiary-condensed-isUsingKeyboard-useBrowserDefaultFocusStyle {
-  color: var(--spice-text);
+    color: var(--spice-text);
 }
 
 /* Duration in album view */
@@ -240,32 +228,32 @@
 
 /* Search icon */
 .x-filterBox-searchIcon {
-  color: var(--text);
+    color: var(--text);
 }
 
 /* Search bar input */
 .x-filterBox-filterInput {
-  background-color: var(--surface0);
-  color: var(--text);
+    background-color: var(--surface0);
+    color: var(--text);
 }
 
 /* Drop down lists */
 .main-dropDown-dropDown {
-  color: var(--spice-text);
-  background-color: var(--surface0);
+    color: var(--spice-text);
+    background-color: var(--surface0);
 }
 
-input:checked~.x-toggle-indicatorWrapper {
-  background-color: var(---overlay1);
+input:checked ~ .x-toggle-indicatorWrapper {
+    background-color: var(---overlay1);
 }
 
-input:hover:not([disabled]):not(:active)~.x-toggle-indicatorWrapper {
-  background-color: var(--spice-button-active);
+input:hover:not([disabled]):not(:active) ~ .x-toggle-indicatorWrapper {
+    background-color: var(--spice-button-active);
 }
 
 select option:checked {
-  color: var(--spice-text);
-  font-weight: bold;
+    color: var(--spice-text);
+    font-weight: bold;
 }
 
 /* Animated equalizer */
@@ -333,11 +321,7 @@ select option:checked {
 }
 
 /* For that small dot on podcasts that notify us of new episodes */
-.main-home-content
-    > section:first-child
-    > .main-gridContainer-gridContainer
-    > div
-    span[aria-label],
+.main-home-content > section:first-child > .main-gridContainer-gridContainer > div span[aria-label],
 span[aria-label="New episode"],
 span[aria-label="New Podcast Episode"] {
     background: var(--spice-accent, var(--spice-text));
@@ -361,7 +345,8 @@ span[aria-label="New Podcast Episode"] {
     background-color: var(--spice-button);
 }
 
-.main-rootlist-rootlistItemLink:link, .main-rootlist-rootlistItemLink:visited {
+.main-rootlist-rootlistItemLink:link,
+.main-rootlist-rootlistItemLink:visited {
     z-index: 1;
 }
 

@@ -29,16 +29,16 @@ theme[meter_bg]="#BCC0CC"
 theme[proc_misc]="#DC8A78"
 
 # CPU, Memory, Network, Proc box outline colors
-theme[cpu_box]="#8839ef" #Mauve
-theme[mem_box]="#40a02b" #Green
-theme[net_box]="#e64553" #Maroon
+theme[cpu_box]="#8839ef"  #Mauve
+theme[mem_box]="#40a02b"  #Green
+theme[net_box]="#e64553"  #Maroon
 theme[proc_box]="#1e66f5" #Blue
 
 # Box divider line and small boxes line color
 theme[div_line]="#9CA0B0"
 
 # Temperature graph color (Green -> Yellow -> Red)
-theme[temp_start]="#40a02b
+theme[temp_start]="       #40a02b
 theme[temp_mid]="#df8e1d"
 theme[temp_end]="#d20f39"
 
@@ -61,7 +61,6 @@ theme[cached_end]="#7287fd"
 theme[available_start]="#fe640b"
 theme[available_mid]="#e64553"
 theme[available_end]="#d20f39"
-
 
 # Mem/Disk used meter (Green -> Sky)
 theme[used_start]="#40a02b"
