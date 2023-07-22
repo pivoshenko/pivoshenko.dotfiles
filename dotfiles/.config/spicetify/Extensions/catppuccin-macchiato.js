@@ -13,14 +13,14 @@ let colorPalette = {
   sky: "#91d7e3",
   mauve: "#c6a0f6",
   lavender: "#b7bdf8",
-  white: "#d9e0ee"
-}
+  white: "#d9e0ee",
+};
 
 // waitForElement borrowed from:
 // https://github.com/morpheusthewhite/spicetify-themes/blob/master/Dribbblish/dribbblish.js
 function waitForElement(els, func, timeout = 100) {
-  const queries = els.map(el => document.querySelector(el));
-  if (queries.every(a => a)) {
+  const queries = els.map((el) => document.querySelector(el));
+  if (queries.every((a) => a)) {
     func(queries);
   } else if (timeout > 0) {
     setTimeout(waitForElement, 300, els, func, --timeout);
@@ -29,7 +29,7 @@ function waitForElement(els, func, timeout = 100) {
 
 // Return the color label for a given hex color value
 function getKeyByValue(object, value) {
-  return Object.keys(object).find(key => object[key] === value.trim());
+  return Object.keys(object).find((key) => object[key] === value.trim());
 }
 
 // Used to select matching equalizer-animated-COLOR.gif

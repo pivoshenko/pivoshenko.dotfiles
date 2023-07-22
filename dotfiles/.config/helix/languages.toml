@@ -18,7 +18,7 @@ formatter = { command = 'prettier', args = ["--parser", "json"] }
 
 [[language]]
 name = "dhall"
-formatter = { command = "dhall" , args = ["format"] }
+formatter = { command = "dhall", args = ["format"] }
 
 [language-server.ruff-lsp]
 command = "ruff-lsp"
@@ -27,9 +27,9 @@ command = "ruff-lsp"
 name = "python"
 roots = ["pyproject.toml"]
 formatter = { command = "black", args = ["-", "-q"] }
-# language-server = { command = "ruff-lsp" }
+language-server = { command = "ruff-lsp" }
 config = { settings = { args = [] } }
-scope ="source.python"
+scope = "source.python"
 auto-format = true
 
 [[language]]

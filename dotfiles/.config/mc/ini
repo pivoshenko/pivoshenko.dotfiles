@@ -80,7 +80,7 @@ editor_word_wrap_line_length=72
 editor_option_save_mode=0
 editor_backup_extension=~
 editor_filesize_threshold=64M
-editor_stop_format_chars=-+*\\,.;:&>
+editor_stop_format_chars=-+*\\,.               ;:&>
 mcview_eof=
 skin=catppuccin
 shadows=true
@@ -101,7 +101,7 @@ horizontal_equal=true
 
 [Misc]
 timeformat_recent=%b %e %H:%M
-timeformat_old=%b %e  %Y
+timeformat_old=%b %e %Y
 ftp_proxy_host=gate
 ftpfs_password=anonymous@
 display_codepage=UTF-8
