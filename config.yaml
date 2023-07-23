@@ -125,7 +125,6 @@ dotfiles:
     dst: ~/.config/neofetch
     src: .config/neofetch
 
-
 profiles:
   base:
     dotfiles:
