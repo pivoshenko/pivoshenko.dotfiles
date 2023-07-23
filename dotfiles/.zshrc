@@ -50,15 +50,6 @@ source $ZSH/oh-my-zsh.sh
 # enable starship promt
 eval "$(starship init zsh)"
 
-# update PATH for the Google Cloud SDK
-# if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
-
-# enable shell command completion for gcloud
-# if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
-
-# set default AWS profile
-# export AWS_PROFILE="default"
-
 # enable pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
@@ -90,6 +81,9 @@ alias grep="rg"
 
 # enable commitizen
 alias czc="cz c"
+
+# enable neovim
+alias vim="nvim"
 
 # enable Docker Desktop
 source "$HOME/.docker/init-zsh.sh" || true
