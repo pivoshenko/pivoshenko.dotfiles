@@ -117,6 +117,10 @@ dotfiles:
     dst: ~/.config/fsh
     src: .config/fsh
 
+  d_kitty:
+    dst: ~/.config/kitty
+    src: .config/kitty
+
 profiles:
   base:
     dotfiles:
@@ -129,6 +133,7 @@ profiles:
       - d_helix
       - d_k9s
       - d_karabiner
+      - d_kitty
       - d_mc
       - d_mc_skins
       - d_nvim

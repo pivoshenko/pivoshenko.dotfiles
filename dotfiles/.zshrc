@@ -77,7 +77,7 @@ alias ls="exa --tree --level=1 --icons"
 alias cat="bat -p"
 
 # enable ripgrep
-alias grep="rg"
+# alias grep="rg"
 
 # enable commitizen
 alias czc="cz c"
