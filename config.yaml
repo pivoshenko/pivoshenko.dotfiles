@@ -113,6 +113,10 @@ dotfiles:
     dst: ~/.config/lazygit
     src: .config/lazygit
 
+  d_fsh:
+    dst: ~/.config/fsh
+    src: .config/fsh
+
 profiles:
   base:
     dotfiles:
@@ -121,6 +125,7 @@ profiles:
       - d_btop
       - d_fastfetch
       - d_fleet
+      - d_fsh
       - d_helix
       - d_k9s
       - d_karabiner
