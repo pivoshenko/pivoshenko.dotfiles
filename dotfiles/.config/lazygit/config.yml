@@ -16,4 +16,4 @@ theme:
   cherryPickedCommitFgColor:
     - "#8aadf4" # Blue
   unstagedChangesColor:
-    - red       # Red
+    - red # Red
