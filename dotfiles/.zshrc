@@ -77,7 +77,7 @@ alias ls="exa --tree --level=1 --icons"
 alias cat="bat -p"
 
 # enable ripgrep
-# alias grep="rg"
+alias grep="rg"
 
 # enable commitizen
 alias czc="cz c"
@@ -100,7 +100,7 @@ alias history="atuin search -i"
 alias h="atuin search -i"
 
 # run neofetch
-fastfetch
+neofetch
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
