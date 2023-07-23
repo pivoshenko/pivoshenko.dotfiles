@@ -85,6 +85,12 @@ alias czc="cz c"
 # enable neovim
 alias vim="nvim"
 
+# enable lazygit
+alias lg="lazygit"
+
+# enable lazydocker
+alias ld="lazydocker"
+
 # enable Docker Desktop
 source "$HOME/.docker/init-zsh.sh" || true
 
