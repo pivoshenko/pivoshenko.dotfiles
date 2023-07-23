@@ -121,6 +121,11 @@ dotfiles:
     dst: ~/.config/kitty
     src: .config/kitty
 
+  d_neofetch:
+    dst: ~/.config/neofetch
+    src: .config/neofetch
+
+
 profiles:
   base:
     dotfiles:
@@ -137,6 +142,7 @@ profiles:
       - d_mc
       - d_mc_skins
       - d_nvim
+      - d_neofetch
       - d_lazygit
       - d_qbit
       - d_skhd
