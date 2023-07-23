@@ -125,6 +125,10 @@ dotfiles:
     dst: ~/.config/neofetch
     src: .config/neofetch
 
+  d_sketchybar:
+    dst: ~/.config/sketchybar
+    src: .config/sketchybar
+
 profiles:
   base:
     dotfiles:

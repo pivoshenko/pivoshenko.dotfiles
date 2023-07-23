@@ -77,7 +77,7 @@ alias ls="exa --tree --level=1 --icons"
 alias cat="bat -p"
 
 # enable ripgrep
-alias grep="rg"
+# alias grep="rg"
 
 # enable commitizen
 alias czc="cz c"
@@ -98,6 +98,14 @@ source "$HOME/.docker/init-zsh.sh" || true
 eval "$(atuin init zsh)"
 alias history="atuin search -i"
 alias h="atuin search -i"
+
+# update outdated packages after running brew commands
+function brew() {
+    command brew "$@"
+    if [[ $* =~ "upgrade" ]] || [[ $* =~ "update" ]] || [[ $* =~ "outdated" ]]; then
+        sketchybar --trigger brew_update
+    fi
+}
 
 # run neofetch
 neofetch
