@@ -1,5 +1,10 @@
 return {
     {
+        "NeogitOrg/neogit",
+        dependencies = "nvim-lua/plenary.nvim",
+        config = true,
+    },
+    {
         "echasnovski/mini.nvim",
         version = false,
         config = function()
