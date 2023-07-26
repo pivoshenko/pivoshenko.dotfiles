@@ -1,4 +1,5 @@
 return {
+    { "HiPhish/rainbow-delimiters.nvim" },
     {
         "NeogitOrg/neogit",
         dependencies = "nvim-lua/plenary.nvim",
