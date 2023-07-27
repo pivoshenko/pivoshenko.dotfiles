@@ -1,4 +1,5 @@
 return {
+    { "lvimuser/lsp-inlayhints.nvim" },
     {
         "jose-elias-alvarez/null-ls.nvim",
         config = function()
