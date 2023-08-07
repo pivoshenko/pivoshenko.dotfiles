@@ -87,6 +87,7 @@ alias vim="nvim"
 
 # enable lazygit
 alias lg="lazygit"
+export XDG_CONFIG_HOME="$HOME/.config"
 
 # enable lazydocker
 alias ld="lazydocker"
