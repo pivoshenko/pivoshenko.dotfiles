@@ -8,14 +8,17 @@ editor = hx
 pager = delta
 
 [interactive]
+# set delta as a defualt diff pager
 diffFilter = delta --color-only
 
 [delta]
 navigate = true
+# configure theme
 light = false
-theme = OneHalfDark
+theme = OneHalfDark  # TODO set catppuccin
 line-numbers = true
 side-by-side = true
+# configure hyperlinks
 hyperlinks = true
 hyperlinks-file-link-format = "file-line://{path}:{line}"
 

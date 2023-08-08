@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME=""
 ZSH_COLORIZE_CHROMA_FORMATTER=terminal256
 
-# plugins
+# list of plugins
 plugins=(
     aws
     brew
@@ -47,52 +47,49 @@ plugins=(
 # load oh-my-zsh's library
 source $ZSH/oh-my-zsh.sh
 
-# enable starship promt
+# run starship promt
 eval "$(starship init zsh)"
 
-# enable pyenv
+# configure pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-# enable nvm
+# configure nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
 
-# enable autojump
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
-
-# enable spicetify
+# configure spicetify
 export PATH=$PATH:$HOME/.spicetify
 
-# set hs as the default editor
+# configure default editor
 export EDITOR=hx
 export VISUAL="$EDITOR"
 
-# enable exa
+# configure exa
 alias ls="exa --tree --level=1 --icons"
 
-# enable bat
+# configure bat
 alias cat="bat -p"
 
-# enable ripgrep
+# enaconfigureble ripgrep
 # alias grep="rg"
 
-# enable commitizen
+# configure commitizen
 alias czc="cz c"
 
-# enable neovim
+# configure neovim
 alias vim="nvim"
 
-# enable lazygit
+# configure lazygit
 alias lg="lazygit"
 export XDG_CONFIG_HOME="$HOME/.config"
 
-# enable lazydocker
+# configure lazydocker
 alias ld="lazydocker"
 
-# enable Docker Desktop
+# configure Docker Desktop
 source "$HOME/.docker/init-zsh.sh" || true
 
 # enable history
@@ -111,8 +108,8 @@ function brew() {
 # run neofetch
 neofetch
 
-# Fig post block. Keep at the bottom of this file.
+# fig post block
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
 
-# enable fast-syntax-highlighting
+# configure fast-syntax-highlighting
 source $HOME/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh

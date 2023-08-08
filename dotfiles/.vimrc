@@ -1,4 +1,4 @@
-" plugins
+" list of plugins
 call plug#begin('~/.vim/plugged')
 Plug 'frazrepo/vim-rainbow'
 Plug 'vim-airline/vim-airline'
@@ -15,20 +15,23 @@ syntax on
 filetype plugin on
 set encoding=utf-8
 
+" configure support of external termninals
 set termguicolors
 
-" theme configuration
-colorscheme onedark
-" load statusbar
-autocmd vimenter * ++nested colorscheme onedark
-" use true colors
+" configure theme
+colorscheme onedark " TODO set catppuccin
 set termguicolors
-" display the status line
+
+" load statusbar
+autocmd vimenter * ++nested colorscheme onedark " TODO set catppuccin
+
+" configure status line
 set laststatus=2
-" highlight line
+
+" configure highlights
 set cursorline
-" highlight breakline
 set colorcolumn=100
+
 " display indents
 set list listchars=tab:»-,trail:·,extends:»,precedes:«
 
