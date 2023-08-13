@@ -89,9 +89,6 @@ export XDG_CONFIG_HOME="$HOME/.config"
 # configure lazydocker
 alias ld="lazydocker"
 
-# configure Docker Desktop
-source "$HOME/.docker/init-zsh.sh" || true
-
 # enable history
 eval "$(atuin init zsh)"
 alias history="atuin search -i"
