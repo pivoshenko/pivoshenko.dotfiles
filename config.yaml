@@ -113,10 +113,6 @@ dotfiles:
     dst: ~/.config/lazygit
     src: .config/lazygit
 
-  d_fsh:
-    dst: ~/.config/fsh
-    src: .config/fsh
-
   d_kitty:
     dst: ~/.config/kitty
     src: .config/kitty
@@ -131,18 +127,16 @@ profiles:
       - d_atuin
       - d_bat
       - d_btop
-      - d_fastfetch
       - d_fleet
-      - d_fsh
       - d_helix
       - d_k9s
       - d_karabiner
       - d_kitty
+      - d_lazygit
       - d_mc
       - d_mc_skins
-      - d_nvim
       - d_neofetch
-      - d_lazygit
+      - d_nvim
       - d_qbit
       - d_skhd
       - d_spicetify
