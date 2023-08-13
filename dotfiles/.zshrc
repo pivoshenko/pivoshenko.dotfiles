@@ -107,6 +107,3 @@ neofetch
 
 # fig post block
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
-
-# configure fast-syntax-highlighting
-source $HOME/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
