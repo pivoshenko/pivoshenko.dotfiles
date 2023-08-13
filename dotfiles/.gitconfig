@@ -18,7 +18,6 @@ light = false
 theme = OneHalfDark  # TODO set catppuccin
 line-numbers = true
 side-by-side = true
-# configure hyperlinks
 hyperlinks = true
 hyperlinks-file-link-format = "file-line://{path}:{line}"
 
