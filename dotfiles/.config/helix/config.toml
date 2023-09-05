@@ -2,9 +2,14 @@ theme = "catppuccin_macchiato"
 
 [editor]
 line-number = "relative"
-mouse = true
+bufferline = "always"
 shell = ["zsh", "-c"]
 true-color = true
+color-modes = true
+cursorline = true
+mouse = true
+rulers = [100]
+completion-trigger-len = 1
 
 [editor.file-picker]
 hidden = false
@@ -14,15 +19,17 @@ display-messages = true
 display-inlay-hints = true
 
 [editor.statusline]
-left = ["mode", "spinner"]
-center = ["file-name"]
+left = ["mode", "spinner", "file-name", "file-type", "total-line-numbers", "file-encoding"]
+center = []
 right = [
-    "diagnostics",
     "selections",
+    "primary-selection-length",
     "position",
-    "file-encoding",
-    "file-line-ending",
-    "file-type",
+    "position-percentage",
+    "spacer",
+    "diagnostics",
+    "workspace-diagnostics",
+    "version-control"
 ]
 separator = "│"
 
@@ -44,3 +51,16 @@ select = "underline"
 
 [editor.indent-guides]
 render = true
+
+[keys.normal]
+C-f = [
+    ":new",
+    ":insert-output lf-pick",
+    ":theme default",
+    "select_all",
+    "split_selection_on_newline",
+    "goto_file",
+    "goto_last_modified_file",
+    ":buffer-close!",
+    ":theme catppuccin_macchiato"
+]

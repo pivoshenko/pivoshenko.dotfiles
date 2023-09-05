@@ -37,6 +37,10 @@ dotfiles:
     dst: ~/.gitconfig
     src: .gitconfig
 
+  f_lfp:
+    dst: ~/.local/bin/lf-pick
+    src: .local/bin/lf-pick
+
   d_yabai:
     dst: ~/.config/yabai/yabairc
     src: .config/yabai/yabairc
@@ -148,6 +152,7 @@ profiles:
       - f_hyper_js
       - f_ipython
       - f_starship
+      - f_lfp
       - f_tmux
       - f_vim
       - f_zsh
