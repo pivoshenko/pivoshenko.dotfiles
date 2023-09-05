@@ -65,6 +65,10 @@ dotfiles:
     dst: ~/.config/btop
     src: .config/btop
 
+  d_efm_langserver:
+    dst: ~/.config/efm-langserver
+    src: .config/efm-langserver
+
   d_fastfetch:
     dst: ~/.config/fastfetch
     src: .config/fastfetch
@@ -131,6 +135,7 @@ profiles:
       - d_atuin
       - d_bat
       - d_btop
+      - d_efm_langserver
       - d_fleet
       - d_helix
       - d_k9s
