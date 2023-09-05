@@ -27,3 +27,5 @@ require('xpm').setup { 'dtomvan/xpm.xplr', {
         }
     end
 } }
+
+xplr.config.general.show_hidden = true
