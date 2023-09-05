@@ -4,7 +4,7 @@ palette = "catppuccin_macchiato"
 
 [aws]
 symbol = "\uf662 "
-force_display = true
+force_display = false
 
 [azure]
 symbol = "\ufd03 "
@@ -84,7 +84,7 @@ symbol = "\ue620 "
 
 [memory_usage]
 symbol = "\uf85a "
-disabled = false
+disabled = true
 
 [meson]
 symbol = "\ufa36 "
