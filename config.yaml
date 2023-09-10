@@ -77,10 +77,6 @@ dotfiles:
     dst: ~/.config/xplr
     src: .config/xplr
 
-  d_karabiner:
-    dst: ~/.config/karabiner
-    src: .config/karabiner
-
   d_k9s:
     dst: ~/.config/k9s
     src: .config/k9s
@@ -139,7 +135,6 @@ profiles:
       - d_fleet
       - d_helix
       - d_k9s
-      - d_karabiner
       - d_kitty
       - d_lazygit
       - d_mc

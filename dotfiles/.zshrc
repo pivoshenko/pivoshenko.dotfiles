@@ -53,6 +53,7 @@ eval "$(starship init zsh)"
 # configure pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+# run pyenv
 eval "$(pyenv init -)"
 
 # configure nvm
@@ -63,7 +64,7 @@ export NVM_DIR="$HOME/.nvm"
 # configure spicetify
 export PATH=$PATH:$HOME/.spicetify
 
-# configure default editor
+# set default editor
 export EDITOR=hx
 export VISUAL="$EDITOR"
 
@@ -72,9 +73,6 @@ alias ls="exa --tree --level=1 --icons"
 
 # configure bat
 alias cat="bat -p"
-
-# enaconfigureble ripgrep
-# alias grep="rg"
 
 # configure commitizen
 alias czc="cz c"
@@ -89,18 +87,11 @@ export XDG_CONFIG_HOME="$HOME/.config"
 # configure lazydocker
 alias ld="lazydocker"
 
-# enable history
+# run atuin history
 eval "$(atuin init zsh)"
+# configure atuin
 alias history="atuin search -i"
 alias h="atuin search -i"
-
-# update outdated packages after running brew commands
-function brew() {
-    command brew "$@"
-    if [[ $* =~ "upgrade" ]] || [[ $* =~ "update" ]] || [[ $* =~ "outdated" ]]; then
-        sketchybar --trigger brew_update
-    fi
-}
 
 # run neofetch
 neofetch
