@@ -77,6 +77,10 @@ dotfiles:
     dst: ~/.config/xplr
     src: .config/xplr
 
+  d_yazi:
+    dst: ~/.config/yazi
+    src: .config/yazi
+
   d_k9s:
     dst: ~/.config/k9s
     src: .config/k9s
@@ -147,6 +151,7 @@ profiles:
       - d_spotify_tui
       - d_warp
       - d_xplr
+      - d_yazi
       - d_yabai
       - f_git
       - f_hyper_js
