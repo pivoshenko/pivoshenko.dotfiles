@@ -129,6 +129,10 @@ dotfiles:
     dst: ~/.config/neofetch
     src: .config/neofetch
 
+  d_lf:
+    dst: ~/.config/lf
+    src: .config/lf
+
 profiles:
   base:
     dotfiles:
@@ -140,6 +144,7 @@ profiles:
       - d_helix
       - d_k9s
       - d_kitty
+      - d_lf
       - d_lazygit
       - d_mc
       - d_mc_skins
