@@ -65,6 +65,10 @@ dotfiles:
     dst: ~/.config/btop
     src: .config/btop
 
+  d_direnv:
+    dst: ~/.config/direnv
+    src: .config/direnv
+
   d_efm_langserver:
     dst: ~/.config/efm-langserver
     src: .config/efm-langserver
