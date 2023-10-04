@@ -50,6 +50,9 @@ source $ZSH/oh-my-zsh.sh
 # run starship promt
 eval "$(starship init zsh)"
 
+# load env
+eval "$(direnv hook zsh)"
+
 # configure pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
