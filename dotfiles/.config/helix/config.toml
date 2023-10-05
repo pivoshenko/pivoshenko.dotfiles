@@ -62,5 +62,6 @@ C-f = [
     "goto_file",
     "goto_last_modified_file",
     ":buffer-close!",
-    ":theme catppuccin_macchiato"
+    ":theme catppuccin_macchiato",
+    ":redraw"
 ]
