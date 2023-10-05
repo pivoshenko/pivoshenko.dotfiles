@@ -5,6 +5,9 @@
 </div>
 
 <p align="center">
+    <a href="https://github.com/volopivoshenko/dotfiles/blob/main/.pre-commit-config.yaml">
+        <img alt="hooks" src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit">
+    </a>
     <a href="https://www.buymeacoffee.com/volopivoshenko" target="_blank">
         <img alt="buymeacoffee" src="https://img.shields.io/badge/buy_me_-a_coffee-ff6964?logo=buymeacoffee">
     </a>
