@@ -13,6 +13,9 @@ disabled = false
 [buf]
 symbol = "\uf15a "
 
+[bun]
+symbol = "\ue28d "
+
 [c]
 symbol = "\ue61d "
 
