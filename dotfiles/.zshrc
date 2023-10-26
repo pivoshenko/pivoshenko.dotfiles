@@ -101,6 +101,9 @@ eval "$(atuin init zsh)"
 alias history="atuin search -i"
 alias h="atuin search -i"
 
+# configure zellij
+eval "$(zellij setup --generate-auto-start zsh)"
+
 # run neofetch
 neofetch
 
