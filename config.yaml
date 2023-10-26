@@ -137,6 +137,10 @@ dotfiles:
     dst: ~/.config/lf
     src: .config/lf
 
+  d_zellij:
+    dst: ~/.config/zellij
+    src: .config/zellij
+
 profiles:
   base:
     dotfiles:
@@ -162,6 +166,7 @@ profiles:
       - d_xplr
       - d_yazi
       - d_yabai
+      - d_zellij
       - f_git
       - f_hyper_js
       - f_ipython
