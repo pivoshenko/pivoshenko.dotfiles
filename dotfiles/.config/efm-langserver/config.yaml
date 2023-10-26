@@ -7,16 +7,16 @@ root-markers:
 
 tools:
   codespell: &codespell
-    lint-command: 'codespell'
+    lint-command: "codespell"
     lint-formats:
-      - '%f:%l: %m'
+      - "%f:%l: %m"
 
   python-mypy: &python-mypy
-    lint-command: 'mypy --show-column-numbers'
+    lint-command: "mypy --show-column-numbers"
     lint-formats:
-      - '%f:%l:%c: %trror: %m'
-      - '%f:%l:%c: %tarning: %m'
-      - '%f:%l:%c: %tote: %m'
+      - "%f:%l:%c: %trror: %m"
+      - "%f:%l:%c: %tarning: %m"
+      - "%f:%l:%c: %tote: %m"
 
 languages:
   python:
