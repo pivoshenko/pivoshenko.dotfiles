@@ -33,7 +33,6 @@ plugins=(
     pip
     redis-cli
     rust
-    tmux
     thefuck
     vault
     vscode
@@ -44,19 +43,18 @@ plugins=(
     zsh-vi-mode
 )
 
-# load oh-my-zsh's library
+# configure oh-my-zsh's library
 source $ZSH/oh-my-zsh.sh
 
-# run starship promt
+# configure starship
 eval "$(starship init zsh)"
 
-# load env
+# configure dotenv
 eval "$(direnv hook zsh)"
 
 # configure pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-# run pyenv
 eval "$(pyenv init -)"
 
 # configure nvm
@@ -85,9 +83,6 @@ alias cat="bat -p"
 # configure commitizen
 alias czc="cz c"
 
-# configure neovim
-alias vim="nvim"
-
 # configure lazygit
 alias lg="lazygit"
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -95,11 +90,13 @@ export XDG_CONFIG_HOME="$HOME/.config"
 # configure lazydocker
 alias ld="lazydocker"
 
-# run atuin history
-eval "$(atuin init zsh)"
 # configure atuin
+eval "$(atuin init zsh)"
 alias history="atuin search -i"
 alias h="atuin search -i"
+
+# configure navi
+eval "$(navi widget zsh)"
 
 # configure zellij
 # eval "$(zellij setup --generate-auto-start zsh)"
