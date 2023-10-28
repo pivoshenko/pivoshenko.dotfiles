@@ -102,6 +102,9 @@ eval "$(navi widget zsh)"
 # eval "$(zellij setup --generate-auto-start zsh)"
 alias zj="zellij"
 
+# configure zoxide
+eval "$(zoxide init zsh)"
+
 # run neofetch
 neofetch
 
