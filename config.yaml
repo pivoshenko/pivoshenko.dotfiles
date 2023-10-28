@@ -17,21 +17,9 @@ dotfiles:
     dst: ~/.ipython/profile_default/startup/start.py
     src: .ipython/profile_default/startup/start.py
 
-  f_vim:
-    dst: ~/.vimrc
-    src: .vimrc
-
-  f_tmux:
-    dst: ~/.tmux.conf
-    src: .tmux.conf
-
   f_zsh:
     dst: ~/.zshrc
     src: .zshrc
-
-  f_hyper_js:
-    dst: ~/.hyper.js
-    src: .hyper.js
 
   f_git:
     dst: ~/.gitconfig
@@ -69,14 +57,6 @@ dotfiles:
     dst: ~/.config/direnv
     src: .config/direnv
 
-  d_efm_langserver:
-    dst: ~/.config/efm-langserver
-    src: .config/efm-langserver
-
-  d_fastfetch:
-    dst: ~/.config/fastfetch
-    src: .config/fastfetch
-
   d_xplr:
     dst: ~/.config/xplr
     src: .config/xplr
@@ -88,14 +68,6 @@ dotfiles:
   d_k9s:
     dst: ~/.config/k9s
     src: .config/k9s
-
-  d_mc:
-    dst: ~/.config/mc
-    src: .config/mc
-
-  d_mc_skins:
-    dst: ~/.local/share/mc/skins
-    src: .local/share/mc/skins
 
   d_warp:
     dst: ~/.warp
@@ -117,17 +89,9 @@ dotfiles:
     dst: ~/.config/qBittorrent
     src: .config/qBittorrent
 
-  d_nvim:
-    dst: ~/.config/nvim
-    src: .config/nvim
-
   d_lazygit:
     dst: ~/.config/lazygit
     src: .config/lazygit
-
-  d_kitty:
-    dst: ~/.config/kitty
-    src: .config/kitty
 
   d_neofetch:
     dst: ~/.config/neofetch
@@ -141,23 +105,22 @@ dotfiles:
     dst: ~/.config/zellij
     src: .config/zellij
 
+  d_zellij_plugins:
+    dst: ~/zellij-plugins
+    src: zellij-plugins
+
 profiles:
   base:
     dotfiles:
       - d_atuin
       - d_bat
       - d_btop
-      - d_efm_langserver
       - d_fleet
       - d_helix
       - d_k9s
-      - d_kitty
       - d_lf
       - d_lazygit
-      - d_mc
-      - d_mc_skins
       - d_neofetch
-      - d_nvim
       - d_qbit
       - d_skhd
       - d_spicetify
@@ -167,11 +130,9 @@ profiles:
       - d_yazi
       - d_yabai
       - d_zellij
+      - d_zellij_plugins
       - f_git
-      - f_hyper_js
       - f_ipython
       - f_starship
       - f_lfp
-      - f_tmux
-      - f_vim
       - f_zsh
