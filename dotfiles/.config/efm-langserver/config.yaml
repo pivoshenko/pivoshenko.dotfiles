@@ -1,0 +1,33 @@
+version: 2
+lint-debounce: 1s
+root-markers:
+  - .git/
+  - package.json
+  - pyproject.toml
+  - Cargo.toml
+
+tools:
+  codespell: &codespell
+    lint-command: 'codespell'
+    lint-formats:
+      - '%f:%l: %m'
+
+  csv-csvlint: &csv-csvlint
+    lint-command: 'csvlint'
+
+  dockerfile-hadolint: &dockerfile-hadolint
+    lint-command: 'hadolint'
+    lint-formats:
+      - '%f:%l %m'
+
+  gitcommit-gitlint: &gitcommit-gitlint
+    lint-command: 'gitlint'
+    lint-stdin: true
+    lint-formats:
+      - '%l: %m: "%r"'
+      - '%l: %m'
+
+languages:
+  python:
+    - <<: *codespell
+
