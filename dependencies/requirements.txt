@@ -1,0 +1,65 @@
+# dependency managers
+pdm
+poetry
+
+# REPL
+bpython
+ipython
+
+# FP
+awesome-pattern-matching
+returns
+
+# DI
+dependency-injector
+
+# linters
+codespell  # spelling linter
+deptry  # dependencies linter
+gitlint  # git commit messages linter
+memestra  # dead code linter
+mypy  # static type checker
+ruff  # all-purpose linter
+sqlfluff  # SQL linter
+
+# formatters
+black  # code formatter
+isort  # imports formatter
+pyupgrade  # syntax formatter
+
+# LSP
+python-lsp-server
+ruff-lsp
+
+# LSP plugins
+pyls-isort
+pyls-memestra
+pylsp-mypy
+python-lsp-black
+
+# tests
+pytest
+xdoctest
+
+# pytest plugins
+coverage
+pytest-codeblocks
+pytest-cov
+pytest-lazy-fixture
+pytest-mock
+pytest-sugar
+
+# ML
+jupysql
+jupyter
+jupyterlab
+matplotlib
+pandas
+polars
+seaborn
+
+# DB
+duckdb
+duckdb-engine
+sqlalchemy
+
