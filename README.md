@@ -22,9 +22,9 @@
     </a>
 </p>
 
-## 🏗️ 🏠 Tooling, Configs and Dotfiles
+## 🏗️ 🏠 Tooling and Dotfiles
 
-Set of the tooling, configs and dotfiles.
+Set of the tooling and dotfiles.
 
 ### 🧑🏻‍💻 Installation
 
