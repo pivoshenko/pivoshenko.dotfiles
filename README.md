@@ -22,18 +22,24 @@
     </a>
 </p>
 
-# 🏗️ Configs and Dotfiles
+## 🏗️ 🏠 Tooling, Configs and Dotfiles
 
-Set of the configs and dotfiles for the tooling.
+Set of the tooling, configs and dotfiles.
 
-## 🧑🏻‍💻 Installation
+### 🧑🏻‍💻 Installation
 
-1. Install [`dotdrop`][dotdrop]
+1. Install [`ansible`][ansible]
 
-2. Run the following command to install the necessary configs:
+2. Install [`dotdrop`][dotdrop]
+
+3. Run the following commands to install the necessary tooling and configs:
 
 ```shell
+ansible-playbook playbook.yaml
+
 dotdrop install -p base
 ```
+
+[ansible]: https://pypi.org/project/ansible
 
 [dotdrop]: https://github.com/deadc0de6/dotdrop
