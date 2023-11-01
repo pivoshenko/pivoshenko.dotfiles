@@ -1,4 +1,4 @@
-- name: MacOS Setup
+- name: Tooling
   hosts: localhost
   vars:
     ansible_connection: local
@@ -97,52 +97,52 @@
         - dsq # CLI tool for running SQL queries against JSON, CSV, Excel, Parquet
         - duckdb # embeddable SQL OLAP Database Management System
         - exa # modern replacement for 'ls'
-        - fd  # simple, fast and user-friendly alternative to find
-        - ffmpeg  # play, record, convert, and stream audio and video
-        - ffmpegthumbnailer  # create thumbnails for your video files
-        - fselect  # find files with sql-like queries
-        - fzf  # command-line fuzzy finder written in go
-        - gcc  # gnu compiler collection
-        - gh  # github command-line tool
-        - git-delta  # syntax-highlighting pager for git and diff output
-        - graphviz  # graph visualization software from at&t and bell labs
-        - hadolint  # smarter Dockerfile linter to validate best practices
-        - helix  # post-modern modal text editor
-        - helm  # kubernetes package manager
-        - jq  # lightweight and flexible command-line json processor
-        - k9s  # kubernetes cli to manage your clusters in style!
-        - kubernetes-cli  # kubernetes command-line interface
-        - koekeishiya/formulae/skhd  # hotkey daemon for macOS
-        - koekeishiya/formulae/yabai  # tiling window manager for macOS
-        - lazydocker  # lazier way to manage everything docker
-        - lazygit  # simple terminal ui for git commands
-        - lf  # terminal file manager
-        - minikube  # run a kubernetes cluster locally
-        - nap  # code snippets in your terminal
-        - navi  # interactive cheatsheet tool for the command-line
-        - neofetch  # fast, highly customisable system info script
-        - poppler  # pdf rendering library (based on the xpdf-3.0 code base)
-        - pyenv  # python version management
-        - pyenv-virtualenv  # pyenv plugin to manage virtualenv
-        - ripgrep  # search tool like grep and the silver searcher
-        - starship  # cross-shell prompt for astronauts
-        - thefuck  # programmatically correct mistyped console commands
-        - tree  # display directories as trees (with optional color/html output)
-        - ttyd  # command-line tool for sharing terminal over the web
-        - unar  # command-line unarchiving tools supporting multiple formats
-        - vhs  # your cli home video recorder
-        - wget  # internet file retriever
-        - xplr  # hackable, minimal, fast tui file explorer
-        - yazi  # blazing fast terminal file manager written in rust, based on async i/o
-        - zellij  # pluggable terminal workspace, with terminal multiplexer as the base feature
-        - zoxide  # shell extension to navigate your filesystem faster
+        - fd # simple, fast and user-friendly alternative to find
+        - ffmpeg # play, record, convert, and stream audio and video
+        - ffmpegthumbnailer # create thumbnails for your video files
+        - fselect # find files with sql-like queries
+        - fzf # command-line fuzzy finder written in go
+        - gcc # gnu compiler collection
+        - gh # github command-line tool
+        - git-delta # syntax-highlighting pager for git and diff output
+        - graphviz # graph visualization software from at&t and bell labs
+        - hadolint # smarter Dockerfile linter to validate best practices
+        - helix # post-modern modal text editor
+        - helm # kubernetes package manager
+        - jq # lightweight and flexible command-line json processor
+        - k9s # kubernetes cli to manage your clusters in style!
+        - kubernetes-cli # kubernetes command-line interface
+        - koekeishiya/formulae/skhd # hotkey daemon for macOS
+        - koekeishiya/formulae/yabai # tiling window manager for macOS
+        - lazydocker # lazier way to manage everything docker
+        - lazygit # simple terminal ui for git commands
+        - lf # terminal file manager
+        - minikube # run a kubernetes cluster locally
+        - nap # code snippets in your terminal
+        - navi # interactive cheatsheet tool for the command-line
+        - neofetch # fast, highly customisable system info script
+        - poppler # pdf rendering library (based on the xpdf-3.0 code base)
+        - pyenv # python version management
+        - pyenv-virtualenv # pyenv plugin to manage virtualenv
+        - ripgrep # search tool like grep and the silver searcher
+        - starship # cross-shell prompt for astronauts
+        - thefuck # programmatically correct mistyped console commands
+        - tree # display directories as trees (with optional color/html output)
+        - ttyd # command-line tool for sharing terminal over the web
+        - unar # command-line unarchiving tools supporting multiple formats
+        - vhs # your cli home video recorder
+        - wget # internet file retriever
+        - xplr # hackable, minimal, fast tui file explorer
+        - yazi # blazing fast terminal file manager written in rust, based on async i/o
+        - zellij # pluggable terminal workspace, with terminal multiplexer as the base feature
+        - zoxide # shell extension to navigate your filesystem faster
 
     - name: Install CLI tools via npm
       community.general.npm:
         name: "{{ item }}"
         global: true
       with_items:
-        - git-labelmaker  # ddit GitHub labels from the command line
+        - git-labelmaker # ddit GitHub labels from the command line
 
     - name: Install oh-my-zsh
       ansible.builtin.shell:
