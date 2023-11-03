@@ -9,41 +9,9 @@ config:
   longkey: false
 
 dotfiles:
-  f_starship:
-    dst: ~/.config/starship.toml
-    src: .config/starship.toml
-
-  f_ipython:
-    dst: ~/.ipython/profile_default/startup/start.py
-    src: .ipython/profile_default/startup/start.py
-
-  f_zsh:
-    dst: ~/.zshrc
-    src: .zshrc
-
-  f_git:
-    dst: ~/.gitconfig
-    src: .gitconfig
-
-  f_lfp:
-    dst: ~/.local/bin/lf-pick
-    src: .local/bin/lf-pick
-
-  d_yabai:
-    dst: ~/.config/yabai/yabairc
-    src: .config/yabai/yabairc
-
-  d_skhd:
-    dst: ~/.config/skhd/skhdrc
-    src: .config/skhd/skhdrc
-
   d_atuin:
     dst: ~/.config/atuin
     src: .config/atuin
-
-  d_helix:
-    dst: ~/.config/helix
-    src: .config/helix
 
   d_bat:
     dst: ~/.config/bat
@@ -57,49 +25,61 @@ dotfiles:
     dst: ~/.config/direnv
     src: .config/direnv
 
-  d_xplr:
-    dst: ~/.config/xplr
-    src: .config/xplr
+  d_fleet:
+    dst: ~/.fleet
+    src: .fleet
 
-  d_yazi:
-    dst: ~/.config/yazi
-    src: .config/yazi
+  d_helix:
+    dst: ~/.config/helix
+    src: .config/helix
 
   d_k9s:
     dst: ~/.config/k9s
     src: .config/k9s
 
-  d_warp:
-    dst: ~/.warp
-    src: .warp
-
-  d_spotify_tui:
-    dst: ~/.config/spotify-tui
-    src: .config/spotify-tui
-
-  d_spicetify:
-    dst: ~/.config/spicetify
-    src: .config/spicetify
-
-  d_fleet:
-    dst: ~/.fleet
-    src: .fleet
-
-  d_qbit:
-    dst: ~/.config/qBittorrent
-    src: .config/qBittorrent
-
   d_lazygit:
     dst: ~/.config/lazygit
     src: .config/lazygit
+
+  d_lf:
+    dst: ~/.config/lf
+    src: .config/lf
 
   d_neofetch:
     dst: ~/.config/neofetch
     src: .config/neofetch
 
-  d_lf:
-    dst: ~/.config/lf
-    src: .config/lf
+  d_qbit:
+    dst: ~/.config/qBittorrent
+    src: .config/qBittorrent
+
+  d_skhd:
+    dst: ~/.config/skhd/skhdrc
+    src: .config/skhd/skhdrc
+
+  d_spicetify:
+    dst: ~/.config/spicetify
+    src: .config/spicetify
+
+  d_spotify_tui:
+    dst: ~/.config/spotify-tui
+    src: .config/spotify-tui
+
+  d_warp:
+    dst: ~/.warp
+    src: .warp
+
+  d_xplr:
+    dst: ~/.config/xplr
+    src: .config/xplr
+
+  d_yabai:
+    dst: ~/.config/yabai/yabairc
+    src: .config/yabai/yabairc
+
+  d_yazi:
+    dst: ~/.config/yazi
+    src: .config/yazi
 
   d_zellij:
     dst: ~/.config/zellij
@@ -108,6 +88,26 @@ dotfiles:
   d_zellij_plugins:
     dst: ~/zellij-plugins
     src: zellij-plugins
+
+  f_git:
+    dst: ~/.gitconfig
+    src: .gitconfig
+
+  f_ipython:
+    dst: ~/.ipython/profile_default/startup/start.py
+    src: .ipython/profile_default/startup/start.py
+
+  f_lfp:
+    dst: ~/.local/bin/lf-pick
+    src: .local/bin/lf-pick
+
+  f_starship:
+    dst: ~/.config/starship.toml
+    src: .config/starship.toml
+
+  f_zsh:
+    dst: ~/.zshrc
+    src: .zshrc
 
 profiles:
   base:
@@ -118,8 +118,8 @@ profiles:
       - d_fleet
       - d_helix
       - d_k9s
-      - d_lf
       - d_lazygit
+      - d_lf
       - d_neofetch
       - d_qbit
       - d_skhd
@@ -127,12 +127,12 @@ profiles:
       - d_spotify_tui
       - d_warp
       - d_xplr
-      - d_yazi
       - d_yabai
+      - d_yazi
       - d_zellij
       - d_zellij_plugins
       - f_git
       - f_ipython
-      - f_starship
       - f_lfp
+      - f_starship
       - f_zsh
