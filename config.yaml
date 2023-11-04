@@ -21,9 +21,9 @@ dotfiles:
     dst: ~/.config/btop
     src: .config/btop
 
-  d_direnv:
-    dst: ~/.config/direnv
-    src: .config/direnv
+  d_efm:
+    dst: ~/.config/efm-langserver
+    src: .config/efm-langserver
 
   d_fleet:
     dst: ~/.fleet
@@ -115,6 +115,7 @@ profiles:
       - d_atuin
       - d_bat
       - d_btop
+      - d_efm
       - d_fleet
       - d_helix
       - d_k9s

@@ -31,3 +31,6 @@ languages:
   python:
     - <<: *codespell
 
+  git-commit:
+    - <<: *codespell
+    - <<: *gitcommit-gitlint
