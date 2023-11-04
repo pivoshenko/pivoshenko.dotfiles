@@ -89,6 +89,10 @@ dotfiles:
     dst: ~/zellij-plugins
     src: zellij-plugins
 
+  f_direnv:
+    dst: ~/.config/direnv.toml
+    src: .config/direnv.toml
+
   f_git:
     dst: ~/.gitconfig
     src: .gitconfig
@@ -132,6 +136,7 @@ profiles:
       - d_yazi
       - d_zellij
       - d_zellij_plugins
+      - f_direnv
       - f_git
       - f_ipython
       - f_lfp
