@@ -38,6 +38,8 @@ Set of the tooling and dotfiles.
 ansible-playbook playbook.yaml
 
 dotdrop install -p base
+
+pip install -U -r dependencies/requirements.txt
 ```
 
 [ansible]: https://pypi.org/project/ansible
