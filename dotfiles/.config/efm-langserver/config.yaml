@@ -13,6 +13,8 @@ tools:
     lint-command: "codespell"
     lint-formats:
       - "%f:%l: %m"
+    root-markers:
+      - pyproject.toml
 
   # TODO investigate issues with invalid paths e.g. `./test.md`
   cspell: &cspell
@@ -85,6 +87,24 @@ tools:
     lint-formats:
       - "%f:%l:%c %m"
 
+  python-black: &python-black
+    prefix: black
+    format-command: "black --quiet -"
+    format-stdin: true
+
+  python-isort: &python-isort
+    prefix: isort
+    format-command: "isort --quiet -"
+    format-stdin: true
+
+  python-mypy: &python-mypy
+    prefix: mypy
+    lint-command: "mypy --show-column-numbers"
+    lint-formats:
+      - "%f:%l:%c: %trror: %m"
+      - "%f:%l:%c: %tarning: %m"
+      - "%f:%l:%c: %tote: %m"
+
   yaml-actionlint: &yaml-actionlint
     prefix: actionlint
     lint-command: "zsh -c \"[[ '${INPUT}' =~ \\\\.github/workflows/ ]]\" && actionlint -oneline -no-color -"
@@ -130,6 +150,9 @@ languages:
 
   graphql:
     - <<: *graphql-graphql-schema-linter
+
+  python:
+    - <<: *python-mypy
 
   yaml:
     - <<: *yaml-actionlint
