@@ -170,6 +170,8 @@
         - cspell
         - bash-language-server
         - dockerfile-language-server-nodejs
+        - graphql-language-service-cli
+        - graphql-language-service-server
         - vscode-langservers-extracted
         - yaml-language-server@next
 
