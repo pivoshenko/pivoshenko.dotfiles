@@ -14,6 +14,7 @@ returns
 dependency-injector
 
 # linters
+ansible-lint  # playbooks linter
 codespell  # spelling linter
 deptry  # dependencies linter
 dotenv-linter  # linter for .env files
