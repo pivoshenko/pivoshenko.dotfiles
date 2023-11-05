@@ -13,32 +13,32 @@ plugins=(
     aws
     brew
     celery
-    copypath
     colorize
+    copypath
     docker
     docker-compose
-    git
-    git-auto-fetch
+    fast-syntax-highlighting
     gcloud
     gh
+    git
+    git-auto-fetch
     helm
     history
     kubectl
     minikube
+    node
     npm
     nvm
-    node
-    python
-    poetry
     pip
+    poetry
+    python
     redis-cli
     rust
     thefuck
     vault
-    vscode
     virtualenv
+    vscode
     wakatime
-    fast-syntax-highlighting
     zsh-autosuggestions
     zsh-vi-mode
 )
@@ -61,6 +61,7 @@ eval "$(pyenv init -)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
+export NODE_NO_WARNINGS=1
 
 # configure bun
 [ -s "/Users/volodymyr.pivoshenko/.oh-my-zsh/completions/_bun" ] && source "/Users/volodymyr.pivoshenko/.oh-my-zsh/completions/_bun"

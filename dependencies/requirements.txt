@@ -13,6 +13,11 @@ returns
 # DI
 dependency-injector
 
+# formatters
+black  # code formatter
+isort  # imports formatter
+pyupgrade  # syntax formatter
+
 # linters
 ansible-lint  # playbooks linter
 codespell  # spelling linter
@@ -23,11 +28,6 @@ memestra  # dead code linter
 mypy  # static type checker
 ruff  # all-purpose linter
 sqlfluff  # SQL linter
-
-# formatters
-black  # code formatter
-isort  # imports formatter
-pyupgrade  # syntax formatter
 
 # LSP
 python-lsp-server
