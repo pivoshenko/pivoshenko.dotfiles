@@ -86,6 +86,7 @@
         state: present
       with_items:
         - act # runs GitHub Actions locally
+        - actionlint # static checker for GitHub Actions workflow files
         - ansible-language-server # language Server for Ansible Files
         - atuin # TUI shell history for zsh
         - bat # cat with syntax highlighting and Git integration
