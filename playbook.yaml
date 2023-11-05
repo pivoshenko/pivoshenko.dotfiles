@@ -80,6 +80,7 @@
         - node
         - nvm
 
+    # TODO move LSPs into proper section
     - name: Install dev tools via homebrew
       community.general.homebrew:
         name: "{{ item }}"
