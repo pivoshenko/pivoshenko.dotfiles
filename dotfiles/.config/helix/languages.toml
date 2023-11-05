@@ -2,6 +2,10 @@
 command = "efm-langserver"
 config.documentFormatting = true
 
+[language-server.ruff]
+command = "ruff-lsp"
+config.documentFormatting = true
+
 [[language]]
 name = "bash"
 scope = "source.bash"
@@ -149,8 +153,47 @@ roots = []
 
 [[language]]
 name = "python"
-auto-format = true
-language-servers = [{ name = "efm", only-features = ["diagnostics", "format"] }]
+scope = "source.python"
+injection-regex = "python"
+file-types = [
+    "py",
+    "pyi",
+    "py3",
+    "pyw",
+    "ptl",
+    ".pythonstartup",
+    ".pythonrc",
+    "SConstruct",
+    "rpy",
+    "cpy",
+    "ipy",
+    "pyt",
+    "SConscript"
+]
+shebangs = ["python"]
+roots = ["pyproject.toml", "setup.py", "poetry.lock", "pyrightconfig.json"]
+comment-token = "#"
+indent = { tab-width = 4, unit = "    " }
+language-servers = [
+    "pylsp",
+    { name = "ruff", only-features = [
+        "diagnostics"
+    ] },
+    { name = "efm", only-features = [
+        "diagnostics",
+        "format"
+    ] }
+]
+
+[[language]]
+name = "toml"
+scope = "source.toml"
+injection-regex = "toml"
+file-types = ["toml", "poetry.lock", "Cargo.lock"]
+roots = []
+comment-token = "#"
+indent = { tab-width = 2, unit = "  " }
+language-servers = ["taplo", { name = "efm", only-features = ["diagnostics", "format"] }]
 
 [[language]]
 name = "yaml"
