@@ -3,41 +3,165 @@ command = "efm-langserver"
 config.documentFormatting = true
 
 [[language]]
-name = "python"
-auto-format = true
-language-servers = [
-  { name = "efm", only-features = [ "diagnostics", "format" ] },
+name = "bash"
+scope = "source.bash"
+injection-regex = "(shell|bash|zsh|sh)"
+file-types = [
+    "sh",
+    "bash",
+    "zsh",
+    ".bash_login",
+    ".bash_logout",
+    ".bash_profile",
+    ".bashrc",
+    ".profile",
+    ".zshenv",
+    "zshenv",
+    ".zlogin",
+    "zlogin",
+    ".zlogout",
+    "zlogout",
+    ".zprofile",
+    "zprofile",
+    ".zshrc",
+    "zshrc",
+    ".zimrc",
+    "APKBUILD",
+    "PKGBUILD",
+    "eclass",
+    "ebuild",
+    "bazelrc",
+    ".bash_aliases",
+    "Renviron",
+    ".Renviron",
+    ".xprofile",
+    ".xsession",
+    ".xsessionrc",
+    "zsh-theme",
+    "ksh",
+    "cshrc",
+    "tcshrc",
+    ".yashrc",
+    ".yash_profile",
+    ".hushlogin",
+    "bashrc_Apple_Terminal",
+    "zshrc_Apple_Terminal"
 ]
+shebangs = ["sh", "bash", "dash", "zsh"]
+roots = []
+comment-token = "#"
+indent = { tab-width = 2, unit = "  " }
+language-servers = ["bash-language-server", { name = "efm", only-features = ["diagnostics", "format"] }]
+
+[[language]]
+name = "bibtex"
+scope = "source.bib"
+injection-regex = "bib"
+file-types = ["bib"]
+roots = []
+comment-token = "%"
+indent = { tab-width = 4, unit = "\t" }
+auto-format = true
+language-servers = ["texlab", { name = "efm", only-features = ["diagnostics", "format"] }]
+
+[[language]]
+name = "dhall"
+scope = "source.dhall"
+injection-regex = "dhall"
+file-types = ["dhall"]
+roots = []
+comment-token = "--"
+indent = { tab-width = 2, unit = "  " }
+formatter = { command = "dhall", args = ["format"] }
+language-servers = ["dhall-lsp-server", { name = "efm", only-features = ["diagnostics"] }]
+
+[[language]]
+name = "dockerfile"
+scope = "source.dockerfile"
+injection-regex = "docker|dockerfile"
+roots = ["Dockerfile", "Containerfile"]
+file-types = ["Dockerfile", "dockerfile", "Containerfile", "containerfile"]
+comment-token = "#"
+indent = { tab-width = 2, unit = "  " }
+language-servers = ["docker-langserver", { name = "efm", only-features = ["diagnostics"] }]
+
+[[language]]
+name = "env"
+scope = "source.env"
+file-types = [".env", ".env.local", ".env.development", ".env.production", ".env.dist", ".envrc"]
+injection-regex = "env"
+comment-token = "#"
+indent = { tab-width = 4, unit = "\t" }
+roots = []
+grammar = "bash"
+language-servers = [{ name = "efm", only-features = ["diagnostics"] }]
+
+[[language]]
+name = "git-commit"
+scope = "git.commitmsg"
+roots = []
+file-types = ["COMMIT_EDITMSG"]
+comment-token = "#"
+indent = { tab-width = 2, unit = "  " }
+rulers = [51, 73]
+text-width = 72
+language-servers = [{ name = "efm", only-features = ["diagnostics"] }]
+
+[[language]]
+name = "graphql"
+scope = "source.graphql"
+injection-regex = "graphql"
+file-types = ["gql", "graphql", "graphqls"]
+roots = []
+indent = { tab-width = 2, unit = "  " }
+language-servers = ["graphql-language-service", { name = "efm", only-features = ["diagnostics"] }]
 
 [[language]]
 name = "ini"
 scope = "source.ini"
 file-types = [
-  "ini",
-  # Systemd unit files
-  "service",
-  "automount",
-  "device",
-  "mount",
-  "path",
-  "service",
-  "slice",
-  "socket",
-  "swap",
-  "target",
-  "timer",
-  # Podman quadlets
-  "container",
-  "volume",
-  "kube",
-  "network",
-  ".editorconfig",
-  "properties",
-  "cfg",
-  "txt",
-  "directory"
+    "ini",
+    "service",
+    "automount",
+    "device",
+    "mount",
+    "path",
+    "service",
+    "slice",
+    "socket",
+    "swap",
+    "target",
+    "timer",
+    "container",
+    "volume",
+    "kube",
+    "network",
+    ".editorconfig",
+    "properties",
+    "cfg",
+    "directory",
+    "requirements.txt"
 ]
 injection-regex = "ini"
 comment-token = "#"
 indent = { tab-width = 4, unit = "\t" }
 roots = []
+
+[[language]]
+name = "python"
+auto-format = true
+language-servers = [{ name = "efm", only-features = ["diagnostics", "format"] }]
+
+[[language]]
+name = "yaml"
+scope = "source.yaml"
+file-types = ["yml", "yaml"]
+roots = []
+comment-token = "#"
+indent = { tab-width = 2, unit = "  " }
+injection-regex = "yml|yaml"
+language-servers = [
+    "yaml-language-server",
+    # "ansible-language-server",
+    { name = "efm", only-features = ["diagnostics"] }
+]
