@@ -16,7 +16,6 @@ tools:
     root-markers:
       - pyproject.toml
 
-  # TODO investigate issues with invalid paths e.g. `./test.md`
   cspell: &cspell
     prefix: cspell
     lint-command: "cspell lint --no-progress --no-summary --no-color ${INPUT}"
@@ -132,7 +131,8 @@ tools:
 
 languages:
   =:
-    - <<: *cspell
+    # TODO cspell requires further investigation and configuration 
+    # - <<: *cspell
     - <<: *codespell
 
   bash:
