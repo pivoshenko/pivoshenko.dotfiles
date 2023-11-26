@@ -29,6 +29,11 @@ mypy  # static type checker
 ruff  # all-purpose linter
 sqlfluff  # SQL linter
 
+# utils
+devtools
+nitpick
+pre-commit
+
 # LSP
 python-lsp-server
 ruff-lsp
