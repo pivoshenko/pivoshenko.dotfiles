@@ -100,7 +100,7 @@ alias h="atuin search -i"
 eval "$(navi widget zsh)"
 
 # configure zellij
-# eval "$(zellij setup --generate-auto-start zsh)"
+eval "$(zellij setup --generate-auto-start zsh)"
 alias zj="zellij"
 
 # configure zoxide
