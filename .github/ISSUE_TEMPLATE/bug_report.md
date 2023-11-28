@@ -27,12 +27,7 @@ A clear and concise description of what you expected to happen.
 
 If applicable, add screenshots to help explain your problem.
 
-**System (please complete the following information):**
-
-- OS: e.g. `MacOS BigSur 11.6.1`.
-- Python version: e.g. `3.8.12`.
-- `dotfiles` version: e.g. `1.0.0`.
-- Link of a [gist] with the contents of your `pyproject.toml` file.
+**System**
 
 **Additional context**
 
