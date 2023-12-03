@@ -137,7 +137,8 @@ languages:
 
   bash:
     - <<: *bash-shfmt
-    - <<: *bash-shellcheck
+    # TODO shellcheck utilizes too much RAM
+    # - <<: *bash-shellcheck
 
   dockerfile:
     - <<: *dockerfile-hadolint
