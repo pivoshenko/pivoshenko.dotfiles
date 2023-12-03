@@ -33,6 +33,7 @@ sqlfluff  # SQL linter
 devtools
 nitpick
 pre-commit
+cookiecutter
 
 # LSP
 python-lsp-server
