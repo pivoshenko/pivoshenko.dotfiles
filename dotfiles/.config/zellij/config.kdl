@@ -328,7 +328,7 @@ theme "catppuccin-macchiato"
 //   - true (default)
 //   - false
 //
-mouse_mode true
+mouse_mode false
 
 // Configure the scroll back buffer size
 // This is the number of lines zellij stores for each pane in the scroll back
