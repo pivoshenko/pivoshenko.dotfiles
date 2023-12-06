@@ -97,9 +97,13 @@ dotfiles:
     dst: ~/.gitconfig
     src: .gitconfig
 
-  f_ipython:
+  f_ipython_startup:
     dst: ~/.ipython/profile_default/startup/start.py
     src: .ipython/profile_default/startup/start.py
+
+  f_ipython_config:
+    dst: ~/.ipython/profile_default/ipython_config.py
+    src: .ipython/profile_default/ipython_config.py
 
   f_lfp:
     dst: ~/.local/bin/lf-pick
@@ -138,7 +142,8 @@ profiles:
       - d_zellij_plugins
       - f_direnv
       - f_git
-      - f_ipython
+      - f_ipython_startup
+      - f_ipython_config
       - f_lfp
       - f_starship
       - f_zsh
