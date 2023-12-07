@@ -5,6 +5,7 @@ poetry
 # REPL
 bpython
 ipython
+euporie
 
 # FP
 awesome-pattern-matching
@@ -30,10 +31,10 @@ ruff  # all-purpose linter
 sqlfluff  # SQL linter
 
 # utils
-devtools
-nitpick
-pre-commit
-cookiecutter
+devtools  # debugger
+nitpick  # styles manager
+pre-commit  # hooks
+cookiecutter  # templates manager
 
 # LSP
 python-lsp-server
