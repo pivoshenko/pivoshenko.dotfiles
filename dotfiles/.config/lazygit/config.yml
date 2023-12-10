@@ -21,3 +21,16 @@ gui:
       - "#cad3f5"
     searchingActiveBorderColor:
       - "#eed49f"
+
+customCommands:
+  - key: "C"
+    command: "git cz c"
+    description: "commit with commitizen"
+    context: "files"
+    loadingText: "opening commitizen commit tool"
+    subprocess: true
+
+  - key: "<c-r>"
+    command: "gh pr create --fill --web"
+    context: "global"
+    loadingText: "Creating pull request on GitHub"
