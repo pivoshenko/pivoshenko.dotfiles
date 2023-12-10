@@ -57,10 +57,6 @@ dotfiles:
     dst: ~/.config/skhd/skhdrc
     src: .config/skhd/skhdrc
 
-  d_spicetify:
-    dst: ~/.config/spicetify
-    src: .config/spicetify
-
   d_spotify_tui:
     dst: ~/.config/spotify-tui
     src: .config/spotify-tui
@@ -132,7 +128,6 @@ profiles:
       - d_neofetch
       - d_qbit
       - d_skhd
-      - d_spicetify
       - d_spotify_tui
       - d_warp
       - d_xplr
