@@ -131,7 +131,7 @@ tools:
 
 languages:
   =:
-    # TODO cspell requires further investigation and configuration 
+    # TODO cspell requires further investigation and configuration
     # - <<: *cspell
     - <<: *codespell
 

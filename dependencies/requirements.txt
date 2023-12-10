@@ -71,4 +71,3 @@ seaborn
 duckdb
 duckdb-engine
 sqlalchemy
-
