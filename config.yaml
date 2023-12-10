@@ -25,6 +25,10 @@ dotfiles:
     dst: ~/.config/efm-langserver
     src: .config/efm-langserver
 
+  d_euporie:
+    dst: ~/.config/euporie
+    src: .config/euporie
+
   d_fleet:
     dst: ~/.fleet
     src: .fleet
@@ -120,6 +124,7 @@ profiles:
       - d_bat
       - d_btop
       - d_efm
+      - d_euporie
       - d_fleet
       - d_helix
       - d_k9s
