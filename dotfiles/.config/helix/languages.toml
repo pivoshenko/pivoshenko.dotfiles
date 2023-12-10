@@ -11,45 +11,45 @@ name = "bash"
 scope = "source.bash"
 injection-regex = "(shell|bash|zsh|sh)"
 file-types = [
-    "sh",
-    "bash",
-    "zsh",
-    ".bash_login",
-    ".bash_logout",
-    ".bash_profile",
-    ".bashrc",
-    ".profile",
-    ".zshenv",
-    "zshenv",
-    ".zlogin",
-    "zlogin",
-    ".zlogout",
-    "zlogout",
-    ".zprofile",
-    "zprofile",
-    ".zshrc",
-    "zshrc",
-    ".zimrc",
-    "APKBUILD",
-    "PKGBUILD",
-    "eclass",
-    "ebuild",
-    "bazelrc",
-    ".bash_aliases",
-    "Renviron",
-    ".Renviron",
-    ".xprofile",
-    ".xsession",
-    ".xsessionrc",
-    "zsh-theme",
-    "ksh",
-    "cshrc",
-    "tcshrc",
-    ".yashrc",
-    ".yash_profile",
-    ".hushlogin",
-    "bashrc_Apple_Terminal",
-    "zshrc_Apple_Terminal"
+  "sh",
+  "bash",
+  "zsh",
+  ".bash_login",
+  ".bash_logout",
+  ".bash_profile",
+  ".bashrc",
+  ".profile",
+  ".zshenv",
+  "zshenv",
+  ".zlogin",
+  "zlogin",
+  ".zlogout",
+  "zlogout",
+  ".zprofile",
+  "zprofile",
+  ".zshrc",
+  "zshrc",
+  ".zimrc",
+  "APKBUILD",
+  "PKGBUILD",
+  "eclass",
+  "ebuild",
+  "bazelrc",
+  ".bash_aliases",
+  "Renviron",
+  ".Renviron",
+  ".xprofile",
+  ".xsession",
+  ".xsessionrc",
+  "zsh-theme",
+  "ksh",
+  "cshrc",
+  "tcshrc",
+  ".yashrc",
+  ".yash_profile",
+  ".hushlogin",
+  "bashrc_Apple_Terminal",
+  "zshrc_Apple_Terminal"
 ]
 shebangs = ["sh", "bash", "dash", "zsh"]
 roots = []
@@ -124,27 +124,27 @@ language-servers = ["graphql-language-service", { name = "efm", only-features = 
 name = "ini"
 scope = "source.ini"
 file-types = [
-    "ini",
-    "service",
-    "automount",
-    "device",
-    "mount",
-    "path",
-    "service",
-    "slice",
-    "socket",
-    "swap",
-    "target",
-    "timer",
-    "container",
-    "volume",
-    "kube",
-    "network",
-    ".editorconfig",
-    "properties",
-    "cfg",
-    "directory",
-    "requirements.txt"
+  "ini",
+  "service",
+  "automount",
+  "device",
+  "mount",
+  "path",
+  "service",
+  "slice",
+  "socket",
+  "swap",
+  "target",
+  "timer",
+  "container",
+  "volume",
+  "kube",
+  "network",
+  ".editorconfig",
+  "properties",
+  "cfg",
+  "directory",
+  "requirements.txt"
 ]
 injection-regex = "ini"
 comment-token = "#"
@@ -156,33 +156,33 @@ name = "python"
 scope = "source.python"
 injection-regex = "python"
 file-types = [
-    "py",
-    "pyi",
-    "py3",
-    "pyw",
-    "ptl",
-    ".pythonstartup",
-    ".pythonrc",
-    "SConstruct",
-    "rpy",
-    "cpy",
-    "ipy",
-    "pyt",
-    "SConscript"
+  "py",
+  "pyi",
+  "py3",
+  "pyw",
+  "ptl",
+  ".pythonstartup",
+  ".pythonrc",
+  "SConstruct",
+  "rpy",
+  "cpy",
+  "ipy",
+  "pyt",
+  "SConscript"
 ]
 shebangs = ["python"]
 roots = ["pyproject.toml", "setup.py", "poetry.lock", "pyrightconfig.json"]
 comment-token = "#"
 indent = { tab-width = 4, unit = "    " }
 language-servers = [
-    "pylsp",
-    { name = "ruff", only-features = [
-        "diagnostics"
-    ] },
-    { name = "efm", only-features = [
-        "diagnostics",
-        "format"
-    ] }
+  "pylsp",
+  { name = "ruff", only-features = [
+    "diagnostics"
+  ] },
+  { name = "efm", only-features = [
+    "diagnostics",
+    "format"
+  ] }
 ]
 
 [[language]]
@@ -204,7 +204,6 @@ comment-token = "#"
 indent = { tab-width = 2, unit = "  " }
 injection-regex = "yml|yaml"
 language-servers = [
-    "yaml-language-server",
-    # "ansible-language-server",
-    { name = "efm", only-features = ["diagnostics"] }
+  "yaml-language-server",
+  { name = "efm", only-features = ["diagnostics"] }
 ]
