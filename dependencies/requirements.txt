@@ -18,6 +18,7 @@ dependency-injector
 black  # code formatter
 isort  # imports formatter
 pyupgrade  # syntax formatter
+nbqa  # notebooks formatter
 
 # linters
 ansible-lint  # playbooks linter
