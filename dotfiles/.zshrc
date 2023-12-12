@@ -92,7 +92,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 alias ld="lazydocker"
 
 # configure atuin
-eval "$(atuin init zsh)"
+eval "$(atuin init zsh --disable-up-arrow)"
 alias history="atuin search -i"
 alias h="atuin search -i"
 
