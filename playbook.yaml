@@ -85,64 +85,65 @@
         name: "{{ item }}"
         state: present
       with_items:
-        - act # runs GitHub Actions locally
-        - atuin # TUI shell history for zsh
-        - bat # cat with syntax highlighting and Git integration
-        - btop # resource monitor
-        - commitizen # defines a standard way of committing rules
-        - curl # query HTTP, HTTPS or FTP server
-        - d2 # modern diagram scripting language that turns text to diagrams
-        - direnv # load/unload environment variables based on $PWD
-        - dotdrop # dotfiles manager
-        - dsq # CLI tool for running SQL queries against JSON, CSV, Excel, Parquet
-        - duckdb # embeddable SQL OLAP Database Management System
-        - exa # modern replacement for 'ls'
-        - fd # simple, fast and user-friendly alternative to find
-        - ffmpeg # play, record, convert, and stream audio and video
-        - ffmpegthumbnailer # create thumbnails for your video files
-        - fselect # find files with sql-like queries
-        - fzf # command-line fuzzy finder written in go
-        - gcc # gnu compiler collection
-        - gh # github command-line tool
-        - git-delta # syntax-highlighting pager for git and diff output
-        - graphviz # graph visualization software from at&t and bell labs
-        - helix # post-modern modal text editor
-        - helm # kubernetes package manager
-        - jq # lightweight and flexible command-line json processor
-        - k9s # kubernetes cli to manage your clusters in style!
-        - koekeishiya/formulae/skhd # hotkey daemon for macOS
-        - koekeishiya/formulae/yabai # tiling window manager for macOS
-        - kubernetes-cli # kubernetes command-line interface
-        - lazydocker # lazier way to manage everything docker
-        - lazygit # simple terminal ui for git commands
-        - lf # terminal file manager
-        - minikube # run a kubernetes cluster locally
-        - nap # code snippets in your terminal
-        - navi # interactive cheatsheet tool for the command-line
-        - neofetch # fast, highly customisable system info script
-        - poppler # pdf rendering library (based on the xpdf-3.0 code base)
-        - pyenv # python version management
-        - pyenv-virtualenv # pyenv plugin to manage virtualenv
-        - ripgrep # search tool like grep and the silver searcher
-        - starship # cross-shell prompt for astronauts
-        - texlab # implementation of the Language Server Protocol for LaTeX
-        - thefuck # programmatically correct mistyped console commands
-        - tree # display directories as trees (with optional color/html output)
-        - ttyd # command-line tool for sharing terminal over the web
-        - unar # command-line unarchiving tools supporting multiple formats
-        - vhs # your cli home video recorder
-        - wget # internet file retriever
-        - xplr # hackable, minimal, fast tui file explorer
-        - yazi # blazing fast terminal file manager written in rust, based on async i/o
-        - zellij # pluggable terminal workspace, with terminal multiplexer as the base feature
-        - zoxide # shell extension to navigate your filesystem faster
+        - act  # runs GitHub Actions locally
+        - atuin  # TUI shell history for zsh
+        - bat  # cat with syntax highlighting and Git integration
+        - btop  # resource monitor
+        - commitizen  # defines a standard way of committing rules
+        - curl  # query HTTP, HTTPS or FTP server
+        - d2  # modern diagram scripting language that turns text to diagrams
+        - direnv  # load/unload environment variables based on $PWD
+        - dotdrop  # dotfiles manager
+        - dsq  # CLI tool for running SQL queries against JSON, CSV, Excel, Parquet
+        - duckdb  # embeddable SQL OLAP Database Management System
+        - exa  # modern replacement for 'ls'
+        - fd  # simple, fast and user-friendly alternative to find
+        - ffmpeg  # play, record, convert, and stream audio and video
+        - ffmpegthumbnailer  # create thumbnails for your video files
+        - fselect  # find files with sql-like queries
+        - fzf  # command-line fuzzy finder written in go
+        - gcc  # gnu compiler collection
+        - gh  # github command-line tool
+        - git-delta  # syntax-highlighting pager for git and diff output
+        - graphviz  # graph visualization software from at&t and bell labs
+        - helix  # post-modern modal text editor
+        - helm  # kubernetes package manager
+        - jq  # lightweight and flexible command-line json processor
+        - k9s  # kubernetes cli to manage your clusters in style!
+        - koekeishiya/formulae/skhd  # hotkey daemon for macOS
+        - koekeishiya/formulae/yabai  # tiling window manager for macOS
+        - kubernetes-cli  # kubernetes command-line interface
+        - lazydocker  # lazier way to manage everything docker
+        - lazygit  # simple terminal ui for git commands
+        - lf  # terminal file manager
+        - minikube  # run a kubernetes cluster locally
+        - nap  # code snippets in your terminal
+        - navi  # interactive cheatsheet tool for the command-line
+        - neofetch  # fast, highly customisable system info script
+        - poppler  # pdf rendering library (based on the xpdf-3.0 code base)
+        - pyenv  # python version management
+        - pyenv-virtualenv  # pyenv plugin to manage virtualenv
+        - ripgrep  # search tool like grep and the silver searcher
+        - starship  # cross-shell prompt for astronauts
+        - texlab  # implementation of the Language Server Protocol for LaTeX
+        - thefuck  # programmatically correct mistyped console commands
+        - tree  # display directories as trees (with optional color/html output)
+        - ttyd  # command-line tool for sharing terminal over the web
+        - tlrc  # tldr client written in Rust
+        - unar  # command-line unarchiving tools supporting multiple formats
+        - vhs  # your cli home video recorder
+        - wget  # internet file retriever
+        - xplr  # hackable, minimal, fast tui file explorer
+        - yazi  # blazing fast terminal file manager written in rust, based on async i/o
+        - zellij  # pluggable terminal workspace, with terminal multiplexer as the base feature
+        - zoxide  # shell extension to navigate your filesystem faster
 
     - name: Install CLI tools via npm
       community.general.npm:
         name: "{{ item }}"
         global: true
       with_items:
-        - git-labelmaker # ddit GitHub labels from the command line
+        - git-labelmaker  # edit GitHub labels from the command line
 
     - name: Install oh-my-zsh
       ansible.builtin.shell:
@@ -154,29 +155,29 @@
         name: "{{ item }}"
         state: present
       with_items:
-        - actionlint # static checker for GitHub Actions workflow files
-        - ansible-language-server # language server for Ansible files
-        - dhall-lsp-server # language server Protocol (LSP) server for Dhall
-        - efm-langserver # general purpose language server
-        - hadolint # smarter Dockerfile linter to validate best practices
-        - shellcheck # static analysis and lint tool, for (ba)sh scripts
-        - shfmt # autoformat shell script source code
-        - taplo # TOML toolkit written in Rust
+        - actionlint  # static checker for GitHub Actions workflow files
+        - ansible-language-server  # language server for Ansible files
+        - dhall-lsp-server  # language server Protocol (LSP) server for Dhall
+        - efm-langserver  # general purpose language server
+        - hadolint  # smarter Dockerfile linter to validate best practices
+        - shellcheck  # static analysis and lint tool, for (ba)sh scripts
+        - shfmt  # autoformat shell script source code
+        - taplo  # TOML toolkit written in Rust
 
     - name: Install LSPs via npm
       community.general.npm:
         name: "{{ item }}"
         global: true
       with_items:
-        - cspell # library used for code driven spelling checking
-        - bash-language-server # bash language server that brings an IDE-like experience for bash scripts to most editors
-        - dockerfile-language-server-nodejs # a language server for Dockerfiles powered by Node.js
-        - editorconfig-checker # tool to verify that your files are in harmony with your .editorconfig
-        - graphql-language-service-cli # interface for building GraphQL language services for IDEs
-        - graphql-language-service-server # interface for building GraphQL language services for IDEs
-        - graphql-schema-linter #  a command line tool to validate GraphQL schema definitions
-        - vscode-langservers-extracted # HTML/CSS/JSON/ESLint language servers
-        - yaml-language-server@next # language server for YAML Files
+        - cspell  # library used for code driven spelling checking
+        - bash-language-server  # bash language server that brings an IDE-like experience for bash scripts to most editors
+        - dockerfile-language-server-nodejs  # a language server for Dockerfiles powered by Node.js
+        - editorconfig-checker  # tool to verify that your files are in harmony with your .editorconfig
+        - graphql-language-service-cli  # interface for building GraphQL language services for IDEs
+        - graphql-language-service-server  # interface for building GraphQL language services for IDEs
+        - graphql-schema-linter  #  a command line tool to validate GraphQL schema definitions
+        - vscode-langservers-extracted  # HTML/CSS/JSON/ESLint language servers
+        - yaml-language-server@next  # language server for YAML Files
 
     - name: Install Spicetify CLI
       ansible.builtin.shell:
