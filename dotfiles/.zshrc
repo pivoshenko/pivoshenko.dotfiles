@@ -98,7 +98,7 @@ alias h="atuin search -i"
 
 # configure navi
 eval "$(navi widget zsh)"
-bindkey '^]' _navi_widget
+bindkey '^i' _navi_widget
 
 # configure zellij
 eval "$(zellij setup --generate-auto-start zsh)"
