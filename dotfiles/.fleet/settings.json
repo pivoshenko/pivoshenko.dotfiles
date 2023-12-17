@@ -1,5 +1,5 @@
 {
-  "theme": "catppuccin-macchiato",
+  "theme": "catppuccin-mocha",
   "fus.sendAllowed": false,
   "keymap": "macos-vscode",
   "vimEmulationEnabled": true,
