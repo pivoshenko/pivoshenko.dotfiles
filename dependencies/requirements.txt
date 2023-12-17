@@ -7,6 +7,10 @@ bpython
 ipython
 euporie
 
+# ipython plugins
+catppuccin
+catppuccin[pygments]
+
 # FP
 awesome-pattern-matching
 returns
