@@ -1,7 +1,7 @@
 {
   "meta": {
     "theme.kind": "Dark",
-    "theme.name": "Catppuccin Macchiato",
+    "theme.name": "Catppuccin Frappe",
     "theme.version": 1
   },
   "colors": {
@@ -70,8 +70,8 @@
     "dnd.fill": "ffffff20%",
     "editor.braceHighlight.fill": "Surface1",
     "editor.caret.fill": "Text",
-    "editor.currentLine.@focused.fill": "6e738d1a",
-    "editor.currentLine.fill": "6e738d1a",
+    "editor.currentLine.@focused.fill": "7379941a",
+    "editor.currentLine.fill": "7379941a",
     "editor.fill": "Base",
     "editor.lineNumber.@selected.text": "Mauve",
     "editor.lineNumber.text": "Subtext0",
@@ -252,31 +252,31 @@
       "layer": -68
     },
     "diff.added": {
-      "bgColor": "a6da9540%",
+      "bgColor": "a6d18940%",
       "fullLine": true,
       "layer": -69,
-      "stripeColor": "a6da9540%"
+      "stripeColor": "a6d18940%"
     },
     "diff.added.empty": {
-      "bgColor": "a6da9540%",
+      "bgColor": "a6d18940%",
       "layer": -60,
       "showEmptyIntervals": true
     },
     "diff.added.withBorder": {
-      "bgColor": "a6da9540%",
+      "bgColor": "a6d18940%",
       "decoration": {
-        "color": "a6da9540%",
+        "color": "a6d18940%",
         "style": "BORDER"
       },
       "fullLine": true,
       "layer": -69
     },
     "diff.added.word": {
-      "bgColor": "a6da9540%",
+      "bgColor": "a6d18940%",
       "layer": -60
     },
     "diff.conflict.withBorder": {
-      "bgColor": "ed879630%",
+      "bgColor": "e7828430%",
       "decoration": {
         "color": "Red",
         "style": "BORDER"
@@ -285,47 +285,47 @@
       "layer": -68
     },
     "diff.deleted": {
-      "bgColor": "ed879620%",
+      "bgColor": "e7828420%",
       "fullLine": true,
       "layer": -69,
-      "stripeColor": "ed879620%"
+      "stripeColor": "e7828420%"
     },
     "diff.deleted.empty": {
-      "bgColor": "ed879620%",
+      "bgColor": "e7828420%",
       "layer": -60,
       "showEmptyIntervals": true
     },
     "diff.deleted.withBorder": {
-      "bgColor": "ed879620%",
+      "bgColor": "e7828420%",
       "decoration": {
-        "color": "ed879620%",
+        "color": "e7828420%",
         "style": "BORDER"
       },
       "fullLine": true,
       "layer": -69
     },
     "diff.deleted.word": {
-      "bgColor": "ed879620%",
+      "bgColor": "e7828420%",
       "layer": -60,
       "showEmptyIntervals": true
     },
     "diff.modified": {
-      "bgColor": "8aadf420%",
+      "bgColor": "8caaee20%",
       "fullLine": true,
       "layer": -69,
-      "stripeColor": "8aadf420%"
+      "stripeColor": "8caaee20%"
     },
     "diff.modified.withBorder": {
-      "bgColor": "8aadf420%",
+      "bgColor": "8caaee20%",
       "decoration": {
-        "color": "8aadf420%",
+        "color": "8caaee20%",
         "style": "BORDER"
       },
       "fullLine": true,
       "layer": -69
     },
     "diff.modified.word": {
-      "bgColor": "8aadf420%",
+      "bgColor": "8caaee20%",
       "layer": -60
     },
     "editor.rename.current": {
@@ -343,7 +343,7 @@
       "stripeColor": "Surface0"
     },
     "editor.search.results": {
-      "bgColor": "8aadf440%",
+      "bgColor": "8caaee40%",
       "layer": 100,
       "stripeColor": "Blue"
     },
@@ -616,11 +616,11 @@
     },
     "problem.info": {
       "decoration": {
-        "color": "8bd5ca40%",
+        "color": "81c8be40%",
         "style": "BORDER"
       },
       "layer": 50,
-      "stripeColor": "8bd5ca40%"
+      "stripeColor": "81c8be40%"
     },
     "problem.unknown": {
       "fgColor": "Red",
@@ -755,32 +755,32 @@
     }
   },
   "palette": {
-    "Base": "24273a",
-    "Blue": "8aadf4",
-    "Crust": "181926",
-    "Flamingo": "f0c6c6",
-    "Green": "a6da95",
-    "Lavender": "b7bdf8",
-    "Mantle": "1e2030",
-    "Maroon": "ee99a0",
-    "Mauve": "c6a0f6",
-    "Overlay0": "6e738d",
-    "Overlay1": "8087a2",
-    "Overlay2": "939ab7",
-    "Peach": "f5a97f",
-    "Pink": "f5bde6",
-    "Red": "ed8796",
-    "Rosewater": "f4dbd6",
-    "Sapphire": "7dc4e4",
-    "Sky": "91d7e3",
-    "Subtext0": "a5adcb",
-    "Subtext1": "b8c0e0",
-    "Surface0": "363a4f",
-    "Surface1": "494d64",
-    "Surface2": "5b6078",
-    "Teal": "8bd5ca",
-    "Text": "cad3f5",
+    "Base": "303446",
+    "Blue": "8caaee",
+    "Crust": "232634",
+    "Flamingo": "eebebe",
+    "Green": "a6d189",
+    "Lavender": "babbf1",
+    "Mantle": "292c3c",
+    "Maroon": "ea999c",
+    "Mauve": "ca9ee6",
+    "Overlay0": "737994",
+    "Overlay1": "838ba7",
+    "Overlay2": "949cbb",
+    "Peach": "ef9f76",
+    "Pink": "f4b8e4",
+    "Red": "e78284",
+    "Rosewater": "f2d5cf",
+    "Sapphire": "85c1dc",
+    "Sky": "99d1db",
+    "Subtext0": "a5adce",
+    "Subtext1": "b5bfe2",
+    "Surface0": "414559",
+    "Surface1": "51576d",
+    "Surface2": "626880",
+    "Teal": "81c8be",
+    "Text": "c6d0f5",
     "Transparent": "ffffff0%",
-    "Yellow": "eed49f"
+    "Yellow": "e5c890"
   }
 }
