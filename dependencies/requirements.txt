@@ -68,6 +68,9 @@ pandas
 polars
 seaborn
 
+# jupyter plugins
+catppuccin-jupyterlab
+
 # DB
 duckdb
 duckdb-engine
