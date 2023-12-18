@@ -126,6 +126,7 @@
         - pyenv-virtualenv  # pyenv plugin to manage virtualenv
         - ripgrep  # search tool like grep and the silver searcher
         - starship  # cross-shell prompt for astronauts
+        - spotify-tui  # Spotify for the terminal written in Rust
         - texlab  # implementation of the Language Server Protocol for LaTeX
         - thefuck  # programmatically correct mistyped console commands
         - tree  # display directories as trees (with optional color/html output)
