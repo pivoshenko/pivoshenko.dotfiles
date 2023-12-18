@@ -252,4 +252,4 @@ on_force_close "quit"
 
 theme "catppuccin-mocha"
 
-mouse_mode false
+mouse_mode true
