@@ -89,6 +89,7 @@
         - atuin  # TUI shell history for zsh
         - bat  # cat with syntax highlighting and Git integration
         - btop  # resource monitor
+        - bottom  # yet another cross-platform graphical process/system monitor
         - commitizen  # defines a standard way of committing rules
         - curl  # query HTTP, HTTPS or FTP server
         - d2  # modern diagram scripting language that turns text to diagrams
