@@ -647,8 +647,7 @@
                 <key>name</key>
                 <string>Markdown literal</string>
                 <key>scope</key>
-                <string>comment.block.markdown, meta.code-fence, markup.raw.code-fence,
-                    markup.raw.inline</string>
+                <string>comment.block.markdown, meta.code-fence, markup.raw.code-fence, markup.raw.inline</string>
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
@@ -713,8 +712,7 @@
                 <key>name</key>
                 <string>Bash built-in function</string>
                 <key>scope</key>
-                <string>source.shell.bash meta.function.shell meta.compound.shell
-                    meta.function-call.identifier.shell</string>
+                <string>source.shell.bash meta.function.shell meta.compound.shell meta.function-call.identifier.shell</string>
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
@@ -740,8 +738,7 @@
                 <key>name</key>
                 <string>Lua field</string>
                 <key>scope</key>
-                <string>source.lua meta.function.lua meta.block.lua meta.mapping.value.lua
-                    meta.mapping.key.lua string.unquoted.key.lua</string>
+                <string>source.lua meta.function.lua meta.block.lua meta.mapping.value.lua meta.mapping.key.lua string.unquoted.key.lua</string>
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
@@ -754,8 +751,7 @@
                 <key>name</key>
                 <string>Lua constructor</string>
                 <key>scope</key>
-                <string>source.lua meta.function.lua meta.block.lua meta.mapping.key.lua
-                    string.unquoted.key.lua</string>
+                <string>source.lua meta.function.lua meta.block.lua meta.mapping.key.lua string.unquoted.key.lua</string>
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
@@ -820,9 +816,7 @@
                 <key>name</key>
                 <string>CSS variable property</string>
                 <key>scope</key>
-                <string>variable.other.custom-property.name.css,
-                    support.type.custom-property.name.css,
-                    punctuation.definition.custom-property.css</string>
+                <string>variable.other.custom-property.name.css, support.type.custom-property.name.css, punctuation.definition.custom-property.css</string>
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
