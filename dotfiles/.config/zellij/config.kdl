@@ -250,6 +250,6 @@ session_serialization false
 
 on_force_close "quit"
 
-theme "catppuccin-macchiato"
+theme "catppuccin-mocha"
 
 mouse_mode false
