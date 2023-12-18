@@ -35,3 +35,4 @@ yabai -m rule --add app="^QuickTime Player$" manage=off
 yabai -m rule --add app="^Raycast$" manage=off
 yabai -m rule --add app="^Bartender 4$" manage=off
 yabai -m rule --add app="^NordPass$" manage=off
+yabai -m rule --add app="^Telegram$" manage=off
