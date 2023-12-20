@@ -106,6 +106,32 @@ alias h="atuin search -i"
 eval "$(navi widget zsh)"
 bindkey '^i' _navi_widget
 
+# configure fzf
+alias f='hx "$(fzf)" 2>/dev/null'
+export FZF_DEFAULT_COMMAND=" \
+fd --type f --type l \
+--follow \
+--exclude .git \
+--exclude venv \
+--exclude .pytest_cache \
+--exclude .mypy_cache \
+--exclude __pycache__ \
+--exclude .hypothesis \
+--exclude .ruff_cache \
+--exclude .ipynb_checkpoints
+"
+export FZF_DEFAULT_OPTS=" \
+--preview 'bat -n --color=always {}' \
+--height 50% -1 \
+--reverse \
+--preview-window='right:wrap' \
+--multi \
+--inline-info \
+--color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+--color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+--color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8
+"
+
 # configure zellij
 eval "$(zellij setup --generate-auto-start zsh)"
 alias zj="zellij"
