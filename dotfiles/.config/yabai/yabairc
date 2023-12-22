@@ -25,11 +25,14 @@ yabai -m config mouse_action2 resize
 
 # disable specific apps
 yabai -m rule --add app="^System Settings$" manage=off
+yabai -m rule --add app="^Системні параметри$" manage=off
 yabai -m rule --add app="^Karabiner-Elements$" manage=off
 yabai -m rule --add app="^Karabiner-EventViewer$" manage=off
 yabai -m rule --add app="^Finder$" manage=off
 yabai -m rule --add app="^Disk Utility$" manage=off
+yabai -m rule --add app="^Дискова утиліта$" manage=off
 yabai -m rule --add app="^System Information$" manage=off
+yabai -m rule --add app="^Монітор активності$" manage=off
 yabai -m rule --add app="^Archive Utility$" manage=off
 yabai -m rule --add app="^QuickTime Player$" manage=off
 yabai -m rule --add app="^Raycast$" manage=off
