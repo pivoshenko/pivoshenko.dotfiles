@@ -57,6 +57,16 @@ export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
+# configure pdm
+pdm() {
+    local command=$1
+    if [[ $command == "shell" ]]; then
+        eval $(pdm venv activate)
+    else
+        command pdm $@
+    fi
+}
+
 # configure nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"
