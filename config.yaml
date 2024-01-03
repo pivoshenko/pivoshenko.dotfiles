@@ -33,6 +33,10 @@ dotfiles:
     dst: ~/.fleet
     src: .fleet
 
+  d_fig:
+    dst: ~/.fig
+    src: .fig
+
   d_fsh:
     dst: ~/.config/fsh
     src: .config/fsh
@@ -130,6 +134,7 @@ profiles:
       - d_efm
       - d_euporie
       - d_fleet
+      - d_fig
       - d_fsh
       - d_helix
       - d_k9s

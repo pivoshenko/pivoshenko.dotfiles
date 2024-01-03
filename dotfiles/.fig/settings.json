@@ -1,0 +1,15 @@
+{
+  "app.beta": true,
+  "app.launchOnStartup": true,
+  "app.preferredTerminal": "iTerm2",
+  "app.showAllProducts": false,
+  "autocomplete.developerModeNPM": false,
+  "autocomplete.developerModeNPMInvalidateCache": false,
+  "autocomplete.fontFamily": "MesloLGM Nerd Font",
+  "autocomplete.keybindings.enter": "insertSelected",
+  "autocomplete.keybindings.tab": "navigateDown",
+  "autocomplete.onlyShowOnTab": false,
+  "autocomplete.preferVerboseSuggestions": true,
+  "autocomplete.sortMethod": "alphabetical",
+  "autocomplete.theme": "github-dark"
+}
