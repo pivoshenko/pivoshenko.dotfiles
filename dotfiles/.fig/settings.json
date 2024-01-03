@@ -8,6 +8,7 @@
   "autocomplete.fontFamily": "MesloLGM Nerd Font",
   "autocomplete.keybindings.enter": "insertSelected",
   "autocomplete.keybindings.tab": "navigateDown",
+  "autocomplete.keybindings.shift+tab": "navigateUp",
   "autocomplete.onlyShowOnTab": false,
   "autocomplete.preferVerboseSuggestions": true,
   "autocomplete.sortMethod": "alphabetical",
