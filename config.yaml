@@ -61,6 +61,10 @@ dotfiles:
     dst: ~/.config/neofetch
     src: .config/neofetch
 
+  d_karabiner:
+    dst: ~/.config/karabiner
+    src: .config/karabiner
+
   d_qbit:
     dst: ~/.config/qBittorrent
     src: .config/qBittorrent
@@ -141,6 +145,7 @@ profiles:
       - d_lazygit
       - d_lf
       - d_neofetch
+      - d_karabiner
       - d_qbit
       - d_skhd
       - d_spotify_tui
