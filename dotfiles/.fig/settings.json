@@ -1,5 +1,5 @@
 {
-  "app.beta": true,
+  "app.beta": false,
   "app.launchOnStartup": true,
   "app.preferredTerminal": "iTerm2",
   "app.showAllProducts": false,
