@@ -121,6 +121,10 @@ dotfiles:
     dst: ~/.local/bin/lf-pick
     src: .local/bin/lf-pick
 
+  f_ff:
+    dst: ~/.local/bin/ff
+    src: .local/bin/ff
+
   f_starship:
     dst: ~/.config/starship.toml
     src: .config/starship.toml
@@ -160,5 +164,6 @@ profiles:
       - f_ipython_startup
       - f_ipython_config
       - f_lfp
+      - f_ff
       - f_starship
       - f_zsh
