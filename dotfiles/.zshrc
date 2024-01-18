@@ -17,6 +17,7 @@ plugins=(
     copypath
     docker
     docker-compose
+    fzf
     fast-syntax-highlighting
     gcloud
     gh
@@ -42,6 +43,10 @@ plugins=(
     zsh-autosuggestions
     zsh-vi-mode
 )
+
+function zvm_after_init() {
+    zvm_bindkey viins '^R' fzf-history-widget
+}
 
 # configure oh-my-zsh's library
 source $ZSH/oh-my-zsh.sh
@@ -112,6 +117,8 @@ bindkey '^i' _navi_widget
 
 # configure fzf
 alias f='hx "$(fzf)" 2>/dev/null'
+bindkey -s '^f' '^uhx "$(fzf)" 2>/dev/null^M'
+bindkey -s 'F' '^uff^M'
 export FZF_DEFAULT_COMMAND=" \
 fd --type f --type l \
 --hidden \
@@ -135,6 +142,13 @@ export FZF_DEFAULT_OPTS=" \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
 --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8
 "
+export FZF_CTRL_R_OPTS="
+--preview 'echo {}' --preview-window up:3:hidden:wrap
+--bind 'ctrl-/:toggle-preview'
+--bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
+--color header:italic
+"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # configure zellij
 eval "$(zellij setup --generate-auto-start zsh)"
