@@ -44,10 +44,6 @@ plugins=(
     zsh-vi-mode
 )
 
-function zvm_after_init() {
-    zvm_bindkey viins '^R' fzf-history-widget
-}
-
 # configure oh-my-zsh's library
 source $ZSH/oh-my-zsh.sh
 
@@ -113,12 +109,9 @@ alias h="atuin search -i"
 
 # configure navi
 eval "$(navi widget zsh)"
-bindkey '^i' _navi_widget
 
 # configure fzf
 alias f='hx "$(fzf)" 2>/dev/null'
-bindkey -s '^f' '^uhx "$(fzf)" 2>/dev/null^M'
-bindkey -s 'F' '^uff^M'
 export FZF_DEFAULT_COMMAND=" \
 fd --type f --type l \
 --hidden \
@@ -148,7 +141,19 @@ export FZF_CTRL_R_OPTS="
 --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
 --color header:italic
 "
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# configure keybindings
+function zvm_after_init() {
+    # fzf
+    zvm_bindkey viins '^R' fzf-history-widget
+    bindkey -s '^f' '^uhx "$(fzf)" 2>/dev/null^M'
+    bindkey -s 'F' '^uff^M'
+    source ~/.fzf.zsh
+    # lazygit
+    bindkey -s "G" "^ulazygit^M"
+    # navi
+    bindkey '^i' _navi_widget
+}
 
 # configure zellij
 eval "$(zellij setup --generate-auto-start zsh)"
