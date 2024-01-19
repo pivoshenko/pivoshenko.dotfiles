@@ -36,6 +36,7 @@ yabai -m rule --add app="^Disk Utility$" manage=off
 yabai -m rule --add app="^Дискова утиліта$" manage=off
 yabai -m rule --add app="^System Information$" manage=off
 yabai -m rule --add app="^Монітор активності$" manage=off
+yabai -m rule --add app="^Activity Monitor$" manage=off
 yabai -m rule --add app="^Archive Utility$" manage=off
 yabai -m rule --add app="^QuickTime Player$" manage=off
 yabai -m rule --add app="^Raycast$" manage=off
@@ -46,3 +47,4 @@ yabai -m rule --add app="^NordVPN$" manage=off
 yabai -m rule --add app="^Nord VPN$" manage=off
 yabai -m rule --add app="^Telegram$" manage=off
 yabai -m rule --add app="^Fig$" manage=off
+yabai -m rule --add app="^fig$" manage=off
