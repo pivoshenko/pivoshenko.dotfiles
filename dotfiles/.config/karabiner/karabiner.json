@@ -23,12 +23,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -59,12 +54,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -102,12 +92,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -138,12 +123,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -181,12 +161,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -224,12 +199,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -278,12 +248,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -308,12 +273,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -338,12 +298,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -368,12 +323,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -398,12 +348,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -426,12 +371,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -454,12 +394,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -486,12 +421,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -517,12 +447,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -548,12 +473,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -596,12 +516,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -635,12 +550,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -666,12 +576,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -697,12 +602,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -733,12 +633,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -760,12 +655,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -790,12 +680,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -818,12 +703,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -849,12 +729,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -877,12 +752,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -913,12 +783,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -961,12 +826,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -1024,12 +884,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -1079,12 +934,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -1134,12 +984,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -1193,12 +1038,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -1251,12 +1091,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -1309,12 +1144,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -1368,12 +1198,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -1423,12 +1248,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -1481,12 +1301,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -1539,12 +1354,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -1602,12 +1412,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -1650,12 +1455,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -1701,12 +1501,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -1744,12 +1539,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -1787,12 +1577,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -1834,12 +1619,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -1880,12 +1660,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -1926,12 +1701,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -1985,12 +1755,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -2028,12 +1793,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -2074,12 +1834,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -2120,12 +1875,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -2171,12 +1921,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -2219,12 +1964,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -2270,12 +2010,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -2313,12 +2048,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -2356,12 +2086,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -2403,12 +2128,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -2449,12 +2169,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -2495,12 +2210,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -2554,12 +2264,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -2597,12 +2302,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -2643,12 +2343,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -2689,12 +2384,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -2736,12 +2426,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -2783,12 +2468,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -2825,12 +2505,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -2867,12 +2542,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -2895,12 +2565,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -2923,12 +2588,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -2951,12 +2611,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -2979,12 +2634,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -3007,12 +2657,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -3035,12 +2680,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -3067,12 +2707,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -3098,12 +2733,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -3129,12 +2759,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -3177,12 +2802,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -3216,12 +2836,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -3247,12 +2862,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -3278,12 +2888,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -3309,12 +2914,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -3355,12 +2955,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -3401,12 +2996,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -3453,12 +3043,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -3498,12 +3083,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -3528,12 +3108,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -3558,12 +3133,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -3593,12 +3163,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -3656,12 +3221,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -3692,12 +3252,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -3728,12 +3283,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_unless"
                   },
                   {
@@ -3767,12 +3317,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.github.atom",
-                      "com.jetbrains.pycharm",
-                      "com.visualstudio.code.oss"
-                    ],
+                    "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"],
                     "type": "frontmost_application_if"
                   },
                   {
