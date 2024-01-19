@@ -107,9 +107,6 @@ eval "$(atuin init zsh --disable-up-arrow --disable-ctrl-r)"
 alias history="atuin search -i"
 alias h="atuin search -i"
 
-# configure navi
-eval "$(navi widget zsh)"
-
 # configure fzf
 alias f='hx "$(fzf)" 2>/dev/null'
 export FZF_DEFAULT_COMMAND=" \
@@ -151,8 +148,6 @@ function zvm_after_init() {
     source ~/.fzf.zsh
     # lazygit
     bindkey -s "G" "^ulazygit^M"
-    # navi
-    bindkey '^i' _navi_widget
 }
 
 # configure zellij
