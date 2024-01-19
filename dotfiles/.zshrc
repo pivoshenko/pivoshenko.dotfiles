@@ -148,6 +148,8 @@ function zvm_after_init() {
     source ~/.fzf.zsh
     # lazygit
     bindkey -s "G" "^ulazygit^M"
+    # navi
+    bindkey -s "^i" "^unavi^M"
 }
 
 # configure zellij
