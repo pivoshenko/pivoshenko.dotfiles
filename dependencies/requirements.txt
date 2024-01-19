@@ -5,7 +5,6 @@ poetry
 # REPL
 bpython
 ipython
-euporie
 
 # ipython plugins
 catppuccin
