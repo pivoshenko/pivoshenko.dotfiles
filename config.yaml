@@ -61,6 +61,10 @@ dotfiles:
     dst: ~/.config/neofetch
     src: .config/neofetch
 
+  d_nvim:
+    dst: ~/.config/nvim
+    src: .config/nvim
+
   d_karabiner:
     dst: ~/.config/karabiner
     src: .config/karabiner
@@ -149,6 +153,7 @@ profiles:
       - d_lazygit
       - d_lf
       - d_neofetch
+      - d_nvim
       - d_karabiner
       - d_qbit
       - d_skhd
