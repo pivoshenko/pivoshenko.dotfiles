@@ -1,7 +1,0 @@
-function lfp() {
-    local TEMP=$(mktemp)
-    lf -selection-path=$TEMP --command 'set hidden'
-    cat $TEMP
-}
-
-lfp

@@ -25,10 +25,6 @@ dotfiles:
     dst: ~/.config/efm-langserver
     src: .config/efm-langserver
 
-  d_euporie:
-    dst: ~/.config/euporie
-    src: .config/euporie
-
   d_fleet:
     dst: ~/.fleet
     src: .fleet
@@ -52,10 +48,6 @@ dotfiles:
   d_lazygit:
     dst: ~/.config/lazygit
     src: .config/lazygit
-
-  d_lf:
-    dst: ~/.config/lf
-    src: .config/lf
 
   d_neofetch:
     dst: ~/.config/neofetch
@@ -93,10 +85,6 @@ dotfiles:
     dst: ~/.config/yabai/yabairc
     src: .config/yabai/yabairc
 
-  d_yazi:
-    dst: ~/.config/yazi
-    src: .config/yazi
-
   d_zellij:
     dst: ~/.config/zellij
     src: .config/zellij
@@ -121,10 +109,6 @@ dotfiles:
     dst: ~/.ipython/profile_default/ipython_config.py
     src: .ipython/profile_default/ipython_config.py
 
-  f_lfp:
-    dst: ~/.local/bin/lf-pick
-    src: .local/bin/lf-pick
-
   f_ff:
     dst: ~/.local/bin/ff
     src: .local/bin/ff
@@ -144,7 +128,6 @@ profiles:
       - d_bat
       - d_btop
       - d_efm
-      - d_euporie
       - d_fleet
       - d_fig
       - d_fsh
@@ -161,14 +144,12 @@ profiles:
       - d_warp
       - d_xplr
       - d_yabai
-      - d_yazi
       - d_zellij
       - d_zellij_plugins
       - f_direnv
       - f_git
       - f_ipython_startup
       - f_ipython_config
-      - f_lfp
       - f_ff
       - f_starship
       - f_zsh

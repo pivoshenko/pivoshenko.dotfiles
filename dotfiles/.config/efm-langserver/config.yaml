@@ -86,24 +86,6 @@ tools:
     lint-formats:
       - "%f:%l:%c %m"
 
-  python-black: &python-black
-    prefix: black
-    format-command: "black --quiet -"
-    format-stdin: true
-
-  python-isort: &python-isort
-    prefix: isort
-    format-command: "isort --quiet -"
-    format-stdin: true
-
-  python-mypy: &python-mypy
-    prefix: mypy
-    lint-command: "mypy --show-column-numbers"
-    lint-formats:
-      - "%f:%l:%c: %trror: %m"
-      - "%f:%l:%c: %tarning: %m"
-      - "%f:%l:%c: %tote: %m"
-
   yaml-actionlint: &yaml-actionlint
     prefix: actionlint
     lint-command: "zsh -c \"[[ '${INPUT}' =~ \\\\.github/workflows/ ]]\" && actionlint -oneline -no-color -"
@@ -131,14 +113,10 @@ tools:
 
 languages:
   =:
-    # TODO cspell requires further investigation and configuration
-    # - <<: *cspell
     - <<: *codespell
 
   bash:
     - <<: *bash-shfmt
-    # TODO shellcheck utilizes too much RAM
-    # - <<: *bash-shellcheck
 
   dockerfile:
     - <<: *dockerfile-hadolint
@@ -151,9 +129,6 @@ languages:
 
   graphql:
     - <<: *graphql-graphql-schema-linter
-
-  python:
-    - <<: *python-mypy
 
   yaml:
     - <<: *yaml-actionlint
