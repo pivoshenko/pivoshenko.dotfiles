@@ -41,14 +41,15 @@ pre-commit  # hooks
 cookiecutter  # templates manager
 
 # LSP
-python-lsp-server
 ruff-lsp
+python-lsp-server[all]
 
 # LSP plugins
-pyls-isort
+pylsp-rope
 pyls-memestra
-pylsp-mypy
 python-lsp-black
+pyls-isort
+pylsp-mypy
 
 # tests
 pytest
