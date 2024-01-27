@@ -144,10 +144,7 @@ function zvm_after_init() {
     # fzf
     zvm_bindkey viins '^R' fzf-history-widget
     bindkey -s '^f' '^uhx "$(fzf)" 2>/dev/null^M'
-    bindkey -s 'F' '^uff^M'
     source ~/.fzf.zsh
-    # lazygit
-    bindkey -s "G" "^ulazygit^M"
 }
 
 # configure zellij
