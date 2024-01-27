@@ -134,7 +134,6 @@ profiles:
       - d_helix
       - d_k9s
       - d_lazygit
-      - d_lf
       - d_neofetch
       - d_nvim
       - d_karabiner
