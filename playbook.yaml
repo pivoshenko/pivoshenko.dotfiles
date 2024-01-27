@@ -26,7 +26,6 @@
         state: present
       with_items:
         # terminals
-        - fig
         - iterm2
         - warp
         # IDEs
@@ -47,7 +46,6 @@
         - slack
         - telegram
         # notes
-        - drawio
         - obsidian
         # VPNs
         - nordvpn
@@ -101,7 +99,6 @@
         - fd  # simple, fast and user-friendly alternative to find
         - ffmpeg  # play, record, convert, and stream audio and video
         - ffmpegthumbnailer  # create thumbnails for your video files
-        - fselect  # find files with sql-like queries
         - fzf  # command-line fuzzy finder written in go
         - gcc  # gnu compiler collection
         - gh  # github command-line tool
@@ -116,18 +113,14 @@
         - kubernetes-cli  # kubernetes command-line interface
         - lazydocker  # lazier way to manage everything docker
         - lazygit  # simple terminal ui for git commands
-        - lf  # terminal file manager
         - minikube  # run a kubernetes cluster locally
-        - nap  # code snippets in your terminal
         - navi  # interactive cheatsheet tool for the command-line
         - neofetch  # fast, highly customisable system info script
-        - poppler  # pdf rendering library (based on the xpdf-3.0 code base)
         - pyenv  # python version management
         - pyenv-virtualenv  # pyenv plugin to manage virtualenv
         - ripgrep  # search tool like grep and the silver searcher
         - starship  # cross-shell prompt for astronauts
         - spotify-tui  # Spotify for the terminal written in Rust
-        - texlab  # implementation of the Language Server Protocol for LaTeX
         - thefuck  # programmatically correct mistyped console commands
         - tree  # display directories as trees (with optional color/html output)
         - ttyd  # command-line tool for sharing terminal over the web
@@ -136,7 +129,6 @@
         - vhs  # your cli home video recorder
         - wget  # internet file retriever
         - xplr  # hackable, minimal, fast tui file explorer
-        - yazi  # blazing fast terminal file manager written in rust, based on async i/o
         - zellij  # pluggable terminal workspace, with terminal multiplexer as the base feature
         - zoxide  # shell extension to navigate your filesystem faster
 
@@ -165,6 +157,7 @@
         - shellcheck  # static analysis and lint tool, for (ba)sh scripts
         - shfmt  # autoformat shell script source code
         - taplo  # TOML toolkit written in Rust
+        - texlab  # implementation of the Language Server Protocol for LaTeX
 
     - name: Install LSPs via npm
       community.general.npm:
