@@ -159,7 +159,6 @@
         global: true
       with_items:
         - bash-language-server  # bash language server that brings an IDE-like experience for bash scripts to most editors
-        - bibtex-tidy  # cleaner and Formatter for BibTeX files
         - dockerfile-language-server-nodejs  # a language server for Dockerfiles powered by Node.js
         - editorconfig-checker  # tool to verify that your files are in harmony with your .editorconfig
         - graphql-language-service-cli  # interface for building GraphQL language services for IDEs
