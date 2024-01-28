@@ -85,6 +85,10 @@ dotfiles:
     dst: ~/.config/yabai/yabairc
     src: .config/yabai/yabairc
 
+  d_yamllint:
+    dst: ~/.config/yamllint/config
+    src: .config/yamllint/config
+
   d_zellij:
     dst: ~/.config/zellij
     src: .config/zellij
@@ -128,27 +132,28 @@ profiles:
       - d_bat
       - d_btop
       - d_efm
-      - d_fleet
       - d_fig
+      - d_fleet
       - d_fsh
       - d_helix
       - d_k9s
+      - d_karabiner
       - d_lazygit
       - d_neofetch
       - d_nvim
-      - d_karabiner
       - d_qbit
       - d_skhd
       - d_spotify_tui
       - d_warp
       - d_xplr
       - d_yabai
+      - d_yamllint
       - d_zellij
       - d_zellij_plugins
       - f_direnv
-      - f_git
-      - f_ipython_startup
-      - f_ipython_config
       - f_ff
+      - f_git
+      - f_ipython_config
+      - f_ipython_startup
       - f_starship
       - f_zsh

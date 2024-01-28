@@ -1,5 +1,6 @@
 skip_list:
-  - ignore-errors
-  - no-changed-when
-  - command-instead-of-module
-  - risky-shell-pipe
+    - command-instead-of-module
+    - ignore-errors
+    - no-changed-when
+    - risky-shell-pipe
+    - yaml[line-length]
