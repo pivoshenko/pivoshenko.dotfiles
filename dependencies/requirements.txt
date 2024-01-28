@@ -17,39 +17,11 @@ returns
 # DI
 dependency-injector
 
-# formatters
-black  # code formatter
-isort  # imports formatter
-pyupgrade  # syntax formatter
-nbqa  # notebooks formatter
-
-# linters
-ansible-lint  # playbooks linter
-codespell  # spelling linter
-deptry  # dependencies linter
-dotenv-linter  # linter for .env files
-gitlint  # git commit messages linter
-memestra  # dead code linter
-mypy  # static type checker
-ruff  # all-purpose linter
-sqlfluff  # SQL linter
-
 # utils
+cookiecutter  # templates manager
 devtools  # debugger
 nitpick  # styles manager
 pre-commit  # hooks
-cookiecutter  # templates manager
-
-# LSP
-ruff-lsp
-python-lsp-server[all]
-
-# LSP plugins
-pylsp-rope
-pyls-memestra
-python-lsp-black
-pyls-isort
-pylsp-mypy
 
 # tests
 pytest
