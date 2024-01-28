@@ -1,31 +1,29 @@
-[user]
-name = Volodymyr Pivoshenko
-email = volodymyr.pivoshenko@gmail.com
-
 [core]
 autocrlf = input
 editor = hx
 pager = delta
 
-[interactive]
-# set delta as a defualt diff pager
-diffFilter = delta --color-only
+[credential]
+helper = store
 
 [delta]
 navigate = true
-# configure theme
 light = false
-theme = OneHalfDark  # TODO set catppuccin
+theme = OneHalfDark
 line-numbers = true
 side-by-side = true
 hyperlinks = true
 hyperlinks-file-link-format = "file-line://{path}:{line}"
 
-[merge]
-conflictstyle = diff3
-
 [diff]
 colorMoved = default
 
-[credential]
-helper = store
+[interactive]
+diffFilter = delta --color-only
+
+[merge]
+conflictstyle = diff3
+
+[user]
+name = Volodymyr Pivoshenko
+email = volodymyr.pivoshenko@gmail.com
