@@ -146,6 +146,7 @@
       with_items:
         - actionlint  # static checker for GitHub Actions workflow files
         - ansible-language-server  # language server for Ansible files
+        - dhall  # interpreter for the Dhall language
         - dhall-lsp-server  # language server Protocol (LSP) server for Dhall
         - efm-langserver  # general purpose language server
         - hadolint  # smarter Dockerfile linter to validate best practices
