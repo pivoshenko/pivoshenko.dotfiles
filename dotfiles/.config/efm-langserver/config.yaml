@@ -2,12 +2,12 @@ cversion: 2
 lint-debounce: 1s
 root-markers:
   - .git/
+  - .github/
+  - Cargo.toml
   - package.json
   - pyproject.toml
-  - Cargo.toml
 
 tools:
-  # all-purpose tools
   codespell: &codespell
     prefix: codespell
     lint-command: "codespell"
@@ -16,75 +16,33 @@ tools:
     root-markers:
       - pyproject.toml
 
-  cspell: &cspell
-    prefix: cspell
-    lint-command: "cspell lint --no-progress --no-summary --no-color ${INPUT}"
-    lint-formats:
-      - "%f:%l:%c - %m"
-      - "%f:%l:%c %m"
-    root-markers:
-      - package.json
-      - .cspell.json
-      - cspell.json
-      - .cSpell.json
-      - cSpell.json
-      - cspell.config.js
-      - cspell.config.cjs
-      - cspell.config.json
-      - cspell.config.yaml
-      - cspell.config.yml
-      - cspell.yaml
-      - cspell.yml
-
-  editorconfig-checker: &editorconfig-checker
-    prefix: editorconfig-checker
-    lint-command: "editorconfig-checker -no-color test.ini | grep : | awk '{$1=$1};1' | awk '{if(NR>1)print}' -"
-    lint-stdin: true
-    lint-formats:
-      - "%l: %m"
-    root-markers:
-      - .editorconfig
-
-  # language specific tools
   bash-shfmt: &bash-shfmt
-    prefix: shfmt
     format-command: "shfmt -ci -s -bn"
     format-stdin: true
 
-  bash-shellcheck: &bash-shellcheck
-    prefix: shellcheck
-    lint-command: "shellcheck -f gcc -x"
-    lint-source: "shellcheck"
-    lint-formats:
-      - "%f:%l:%c: %trror: %m"
-      - "%f:%l:%c: %tarning: %m"
-      - "%f:%l:%c: %tote: %m"
-
   dockerfile-hadolint: &dockerfile-hadolint
-    prefix: hadolint
-    lint-command: "hadolint"
+    lint-command: "hadolint --no-color"
     lint-formats:
-      - "%f:%l %m"
+      - "%f:%l DL%n %tnfo: %m"
+      - "%f:%l DL%n %tarning: %m"
+      - "%f:%l DL%n %trror: %m"
 
   env-dotenv-linter: &env-dotenv-linter
-    prefix: dotenv-linter
-    lint-command: "dotenv-linter lint"
+    lint-command: "dotenv-linter --no-color --not-check-updates -q"
     lint-formats:
       - "%f:%l %m"
 
   git-commit-gitlint: &git-commit-gitlint
-    prefix: gitlint
-    lint-command: "gitlint"
+    lint-command: "gitlint --ignore B6"
     lint-stdin: true
     lint-formats:
       - '%l: %m: "%r"'
       - "%l: %m"
 
-  graphql-graphql-schema-linter: &graphql-graphql-schema-linter
-    prefix: graphql-schema-linter
-    lint-command: "graphql-schema-linter  -f compact"
+  git-commit-commitizen: &git-commit-commitizen
+    lint-command: "cz check --commit-msg-file"
     lint-formats:
-      - "%f:%l:%c %m"
+      - "%m"
 
   yaml-actionlint: &yaml-actionlint
     prefix: actionlint
@@ -102,7 +60,7 @@ tools:
     root-markers:
       - .ansible-lint
 
-  yaml-yamllint-lint: &yaml-yamllint-lint
+  yaml-yamllint: &yaml-yamllint
     prefix: yamllint
     lint-command: "yamllint --strict --format parsable ${INPUT}"
     lint-stdin: false
@@ -110,6 +68,11 @@ tools:
       - "%f:%l:%c: [%t%*[a-z]] %m"
     env:
       - "PYTHONIOENCODING=UTF-8"
+
+  yaml-yamlfmt: &yaml-yamlfmt
+    prefix: yamlfmt
+    format-command: "yamlfmt -in"
+    format-stdin: true
 
 languages:
   =:
@@ -126,11 +89,10 @@ languages:
 
   git-commit:
     - <<: *git-commit-gitlint
-
-  graphql:
-    - <<: *graphql-graphql-schema-linter
+    - <<: *git-commit-commitizen
 
   yaml:
     - <<: *yaml-actionlint
     - <<: *yaml-ansible-lint
-    - <<: *yaml-yamllint-lint
+    - <<: *yaml-yamllint
+    - <<: *yaml-yamlfmt

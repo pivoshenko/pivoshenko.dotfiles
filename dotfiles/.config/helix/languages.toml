@@ -1,209 +1,104 @@
-[language-server.efm]
-command = "efm-langserver"
-config.documentFormatting = true
-
-[language-server.ruff]
-command = "ruff-lsp"
-config.documentFormatting = true
-
 [[language]]
 name = "bash"
-scope = "source.bash"
-injection-regex = "(shell|bash|zsh|sh)"
-file-types = [
-  "sh",
-  "bash",
-  "zsh",
-  ".bash_login",
-  ".bash_logout",
-  ".bash_profile",
-  ".bashrc",
-  ".profile",
-  ".zshenv",
-  "zshenv",
-  ".zlogin",
-  "zlogin",
-  ".zlogout",
-  "zlogout",
-  ".zprofile",
-  "zprofile",
-  ".zshrc",
-  "zshrc",
-  ".zimrc",
-  "APKBUILD",
-  "PKGBUILD",
-  "eclass",
-  "ebuild",
-  "bazelrc",
-  ".bash_aliases",
-  "Renviron",
-  ".Renviron",
-  ".xprofile",
-  ".xsession",
-  ".xsessionrc",
-  "zsh-theme",
-  "ksh",
-  "cshrc",
-  "tcshrc",
-  ".yashrc",
-  ".yash_profile",
-  ".hushlogin",
-  "bashrc_Apple_Terminal",
-  "zshrc_Apple_Terminal"
-]
-shebangs = ["sh", "bash", "dash", "zsh"]
-roots = []
-comment-token = "#"
-indent = { tab-width = 2, unit = "  " }
-language-servers = ["bash-language-server", { name = "efm", only-features = ["diagnostics", "format"] }]
+auto-format = false
+language-servers = ["bash-language-server", "efm-langserver"]
 
 [[language]]
 name = "bibtex"
-scope = "source.bib"
-injection-regex = "bib"
-file-types = ["bib"]
-roots = []
-comment-token = "%"
-indent = { tab-width = 4, unit = "\t" }
-auto-format = true
-language-servers = ["texlab", { name = "efm", only-features = ["diagnostics", "format"] }]
-
-[[language]]
-name = "dhall"
-scope = "source.dhall"
-injection-regex = "dhall"
-file-types = ["dhall"]
-roots = []
-comment-token = "--"
-indent = { tab-width = 2, unit = "  " }
-formatter = { command = "dhall", args = ["format"] }
-language-servers = ["dhall-lsp-server", { name = "efm", only-features = ["diagnostics"] }]
+auto-format = false
+language-servers = ["texlab"]
 
 [[language]]
 name = "dockerfile"
-scope = "source.dockerfile"
-injection-regex = "docker|dockerfile"
-roots = ["Dockerfile", "Containerfile"]
-file-types = ["Dockerfile", "dockerfile", "Containerfile", "containerfile"]
-comment-token = "#"
-indent = { tab-width = 2, unit = "  " }
-language-servers = ["docker-langserver", { name = "efm", only-features = ["diagnostics"] }]
+auto-format = false
+language-servers = ["docker-langserver", "efm-langserver"]
 
 [[language]]
 name = "env"
-scope = "source.env"
-file-types = [".env", ".env.local", ".env.development", ".env.production", ".env.dist", ".envrc"]
-injection-regex = "env"
-comment-token = "#"
-indent = { tab-width = 4, unit = "\t" }
-roots = []
-grammar = "bash"
-language-servers = [{ name = "efm", only-features = ["diagnostics"] }]
+file-types = [
+  "env",
+  ".env",
+  ".env.local",
+  ".env.development",
+  ".env.production",
+  ".env.dist",
+  ".envrc",
+  ".envrc.local",
+  ".envrc.private",
+]
+auto-format = false
+language-servers = ["efm-langserver"]
 
 [[language]]
 name = "git-commit"
-scope = "git.commitmsg"
-roots = []
-file-types = ["COMMIT_EDITMSG"]
-comment-token = "#"
-indent = { tab-width = 2, unit = "  " }
-rulers = [51, 73]
-text-width = 72
-language-servers = [{ name = "efm", only-features = ["diagnostics"] }]
+auto-format = false
+language-servers = ["efm-langserver"]
 
 [[language]]
-name = "graphql"
-scope = "source.graphql"
-injection-regex = "graphql"
-file-types = ["gql", "graphql", "graphqls"]
-roots = []
-indent = { tab-width = 2, unit = "  " }
-language-servers = ["graphql-language-service", { name = "efm", only-features = ["diagnostics"] }]
+name = "json"
+auto-format = false
 
 [[language]]
-name = "ini"
-scope = "source.ini"
-file-types = [
-  "ini",
-  "service",
-  "automount",
-  "device",
-  "mount",
-  "path",
-  "service",
-  "slice",
-  "socket",
-  "swap",
-  "target",
-  "timer",
-  "container",
-  "volume",
-  "kube",
-  "network",
-  ".editorconfig",
-  "properties",
-  "cfg",
-  "directory",
-  "requirements.txt"
-]
-injection-regex = "ini"
-comment-token = "#"
-indent = { tab-width = 4, unit = "\t" }
-roots = []
+name = "latex"
+auto-format = false
+language-servers = ["texlab"]
 
 [[language]]
 name = "python"
-scope = "source.python"
-injection-regex = "python"
-file-types = [
-  "py",
-  "pyi",
-  "py3",
-  "pyw",
-  "ptl",
-  ".pythonstartup",
-  ".pythonrc",
-  "SConstruct",
-  "rpy",
-  "cpy",
-  "ipy",
-  "pyt",
-  "SConscript"
-]
-shebangs = ["python"]
-roots = ["pyproject.toml", "setup.py", "poetry.lock", "pyrightconfig.json"]
-comment-token = "#"
-indent = { tab-width = 4, unit = "    " }
-language-servers = [
-  "pylsp",
-  { name = "ruff", only-features = [
-    "diagnostics"
-  ] },
-  { name = "efm", only-features = [
-    "diagnostics",
-    "format"
-  ] }
-]
+auto-format = false
+language-servers = ["efm-langserver", "ruff-lsp", "pylsp"]
 
 [[language]]
 name = "toml"
-scope = "source.toml"
-injection-regex = "toml"
-file-types = ["toml", "poetry.lock", "Cargo.lock"]
-roots = []
-comment-token = "#"
-indent = { tab-width = 2, unit = "  " }
-language-servers = ["taplo", { name = "efm", only-features = ["diagnostics", "format"] }]
+auto-format = false
+formatter = { command = "taplo", args = ["fmt", "-"] }
+language-servers = ["efm-langserver", "taplo"]
 
 [[language]]
 name = "yaml"
-scope = "source.yaml"
-file-types = ["yml", "yaml"]
-roots = []
-comment-token = "#"
-indent = { tab-width = 2, unit = "  " }
-injection-regex = "yml|yaml"
+auto-format = false
 language-servers = [
+  "ansible-language-server",
+  "efm-langserver",
   "yaml-language-server",
-  { name = "efm", only-features = ["diagnostics"] }
 ]
+
+[language-server.efm-langserver]
+command = "efm-langserver"
+config.documentFormatting = true
+
+[language-server.ruff-lsp]
+command = "ruff-lsp"
+config.documentFormatting = true
+
+[language-server.pylsp.config.pylsp.plugins]
+autopep8 = { enabled = false }
+black = { enabled = true }
+flake8 = { enabled = false }
+isort = { enabled = true }
+mccabe = { enabled = false }
+memestra = { enabled = true }
+pycodestyle = { enabled = false }
+pyflakes = { enabled = false }
+pylint = { enabled = false }
+rope = { enabled = true }
+ruff = { enabled = false }
+yapf = { enabled = false }
+
+[language-server.texlab]
+config.texlab.build.onSave = true
+config.texlab.build.forwardSearchAfter = false
+config.texlab.build.auxDirectory = "build"
+config.texlab.build.executable = "tectonic"
+config.texlab.build.args = [
+  "-X",
+  "compile",
+  "%f",
+  "--synctex",
+  "--keep-logs",
+  "--keep-intermediates",
+  "--outdir=build",
+  "-Zshell-escape",
+]
+config.texlab.chktex.onOpenAndSave = true
+config.texlab.chktex.onEdit = true
