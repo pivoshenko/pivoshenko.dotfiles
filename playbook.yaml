@@ -151,7 +151,9 @@
         - dotenv-linter  # linter for .env files
         - efm-langserver  # general purpose language server
         - hadolint  # smarter Dockerfile linter to validate best practices
+        - ltex-ls  # LSP for LanguageTool with support for Latex
         - shfmt  # autoformat shell script source code
+        - tectonic  # modernized, complete, self-contained TeX/LaTeX engine
         - texlab  # implementation of the Language Server Protocol for LaTeX
         - yamlfmt  # extensible command-line tool to format YAML files
 
@@ -167,6 +169,7 @@
         - graphql-language-service-server  # interface for building GraphQL language services for IDEs
         - graphql-schema-linter  #  a command line tool to validate GraphQL schema definitions
         - vscode-langservers-extracted  # HTML/CSS/JSON/ESLint language servers
+        - vscode-json-languageservice  # JSON language service extracted from VSCode to be reused
         - yaml-language-server@next  # language server for YAML Files
 
     - name: Install LSPs via cargo
