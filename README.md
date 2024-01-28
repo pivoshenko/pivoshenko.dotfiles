@@ -40,6 +40,8 @@ ansible-playbook playbook.yaml
 dotdrop install -p base
 
 pip install -U -r dependencies/requirements.txt
+
+pip install -U -r dependencies/lsp.txt
 ```
 
 [ansible]: https://pypi.org/project/ansible

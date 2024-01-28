@@ -5,7 +5,7 @@
     ansible_python_interpreter: "{{ ansible_playbook_python }}"
 
   tasks:
-    - name: Install taps via homebrew
+    - name: Install homebrew taps
       community.general.homebrew_tap:
         name: "{{ item }}"
         state: present
@@ -18,57 +18,47 @@
         state: present
       with_items:
         - font-symbols-only-nerd-font
-      ignore_errors: true
 
-    - name: Install dev GUI apps via homebrew
+    - name: Install IDEs and terminals via homebrew
       community.general.homebrew_cask:
         name: "{{ item }}"
         state: present
       with_items:
-        # terminals
-        - iterm2
-        - warp
-        # IDEs
-        - jetbrains-toolbox
-        - visual-studio-code
         - dbeaver-community
-        # keybindings
+        - iterm2
+        - jetbrains-toolbox
         - karabiner-elements
+        - visual-studio-code
+        - warp
 
-    - name: Install common GUI apps via homebrew
+    - name: Install common apps via homebrew
       community.general.homebrew_cask:
         name: "{{ item }}"
         state: present
       with_items:
-        # messengers
         - discord
+        - nordpass
+        - nordvpn
+        - obsidian
+        - qbittorrent
+        - raycast
         - skype
         - slack
-        - telegram
-        # notes
-        - obsidian
-        # VPNs
-        - nordvpn
-        # torrent
-        - qbittorrent
-        # apps launchers
-        - raycast
-        # password managers
-        - nordpass
-        # music
         - spotify
+        - telegram
       ignore_errors: true
+
+    - name: Install Spicetify CLI
+      ansible.builtin.shell:
+        cmd: curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-cli/master/install.sh | sh
+
+    - name: Install Spicetify Marketplace
+      ansible.builtin.shell:
+        cmd: curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-marketplace/main/resources/install.sh | sh
 
     - name: Install Rust
       ansible.builtin.shell:
         cmd: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-
-    - name: Install Julia
-      community.general.homebrew:
-        name: "{{ item }}"
-        state: present
-      with_items:
-        - julia
 
     - name: Install Node
       community.general.homebrew:
@@ -86,8 +76,8 @@
         - act  # runs GitHub Actions locally
         - atuin  # TUI shell history for zsh
         - bat  # cat with syntax highlighting and Git integration
-        - btop  # resource monitor
         - bottom  # yet another cross-platform graphical process/system monitor
+        - btop  # resource monitor
         - commitizen  # defines a standard way of committing rules
         - curl  # query HTTP, HTTPS or FTP server
         - d2  # modern diagram scripting language that turns text to diagrams
@@ -119,18 +109,23 @@
         - pyenv  # python version management
         - pyenv-virtualenv  # pyenv plugin to manage virtualenv
         - ripgrep  # search tool like grep and the silver searcher
-        - starship  # cross-shell prompt for astronauts
         - spotify-tui  # Spotify for the terminal written in Rust
+        - starship  # cross-shell prompt for astronauts
         - thefuck  # programmatically correct mistyped console commands
+        - tlrc  # tldr client written in Rust
         - tree  # display directories as trees (with optional color/html output)
         - ttyd  # command-line tool for sharing terminal over the web
-        - tlrc  # tldr client written in Rust
         - unar  # command-line unarchiving tools supporting multiple formats
         - vhs  # your cli home video recorder
         - wget  # internet file retriever
         - xplr  # hackable, minimal, fast tui file explorer
-        - zellij  # pluggable terminal workspace, with terminal multiplexer as the base feature
         - zoxide  # shell extension to navigate your filesystem faster
+
+    - name: Install CLI tools via cargo
+      community.general.cargo:
+        name: "{{ item }}"
+      with_items:
+        - zellij  # pluggable terminal workspace, with terminal multiplexer as the base feature
 
     - name: Install CLI tools via npm
       community.general.npm:
@@ -156,15 +151,14 @@
         - hadolint  # smarter Dockerfile linter to validate best practices
         - shellcheck  # static analysis and lint tool, for (ba)sh scripts
         - shfmt  # autoformat shell script source code
-        - taplo  # TOML toolkit written in Rust
         - texlab  # implementation of the Language Server Protocol for LaTeX
+        - yamlfmt  # extensible command-line tool to format YAML files
 
     - name: Install LSPs via npm
       community.general.npm:
         name: "{{ item }}"
         global: true
       with_items:
-        - cspell  # library used for code driven spelling checking
         - bash-language-server  # bash language server that brings an IDE-like experience for bash scripts to most editors
         - dockerfile-language-server-nodejs  # a language server for Dockerfiles powered by Node.js
         - editorconfig-checker  # tool to verify that your files are in harmony with your .editorconfig
@@ -174,10 +168,8 @@
         - vscode-langservers-extracted  # HTML/CSS/JSON/ESLint language servers
         - yaml-language-server@next  # language server for YAML Files
 
-    - name: Install Spicetify CLI
-      ansible.builtin.shell:
-        cmd: curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-cli/master/install.sh | sh
-
-    - name: Install Spicetify Marketplace
-      ansible.builtin.shell:
-        cmd: curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-marketplace/main/resources/install.sh | sh
+    - name: Install LSPs via cargo
+      community.general.cargo:
+        name: "{{ item }}"
+      with_items:
+        - taplo-cli  # TOML toolkit written in Rust
