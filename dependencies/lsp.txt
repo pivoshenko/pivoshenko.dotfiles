@@ -18,7 +18,6 @@ pyupgrade  # syntax formatter
 ansible-lint  # playbooks linter
 codespell  # spelling linter
 deptry  # dependencies linter
-dotenv-linter  # linter for .env files
 gitlint  # git commit messages linter
 memestra  # dead code linter
 mypy  # static type checker
