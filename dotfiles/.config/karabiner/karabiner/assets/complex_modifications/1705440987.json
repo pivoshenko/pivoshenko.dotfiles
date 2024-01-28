@@ -1,15 +1,42 @@
 {
-  "title": "Vim Mode Plus",
-  "maintainers": ["gilitos92"],
+  "maintainers": [
+    "gilitos92"
+  ],
   "rules": [
     {
       "description": "(Vim 1/11) caps_lock -> on, caps_lock, esc, control+[ or any pointing_button -> off",
       "manipulators": [
         {
-          "type": "basic",
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
+            },
+            {
+              "name": "vim_mode",
+              "type": "variable_unless",
+              "value": 1
+            }
+          ],
           "from": {
             "key_code": "caps_lock"
           },
+          "parameters": {
+            "basic.to_if_alone_threshold_milliseconds": 0,
+            "basic.to_if_held_down_threshold_milliseconds": 100
+          },
+          "to_after_key_up": [
+            {
+              "set_variable": {
+                "name": "vim_mode",
+                "value": 0
+              }
+            }
+          ],
           "to_if_alone": [
             {
               "set_variable": {
@@ -39,32 +66,24 @@
               }
             }
           ],
-          "to_after_key_up": [
-            {
-              "set_variable": {
-                "name": "vim_mode",
-                "value": 0
-              }
-            }
-          ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
-              "type": "variable_unless",
+              "type": "variable_if",
               "value": 1
             }
           ],
-          "parameters": {
-            "basic.to_if_alone_threshold_milliseconds": 0,
-            "basic.to_if_held_down_threshold_milliseconds": 100
-          }
-        },
-        {
-          "type": "basic",
           "from": {
             "key_code": "caps_lock"
           },
@@ -82,20 +101,24 @@
               }
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "escape"
           },
@@ -113,24 +136,30 @@
               }
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "open_bracket",
             "modifiers": {
-              "mandatory": ["control"]
+              "mandatory": [
+                "control"
+              ]
             }
           },
           "to": [
@@ -147,20 +176,24 @@
               }
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_if"
             },
             {
               "name": "vim_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "any": "key_code"
           },
@@ -178,20 +211,16 @@
               }
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
-            {
-              "type": "frontmost_application_if",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
-            },
             {
               "name": "vim_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "any": "pointing_button"
           },
@@ -209,22 +238,27 @@
               }
             }
           ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "available_since": "12.6.9",
+      "description": "(Vim 2/11) finger on trackpad + any key -> off",
+      "manipulators": [
+        {
           "conditions": [
+            {
+              "name": "multitouch_extension_finger_count_total",
+              "type": "variable_unless",
+              "value": 0
+            },
             {
               "name": "vim_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        }
-      ]
-    },
-    {
-      "description": "(Vim 2/11) finger on trackpad + any key -> off",
-      "available_since": "12.6.9",
-      "manipulators": [
-        {
-          "type": "basic",
+          ],
           "from": {
             "any": "key_code"
           },
@@ -242,18 +276,7 @@
               }
             }
           ],
-          "conditions": [
-            {
-              "name": "multitouch_extension_finger_count_total",
-              "type": "variable_unless",
-              "value": 0
-            },
-            {
-              "name": "vim_mode",
-              "type": "variable_if",
-              "value": 1
-            }
-          ]
+          "type": "basic"
         }
       ]
     },
@@ -261,7 +284,26 @@
       "description": "(Vim 3/11) visual mode + h,j,k,l,e,b,0,^,$,gg,G,{,} + d,y,c,x",
       "manipulators": [
         {
-          "type": "basic",
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
+            },
+            {
+              "name": "vim_mode",
+              "type": "variable_if",
+              "value": 1
+            },
+            {
+              "name": "visual_mode",
+              "type": "variable_unless",
+              "value": 1
+            }
+          ],
           "from": {
             "key_code": "v"
           },
@@ -285,25 +327,24 @@
               }
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
-            },
-            {
-              "name": "vim_mode",
-              "type": "variable_if",
-              "value": 1
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "visual_mode",
-              "type": "variable_unless",
+              "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "v"
           },
@@ -327,20 +368,24 @@
               }
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "visual_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "escape"
           },
@@ -364,239 +409,317 @@
               }
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "visual_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "h"
           },
           "to": [
             {
               "key_code": "left_arrow",
-              "modifiers": ["left_shift"]
+              "modifiers": [
+                "left_shift"
+              ]
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "visual_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "j"
           },
           "to": [
             {
               "key_code": "down_arrow",
-              "modifiers": ["left_shift"]
+              "modifiers": [
+                "left_shift"
+              ]
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "visual_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "k"
           },
           "to": [
             {
               "key_code": "up_arrow",
-              "modifiers": ["left_shift"]
+              "modifiers": [
+                "left_shift"
+              ]
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "visual_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "l"
           },
           "to": [
             {
               "key_code": "right_arrow",
-              "modifiers": ["left_shift"]
+              "modifiers": [
+                "left_shift"
+              ]
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "visual_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "e"
           },
           "to": [
             {
               "key_code": "right_arrow",
-              "modifiers": ["left_shift", "left_alt"]
+              "modifiers": [
+                "left_shift",
+                "left_alt"
+              ]
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "visual_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "b"
           },
           "to": [
             {
               "key_code": "left_arrow",
-              "modifiers": ["left_shift", "left_alt"]
+              "modifiers": [
+                "left_shift",
+                "left_alt"
+              ]
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "visual_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "0"
           },
           "to": [
             {
               "key_code": "left_arrow",
-              "modifiers": ["left_shift", "left_command"]
+              "modifiers": [
+                "left_shift",
+                "left_command"
+              ]
             },
             {
               "key_code": "left_arrow",
-              "modifiers": ["left_shift", "left_command"]
+              "modifiers": [
+                "left_shift",
+                "left_command"
+              ]
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "visual_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "6",
             "modifiers": {
-              "mandatory": ["shift"]
+              "mandatory": [
+                "shift"
+              ]
             }
           },
           "to": [
             {
               "key_code": "left_arrow",
-              "modifiers": ["left_shift", "left_command"]
+              "modifiers": [
+                "left_shift",
+                "left_command"
+              ]
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "visual_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "4",
             "modifiers": {
-              "mandatory": ["shift"]
+              "mandatory": [
+                "shift"
+              ]
             }
           },
           "to": [
             {
               "key_code": "right_arrow",
-              "modifiers": ["left_shift", "left_command"]
+              "modifiers": [
+                "left_shift",
+                "left_command"
+              ]
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "visual_mode",
               "type": "variable_if",
               "value": 1
+            },
+            {
+              "name": "g_pressed",
+              "type": "variable_unless",
+              "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "g"
+          },
+          "parameters": {
+            "basic.to_delayed_action_delay_milliseconds": 500
           },
           "to": [
             {
@@ -616,13 +739,17 @@
               }
             ]
           },
-          "parameters": {
-            "basic.to_delayed_action_delay_milliseconds": 500
-          },
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "visual_mode",
@@ -631,20 +758,20 @@
             },
             {
               "name": "g_pressed",
-              "type": "variable_unless",
+              "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "g"
           },
           "to": [
             {
               "key_code": "up_arrow",
-              "modifiers": ["left_shift", "left_command"]
+              "modifiers": [
+                "left_shift",
+                "left_command"
+              ]
             },
             {
               "set_variable": {
@@ -653,110 +780,138 @@
               }
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "visual_mode",
               "type": "variable_if",
               "value": 1
-            },
-            {
-              "name": "g_pressed",
-              "type": "variable_if",
-              "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "g",
             "modifiers": {
-              "mandatory": ["shift"]
+              "mandatory": [
+                "shift"
+              ]
             }
           },
           "to": [
             {
               "key_code": "down_arrow",
-              "modifiers": ["left_shift", "left_command"]
+              "modifiers": [
+                "left_shift",
+                "left_command"
+              ]
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "visual_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "open_bracket",
             "modifiers": {
-              "mandatory": ["shift"]
+              "mandatory": [
+                "shift"
+              ]
             }
           },
           "to": [
             {
               "key_code": "a",
-              "modifiers": ["left_shift", "left_control"]
+              "modifiers": [
+                "left_shift",
+                "left_control"
+              ]
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "visual_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "close_bracket",
             "modifiers": {
-              "mandatory": ["shift"]
+              "mandatory": [
+                "shift"
+              ]
             }
           },
           "to": [
             {
               "key_code": "e",
-              "modifiers": ["left_shift", "left_control"]
+              "modifiers": [
+                "left_shift",
+                "left_control"
+              ]
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "visual_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "d"
           },
           "to": [
             {
               "key_code": "x",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             },
             {
               "set_variable": {
@@ -777,27 +932,33 @@
               }
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "visual_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "y"
           },
           "to": [
             {
               "key_code": "c",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             },
             {
               "set_variable": {
@@ -818,27 +979,33 @@
               }
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "visual_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "c"
           },
           "to": [
             {
               "key_code": "x",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             },
             {
               "set_variable": {
@@ -865,20 +1032,24 @@
               }
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "visual_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "x"
           },
@@ -905,24 +1076,30 @@
               }
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "visual_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "left_shift",
             "modifiers": {
-              "optional": ["any"]
+              "optional": [
+                "any"
+              ]
             }
           },
           "to": [
@@ -930,24 +1107,30 @@
               "key_code": "left_shift"
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "visual_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "right_shift",
             "modifiers": {
-              "optional": ["any"]
+              "optional": [
+                "any"
+              ]
             }
           },
           "to": [
@@ -955,24 +1138,30 @@
               "key_code": "right_shift"
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "visual_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "any": "key_code",
             "modifiers": {
-              "optional": ["any"]
+              "optional": [
+                "any"
+              ]
             }
           },
           "to": [
@@ -980,17 +1169,7 @@
               "key_code": "vk_none"
             }
           ],
-          "conditions": [
-            {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
-            },
-            {
-              "name": "visual_mode",
-              "type": "variable_if",
-              "value": 1
-            }
-          ]
+          "type": "basic"
         }
       ]
     },
@@ -998,9 +1177,31 @@
       "description": "(Vim 4/11) dd,de,db,d0,d^,d$,dgg,dG,d{,d}",
       "manipulators": [
         {
-          "type": "basic",
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
+            },
+            {
+              "name": "vim_mode",
+              "type": "variable_if",
+              "value": 1
+            },
+            {
+              "name": "d_pressed",
+              "type": "variable_unless",
+              "value": 1
+            }
+          ],
           "from": {
             "key_code": "d"
+          },
+          "parameters": {
+            "basic.to_delayed_action_delay_milliseconds": 500
           },
           "to": [
             {
@@ -1020,13 +1221,17 @@
               }
             ]
           },
-          "parameters": {
-            "basic.to_delayed_action_delay_milliseconds": 500
-          },
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
@@ -1035,13 +1240,10 @@
             },
             {
               "name": "d_pressed",
-              "type": "variable_unless",
+              "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "d"
           },
@@ -1054,25 +1256,41 @@
             },
             {
               "key_code": "left_arrow",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             },
             {
               "key_code": "left_arrow",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             },
             {
               "key_code": "right_arrow",
-              "modifiers": ["left_command", "left_shift"]
+              "modifiers": [
+                "left_command",
+                "left_shift"
+              ]
             },
             {
               "key_code": "x",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
@@ -1084,10 +1302,7 @@
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "e"
           },
@@ -1100,17 +1315,29 @@
             },
             {
               "key_code": "right_arrow",
-              "modifiers": ["left_shift", "left_alt"]
+              "modifiers": [
+                "left_shift",
+                "left_alt"
+              ]
             },
             {
               "key_code": "x",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
@@ -1122,10 +1349,7 @@
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "b"
           },
@@ -1138,17 +1362,29 @@
             },
             {
               "key_code": "left_arrow",
-              "modifiers": ["left_shift", "left_alt"]
+              "modifiers": [
+                "left_shift",
+                "left_alt"
+              ]
             },
             {
               "key_code": "x",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
@@ -1160,10 +1396,7 @@
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "0"
           },
@@ -1176,21 +1409,36 @@
             },
             {
               "key_code": "left_arrow",
-              "modifiers": ["left_command", "left_shift"]
+              "modifiers": [
+                "left_command",
+                "left_shift"
+              ]
             },
             {
               "key_code": "left_arrow",
-              "modifiers": ["left_command", "left_shift"]
+              "modifiers": [
+                "left_command",
+                "left_shift"
+              ]
             },
             {
               "key_code": "x",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
@@ -1202,14 +1450,13 @@
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "6",
             "modifiers": {
-              "mandatory": ["shift"]
+              "mandatory": [
+                "shift"
+              ]
             }
           },
           "to": [
@@ -1221,17 +1468,29 @@
             },
             {
               "key_code": "left_arrow",
-              "modifiers": ["left_command", "left_shift"]
+              "modifiers": [
+                "left_command",
+                "left_shift"
+              ]
             },
             {
               "key_code": "x",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
@@ -1243,14 +1502,13 @@
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "4",
             "modifiers": {
-              "mandatory": ["shift"]
+              "mandatory": [
+                "shift"
+              ]
             }
           },
           "to": [
@@ -1262,17 +1520,29 @@
             },
             {
               "key_code": "right_arrow",
-              "modifiers": ["left_command", "left_shift"]
+              "modifiers": [
+                "left_command",
+                "left_shift"
+              ]
             },
             {
               "key_code": "x",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
@@ -1283,13 +1553,18 @@
               "name": "d_pressed",
               "type": "variable_if",
               "value": 1
+            },
+            {
+              "name": "dg_pressed",
+              "type": "variable_unless",
+              "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "g"
+          },
+          "parameters": {
+            "basic.to_delayed_action_delay_milliseconds": 500
           },
           "to": [
             {
@@ -1315,13 +1590,17 @@
               }
             ]
           },
-          "parameters": {
-            "basic.to_delayed_action_delay_milliseconds": 500
-          },
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
@@ -1329,19 +1608,11 @@
               "value": 1
             },
             {
-              "name": "d_pressed",
+              "name": "dg_pressed",
               "type": "variable_if",
               "value": 1
-            },
-            {
-              "name": "dg_pressed",
-              "type": "variable_unless",
-              "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "g"
           },
@@ -1354,17 +1625,29 @@
             },
             {
               "key_code": "up_arrow",
-              "modifiers": ["left_shift", "left_command"]
+              "modifiers": [
+                "left_shift",
+                "left_command"
+              ]
             },
             {
               "key_code": "x",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
@@ -1372,18 +1655,17 @@
               "value": 1
             },
             {
-              "name": "dg_pressed",
+              "name": "d_pressed",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "g",
             "modifiers": {
-              "mandatory": ["shift"]
+              "mandatory": [
+                "shift"
+              ]
             }
           },
           "to": [
@@ -1395,17 +1677,29 @@
             },
             {
               "key_code": "down_arrow",
-              "modifiers": ["left_shift", "left_command"]
+              "modifiers": [
+                "left_shift",
+                "left_command"
+              ]
             },
             {
               "key_code": "x",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
@@ -1417,14 +1711,13 @@
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "open_bracket",
             "modifiers": {
-              "mandatory": ["shift"]
+              "mandatory": [
+                "shift"
+              ]
             }
           },
           "to": [
@@ -1436,17 +1729,29 @@
             },
             {
               "key_code": "a",
-              "modifiers": ["left_control", "left_shift"]
+              "modifiers": [
+                "left_control",
+                "left_shift"
+              ]
             },
             {
               "key_code": "x",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
@@ -1458,14 +1763,13 @@
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "close_bracket",
             "modifiers": {
-              "mandatory": ["shift"]
+              "mandatory": [
+                "shift"
+              ]
             }
           },
           "to": [
@@ -1477,25 +1781,12 @@
             },
             {
               "key_code": "k",
-              "modifiers": ["left_control"]
+              "modifiers": [
+                "left_control"
+              ]
             }
           ],
-          "conditions": [
-            {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
-            },
-            {
-              "name": "vim_mode",
-              "type": "variable_if",
-              "value": 1
-            },
-            {
-              "name": "d_pressed",
-              "type": "variable_if",
-              "value": 1
-            }
-          ]
+          "type": "basic"
         }
       ]
     },
@@ -1503,9 +1794,31 @@
       "description": "(Vim 5/11) yy,ye,yb,y0,y^,y$,ygg,yG,y{,y}",
       "manipulators": [
         {
-          "type": "basic",
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
+            },
+            {
+              "name": "vim_mode",
+              "type": "variable_if",
+              "value": 1
+            },
+            {
+              "name": "y_pressed",
+              "type": "variable_unless",
+              "value": 1
+            }
+          ],
           "from": {
             "key_code": "y"
+          },
+          "parameters": {
+            "basic.to_delayed_action_delay_milliseconds": 500
           },
           "to": [
             {
@@ -1525,13 +1838,17 @@
               }
             ]
           },
-          "parameters": {
-            "basic.to_delayed_action_delay_milliseconds": 500
-          },
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
@@ -1540,13 +1857,10 @@
             },
             {
               "name": "y_pressed",
-              "type": "variable_unless",
+              "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "y"
           },
@@ -1559,25 +1873,41 @@
             },
             {
               "key_code": "left_arrow",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             },
             {
               "key_code": "left_arrow",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             },
             {
               "key_code": "right_arrow",
-              "modifiers": ["left_command", "left_shift"]
+              "modifiers": [
+                "left_command",
+                "left_shift"
+              ]
             },
             {
               "key_code": "c",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
@@ -1589,10 +1919,7 @@
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "e"
           },
@@ -1605,17 +1932,29 @@
             },
             {
               "key_code": "right_arrow",
-              "modifiers": ["left_shift", "left_alt"]
+              "modifiers": [
+                "left_shift",
+                "left_alt"
+              ]
             },
             {
               "key_code": "c",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
@@ -1627,10 +1966,7 @@
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "b"
           },
@@ -1643,17 +1979,29 @@
             },
             {
               "key_code": "left_arrow",
-              "modifiers": ["left_shift", "left_alt"]
+              "modifiers": [
+                "left_shift",
+                "left_alt"
+              ]
             },
             {
               "key_code": "c",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
@@ -1665,10 +2013,7 @@
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "0"
           },
@@ -1681,21 +2026,36 @@
             },
             {
               "key_code": "left_arrow",
-              "modifiers": ["left_command", "left_shift"]
+              "modifiers": [
+                "left_command",
+                "left_shift"
+              ]
             },
             {
               "key_code": "left_arrow",
-              "modifiers": ["left_command", "left_shift"]
+              "modifiers": [
+                "left_command",
+                "left_shift"
+              ]
             },
             {
               "key_code": "c",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
@@ -1707,14 +2067,13 @@
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "6",
             "modifiers": {
-              "mandatory": ["shift"]
+              "mandatory": [
+                "shift"
+              ]
             }
           },
           "to": [
@@ -1726,17 +2085,29 @@
             },
             {
               "key_code": "left_arrow",
-              "modifiers": ["left_command", "left_shift"]
+              "modifiers": [
+                "left_command",
+                "left_shift"
+              ]
             },
             {
               "key_code": "c",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
@@ -1748,14 +2119,13 @@
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "4",
             "modifiers": {
-              "mandatory": ["shift"]
+              "mandatory": [
+                "shift"
+              ]
             }
           },
           "to": [
@@ -1767,17 +2137,29 @@
             },
             {
               "key_code": "right_arrow",
-              "modifiers": ["left_command", "left_shift"]
+              "modifiers": [
+                "left_command",
+                "left_shift"
+              ]
             },
             {
               "key_code": "c",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
@@ -1788,13 +2170,18 @@
               "name": "y_pressed",
               "type": "variable_if",
               "value": 1
+            },
+            {
+              "name": "yg_pressed",
+              "type": "variable_unless",
+              "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "g"
+          },
+          "parameters": {
+            "basic.to_delayed_action_delay_milliseconds": 500
           },
           "to": [
             {
@@ -1820,13 +2207,17 @@
               }
             ]
           },
-          "parameters": {
-            "basic.to_delayed_action_delay_milliseconds": 500
-          },
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
@@ -1834,19 +2225,11 @@
               "value": 1
             },
             {
-              "name": "y_pressed",
+              "name": "yg_pressed",
               "type": "variable_if",
               "value": 1
-            },
-            {
-              "name": "yg_pressed",
-              "type": "variable_unless",
-              "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "g"
           },
@@ -1859,17 +2242,29 @@
             },
             {
               "key_code": "up_arrow",
-              "modifiers": ["left_shift", "left_command"]
+              "modifiers": [
+                "left_shift",
+                "left_command"
+              ]
             },
             {
               "key_code": "c",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
@@ -1877,18 +2272,17 @@
               "value": 1
             },
             {
-              "name": "yg_pressed",
+              "name": "y_pressed",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "g",
             "modifiers": {
-              "mandatory": ["shift"]
+              "mandatory": [
+                "shift"
+              ]
             }
           },
           "to": [
@@ -1900,17 +2294,29 @@
             },
             {
               "key_code": "down_arrow",
-              "modifiers": ["left_shift", "left_command"]
+              "modifiers": [
+                "left_shift",
+                "left_command"
+              ]
             },
             {
               "key_code": "c",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
@@ -1922,14 +2328,13 @@
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "open_bracket",
             "modifiers": {
-              "mandatory": ["shift"]
+              "mandatory": [
+                "shift"
+              ]
             }
           },
           "to": [
@@ -1941,17 +2346,29 @@
             },
             {
               "key_code": "a",
-              "modifiers": ["left_control", "left_shift"]
+              "modifiers": [
+                "left_control",
+                "left_shift"
+              ]
             },
             {
               "key_code": "c",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
@@ -1963,14 +2380,13 @@
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "close_bracket",
             "modifiers": {
-              "mandatory": ["shift"]
+              "mandatory": [
+                "shift"
+              ]
             }
           },
           "to": [
@@ -1982,29 +2398,19 @@
             },
             {
               "key_code": "e",
-              "modifiers": ["left_control", "left_shift"]
+              "modifiers": [
+                "left_control",
+                "left_shift"
+              ]
             },
             {
               "key_code": "c",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             }
           ],
-          "conditions": [
-            {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
-            },
-            {
-              "name": "vim_mode",
-              "type": "variable_if",
-              "value": 1
-            },
-            {
-              "name": "y_pressed",
-              "type": "variable_if",
-              "value": 1
-            }
-          ]
+          "type": "basic"
         }
       ]
     },
@@ -2012,9 +2418,31 @@
       "description": "(Vim 6/11) cc,ce,cb,c0,c^,c$,cgg,cG,c{,c}",
       "manipulators": [
         {
-          "type": "basic",
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
+            },
+            {
+              "name": "vim_mode",
+              "type": "variable_if",
+              "value": 1
+            },
+            {
+              "name": "c_pressed",
+              "type": "variable_unless",
+              "value": 1
+            }
+          ],
           "from": {
             "key_code": "c"
+          },
+          "parameters": {
+            "basic.to_delayed_action_delay_milliseconds": 500
           },
           "to": [
             {
@@ -2034,13 +2462,17 @@
               }
             ]
           },
-          "parameters": {
-            "basic.to_delayed_action_delay_milliseconds": 500
-          },
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
@@ -2049,13 +2481,10 @@
             },
             {
               "name": "c_pressed",
-              "type": "variable_unless",
+              "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "c"
           },
@@ -2068,19 +2497,28 @@
             },
             {
               "key_code": "left_arrow",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             },
             {
               "key_code": "left_arrow",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             },
             {
               "key_code": "right_arrow",
-              "modifiers": ["left_command", "left_shift"]
+              "modifiers": [
+                "left_command",
+                "left_shift"
+              ]
             },
             {
               "key_code": "x",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             },
             {
               "set_variable": {
@@ -2095,10 +2533,17 @@
               }
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
@@ -2110,10 +2555,7 @@
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "e"
           },
@@ -2126,11 +2568,16 @@
             },
             {
               "key_code": "right_arrow",
-              "modifiers": ["left_shift", "left_alt"]
+              "modifiers": [
+                "left_shift",
+                "left_alt"
+              ]
             },
             {
               "key_code": "x",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             },
             {
               "set_variable": {
@@ -2145,10 +2592,17 @@
               }
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
@@ -2160,10 +2614,7 @@
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "b"
           },
@@ -2176,11 +2627,16 @@
             },
             {
               "key_code": "left_arrow",
-              "modifiers": ["left_shift", "left_alt"]
+              "modifiers": [
+                "left_shift",
+                "left_alt"
+              ]
             },
             {
               "key_code": "x",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             },
             {
               "set_variable": {
@@ -2195,10 +2651,17 @@
               }
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
@@ -2210,10 +2673,7 @@
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "0"
           },
@@ -2226,15 +2686,23 @@
             },
             {
               "key_code": "left_arrow",
-              "modifiers": ["left_command", "left_shift"]
+              "modifiers": [
+                "left_command",
+                "left_shift"
+              ]
             },
             {
               "key_code": "left_arrow",
-              "modifiers": ["left_command", "left_shift"]
+              "modifiers": [
+                "left_command",
+                "left_shift"
+              ]
             },
             {
               "key_code": "x",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             },
             {
               "set_variable": {
@@ -2249,10 +2717,17 @@
               }
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
@@ -2264,14 +2739,13 @@
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "6",
             "modifiers": {
-              "mandatory": ["shift"]
+              "mandatory": [
+                "shift"
+              ]
             }
           },
           "to": [
@@ -2283,11 +2757,16 @@
             },
             {
               "key_code": "left_arrow",
-              "modifiers": ["left_command", "left_shift"]
+              "modifiers": [
+                "left_command",
+                "left_shift"
+              ]
             },
             {
               "key_code": "x",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             },
             {
               "set_variable": {
@@ -2302,10 +2781,17 @@
               }
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
@@ -2317,14 +2803,13 @@
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "4",
             "modifiers": {
-              "mandatory": ["shift"]
+              "mandatory": [
+                "shift"
+              ]
             }
           },
           "to": [
@@ -2336,11 +2821,16 @@
             },
             {
               "key_code": "right_arrow",
-              "modifiers": ["left_command", "left_shift"]
+              "modifiers": [
+                "left_command",
+                "left_shift"
+              ]
             },
             {
               "key_code": "x",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             },
             {
               "set_variable": {
@@ -2355,10 +2845,17 @@
               }
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
@@ -2369,13 +2866,18 @@
               "name": "c_pressed",
               "type": "variable_if",
               "value": 1
+            },
+            {
+              "name": "cg_pressed",
+              "type": "variable_unless",
+              "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "g"
+          },
+          "parameters": {
+            "basic.to_delayed_action_delay_milliseconds": 500
           },
           "to": [
             {
@@ -2401,13 +2903,17 @@
               }
             ]
           },
-          "parameters": {
-            "basic.to_delayed_action_delay_milliseconds": 500
-          },
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
@@ -2415,19 +2921,11 @@
               "value": 1
             },
             {
-              "name": "c_pressed",
+              "name": "cg_pressed",
               "type": "variable_if",
               "value": 1
-            },
-            {
-              "name": "cg_pressed",
-              "type": "variable_unless",
-              "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "g"
           },
@@ -2440,11 +2938,16 @@
             },
             {
               "key_code": "up_arrow",
-              "modifiers": ["left_shift", "left_command"]
+              "modifiers": [
+                "left_shift",
+                "left_command"
+              ]
             },
             {
               "key_code": "x",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             },
             {
               "set_variable": {
@@ -2459,10 +2962,17 @@
               }
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
@@ -2470,18 +2980,17 @@
               "value": 1
             },
             {
-              "name": "cg_pressed",
+              "name": "c_pressed",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "g",
             "modifiers": {
-              "mandatory": ["shift"]
+              "mandatory": [
+                "shift"
+              ]
             }
           },
           "to": [
@@ -2493,11 +3002,16 @@
             },
             {
               "key_code": "down_arrow",
-              "modifiers": ["left_shift", "left_command"]
+              "modifiers": [
+                "left_shift",
+                "left_command"
+              ]
             },
             {
               "key_code": "x",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             },
             {
               "set_variable": {
@@ -2512,10 +3026,17 @@
               }
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
@@ -2527,14 +3048,13 @@
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "open_bracket",
             "modifiers": {
-              "mandatory": ["shift"]
+              "mandatory": [
+                "shift"
+              ]
             }
           },
           "to": [
@@ -2546,11 +3066,16 @@
             },
             {
               "key_code": "a",
-              "modifiers": ["left_control", "left_shift"]
+              "modifiers": [
+                "left_control",
+                "left_shift"
+              ]
             },
             {
               "key_code": "x",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             },
             {
               "set_variable": {
@@ -2565,10 +3090,17 @@
               }
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
@@ -2580,14 +3112,13 @@
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "close_bracket",
             "modifiers": {
-              "mandatory": ["shift"]
+              "mandatory": [
+                "shift"
+              ]
             }
           },
           "to": [
@@ -2599,11 +3130,16 @@
             },
             {
               "key_code": "e",
-              "modifiers": ["left_control", "left_shift"]
+              "modifiers": [
+                "left_control",
+                "left_shift"
+              ]
             },
             {
               "key_code": "x",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             },
             {
               "set_variable": {
@@ -2618,22 +3154,7 @@
               }
             }
           ],
-          "conditions": [
-            {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
-            },
-            {
-              "name": "vim_mode",
-              "type": "variable_if",
-              "value": 1
-            },
-            {
-              "name": "c_pressed",
-              "type": "variable_if",
-              "value": 1
-            }
-          ]
+          "type": "basic"
         }
       ]
     },
@@ -2641,7 +3162,21 @@
       "description": "(Vim 7/11) x,X,p,P,u,control+r",
       "manipulators": [
         {
-          "type": "basic",
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
+            },
+            {
+              "name": "vim_mode",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
           "from": {
             "key_code": "x"
           },
@@ -2650,24 +3185,30 @@
               "key_code": "delete_forward"
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "x",
             "modifiers": {
-              "mandatory": ["shift"]
+              "mandatory": [
+                "shift"
+              ]
             }
           },
           "to": [
@@ -2675,115 +3216,134 @@
               "key_code": "delete_or_backspace"
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "p"
           },
           "to": [
             {
               "key_code": "v",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "p",
             "modifiers": {
-              "mandatory": ["shift"]
+              "mandatory": [
+                "shift"
+              ]
             }
           },
           "to": [
             {
               "key_code": "v",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "u"
           },
           "to": [
             {
               "key_code": "z",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "r",
             "modifiers": {
-              "mandatory": ["control"]
+              "mandatory": [
+                "control"
+              ]
             }
           },
           "to": [
             {
               "key_code": "z",
-              "modifiers": ["left_command", "left_shift"]
+              "modifiers": [
+                "left_command",
+                "left_shift"
+              ]
             }
           ],
-          "conditions": [
-            {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
-            },
-            {
-              "name": "vim_mode",
-              "type": "variable_if",
-              "value": 1
-            }
-          ]
+          "type": "basic"
         }
       ]
     },
@@ -2791,11 +3351,30 @@
       "description": "(Vim 8/11) h,j,k,l (+ control/option/command/shift),e,b,0,^,$,gg,G,{,}",
       "manipulators": [
         {
-          "type": "basic",
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
+            },
+            {
+              "name": "vim_mode",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
           "from": {
             "key_code": "h",
             "modifiers": {
-              "optional": ["control", "option", "command", "shift"]
+              "optional": [
+                "control",
+                "option",
+                "command",
+                "shift"
+              ]
             }
           },
           "to": [
@@ -2803,24 +3382,33 @@
               "key_code": "left_arrow"
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "j",
             "modifiers": {
-              "optional": ["control", "option", "command", "shift"]
+              "optional": [
+                "control",
+                "option",
+                "command",
+                "shift"
+              ]
             }
           },
           "to": [
@@ -2828,24 +3416,33 @@
               "key_code": "down_arrow"
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "k",
             "modifiers": {
-              "optional": ["control", "option", "command", "shift"]
+              "optional": [
+                "control",
+                "option",
+                "command",
+                "shift"
+              ]
             }
           },
           "to": [
@@ -2853,24 +3450,33 @@
               "key_code": "up_arrow"
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "l",
             "modifiers": {
-              "optional": ["control", "option", "command", "shift"]
+              "optional": [
+                "control",
+                "option",
+                "command",
+                "shift"
+              ]
             }
           },
           "to": [
@@ -2878,147 +3484,195 @@
               "key_code": "right_arrow"
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "e"
           },
           "to": [
             {
               "key_code": "right_arrow",
-              "modifiers": ["left_alt"]
+              "modifiers": [
+                "left_alt"
+              ]
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "b"
           },
           "to": [
             {
               "key_code": "left_arrow",
-              "modifiers": ["left_alt"]
+              "modifiers": [
+                "left_alt"
+              ]
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "0"
           },
           "to": [
             {
               "key_code": "left_arrow",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             },
             {
               "key_code": "left_arrow",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "6",
             "modifiers": {
-              "mandatory": ["shift"]
+              "mandatory": [
+                "shift"
+              ]
             }
           },
           "to": [
             {
               "key_code": "left_arrow",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "4",
             "modifiers": {
-              "mandatory": ["shift"]
+              "mandatory": [
+                "shift"
+              ]
             }
           },
           "to": [
             {
               "key_code": "right_arrow",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
               "type": "variable_if",
               "value": 1
+            },
+            {
+              "name": "g_pressed",
+              "type": "variable_unless",
+              "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "g"
+          },
+          "parameters": {
+            "basic.to_delayed_action_delay_milliseconds": 500
           },
           "to": [
             {
@@ -3038,13 +3692,17 @@
               }
             ]
           },
-          "parameters": {
-            "basic.to_delayed_action_delay_milliseconds": 500
-          },
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
@@ -3053,20 +3711,19 @@
             },
             {
               "name": "g_pressed",
-              "type": "variable_unless",
+              "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "g"
           },
           "to": [
             {
               "key_code": "up_arrow",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             },
             {
               "set_variable": {
@@ -3075,100 +3732,109 @@
               }
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
               "type": "variable_if",
               "value": 1
-            },
-            {
-              "name": "g_pressed",
-              "type": "variable_if",
-              "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "g",
             "modifiers": {
-              "mandatory": ["shift"]
+              "mandatory": [
+                "shift"
+              ]
             }
           },
           "to": [
             {
               "key_code": "down_arrow",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "open_bracket",
             "modifiers": {
-              "mandatory": ["shift"]
+              "mandatory": [
+                "shift"
+              ]
             }
           },
           "to": [
             {
               "key_code": "a",
-              "modifiers": ["left_control"]
+              "modifiers": [
+                "left_control"
+              ]
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "close_bracket",
             "modifiers": {
-              "mandatory": ["shift"]
+              "mandatory": [
+                "shift"
+              ]
             }
           },
           "to": [
             {
               "key_code": "e",
-              "modifiers": ["left_control"]
+              "modifiers": [
+                "left_control"
+              ]
             }
           ],
-          "conditions": [
-            {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
-            },
-            {
-              "name": "vim_mode",
-              "type": "variable_if",
-              "value": 1
-            }
-          ]
+          "type": "basic"
         }
       ]
     },
@@ -3176,7 +3842,21 @@
       "description": "(Vim 9/11) i,I,a,A,o,O",
       "manipulators": [
         {
-          "type": "basic",
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
+            },
+            {
+              "name": "vim_mode",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
           "from": {
             "key_code": "i"
           },
@@ -3194,30 +3874,38 @@
               }
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "i",
             "modifiers": {
-              "mandatory": ["shift"]
+              "mandatory": [
+                "shift"
+              ]
             }
           },
           "to": [
             {
               "key_code": "left_arrow",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             },
             {
               "set_variable": {
@@ -3232,20 +3920,24 @@
               }
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "a"
           },
@@ -3263,30 +3955,38 @@
               }
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "a",
             "modifiers": {
-              "mandatory": ["shift"]
+              "mandatory": [
+                "shift"
+              ]
             }
           },
           "to": [
             {
               "key_code": "right_arrow",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             },
             {
               "set_variable": {
@@ -3301,27 +4001,33 @@
               }
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "o"
           },
           "to": [
             {
               "key_code": "right_arrow",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             },
             {
               "key_code": "return_or_enter"
@@ -3339,30 +4045,38 @@
               }
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "o",
             "modifiers": {
-              "mandatory": ["shift"]
+              "mandatory": [
+                "shift"
+              ]
             }
           },
           "to": [
             {
               "key_code": "left_arrow",
-              "modifiers": ["left_command"]
+              "modifiers": [
+                "left_command"
+              ]
             },
             {
               "key_code": "return_or_enter"
@@ -3383,17 +4097,7 @@
               }
             }
           ],
-          "conditions": [
-            {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
-            },
-            {
-              "name": "vim_mode",
-              "type": "variable_if",
-              "value": 1
-            }
-          ]
+          "type": "basic"
         }
       ]
     },
@@ -3401,7 +4105,21 @@
       "description": "(Vim 10/11) s,m,spacebar -> Hammerspoon modals",
       "manipulators": [
         {
-          "type": "basic",
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
+            },
+            {
+              "name": "vim_mode",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
           "from": {
             "key_code": "s"
           },
@@ -3422,20 +4140,24 @@
               }
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "m"
           },
@@ -3456,20 +4178,24 @@
               }
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "spacebar"
           },
@@ -3490,17 +4216,7 @@
               }
             }
           ],
-          "conditions": [
-            {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
-            },
-            {
-              "name": "vim_mode",
-              "type": "variable_if",
-              "value": 1
-            }
-          ]
+          "type": "basic"
         }
       ]
     },
@@ -3508,11 +4224,27 @@
       "description": "(Vim 11/11) disable unused keys",
       "manipulators": [
         {
-          "type": "basic",
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
+            },
+            {
+              "name": "vim_mode",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
           "from": {
             "key_code": "left_shift",
             "modifiers": {
-              "optional": ["any"]
+              "optional": [
+                "any"
+              ]
             }
           },
           "to": [
@@ -3520,24 +4252,30 @@
               "key_code": "left_shift"
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "right_shift",
             "modifiers": {
-              "optional": ["any"]
+              "optional": [
+                "any"
+              ]
             }
           },
           "to": [
@@ -3545,24 +4283,30 @@
               "key_code": "right_shift"
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "left_control",
             "modifiers": {
-              "optional": ["any"]
+              "optional": [
+                "any"
+              ]
             }
           },
           "to": [
@@ -3570,24 +4314,30 @@
               "key_code": "left_control"
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "right_control",
             "modifiers": {
-              "optional": ["any"]
+              "optional": [
+                "any"
+              ]
             }
           },
           "to": [
@@ -3595,24 +4345,30 @@
               "key_code": "right_control"
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "left_option",
             "modifiers": {
-              "optional": ["any"]
+              "optional": [
+                "any"
+              ]
             }
           },
           "to": [
@@ -3620,24 +4376,30 @@
               "key_code": "left_option"
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "right_option",
             "modifiers": {
-              "optional": ["any"]
+              "optional": [
+                "any"
+              ]
             }
           },
           "to": [
@@ -3645,24 +4407,30 @@
               "key_code": "right_option"
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "left_command",
             "modifiers": {
-              "optional": ["any"]
+              "optional": [
+                "any"
+              ]
             }
           },
           "to": [
@@ -3670,24 +4438,30 @@
               "key_code": "left_command"
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "key_code": "right_command",
             "modifiers": {
-              "optional": ["any"]
+              "optional": [
+                "any"
+              ]
             }
           },
           "to": [
@@ -3695,24 +4469,30 @@
               "key_code": "right_command"
             }
           ],
+          "type": "basic"
+        },
+        {
           "conditions": [
             {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.jetbrains.pycharm",
+                "com.visualstudio.code.oss"
+              ],
+              "type": "frontmost_application_unless"
             },
             {
               "name": "vim_mode",
               "type": "variable_if",
               "value": 1
             }
-          ]
-        },
-        {
-          "type": "basic",
+          ],
           "from": {
             "any": "key_code",
             "modifiers": {
-              "optional": ["any"]
+              "optional": [
+                "any"
+              ]
             }
           },
           "to": [
@@ -3720,19 +4500,10 @@
               "key_code": "vk_none"
             }
           ],
-          "conditions": [
-            {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.github.atom", "com.jetbrains.pycharm", "com.visualstudio.code.oss"]
-            },
-            {
-              "name": "vim_mode",
-              "type": "variable_if",
-              "value": 1
-            }
-          ]
+          "type": "basic"
         }
       ]
     }
-  ]
+  ],
+  "title": "Vim Mode Plus"
 }

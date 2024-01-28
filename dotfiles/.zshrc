@@ -17,8 +17,8 @@ plugins=(
     copypath
     docker
     docker-compose
-    fzf
     fast-syntax-highlighting
+    fzf
     gcloud
     gh
     git

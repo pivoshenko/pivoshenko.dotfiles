@@ -1,9 +1,9 @@
 {
-  "theme": "catppuccin-mocha",
+  "editor.alwaysShowHorizontalScrollbar": true,
+  "editor.renderWhitespace": "All",
   "fus.sendAllowed": false,
   "keymap": "macos-vscode",
-  "vimEmulationEnabled": true,
-  "editor.renderWhitespace": "All",
-  "editor.alwaysShowHorizontalScrollbar": true,
-  "showShortcuts": true
+  "showShortcuts": true,
+  "theme": "catppuccin-mocha",
+  "vimEmulationEnabled": true
 }

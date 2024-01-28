@@ -1,9 +1,4 @@
 {
-  "meta": {
-    "theme.kind": "Dark",
-    "theme.name": "Catppuccin Macchiato",
-    "theme.version": 1
-  },
   "colors": {
     "@dimmed.fill": "Transparent",
     "@dimmed.text": "Overlay0",
@@ -212,6 +207,40 @@
     "windows.close.button.@hovered.text": "Text",
     "windows.close.button.@pressed.fill": "Red",
     "windows.close.button.@pressed.text": "Flamingo"
+  },
+  "meta": {
+    "theme.kind": "Dark",
+    "theme.name": "Catppuccin Macchiato",
+    "theme.version": 1
+  },
+  "palette": {
+    "Base": "24273a",
+    "Blue": "8aadf4",
+    "Crust": "181926",
+    "Flamingo": "f0c6c6",
+    "Green": "a6da95",
+    "Lavender": "b7bdf8",
+    "Mantle": "1e2030",
+    "Maroon": "ee99a0",
+    "Mauve": "c6a0f6",
+    "Overlay0": "6e738d",
+    "Overlay1": "8087a2",
+    "Overlay2": "939ab7",
+    "Peach": "f5a97f",
+    "Pink": "f5bde6",
+    "Red": "ed8796",
+    "Rosewater": "f4dbd6",
+    "Sapphire": "7dc4e4",
+    "Sky": "91d7e3",
+    "Subtext0": "a5adcb",
+    "Subtext1": "b8c0e0",
+    "Surface0": "363a4f",
+    "Surface1": "494d64",
+    "Surface2": "5b6078",
+    "Teal": "8bd5ca",
+    "Text": "cad3f5",
+    "Transparent": "ffffff0%",
+    "Yellow": "eed49f"
   },
   "text-attributes": {
     "attributeName.html": {
@@ -753,34 +782,5 @@
       "fgColor": "Text",
       "layer": 2
     }
-  },
-  "palette": {
-    "Base": "24273a",
-    "Blue": "8aadf4",
-    "Crust": "181926",
-    "Flamingo": "f0c6c6",
-    "Green": "a6da95",
-    "Lavender": "b7bdf8",
-    "Mantle": "1e2030",
-    "Maroon": "ee99a0",
-    "Mauve": "c6a0f6",
-    "Overlay0": "6e738d",
-    "Overlay1": "8087a2",
-    "Overlay2": "939ab7",
-    "Peach": "f5a97f",
-    "Pink": "f5bde6",
-    "Red": "ed8796",
-    "Rosewater": "f4dbd6",
-    "Sapphire": "7dc4e4",
-    "Sky": "91d7e3",
-    "Subtext0": "a5adcb",
-    "Subtext1": "b8c0e0",
-    "Surface0": "363a4f",
-    "Surface1": "494d64",
-    "Surface2": "5b6078",
-    "Teal": "8bd5ca",
-    "Text": "cad3f5",
-    "Transparent": "ffffff0%",
-    "Yellow": "eed49f"
   }
 }
