@@ -12,6 +12,7 @@ ZSH_COLORIZE_CHROMA_FORMATTER=terminal256
 plugins=(
     aws
     brew
+    bookmarks
     celery
     colorize
     copypath
