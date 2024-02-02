@@ -72,16 +72,17 @@ command = "ruff-lsp"
 config.documentFormatting = true
 
 [language-server.pylsp.config.pylsp.plugins]
-autopep8 = { enabled = false }
 black = { enabled = true }
-flake8 = { enabled = false }
 isort = { enabled = true }
-mccabe = { enabled = false }
+rope = { enabled = true }
+rope_autoimport = { enabled = true }
 memestra = { enabled = true }
+autopep8 = { enabled = false }
+flake8 = { enabled = false }
+mccabe = { enabled = false }
 pycodestyle = { enabled = false }
 pyflakes = { enabled = false }
 pylint = { enabled = false }
-rope = { enabled = true }
 ruff = { enabled = false }
 yapf = { enabled = false }
 
