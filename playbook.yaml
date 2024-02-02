@@ -83,6 +83,7 @@
         - d2  # modern diagram scripting language that turns text to diagrams
         - direnv  # load/unload environment variables based on $PWD
         - dotdrop  # dotfiles manager
+        - dmenu-mac  # dmenu-like app launcher
         - dsq  # CLI tool for running SQL queries against JSON, CSV, Excel, Parquet
         - duckdb  # embeddable SQL OLAP Database Management System
         - exa  # modern replacement for 'ls'
