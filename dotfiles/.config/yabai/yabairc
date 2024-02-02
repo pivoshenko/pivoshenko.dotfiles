@@ -48,3 +48,4 @@ yabai -m rule --add app="^Nord VPN$" manage=off
 yabai -m rule --add app="^Telegram$" manage=off
 yabai -m rule --add app="^Fig$" manage=off
 yabai -m rule --add app="^fig$" manage=off
+yabai -m rule --add app="^GlobalProtect$" manage=off
