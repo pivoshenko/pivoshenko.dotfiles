@@ -2,7 +2,7 @@ python-lsp-server[all]
 ruff-lsp
 
 # pylsp plugins
-pyls-isort
+python-lsp-isort
 pyls-memestra
 pylsp-mypy
 pylsp-rope
