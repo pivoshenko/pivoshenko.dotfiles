@@ -44,6 +44,10 @@ auto-format = false
 language-servers = ["texlab"]
 
 [[language]]
+name = "markdown"
+soft-wrap.enable = true
+
+[[language]]
 name = "python"
 auto-format = false
 language-servers = ["efm-langserver", "ruff-lsp", "pylsp"]
