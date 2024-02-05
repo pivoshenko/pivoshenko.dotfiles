@@ -140,11 +140,15 @@ export FZF_CTRL_R_OPTS="
 --color header:italic
 "
 
+run_ff() { ff; }
+zle -N run_ff
+
 # configure keybindings
 function zvm_after_init() {
     # fzf
     zvm_bindkey viins '^R' fzf-history-widget
     bindkey -s '^f' '^uhx "$(fzf)" 2>/dev/null^M'
+		bindkey '^k' run_ff
     source ~/.fzf.zsh
 }
 
