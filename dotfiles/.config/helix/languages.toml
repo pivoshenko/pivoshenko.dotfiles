@@ -50,7 +50,7 @@ soft-wrap.enable = true
 [[language]]
 name = "python"
 auto-format = false
-language-servers = ["efm-langserver", "ruff-lsp", "pylsp"]
+language-servers = ["pylsp", "ruff-lsp"]
 
 [[language]]
 name = "toml"
@@ -74,6 +74,7 @@ config.documentFormatting = true
 [language-server.ruff-lsp]
 command = "ruff-lsp"
 config.documentFormatting = true
+organizeImports = false
 
 [language-server.pylsp.config.pylsp.plugins]
 black = { enabled = true }
