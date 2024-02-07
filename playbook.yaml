@@ -126,6 +126,7 @@
       community.general.cargo:
         name: "{{ item }}"
       with_items:
+        - gh-xplr  # explore GitHub repos using xplr via GitHub CLI
         - zellij  # pluggable terminal workspace, with terminal multiplexer as the base feature
 
     - name: Install CLI tools via npm
