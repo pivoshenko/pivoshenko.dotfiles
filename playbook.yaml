@@ -48,14 +48,6 @@
         - telegram
       ignore_errors: true
 
-    - name: Install Spicetify CLI
-      ansible.builtin.shell:
-        cmd: curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-cli/master/install.sh | sh
-
-    - name: Install Spicetify Marketplace
-      ansible.builtin.shell:
-        cmd: curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-marketplace/main/resources/install.sh | sh
-
     - name: Install Rust
       ansible.builtin.shell:
         cmd: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
