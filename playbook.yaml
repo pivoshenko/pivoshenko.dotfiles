@@ -104,6 +104,7 @@
         - pyenv-virtualenv  # pyenv plugin to manage virtualenv
         - qrcp  # transfer files to and from your computer by scanning a QR code
         - ripgrep  # search tool like grep and the silver searcher
+        - rye  # comprehensive project and package management solution for Python
         - sd  # intuitive find & replace CLI
         - spotify-tui  # Spotify for the terminal written in Rust
         - spicetify/homebrew-tap/spicetify-cli  # Spotify customization
