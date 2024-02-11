@@ -54,6 +54,12 @@ eval "$(starship init zsh)"
 # configure dotenv
 eval "$(direnv hook zsh)"
 
+# configure rye
+. "$HOME/.rye/env"
+
+# configure cargo
+. "$HOME/.cargo/env"
+
 # configure pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
