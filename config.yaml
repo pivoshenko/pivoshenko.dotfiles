@@ -101,6 +101,10 @@ dotfiles:
     dst: ~/.config/direnv.toml
     src: .config/direnv.toml
 
+  f_ff:
+    dst: ~/.local/bin/ff
+    src: .local/bin/ff
+
   f_git:
     dst: ~/.gitconfig
     src: .gitconfig
@@ -113,9 +117,9 @@ dotfiles:
     dst: ~/.ipython/profile_default/ipython_config.py
     src: .ipython/profile_default/ipython_config.py
 
-  f_ff:
-    dst: ~/.local/bin/ff
-    src: .local/bin/ff
+  f_profile:
+    dst: ~/.profile
+    src: .profile
 
   f_starship:
     dst: ~/.config/starship.toml
@@ -155,5 +159,6 @@ profiles:
       - f_git
       - f_ipython_config
       - f_ipython_startup
+      - f_profile
       - f_starship
       - f_zsh
