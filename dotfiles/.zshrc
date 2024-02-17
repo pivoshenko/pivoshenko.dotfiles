@@ -159,7 +159,7 @@ function zvm_after_init() {
 }
 
 # configure zellij
-eval "$(zellij setup --generate-auto-start zsh)"
+# eval "$(zellij setup --generate-auto-start zsh)"
 alias zj="zellij"
 
 # configure zoxide
