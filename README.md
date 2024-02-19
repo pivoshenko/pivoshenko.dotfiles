@@ -35,7 +35,7 @@ Set of the tooling and dotfiles.
 3. Run the following commands to install the necessary tooling and configs:
 
 ```shell
-ansible-playbook playbook.yaml
+ansible-playbook dependencie/playbook.yaml
 
 dotdrop install -p base
 
