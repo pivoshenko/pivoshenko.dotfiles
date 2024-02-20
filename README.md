@@ -35,13 +35,11 @@ Set of the tooling and dotfiles.
 3. Run the following commands to install the necessary tooling and configs:
 
 ```shell
-ansible-playbook dependencie/playbook.yaml
+ansible-playbook playbook.yaml
 
 dotdrop install -p base
 
-pip install -U -r dependencies/requirements.txt
-
-pip install -U -r dependencies/lsp.txt
+pip install -U -r python/requirements.txt
 ```
 
 [ansible]: https://pypi.org/project/ansible
