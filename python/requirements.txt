@@ -1,0 +1,34 @@
+# REPL
+ipython
+
+# ipython plugins
+catppuccin
+catppuccin[pygments]
+
+# LSPs
+python-lsp-server[all]
+ruff-lsp
+
+# pylsp plugins
+python-lsp-isort
+pyls-memestra
+pylsp-mypy
+pylsp-rope
+pylsp-isort
+python-lsp-black
+
+# formatters
+black
+isort
+nbqa
+pyupgrade
+
+# linters
+ansible-lint
+codespell
+deptry
+gitlint
+memestra
+mypy
+ruff
+sqlfluff
