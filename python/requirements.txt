@@ -10,12 +10,11 @@ python-lsp-server[all]
 ruff-lsp
 
 # pylsp plugins
-python-lsp-isort
 pyls-memestra
 pylsp-mypy
 pylsp-rope
-pylsp-isort
 python-lsp-black
+python-lsp-isort
 
 # formatters
 black
