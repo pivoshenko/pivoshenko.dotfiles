@@ -115,7 +115,6 @@ alias history="atuin search -i"
 alias h="atuin search -i"
 
 # configure fzf
-alias f='hx "$(fzf)" 2>/dev/null'
 export FZF_DEFAULT_COMMAND=" \
 fd --type f --type l \
 --hidden \
@@ -145,16 +144,40 @@ export FZF_CTRL_R_OPTS="
 --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
 --color header:italic
 "
+export FZF_CTRL_T_COMMAND="
+fd --type f --type l \
+--hidden \
+--follow \
+--exclude .git \
+--exclude venv \
+--exclude .pytest_cache \
+--exclude .mypy_cache \
+--exclude __pycache__ \
+--exclude .hypothesis \
+--exclude .ruff_cache \
+--exclude .ipynb_checkpoints
+"
+export FZF_CTRL_T_OPTS="
+--preview 'bat -n --color=always {}' \
+--height 50% -1 \
+--reverse \
+--preview-window='right:wrap' \
+--inline-info \
+--color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+--color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+--color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
+--bind 'f1:execute(hx {1} < /dev/tty)'
+"
 
-run_ff() { ff; }
-zle -N run_ff
+run_find_in_files() { find_in_files; }
+zle -N run_find_in_files
 
 # configure keybindings
 function zvm_after_init() {
     # fzf
     zvm_bindkey viins '^R' fzf-history-widget
-    bindkey -s '^f' '^uhx "$(fzf)" 2>/dev/null^M'
-		bindkey '^k' run_ff
+    bindkey '^f' run_find_in_files
+    bindkey -s '^k' '^uhx "$(fzf)" 2>/dev/null^M'
     source ~/.fzf.zsh
 }
 
