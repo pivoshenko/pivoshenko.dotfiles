@@ -17,6 +17,10 @@ dotfiles:
     dst: ~/.config/bat
     src: .config/bat
 
+  d_bin:
+    dst: ~/.local/bin
+    src: .local/bin
+
   d_btop:
     dst: ~/.config/btop
     src: .config/btop
@@ -101,10 +105,6 @@ dotfiles:
     dst: ~/.config/direnv.toml
     src: .config/direnv.toml
 
-  f_ff:
-    dst: ~/.local/bin/ff
-    src: .local/bin/ff
-
   f_git:
     dst: ~/.gitconfig
     src: .gitconfig
@@ -134,6 +134,7 @@ profiles:
     dotfiles:
       - d_atuin
       - d_bat
+      - d_bin
       - d_btop
       - d_efm
       - d_fig
@@ -155,7 +156,6 @@ profiles:
       - d_zellij
       - d_zellij_plugins
       - f_direnv
-      - f_ff
       - f_git
       - f_ipython_config
       - f_ipython_startup
