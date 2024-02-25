@@ -53,6 +53,12 @@ auto-format = false
 language-servers = ["pylsp", "ruff-lsp"]
 
 [[language]]
+name = "sql"
+scope = "source.sql"
+file-types = ["sql", "dsql", "sql.j2", "ddl", "dml"]
+language-servers = ["efm-langserver"]
+
+[[language]]
 name = "toml"
 auto-format = false
 formatter = { command = "taplo", args = ["fmt", "-"] }
