@@ -5,5 +5,7 @@
   "keymap": "macos-vscode",
   "showShortcuts": true,
   "theme": "catppuccin-mocha",
-  "vimEmulationEnabled": true
+  "vimEmulationEnabled": true,
+  "editor.fontFamily": "JetBrainsMono Nerd Font Mono",
+  "terminal.fontFamily": "JetBrainsMonoNL Nerd Font Mono"
 }
