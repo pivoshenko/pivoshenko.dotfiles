@@ -366,7 +366,7 @@
   "Name": "default",
   "Non Ascii Font": "Monaco 12",
   "Non-ASCII Anti Aliased": true,
-  "Normal Font": "MesloLGMNerdFontComplete-Regular 14",
+  "Normal Font": "JetBrainsMono-Regular 14",
   "Only The Default BG Color Uses Transparency": true,
   "Option Key Sends": 2,
   "Prompt Before Closing 2": false,
