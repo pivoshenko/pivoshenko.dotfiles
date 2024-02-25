@@ -1,16 +1,22 @@
 {
+  "ai.terminal-hash-sub": false,
   "app.beta": false,
   "app.launchOnStartup": true,
   "app.preferredTerminal": "iTerm2",
   "app.showAllProducts": false,
+  "autocomplete.ai.enabled": false,
   "autocomplete.developerModeNPM": false,
   "autocomplete.developerModeNPMInvalidateCache": false,
-  "autocomplete.fontFamily": "JetBrains Mono",
+  "autocomplete.fontFamily": "JetBrainsMono Nerd Font Mono",
+  "autocomplete.keybindings.control+n": "ignore",
+  "autocomplete.keybindings.down": "ignore",
   "autocomplete.keybindings.enter": "insertSelected",
   "autocomplete.keybindings.shift+tab": "navigateUp",
   "autocomplete.keybindings.tab": "navigateDown",
   "autocomplete.onlyShowOnTab": false,
   "autocomplete.preferVerboseSuggestions": true,
   "autocomplete.sortMethod": "alphabetical",
-  "autocomplete.theme": "github-dark"
+  "autocomplete.theme": "github-dark",
+  "integrations.iterm.disabled": false,
+  "telemetry.disabled": false
 }
