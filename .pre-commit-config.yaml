@@ -3,7 +3,7 @@ default_language_version:
 
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0
+    rev: v4.5.0
     hooks:
       - id: check-added-large-files
       - id: check-ast
@@ -18,6 +18,6 @@ repos:
       - id: trailing-whitespace
 
   - repo: https://github.com/pre-commit/pre-commit
-    rev: v3.3.3
+    rev: v3.6.2
     hooks:
       - id: validate_manifest
