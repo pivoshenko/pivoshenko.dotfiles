@@ -17,10 +17,12 @@ tools:
       - pyproject.toml
 
   bash-shfmt: &bash-shfmt
+    prefix: shfmt
     format-command: "shfmt -ci -s -bn"
     format-stdin: true
 
   dockerfile-hadolint: &dockerfile-hadolint
+    prefix: hadolint
     lint-command: "hadolint --no-color"
     lint-formats:
       - "%f:%l DL%n %tnfo: %m"
@@ -28,11 +30,13 @@ tools:
       - "%f:%l DL%n %trror: %m"
 
   env-dotenv-linter: &env-dotenv-linter
+    prefix: dotenv-linter
     lint-command: "dotenv-linter --no-color --not-check-updates -q"
     lint-formats:
       - "%f:%l %m"
 
   git-commit-gitlint: &git-commit-gitlint
+    prefix: gitlint
     lint-command: "gitlint --ignore B6"
     lint-stdin: true
     lint-formats:
@@ -40,9 +44,21 @@ tools:
       - "%l: %m"
 
   git-commit-commitizen: &git-commit-commitizen
+    prefix: commitizen
     lint-command: "cz check --commit-msg-file"
     lint-formats:
       - "%m"
+
+  sql-sqlfluff: &sql-sqlfluff
+    prefix: sqlfluff
+    lint-command: "sqlfluff lint --format github-annotation-native --annotation-level warning --nocolor --disable-progress-bar ${INPUT}"
+    lint-stdin: false
+    lint-formats:
+      - "::%totice title=SQLFluff,file=%f,line=%l,col=%c::%m"
+      - "::%tarning title=SQLFluff,file=%f,line=%l,col=%c::%m"
+      - "::%trror title=SQLFluff,file=%f,line=%l,col=%c::%m"
+    format-command: "sqlfluff fix --nocolor --disable-progress-bar -"
+    format-stdin: true
 
   yaml-actionlint: &yaml-actionlint
     prefix: actionlint
@@ -54,6 +70,7 @@ tools:
       - .github
 
   yaml-ansible-lint: &yaml-ansible-lint
+    prefix: ansible-lint
     lint-command: "ansible-lint -f pep8 -q"
     lint-formats:
       - "%f:%l: %m"
@@ -75,9 +92,6 @@ tools:
     format-stdin: true
 
 languages:
-  =:
-    - <<: *codespell
-
   bash:
     - <<: *bash-shfmt
 
@@ -90,6 +104,9 @@ languages:
   git-commit:
     - <<: *git-commit-gitlint
     - <<: *git-commit-commitizen
+
+  sql:
+    - <<: *sql-sqlfluff
 
   yaml:
     - <<: *yaml-actionlint
