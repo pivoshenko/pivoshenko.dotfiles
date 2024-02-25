@@ -18,6 +18,7 @@
         state: present
       with_items:
         - font-symbols-only-nerd-font
+        - font-jetbrains-mono
 
     - name: Install IDEs and terminals via homebrew
       community.general.homebrew_cask:
