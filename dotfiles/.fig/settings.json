@@ -5,7 +5,7 @@
   "app.showAllProducts": false,
   "autocomplete.developerModeNPM": false,
   "autocomplete.developerModeNPMInvalidateCache": false,
-  "autocomplete.fontFamily": "MesloLGM Nerd Font",
+  "autocomplete.fontFamily": "JetBrains Mono",
   "autocomplete.keybindings.enter": "insertSelected",
   "autocomplete.keybindings.shift+tab": "navigateUp",
   "autocomplete.keybindings.tab": "navigateDown",
