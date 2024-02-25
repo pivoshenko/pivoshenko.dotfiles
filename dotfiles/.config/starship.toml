@@ -3,146 +3,146 @@
 palette = "catppuccin_mocha"
 
 [aws]
-symbol = "\uf662 "
+symbol = "󰸏 "
 force_display = false
 
 [azure]
-symbol = "\ufd03 "
+symbol = " "
 disabled = false
 
 [buf]
-symbol = "\uf15a "
+symbol = " "
 
 [bun]
-symbol = "\ue28d "
+symbol = " "
 
 [c]
-symbol = "\ue61d "
+symbol = " "
 
 [conda]
-symbol = "\uf10c "
+symbol = " "
 
 [dart]
-symbol = "\ue798 "
+symbol = " "
 
 [directory]
-read_only = " \uf83d "
+read_only = " "
 
 [docker_context]
-symbol = "\uf308 "
+symbol = "󰡨 "
 
 [dotnet]
-symbol = "\uf81a "
+symbol = " "
 
 [elixir]
-symbol = "\ue62d "
+symbol = " "
 
 [elm]
-symbol = "\ue62c "
+symbol = " "
 
 [erlang]
-symbol = "\ue7b1 "
+symbol = " "
 
 [gcloud]
-symbol = "\ue7b2 "
+symbol = " "
 
 [git_branch]
-symbol = "\ue725 "
+symbol = " "
 
 [git_commit]
-tag_symbol = "\uf02b "
+tag_symbol = "󰊢 "
 tag_disabled = false
 
 [git_metrics]
 disabled = false
 
 [golang]
-symbol = "\ue724 "
+symbol = " "
 
 [haskell]
-symbol = "\ue777 "
+symbol = " "
 
 [hostname]
 ssh_only = true
-ssh_symbol = "\ueb01 "
+ssh_symbol = " "
 
 [hg_branch]
-symbol = "\ue725 "
+symbol = " "
 
 [java]
-symbol = "\ue738 "
+symbol = " "
 
 [julia]
-symbol = "\ue624 "
+symbol = " "
 
 [kotlin]
-symbol = "\ue634 "
+symbol = " "
 
 [kubernetes]
-symbol = "\ufd31 "
+symbol = "󱃾 "
 disabled = false
 
 [lua]
-symbol = "\ue620 "
+symbol = "󰢱 "
 
 [memory_usage]
-symbol = "\uf85a "
+symbol = "󰍛 "
 disabled = true
 
 [meson]
-symbol = "\ufa36 "
+symbol = " "
 
 [nim]
-symbol = "\uf6a4 "
+symbol = " "
 
 [nix_shell]
-symbol = "\uf2dc "
+symbol = "󱄅 "
 
 [nodejs]
-symbol = "\uf898 "
+symbol = "󰎙 "
 
 [openstack]
-symbol = "\ue771 "
+symbol = " "
 
 [package]
-symbol = "\uf8d6 "
+symbol = " "
 
 [php]
-symbol = "\ue76e "
+symbol = " "
 
 [python]
-symbol = "\ue235 "
+symbol = " "
 style = "green bold"
 
 [rlang]
-symbol = "\ufcd2 "
+symbol = "󰟔 "
 
 [ruby]
-symbol = "\ue791 "
+symbol = " "
 
 [rust]
-symbol = "\ue7a8 "
+symbol = " "
 
 [scala]
-symbol = "\ue737 "
+symbol = " "
 
 [shell]
-zsh_indicator = "\uf79f"
+zsh_indicator = "󰊠"
 style = "green bold"
 disabled = false
 
 [status]
-symbol = "\uf467 "
+symbol = " "
 success_symbol = ""
-not_executable_symbol = "\uebd6 "
+not_executable_symbol = " "
 map_symbol = false
 disabled = false
 
 [swift]
-symbol = "\ue755 "
+symbol = " "
 
 [terraform]
-symbol = "\uf1bb "
+symbol = "󱁢 "
 
 [palettes.catppuccin_macchiato]
 rosewater = "#f4dbd6"
