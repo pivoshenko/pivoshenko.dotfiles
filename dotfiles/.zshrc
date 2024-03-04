@@ -171,12 +171,15 @@ export FZF_CTRL_T_OPTS="
 run_find_in_files() { find_in_files; }
 zle -N run_find_in_files
 
+run_find_files() { find_files; }
+zle -N run_find_files
+
 # configure keybindings
 function zvm_after_init() {
     # fzf
     zvm_bindkey viins '^R' fzf-history-widget
     bindkey '^f' run_find_in_files
-    bindkey -s '^k' '^uhx "$(fzf)" 2>/dev/null^M'
+    bindkey '^k' run_find_files
     source ~/.fzf.zsh
 }
 
