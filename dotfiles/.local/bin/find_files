@@ -1,0 +1,20 @@
+fd --type f --type l \
+--hidden \
+--follow \
+--exclude .git \
+--exclude venv \
+--exclude .pytest_cache \
+--exclude .mypy_cache \
+--exclude __pycache__ \
+--exclude .hypothesis \
+--exclude .ruff_cache \
+--exclude .ipynb_checkpoints |
+	fzf --preview 'bat -n --color=always {}' \
+	--height 50% -1 \
+	--reverse \
+	--preview-window='right:wrap' \
+	--inline-info \
+	--color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+	--color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+	--color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
+    --bind 'enter:become(hx {1})'
