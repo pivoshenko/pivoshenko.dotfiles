@@ -31,3 +31,4 @@ memestra
 mypy
 ruff
 sqlfluff
+import-linter
