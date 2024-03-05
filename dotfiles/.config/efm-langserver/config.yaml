@@ -8,14 +8,6 @@ root-markers:
   - pyproject.toml
 
 tools:
-  codespell: &codespell
-    prefix: codespell
-    lint-command: "codespell"
-    lint-formats:
-      - "%f:%l: %m"
-    root-markers:
-      - pyproject.toml
-
   bash-shfmt: &bash-shfmt
     prefix: shfmt
     format-command: "shfmt -ci -s -bn"
