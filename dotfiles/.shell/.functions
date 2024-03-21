@@ -1,0 +1,6 @@
+# `.functions` provides helper functions for the shell
+
+# `rgp` (recursive git pull) - iterates over directories and pulls git repositories
+rgp () {
+	find . -name ".git" -type d | sed 's/\/.git//' |  xargs -P10 -I{} git -C {} pull
+}
