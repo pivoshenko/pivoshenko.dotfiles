@@ -3,6 +3,8 @@
 
 # All values are sorted inside their blocks: the newest are on the top
 
+set -e
+
 echo "Configuring your MacOS. Hang tight :3"
 osascript -e 'tell application "System Preferences" to quit'
 
