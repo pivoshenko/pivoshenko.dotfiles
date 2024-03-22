@@ -19,6 +19,9 @@ indent_size = 2
 [{*.yaml,*.yml}]
 indent_size = 2
 
+[{*.sh,*.zsh}]
+indent_size = 2
+
 [*.toml]
 indent_size = 2
 
