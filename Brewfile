@@ -4,14 +4,14 @@ tap "homebrew/cask-versions"
 tap "homebrew/services"
 
 # =============================================================================================
-# fonts
+# Fonts
 # =============================================================================================
 
 cask "font-jetbrains-mono"
 cask "font-symbols-only-nerd-font"
 
 # =============================================================================================
-# apps
+# Apps
 # =============================================================================================
 
 # memory training application
@@ -65,7 +65,7 @@ cask "visual-studio-code"
 # mas "RunCat", id: 000
 
 # =============================================================================================
-# programming languages, REPLs
+# Programming languages, REPLs
 # =============================================================================================
 
 # programming language for highly scalable real-time systems
@@ -179,7 +179,7 @@ brew "zoxide"
 brew "zplug"
 
 # =============================================================================================
-# linters, formatters and LSPs
+# Linters, formatters and LSPs
 # =============================================================================================
 
 # static checker for GitHub Actions workflow files
