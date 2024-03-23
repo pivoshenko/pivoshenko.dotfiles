@@ -178,7 +178,7 @@
   // Jupyter
   "notebook.lineNumbers": "on",
   "workbench.editorAssociations": {
-    "*.ipynb": "jupyter-notebook"
+    "*.ipynb": "jupyter-notebook",
   },
 
   // YAML
@@ -214,7 +214,10 @@
     ".babelrc": "jsonc",
     ".eslintrc": "jsonc",
     "*.pyi": "python",
-    "*.bats": "shellscript"
+    "*.bats": "shellscript",
+    "*.aliases": "shellscript",
+    "*.functions": "shellscript",
+    "**/bin/**": "shellscript"
   },
 
   "files.exclude": {
@@ -229,14 +232,10 @@
     "**/.pytest_cache": true,
     "**/.mypy_cache": true,
     "**/.ropeproject": true,
-    "**/.hypothesis": true,
-    "**/.ruff_cache": true,
-    "**/.ipynb_checkpoints": true,
     "**/__pycache__": true,
     "**/.cache": true,
     "**/.idea": true,
     "**/.venv": true,
-    "**/venv": true,
     "**/.coverage": true,
     "**/*.py[co]": true,
     "**/htmlcoverage": true,
