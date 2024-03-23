@@ -23,7 +23,10 @@ def set_input_mode(self, mode):
     self._input_mode = mode
 
 
+# keybindings
 ViState._input_mode = InputMode.INSERT  # type: ignore[attr-defined]
 ViState.input_mode = property(get_input_mode, set_input_mode)  # type: ignore[method-assign, assignment]
 c.TerminalInteractiveShell.editing_mode = "vi"  # type: ignore[name-defined]  # noqa: F821
+
+# theme
 c.TerminalInteractiveShell.highlighting_style = get_style_by_name("catppuccin-mocha")  # type: ignore[name-defined]  # noqa: F821
