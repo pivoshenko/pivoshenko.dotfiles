@@ -1942,5 +1942,5 @@
       "type": "command",
       "command": "workbench.action.focusEighthEditorGroup"
     }
-  ],
+  ]
 }
