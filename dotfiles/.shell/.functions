@@ -2,5 +2,26 @@
 
 # `rgp` (recursive git pull) - iterates over directories and pulls git repositories
 rgp () {
-	find . -name ".git" -type d | sed 's/\/.git//' |  xargs -P10 -I{} git -C {} pull
+  find . -name ".git" -type d | sed 's/\/.git//' |  xargs -P10 -I{} git -C {} pull
+}
+
+# `pyclean` - cleans Python cache directories
+pyclean () {
+  find . \
+    | grep -E '(__pycache__|\.(mypy_)?cache|\.hypothesis\.py[cod]|\.(pytest_)?cache|\.ropeproject|\.ruff_cache|\.(ipynb_)?checkpoints|$)' \
+    | xargs rm -rf
+}
+
+# `gitclean` - deletes merged branches locally and remotely
+gitclean () {
+  git branch --merged | grep -v '\*\|master\|main\|develop' | xargs -n 1 git branch -d
+  git branch -r --merged | grep -v '\*\|master\|main\|develop' | sed 's/origin\///' | xargs -n 1 git push --delete origin
+  git fetch -p
+}
+
+# `cdf` - cd into whatever is the forefront Finder window
+cdf () {
+  local path=$(osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')
+  echo "$path"
+  cd "$path"
 }
