@@ -1,7 +1,7 @@
 # This file contains settings for MacOS which makes me happy :3
 # The best resource for finding new settings for other users is: https://www.defaults-write.com
 
-# All values are sorted inside their blocks: the newest are on the top
+# All values are sorted inside their blocks the newest are on the top
 
 set -e
 
@@ -76,10 +76,10 @@ defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
 # Menu bar
 # =============================================================================================
 
-# make status icons smaller, so they will take less space:
+# make status icons smaller, so they will take less space
 # https://flaky.build/built-in-workaround-for-applications-hiding-under-the-macbook-pro-notch
-defaults write -globalDomain NSStatusItemSelectionPadding -int 15
-defaults write -globalDomain NSStatusItemSpacing -int 15
+defaults write -globalDomain NSStatusItemSelectionPadding -int 12
+defaults write -globalDomain NSStatusItemSpacing -int 12
 
 # =============================================================================================
 # Finder
@@ -129,7 +129,7 @@ defaults write org.p0deje.Maccy fuzzySearch true
 defaults write org.p0deje.Maccy hotKey command+shift+v
 defaults write org.p0deje.Maccy popupPosition -string "statusItem"
 
-# Restarting apps:
+# Restarting apps
 echo "Restarting apps..."
 killall Finder
 killall Dock
