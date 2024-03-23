@@ -12,8 +12,8 @@ osascript -e 'tell application "System Preferences" to quit'
 # General
 # =============================================================================================
 
-# hide remaining battery time; show percentage
-defaults write com.apple.menuextra.battery ShowPercent -string "YES"
+# hide remaining battery time show percentage
+defaults write com.apple.menuextra.battery ShowPercent -string "NO"
 defaults write com.apple.menuextra.battery ShowTime -string "NO"
 
 # disable dashboard
@@ -25,6 +25,14 @@ defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
 # deactivate rubber scrolling
 # http://osxdaily.com/2012/05/10/disable-elastic-rubber-band-scrolling-in-mac-os-x
 defaults write -g NSScrollViewRubberbanding -int 0
+
+# =============================================================================================
+# Display
+# =============================================================================================
+
+# set blue accent color
+defaults write -globalDomain AppleAccentColor -int 4
+defaults write NSGlobalDomain AppleHighlightColor -int 4
 
 # =============================================================================================
 # Dock
@@ -118,6 +126,15 @@ defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
 defaults write com.apple.ActivityMonitor IconType -int 5
 # show all processes in Activity Monitor
 defaults write com.apple.ActivityMonitor ShowCategory -int 0
+
+# =============================================================================================
+# Hot corners
+# =============================================================================================
+
+defaults write com.apple.dock wvous-tl-corner -int 0
+defaults write com.apple.dock wvous-tr-corner -int 0
+defaults write com.apple.dock wvous-bl-corner -int 0
+defaults write com.apple.dock wvous-br-corner -int 0
 
 # =============================================================================================
 # Maccy
