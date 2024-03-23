@@ -107,7 +107,7 @@
   "terminal.integrated.fontWeight": "normal",
 
   // =============================================================================================
-  // General
+  // Core
   // =============================================================================================
 
   "files.autoSave": "afterDelay",
@@ -259,6 +259,9 @@
     "editor.defaultFormatter": "dorzey.vscode-sqlfluff"
   },
   "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[lua]": {
@@ -747,7 +750,10 @@
       "key": "\t",
       "name": "Last editor",
       "type": "commands",
-      "commands": ["workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup", "list.select"]
+      "commands": [
+        "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
+        "list.select"
+      ]
     },
     {
       "key": "?",
@@ -842,13 +848,20 @@
           "key": "P",
           "name": "Paste clipboard to buffer",
           "type": "commands",
-          "commands": ["editor.action.selectAll", "editor.action.clipboardPasteAction"]
+          "commands": [
+            "editor.action.selectAll",
+            "editor.action.clipboardPasteAction"
+          ]
         },
         {
           "key": "Y",
           "name": "Copy buffer to clipboard",
           "type": "commands",
-          "commands": ["editor.action.selectAll", "editor.action.clipboardCopyAction", "cancelSelection"]
+          "commands": [
+            "editor.action.selectAll",
+            "editor.action.clipboardCopyAction",
+            "cancelSelection"
+          ]
         }
       ]
     },
@@ -1032,7 +1045,10 @@
           "key": "R",
           "name": "Rename file",
           "type": "commands",
-          "commands": ["workbench.files.action.showActiveFileInExplorer", "renameFile"]
+          "commands": [
+            "workbench.files.action.showActiveFileInExplorer",
+            "renameFile"
+          ]
         },
         {
           "key": "t",
@@ -1260,7 +1276,10 @@
           "key": "h",
           "name": "Highlight symbol transient",
           "type": "commands",
-          "commands": ["editor.action.wordHighlight.trigger", "whichkey.showTransient"],
+          "commands": [
+            "editor.action.wordHighlight.trigger",
+            "whichkey.showTransient"
+          ],
           "args": [null, "whichkey.transient.symbol"]
         },
         {
@@ -1285,7 +1304,10 @@
           "key": "P",
           "name": "Search in a project with a selection",
           "type": "commands",
-          "commands": ["editor.action.addSelectionToNextFindMatch", "workbench.action.findInFiles"]
+          "commands": [
+            "editor.action.addSelectionToNextFindMatch",
+            "workbench.action.findInFiles"
+          ]
         },
         {
           "key": "r",
@@ -1626,14 +1648,20 @@
           "key": "J",
           "name": "Move lines down transient",
           "type": "commands",
-          "commands": ["editor.action.moveLinesDownAction", "whichkey.showTransient"],
+          "commands": [
+            "editor.action.moveLinesDownAction",
+            "whichkey.showTransient"
+          ],
           "args": [null, "whichkey.transient.lineMoving"]
         },
         {
           "key": "K",
           "name": "Move lines up transient",
           "type": "commands",
-          "commands": ["editor.action.moveLinesUpAction", "whichkey.showTransient"],
+          "commands": [
+            "editor.action.moveLinesUpAction",
+            "whichkey.showTransient"
+          ],
           "args": [null, "whichkey.transient.lineMoving"]
         },
         {
@@ -1854,7 +1882,10 @@
       "key": "*",
       "name": "Search in a project with a selection",
       "type": "commands",
-      "commands": ["editor.action.addSelectionToNextFindMatch", "workbench.action.findInFiles"]
+      "commands": [
+        "editor.action.addSelectionToNextFindMatch",
+        "workbench.action.findInFiles"
+      ]
     },
     {
       "key": "v",
@@ -1911,5 +1942,5 @@
       "type": "command",
       "command": "workbench.action.focusEighthEditorGroup"
     }
-  ]
+  ],
 }
