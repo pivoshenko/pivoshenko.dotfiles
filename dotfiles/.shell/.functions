@@ -35,3 +35,11 @@ pdm() {
         command pdm $@
     fi
 }
+
+# find a match in files and open them
+run_find_in_files() { find_in_files; }
+zle -N run_find_in_files
+
+# find files and open them
+run_find_files() { find_files; }
+zle -N run_find_files
