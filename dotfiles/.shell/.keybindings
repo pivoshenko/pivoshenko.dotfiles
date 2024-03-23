@@ -1,0 +1,9 @@
+# `.keybindings` is used to configure widgets and keybindings
+
+function zvm_after_init() {
+    # fzf
+    zvm_bindkey viins '^R' fzf-history-widget
+    bindkey '^f' run_find_in_files
+    bindkey '^k' run_find_files
+    source ~/.fzf.zsh
+}

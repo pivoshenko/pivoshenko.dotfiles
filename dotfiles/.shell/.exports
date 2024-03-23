@@ -1,0 +1,133 @@
+# `.exports` is used to provide custom variables
+
+export XDG_CONFIG_HOME="$HOME/.config"
+
+# set default editor
+export EDITOR=hx
+export VISUAL="$EDITOR"
+
+# =============================================================================================
+# Shell
+# =============================================================================================
+
+# awesome prompt
+eval "$(starship init zsh)"
+
+# .env manager
+eval "$(direnv hook zsh)"
+
+# awesome cd
+eval "$(zoxide init zsh)"
+
+# =============================================================================================
+# Version managers
+# =============================================================================================
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
+export NODE_NO_WARNINGS=1
+
+# rustup
+. "$HOME/.cargo/env"
+
+# rye
+. "$HOME/.rye/env"
+
+# =============================================================================================
+# External misc
+# =============================================================================================
+
+# Spotify TUI
+export PATH=$PATH:$HOME/.spicetify
+
+# =============================================================================================
+# FZF
+# =============================================================================================
+
+export FZF_DEFAULT_COMMAND=" \
+fd --type f --type l \
+--hidden \
+--follow \
+--exclude .git \
+--exclude ".svn" \
+--exclude ".hg" \
+--exclude "CVS" \
+--exclude ".DS_Store" \
+--exclude "node_modules" \
+--exclude ".pytest_cache" \
+--exclude ".mypy_cache" \
+--exclude ".ropeproject" \
+--exclude ".hypothesis" \
+--exclude ".ruff_cache" \
+--exclude ".ipynb_checkpoints" \
+--exclude "__pycache__" \
+--exclude ".cache" \
+--exclude ".idea" \
+--exclude ".venv" \
+--exclude "venv" \
+--exclude ".coverage" \
+--exclude "*.py[co]" \
+--exclude "htmlcoverage" \
+--exclude "docs/build" \
+--exclude .ipynb_checkpoints
+"
+export FZF_DEFAULT_OPTS=" \
+--preview 'bat -n --color=always {}' \
+--height 50% -1 \
+--reverse \
+--preview-window='right:wrap' \
+--inline-info \
+--color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+--color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+--color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8
+"
+export FZF_CTRL_R_OPTS="
+--preview 'echo {}' --preview-window up:3:hidden:wrap
+--bind 'ctrl-/:toggle-preview'
+--bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
+--color header:italic
+"
+export FZF_CTRL_T_COMMAND="
+fd --type f --type l \
+--hidden \
+--follow \
+--exclude .git \
+--exclude ".svn" \
+--exclude ".hg" \
+--exclude "CVS" \
+--exclude ".DS_Store" \
+--exclude "node_modules" \
+--exclude ".pytest_cache" \
+--exclude ".mypy_cache" \
+--exclude ".ropeproject" \
+--exclude ".hypothesis" \
+--exclude ".ruff_cache" \
+--exclude ".ipynb_checkpoints" \
+--exclude "__pycache__" \
+--exclude ".cache" \
+--exclude ".idea" \
+--exclude ".venv" \
+--exclude "venv" \
+--exclude ".coverage" \
+--exclude "*.py[co]" \
+--exclude "htmlcoverage" \
+--exclude "docs/build" \
+--exclude .ipynb_checkpoints
+"
+export FZF_CTRL_T_OPTS="
+--preview 'bat -n --color=always {}' \
+--height 50% -1 \
+--reverse \
+--preview-window='right:wrap' \
+--inline-info \
+--color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+--color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+--color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8
+"
