@@ -108,7 +108,7 @@ brew "dsq"
 # embeddable SQL OLAP Database Management System
 brew "duckdb"
 # modern replacement for 'ls'
-brew "eza"
+brew "exa"
 # simple, fast and user-friendly alternative to find
 brew "fd"
 # command-line fuzzy finder written in go
