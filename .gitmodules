@@ -6,11 +6,3 @@
 [submodule "dotbot-brewfile"]
   path = dotbot-brewfile
   url = https://github.com/sobolevn/dotbot-brewfile.git
-
-[submodule "dotbot-rust"]
-  path = dotbot-rust
-  url = https://github.com/alexcormier/dotbot-rust
-
-[submodule "dotbot-pip"]
-  path = dotbot-pip
-  url = https://github.com/sobolevn/dotbot-pip.git
