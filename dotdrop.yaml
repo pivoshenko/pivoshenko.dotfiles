@@ -202,5 +202,8 @@ profiles:
       - f_gitconfig
       - f_zplugrc
       - f_zshrc
+
+  macos:
+    dotfiles:
       - f_vscode
-      - d_obsidian
+
