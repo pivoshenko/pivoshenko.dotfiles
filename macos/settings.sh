@@ -13,7 +13,7 @@ osascript -e 'tell application "System Preferences" to quit'
 # =============================================================================================
 
 # hide remaining battery time show percentage
-defaults write com.apple.menuextra.battery ShowPercent -string "NO"
+defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 defaults write com.apple.menuextra.battery ShowTime -string "NO"
 
 # disable dashboard
@@ -141,7 +141,7 @@ defaults write com.apple.dock wvous-br-corner -int 0
 # =============================================================================================
 
 defaults write org.p0deje.Maccy pasteByDefault false
-defaults write org.p0deje.Maccy historySize 20
+defaults write org.p0deje.Maccy historySize 50
 defaults write org.p0deje.Maccy fuzzySearch true
 defaults write org.p0deje.Maccy hotKey command+shift+v
 defaults write org.p0deje.Maccy popupPosition -string "statusItem"
