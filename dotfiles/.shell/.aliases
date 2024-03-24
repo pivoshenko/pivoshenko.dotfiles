@@ -4,7 +4,7 @@
 alias afk='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
 
 # list files and directories
-alias ls="exa --tree --level=1 --icons"
+alias ls="exa -a --level=1 --icons"
 
 # show file content
 alias cat="bat -p"
