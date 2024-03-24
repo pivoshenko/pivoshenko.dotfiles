@@ -137,6 +137,13 @@ defaults write com.apple.dock wvous-bl-corner -int 0
 defaults write com.apple.dock wvous-br-corner -int 0
 
 # =============================================================================================
+# Sonoma
+# =============================================================================================
+
+# disable text cursor in macOS Sonoma
+defaults write /Library/Preferences/FeatureFlags/Domain/UIKit.plist redesigned_text_cursor -dict-add Enabled -bool NO
+
+# =============================================================================================
 # Maccy
 # =============================================================================================
 
