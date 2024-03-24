@@ -8,11 +8,11 @@ yabai -m config layout bsp
 yabai -m config window_placement second_child
 
 # set padding
-yabai -m config top_padding 5
-yabai -m config bottom_padding 5
-yabai -m config left_padding 5
-yabai -m config right_padding 5
-yabai -m config window_gap 5
+yabai -m config top_padding 7
+yabai -m config bottom_padding 7
+yabai -m config left_padding 7
+yabai -m config right_padding 7
+yabai -m config window_gap 7
 
 # center mouse on window with focus
 yabai -m config mouse_follows_focus on
@@ -39,13 +39,8 @@ yabai -m rule --add app="^Монітор активності$" manage=off
 yabai -m rule --add app="^Activity Monitor$" manage=off
 yabai -m rule --add app="^Archive Utility$" manage=off
 yabai -m rule --add app="^QuickTime Player$" manage=off
-yabai -m rule --add app="^Raycast$" manage=off
-yabai -m rule --add app="^Bartender 4$" manage=off
-yabai -m rule --add app="^Bartender 5$" manage=off
 yabai -m rule --add app="^NordPass$" manage=off
 yabai -m rule --add app="^NordVPN$" manage=off
 yabai -m rule --add app="^Nord VPN$" manage=off
 yabai -m rule --add app="^Telegram$" manage=off
-yabai -m rule --add app="^Fig$" manage=off
-yabai -m rule --add app="^fig$" manage=off
 yabai -m rule --add app="^GlobalProtect$" manage=off
