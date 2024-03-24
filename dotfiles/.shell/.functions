@@ -8,7 +8,7 @@ rgp () {
 # delete Python cache directories
 pyclean () {
   find . \
-    | grep -E '(__pycache__|\.(mypy_)?cache|\.hypothesis\.py[cod]|\.(pytest_)?cache|\.ropeproject|\.ruff_cache|\.(ipynb_)?checkpoints|$)' \
+    | grep -E '(__pycache__|\.(mypy_)?cache|\.hypothesis\.py[cod]|\.(pytest_)?cache|\.ropeproject|\.ruff_cache|\.(ipynb_)?checkpoints$)' \
     | xargs rm -rf
 }
 
