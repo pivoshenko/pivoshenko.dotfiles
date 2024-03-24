@@ -19,7 +19,7 @@ editorconfig-checker
 graphql-language-service-cli
 # interface for building GraphQL language services for IDEs
 graphql-language-service-server
-#   command line tool to validate GraphQL schema definitions
+# command line tool to validate GraphQL schema definitions
 graphql-schema-linter
 # Lua language server
 lua-language-server
