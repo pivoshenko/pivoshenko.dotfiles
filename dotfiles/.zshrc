@@ -29,8 +29,6 @@ plugins=(
     python
     redis-cli
     rust
-    wakatime
-
 )
 
 # configure oh-my-zsh's library
