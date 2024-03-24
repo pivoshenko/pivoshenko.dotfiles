@@ -1,0 +1,13 @@
+{
+  "accentColor": "",
+  "cssTheme": "Catppuccin",
+  "theme": "obsidian",
+  "baseFontSize": 16,
+  "monospaceFontFamily": "JetBrainsMono Nerd Font Mono",
+  "textFontFamily": "Helvetica",
+  "interfaceFontFamily": "Helvetica",
+  "showViewHeader": false,
+  "translucency": false,
+  "nativeMenus": false,
+  "enabledCssSnippets": []
+}
