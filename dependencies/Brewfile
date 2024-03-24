@@ -50,6 +50,8 @@ cask "obsidian"
 cask "openinterminal"
 # peer to peer torrent client
 cask "qbittorrent"
+# custom spotlight
+cask "raycast"
 # team communication and collaboration software
 cask "slack"
 # quicklook extension for source files
