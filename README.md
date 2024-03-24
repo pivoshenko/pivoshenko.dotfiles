@@ -1,10 +1,6 @@
 # pivoshenko's dotfiles
 
-<div align="center">
-    <a href="https://github.com/volopivoshenko/dotfiles">
-        <img alt="iterm" src="https://github.com/volopivoshenko/dotfiles/blob/main/docs/assets/iterm.png?raw=True">
-    </a>
-</div>
+[!iterm](https://raw.githubusercontent.com/pivoshenko/dotfiles/master/docs/assets/iterm.png)
 
 <p align="center">
     <a href="https://github.com/volopivoshenko/dotfiles/blob/main/.pre-commit-config.yaml">
