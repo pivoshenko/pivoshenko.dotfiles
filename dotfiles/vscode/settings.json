@@ -214,6 +214,7 @@
     ".babelrc": "jsonc",
     ".eslintrc": "jsonc",
     "*.pyi": "python",
+    "yabairc": "yabai",
     "*.bats": "shellscript",
     "*.aliases": "shellscript",
     "*.functions": "shellscript",
