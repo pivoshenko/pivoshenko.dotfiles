@@ -12,6 +12,9 @@ gh-xplr
 # pluggable terminal workspace, with terminal multiplexer as the base feature
 zellij
 
+# cargo subcommand for checking and applying updates to installed executables
+cargo-update
+
 # =============================================================================================
 # LSPs
 # =============================================================================================
