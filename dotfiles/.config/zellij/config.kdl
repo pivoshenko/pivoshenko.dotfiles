@@ -1,8 +1,31 @@
-// If you'd like to override the default keybindings completely, be sure to change "keybinds" to "keybinds clear-defaults=true"
+// =============================================================================================
+// General
+// =============================================================================================
+
+session_serialization false
+on_force_close "quit"
+mouse_mode true
+
+// =============================================================================================
+// Plugins
+// =============================================================================================
+
+theme "catppuccin-mocha"
+
+plugins {
+    tab-bar { path "tab-bar"; }
+    status-bar { path "status-bar"; }
+    strider { path "strider"; }
+    compact-bar { path "compact-bar"; }
+    session-manager { path "session-manager"; }
+}
+
+// =============================================================================================
+// Keybindings
+// =============================================================================================
+
 keybinds {
     normal {
-        // uncomment this and adjust key if using copy_on_select=false
-        // bind "Alt c" { Copy; }
     }
     locked {
         bind "Ctrl g" { SwitchToMode "Normal"; }
@@ -237,19 +260,3 @@ keybinds {
         }
     }
 }
-
-plugins {
-    tab-bar { path "tab-bar"; }
-    status-bar { path "status-bar"; }
-    strider { path "strider"; }
-    compact-bar { path "compact-bar"; }
-    session-manager { path "session-manager"; }
-}
-
-session_serialization false
-
-on_force_close "quit"
-
-theme "catppuccin-mocha"
-
-mouse_mode true

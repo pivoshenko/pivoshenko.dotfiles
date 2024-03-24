@@ -19,6 +19,11 @@ gitclean () {
   git fetch -p
 }
 
+# delete backup files
+bakclean () {
+  find . -name "*.*.dotdropbak" -type f -delete
+}
+
 # cd into whatever is the forefront Finder window
 cdf () {
   local path=$(osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')

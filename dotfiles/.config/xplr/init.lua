@@ -13,6 +13,9 @@ package.path = home
     .. "/.config/xplr/plugins/?.lua;"
     .. package.path
 
+-- =============================================================================================
+-- Plugins
+-- =============================================================================================
 
 require("xpm").setup(
   {
@@ -78,26 +81,8 @@ require("xpm").setup(
       "sayanarijit/registers.xplr",
       -- docs
       "sayanarijit/offline-docs.xplr",
-      -- ranger UI
-      {
-        name = "sayanarijit/tri-pane.xplr",
-        setup = function()
-          require("tri-pane").setup({ as_default_layout = false })
-        end,
-      },
       -- zoxide integration for xplr
       "sayanarijit/zoxide.xplr",
-      -- use this plugin to paste your files to paste.rs, and open/delete them later in fzf.
-      {
-        name = "dtomvan/paste-rs.xplr",
-        setup = function()
-          require("paste-rs").setup({
-            db_path = home .. "/" .. "paste.rs.list",
-          })
-        end,
-      },
-      -- qrcp integration for xplr
-      "sayanarijit/qrcp.xplr",
     },
   }
 )
