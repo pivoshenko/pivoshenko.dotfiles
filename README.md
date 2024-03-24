@@ -2,7 +2,7 @@
 
 <div align="center">
     <a href="https://github.com/volopivoshenko/dotfiles">
-        <img alt="logo" src="https://github.com/volopivoshenko/dotfiles/blob/main/docs/assets/iterm.png?raw=True">
+        <img alt="iterm" src="https://github.com/volopivoshenko/dotfiles/blob/main/docs/assets/iterm.png?raw=True">
     </a>
 </div>
 
