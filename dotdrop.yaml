@@ -17,123 +17,160 @@ dotfiles:
   d_bat:
     dst: ~/.config/bat
     src: .config/bat
+    chmod: preserve
 
   d_bottom:
     dst: ~/.config/bottom
     src: .config/bottom
+    chmod: preserve
 
   d_efm_langserver:
     dst: ~/.config/efm-langserver
     src: .config/efm-langserver
+    chmod: preserve
 
   d_fsh:
     dst: ~/.config/fsh
     src: .config/fsh
+    chmod: preserve
 
   d_helix:
     dst: ~/.config/helix
     src: .config/helix
+    chmod: preserve
 
   d_k9s:
     dst: ~/.config/k9s
     src: .config/k9s
+    chmod: preserve
 
   d_karabiner:
     dst: ~/.config/karabiner
     src: .config/karabiner
+    chmod: preserve
 
   d_lazygit:
     dst: ~/.config/lazygit
     src: .config/lazygit
+    chmod: preserve
 
   d_neofetch:
     dst: ~/.config/neofetch
     src: .config/neofetch
+    chmod: preserve
 
   d_qbittorrent:
     dst: ~/.config/qBittorrent
     src: .config/qBittorrent
+    chmod: preserve
 
   d_skhd:
     dst: ~/.config/skhd/skhdrc
     src: .config/skhd/skhdrc
+    chmod: preserve
 
   d_spotify_tui:
     dst: ~/.config/spotify-tui
     src: .config/spotify-tui
+    chmod: preserve
 
   d_xplr:
     dst: ~/.config/xplr
     src: .config/xplr
+    chmod: preserve
 
   d_yabai:
     dst: ~/.config/yabai/yabairc
     src: .config/yabai/yabairc
+    chmod: preserve
 
   d_yamllint:
     dst: ~/.config/yamllint/config
     src: .config/yamllint/config
+    chmod: preserve
 
   d_zellij:
     dst: ~/.config/zellij
     src: .config/zellij
+    chmod: preserve
 
   f_direnv:
     dst: ~/.config/direnv.toml
     src: .config/direnv.toml
+    chmod: preserve
 
   f_starship:
     dst: ~/.config/starship.toml
     src: .config/starship.toml
+    chmod: preserve
 
 # =============================================================================================
-# .root
+# ~
 # =============================================================================================
 
   f_ipython_startup:
     dst: ~/.ipython/profile_default/startup/start.py
     src: .ipython/profile_default/startup/start.py
+    chmod: preserve
 
   f_ipython_config:
     dst: ~/.ipython/profile_default/ipython_config.py
     src: .ipython/profile_default/ipython_config.py
+    chmod: preserve
 
   d_iterm:
     dst: ~/.iterm
     src: .iterm
+    chmod: preserve
 
   d_local_bin:
     dst: ~/.local/bin
     src: .local/bin
+    chmod: preserve
 
   d_shell:
     dst: ~/.shell
     src: .shell
+    chmod: preserve
 
   d_zellij_plugins:
     dst: ~/zellij-plugins
     src: zellij-plugins
+    chmod: preserve
 
   f_gitconfig:
     dst: ~/.gitconfig
     src: .gitconfig
+    chmod: preserve
 
   f_zplugrc:
     dst: ~/.zplugrc
     src: .zplugrc
+    chmod: preserve
 
   f_zshrc:
     dst: ~/.zshrc
     src: .zshrc
+    chmod: preserve
 
 # =============================================================================================
 # Library
 # =============================================================================================
 
-  d_vscode:
+  f_vscode:
     # macos
     dst: "~/Library/Application Support/Code/User/settings.json"
     src: vscode/settings.json
+    chmod: preserve
+
+# =============================================================================================
+# iCloud
+# =============================================================================================
+
+  d_obsidian:
+    dst: "/Users/volodymyr.pivoshenko/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault/.obsidian"
+    src: .obsidian
+    chmod: preserve
 
 profiles:
   base:
@@ -165,4 +202,5 @@ profiles:
       - f_gitconfig
       - f_zplugrc
       - f_zshrc
-      - d_vscode
+      - f_vscode
+      - d_obsidian
