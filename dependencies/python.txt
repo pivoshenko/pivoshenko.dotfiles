@@ -41,7 +41,6 @@ pyupgrade
 # Linters
 # =============================================================================================
 
-ansible-lint
 codespell
 deptry
 gitlint
