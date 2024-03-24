@@ -23,7 +23,3 @@ diffFilter = delta --color-only
 
 [merge]
 conflictstyle = diff3
-
-[user]
-name = Volodymyr Pivoshenko
-email = volodymyr.pivoshenko@gmail.com
