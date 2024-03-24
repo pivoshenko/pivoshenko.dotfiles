@@ -1,5 +1,6 @@
 # `.keybindings` is used to configure widgets and keybindings
 
+# remap zsh-vi-mode keybindings
 function zvm_after_init() {
     # fzf
     zvm_bindkey viins '^R' fzf-history-widget

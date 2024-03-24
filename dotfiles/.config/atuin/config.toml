@@ -1,6 +1,0 @@
-# configure sync process
-auto_sync = true
-update_check = true
-
-# configure theme
-style = "full"

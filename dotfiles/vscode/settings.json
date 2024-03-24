@@ -178,7 +178,7 @@
   // Jupyter
   "notebook.lineNumbers": "on",
   "workbench.editorAssociations": {
-    "*.ipynb": "jupyter-notebook"
+    "*.ipynb": "jupyter-notebook",
   },
 
   // YAML
@@ -218,6 +218,7 @@
     "*.aliases": "shellscript",
     "*.functions": "shellscript",
     "*.exports": "shellscript",
+    "*.zplugrc": "shellscript",
     "**/bin/**": "shellscript",
     "**/.shell/**": "shellscript"
   },

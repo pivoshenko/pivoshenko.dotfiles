@@ -1,3 +1,5 @@
+# This script finds files based on name using fuzzy search and opens them
+
 fd --type f --type l \
 --hidden \
 --follow \

@@ -1,3 +1,5 @@
+# This script finds files based on content/keywords using fuzzy search and opens them
+
 rg --color=always --line-number --no-heading --smart-case "${*:-}" |
   fzf --ansi \
   --delimiter : \

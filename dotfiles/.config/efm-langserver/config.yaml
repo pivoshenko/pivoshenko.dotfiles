@@ -61,14 +61,6 @@ tools:
     root-markers:
       - .github
 
-  yaml-ansible-lint: &yaml-ansible-lint
-    prefix: ansible-lint
-    lint-command: "ansible-lint -f pep8 -q"
-    lint-formats:
-      - "%f:%l: %m"
-    root-markers:
-      - .ansible-lint
-
   yaml-yamllint: &yaml-yamllint
     prefix: yamllint
     lint-command: "yamllint --strict --format parsable ${INPUT}"
@@ -102,6 +94,5 @@ languages:
 
   yaml:
     - <<: *yaml-actionlint
-    - <<: *yaml-ansible-lint
     - <<: *yaml-yamllint
     - <<: *yaml-yamlfmt

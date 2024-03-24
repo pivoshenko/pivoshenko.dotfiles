@@ -1,2 +1,2 @@
-# configure theme
---theme="Catppuccin-mocha"
+# theme
+--theme="catppuccin_mocha"
