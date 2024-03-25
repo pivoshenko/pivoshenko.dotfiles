@@ -4,24 +4,24 @@
     ansible_connection: local
 
   tasks:
-    # - name: Install homebrew
-    #   ansible.builtin.shell:
-    #     cmd: |
-    #       /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    - name: Install homebrew
+      ansible.builtin.shell:
+        cmd: |
+          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-    # - name: Install zsh
-    #   community.general.homebrew:
-    #     name: "{{ item }}"
-    #     state: present
-    #   with_items:
-    #     - zsh
-    #     - dotdrop
+    - name: Install zsh
+      community.general.homebrew:
+        name: "{{ item }}"
+        state: present
+      with_items:
+        - zsh
+        - dotdrop
 
-    # - name: Set zsh as a default shell
-    #   ansible.builtin.shell:
-    #     cmd: |
-    #       sudo sh -c "echo $(which zsh) >> /etc/shells"
-    #       chsh -s $(which zsh)
+    - name: Set zsh as a default shell
+      ansible.builtin.shell:
+        cmd: |
+          sudo sh -c "echo $(which zsh) >> /etc/shells"
+          chsh -s $(which zsh)
 
     - name: Install oh-my-zsh
       ignore_errors: true
