@@ -6,6 +6,13 @@ pager = delta
 [credential]
 helper = store
 
+[push]
+default = simple
+
+[submodule]
+recurse = true
+fetchJobs = 0
+
 [delta]
 navigate = true
 light = false
@@ -23,3 +30,12 @@ diffFilter = delta --color-only
 
 [merge]
 conflictstyle = diff3
+
+[user]
+useConfigOnly = true
+
+[include]
+path = ~/.gitconfig.local
+
+[init]
+defaultBranch = main
