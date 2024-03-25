@@ -41,6 +41,8 @@
         - graphql-language-service-server
         #  a command line tool to validate GraphQL schema definitions
         - graphql-schema-linter
+        # LSP implementation for TypeScript wrapping
+        - typescript-language-server
         # HTML/CSS/JSON/ESLint language servers
         - vscode-langservers-extracted
         # JSON language service extracted from VSCode to be reused
