@@ -143,6 +143,10 @@ dotfiles:
     src: .gitconfig
     chmod: preserve
 
+  f_hyperjs:
+    dst: ~/.hyper.js
+    src: .hyper.js
+
   f_zplugrc:
     dst: ~/.zplugrc
     src: .zplugrc
