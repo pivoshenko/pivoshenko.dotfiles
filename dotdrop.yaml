@@ -207,9 +207,11 @@ profiles:
       - d_shell
       - d_zellij_plugins
       - f_gitconfig
+      - f_hyperjs
       - f_zplugrc
       - f_zshrc
 
   macos:
     dotfiles:
       - d_pypoetry
+      - f_vscode
