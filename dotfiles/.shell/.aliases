@@ -1,7 +1,7 @@
 # `.aliases` provides custom aliases for the shell
 
 # lock the screen (when going AFK)
-alias afk='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
+alias afk="osascript -e 'tell app \"System Events\" to key code 12 using {control down, command down}'"
 
 # list files and directories
 alias ls="exa -a --level=1 --icons"
