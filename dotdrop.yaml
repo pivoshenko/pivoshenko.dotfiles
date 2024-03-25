@@ -147,6 +147,10 @@ dotfiles:
     dst: ~/.hyper.js
     src: .hyper.js
 
+  f_ssh_config:
+    dst: ~/.ssh/config
+    src: .ssh/config
+
   f_zplugrc:
     dst: ~/.zplugrc
     src: .zplugrc
@@ -208,6 +212,7 @@ profiles:
       - d_zellij_plugins
       - f_gitconfig
       - f_hyperjs
+      - f_ssh_config
       - f_zplugrc
       - f_zshrc
 
