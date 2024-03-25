@@ -32,6 +32,8 @@ cask "google-chrome"
 cask "hyper"
 # terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+# HTTP and GraphQL Client
+cask "insomnia"
 # jetbrains tools manager
 cask "jetbrains-toolbox"
 # keyboard customiser
