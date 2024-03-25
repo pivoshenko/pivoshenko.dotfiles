@@ -28,6 +28,8 @@ cask "firefox"
 cask "flux"
 # web browser
 cask "google-chrome"
+# terminal built on web technologies
+cask "hyper"
 # terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 # jetbrains tools manager
@@ -46,8 +48,6 @@ cask "nordpass"
 cask "nordvpn"
 # knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
-# finder Toolbar app to open the current directory in Terminal or Editor
-cask "openinterminal"
 # peer to peer torrent client
 cask "qbittorrent"
 # custom spotlight
@@ -65,6 +65,14 @@ cask "visual-studio-code"
 
 # the cat tells you the CPU usage of Mac by running speed
 # mas "RunCat", id: 000
+
+# =============================================================================================
+# QuickLook plugins
+# =============================================================================================
+
+cask "qlmarkdown"
+cask "qlimagesize"
+cask "suspicious-package"
 
 # =============================================================================================
 # Programming languages, REPLs
@@ -183,25 +191,14 @@ brew "zoxide"
 brew "zplug"
 
 # =============================================================================================
-# QuickLook plugins
-# =============================================================================================
-
-cask "qlcolorcode"
-cask "qlstephen"
-cask "qlmarkdown"
-cask "quicklook-json"
-cask "qlimagesize"
-cask "suspicious-package"
-cask "apparency"
-cask "quicklookase"
-cask "qlvideo"
-
-# =============================================================================================
 # Linters, formatters and LSPs
 # =============================================================================================
 
 # static checker for GitHub Actions workflow files
 brew "actionlint"
+# language server for Ansible files
+brew "ansible-lint"
+brew "ansible-language-server"
 # linter for .env files
 brew "dotenv-linter"
 # general purpose language server
@@ -225,7 +222,6 @@ brew "yamlfmt"
 # VSCode extensions
 # =============================================================================================
 
-vscode "aaron-bond.better-comments"
 vscode "alefragnani.project-manager"
 vscode "catppuccin.catppuccin-vsc"
 vscode "charliermarsh.ruff"
@@ -238,7 +234,6 @@ vscode "editorconfig.editorconfig"
 vscode "equinusocio.vsc-material-theme-icons"
 vscode "esbenp.prettier-vscode"
 vscode "foxundermoon.shell-format"
-vscode "github.vscode-github-actions"
 vscode "github.vscode-pull-request-github"
 vscode "griimick.vhs"
 vscode "hbenl.vscode-test-explorer"
@@ -265,6 +260,7 @@ vscode "naumovs.color-highlight"
 vscode "njpwerner.autodocstring"
 vscode "oderwat.indent-rainbow"
 vscode "peterschmalfeldt.explorer-exclude"
+vscode "redhat.ansible"
 vscode "redhat.vscode-yaml"
 vscode "ritwickdey.liveserver"
 vscode "robertostermann.inline-parameters-extended"
@@ -277,6 +273,7 @@ vscode "silverquark.dancehelix"
 vscode "streetsidesoftware.avro"
 vscode "sumneko.lua"
 vscode "swellaby.vscode-rust-test-adapter"
+vscode "tal7aouy.icons"
 vscode "tamasfe.even-better-toml"
 vscode "tgriesser.avro-schemas"
 vscode "tonybaloney.python-task-provider"
@@ -285,7 +282,6 @@ vscode "vadimcn.vscode-lldb"
 vscode "visualstudioexptteam.intellicode-api-usage-examples"
 vscode "visualstudioexptteam.vscodeintellicode"
 vscode "visualstudioexptteam.vscodeintellicode-completions"
-vscode "voidei.vscode-vimrc"
 vscode "vspacecode.whichkey"
 vscode "wakatime.vscode-wakatime"
 vscode "yzhang.markdown-all-in-one"
