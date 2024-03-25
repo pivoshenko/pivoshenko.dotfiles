@@ -26,6 +26,9 @@ defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
 # http://osxdaily.com/2012/05/10/disable-elastic-rubber-band-scrolling-in-mac-os-x
 defaults write -g NSScrollViewRubberbanding -int 0
 
+# disable the “Are you sure you want to open this application?” dialog
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+
 # =============================================================================================
 # Display
 # =============================================================================================
@@ -115,6 +118,9 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 # show Library folder
 chflags nohidden ~/Library
+# don't show volumes on desktop
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
 
 # =============================================================================================
 # Activity monitor
