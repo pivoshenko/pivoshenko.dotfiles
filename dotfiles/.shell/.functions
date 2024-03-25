@@ -24,6 +24,11 @@ bakclean () {
   find . -name "*.*.dotdropbak" -type f -delete
 }
 
+# empty the Trash
+osclean () {
+  sudo rm -rfv ~/.Trash
+}
+
 # cd into whatever is the forefront Finder window
 cdf () {
   local path=$(osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')
