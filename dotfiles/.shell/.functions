@@ -8,7 +8,7 @@ rgp () {
 # delete Python cache directories
 pyclean () {
   find . \
-    | grep -E '(__pycache__|\.(mypy_)?cache|\.hypothesis\.py[cod]|\.(pytest_)?cache|\.ropeproject|\.ruff_cache|\.(ipynb_)?checkpoints$)' \
+    | grep -E '(__pycache__|\.(mypy_)?cache|\.hypothesis\.py[cod]|\.(pytest_)?cache|\.ropeproject|\.(ruff_)?cache|\.(ipynb_)?checkpoints|.coverage|coverage.xml$)' \
     | xargs rm -rf
 }
 
@@ -34,6 +34,47 @@ cdf () {
   local path=$(osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')
   echo "$path"
   cd "$path"
+}
+
+# load `.env` file from a filename passed as an argument
+loadenv () {
+  while read line; do
+    if [ "${line:0:1}" = '#' ]; then
+      continue  # ignore comments
+    fi
+    export $line > /dev/null
+  done < "$1"
+  echo "Loaded!"
+}
+
+# sets up all my working env
+workon () {
+  if z 2>&1 "$1"; then
+    source ".venv/bin/activate" || true  # there might be no `.venv`
+    code .
+  fi
+}
+
+# show pretty `man` page
+man () {
+  env \
+    LESS_TERMCAP_mb=$(printf '\e[1;31m') \
+    LESS_TERMCAP_md=$(printf '\e[1;31m') \
+    LESS_TERMCAP_me=$(printf '\e[0m') \
+    LESS_TERMCAP_se=$(printf '\e[0m') \
+    LESS_TERMCAP_so=$(printf '\e[1;44;33m') \
+    LESS_TERMCAP_ue=$(printf '\e[0m') \
+    LESS_TERMCAP_us=$(printf '\e[1;32m') \
+      man "$@"
+}
+
+# update brew, cargo and npm packages
+update () {
+  brew update
+  brew upgrade
+  brew cleanup
+  cargo install-update -a
+  npm update -g
 }
 
 # activate venv via `pdm shell`
