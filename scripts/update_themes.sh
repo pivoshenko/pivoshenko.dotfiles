@@ -1,6 +1,6 @@
-# This script updates theme files for the tooling
+# This script updates theme files
 
-echo "Fetching themes. Hang tight :3"
+echo "Updating themes. Hang tight :3"
 
 # =============================================================================================
 # iTerm2
