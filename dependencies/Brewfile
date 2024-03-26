@@ -157,6 +157,8 @@ brew "navi"
 brew "neofetch"
 # manage multiple Node.js versions
 brew "nvm"
+# pinentry for GPG on Mac
+brew "pinentry-mac"
 # python version management
 brew "pyenv"
 # pyenv plugin to manage virtualenv
