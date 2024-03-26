@@ -39,7 +39,7 @@ What's in here?
 - Minimalism in everything
 - Consistency
 - Simplicity
-- One style - [JetBrainsMono] font and [Catppuccin] color pallete
+- One style - [JetBrainsMono] font and [Catppuccin] color palette
 - Reduced visual noise, only important things should be shown
 - "Please, do not touch my code" - minimal auto-formatting or code flow interruptions
 - Security - do not share anything with anyone
