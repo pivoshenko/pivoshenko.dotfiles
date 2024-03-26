@@ -20,26 +20,122 @@
     </a>
 </p>
 
-## 🏗️ 🏠 Tooling and Dotfiles
+## Contents
 
-Set of the tooling and dotfiles.
+What's in here?
 
-### 🧑🏻‍💻 Installation
+- All my `brew` dependencies including: applications, fonts, etc. See [`Brewfile`]
+- All my global `Python` dependencies including: linters, formatters, LSP plugins etc. See [`requirements`]
+- All my global `cargo` and `npm` dependencies including: LSP, LSP plugins, etc. See [`cargo`] and [`npm`]
+- All my `macOS` configuration. See [`macos`]
+- All my shell configuration. See [`.shell/`] and [`.zshrc`]
+- All my `VSCode` configuration and extensions. See [`vscode/`] and [`extensions`]
+- All my rest [`.configs/`] and [`dotfiles/`] :3
 
-1. Install [`ansible`][ansible]
+## Main principles
 
-2. Install [`dotdrop`][dotdrop]
+- Minimalism in everything
+- Consistency
+- Simplicity
+- One style - [JetBrainsMono] font and [Catppuccin] color pallete
+- Reduced visual noise, only important things should be shown
+- "Please, do not touch my code" - minimal auto-formatting or code flow interruptions
+- Security - do not share anything with anyone
 
-3. Run the following commands to install the necessary tooling and configs:
+## Installation
+
+> [!IMPORTANT]
+> I am planning to use [`dotbot`] to set everything instead of `ansible` and `dotdrop` as it doesn't require any external dependencies and can be used as a submodule
+
+I am using [`dotdrop`] to manage dotiles and [`ansible`] to set things up. Steps:
+
+1. Clone this repo with: `git clone https://github.com/pivoshenko/dotfiles dotfiles`
+2. `cd dotfiles/`
+3. Run the following commands to install the necessary tooling:
 
 ```shell
-ansible-playbook playbook.yaml
+# install core: homebrew, zsh, oh-my-zsh and configs (optional)
+ansible-playbook playbooks/shell.yaml
 
-dotdrop install -p base
+# install dependencies
+ansible-playbook playbooks/dependencies.yaml
+```
+4. Run the following commands to install configs:
 
-pip install -U -r python/requirements.txt
+```shell
+dotdrop -c "dotdrop.yaml" -p base install -f
+
+# macOS only!
+dotdrop -c "dotdrop.yaml" -p macos install -f
 ```
 
-[ansible]: https://pypi.org/project/ansible
+## CLI
 
-[dotdrop]: https://github.com/deadc0de6/dotdrop
+I am using [`hyper.js`] as my main terminal.
+I am using [`zsh`] with [`oh-my-zsh`] and [`starship`] as the main shell. To manage shell plugins I am using [`zplug`].
+I also have some tools/scripts/aliases to make my working experience better.
+But, I try to keep them minimal: only ones I truly use.
+
+I mainly work with:
+
+- `Python`
+
+I also have several other languages installed. But I don't use them on a daily basis:
+
+- `node`
+- `elixir`
+- `rust`
+
+## Apps
+
+I am using [`brew`] to install all free apps for my Mac.
+I also sync apps from the App Store with `brew` via [`mas`], so the resulting [`Brewfile`] contains everything.
+
+## Infrastructure
+
+I try to containerize everything. So, [`docker`] is my main development and deployment tool.
+
+## VSCode
+
+![vscode](https://raw.githubusercontent.com/pivoshenko/dotfiles/master/docs/assets/vscode.png)
+
+Here's a list of [extensions](https://github.com/sobolevn/dotfiles/blob/master/vscode/install.sh) I use daily, but I try to keep my `VSCode` setup as simple as possible.
+It was also heavily influenced by [`makevscodeawesome`](https://makevscodeawesome.com/).
+
+I also quite heavily use [`helix`] for in-terminal editing.
+
+## Local configuration
+
+Some of the used tools require local configuration, such as `git` with username and email.
+
+Here's the full list:
+
+- `~/.gitconfig.local` to store any user-specific data
+- `~/.shell/.env.local` to store local shell config, like usernames, passwords, tokens, `gpg` keys and so on
+
+[`Brewfile`]: https://github.com/pivoshenko/dotfiles/blob/main/dependencies/Brewfile
+[`requirements`]: https://github.com/pivoshenko/dotfiles/blob/main/dependencies/requirements.txt
+[`cargo`]: https://github.com/pivoshenko/dotfiles/blob/main/playbooks/dependencies.yaml#L17-L22
+[`npm`]: https://github.com/pivoshenko/dotfiles/blob/main/playbooks/dependencies.yaml#L30-L51
+[`macos`]: https://github.com/pivoshenko/dotfiles/blob/main/macos/settings.sh
+[`.shell/`]: https://github.com/pivoshenko/dotfiles/tree/main/dotfiles/.shell
+[`.zshrc`]: https://github.com/pivoshenko/dotfiles/tree/main/dotfiles/.zshrc
+[`vscode/`]: https://github.com/pivoshenko/dotfiles/tree/main/dotfiles/vscode
+[`extensions`]: https://github.com/pivoshenko/dotfiles/blob/main/dependencies/Brewfile#L229-L292
+[extensions]: https://github.com/pivoshenko/dotfiles/blob/main/dependencies/Brewfile#L229-L292
+[`.configs/`]: https://github.com/pivoshenko/dotfiles/tree/main/dotfiles/.config
+[`dotfiles/`]: https://github.com/pivoshenko/dotfiles/tree/main/dotfiles
+[JetBrainsMono]: https://www.jetbrains.com/lp/mono/
+[Catppuccin]: https://github.com/catppuccin/catppuccin
+[`dotdrop`]: https://github.com/deadc0de6/dotdrop
+[`ansible`]: https://github.com/ansible/ansible
+[`dotbot`]: https://github.com/anishathalye/dotbot
+[`hyper.js`]: https://hyper.is
+[`zsh`]: https://github.com/zsh-users/zsh
+[`oh-my-zsh`]: https://github.com/robbyrussell/oh-my-zsh
+[`starship`]: https://starship.rs
+[`zplug`]: https://github.com/zplug/zplug
+[`brew`]: https://brew.sh/
+[`mas`]: https://formulae.brew.sh/formula/mas
+[`docker`]: https://formulae.brew.sh/cask/docker
+[`helix`]: https://helix-editor.com
