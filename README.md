@@ -1,6 +1,8 @@
 # pivoshenko's dotfiles
 
-![hyperjs](https://raw.githubusercontent.com/pivoshenko/dotfiles/master/docs/assets/hyperjs.png)
+<p align="center">
+  <img alt="hyperjs" src="https://raw.githubusercontent.com/pivoshenko/dotfiles/master/docs/assets/hyperjs.png">
+</p>
 
 <p align="center">
     <a href="https://github.com/volopivoshenko/dotfiles/blob/main/.pre-commit-config.yaml">
@@ -97,7 +99,9 @@ I try to containerize everything. So, [`docker`] is my main development and depl
 
 ## VSCode
 
-![vscode](https://raw.githubusercontent.com/pivoshenko/dotfiles/master/docs/assets/vscode.png)
+<p align="center">
+  <img alt="vscode" src="https://raw.githubusercontent.com/pivoshenko/dotfiles/master/docs/assets/vscode.png">
+</p>
 
 Here's a list of [extensions](https://github.com/sobolevn/dotfiles/blob/master/vscode/install.sh) I use daily, but I try to keep my `VSCode` setup as simple as possible.
 It was also heavily influenced by [`makevscodeawesome`](https://makevscodeawesome.com/).
