@@ -181,14 +181,8 @@
     "*.ipynb": "jupyter-notebook"
   },
 
-  // YAML
-  "redhat.telemetry.enabled": false,
-
   // Rust
   "rust-analyzer.hover.actions.references.enable": true,
-
-  // Shell
-  "shellformat.useEditorConfig": true,
 
   // SQL
   "sqlfluff.env.useDotEnvFile": true,
@@ -200,11 +194,6 @@
   "evenBetterToml.formatter.columnWidth": 120,
   "evenBetterToml.formatter.reorderArrays": false,
   "evenBetterToml.formatter.reorderKeys": false,
-
-  // Lua
-  "Lua.codeLens.enable": true,
-  "Lua.hint.enable": true,
-  "Lua.hint.setType": true,
 
   // =============================================================================================
   // Files
@@ -252,50 +241,17 @@
   // Languages
   // =============================================================================================
 
-  "[ansible]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[dotenv]": {
-    "editor.defaultFormatter": "lkrms.inifmt"
-  },
-  "[ignore]": {
-    "editor.defaultFormatter": "lkrms.inifmt"
-  },
-  "[ini]": {
-    "editor.defaultFormatter": "lkrms.inifmt"
-  },
   "[jinja-sql]": {
     "editor.defaultFormatter": "dorzey.vscode-sqlfluff"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[lua]": {
-    "editor.defaultFormatter": "sumneko.lua"
   },
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
-  "[plaintext]": {
-    "editor.defaultFormatter": "lkrms.inifmt"
-  },
-  "[properties]": {
-    "editor.defaultFormatter": "lkrms.inifmt"
-  },
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff"
   },
-  "[shellscript]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
-  },
   "[toml]": {
     "editor.defaultFormatter": "tamasfe.even-better-toml"
-  },
-  "[yaml]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
   // =============================================================================================
