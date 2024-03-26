@@ -1,6 +1,6 @@
 # pivoshenko's dotfiles
 
-![terminal](https://raw.githubusercontent.com/pivoshenko/dotfiles/master/docs/assets/terminal.png)
+![terminal](https://raw.githubusercontent.com/pivoshenko/dotfiles/master/docs/assets/hyperjs.png)
 
 <p align="center">
     <a href="https://github.com/volopivoshenko/dotfiles/blob/main/.pre-commit-config.yaml">
