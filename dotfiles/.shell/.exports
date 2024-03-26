@@ -6,6 +6,9 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export EDITOR=hx
 export VISUAL="$EDITOR"
 
+GPG_TTY=$(tty)
+export GPG_TTY
+
 # =============================================================================================
 # Shell
 # =============================================================================================
@@ -68,6 +71,8 @@ fd --type f --type l \
 --exclude ".ruff_cache" \
 --exclude ".ipynb_checkpoints" \
 --exclude "__pycache__" \
+--exclude ".coverage" \
+--exclude "coverage.xml" \
 --exclude ".cache" \
 --exclude ".idea" \
 --exclude ".venv" \
@@ -111,6 +116,8 @@ fd --type f --type l \
 --exclude ".ruff_cache" \
 --exclude ".ipynb_checkpoints" \
 --exclude "__pycache__" \
+--exclude ".coverage" \
+--exclude "coverage.xml" \
 --exclude ".cache" \
 --exclude ".idea" \
 --exclude ".venv" \
