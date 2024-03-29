@@ -35,6 +35,6 @@ Add any other context about the problem here.
 
 [gist]: https://gist.github.com
 
-[issues]: https://github.com/volopivoshenko/dotfiles/issues
+[issues]: https://github.com/pivoshenko/dotfiles/issues
 
-[latest]: https://github.com/volopivoshenko/dotfiles
+[latest]: https://github.com/pivoshenko/dotfiles

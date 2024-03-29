@@ -25,6 +25,6 @@ A clear and concise description of any alternative solutions or features you've 
 
 Add any other context or screenshots about the feature request here.
 
-[issues]: https://github.com/volopivoshenko/dotfiles/issues
+[issues]: https://github.com/pivoshenko/dotfiles/issues
 
-[documentation]: https://github.com/volopivoshenko/dotfiles
+[documentation]: https://github.com/pivoshenko/dotfiles
