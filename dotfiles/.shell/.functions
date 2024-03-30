@@ -22,6 +22,7 @@ gitclean () {
 # delete backup files
 bakclean () {
   find . -name "*.*.dotdropbak" -type f -delete
+  find . -name "*.dotdropbak" -type f -delete
 }
 
 # empty the Trash
