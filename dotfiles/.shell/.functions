@@ -75,6 +75,8 @@ update () {
   brew cleanup
   cargo install-update -a
   npm update -g
+  omz update
+  zplug update
 }
 
 # activate venv via `pdm shell`
