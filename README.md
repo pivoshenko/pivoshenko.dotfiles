@@ -32,7 +32,7 @@ What's in here?
 - All my `macOS` configuration. See [`macos`]
 - All my shell configuration. See [`.shell/`] and [`.zshrc`]
 - All my `VSCode` configuration and extensions. See [`vscode/`] and [`extensions`]
-- All my rest [`.configs/`] and [`dotfiles/`] :3
+- All my rest [`.configs/`], [`dotfiles/`] and [`wallpapers/`] :3
 
 ## Main principles
 
@@ -143,3 +143,4 @@ Here's the full list:
 [`mas`]: https://formulae.brew.sh/formula/mas
 [`docker`]: https://formulae.brew.sh/cask/docker
 [`helix`]: https://helix-editor.com
+[`wallpapers/`]: https://github.com/pivoshenko/dotfiles/blob/main/wallpapers
