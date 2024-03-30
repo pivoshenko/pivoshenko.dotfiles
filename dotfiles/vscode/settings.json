@@ -96,14 +96,14 @@
 
   "notebook.output.fontFamily": "JetBrainsMono Nerd Font",
 
-  "debug.console.fontSize": 14,
+  "debug.console.fontSize": 15,
 
-  "scm.inputFontSize": 14,
+  "scm.inputFontSize": 15,
 
-  "editor.fontSize": 14,
+  "editor.fontSize": 15,
   "editor.fontLigatures": true,
 
-  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontSize": 15,
   "terminal.integrated.fontWeight": "normal",
 
   // =============================================================================================
