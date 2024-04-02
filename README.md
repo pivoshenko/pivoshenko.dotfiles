@@ -115,7 +115,7 @@ Some of the used tools require local configuration, such as `git` with username 
 Here's the full list:
 
 - `~/.gitconfig.local` to store any user-specific data
-- `~/.shell/.env.local` to store local shell config, like usernames, passwords, tokens, `gpg` keys and so on
+- `~/.shell/.local` to store local shell config, like usernames, passwords, tokens, `gpg` keys etc
 
 [`Brewfile`]: https://github.com/pivoshenko/dotfiles/blob/main/dependencies/Brewfile
 [`requirements`]: https://github.com/pivoshenko/dotfiles/blob/main/dependencies/requirements.txt

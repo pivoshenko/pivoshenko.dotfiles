@@ -51,5 +51,8 @@ source "$HOME/.shell/.aliases"
 source "$HOME/.shell/.exports"
 source "$HOME/.shell/.functions"
 source "$HOME/.shell/.keybindings"
+if [[ -f "$HOME/.shell/.local" ]]; then
+  source "$HOME/.shell/.local"
+fi
 
 neofetch
