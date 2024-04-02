@@ -62,10 +62,6 @@ dotfiles:
     dst: ~/.config/spotify-tui
     src: .config/spotify-tui
 
-  d_xplr:
-    dst: ~/.config/xplr
-    src: .config/xplr
-
   d_yabai:
     dst: ~/.config/yabai/yabairc
     src: .config/yabai/yabairc
@@ -173,7 +169,6 @@ profiles:
       - d_qbittorrent
       - d_skhd
       - d_spotify_tui
-      - d_xplr
       - d_yabai
       - d_yamllint
       - d_zellij
