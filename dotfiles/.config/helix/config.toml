@@ -25,7 +25,6 @@ right = [
   "selections",
   "primary-selection-length",
   "position",
-  "position-percentage",
   "spacer",
   "diagnostics",
   "workspace-diagnostics",
