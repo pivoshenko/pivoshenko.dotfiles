@@ -33,7 +33,10 @@
   "search.defaultViewMode": "tree",
 
   // main editor
-  "workbench.statusBar.visible": false,
+  "workbench.statusBar.visible": true,
+  "workbench.colorCustomizations": {
+    "statusBar.foreground": "#7f849c"
+  },
   "workbench.layoutControl.enabled": false,
   "workbench.preferredDarkColorTheme": "Catppuccin Mocha",
   "workbench.preferredHighContrastColorTheme": "Catppuccin Mocha",
@@ -79,6 +82,11 @@
     "position": "bottom",
     "hideSettings": true,
     "size": 28
+  },
+  "apc.statusBar": {
+    "position": "editor-bottom",
+    "height": 28,
+    "fontSize": 12
   },
 
   // =============================================================================================
