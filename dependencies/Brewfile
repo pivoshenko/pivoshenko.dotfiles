@@ -187,8 +187,6 @@ brew "unar"
 brew "vhs"
 # internet file retriever
 brew "wget"
-# TUI file manager
-brew "xplr"
 # shell extension to navigate your filesystem faster
 brew "zoxide"
 # next-generation plugin manager for zsh
