@@ -6,9 +6,6 @@ pager = delta
 [credential]
 helper = store
 
-[commit]
-gpgsign = true
-
 [push]
 default = simple
 
