@@ -33,6 +33,7 @@
   "search.defaultViewMode": "tree",
 
   // main editor
+  "workbench.startupEditor": "none",
   "workbench.statusBar.visible": true,
   "workbench.colorCustomizations": {
     "statusBar.foreground": "#7f849c"
@@ -50,6 +51,7 @@
   "workbench.editor.decorations.badges": false,
   "workbench.editor.decorations.colors": false,
   "workbench.editor.enablePreview": false,
+  "workbench.editor.showTabs": "single",
 
   // window
   "window.commandCenter": false,
@@ -73,10 +75,11 @@
     }
   },
   "apc.stylesheet": {
-    ".monaco-toolbar": {
-      "visible": "hidden !important",
-      "display": "none !important"
-    }
+    // TODO temporary solution as with it Jupyter interface doesn't work properly
+    // ".monaco-toolbar": {
+    //   "visible": "hidden !important",
+    //   "display": "none !important"
+    // }
   },
   "apc.activityBar": {
     "position": "bottom",
@@ -185,6 +188,8 @@
 
   // Jupyter
   "notebook.lineNumbers": "on",
+  "notebook.output.textLineLimit": 1000,
+  "jupyter.askForKernelRestart": false,
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
   },
