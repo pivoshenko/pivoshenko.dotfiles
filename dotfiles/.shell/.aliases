@@ -22,7 +22,7 @@ alias zj="zellij"
 alias localip='ipconfig getifaddr en0'
 
 # copy the public key to clipboard
-alias pubkey="cat ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
+alias pubkey="cat ~/.ssh/id_rsa.pub | pbcopy | echo '=> Copied to pasteboard.'"
 
 # quick emoji
 alias shrug="echo '¯\_(ツ)_/¯' | pbcopy | echo '=> Copied to pasteboard.'"
