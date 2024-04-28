@@ -80,13 +80,13 @@ But, I try to keep them minimal: only ones I truly use.
 
 I mainly work with:
 
-- `Python`
+- `python`
 
 I also have several other languages installed. But I don't use them on a daily basis:
 
-- `node`
 - `elixir`
 - `rust`
+- `ruby`
 
 ## Apps
 
