@@ -1,0 +1,34 @@
+# `.completions` provides custom auto-completions
+
+# enable hidden files on completion
+zstyle ":completion:*" special-dirs true
+
+# hide parents
+zstyle ":completion:*" ignored-patterns ".|..|.DS_Store|**/.|**/..|**/.DS_Store|**/.git"
+
+# hide `..` and `.` from the file menu
+zstyle ":completion:*" ignore-parents "parent pwd directory"
+
+# force zsh not to show the completion menu which allows fzf-tab to capture the unambiguous prefix
+zstyle ":completion:*" menu no
+
+# switch groups using `[` and `]`
+zstyle ":fzf-tab:*" switch-group "[" "]"
+
+# complete `ls` / `cat` / etc
+zstyle ':fzf-tab:complete:(\\|*/|)(ls|gls|bat|cat|cd):*' fzf-preview \
+  '_fzf_complete_realpath "$realpath"'
+
+# complete `make`
+zstyle ':fzf-tab:complete:(\\|*/|)make:*' fzf-preview \
+  'case "$group" in
+  "[make target]")
+    make -n "$word" | bat -lsh --theme=$SOBOLE_SYNTAX_THEME
+    ;;
+  "[make variable]")
+    make -pq | ag "^$word =" | bat -lsh --theme=$SOBOLE_SYNTAX_THEME
+    ;;
+  "[file]")
+    _fzf_complete_realpath "$realpath"
+    ;;
+  esac'
