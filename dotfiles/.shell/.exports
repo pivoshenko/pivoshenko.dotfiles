@@ -19,9 +19,6 @@ eval "$(starship init zsh)"
 # .env manager
 eval "$(direnv hook zsh)"
 
-# awesome cd
-eval "$(zoxide init zsh)"
-
 # =============================================================================================
 # Version managers
 # =============================================================================================
@@ -49,6 +46,9 @@ eval "$(rbenv init -)"
 # rustup
 source "$HOME/.cargo/env"
 
+# homebrew
+export HOMEBREW_NO_ANALYTICS=1
+
 # =============================================================================================
 # External misc
 # =============================================================================================
@@ -60,38 +60,48 @@ export PATH=$PATH:$HOME/.spicetify
 # fzf
 # =============================================================================================
 
-export FZF_DEFAULT_COMMAND=" \
-fd --type f --type l \
---hidden \
---follow \
---exclude .git \
---exclude ".svn" \
---exclude ".hg" \
---exclude "CVS" \
---exclude ".DS_Store" \
---exclude "node_modules" \
---exclude ".pytest_cache" \
---exclude ".mypy_cache" \
---exclude ".ropeproject" \
---exclude ".hypothesis" \
---exclude ".ruff_cache" \
---exclude ".ipynb_checkpoints" \
---exclude "__pycache__" \
---exclude ".coverage" \
---exclude "coverage.xml" \
---exclude ".cache" \
---exclude ".idea" \
---exclude ".venv" \
---exclude "venv" \
---exclude ".coverage" \
---exclude "*.py[co]" \
---exclude "htmlcoverage" \
---exclude "docs/build" \
---exclude .ipynb_checkpoints
+if [[ ! "$PATH" == */opt/fzf/bin* ]]; then
+  export PATH="$PATH:$(brew --prefix)/opt/fzf/bin"
+  source "fzf-git.sh"
+  eval "$(fzf --zsh)"
+fi
+
+export FZF_DEFAULT_COMMAND="
+  fd \
+  --type f \
+  --type l \
+  --hidden \
+  --follow \
+  --exclude ".git" \
+  --exclude ".svn" \
+  --exclude ".hg" \
+  --exclude "CVS" \
+  --exclude ".DS_Store" \
+  --exclude "node_modules" \
+  --exclude ".pytest_cache" \
+  --exclude ".mypy_cache" \
+  --exclude ".ropeproject" \
+  --exclude ".hypothesis" \
+  --exclude ".ruff_cache" \
+  --exclude ".ipynb_checkpoints" \
+  --exclude "__pycache__" \
+  --exclude ".coverage" \
+  --exclude "coverage.xml" \
+  --exclude ".cache" \
+  --exclude ".idea" \
+  --exclude ".venv" \
+  --exclude "venv" \
+  --exclude ".coverage" \
+  --exclude "htmlcoverage" \
+  --exclude "docs/build" \
+  --exclude ".ipynb_checkpoints"
 "
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
 export FZF_DEFAULT_OPTS=" \
 --preview 'bat -n --color=always {}' \
---height 50% -1 \
+--height 30% -1 \
+--select-1 \
 --reverse \
 --preview-window='right:wrap' \
 --inline-info \
@@ -99,48 +109,26 @@ export FZF_DEFAULT_OPTS=" \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
 --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8
 "
-export FZF_CTRL_R_OPTS="
---preview 'echo {}' --preview-window up:3:hidden:wrap
---bind 'ctrl-/:toggle-preview'
---bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
+export FZF_CTRL_T_OPTS="$FZF_DEFAULT_OPTS"
+export FZF_CTRL_R_OPTS=" \
+--preview 'echo {}' \
+--preview-window up:3:hidden:wrap \
+--bind 'ctrl-/:toggle-preview' \
+--bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort' \
 --color header:italic
 "
-export FZF_CTRL_T_COMMAND="
-fd --type f --type l \
---hidden \
---follow \
---exclude .git \
---exclude ".svn" \
---exclude ".hg" \
---exclude "CVS" \
---exclude ".DS_Store" \
---exclude "node_modules" \
---exclude ".pytest_cache" \
---exclude ".mypy_cache" \
---exclude ".ropeproject" \
---exclude ".hypothesis" \
---exclude ".ruff_cache" \
---exclude ".ipynb_checkpoints" \
---exclude "__pycache__" \
---exclude ".coverage" \
---exclude "coverage.xml" \
---exclude ".cache" \
---exclude ".idea" \
---exclude ".venv" \
---exclude "venv" \
---exclude ".coverage" \
---exclude "*.py[co]" \
---exclude "htmlcoverage" \
---exclude "docs/build" \
---exclude .ipynb_checkpoints
+
+# =============================================================================================
+# zoxide
+# =============================================================================================
+
+export _ZO_FZF_OPTS=" \
+  $FZF_DEFAULT_OPTS \
+  --cycle \
+  --keep-right \
+  --exit-0 \
+  --tabstop=1 \
+  --preview='_fzf_complete_realpath {2..}'
 "
-export FZF_CTRL_T_OPTS="
---preview 'bat -n --color=always {}' \
---height 50% -1 \
---reverse \
---preview-window='right:wrap' \
---inline-info \
---color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
---color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
---color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8
-"
+
+eval "$(zoxide init zsh)"
