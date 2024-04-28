@@ -11,24 +11,9 @@ ZSH_COLORIZE_CHROMA_FORMATTER=terminal256
 
 # list of plugins
 plugins=(
-    aws
-    celery
-    colorize
-    docker
-    docker-compose
-    fzf
-    gh
-    gitfast
-    git-auto-fetch
-    kubectl
-    node
-    npm
-    nvm
-    pip
-    poetry
-    python
-    redis-cli
-    rust
+  gitfast
+  gh
+  safe-paste
 )
 
 # configure oh-my-zsh's library
@@ -48,6 +33,7 @@ source "$HOME/.zplugrc"
 # =============================================================================================
 
 source "$HOME/.shell/.aliases"
+source "$HOME/.shell/.completions"
 source "$HOME/.shell/.exports"
 source "$HOME/.shell/.functions"
 source "$HOME/.shell/.keybindings"
