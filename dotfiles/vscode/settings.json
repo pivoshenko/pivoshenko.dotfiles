@@ -132,6 +132,7 @@
   // Terminal
   // =============================================================================================
 
+  "terminal.integrated.cursorStyle": "line",
   "terminal.explorerKind": "external",
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.allowMnemonics": true,
