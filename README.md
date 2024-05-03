@@ -120,6 +120,11 @@ I use [`fzf`] for several tasks:
 
 - `tab` to autocomplete probably all the tools using [`fzf-tab`]
 
+<p align="center">
+  <img alt="fzf-tab" src="https://raw.githubusercontent.com/pivoshenko/dotfiles/master/docs/assets/fzf_tab.png">
+</p>
+
+
 - `ctrl+r` to fuzzy search command history
 
 - `ctrl+t` to fuzzy search files and dirs in the current tree to include paths in commands with instant previews for text files (content) and directories (inner tree)
