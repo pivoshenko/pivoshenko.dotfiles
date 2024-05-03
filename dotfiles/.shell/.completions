@@ -18,17 +18,3 @@ zstyle ":fzf-tab:*" switch-group "[" "]"
 # complete `ls` / `cat` / etc
 zstyle ':fzf-tab:complete:(\\|*/|)(ls|gls|bat|cat|cd):*' fzf-preview \
   '_fzf_complete_realpath "$realpath"'
-
-# complete `make`
-zstyle ':fzf-tab:complete:(\\|*/|)make:*' fzf-preview \
-  'case "$group" in
-  "[make target]")
-    make -n "$word" | bat -lsh --theme=$SOBOLE_SYNTAX_THEME
-    ;;
-  "[make variable]")
-    make -pq | ag "^$word =" | bat -lsh --theme=$SOBOLE_SYNTAX_THEME
-    ;;
-  "[file]")
-    _fzf_complete_realpath "$realpath"
-    ;;
-  esac'
