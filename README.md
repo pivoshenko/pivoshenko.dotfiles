@@ -22,6 +22,17 @@
     </a>
 </p>
 
+- [pivoshenko's dotfiles](#pivoshenkos-dotfiles)
+  - [Contents](#contents)
+  - [Main principles](#main-principles)
+  - [Installation](#installation)
+  - [Apps](#apps)
+  - [VSCode](#vscode)
+  - [CLI](#cli)
+    - [fzf](#fzf)
+  - [Local configuration](#local-configuration)
+
+
 ## Contents
 
 What's in here?
@@ -71,6 +82,22 @@ dotdrop -c "dotdrop.yaml" -p base install -f
 dotdrop -c "dotdrop.yaml" -p macos install -f
 ```
 
+## Apps
+
+I am using [`brew`] to install all free apps for my Mac.
+I also sync apps from the App Store with `brew` via [`mas`], so the resulting [`Brewfile`] contains everything.
+
+## VSCode
+
+<p align="center">
+  <img alt="vscode" src="https://raw.githubusercontent.com/pivoshenko/dotfiles/master/docs/assets/vscode.png">
+</p>
+
+Here's a list of [`extensions`] I use daily, but I try to keep my `VSCode` setup as simple as possible.
+It was also heavily influenced by [`makevscodeawesome`].
+
+I also quite heavily use [`helix`] for in-terminal editing.
+
 ## CLI
 
 I am using `iTerm2` and [`zellij`] as my main terminal.
@@ -87,21 +114,23 @@ I also have several other languages installed. But I don't use them on a daily b
 - `rust`
 - `ruby`
 
-## Apps
+### fzf
 
-I am using [`brew`] to install all free apps for my Mac.
-I also sync apps from the App Store with `brew` via [`mas`], so the resulting [`Brewfile`] contains everything.
+I use [`fzf`] for several tasks:
 
-## VSCode
+- `tab` to autocomplete probably all the tools using [`fzf-tab`]
 
-<p align="center">
-  <img alt="vscode" src="https://raw.githubusercontent.com/pivoshenko/dotfiles/master/docs/assets/vscode.png">
-</p>
+- `ctrl+r` to fuzzy search command history
 
-Here's a list of [`extensions`] I use daily, but I try to keep my `VSCode` setup as simple as possible.
-It was also heavily influenced by [`makevscodeawesome`].
+- `ctrl+t` to fuzzy search files and dirs in the current tree to include paths in commands with instant previews for text files (content) and directories (inner tree)
 
-I also quite heavily use [`helix`] for in-terminal editing.
+- `ctrl+k` to fuzzy search files by name and open/edit them
+
+- `ctrl+f` to fuzzy searc files by content and open/edit them
+
+- `ctrl+g` to work `git` using [`fzf-git`]
+
+- `space+tab` after `z <path>` to enable fuzzy finder for [`zoxide`]
 
 ## Local configuration
 
@@ -141,3 +170,7 @@ Here's the full list:
 [`wallpapers/`]: https://github.com/pivoshenko/dotfiles/blob/main/wallpapers
 [`makevscodeawesome`]: https://makevscodeawesome.com
 [`zellij`]: https://zellij.dev
+[`fzf`]: https://github.com/junegunn/fzf
+[`fzf-tab`]: https://github.com/Aloxaf/fzf-tab
+[`fzf-git`]: https://github.com/junegunn/fzf-git.sh
+[`zoxide`]: https://github.com/ajeetdsouza/zoxide
