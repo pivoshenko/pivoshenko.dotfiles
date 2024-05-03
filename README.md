@@ -132,13 +132,33 @@ I use [`fzf`] for several tasks:
 
 - `ctrl+t` to fuzzy search files and dirs in the current tree to include paths in commands with instant previews for text files (content) and directories (inner tree)
 
+<p align="center">
+  <img alt="fzf-ctrl+t" src="https://raw.githubusercontent.com/pivoshenko/dotfiles/master/docs/assets/fzf_ctrl_t.png">
+</p>
+
 - `ctrl+k` to fuzzy search files by name and open/edit them
+
+<p align="center">
+  <img alt="fzf-ctrl+k" src="https://raw.githubusercontent.com/pivoshenko/dotfiles/master/docs/assets/fzf_ctrl_k.png">
+</p>
 
 - `ctrl+f` to fuzzy searc files by content and open/edit them
 
+<p align="center">
+  <img alt="fzf-ctrl+f" src="https://raw.githubusercontent.com/pivoshenko/dotfiles/master/docs/assets/fzf_ctrl_f.png">
+</p>
+
 - `ctrl+g` to work `git` using [`fzf-git`]
 
+<p align="center">
+  <img alt="fzf-ctrl+g" src="https://raw.githubusercontent.com/pivoshenko/dotfiles/master/docs/assets/fzf_ctrl_g.png">
+</p>
+
 - `space+tab` after `z <path>` to enable fuzzy finder for [`zoxide`]
+
+<p align="center">
+  <img alt="fzf-space+tab" src="https://raw.githubusercontent.com/pivoshenko/dotfiles/master/docs/assets/fzf_space_tab.png">
+</p>
 
 ## Local configuration
 
