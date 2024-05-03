@@ -73,7 +73,7 @@ dotdrop -c "dotdrop.yaml" -p macos install -f
 
 ## CLI
 
-I am using [`hyper.js`] as my main terminal.
+I am using `iTerm2` and [`zellij`] as my main terminal.
 I am using [`zsh`] with [`oh-my-zsh`] and [`starship`] as the main shell. To manage shell plugins I am using [`zplug`].
 I also have some tools/scripts/aliases to make my working experience better.
 But, I try to keep them minimal: only ones I truly use.
@@ -84,7 +84,6 @@ I mainly work with:
 
 I also have several other languages installed. But I don't use them on a daily basis:
 
-- `elixir`
 - `rust`
 - `ruby`
 
@@ -93,18 +92,14 @@ I also have several other languages installed. But I don't use them on a daily b
 I am using [`brew`] to install all free apps for my Mac.
 I also sync apps from the App Store with `brew` via [`mas`], so the resulting [`Brewfile`] contains everything.
 
-## Infrastructure
-
-I try to containerize everything. So, [`docker`] is my main development and deployment tool.
-
 ## VSCode
 
 <p align="center">
   <img alt="vscode" src="https://raw.githubusercontent.com/pivoshenko/dotfiles/master/docs/assets/vscode.png">
 </p>
 
-Here's a list of [extensions](https://github.com/sobolevn/dotfiles/blob/master/vscode/install.sh) I use daily, but I try to keep my `VSCode` setup as simple as possible.
-It was also heavily influenced by [`makevscodeawesome`](https://makevscodeawesome.com/).
+Here's a list of [`extensions`] I use daily, but I try to keep my `VSCode` setup as simple as possible.
+It was also heavily influenced by [`makevscodeawesome`].
 
 I also quite heavily use [`helix`] for in-terminal editing.
 
@@ -144,3 +139,5 @@ Here's the full list:
 [`docker`]: https://formulae.brew.sh/cask/docker
 [`helix`]: https://helix-editor.com
 [`wallpapers/`]: https://github.com/pivoshenko/dotfiles/blob/main/wallpapers
+[`makevscodeawesome`]: https://makevscodeawesome.com
+[`zellij`]: https://zellij.dev
