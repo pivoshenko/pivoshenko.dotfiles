@@ -2,9 +2,20 @@
 
 # remap zsh-vi-mode keybindings
 function zvm_after_init() {
-    # fzf
     zvm_bindkey viins '^R' fzf-history-widget
     bindkey '^f' run_find_in_files
     bindkey '^k' run_find_files
     source ~/.fzf.zsh
+    for o in files branches tags remotes hashes stashes lreflogs each_ref; do
+        eval "zvm_bindkey viins '^g^${o[1]}' fzf-git-$o-widget"
+        eval "zvm_bindkey viins '^g${o[1]}' fzf-git-$o-widget"
+    done
+}
+function zvm_after_lazy_keybindings() {
+    for o in files branches tags remotes hashes stashes lreflogs each_ref; do
+        eval "zvm_bindkey vicmd '^g^${o[1]}' fzf-git-$o-widget"
+        eval "zvm_bindkey vicmd '^g${o[1]}' fzf-git-$o-widget"
+        eval "zvm_bindkey visual '^g^${o[1]}' fzf-git-$o-widget"
+        eval "zvm_bindkey visual '^g${o[1]}' fzf-git-$o-widget"
+    done
 }
