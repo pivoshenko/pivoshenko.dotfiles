@@ -1,7 +1,7 @@
 # pivoshenko's dotfiles
 
 <p align="center">
-  <img alt="hyperjs" src="https://raw.githubusercontent.com/pivoshenko/dotfiles/master/docs/assets/hyperjs.png">
+  <img alt="preview" src="https://raw.githubusercontent.com/pivoshenko/dotfiles/master/docs/assets/preview.png">
 </p>
 
 <p align="center">
