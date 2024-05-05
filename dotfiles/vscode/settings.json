@@ -116,6 +116,7 @@
 
   "terminal.integrated.fontSize": 15,
   "terminal.integrated.fontWeight": "normal",
+  "terminal.integrated.lineHeight": 1.1,
 
   // =============================================================================================
   // Core
@@ -140,7 +141,6 @@
   "terminal.integrated.drawBoldTextInBrightColors": false,
   "terminal.integrated.gpuAcceleration": "on",
   "terminal.integrated.inheritEnv": true,
-  "terminal.integrated.lineHeight": 1.1,
   "terminal.integrated.profiles.osx": {
     "zsh": {
       "args": ["-l", "-i"],
