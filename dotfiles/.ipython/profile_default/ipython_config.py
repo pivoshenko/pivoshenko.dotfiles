@@ -4,7 +4,6 @@ import sys
 
 from prompt_toolkit.key_binding.vi_state import InputMode
 from prompt_toolkit.key_binding.vi_state import ViState
-from pygments.styles import get_style_by_name
 
 
 def get_input_mode(self):
@@ -27,6 +26,3 @@ def set_input_mode(self, mode):
 ViState._input_mode = InputMode.INSERT  # type: ignore[attr-defined]
 ViState.input_mode = property(get_input_mode, set_input_mode)  # type: ignore[method-assign, assignment]
 c.TerminalInteractiveShell.editing_mode = "vi"  # type: ignore[name-defined]  # noqa: F821
-
-# theme
-c.TerminalInteractiveShell.highlighting_style = get_style_by_name("catppuccin-mocha")  # type: ignore[name-defined]  # noqa: F821
