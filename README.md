@@ -1,8 +1,6 @@
 # pivoshenko's dotfiles
 
-<p align="center">
-  <img alt="preview" src="https://raw.githubusercontent.com/pivoshenko/dotfiles/master/docs/assets/preview.png">
-</p>
+![preview](https://raw.githubusercontent.com/pivoshenko/dotfiles/master/docs/assets/preview.png)
 
 <p align="center">
     <a href="https://github.com/pivoshenko/dotfiles/blob/main/.pre-commit-config.yaml">
