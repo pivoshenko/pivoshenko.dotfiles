@@ -87,9 +87,7 @@ I also sync apps from the App Store with `brew` via [`mas`], so the resulting [`
 
 ## VSCode
 
-<p align="center">
-  <img alt="vscode" src="https://raw.githubusercontent.com/pivoshenko/dotfiles/master/docs/assets/vscode.png">
-</p>
+![vscode](https://raw.githubusercontent.com/pivoshenko/dotfiles/master/docs/assets/vscode.png)
 
 Here's a list of [`extensions`] I use daily, but I try to keep my `VSCode` setup as simple as possible.
 It was also heavily influenced by [`makevscodeawesome`].
