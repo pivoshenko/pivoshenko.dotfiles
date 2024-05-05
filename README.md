@@ -89,14 +89,13 @@ I also sync apps from the App Store with `brew` via [`mas`], so the resulting [`
 ![vscode](https://raw.githubusercontent.com/pivoshenko/dotfiles/master/docs/assets/vscode.png)
 
 Here's a list of [`extensions`] I use daily, but I try to keep my `VSCode` setup as simple as possible.
-It was also heavily influenced by [`makevscodeawesome`].
 
 I also quite heavily use [`helix`] for in-terminal editing.
 
 ## CLI
 
 I am using `iTerm2` and [`zellij`] as my main terminal.
-I am using [`zsh`] with [`oh-my-zsh`] and [`starship`] as the main shell. To manage shell plugins I am using [`zplug`].
+As the main shell I am using [`zsh`] with [`oh-my-zsh`] and [`starship`]. To manage shell plugins I am using [`zplug`].
 I also have some tools/scripts/aliases to make my working experience better.
 But, I try to keep them minimal: only ones I truly use.
 
