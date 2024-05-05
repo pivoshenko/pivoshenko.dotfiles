@@ -30,7 +30,6 @@
     - [fzf](#fzf)
   - [Local configuration](#local-configuration)
 
-
 ## Contents
 
 What's in here?
@@ -116,45 +115,31 @@ I use [`fzf`] for several tasks:
 
 - `tab` to autocomplete probably all the tools using [`fzf-tab`]
 
-<p align="center">
-  <img alt="fzf-tab" src="https://raw.githubusercontent.com/pivoshenko/dotfiles/master/docs/assets/fzf_tab.png">
-</p>
+![fzf-tab](https://raw.githubusercontent.com/pivoshenko/dotfiles/master/docs/assets/fzf_tab.png)
 
 - `ctrl+r` to fuzzy search command history
 
-<p align="center">
-  <img alt="fzf-ctrl+r" src="https://raw.githubusercontent.com/pivoshenko/dotfiles/master/docs/assets/fzf_ctrl_r.png">
-</p>
+![fzf-ctrl+r](https://raw.githubusercontent.com/pivoshenko/dotfiles/master/docs/assets/fzf_ctrl_r.png)
 
 - `ctrl+t` to fuzzy search files and dirs in the current tree to include paths in commands with instant previews for text files (content) and directories (inner tree)
 
-<p align="center">
-  <img alt="fzf-ctrl+t" src="https://raw.githubusercontent.com/pivoshenko/dotfiles/master/docs/assets/fzf_ctrl_t.png">
-</p>
+![fzf-ctrl+t](https://raw.githubusercontent.com/pivoshenko/dotfiles/master/docs/assets/fzf_ctrl_t.png)
 
 - `ctrl+k` to fuzzy search files by name and open/edit them
 
-<p align="center">
-  <img alt="fzf-ctrl+k" src="https://raw.githubusercontent.com/pivoshenko/dotfiles/master/docs/assets/fzf_ctrl_k.png">
-</p>
+![fzf-ctrl+k](https://raw.githubusercontent.com/pivoshenko/dotfiles/master/docs/assets/fzf_ctrl_k.png)
 
 - `ctrl+f` to fuzzy searc files by content and open/edit them
 
-<p align="center">
-  <img alt="fzf-ctrl+f" src="https://raw.githubusercontent.com/pivoshenko/dotfiles/master/docs/assets/fzf_ctrl_f.png">
-</p>
+![fzf-ctrl+f](https://raw.githubusercontent.com/pivoshenko/dotfiles/master/docs/assets/fzf_ctrl_f.png)
 
 - `ctrl+g` to work `git` using [`fzf-git`]
 
-<p align="center">
-  <img alt="fzf-ctrl+g" src="https://raw.githubusercontent.com/pivoshenko/dotfiles/master/docs/assets/fzf_ctrl_g.png">
-</p>
+![fzf-ctrl+g](https://raw.githubusercontent.com/pivoshenko/dotfiles/master/docs/assets/fzf_ctrl_g.png)
 
 - `space+tab` after `z <path>` to enable fuzzy finder for [`zoxide`]
 
-<p align="center">
-  <img alt="fzf-space+tab" src="https://raw.githubusercontent.com/pivoshenko/dotfiles/master/docs/assets/fzf_space_tab.png">
-</p>
+![fzf-space+tab](https://raw.githubusercontent.com/pivoshenko/dotfiles/master/docs/assets/fzf_space_tab.png)
 
 ## Local configuration
 
