@@ -156,7 +156,7 @@ Here's the full list:
 [`.shell/`]: https://github.com/pivoshenko/dotfiles/tree/main/dotfiles/.shell
 [`.zshrc`]: https://github.com/pivoshenko/dotfiles/tree/main/dotfiles/.zshrc
 [`vscode/`]: https://github.com/pivoshenko/dotfiles/tree/main/dotfiles/vscode
-[`extensions`]: https://github.com/pivoshenko/dotfiles/blob/main/dependencies/Brewfile#L229-L292
+[`extensions`]: https://github.com/pivoshenko/dotfiles/blob/main/dependencies/Brewfile#L217-L272
 [`.configs/`]: https://github.com/pivoshenko/dotfiles/tree/main/dotfiles/.config
 [`dotfiles/`]: https://github.com/pivoshenko/dotfiles/tree/main/dotfiles
 [JetBrainsMono]: https://www.jetbrains.com/lp/mono/
