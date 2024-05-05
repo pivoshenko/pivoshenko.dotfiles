@@ -35,8 +35,7 @@
 What's in here?
 
 - All my `brew` dependencies including: applications, fonts, etc. See [`Brewfile`]
-- All my global `Python` dependencies including: linters, formatters, LSP plugins etc. See [`requirements`]
-- All my global `cargo` and `npm` dependencies including: LSP, LSP plugins, etc. See [`cargo`] and [`npm`]
+- All my global `Python`, `cargo` and `npm` dependencies including: LSP, LSP plugins, etc. See [`requirements`], [`cargo`] and [`npm`]
 - All my `macOS` configuration. See [`macos`]
 - All my shell configuration. See [`.shell/`] and [`.zshrc`]
 - All my `VSCode` configuration and extensions. See [`vscode/`] and [`extensions`]
@@ -158,7 +157,6 @@ Here's the full list:
 [`.zshrc`]: https://github.com/pivoshenko/dotfiles/tree/main/dotfiles/.zshrc
 [`vscode/`]: https://github.com/pivoshenko/dotfiles/tree/main/dotfiles/vscode
 [`extensions`]: https://github.com/pivoshenko/dotfiles/blob/main/dependencies/Brewfile#L229-L292
-[extensions]: https://github.com/pivoshenko/dotfiles/blob/main/dependencies/Brewfile#L229-L292
 [`.configs/`]: https://github.com/pivoshenko/dotfiles/tree/main/dotfiles/.config
 [`dotfiles/`]: https://github.com/pivoshenko/dotfiles/tree/main/dotfiles
 [JetBrainsMono]: https://www.jetbrains.com/lp/mono/
@@ -166,17 +164,14 @@ Here's the full list:
 [`dotdrop`]: https://github.com/deadc0de6/dotdrop
 [`ansible`]: https://github.com/ansible/ansible
 [`dotbot`]: https://github.com/anishathalye/dotbot
-[`hyper.js`]: https://hyper.is
 [`zsh`]: https://github.com/zsh-users/zsh
 [`oh-my-zsh`]: https://github.com/robbyrussell/oh-my-zsh
 [`starship`]: https://starship.rs
 [`zplug`]: https://github.com/zplug/zplug
 [`brew`]: https://brew.sh/
 [`mas`]: https://formulae.brew.sh/formula/mas
-[`docker`]: https://formulae.brew.sh/cask/docker
 [`helix`]: https://helix-editor.com
 [`wallpapers/`]: https://github.com/pivoshenko/dotfiles/blob/main/wallpapers
-[`makevscodeawesome`]: https://makevscodeawesome.com
 [`zellij`]: https://zellij.dev
 [`fzf`]: https://github.com/junegunn/fzf
 [`fzf-tab`]: https://github.com/Aloxaf/fzf-tab
