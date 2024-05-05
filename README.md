@@ -94,7 +94,7 @@ I also quite heavily use [`helix`] for in-terminal editing.
 
 ## CLI
 
-I am using `iTerm2` and [`zellij`] as my main terminal.
+I am using [`iTerm2`] and [`zellij`] as my main terminal.
 As the main shell I am using [`zsh`] with [`oh-my-zsh`] and [`starship`]. To manage shell plugins I am using [`zplug`].
 I also have some tools/scripts/aliases to make my working experience better.
 But, I try to keep them minimal: only ones I truly use.
@@ -182,3 +182,4 @@ Here's the full list:
 [`fzf-tab`]: https://github.com/Aloxaf/fzf-tab
 [`fzf-git`]: https://github.com/junegunn/fzf-git.sh
 [`zoxide`]: https://github.com/ajeetdsouza/zoxide
+[`iTerm2`]: https://iterm2.com/
