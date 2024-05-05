@@ -22,14 +22,10 @@ cask "betterdiscord-installer"
 cask "dbeaver-community"
 # voice and text chat software
 cask "discord"
-# web browser
-cask "firefox"
 # screen colour temperature controller
 cask "flux"
 # web browser
 cask "google-chrome"
-# terminal built on web technologies
-cask "hyper"
 # terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 # HTTP and GraphQL Client
@@ -42,8 +38,6 @@ cask "karabiner-elements"
 cask "keka"
 # logitech options+
 cask "logi-options-plus"
-# clipboard manager
-cask "maccy"
 # password manager
 cask "nordpass"
 # VPN client for secure internet access and private browsing
@@ -73,8 +67,6 @@ cask "visual-studio-code"
 # =============================================================================================
 
 cask "qlmarkdown"
-cask "qlimagesize"
-cask "suspicious-package"
 
 # =============================================================================================
 # Programming languages, REPLs
@@ -131,8 +123,6 @@ brew "gcc"
 brew "gh"
 # syntax-highlighting pager for git and diff output
 brew "git-delta"
-# render markdown on the CLI
-brew "glow"
 # graph visualization software from at&t and bell labs
 brew "graphviz"
 # post-modern modal text editor
