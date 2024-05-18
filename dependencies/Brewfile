@@ -22,6 +22,8 @@ cask "betterdiscord-installer"
 cask "dbeaver-community"
 # voice and text chat software
 cask "discord"
+# web browser focusing on privacy
+cask "duckduckgo"
 # screen colour temperature controller
 cask "flux"
 # web browser
