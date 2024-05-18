@@ -62,7 +62,9 @@ cask "telegram"
 cask "visual-studio-code"
 
 # the cat tells you the CPU usage of Mac by running speed
-# mas "RunCat", id: 000
+# mas "RunCat", id: 1429033973
+# pomodoro timer
+# mas "Flow", id: 1423210932
 
 # =============================================================================================
 # QuickLook plugins
