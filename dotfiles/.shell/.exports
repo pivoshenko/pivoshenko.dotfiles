@@ -46,12 +46,18 @@ eval "$(rbenv init -)"
 # rustup
 source "$HOME/.cargo/env"
 
-# homebrew
-export HOMEBREW_NO_ANALYTICS=1
+# =============================================================================================
+# REPLs
+# =============================================================================================
+
+export PYTHONBREAKPOINT="IPython.terminal.debugger.set_trace"
 
 # =============================================================================================
 # External misc
 # =============================================================================================
+
+# homebrew
+export HOMEBREW_NO_ANALYTICS=1
 
 # Spotify TUI
 export PATH=$PATH:$HOME/.spicetify
