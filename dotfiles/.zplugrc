@@ -1,11 +1,11 @@
 source "$ZPLUG_HOME/init.zsh"
 
-zplug "Aloxaf/fzf-tab"
-zplug "junegunn/fzf-git.sh", as:command, use:"fzf-git.sh"
-zplug "zdharma-continuum/fast-syntax-highlighting"
-zplug "zsh-users/zsh-autosuggestions"
-zplug "jeffreytse/zsh-vi-mode"
-zplug "wbingli/zsh-wakatime"
+zplug "Aloxaf/fzf-tab", depth:1
+zplug "junegunn/fzf-git.sh", as:command, use:"fzf-git.sh", depth:1
+zplug "zdharma-continuum/fast-syntax-highlighting", depth:1
+zplug "zsh-users/zsh-autosuggestions", depth:1
+zplug "jeffreytse/zsh-vi-mode", depth:1
+zplug "wbingli/zsh-wakatime", depth:1
 
 if ! zplug check; then
   zplug install
