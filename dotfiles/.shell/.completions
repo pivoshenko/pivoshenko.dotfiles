@@ -16,5 +16,6 @@ zstyle ":completion:*" menu no
 zstyle ":fzf-tab:*" switch-group "[" "]"
 
 # complete `ls` / `cat` / etc
-zstyle ':fzf-tab:complete:(\\|*/|)(ls|gls|bat|cat|cd):*' fzf-preview \
+zstyle ':fzf-tab:complete:(\\|*/|)(ls|gls|bat|cat|cd|rm|cp|mv|ln|hx|code|open|tree|source):*' \
+  fzf-preview \
   '_fzf_complete_realpath "$realpath"'
