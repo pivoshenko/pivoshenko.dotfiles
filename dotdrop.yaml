@@ -8,6 +8,45 @@ config:
   link_dotfile_default: nolink
   link_on_import: nolink
 
+profiles:
+  base:
+    dotfiles:
+      - d_bat
+      - d_bottom
+      - d_efm_langserver
+      - d_fsh
+      - d_helix
+      - d_k9s
+      - d_karabiner
+      - d_lazygit
+      - d_neofetch
+      - d_qbittorrent
+      - d_skhd
+      - d_spotify_tui
+      - d_yabai
+      - d_yamllint
+      - d_zellij
+      - f_direnv
+      - f_starship
+      - f_gnupg_agent
+      - f_ipython_startup
+      - f_ipython_config
+      - d_iterm
+      - d_local_bin
+      - d_shell
+      - d_zellij_plugins
+      - f_gitconfig
+      - f_hyperjs
+      - f_ssh_config
+      - f_zplugrc
+      - f_zshrc
+      - f_zshenv
+
+  macos:
+    dotfiles:
+      - d_pypoetry
+      - f_vscode
+
 dotfiles:
 
 # =============================================================================================
@@ -157,42 +196,3 @@ dotfiles:
   d_obsidian:
     dst: "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault/.obsidian"
     src: .obsidian
-
-profiles:
-  base:
-    dotfiles:
-      - d_bat
-      - d_bottom
-      - d_efm_langserver
-      - d_fsh
-      - d_helix
-      - d_k9s
-      - d_karabiner
-      - d_lazygit
-      - d_neofetch
-      - d_qbittorrent
-      - d_skhd
-      - d_spotify_tui
-      - d_yabai
-      - d_yamllint
-      - d_zellij
-      - f_direnv
-      - f_starship
-      - f_gnupg_agent
-      - f_ipython_startup
-      - f_ipython_config
-      - d_iterm
-      - d_local_bin
-      - d_shell
-      - d_zellij_plugins
-      - f_gitconfig
-      - f_hyperjs
-      - f_ssh_config
-      - f_zplugrc
-      - f_zshrc
-      - f_zshenv
-
-  macos:
-    dotfiles:
-      - d_pypoetry
-      - f_vscode
