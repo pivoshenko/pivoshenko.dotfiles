@@ -57,6 +57,17 @@ shift + alt - m : yabai -m window --toggle zoom-fullscreen
 # balance out tree of windows
 shift + alt - e : yabai -m space --balance
 
+# toggle sticky
+shift + alt - s : yabai -m window --toggle sticky
+
+# toggle sticky, float and resize to picture-in-picture size
+shift + alt - p : yabai -m window --toggle sticky;\
+          yabai -m window --grid 5:5:4:0:1:1
+
+# change layout of space.
+shift + alt - a : yabai -m space --layout bsp
+shift + alt - d : yabai -m space --layout float
+
 # swap windows
 shift + alt - j : yabai -m window --swap south
 shift + alt - k : yabai -m window --swap north
@@ -85,7 +96,17 @@ shift + alt - 9 : yabai -m window --space 9      ; yabai -m space --focus 9
 shift + alt - 0 : yabai -m window --space 10     ; yabai -m space --focus 10
 
 # =============================================================================================
+# Layout (insertion point for the focused container)
+# =============================================================================================
+
+shift + ctrl + alt + cmd - h : yabai -m window --insert west
+shift + ctrl + alt + cmd - j : yabai -m window --insert south
+shift + ctrl + alt + cmd - k : yabai -m window --insert north
+shift + ctrl + alt + cmd - l : yabai -m window --insert east
+
+# =============================================================================================
 # Other
 # =============================================================================================
 
+# restart Yabai
 ctrl + alt + cmd - r : yabai --restart-service
