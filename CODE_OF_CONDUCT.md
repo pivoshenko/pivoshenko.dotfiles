@@ -7,10 +7,10 @@
   - [Scope](#scope)
   - [Enforcement](#enforcement)
   - [Enforcement Guidelines](#enforcement-guidelines)
-    - [1. Correction](#1-correction)
-    - [2. Warning](#2-warning)
-    - [3. Temporary Ban](#3-temporary-ban)
-    - [4. Permanent Ban](#4-permanent-ban)
+    - [Correction](#correction)
+    - [Warning](#warning)
+    - [Temporary Ban](#temporary-ban)
+    - [Permanent Ban](#permanent-ban)
   - [Attribution](#attribution)
 
 ## Our Pledge
@@ -73,7 +73,7 @@ incident.
 Community leaders will follow these Community Impact Guidelines in determining the consequences for
 any action they deem in violation of this Code of Conduct:
 
-### 1. Correction
+### Correction
 
 **Community Impact**: Use of inappropriate language or other behaviour deemed unprofessional or
 unwelcome in the community.
@@ -82,7 +82,7 @@ unwelcome in the community.
 nature of the violation and an explanation of why the behaviour was inappropriate. A public apology
 may be requested.
 
-### 2. Warning
+### Warning
 
 **Community Impact**: A violation through a single incident or series of actions.
 
@@ -91,7 +91,7 @@ involved, including unsolicited interaction with those enforcing the Code of Con
 specified period. This includes avoiding interactions in community spaces as well as
 external channels like social media. Violating these terms may lead to a temporary or permanent ban.
 
-### 3. Temporary Ban
+### Temporary Ban
 
 **Community Impact**: A serious violation of community standards, including sustained inappropriate
 behaviour.
@@ -101,7 +101,7 @@ community for a specified period. No public or private interaction with the peop
 including unsolicited interaction with those enforcing the Code of Conduct, is allowed during this
 period. Violating these terms may lead to a permanent ban.
 
-### 4. Permanent Ban
+### Permanent Ban
 
 **Community Impact**: Demonstrating a pattern of violation of community standards, including
 sustained inappropriate behaviour, harassment of an individual, or aggression toward or disparagement
