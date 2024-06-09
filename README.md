@@ -34,11 +34,11 @@
 
 What's in here?
 
-- All my `brew` dependencies including: applications, fonts, etc. See [`Brewfile`](https://github.com/pivoshenko/dotfiles/blob/main/dependencies/Brewfile)
-- All my global `Python`, `cargo` and `npm` dependencies including: LSP, LSP plugins, etc. See [`requirements`](https://github.com/pivoshenko/dotfiles/blob/main/dependencies/requirements.txt),[`cargo`](https://github.com/pivoshenko/dotfiles/blob/main/playbooks/dependencies.yaml#L13) and [`npm`](https://github.com/pivoshenko/dotfiles/blob/main/playbooks/dependencies.yaml#L24)
+- All my `brew` dependencies including applications, fonts, etc. See [`Brewfile`](https://github.com/pivoshenko/dotfiles/blob/main/dependencies/Brewfile)
+- All my global `Python`, `cargo` and `npm` dependencies including LSP, LSP plugins, etc. See [`requirements`](https://github.com/pivoshenko/dotfiles/blob/main/dependencies/requirements.txt),[`cargo`](https://github.com/pivoshenko/dotfiles/blob/main/playbooks/dependencies.yaml#L13) and [`npm`](https://github.com/pivoshenko/dotfiles/blob/main/playbooks/dependencies.yaml#L24)
 - All my `macOS` configuration. See [`macos`](https://github.com/pivoshenko/dotfiles/blob/main/macos/settings.sh)
-- All my shell configuration. See [`.shell/`](https://github.com/pivoshenko/dotfiles/blob/main/macos/settings.sh) and [`.zshrc`](https://github.com/pivoshenko/dotfiles/tree/main/dotfiles/.zshrc)
-- All my `VSCode` configuration and extensions. See [`vscode/`](https://github.com/pivoshenko/dotfiles/tree/main/dotfiles/vscode) and [`extensions`](https://github.com/pivoshenko/dotfiles/blob/main/dependencies/Brewfile#L221-L223)
+- All my shell configurations. See [`.shell/`](https://github.com/pivoshenko/dotfiles/blob/main/macos/settings.sh) and [`.zshrc`](https://github.com/pivoshenko/dotfiles/tree/main/dotfiles/.zshrc)
+- All my `VSCode` configurations and extensions. See [`vscode/`](https://github.com/pivoshenko/dotfiles/tree/main/dotfiles/vscode) and [`extensions`](https://github.com/pivoshenko/dotfiles/blob/main/dependencies/Brewfile#L221-L223)
 - All my rest [`.configs/`](https://github.com/pivoshenko/dotfiles/tree/main/dotfiles/.config), [`dotfiles/`](https://github.com/pivoshenko/dotfiles/tree/main/dotfiles) and [`wallpapers/`](https://github.com/pivoshenko/dotfiles/tree/main/wallpapers) :3
 
 ## Main principles
@@ -56,7 +56,7 @@ What's in here?
 > [!IMPORTANT]
 > I am planning to use [`dotbot`](https://github.com/anishathalye/dotbot) to set everything instead of `ansible` and `dotdrop` as it doesn't require any external dependencies and can be used as a submodule
 
-I am using [`dotdrop`](https://github.com/deadc0de6/dotdrop) to manage dotiles and [`ansible`](https://github.com/ansible/ansible) to set things up. Steps:
+I am using [`dotdrop`](https://github.com/deadc0de6/dotdrop) to manage dotfiles and [`ansible`](https://github.com/ansible/ansible) to set things up. Steps:
 
 1. Clone this repo with: `git clone https://github.com/pivoshenko/dotfiles dotfiles`
 2. `cd dotfiles/`
@@ -100,12 +100,12 @@ But, I try to keep them minimal: only ones I truly use.
 
 I mainly work with:
 
-- `python`
+- `Python`
 
-I also have several other languages installed. But I don't use them on a daily basis:
+I also have several other languages installed. But I don't use them daily:
 
-- `rust`
-- `ruby`
+- `Rust`
+- `Ruby`
 
 ### fzf
 
@@ -127,7 +127,7 @@ I use [`fzf`](https://github.com/junegunn/fzf) for several tasks:
 
 ![fzf-ctrl+k](https://raw.githubusercontent.com/pivoshenko/dotfiles/master/docs/assets/fzf_ctrl_k.png)
 
-- `ctrl+f` to fuzzy searc files by content and open/edit them
+- `ctrl+f` to fuzzy search files by content and open/edit them
 
 ![fzf-ctrl+f](https://raw.githubusercontent.com/pivoshenko/dotfiles/master/docs/assets/fzf_ctrl_f.png)
 
@@ -147,4 +147,3 @@ Here's the full list:
 
 - `~/.gitconfig.local` to store any user-specific data
 - `~/.shell/.local` to store local shell config, like usernames, passwords, tokens, `gpg` keys etc
-
