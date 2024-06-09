@@ -37,7 +37,6 @@ pyupgrade
 codespell
 deptry
 gitlint
-import-linter
 memestra
 mypy
 ruff
