@@ -26,6 +26,8 @@
   - [Installation](#installation)
   - [Apps](#apps)
   - [VSCode](#vscode)
+  - [Hotkey Daemons](#hotkey-daemons)
+  - [Tiling Windows Manager](#tiling-windows-manager)
   - [CLI](#cli)
     - [fzf](#fzf)
   - [Local configuration](#local-configuration)
@@ -89,7 +91,20 @@ I also sync apps from the App Store with `brew` via [`mas`](https://formulae.bre
 
 Here's a list of [`extensions`](https://github.com/pivoshenko/dotfiles/blob/main/dependencies/Brewfile#L221-L223) I use daily, but I try to keep my `VSCode` setup as simple as possible.
 
-I also quite heavily use [`helix`](https://github.com/helix-editor/helix) for in-terminal editing.
+I also quite heavily use [`helix`](https://github.com/helix-editor/helix) for in-terminal editing. You can find my `helix` and LSPs configuration [here](dotfiles/.config/helix).
+
+## Hotkey Daemons
+
+Because I am using a primarily external keyboard and in most of my apps I rely on either Vi/Kakoune motions I find it painful to use the mouse as it requires moving my right hand out of the keyboard and distracts my "zen" state :3 In most the dev apps you can enable such modes but in the default MacOS apps or windows manager such functionality is absent
+To resolve this issue I am using two daemons:
+
+- [Karabiner](https://karabiner-elements.pqrs.org) - to enable the Vi motions system-wise and rebind some of the keys for example `caps lock -> lctrl`
+- [`skhd`](https://github.com/koekeishiya/skhd) - to manage keybinding for tilling window manager
+
+## Tiling Windows Manager
+
+As my main tiling windows manager I am using [`yabai`](https://github.com/koekeishiya/yabai) which is light and very configurable.
+It works perfectly with `skhd` which allows me to focus and modify the layout without distractions.
 
 ## CLI
 
