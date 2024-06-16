@@ -146,4 +146,8 @@ export _ZO_FZF_OPTS="
   --preview='_fzf_complete_realpath {2..}'
 "
 
-eval "$(zoxide init zsh)"
+# remap default keybinding with `z name<tab>`
+eval "$(zoxide init zsh --no-cmd)"
+z () {
+  \__zoxide_z "$@"
+}
