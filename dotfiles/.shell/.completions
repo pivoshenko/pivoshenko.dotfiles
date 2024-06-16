@@ -1,6 +1,7 @@
 # `.completions` provides custom auto-completions
 
 # enable hidden files on completion
+setopt globdots
 zstyle ":completion:*" special-dirs true
 
 # hide parents
@@ -15,7 +16,39 @@ zstyle ":completion:*" menu no
 # switch groups using `[` and `]`
 zstyle ":fzf-tab:*" switch-group "[" "]"
 
+# preserve my layout
+local fzf_flags
+zstyle -a ':fzf-tab:*' fzf-flags fzf_flags
+fzf_flags=( "${fzf_flags[@]}" )
+zstyle ':fzf-tab:*' fzf-flags $fzf_flags
+
 # complete `ls` / `cat` / etc
 zstyle ':fzf-tab:complete:(\\|*/|)(ls|gls|bat|cat|cd|rm|cp|mv|ln|hx|code|open|tree|source):*' \
   fzf-preview \
   '_fzf_complete_realpath "$realpath"'
+
+
+# complete `killall`
+zstyle ':completion:*:*:killall:*:*' command 'ps -u "$USERNAME" -o comm'
+zstyle ':fzf-tab:complete:(\\|*/|)killall:*' fzf-preview \
+  'ps aux | ag "$word" | _fzf_complete_realpath'
+
+# complete `zoxide` using `z name<tab>`
+_z () {
+  local word
+  word=$words[-1]
+
+  local query
+  query="$(zoxide query -a -l "$word")"
+  if [ -z "$query" ]; then
+    _arguments "1:filename:_path_files"
+  else
+    local args
+    args="$(zoxide query -a -l)"
+    _arguments "1:paths:($args)"
+  fi
+}
+
+compdef _z z
+zstyle ':fzf-tab:complete:(\\|*/|)z:*' fzf-preview \
+  '_fzf_complete_realpath "$word"'
