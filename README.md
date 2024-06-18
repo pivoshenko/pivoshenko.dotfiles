@@ -152,7 +152,7 @@ I use [`fzf`](https://github.com/junegunn/fzf) for several tasks:
 
 - `z <name> tab` to enable fuzzy finder for [`zoxide`](https://github.com/ajeetdsouza/zoxide)
 
-![fzf-space+tab](https://raw.githubusercontent.com/pivoshenko/dotfiles/master/docs/assets/fzf_space_tab.png)
+![fzf-z+tab](https://raw.githubusercontent.com/pivoshenko/dotfiles/master/docs/assets/fzf_z_tab.png)
 
 ## Local configuration
 
