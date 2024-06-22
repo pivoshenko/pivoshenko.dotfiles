@@ -77,6 +77,7 @@ update () {
   cargo install-update -a
   npm update -g
   zplug update
+  gh extension upgrade --all
   omz update
 }
 
