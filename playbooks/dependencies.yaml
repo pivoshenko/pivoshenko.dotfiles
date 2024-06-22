@@ -4,48 +4,30 @@
     ansible_connection: local
 
   tasks:
-    - name: Brewfile
+    - name: homebrew
+      tags: homebrew
       ignore_errors: true
       ansible.builtin.shell:
         cmd: |
           brew bundle --file "../dependencies/Brewfile"
 
+    - name: pip
+      tags: pip
+      ignore_errors: true
+      ansible.builtin.shell:
+        cmd: |
+          brew bundle --file "../dependencies/requirements.txt"
+
     - name: cargo
-      community.general.cargo:
-        name: "{{ item }}"
-      with_items:
-          # explore GitHub repos using xplr via GitHub CLI
-        - gh-xplr
-        # pluggable terminal workspace, with terminal multiplexer as the base feature
-        - zellij
-        # TOML toolkit written in Rust
-        - taplo-cli
+      tags: cargo
+      ignore_errors: true
+      ansible.builtin.shell:
+        cmd: |
+          grep -v "^#" "../dependencies/cargo.txt" | xargs cargo install
 
     - name: npm
-      community.general.npm:
-        name: "{{ item }}"
-        global: true
-        state: latest
-      with_items:
-        # edit GitHub labels from the command line
-        - git-labelmaker
-        # bash language server that brings an IDE-like experience for bash scripts to most editors
-        - bash-language-server
-        # a language server for Dockerfiles powered by Node.js
-        - dockerfile-language-server-nodejs
-        # tool to verify that your files are in harmony with your .editorconfig
-        - editorconfig-checker
-        # interface for building GraphQL language services for IDEs
-        - graphql-language-service-cli
-        # interface for building GraphQL language services for IDEs
-        - graphql-language-service-server
-        #  a command line tool to validate GraphQL schema definitions
-        - graphql-schema-linter
-        # LSP implementation for TypeScript wrapping
-        - typescript-language-server
-        # HTML/CSS/JSON/ESLint language servers
-        - vscode-langservers-extracted
-        # JSON language service extracted from VSCode to be reused
-        - vscode-json-languageservice
-        # language server for YAML Files
-        - yaml-language-server@next
+      tags: npm
+      ignore_errors: true
+      ansible.builtin.shell:
+        cmd: |
+          grep -v "^#" "../dependencies/npm.txt" | xargs npm install -g

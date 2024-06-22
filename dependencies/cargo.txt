@@ -1,0 +1,6 @@
+# explore GitHub repos using xplr via GitHub CLI
+gh-xplr
+# pluggable terminal workspace with terminal multiplexer as the base feature
+zellij
+# TOML toolkit written in Rust
+taplo-cli
