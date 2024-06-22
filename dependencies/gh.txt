@@ -1,0 +1,4 @@
+# GitHub Copilot CLI
+github/gh-copilot
+# CLI dashboard for GitHub
+dlvhdr/gh-dash
