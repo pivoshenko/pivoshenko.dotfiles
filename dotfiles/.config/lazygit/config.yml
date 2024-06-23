@@ -124,7 +124,7 @@ customCommands:
 
       Write your 10 commit messages below in the format shown in Output Template section
       above." | fzf --height 40% --border --ansi --preview "echo {}" --preview-window=up:wrap
-      | xargs -I {} bash -c "echo \"{}\" > .git/COMMIT_EDITMSG && vim .git/COMMIT_EDITMSG
+      | xargs -I {} bash -c "echo \"{}\" > .git/COMMIT_EDITMSG && hx .git/COMMIT_EDITMSG
       && [ -s .git/COMMIT_EDITMSG ] && git commit -F .git/COMMIT_EDITMSG || echo \"Commit
       message is empty, commit aborted.\""
 
