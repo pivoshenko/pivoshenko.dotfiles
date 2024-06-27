@@ -35,18 +35,9 @@ zstyle ':fzf-tab:complete:(\\|*/|)killall:*' fzf-preview \
 
 # complete `zoxide` using `z name<tab>`
 _z () {
-  local word
-  word=$words[-1]
-
-  local query
-  query="$(zoxide query -a -l "$word")"
-  if [ -z "$query" ]; then
-    _arguments "1:filename:_path_files"
-  else
-    local args
-    args="$(zoxide query -a -l)"
-    _arguments "1:paths:($args)"
-  fi
+  local args
+  args="$(zoxide query -a -l)"
+  _arguments "1:paths:($args)"
 }
 
 compdef _z z
