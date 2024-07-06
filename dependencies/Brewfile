@@ -169,8 +169,6 @@ brew "ruby-build"
 brew "rbenv"
 # rust toolchain installer
 brew "rustup-init"
-# comprehensive project and package management solution for Python
-brew "rye"
 # Spotify for the terminal written in Rust
 brew "spotify-tui"
 # Spotify customization
