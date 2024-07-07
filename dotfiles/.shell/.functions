@@ -5,18 +5,17 @@ rgp () {
   find . -name ".git" -type d | sed 's/\/.git//' |  xargs -P10 -I{} git -C {} pull
 }
 
+# delete merged branches locally and remotely
+rgc () {
+  git branch -r --merged | grep -v '\*\|master\|main\|develop' | sed 's/origin\///' | xargs -n 1 git push --delete origin
+  git fetch -p
+}
+
 # delete Python cache directories
 pyclean () {
   find . \
     | grep -E '(__pycache__|\.(mypy_)?cache|\.hypothesis\.py[cod]|\.(pytest_)?cache|\.ropeproject|\.(ruff_)?cache|\.(ipynb_)?checkpoints|.coverage|coverage.xml$)' \
     | xargs rm -rf
-}
-
-# delete merged branches locally and remotely
-gitclean () {
-  git branch --merged | grep -v '\*\|master\|main\|develop' | xargs -n 1 git branch -d
-  git branch -r --merged | grep -v '\*\|master\|main\|develop' | sed 's/origin\///' | xargs -n 1 git push --delete origin
-  git fetch -p
 }
 
 # delete backup files
