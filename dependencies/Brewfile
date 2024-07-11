@@ -201,6 +201,8 @@ brew "ansible-language-server"
 brew "dotenv-linter"
 # general purpose language server
 brew "efm-langserver"
+# Language Server and Debugger for Elixir
+brew "elixir-ls"
 # smarter Dockerfile linter to validate best practices
 brew "hadolint"
 # LSP for LanguageTool with support for Latex
