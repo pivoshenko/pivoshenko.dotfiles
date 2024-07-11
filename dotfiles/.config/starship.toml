@@ -59,6 +59,9 @@ disabled = false
 [golang]
 symbol = " "
 
+[gleam]
+symbol = " "
+
 [haskell]
 symbol = " "
 
