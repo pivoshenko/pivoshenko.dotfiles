@@ -40,10 +40,6 @@ cask "insomnia"
 cask "jetbrains-toolbox"
 # keyboard customiser
 cask "karabiner-elements"
-# file archiver
-cask "keka"
-# logitech options+
-cask "logi-options-plus"
 # password manager
 cask "nordpass"
 # VPN client for secure internet access and private browsing
@@ -52,8 +48,6 @@ cask "nordvpn"
 cask "obsidian"
 # peer to peer torrent client
 cask "qbittorrent"
-# custom spotlight
-cask "raycast"
 # team communication and collaboration software
 cask "slack"
 # quicklook extension for source files
