@@ -37,9 +37,9 @@
 What's in here?
 
 - All my `brew` dependencies including applications, fonts, etc. See [`Brewfile`](https://github.com/pivoshenko/dotfiles/blob/main/dependencies/Brewfile)
-- All my global `Python`, `cargo` and `npm` dependencies including LSP, LSP plugins, etc. See [`requirements`](https://github.com/pivoshenko/dotfiles/blob/main/dependencies/requirements.txt),[`cargo`](https://github.com/pivoshenko/dotfiles/blob/main/playbooks/dependencies.yaml#L13) and [`npm`](https://github.com/pivoshenko/dotfiles/blob/main/playbooks/dependencies.yaml#L24)
+- All my global `Python`, `cargo` and `npm` dependencies including LSP, LSP plugins, etc. See [`requirements`](https://github.com/pivoshenko/dotfiles/blob/main/dependencies/requirements.txt),[`cargo`](https://github.com/pivoshenko/dotfiles/blob/main/dependencies/cargo.txt) and [`npm`](https://github.com/pivoshenko/dotfiles/blob/main/dependencies/npm.txt)
 - All my `macOS` configuration. See [`macos`](https://github.com/pivoshenko/dotfiles/blob/main/macos/settings.sh)
-- All my shell configurations. See [`.shell/`](https://github.com/pivoshenko/dotfiles/blob/main/macos/settings.sh) and [`.zshrc`](https://github.com/pivoshenko/dotfiles/tree/main/dotfiles/.zshrc)
+- All my shell configurations. See [`.shell/`](https://github.com/pivoshenko/dotfiles/blob/main/shell) and [`.zshrc`](https://github.com/pivoshenko/dotfiles/tree/main/dotfiles/.zshrc)
 - All my `VSCode` configurations and extensions. See [`vscode/`](https://github.com/pivoshenko/dotfiles/tree/main/dotfiles/vscode) and [`extensions`](https://github.com/pivoshenko/dotfiles/blob/main/dependencies/Brewfile#L221-L223)
 - All my rest [`.configs/`](https://github.com/pivoshenko/dotfiles/tree/main/dotfiles/.config), [`dotfiles/`](https://github.com/pivoshenko/dotfiles/tree/main/dotfiles) and [`wallpapers/`](https://github.com/pivoshenko/dotfiles/tree/main/wallpapers) :3
 
@@ -71,6 +71,7 @@ ansible-playbook playbooks/shell.yaml
 # install dependencies
 ansible-playbook playbooks/dependencies.yaml
 ```
+
 4. Run the following commands to install configs:
 
 ```shell
