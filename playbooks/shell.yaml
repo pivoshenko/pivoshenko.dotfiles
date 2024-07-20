@@ -28,9 +28,3 @@
       ansible.builtin.shell:
         cmd: |
           sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-    - name: Install dotfiles
-      ignore_errors: true
-      ansible.builtin.shell:
-        cmd: |
-          dotdrop -c "../dotdrop.yaml" -p base install -f
