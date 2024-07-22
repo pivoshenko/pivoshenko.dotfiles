@@ -3,7 +3,6 @@
 # =============================================================================================
 
 tap "homebrew/bundle"
-tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/services"
 
@@ -11,23 +10,19 @@ tap "homebrew/services"
 # Fonts
 # =============================================================================================
 
-cask "font-jetbrains-mono"
+cask "font-jetbrains-mono-nerd-font"
 cask "font-symbols-only-nerd-font"
 
 # =============================================================================================
 # Apps
 # =============================================================================================
 
-# memory training application
-cask "anki"
 # installer for betterdiscord
 cask "betterdiscord-installer"
 # universal database tool and SQL client
 cask "dbeaver-community"
 # voice and text chat software
 cask "discord"
-# web browser focusing on privacy
-cask "duckduckgo"
 # screen colour temperature controller
 cask "flux"
 # web browser
