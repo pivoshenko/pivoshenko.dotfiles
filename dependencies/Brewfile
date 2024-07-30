@@ -41,12 +41,8 @@ cask "nordpass"
 cask "nordvpn"
 # knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
-# peer to peer torrent client
-cask "qbittorrent"
 # team communication and collaboration software
 cask "slack"
-# quicklook extension for source files
-cask "syntax-highlight"
 # music streaming service
 cask "spotify"
 # messaging app with a focus on speed and security
@@ -64,6 +60,7 @@ cask "visual-studio-code"
 # =============================================================================================
 
 cask "qlmarkdown"
+cask "syntax-highlight"
 
 # =============================================================================================
 # Programming languages, REPLs
@@ -96,8 +93,6 @@ brew "bottom"
 brew "commitizen"
 # query HTTP, HTTPS or FTP server
 brew "curl"
-# load/unload environment variables based on $PWD
-brew "direnv"
 # dotfiles manager
 brew "dotdrop"
 # pack, ship and run any application as a lightweight container
@@ -148,8 +143,6 @@ brew "nvm"
 brew "pinentry-mac"
 # python version management
 brew "pyenv"
-# pyenv plugin to manage virtualenv
-brew "pyenv-virtualenv"
 # search tool like grep and the silver searcher
 brew "ripgrep"
 # install various Ruby versions and implementations
@@ -161,9 +154,11 @@ brew "rustup-init"
 # Spotify for the terminal written in Rust
 brew "spotify-tui"
 # Spotify customization
-brew "spicetify/homebrew-tap/spicetify-cli"
+brew "spicetify-cli"
 # cross-shell prompt for astronauts
 brew "starship"
+# pluggable terminal workspace with terminal multiplexer as the base feature
+brew "taplo"
 # display directories as trees (with optional color/html output)
 brew "tree"
 # command-line unarchiving tools supporting multiple formats
@@ -176,6 +171,8 @@ brew "wget"
 brew "zoxide"
 # next-generation plugin manager for zsh
 brew "zplug"
+# pluggable terminal workspace with terminal multiplexer as the base feature
+brew "zellij"
 
 # =============================================================================================
 # Linters, formatters and LSPs
@@ -186,8 +183,12 @@ brew "actionlint"
 # language server for Ansible files
 brew "ansible-lint"
 brew "ansible-language-server"
+# bash language server that brings an IDE-like experience for bash scripts to most editors
+brew "bash-language-server"
 # linter for .env files
 brew "dotenv-linter"
+# a language server for Dockerfiles powered by Node.js
+brew "dockerfile-language-server"
 # general purpose language server
 brew "efm-langserver"
 # Language Server and Debugger for Elixir
@@ -204,8 +205,14 @@ brew "shfmt"
 brew "tectonic"
 # implementation of the Language Server Protocol for LaTeX
 brew "texlab"
+# LSP implementation for TypeScript wrapping
+brew "typescript-language-server"
+# HTML/CSS/JSON/ESLint language servers
+brew "vscode-langservers-extracted"
 # extensible command-line tool to format YAML files
 brew "yamlfmt"
+# language server for YAML Files
+brew "yaml-language-server"
 
 # =============================================================================================
 # VSCode extensions
@@ -214,14 +221,13 @@ brew "yamlfmt"
 vscode "alefragnani.project-manager"
 vscode "catppuccin.catppuccin-vsc"
 vscode "charliermarsh.ruff"
-vscode "colinfang.my-nbpreviewer"
-vscode "databricks.sqltools-databricks-driver"
 vscode "donjayamanne.python-environment-manager"
 vscode "dorzey.vscode-sqlfluff"
 vscode "drcika.apc-extension"
 vscode "eamodio.gitlens"
 vscode "editorconfig.editorconfig"
 vscode "equinusocio.vsc-material-theme-icons"
+vscode "fill-labs.dependi"
 vscode "github.vscode-pull-request-github"
 vscode "gleam.gleam"
 vscode "griimick.vhs"
@@ -230,7 +236,6 @@ vscode "ibrahimfadel.yabai-syntax-highlighting"
 vscode "jakebecker.elixir-ls"
 vscode "james-yu.latex-workshop"
 vscode "kdl-org.kdl"
-vscode "knowsuchagency.pdm-task-provider"
 vscode "littlefoxteam.vscode-python-test-adapter"
 vscode "marclipovsky.string-manipulation"
 vscode "matangover.mypy"
@@ -251,7 +256,6 @@ vscode "ms-vscode.live-server"
 vscode "ms-vscode.remote-explorer"
 vscode "ms-vscode.remote-server"
 vscode "ms-vscode.test-adapter-converter"
-vscode "mtxr.sqltools"
 vscode "naumovs.color-highlight"
 vscode "njpwerner.autodocstring"
 vscode "oderwat.indent-rainbow"
@@ -261,12 +265,10 @@ vscode "robertostermann.inline-parameters-extended"
 vscode "rodolphebarbanneau.python-docstring-highlighter"
 vscode "rust-lang.rust-analyzer"
 vscode "samuelcolvin.jinjahtml"
-vscode "shd101wyy.markdown-preview-enhanced"
 vscode "silverquark.dancehelix"
 vscode "swellaby.vscode-rust-test-adapter"
 vscode "tamasfe.even-better-toml"
 vscode "tgriesser.avro-schemas"
-vscode "tonybaloney.python-task-provider"
 vscode "trond-snekvik.simple-rst"
 vscode "vadimcn.vscode-lldb"
 vscode "visualstudioexptteam.intellicode-api-usage-examples"
@@ -275,4 +277,3 @@ vscode "visualstudioexptteam.vscodeintellicode-completions"
 vscode "vspacecode.whichkey"
 vscode "wakatime.vscode-wakatime"
 vscode "yzhang.markdown-all-in-one"
-vscode "zeshuaro.vscode-python-poetry"
