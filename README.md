@@ -27,8 +27,7 @@
 
 What's in here?
 
-- All my `brew` dependencies including applications, fonts, etc. See [`Brewfile`](dependencies/Brewfile)
-- All my global `Python`, `cargo` and `npm` dependencies including LSP, LSP plugins, etc. See [`requirements`](dependencies/requirements.txt),[`cargo`](dependencies/cargo.txt) and [`npm`](dependencies/npm.txt)
+- All my `brew` dependencies including applications, fonts, LSPs etc. See [`Brewfile`](dependencies/Brewfile)
 - All my `macOS` configuration. See [`macos`](macos/settings.sh)
 - All my shell configurations. See [`.shell/`](dotfiles/.shell) and [`.zshrc`](dotfiles/.zshrc)
 - All my `VSCode` configurations and extensions. See [`vscode/`](dotfiles/vscode) and [`extensions`](dependencies/Brewfile)
