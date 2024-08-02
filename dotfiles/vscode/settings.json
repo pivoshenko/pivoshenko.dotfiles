@@ -4,7 +4,7 @@
   // =============================================================================================
 
   // theme
-  "catppuccin.accentColor": "green",
+  "catppuccin.accentColor": "mauve",
 
   // icons
   "workbench.iconTheme": "eq-material-theme-icons-ocean",
@@ -39,9 +39,9 @@
     "statusBar.foreground": "#7f849c"
   },
   "workbench.layoutControl.enabled": false,
-  "workbench.preferredDarkColorTheme": "Catppuccin Mocha",
-  "workbench.preferredHighContrastColorTheme": "Catppuccin Mocha",
-  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.preferredDarkColorTheme": "Catppuccin Macchiato",
+  "workbench.preferredHighContrastColorTheme": "Catppuccin Macchiato",
+  "workbench.colorTheme": "Catppuccin Macchiato",
   "workbench.preferredHighContrastLightColorTheme": "Catppuccin Latte",
   "workbench.preferredLightColorTheme": "Catppuccin Latte",
   "workbench.sideBar.location": "right",
@@ -52,7 +52,6 @@
   "workbench.editor.decorations.colors": false,
   "workbench.editor.enablePreview": false,
   "workbench.editor.showIcons": false,
-  "workbench.editor.showTabs": "single",
 
   // window
   "window.commandCenter": false,
@@ -76,6 +75,7 @@
     }
   },
   "apc.stylesheet": {
+    "*": "font-family: JetBrainsMono Nerd Font Mono"
     // TODO temporary solution as with it Jupyter interface doesn't work properly
     // ".monaco-toolbar": {
     //   "visible": "hidden !important",
@@ -97,31 +97,30 @@
   // Fonts
   // =============================================================================================
 
+  "debug.console.fontSize": 15,
   "debug.console.fontFamily": "JetBrainsMono Nerd Font",
 
+  "editor.fontSize": 15,
+  "editor.fontLigatures": true,
   "editor.codeLensFontFamily": "JetBrainsMono Nerd Font Mono",
   "editor.fontFamily": "JetBrainsMono Nerd Font",
   "editor.inlayHints.fontFamily": "JetBrainsMono Nerd Font Mono",
   "editor.inlineSuggest.fontFamily": "JetBrainsMono Nerd Font",
 
+  "terminal.integrated.fontSize": 15,
+  "terminal.integrated.lineHeight": 1.1,
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+  "terminal.integrated.fontWeight": "normal",
 
   "notebook.output.fontFamily": "JetBrainsMono Nerd Font",
 
-  "debug.console.fontSize": 15,
-
   "scm.inputFontSize": 15,
-
-  "editor.fontSize": 15,
-  "editor.fontLigatures": true,
-
-  "terminal.integrated.fontSize": 15,
-  "terminal.integrated.fontWeight": "normal",
-  "terminal.integrated.lineHeight": 1.1,
 
   // =============================================================================================
   // Core
   // =============================================================================================
+
+  "update.mode": "none",
 
   "files.autoSave": "afterDelay",
 
