@@ -1,0 +1,41 @@
+matches:
+  # =================================================
+  # git commits
+  # =================================================
+
+  - trigger: ":gcbuildu"
+    form: "build([[tool]]): update dependencies"
+    form_fields:
+      tool:
+        default: poetry
+
+  - trigger: ":gcbuilda"
+    form: "build([[tool]]): add `[[dependency]]`"
+    form_fields:
+      tool:
+        default: poetry
+
+  - trigger: ":gcbuildr"
+    form: "build([[tool]]): remove `[[dependency]]`"
+    form_fields:
+      tool:
+        default: poetry
+
+  - trigger: ":gcgsf"
+    form: "style: run formatters"
+
+  - trigger: ":gchooksu"
+    replace: "ci(pre-commit): update hooks"
+
+  - trigger: ":gchooksa"
+    form: "ci(pre-commit): add `[[hook]]`"
+
+  - trigger: ":gchooksr"
+    form: "ci(pre-commit): remove `[[hook]]`"
+
+  # =================================================
+  # git commands
+  # =================================================
+
+  - trigger: ":gri"
+    replace: "git rebase -i HEAD~10"

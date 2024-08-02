@@ -1,5 +1,9 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
+# =================================================
+# Themes
+# =================================================
+
 palette = "catppuccin_macchiato"
 
 [palettes.catppuccin_frappe]
@@ -113,6 +117,10 @@ surface0 = "#313244"
 base = "#1e1e2e"
 mantle = "#181825"
 crust = "#11111b"
+
+# =================================================
+# Configuration Per Language/Package
+# =================================================
 
 [aws]
 symbol = "󰸏 "

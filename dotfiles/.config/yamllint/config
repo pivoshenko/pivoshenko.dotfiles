@@ -1,7 +1,0 @@
-extends: default
-
-rules:
-  document-start:
-    present: false
-  line-length:
-    max: 150

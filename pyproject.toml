@@ -1,0 +1,5 @@
+[tool.pyright]
+exclude = ["dotdrop"]
+
+[tool.mypy]
+exclude = ["dotdrop"]

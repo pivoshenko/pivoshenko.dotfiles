@@ -1,0 +1,404 @@
+start-at-login = true
+
+# =================================================
+# Commands
+# =================================================
+
+# commands that run after login to macOS user session
+after-login-command = []
+# commands that run after `aerospace` startup
+after-startup-command = []
+# list of callbacks which allow to run arbitrary processes when focused workspace changes
+# notify `sketchybar` about workspace change
+exec-on-workspace-change = [
+  "/bin/bash",
+  "-c",
+  "sketchybar --trigger aerospace_workspace_changed FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE"
+]
+
+# =================================================
+# Padding
+# =================================================
+
+# gaps between windows (inner-*) and between monitor edges (outer-*)
+[gaps]
+inner.horizontal = 10
+inner.vertical = 10
+outer.left = 10
+outer.bottom = 10
+outer.top = 55
+# for the M1 MacBook with the notch
+# outer.top = [{ monitor.main = 10 }, { monitor.secondary = 55 }, 10]
+outer.right = 10
+
+# =================================================
+# External Monitors Setup
+# =================================================
+
+# assign workspaces to always appear on particular monitors
+[workspace-to-monitor-force-assignment]
+1 = "built-in"
+2 = "built-in"
+3 = "built-in"
+4 = ["secondary", "dell"]
+5 = ["secondary", "dell"]
+6 = ["secondary", "dell"]
+7 = ["secondary", "dell"]
+8 = ["secondary", "dell"]
+9 = ["secondary", "dell"]
+
+# =================================================
+# Keybindings - Modes Switch
+# =================================================
+
+[mode.main.binding]
+alt-shift-semicolon = "mode service"
+alt-shift-r = "mode resize"
+
+# =================================================
+# Keybindings - Focus
+# =================================================
+
+alt-h = "focus left"
+alt-j = "focus down"
+alt-k = "focus up"
+alt-l = "focus right"
+
+alt-1 = "workspace 1"
+alt-2 = "workspace 2"
+alt-3 = "workspace 3"
+alt-4 = "workspace 4"
+alt-5 = "workspace 5"
+alt-6 = "workspace 6"
+alt-7 = "workspace 7"
+alt-8 = "workspace 8"
+alt-9 = "workspace 9"
+
+alt-tab = "workspace-back-and-forth"
+
+alt-x = "workspace next"
+alt-z = "workspace prev"
+
+alt-rightSquareBracket = "focus-monitor next"
+alt-leftSquareBracket = "focus-monitor prev"
+
+# =================================================
+# Keybindings - Layout
+# =================================================
+
+alt-f = "fullscreen"
+
+alt-shift-h = "move left"
+alt-shift-j = "move down"
+alt-shift-k = "move up"
+alt-shift-l = "move right"
+
+alt-slash = "layout tiles horizontal vertical"
+alt-comma = "layout accordion horizontal vertical"
+
+# =================================================
+# Keybindings - Workspaces
+# =================================================
+
+alt-shift-1 = "move-node-to-workspace 1"
+alt-shift-2 = "move-node-to-workspace 2"
+alt-shift-3 = "move-node-to-workspace 3"
+alt-shift-4 = "move-node-to-workspace 4"
+alt-shift-5 = "move-node-to-workspace 5"
+alt-shift-6 = "move-node-to-workspace 6"
+alt-shift-7 = "move-node-to-workspace 7"
+alt-shift-8 = "move-node-to-workspace 8"
+alt-shift-9 = "move-node-to-workspace 9"
+
+alt-shift-tab = "move-workspace-to-monitor --wrap-around next"
+
+# =================================================
+# Keybindings - Modes
+# =================================================
+
+[mode.service.binding]
+# reload config
+esc = ["reload-config", "mode main"]
+# reset layout
+r = ["flatten-workspace-tree", "mode main"]
+# toggle between floating and tiling layout
+f = ["layout floating tiling", "mode main"]
+# close all background windows
+backspace = ["close-all-windows-but-current", "mode main"]
+alt-shift-h = ["join-with left", "mode main"]
+alt-shift-j = ["join-with down", "mode main"]
+alt-shift-k = ["join-with up", "mode main"]
+alt-shift-l = ["join-with right", "mode main"]
+
+[mode.resize.binding]
+h = "resize width -50"
+j = "resize height +50"
+k = "resize height -50"
+l = "resize width +50"
+e = "balance-sizes"
+minus = "resize smart -50"
+equal = "resize smart +50"
+enter = "mode main"
+esc = "mode main"
+
+# =================================================
+# Workspaces 
+# =================================================
+
+#1 Comms (Telegram, Discord, etc.)
+#2 Media
+#3 Notes (Obsidian)
+#4 Browsing (Zen)
+#5 Terminal (iTerm2)
+#6 Coding (Zed, VSCode)
+#7 Databases (MongoDB Compass, DBeaver)
+#8 Misc (Insomnia, Postman)
+#9 Misc
+
+# =================================================
+# Workspaces - #1
+# =================================================
+
+[[on-window-detected]]
+if.app-id = "com.hnc.Discord"
+run = "move-node-to-workspace 1"
+
+[[on-window-detected]]
+if.app-id = "com.microsoft.Outlook"
+run = "move-node-to-workspace 1"
+
+[[on-window-detected]]
+if.app-id = "com.microsoft.teams2"
+run = "move-node-to-workspace 1"
+
+[[on-window-detected]]
+if.app-id = "ru.keepcoder.Telegram"
+run = "move-node-to-workspace 1"
+
+# =================================================
+# Workspaces - #2
+# =================================================
+
+# =================================================
+# Workspaces - #3
+# =================================================
+
+[[on-window-detected]]
+if.app-id = "md.obsidian"
+run = "move-node-to-workspace 3"
+
+# =================================================
+# Workspaces - #4
+# =================================================
+
+[[on-window-detected]]
+if.app-id = "app.zen-browser.zen"
+run = "move-node-to-workspace 4"
+
+[[on-window-detected]]
+if.app-id = "com.google.Chrome"
+run = "move-node-to-workspace 4"
+
+# =================================================
+# Workspaces - #5
+# =================================================
+
+[[on-window-detected]]
+if.app-id = "com.googlecode.iterm2"
+run = "move-node-to-workspace 5"
+
+[[on-window-detected]]
+if.app-id = "com.mitchellh.ghostty"
+run = "move-node-to-workspace 5"
+
+# =================================================
+# Workspaces - #6
+# =================================================
+
+[[on-window-detected]]
+if.app-id = "com.microsoft.VSCode"
+run = "move-node-to-workspace 6"
+
+[[on-window-detected]]
+if.app-id = "dev.zed.Zed"
+run = "move-node-to-workspace 6"
+
+# =================================================
+# Workspaces - #7
+# =================================================
+
+[[on-window-detected]]
+if.app-id = "com.mongodb.compass"
+run = "move-node-to-workspace 7"
+
+[[on-window-detected]]
+if.app-id = "org.jkiss.dbeaver.core.product"
+run = "move-node-to-workspace 7"
+
+# =================================================
+# Workspaces - #8
+# =================================================
+
+[[on-window-detected]]
+if.app-id = "com.insomnia.app"
+run = "move-node-to-workspace 8"
+
+# =================================================
+# Workspaces - Floating Applications
+# =================================================
+
+[[on-window-detected]]
+if.app-id = "app.betterdiscord.installer"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.apple.ActivityMonitor"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.apple.AddressBook"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.apple.AppStore"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.apple.Dictionaries"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.apple.finder"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.apple.findmy"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.apple.iCal"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.apple.Mail"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.apple.Maps"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.apple.Messenger"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.apple.Music"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.apple.Notes"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.apple.PhotoBooth"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.apple.Photos"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.apple.Preview"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.apple.reminders"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.apple.Safari"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.apple.Siri"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.apple.systempreferences"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.apple.Terminal"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.docker.docker"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.federicoterzi.espanso"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.jetbrains.toolbox.helper"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.macpaw.CleanMyMac4"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.microsoft.Excel"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.microsoft.OneDrive"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.microsoft.Powerpoint"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.microsoft.Word"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.nordsec.nordpass"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.nordvpn.macos"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.paloaltonetworks.GlobalProtect.client"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.postmanlabs.mac"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.spotify.client"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "io.rancherdesktop.app"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "org.herf.Flux"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "org.pqrs.Karabiner-Elements.Settings"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "org.pqrs.Karabiner-EventViewer"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "pl.maketheweb.cleanshotx"
+run = "layout floating"

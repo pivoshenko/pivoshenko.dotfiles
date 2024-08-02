@@ -1,14 +1,21 @@
 {
+    // =================================================
+    // UI General
+    // =================================================
+
+    // set custom theme
     "theme": "Catppuccin Macchiato",
+    "preferred-light-theme": "Catppuccin Latte",
+    "preferred-dark-theme": "Catppuccin Macchiato",
     "theme-scrollbars": true,
     "adaptive-theme": false,
-    "preferred-light-theme": "JupyterLab Light",
-    "preferred-dark-theme": "JupyterLab Dark",
+
+    // set custom fonts
     "overrides": {
         "code-font-family": "JetBrainsMono Nerd Font Mono",
-        "code-font-size": null,
+        "code-font-size": "16",
         "content-font-family": "JetBrainsMono Nerd Font Mono",
-        "content-font-size1": null,
+        "content-font-size1": "16",
         "ui-font-family": "JetBrainsMono Nerd Font Mono",
         "ui-font-size1": null
     }

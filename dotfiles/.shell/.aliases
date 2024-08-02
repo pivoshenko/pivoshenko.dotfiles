@@ -1,29 +1,20 @@
-# `.aliases` provides custom aliases for the shell
+# use custom syntax highlighting
+alias cat="bat --paging never --decorations never --plain"
 
-# lock the screen (when going AFK)
-alias afk="osascript -e 'tell app \"System Events\" to key code 12 using {control down, command down}'"
-
-# list files and directories
-alias ls="eza -a --level=1 --icons"
-
-# show file content
-alias cat="bat -p"
-
-# run git TUI
-alias lg="lazygit"
-
-# run Docker TUI
-alias ld="lazydocker"
-
-# run terminal multiplexer
-alias zj="zellij"
-
-# show local ip
+# display local IP address
 alias localip='ipconfig getifaddr en0'
 
-# copy the public key to clipboard
-alias pubkey="cat ~/.ssh/id_rsa.pub | pbcopy | echo '=> Copied to pasteboard.'"
+# copy public key to clipboard
+alias pubkey="cat ~/.ssh/id_ed25519.pub | pbcopy | echo '=> Copied to the clipboard'"
 
-# quick emoji
-alias shrug="echo '¯\_(ツ)_/¯' | pbcopy | echo '=> Copied to pasteboard.'"
-alias nya="echo ':3' | pbcopy | echo '=> Copied to pasteboard.'"
+# =================================================
+# ¯\_(ツ)_/¯
+# =================================================
+
+alias ld="lazydocker"
+
+alias lg="lazygit"
+
+alias ls="eza -a --level=1 --icons --color=always"
+
+alias zj="zellij"

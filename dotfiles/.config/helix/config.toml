@@ -1,24 +1,49 @@
+# =================================================
+# Theme
+# =================================================
+
 theme = "catppuccin_macchiato"
 
+# =================================================
+# Editor
+# =================================================
+
 [editor]
-line-number = "relative"
 bufferline = "always"
-shell = ["zsh", "-c"]
-true-color = true
 color-modes = true
+completion-trigger-len = 1
 cursorline = true
+# minimum severity to show a diagnostic after the end of a line
+end-of-line-diagnostics = "hint"
+line-number = "relative"
 mouse = true
 rulers = [100]
-completion-trigger-len = 1
+shell = ["zsh", "-c"]
+true-color = true
+
+[editor.inline-diagnostics]
+# show a diagnostic on the primary cursor's line
+cursor-line = "error"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
 
 [editor.file-picker]
+git-ignore = false
 hidden = false
+ignore = false
+
+[editor.indent-guides]
+render = true
 
 [editor.lsp]
-display-messages = true
 display-inlay-hints = true
+display-messages = true
 
 [editor.statusline]
+center = []
 left = [
   "mode",
   "separator",
@@ -27,7 +52,6 @@ left = [
   "diagnostics",
   "workspace-diagnostics",
 ]
-center = []
 right = [
   "selections",
   "primary-selection-length",
@@ -40,20 +64,12 @@ right = [
 separator = "│"
 
 [editor.whitespace.render]
+newline = "none"
 space = "all"
 tab = "all"
-newline = "none"
 
 [editor.whitespace.characters]
-space = "·"
 nbsp = "⍽"
+space = "·"
 tab = "→"
 tabpad = "·"
-
-[editor.cursor-shape]
-insert = "bar"
-normal = "block"
-select = "underline"
-
-[editor.indent-guides]
-render = true

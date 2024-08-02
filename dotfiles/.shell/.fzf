@@ -1,9 +1,6 @@
-# `.fzf` is used to provide fzf config
-
-# =============================================================================================
+# =================================================
 # Themes
-# =============================================================================================
-
+# =================================================
 
 export FZF_CATPPUCCIN_LATTE=" \
   --color=bg+:#ccd0da,bg:#eff1f5,spinner:#dc8a78,hl:#d20f39 \
@@ -31,17 +28,14 @@ export FZF_CATPPUCCIN_MOCHA=" \
 
 export FZF_THEME=$FZF_CATPPUCCIN_MACCHIATO
 
-
-# =============================================================================================
+# =================================================
 # fzf
-# =============================================================================================
+# =================================================
 
 if [[ ! "$PATH" == */opt/fzf/bin* ]]; then
   export PATH="$PATH:$(brew --prefix)/opt/fzf/bin"
-  source "fzf-git.sh"
   eval "$(fzf --zsh)"
 fi
-
 
 export FZF_DEFAULT_COMMAND="
   fd \
@@ -50,29 +44,29 @@ export FZF_DEFAULT_COMMAND="
   --type l \
   --hidden \
   --follow \
-  --exclude ".git" \
-  --exclude ".svn" \
-  --exclude ".hg" \
-  --exclude "CVS" \
-  --exclude ".DS_Store" \
-  --exclude "node_modules" \
-  --exclude ".pytest_cache" \
-  --exclude ".mypy_cache" \
-  --exclude ".ropeproject" \
-  --exclude ".hypothesis" \
-  --exclude ".ruff_cache" \
-  --exclude ".ipynb_checkpoints" \
-  --exclude "__pycache__" \
-  --exclude ".coverage" \
-  --exclude "coverage.xml" \
-  --exclude ".cache" \
-  --exclude ".idea" \
-  --exclude ".venv" \
-  --exclude "venv" \
-  --exclude ".coverage" \
-  --exclude "htmlcoverage" \
-  --exclude "docs/build" \
-  --exclude ".ipynb_checkpoints"
+  --exclude '.git' \
+  --exclude '.svn' \
+  --exclude '.hg' \
+  --exclude 'CVS' \
+  --exclude '.DS_Store' \
+  --exclude 'node_modules' \
+  --exclude '.pytest_cache' \
+  --exclude '.mypy_cache' \
+  --exclude '.ropeproject' \
+  --exclude '.hypothesis' \
+  --exclude '.ruff_cache' \
+  --exclude '.ipynb_checkpoints' \
+  --exclude '__pycache__' \
+  --exclude '.coverage' \
+  --exclude 'coverage.xml' \
+  --exclude '.cache' \
+  --exclude '.idea' \
+  --exclude '.venv' \
+  --exclude 'venv' \
+  --exclude '.coverage' \
+  --exclude 'htmlcoverage' \
+  --exclude 'docs/build' \
+  --exclude '.ipynb_checkpoints'
 "
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
@@ -97,9 +91,9 @@ export FZF_CTRL_R_OPTS=" \
 export FZF_CTRL_T_OPTS="$FZF_DEFAULT_OPTS --preview '_fzf_complete_realpath {}'"
 export FZF_ALT_C_OPTS="$FZF_DEFAULT_OPTS --preview '_fzf_complete_realpath {}'"
 
-# =============================================================================================
+# =================================================
 # zoxide
-# =============================================================================================
+# =================================================
 
 export _ZO_FZF_OPTS="
   --height 30% -1 \
