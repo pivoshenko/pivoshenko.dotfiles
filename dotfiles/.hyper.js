@@ -25,7 +25,7 @@ module.exports = {
     showHamburgerMenu: "",
     showWindowControls: "",
     padding: "12px 14px",
-    catppuccinTheme: "mocha",
+    catppuccinTheme: "macchiato",
   },
 
   // =============================================================================================
