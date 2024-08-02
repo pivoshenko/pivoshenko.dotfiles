@@ -35,6 +35,7 @@ source "$HOME/.zplugrc"
 source "$HOME/.shell/.aliases"
 source "$HOME/.shell/.completions"
 source "$HOME/.shell/.exports"
+source "$HOME/.shell/.fzf"
 source "$HOME/.shell/.functions"
 source "$HOME/.shell/.keybindings"
 if [[ -f "$HOME/.shell/.local" ]]; then
