@@ -1,4 +1,4 @@
-theme = "catppuccin_mocha"
+theme = "catppuccin_macchiato"
 
 [editor]
 line-number = "relative"
@@ -19,16 +19,23 @@ display-messages = true
 display-inlay-hints = true
 
 [editor.statusline]
-left = ["mode", "spinner", "file-name", "file-type", "total-line-numbers", "file-encoding"]
+left = [
+  "mode",
+  "separator",
+  "version-control",
+  "spinner",
+  "diagnostics",
+  "workspace-diagnostics",
+]
 center = []
 right = [
   "selections",
   "primary-selection-length",
   "position",
   "spacer",
-  "diagnostics",
-  "workspace-diagnostics",
-  "version-control"
+  "total-line-numbers",
+  "file-name",
+  "file-type",
 ]
 separator = "│"
 
