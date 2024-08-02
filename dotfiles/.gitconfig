@@ -1,44 +1,66 @@
+[commit]
+# all commits should be GPG signed
+gpgsign = true
+
 [core]
+# enable CRLF line endings
 autocrlf = input
+# set text editor for the `commit` and `tag` commands
 editor = hx
+# set text viewer for use by Git commands
 pager = delta
 
 [credential]
+# set external helper to be called when a username or password credential is needed
 helper = store
 
-[push]
-default = simple
-
-[submodule]
-recurse = true
-fetchJobs = 0
-
 [delta]
-navigate = true
-light = false
-features = catppuccin-macchiato
-line-numbers = true
-side-by-side = true
+# set the theme for syntax highlighting
+features = "catppuccin_macchiato"
+# enable support for terminal hyperlinks
 hyperlinks = true
+# construct the correct URL
 hyperlinks-file-link-format = "file-line://{path}:{line}"
+# use only dark mode
+light = false
+# show two columns with the line numbers
+line-numbers = true
+# activate navigation keybindings
+navigate = true
+# activate side-by-side view for the diff
+side-by-side = true
 
 [diff]
 colorMoved = default
 
+[include]
+# include custom themes for the `git-delta`
+path = ~/.config/delta/catppuccin.gitconfig
+# include private configuration
+path = ~/.gitconfig.local
+
+[init]
+# override the default branch name for new repositories
+defaultBranch = main
+
 [interactive]
+# use `git-delta` to show colorized diff
 diffFilter = delta --color-only
 
 [merge]
+# set a style in which conflicted hunks are written out to working tree files upon merge
+# add a `|||||||` marker and the original text before the `=======` marker
 conflictstyle = diff3
 
+[push]
+# push the current branch with the same name on the remote
+default = simple
+
+[submodule]
+# disable parallel `fetch` and `clone` for submodules
+fetchJobs = 0
+recurse = true
+
 [user]
+# retrieve the values of `user.email` and `user.name only` from the configuration
 useConfigOnly = true
-
-[include]
-path = ~/.gitconfig.local
-
-[include]
-path = ~/.config/delta/catppuccin.gitconfig
-
-[init]
-defaultBranch = main

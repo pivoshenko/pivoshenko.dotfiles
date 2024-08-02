@@ -1,12 +1,18 @@
 source "$ZPLUG_HOME/init.zsh"
 
+# replace default completion selection menu with `fzf`
 zplug "Aloxaf/fzf-tab", depth:1
-zplug "junegunn/fzf-git.sh", as:command, use:"fzf-git.sh", depth:1
-zplug "zdharma-continuum/fast-syntax-highlighting", depth:1
-zplug "zsh-users/zsh-autosuggestions", depth:1
-zplug "jeffreytse/zsh-vi-mode", depth:1
-zplug "wbingli/zsh-wakatime", depth:1
 
+# `vi(vim)` mode
+zplug "jeffreytse/zsh-vi-mode", depth:1
+
+# feature-rich syntax highlighting
+zplug "zdharma-continuum/fast-syntax-highlighting", depth:1
+
+# fish-like autosuggestions
+zplug "zsh-users/zsh-autosuggestions", depth:1
+
+# install plugins if there are plugins that have not been installed
 if ! zplug check; then
   zplug install
 fi

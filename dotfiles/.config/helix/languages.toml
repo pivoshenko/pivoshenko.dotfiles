@@ -1,92 +1,30 @@
-[[language]]
-name = "bash"
-auto-format = false
-file-types = [
-  "sh",
-  "bash",
-  "zsh",
-  "zshenv",
-  "zlogin",
-  "zlogout",
-  "zprofile",
-  "zplugrc",
-  "zshrc",
-  "eclass",
-  "ebuild",
-  "bazelrc",
-  "Renviron",
-  "zsh-theme",
-  "ksh",
-  "cshrc",
-  "tcshrc",
-  "bashrc_Apple_Terminal",
-  "zshrc_Apple_Terminal",
-  { glob = "tmux.conf" },
-  { glob = ".bash_history" },
-  { glob = ".bash_login" },
-  { glob = ".bash_logout" },
-  { glob = ".bash_profile" },
-  { glob = ".bashrc" },
-  { glob = ".profile" },
-  { glob = ".zshenv" },
-  { glob = ".zlogin" },
-  { glob = ".zlogout" },
-  { glob = ".zprofile" },
-  { glob = ".zplugrc" },
-  { glob = ".zshrc" },
-  { glob = ".zimrc" },
-  { glob = "APKBUILD" },
-  { glob = ".bash_aliases" },
-  { glob = ".Renviron" },
-  { glob = ".xprofile" },
-  { glob = ".xsession" },
-  { glob = ".xsessionrc" },
-  { glob = ".yashrc" },
-  { glob = ".yash_profile" },
-  { glob = ".hushlogin" },
-  { glob = ".shell/*" },
-]
-language-servers = ["bash-language-server", "efm-langserver"]
+# =================================================
+# LSPs
+# =================================================
 
-[[language]]
-name = "bibtex"
-auto-format = false
-language-servers = ["texlab"]
+[language-server.pylsp.config.pylsp.plugins]
+autopep8 = { enabled = false }
+black = { enabled = true }
+flake8 = { enabled = false }
+isort = { enabled = true }
+mccabe = { enabled = false }
+memestra = { enabled = true }
+pycodestyle = { enabled = false }
+pyflakes = { enabled = false }
+pylint = { enabled = false }
+rope = { enabled = true }
+rope_autoimport = { enabled = true }
+ruff = { enabled = false }
+yapf = { enabled = false }
 
-[[language]]
-name = "dockerfile"
-auto-format = false
-language-servers = ["docker-langserver", "efm-langserver"]
+[language-server.ruff-lsp]
+command = "ruff-lsp"
+config.documentFormatting = true
+organizeImports = false
 
-[[language]]
-name = "env"
-file-types = [
-  "env",
-  ".env",
-  ".env.local",
-  ".env.development",
-  ".env.production",
-  ".env.dist",
-  ".envrc",
-  ".envrc.local",
-  ".envrc.private",
-]
-auto-format = false
-language-servers = ["efm-langserver"]
-
-[[language]]
-name = "git-commit"
-auto-format = false
-language-servers = ["efm-langserver"]
-
-[[language]]
-name = "json"
-auto-format = false
-
-[[language]]
-name = "latex"
-auto-format = false
-language-servers = ["texlab"]
+# =================================================
+# Languages
+# =================================================
 
 [[language]]
 name = "markdown"
@@ -99,63 +37,5 @@ language-servers = ["pylsp", "ruff-lsp"]
 
 [[language]]
 name = "sql"
+file-types = ["sql", "sql.j2", "ddl", "dml"]
 scope = "source.sql"
-file-types = ["sql", "dsql", "sql.j2", "ddl", "dml"]
-language-servers = ["efm-langserver"]
-
-[[language]]
-name = "toml"
-auto-format = false
-formatter = { command = "taplo", args = ["fmt", "-"] }
-language-servers = ["efm-langserver", "taplo"]
-
-[[language]]
-name = "yaml"
-auto-format = false
-language-servers = [
-  "ansible-language-server",
-  "efm-langserver",
-  "yaml-language-server",
-]
-
-[language-server.efm-langserver]
-command = "efm-langserver"
-config.documentFormatting = true
-
-[language-server.ruff-lsp]
-command = "ruff-lsp"
-config.documentFormatting = true
-organizeImports = false
-
-[language-server.pylsp.config.pylsp.plugins]
-black = { enabled = true }
-isort = { enabled = true }
-rope = { enabled = true }
-rope_autoimport = { enabled = true }
-memestra = { enabled = true }
-autopep8 = { enabled = false }
-flake8 = { enabled = false }
-mccabe = { enabled = false }
-pycodestyle = { enabled = false }
-pyflakes = { enabled = false }
-pylint = { enabled = false }
-ruff = { enabled = false }
-yapf = { enabled = false }
-
-[language-server.texlab]
-config.texlab.build.onSave = true
-config.texlab.build.forwardSearchAfter = false
-config.texlab.build.auxDirectory = "build"
-config.texlab.build.executable = "tectonic"
-config.texlab.build.args = [
-  "-X",
-  "compile",
-  "%f",
-  "--synctex",
-  "--keep-logs",
-  "--keep-intermediates",
-  "--outdir=build",
-  "-Zshell-escape",
-]
-config.texlab.chktex.onOpenAndSave = true
-config.texlab.chktex.onEdit = true

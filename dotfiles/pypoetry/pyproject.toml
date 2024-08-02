@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "poetry-instance"
-version = "1.7.1"
+version = "1.8.4"
 description = ""
 authors = []
 license = ""
@@ -10,6 +10,9 @@ python = "3.11.6"
 poetry = ">=1.8.1"
 
 [tool.poetry.group.additional.dependencies]
-poethepoet = ">=0.25.0"
-poetry-plugin-dotenv = ">=0.6.10"
-poetry-plugin-up = ">=0.7.1"
+# task runner that works well with `poetry`
+poethepoet = ">=0.30.0"
+# plugin that automatically loads environment variables from a dotenv file into the environment before poetry commands are run
+poetry-plugin-dotenv = ">=2.4.0"
+# plugin that updates dependencies and bumps their versions in `pyproject.toml` file
+poetry-plugin-up = ">=0.7.2"

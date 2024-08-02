@@ -1,0 +1,111 @@
+[
+  {
+    "context": "Editor && (showing_code_actions || showing_completions)",
+    "bindings": {
+      "ctrl-j": "editor::ContextMenuNext",
+      "ctrl-k": "editor::ContextMenuPrev",
+      "tab": "editor::ContextMenuNext",
+      "shift-tab": "editor::ContextMenuPrev"
+    }
+  },
+  {
+    "context": "Editor && VimControl && !VimWaiting && !menu",
+    "bindings": {
+      // Motion
+      "ctrl-shift-alt-w": "vim::NextWordStart",
+      "ctrl-shift-alt-b": "vim::PreviousWordStart",
+      "ctrl-shift-alt-e": "vim::NextWordEnd",
+      // Goto mode
+      "g n": "pane::ActivateNextItem",
+      "g p": "pane::ActivatePrevItem",
+      // "tab": "pane::ActivateNextItem",
+      // "shift-tab": "pane::ActivatePrevItem",
+      "H": "pane::ActivatePrevItem",
+      "L": "pane::ActivateNextItem",
+      "g l": "vim::EndOfLine",
+      "g h": "vim::StartOfLine",
+      "g s": "vim::FirstNonWhitespace", // "g s" default behavior is "space s"
+      "g e": "vim::EndOfDocument",
+      "g y": "editor::GoToTypeDefinition",
+      "g r": "editor::FindAllReferences", // zed specific
+      "g t": "vim::WindowTop",
+      "g c": "vim::WindowMiddle",
+      "g b": "vim::WindowBottom",
+      // Window mode
+      "space w h": ["workspace::ActivatePaneInDirection", "Left"],
+      "space w l": ["workspace::ActivatePaneInDirection", "Right"],
+      "space w k": ["workspace::ActivatePaneInDirection", "Up"],
+      "space w j": ["workspace::ActivatePaneInDirection", "Down"],
+      "space w q": "pane::CloseActiveItem",
+      "space w s": "pane::SplitRight",
+      "space w r": "pane::SplitRight",
+      "space w v": "pane::SplitDown",
+      "space w d": "pane::SplitDown",
+      // Space mode
+      "space f": "file_finder::Toggle",
+      "space k": "editor::Hover",
+      "space s": "outline::Toggle",
+      "space shift-s": "project_symbols::Toggle",
+      "space d": "editor::GoToDiagnostic",
+      "space shift-d": "diagnostics::Deploy",
+      "space r": "editor::Rename",
+      "space a": "editor::ToggleCodeActions",
+      "space h": "editor::SelectAllMatches",
+      "space c": "editor::ToggleComments",
+      // Match mode
+      "m m": "vim::Matching",
+      "m i w": ["workspace::SendKeystrokes", "v i w"],
+      // Misc
+      "ctrl-k": "editor::MoveLineUp",
+      "ctrl-j": "editor::MoveLineDown",
+      "n": "vim::PreviousWordStart",
+      "ctrl-v": "editor::Paste",
+      "shift-u": "editor::Redo",
+      "d": "vim::DeleteRight",
+      "%": "editor::SelectAll",
+      "ctrl-c": "editor::ToggleComments"
+    }
+  },
+  {
+    "context": "Editor && VimControl && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
+    "bindings": {
+      // put key-bindings here if you want them to work in normal & visual mode
+    }
+  },
+  {
+    "context": "Editor && VimControl && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {
+      // put key-bindings here if you want them to work only in normal mode
+      "b": ["workspace::SendKeystrokes", "v ctrl-shift-alt-b"],
+      "w": ["workspace::SendKeystrokes", "v ctrl-shift-alt-w"],
+      "e": ["workspace::SendKeystrokes", "v ctrl-shift-alt-e"],
+      "x": "vim::ToggleVisualLine"
+    }
+  },
+  {
+    "context": "Editor && VimControl && vim_mode == visual && !VimWaiting && !menu",
+    "bindings": {
+      // visual, visual line & visual block modes
+      "b": ["workspace::SendKeystrokes", "v v ctrl-shift-alt-b"],
+      "w": ["workspace::SendKeystrokes", "v v ctrl-shift-alt-w"],
+      "e": ["workspace::SendKeystrokes", "v v ctrl-shift-alt-e"],
+      "x": ["workspace::SendKeystrokes", "j"]
+    }
+  },
+  {
+    "context": "Editor && VimControl && vim_mode == insert && !menu",
+    "bindings": {
+      // put key-bindings here if you want them to work in insert mode
+    }
+  },
+  {
+    "context": "Dock",
+    "bindings": {
+      // Window mode
+      "ctrl-w h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-w l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-w k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-w j": ["workspace::ActivatePaneInDirection", "Down"]
+    }
+  }
+]

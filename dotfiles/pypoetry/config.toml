@@ -1,2 +1,3 @@
 [virtualenvs]
+# create a virtualenv (`.venv`) in the project root directory
 in-project = true

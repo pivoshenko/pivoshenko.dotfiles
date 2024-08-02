@@ -1,37 +1,32 @@
-# `.completions` provides custom auto-completions
-
 # enable hidden files on completion
 setopt globdots
 zstyle ":completion:*" special-dirs true
 
-# hide parents
-zstyle ":completion:*" ignored-patterns ".|..|.DS_Store|**/.|**/..|**/.DS_Store|**/.git"
+# disable sort when completing `git checkout`
+zstyle ':completion:*:git-checkout:*' sort false
 
-# hide `..` and `.` from the file menu
-zstyle ":completion:*" ignore-parents "parent pwd directory"
+# set descriptions format to enable group support
+zstyle ':completion:*:descriptions' format '[%d]'
 
-# force zsh not to show the completion menu which allows fzf-tab to capture the unambiguous prefix
-zstyle ":completion:*" menu no
+# set list-colors to enable filename colorizing
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+
+# force `zsh` not to show completion menu, which allows `fzf-tab` to capture the unambiguous prefix
+zstyle ':completion:*' menu no
+
+# preview directory's content with `eza` when completing `cd`
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
+
+# set custom `fzf` flags
+zstyle ':fzf-tab:*' fzf-flags --color=fg:1,fg+:2
+zstyle ':fzf-tab:*' use-fzf-default-opts yes
 
 # switch groups using `[` and `]`
 zstyle ":fzf-tab:*" switch-group "[" "]"
 
-# preserve my layout
-local fzf_flags
-zstyle -a ':fzf-tab:*' fzf-flags fzf_flags
-fzf_flags=( "${fzf_flags[@]}" )
-zstyle ':fzf-tab:*' fzf-flags $fzf_flags
-
-# complete `ls` / `cat` / etc
-zstyle ':fzf-tab:complete:(\\|*/|)(ls|gls|bat|cat|cd|rm|cp|mv|ln|hx|code|open|tree|source):*' \
-  fzf-preview \
-  '_fzf_complete_realpath "$realpath"'
-
-
 # complete `killall`
 zstyle ':completion:*:*:killall:*:*' command 'ps -u "$USERNAME" -o comm'
-zstyle ':fzf-tab:complete:(\\|*/|)killall:*' fzf-preview \
-  'ps aux | ag "$word" | _fzf_complete_realpath'
+zstyle ':fzf-tab:complete:(\\|*/|)killall:*' fzf-preview 'ps aux | ag "$word"'
 
 # complete `zoxide` using `z name<tab>`
 _z () {
@@ -39,7 +34,5 @@ _z () {
   args="$(zoxide query -a -l)"
   _arguments "1:paths:($args)"
 }
-
 compdef _z z
-zstyle ':fzf-tab:complete:(\\|*/|)z:*' fzf-preview \
-  '_fzf_complete_realpath "$word"'
+zstyle ':fzf-tab:complete:(\\|*/|)z:*' fzf-preview

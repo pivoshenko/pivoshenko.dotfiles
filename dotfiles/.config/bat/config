@@ -1,2 +1,5 @@
-# theme
+# set custom theme
 --theme="catppuccin_macchiato"
+
+# only show plain style, no decorations
+--plain
