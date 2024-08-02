@@ -27,7 +27,6 @@ profiles:
       - d_yabai
       - d_yamllint
       - d_zellij
-      - f_direnv
       - f_starship
       - f_gnupg_agent
       - f_ipython_startup
@@ -119,10 +118,6 @@ dotfiles:
   d_zellij:
     dst: ~/.config/zellij
     src: .config/zellij
-
-  f_direnv:
-    dst: ~/.config/direnv.toml
-    src: .config/direnv.toml
 
   f_starship:
     dst: ~/.config/starship.toml
