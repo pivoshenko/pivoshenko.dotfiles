@@ -36,6 +36,8 @@ profiles:
       - d_shell
       - d_zellij_plugins
       - f_gitconfig
+      - f_jupyter_themes
+      - f_jupyter_catppuccin
       - f_hyperjs
       - f_ssh_config
       - f_zplugrc
@@ -128,6 +130,14 @@ dotfiles:
   f_gnupg_agent:
     dst: ~/.gnupg/gpg-agent.conf
     src: .gnupg/gpg-agent.conf
+
+  f_jupyter_themes:
+    dst: ~/.jupyter/lab/user-settings/@jupyterlab/apputils-extension/themes.jupyterlab-settings
+    src: .jupyter/lab/user-settings/@jupyterlab/apputils-extension/themes.jupyterlab-settings
+
+  f_jupyter_catppuccin:
+    dst: ~/.jupyter/lab/user-settings/catppuccin_jupyterlab/plugin.jupyterlab-settings
+    src: .jupyter/lab/user-settings/catppuccin_jupyterlab/plugin.jupyterlab-settings
 
   f_ipython_startup:
     dst: ~/.ipython/profile_default/startup/start.py
