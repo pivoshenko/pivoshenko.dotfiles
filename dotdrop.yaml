@@ -13,6 +13,7 @@ profiles:
     dotfiles:
       - d_bat
       - d_bottom
+      - d_delta
       - d_efm_langserver
       - d_fsh
       - d_helix
@@ -62,6 +63,10 @@ dotfiles:
   d_bottom:
     dst: ~/.config/bottom
     src: .config/bottom
+
+  d_delta:
+    dst: ~/.config/delta
+    src: .config/delta
 
   d_efm_langserver:
     dst: ~/.config/efm-langserver

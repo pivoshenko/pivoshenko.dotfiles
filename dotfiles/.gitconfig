@@ -16,7 +16,7 @@ fetchJobs = 0
 [delta]
 navigate = true
 light = false
-theme = OneHalfDark
+features = catppuccin-macchiato
 line-numbers = true
 side-by-side = true
 hyperlinks = true
@@ -36,6 +36,9 @@ useConfigOnly = true
 
 [include]
 path = ~/.gitconfig.local
+
+[include]
+path = ~/.config/delta/catppuccin.gitconfig
 
 [init]
 defaultBranch = main
