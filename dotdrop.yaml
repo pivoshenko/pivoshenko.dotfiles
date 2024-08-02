@@ -26,6 +26,7 @@ profiles:
       - d_spotify_tui
       - d_yabai
       - d_yamllint
+      - d_yazi
       - d_zellij
       - f_starship
       - f_gnupg_agent
@@ -114,6 +115,10 @@ dotfiles:
   d_yamllint:
     dst: ~/.config/yamllint/config
     src: .config/yamllint/config
+
+  d_yazi:
+    dst: ~/.config/yazi
+    src: .config/yazi
 
   d_zellij:
     dst: ~/.config/zellij
