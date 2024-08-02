@@ -41,8 +41,6 @@ cask "nordpass"
 cask "nordvpn"
 # knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
-# team communication and collaboration software
-cask "slack"
 # music streaming service
 cask "spotify"
 # messaging app with a focus on speed and security
@@ -173,6 +171,8 @@ brew "zoxide"
 brew "zplug"
 # pluggable terminal workspace with terminal multiplexer as the base feature
 brew "zellij"
+# blazing fast terminal file manager written in Rust, based on async I/O
+brew "yazi"
 
 # =============================================================================================
 # Linters, formatters and LSPs
@@ -221,13 +221,11 @@ brew "yaml-language-server"
 vscode "alefragnani.project-manager"
 vscode "catppuccin.catppuccin-vsc"
 vscode "charliermarsh.ruff"
-vscode "donjayamanne.python-environment-manager"
 vscode "dorzey.vscode-sqlfluff"
 vscode "drcika.apc-extension"
 vscode "eamodio.gitlens"
 vscode "editorconfig.editorconfig"
 vscode "equinusocio.vsc-material-theme-icons"
-vscode "fill-labs.dependi"
 vscode "github.vscode-pull-request-github"
 vscode "gleam.gleam"
 vscode "griimick.vhs"
