@@ -1,66 +1,65 @@
 [commit]
-# all commits should be GPG signed
+# sign all commits with GPG
 gpgsign = true
 
 [core]
 # enable CRLF line endings
 autocrlf = input
-# set text editor for the `commit` and `tag` commands
+# set text editor for `commit` and `tag` commands
 editor = hx
-# set text viewer for use by Git commands
+# set text viewer for git commands
 pager = delta
 
 [credential]
-# set external helper to be called when a username or password credential is needed
+# use external helper for username/password credentials
 helper = store
 
 [delta]
-# set the theme for syntax highlighting
-features = "catppuccin_macchiato"
-# enable support for terminal hyperlinks
+# set syntax highlighting theme
+features = "catppuccin_mocha"
+# enable terminal hyperlinks support
 hyperlinks = true
-# construct the correct URL
+# use correct URL format for hyperlinks
 hyperlinks-file-link-format = "file-line://{path}:{line}"
-# use only dark mode
+# use dark mode only
 light = false
-# show two columns with the line numbers
+# show line numbers in two columns
 line-numbers = true
-# activate navigation keybindings
+# enable navigation keybindings
 navigate = true
-# activate side-by-side view for the diff
+# enable side-by-side view for diffs
 side-by-side = true
 
 [diff]
 colorMoved = default
 
 [include]
-# include custom themes for the `git-delta`
+# include custom themes for git-delta
 path = ~/.config/delta/catppuccin.gitconfig
 # include private configuration
 path = ~/.gitconfig.local
 
 [init]
-# override the default branch name for new repositories
+# set default branch name for new repositories
 defaultBranch = main
 
 [interactive]
-# use `git-delta` to show colorized diff
+# use git-delta for colorized diff output
 diffFilter = delta --color-only
 
 [merge]
-# set a style in which conflicted hunks are written out to working tree files upon merge
-# add a `|||||||` marker and the original text before the `=======` marker
+# set conflict style with markers and original text
 conflictstyle = diff3
 
 [push]
-# push the current branch with the same name on the remote
+# push current branch to remote with same name
 default = simple
 
 [submodule]
-# disable parallel `fetch` and `clone` for submodules
+# disable parallel operations for submodules
 fetchJobs = 0
 recurse = true
 
 [user]
-# retrieve the values of `user.email` and `user.name only` from the configuration
+# use only configured user values
 useConfigOnly = true

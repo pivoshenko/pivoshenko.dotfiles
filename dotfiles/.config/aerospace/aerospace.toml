@@ -4,17 +4,13 @@ start-at-login = true
 # Commands
 # =================================================
 
-# commands that run after login to macOS user session
+# commands that run after login to the macOS user session
 after-login-command = []
 # commands that run after `aerospace` startup
-after-startup-command = []
-# list of callbacks which allow to run arbitrary processes when focused workspace changes
-# notify `sketchybar` about workspace change
-exec-on-workspace-change = [
-  "/bin/bash",
-  "-c",
-  "sketchybar --trigger aerospace_workspace_changed FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE"
-]
+# colours are Catppuccin Mocha Mauve and Lavender
+after-startup-command = ['exec-and-forget borders active_color=0xffcba6f7 inactive_color=0xffb4befe width=7.0']
+# list of callbacks to run arbitrary processes when the focused workspace changes
+exec-on-workspace-change = []
 
 # =================================================
 # Padding
@@ -26,13 +22,11 @@ inner.horizontal = 10
 inner.vertical = 10
 outer.left = 10
 outer.bottom = 10
-outer.top = 55
-# for the M1 MacBook with the notch
-# outer.top = [{ monitor.main = 10 }, { monitor.secondary = 55 }, 10]
+outer.top = 10
 outer.right = 10
 
 # =================================================
-# External Monitors Setup
+# External monitors setup
 # =================================================
 
 # assign workspaces to always appear on particular monitors
@@ -48,7 +42,7 @@ outer.right = 10
 9 = ["secondary", "dell"]
 
 # =================================================
-# Keybindings - Modes Switch
+# Keybindings - modes switch
 # =================================================
 
 [mode.main.binding]
@@ -56,7 +50,7 @@ alt-shift-semicolon = "mode service"
 alt-shift-r = "mode resize"
 
 # =================================================
-# Keybindings - Focus
+# Keybindings - focus
 # =================================================
 
 alt-h = "focus left"
@@ -83,7 +77,7 @@ alt-rightSquareBracket = "focus-monitor next"
 alt-leftSquareBracket = "focus-monitor prev"
 
 # =================================================
-# Keybindings - Layout
+# Keybindings - layout
 # =================================================
 
 alt-f = "fullscreen"
@@ -97,7 +91,7 @@ alt-slash = "layout tiles horizontal vertical"
 alt-comma = "layout accordion horizontal vertical"
 
 # =================================================
-# Keybindings - Workspaces
+# Keybindings - workspaces
 # =================================================
 
 alt-shift-1 = "move-node-to-workspace 1"
@@ -113,7 +107,7 @@ alt-shift-9 = "move-node-to-workspace 9"
 alt-shift-tab = "move-workspace-to-monitor --wrap-around next"
 
 # =================================================
-# Keybindings - Modes
+# Keybindings - modes
 # =================================================
 
 [mode.service.binding]
@@ -142,17 +136,17 @@ enter = "mode main"
 esc = "mode main"
 
 # =================================================
-# Workspaces 
+# Workspaces
 # =================================================
 
 #1 Comms (Telegram, Discord, etc.)
-#2 Media
+#2 Media (Spotify, Music, etc.)
 #3 Notes (Obsidian)
 #4 Browsing (Zen)
 #5 Terminal (iTerm2)
 #6 Coding (Zed, VSCode)
 #7 Databases (MongoDB Compass, DBeaver)
-#8 Misc (Insomnia, Postman)
+#8 Misc (Insomnia)
 #9 Misc
 
 # =================================================
@@ -160,7 +154,7 @@ esc = "mode main"
 # =================================================
 
 [[on-window-detected]]
-if.app-id = "com.hnc.Discord"
+if.app-id = "dev.vencord.vesktop"
 run = "move-node-to-workspace 1"
 
 [[on-window-detected]]
@@ -178,6 +172,10 @@ run = "move-node-to-workspace 1"
 # =================================================
 # Workspaces - #2
 # =================================================
+
+[[on-window-detected]]
+if.app-id = "com.spotify.client"
+run = ["layout floating", "move-node-to-workspace 2"]
 
 # =================================================
 # Workspaces - #3
@@ -208,11 +206,11 @@ if.app-id = "com.googlecode.iterm2"
 run = "move-node-to-workspace 5"
 
 [[on-window-detected]]
-if.app-id = "com.mitchellh.ghostty"
+if.app-id = "co.zeit.hyper"
 run = "move-node-to-workspace 5"
 
 # =================================================
-# Workspaces - #6
+# Workspace 6 - Coding
 # =================================================
 
 [[on-window-detected]]
@@ -244,12 +242,8 @@ if.app-id = "com.insomnia.app"
 run = "move-node-to-workspace 8"
 
 # =================================================
-# Workspaces - Floating Applications
+# Workspaces - floating applications
 # =================================================
-
-[[on-window-detected]]
-if.app-id = "app.betterdiscord.installer"
-run = "layout floating"
 
 [[on-window-detected]]
 if.app-id = "com.apple.ActivityMonitor"
@@ -377,10 +371,6 @@ run = "layout floating"
 
 [[on-window-detected]]
 if.app-id = "com.postmanlabs.mac"
-run = "layout floating"
-
-[[on-window-detected]]
-if.app-id = "com.spotify.client"
 run = "layout floating"
 
 [[on-window-detected]]

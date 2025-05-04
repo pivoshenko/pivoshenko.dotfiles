@@ -1,163 +1,192 @@
 # =================================================
-# Taps
-# =================================================
-
-tap "homebrew/bundle"
-tap "homebrew/services"
-
-# =================================================
 # Fonts
 # =================================================
 
+cask "sf-symbols"
+cask "font-iosevka-term-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
 cask "font-space-mono-nerd-font"
 cask "font-symbols-only-nerd-font"
-cask "sf-symbols"
 
 # =================================================
-# Apps
+# GUI applications
 # =================================================
 
-# Discord themes and plugins engine
-cask "betterdiscord-installer"
+# tiling window manager for macOS
+cask "aerospace"
 # database management tool
 cask "dbeaver-community"
-# voice and text communication platform
-cask "discord"
-# containers management tool
+# platform for containerized applications
 cask "docker"
-# text expander
+# text expansion and automation tool
 cask "espanso"
-# screen colour temperature controller
+# blue light reduction utility
 cask "flux"
-# HTTP and GraphQL Client
+# API testing and development tool
 cask "insomnia"
-# hotkeys daemon
+# terminal emulator for macOS
+cask "iterm2"
+# keyboard customization tool
 cask "karabiner-elements"
-# i3-like tiling window manager
-cask "nikitabobko/tap/aerospace"
-# password manager
+# GUI for MongoDB database
+cask "mongodb-compass"
+# secure password manager
 cask "nordpass"
 # VPN client
 cask "nordvpn"
-# interactive tool for analyzing MongoDB data
-cask "mongodb-compass"
-# notes and knowledge management tool
+# knowledge base and note-taking application
 cask "obsidian"
-# LLMs
-cask "ollama"
-# apps launcher
+# Spotlight replacement and productivity tool
 cask "raycast"
 # music streaming service
 cask "spotify"
-# messaging app
+# cloud-based messaging application
 cask "telegram"
-# code editor
+# alternative Discord client
+cask "vesktop"
+# code editor by Microsoft
 cask "visual-studio-code"
-# AI code editor
+# high-performance code editor
 cask "zed"
-# web browser for pure focus
+# distraction-free web browser
 cask "zen-browser"
 
 # =================================================
-# Programming Languages
+# Programming languages
 # =================================================
 
+# GNU compiler collection
 brew "gcc"
-brew "elixir"
-brew "erlang"
+# statically typed language for Erlang VM
 brew "gleam"
+# lightweight programming language
 brew "lua"
-brew "node"
-brew "pyenv"
-brew "ruby"
+# safe, concurrent, practical language
 brew "rust"
+# Rust toolchain installer
 brew "rustup"
+# Python version management
+brew "pyenv"
+# Python package installer written in Rust
+brew "uv"
 
 # =================================================
-# Packages
+# DBs
 # =================================================
 
-# syntax highlighting with git integration
-brew "bat"
-# graphical process/system monitor
-brew "bottom"
-# image renderer for the terminal emulators
-brew "catimg"
-# query HTTP, HTTPS or FTP server
-brew "curl"
-# embeddable SQL OLAP Database Management System
+# embeddable SQL OLAP database management system
 brew "duckdb"
+
+# =================================================
+# Command-line tools
+# =================================================
+
+# clone of `cat` with syntax highlighting and Git integration
+brew "bat"
+# cross-platform system monitor
+brew "bottom"
+# get a file from an HTTP, HTTPS or FTP server
+brew "curl"
 # command-line tool to interact with exercism.io
 brew "exercism"
-# modern replacement for ls
+# modern replacement for `ls`
 brew "eza"
-# simple, fast and user-friendly alternative to find
+# simple, fast and user-friendly alternative to `find`
 brew "fd"
-# a lightweight window border system for macOS
-brew "FelixKratz/formulae/borders"
-# a highly customizable macOS status bar replacement
-brew "FelixKratz/formulae/sketchybar"
-# command-line fuzzy finder written in go
+# command-line fuzzy finder written in Go
 brew "fzf"
 # command-line shell for UNIX-like operating systems
 brew "fish"
-# syntax-highlighting pager for git and diff output
+# syntax-highlighting pager for `git` and `diff` output
 brew "git-delta"
 # GitHub command-line tool
 brew "gh"
 # GNU PGP package
 brew "gnupg"
-# graph visualization software from at&t and bell labs
+# graph visualization software from AT&T and Bell Labs
 brew "graphviz"
 # post-modern modal text editor
 brew "helix"
-# lightweight and flexible command-line json processor
+# lightweight JSON processor
 brew "jq"
-# kubernetes cli to manage clusters in style
+# terminal UI for Kubernetes
 brew "k9s"
-# lazier way to manage everything docker
+# terminal UI for Docker
 brew "lazydocker"
-# simple terminal ui for git commands
+# Terminal UI for `git`
 brew "lazygit"
-# fast, highly customizable system info script
+# system information tool
 brew "neofetch"
-# ambitious vim-fork focused on extensibility and agility
-brew "neovim"
-# pinentry for GPG on Mac
+# pinentry for GPG on macOS
 brew "pinentry-mac"
-# search tool like grep and the silver searcher
+# fast search tool similar to `grep`
 brew "ripgrep"
-# Spotify customization
+# command-line tool to customize Spotify
 brew "spicetify-cli"
-# cross-shell prompt for astronauts
+# customizable cross-shell prompt
 brew "starship"
+# a cross-platform, fast and extensible general purpose fuzzy finder TUI
+brew "television"
 # display directories as trees
 brew "tree"
-# your cli home video recorder
+# terminal recorder
 brew "vhs"
 # internet file retriever
 brew "wget"
-# blazing fast terminal file manager written in Rust, based on async I/O
+# fast terminal file manager
 brew "yazi"
-# pluggable terminal workspace with terminal multiplexer as the base feature
+# terminal workspace with multiplexer
 brew "zellij"
-# next-generation plugin manager for zsh
+# plugin manager for `zsh`
 brew "zplug"
-# shell extension to navigate your filesystem faster
+# smarter `cd` command
 brew "zoxide"
 
 # =================================================
 # LSPs
 # =================================================
 
-# language server and debugger for Elixir
-brew "elixir-ls"
-# Erlang language server
-brew "erlang_ls"
-# language server protocol for Markdown
+# Language Server Protocol for Markdown
 brew "marksman"
 # TOML toolkit written in Rust
 brew "taplo"
-# language server for Yaml Files
+# Language Server for YAML files
 brew "yaml-language-server"
+
+# =================================================
+# VSCode extensions
+# =================================================
+
+vscode "catppuccin.catppuccin-vsc"
+vscode "charliermarsh.ruff"
+vscode "dorzey.vscode-sqlfluff"
+vscode "editorconfig.editorconfig"
+vscode "github.copilot"
+vscode "github.copilot-chat"
+vscode "github.vscode-pull-request-github"
+vscode "gleam.gleam"
+vscode "kend.dancehelixkey"
+vscode "matangover.mypy"
+vscode "miguelsolorio.fluent-icons"
+vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
+vscode "ms-toolsai.jupyter"
+vscode "ms-toolsai.jupyter-keymap"
+vscode "ms-toolsai.jupyter-renderers"
+vscode "ms-toolsai.vscode-jupyter-cell-tags"
+vscode "ms-toolsai.vscode-jupyter-slideshow"
+vscode "ms-vscode-remote.remote-containers"
+vscode "ms-vscode-remote.remote-ssh"
+vscode "ms-vscode-remote.remote-ssh-edit"
+vscode "ms-vscode-remote.vscode-remote-extensionpack"
+vscode "ms-vscode.remote-explorer"
+vscode "ms-vscode.remote-server"
+vscode "ms-windows-ai-studio.windows-ai-studio"
+vscode "naumovs.color-highlight"
+vscode "pkief.material-icon-theme"
+vscode "robertostermann.inline-parameters-extended"
+vscode "rodolphebarbanneau.python-docstring-highlighter"
+vscode "samuelcolvin.jinjahtml"
+vscode "subframe7536.custom-ui-style"
+vscode "tamasfe.even-better-toml"
+vscode "yzhang.markdown-all-in-one"

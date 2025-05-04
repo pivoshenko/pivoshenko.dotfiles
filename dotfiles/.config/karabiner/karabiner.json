@@ -7,7 +7,7 @@
         },
         "rules": [
           {
-            "description": "Disable minimize window (cmd+m)",
+            "description": "Disable minimize window shortcut - cmd+m",
             "manipulators": [
               {
                 "from": {
@@ -94,7 +94,7 @@
             ]
           },
           {
-            "description": "Homerow shift, ctrl, opt, cmd",
+            "description": "Homerow - enable shift, ctrl, opt, cmd as a/l, s/k, d/j, f/h",
             "manipulators": [
               {
                 "from": {

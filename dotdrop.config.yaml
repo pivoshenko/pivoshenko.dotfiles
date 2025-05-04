@@ -1,6 +1,6 @@
 config:
   # create a backup of the existing destination
-  backup: true
+  backup: false
   # do not display the `dotdrop` banner
   banner: false
   # create a directory hierarchy when installing dotfiles if it doesn't exist
@@ -20,9 +20,22 @@ dotfiles:
   # ~/
   # =================================================
 
-  d_wallpapers:
-    dst: ~/.wallpapers
-    src: ../wallpapers
+  d_gnupg:
+    dst: ~/.gnupg
+    src: .gnupg
+  d_ssh:
+    dst: ~/.ssh
+    src: .ssh
+  d_ipython:
+    dst: ~/.ipython
+    src: .ipython
+  d_jupyter:
+    dst: ~/.jupyter
+    src: .jupyter
+
+  f_gitconfig:
+    dst: ~/.gitconfig
+    src: .gitconfig
 
   # =================================================
   # ~/.config
@@ -31,16 +44,111 @@ dotfiles:
   d_aerospace:
     dst: ~/.config/aerospace
     src: .config/aerospace
+  d_bat:
+    dst: ~/.config/bat
+    src: .config/bat
+  d_bottom:
+    dst: ~/.config/bottom
+    src: .config/bottom
+  d_fish:
+    dst: ~/.config/fish
+    src: .config/fish
+  d_fastfetch:
+    dst: ~/.config/fastfetch
+    src: .config/fastfetch
+  d_delta:
+    dst: ~/.config/delta
+    src: .config/delta
+  d_helix:
+    dst: ~/.config/helix
+    src: .config/helix
+  d_iterm2:
+    dst: ~/.config/iterm2
+    src: .config/iterm2
+  d_k9s:
+    dst: ~/.config/K9s
+    src: .config/k9s
+  d_karabiner:
+    dst: ~/.config/karabiner
+    src: .config/karabiner
+  d_lazygit:
+    dst: ~/.config/lazygit
+    src: .config/lazygit
+  d_stylus:
+    dst: ~/.config/stylus
+    src: .config/stylus
+  d_television:
+    dst: ~/.config/television
+    src: .config/television
+  d_wallpapers:
+    dst: ~/.config/wallpapers
+    src: .config/wallpapers
+  d_yazi:
+    dst: ~/.config/yazi
+    src: .config/yazi
+  d_zed:
+    dst: ~/.config/zed
+    src: .config/zed
+  d_zellij:
+    dst: ~/.config/zellij
+    src: .config/zellij
+  d_zen:
+    dst: ~/.config/zen
+    src: .config/zen
+
+  f_starship:
+    dst: ~/.config/starship.toml
+    src: .config/starship.toml
 
   # =================================================
   # ~/Library/Application Support
   # =================================================
 
+  d_macos_k9s:
+    dst: ~/Library/Application Support/K9s
+    src: .config/k9s
+  d_macos_lazygit:
+    dst: ~/Library/Application Support/lazygit
+    src: .config/lazygit
+  d_macos_espanso:
+    dst: ~/Library/Application Support/espanso
+    src: espanso
+
+  f_macos_vscode:
+    dst: ~/Library/Application Support/Code/User/settings.json
+    src: vscode/settings.json
+
 profiles:
-  macos:
+  default:
     dotfiles:
       # ~/
-      - d_wallpapers
-
+      - d_gnupg
+      - d_ssh
+      - d_ipython
+      - d_jupyter
+      - f_gitconfig
       # ~/.config
       - d_aerospace
+      - d_bat
+      - d_bottom
+      - d_delta
+      - d_fish
+      - d_fastfetch
+      - d_helix
+      - d_iterm2
+      - d_karabiner
+      - d_stylus
+      - d_television
+      - d_wallpapers
+      - d_yazi
+      - d_zed
+      - d_zellij
+      - d_zen
+      - f_starship
+  macos:
+    dotfiles:
+      # ~/Library/Application Support
+      - d_macos_k9s
+      - d_macos_lazygit
+      - d_macos_espanso
+      - f_macos_vscode
