@@ -2,18 +2,26 @@
   // =================================================
   // UI
   // =================================================
-
   // set custom theme
   "catppuccin.accentColor": "mauve",
-
-  // set custom icons
-  "workbench.iconTheme": "eq-material-theme-icons-ocean",
   "workbench.productIconTheme": "fluent-icons",
-
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.preferredDarkColorTheme": "Catppuccin Mocha",
+  "workbench.preferredHighContrastColorTheme": "Catppuccin Mocha",
+  "workbench.preferredHighContrastLightColorTheme": "Catppuccin Latte",
+  "workbench.preferredLightColorTheme": "Catppuccin Latte",
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.colorCustomizations": {
+    // text #cad3f5
+    "statusBar.foreground": "#cad3f5"
+  },
+  "material-icon-theme.saturation": 1,
+  "material-icon-theme.activeIconPack": "angular_ngrx",
+  "material-icon-theme.hidesExplorerArrows": false,
+  "material-icon-theme.folders.theme": "specific",
   // =================================================
   // UI Editor
   // =================================================
-
   "editor.acceptSuggestionOnEnter": "on",
   // turn off screen reader support
   "editor.accessibilitySupport": "off",
@@ -28,7 +36,9 @@
   // render all whitespace characters
   "editor.renderWhitespace": "all",
   // show ruler at the specified column
-  "editor.rulers": [100],
+  "editor.rulers": [
+    100
+  ],
   // hide horizontal scrollbar
   "editor.scrollbar.horizontal": "hidden",
   // hide vertical scrollbar
@@ -43,143 +53,126 @@
   "editor.suggest.showMethods": true,
   // select the first suggestion by default
   "editor.suggestSelection": "first",
-
   // =================================================
   // UI Search
   // =================================================
-
   "search.defaultViewMode": "tree",
-
   // =================================================
   // UI Workbench
   // =================================================
-
-  "workbench.editor.showTabs": "single",
   "workbench.editor.decorations.badges": false,
   "workbench.editor.decorations.colors": false,
   "workbench.editor.enablePreview": false,
   "workbench.editor.pinnedTabSizing": "compact",
   "workbench.editor.labelFormat": "short",
   "workbench.editor.showIcons": false,
-  "workbench.colorTheme": "Catppuccin Macchiato",
-  "workbench.colorCustomizations": {
-    // text #cad3f5
-    "statusBar.foreground": "#cad3f5"
-  },
   "workbench.layoutControl.enabled": false,
-  "workbench.preferredDarkColorTheme": "Catppuccin Macchiato",
-  "workbench.preferredHighContrastColorTheme": "Catppuccin Macchiato",
-  "workbench.preferredHighContrastLightColorTheme": "Catppuccin Latte",
-  "workbench.preferredLightColorTheme": "Catppuccin Latte",
   // set sidebar location to the right
   "workbench.sideBar.location": "right",
   // set startup editor to none
   "workbench.startupEditor": "none",
-  "workbench.statusBar.visible": true,
   // disable workbench tips
   "workbench.tips.enabled": false,
-
   // =================================================
   // UI Window
   // =================================================
-
   "window.autoDetectColorScheme": true,
   "window.commandCenter": false,
   "window.customTitleBarVisibility": "never",
   "window.titleBarStyle": "native",
-
   // zen mode
   "zenMode.hideLineNumbers": false,
-
   // =================================================
   // Fonts
   // =================================================
-
   "debug.console.fontFamily": "JetBrainsMono Nerd Font",
   "debug.console.fontSize": 15,
-
   "editor.codeLensFontFamily": "JetBrainsMono Nerd Font Mono",
   "editor.fontFamily": "JetBrainsMono Nerd Font",
   "editor.fontLigatures": true,
   "editor.fontSize": 15,
   "editor.inlayHints.fontFamily": "JetBrainsMono Nerd Font Mono",
   "editor.inlineSuggest.fontFamily": "JetBrainsMono Nerd Font",
-
   "notebook.output.fontFamily": "JetBrainsMono Nerd Font",
-
   "scm.inputFontSize": 15,
-
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
   "terminal.integrated.fontSize": 15,
   "terminal.integrated.fontWeight": "normal",
   "terminal.integrated.lineHeight": 1.1,
-
   // =================================================
   // Misc
   // =================================================
-
+  "editor.formatOnSave": true,
+  "notebook.formatOnSave.enabled": true,
   "files.autoSave": "afterDelay",
-
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
-
   "workbench.settings.editor": "json",
-
+  "security.workspace.trust.untrustedFiles": "open",
   // =================================================
   // Terminal
   // =================================================
-
   "terminal.integrated.cursorStyle": "line",
   "terminal.explorerKind": "external",
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.allowMnemonics": true,
-  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.defaultProfile.osx": "fish",
   "terminal.integrated.drawBoldTextInBrightColors": false,
   "terminal.integrated.gpuAcceleration": "on",
   "terminal.integrated.inheritEnv": true,
   "terminal.integrated.profiles.osx": {
     "zsh": {
-      "args": ["-l", "-i"],
+      "args": [
+        "-l",
+        "-i"
+      ],
       "path": "/bin/zsh"
     }
   },
-
   // =================================================
   // Extensions
   // =================================================
-
   // Git
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
   "git.ignoreLegacyWarning": true,
   "diffEditor.codeLens": true,
-
+  "git.openRepositoryInParentFolders": "never",
   // GitHub
   "github.gitAuthentication": false,
   "github.gitProtocol": "ssh",
   "githubPullRequests.createOnPublishBranch": "never",
   "githubPullRequests.fileListLayout": "tree",
-
   // GitHub Copilot
-  "github.copilot.editor.enableAutoCompletions": false,
+  "github.copilot.nextEditSuggestions.enabled": false,
   "github.copilot.editor.enableCodeActions": false,
-
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    {
+      "text": "Use conventional commit message format. Keep the first line under 50 characters."
+    }
+  ],
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": true,
+    "gleam": true,
+    "python": true
+  },
   // Python
   "python.analysis.autoFormatStrings": true,
   "python.analysis.autoImportCompletions": true,
   "python.analysis.completeFunctionParens": true,
-  "python.analysis.extraPaths": [],
   "python.analysis.inlayHints.functionReturnTypes": true,
   "python.analysis.inlayHints.pytestParameters": true,
   "python.analysis.inlayHints.variableTypes": true,
-  "python.analysis.typeCheckingMode": "off",
-  "python.defaultInterpreterPath": "",
   "python.experiments.enabled": false,
   "python.languageServer": "Pylance",
   "python.testing.pytestEnabled": true,
   "python.testing.unittestArgs": [],
-
+  // MyPy
+  "mypy.configFile": "pyproject.toml",
   // Jupyter
   "notebook.lineNumbers": "on",
   "notebook.output.textLineLimit": 1000,
@@ -187,10 +180,9 @@
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
   },
-
   // SQL
   "sqlfluff.env.useDotEnvFile": true,
-
+  "sqlfluff.config": "pyproject.toml",
   // TOML
   "evenBetterToml.formatter.allowedBlankLines": 1,
   "evenBetterToml.formatter.arrayAutoCollapse": true,
@@ -198,21 +190,38 @@
   "evenBetterToml.formatter.columnWidth": 120,
   "evenBetterToml.formatter.reorderArrays": false,
   "evenBetterToml.formatter.reorderKeys": false,
-
   // =================================================
-  // Extensions Custom UI Style
+  // Extensions APC
   // =================================================
-
+  "custom-ui-style.electron": {
+    // removes the title bar
+    "frame": false,
+    // removes white line from the top
+    "transparent": true,
+    "titleBarOverlay": {
+      // icons and text has the same centring in the title bar
+      "height": 35,
+    }
+  },
+  "custom-ui-style.stylesheet": {
+    // hide extra items
+    ".quick-input-list .scrollbar, .quick-input-list .action-label": {
+      "visiblity": "hidden !important",
+      "display": "none !important",
+    },
+    // center the title with the filename
+    ".monaco-workbench .editor-group-container>.title>.label-container>.title-label>.monaco-icon-label-container": {
+      "margin-left": "50px !important",
+    },
+  },
   // =================================================
-  // Extensions Files
+  // Extensions files
   // =================================================
-
   "files.associations": {
     "*.pyi": "python",
     "*.zplugrc": "shellscript",
     "**/.shell/**": "shellscript"
   },
-
   "files.exclude": {
     "**/.git": true,
     "**/.svn": true,
@@ -236,11 +245,9 @@
     "**/htmlcoverage": true,
     "**/docs/build": true
   },
-
   // =================================================
   // Formatters
   // =================================================
-
   "[jinja-sql]": {
     "editor.defaultFormatter": "dorzey.vscode-sqlfluff"
   },
@@ -252,8 +259,10 @@
   },
   "[toml]": {
     "editor.defaultFormatter": "tamasfe.even-better-toml"
+  },
+  "[sql]": {
+    "editor.defaultFormatter": "dorzey.vscode-sqlfluff"
   }
-
   // =================================================
   // Keybindings
   // =================================================

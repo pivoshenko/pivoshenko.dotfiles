@@ -1,12 +1,12 @@
 {
     // =================================================
-    // UI General
+    // UI
     // =================================================
 
     // set custom theme
-    "theme": "Catppuccin Macchiato",
+    "theme": "Catppuccin Mocha",
     "preferred-light-theme": "Catppuccin Latte",
-    "preferred-dark-theme": "Catppuccin Macchiato",
+    "preferred-dark-theme": "Catppuccin Mocha",
     "theme-scrollbars": true,
     "adaptive-theme": false,
 

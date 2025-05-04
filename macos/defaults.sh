@@ -32,18 +32,20 @@ defaults write com.apple.dock orientation -string "bottom"
 
 # clear persistent dock items
 defaults write com.apple.dock persistent-apps -array
+
 # add common applications to dock
 permament_dock_item "/System/Applications/NordPass.app"
 permament_dock_item "/System/Applications/NordVPN.app"
+permament_dock_item "/Applications/Spotify.app"
 permament_dock_item "/System/Applications/Launchpad.app"
 permament_dock_item "/Applications/Obsidian.app"
 permament_dock_item "/Applications/Telegram.app"
-permament_dock_item "/Applications/Discord.app"
+permament_dock_item "/Applications/Vesktop.app"
 permament_dock_item "/Applications/Zen Browser.app"
 permament_dock_item "/Applications/Zed.app"
 permament_dock_item "/Applications/Visual Studio Code.app"
 permament_dock_item "/Applications/iTerm.app"
-permament_dock_item "/Applications/Spotify.app"
+permament_dock_item "/Applications/DBeaver.app"
 
 # =================================================
 # Finder

@@ -1,5 +1,3 @@
-"""IPython - startup script."""
-
 from IPython import get_ipython  # type: ignore[attr-defined]
 
 ipython = get_ipython()

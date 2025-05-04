@@ -1,7 +1,9 @@
-// text: #c6a0f6
-// mantle: #1e2030
-// mauve: #c6a0f6
-// peach: #f5a97f
+// Catppuccin Mocha
+// text: #cdd6f4
+// mantle: #181825
+// mauve: #cba6f7
+// peach: #fab387
+
 layout {
   // set default direction for the splits
   pane split_direction="vertical" {
@@ -15,24 +17,24 @@ layout {
       hide_frame_except_for_search "true"
 
       // set the format for the status line
-      format_left "{mode}#[fg=#c6a0f6,bg=#1e2030,bold] {session}#[bg=#1e2030] {tabs}"
-      format_right "#[fg=#cad3f5,bg=#1e2030]::{datetime}"
-      format_space "#[bg=#1e2030]"
+      format_left "{mode}#[fg=#cba6f7,bg=#181825,bold] {session}#[bg=#181825] {tabs}"
+      format_right "#[fg=#cdd6f4,bg=#181825]::{datetime}"
+      format_space "#[bg=#181825]"
 
       // set colors for the mode indicator
-      mode_normal "#[bg=#c6a0f6] "
-      mode_tmux "#[bg=#f5a97f] "
+      mode_normal "#[bg=#cba6f7] "
+      mode_tmux "#[bg=#fab387] "
       mode_default_to_mode "tmux"
 
       // set colors and format for the tabs
-      tab_normal "#[fg=#cad3f5,bg=#1e2030] {index} {name} {fullscreen_indicator}{sync_indicator}{floating_indicator}"
-      tab_active "#[fg=#cad3f5,bg=#1e2030,bold,italic] {index} {name} {fullscreen_indicator}{sync_indicator}{floating_indicator}"
+      tab_normal "#[fg=#cdd6f4,bg=#181825] {index} {name} {fullscreen_indicator}{sync_indicator}{floating_indicator}"
+      tab_active "#[fg=#cdd6f4,bg=#181825,bold,italic] {index} {name} {fullscreen_indicator}{sync_indicator}{floating_indicator}"
       tab_fullscreen_indicator "□ "
       tab_sync_indicator "  "
       tab_floating_indicator "󰉈 "
 
       // set colors and format for the datetime
-      datetime "#[fg=#cad3f5,bg=#1e2030] {format} "
+      datetime "#[fg=#cdd6f4,bg=#181825] {format} "
       datetime_format "%A, %d %b %Y %H:%M"
       datetime_timezone "Europe/London"
     }

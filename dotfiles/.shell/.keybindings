@@ -1,8 +1,0 @@
-# `zsh-vi-mode` blocks all keybindings
-# so to add extra keybindings, we need to init them after `zsh-vi-mode`
-function zvm_after_init() {
-    zvm_bindkey viins '^R' fzf-history-widget
-    bindkey '^f' _fd_fzf_hx_find_files
-    bindkey '^k' _fzf_hx_find_in_files
-}
-function zvm_after_lazy_keybindings() {}

@@ -23,7 +23,7 @@ count_selected = { fg = "#303446", bg = "#ca9ee6" }
 border_symbol = "│"
 border_style = { fg = "#838ba7" }
 
-syntect_theme = "~/.config/yazi/Catppuccin-frappe.tmTheme"
+syntect_theme = "~/.config/yazi/catppuccin_frappe.tmTheme"
 
 [mode]
 normal_main = { fg = "#303446", bg = "#ca9ee6", bold = true }
@@ -68,7 +68,7 @@ list = {}
 btn_yes = { reversed = true }
 btn_no = {}
 
-[completion]
+[cmp]
 border = { fg = "#ca9ee6" }
 
 [tasks]
@@ -113,6 +113,12 @@ rules = [
   { name = "*", fg = "#c6d0f5" },
   { name = "*/", fg = "#ca9ee6" }
 ]
+
+[spot]
+border = { fg = "#ca9ee6" }
+title = { fg = "#ca9ee6" }
+tbl_cell = { fg = "#ca9ee6", reversed = true }
+tbl_col = { bold = true }
 
 [icon]
 files = [

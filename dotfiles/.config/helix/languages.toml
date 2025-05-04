@@ -4,11 +4,11 @@
 
 [language-server.pylsp.config.pylsp.plugins]
 autopep8 = { enabled = false }
-black = { enabled = true }
+black = { enabled = false }
 flake8 = { enabled = false }
-isort = { enabled = true }
+isort = { enabled = false }
 mccabe = { enabled = false }
-memestra = { enabled = true }
+memestra = { enabled = false }
 pycodestyle = { enabled = false }
 pyflakes = { enabled = false }
 pylint = { enabled = false }
@@ -17,10 +17,9 @@ rope_autoimport = { enabled = true }
 ruff = { enabled = false }
 yapf = { enabled = false }
 
-[language-server.ruff-lsp]
-command = "ruff-lsp"
-config.documentFormatting = true
-organizeImports = false
+[language-server.ruff]
+command = "ruff"
+args = ["server"]
 
 # =================================================
 # Languages
@@ -33,7 +32,7 @@ soft-wrap.enable = true
 [[language]]
 name = "python"
 auto-format = false
-language-servers = ["pylsp", "ruff-lsp"]
+language-servers = ["pylsp", "ruff"]
 
 [[language]]
 name = "sql"

@@ -1,19 +1,10 @@
-# =================================================
-# Theme
-# =================================================
-
-theme = "catppuccin_macchiato"
-
-# =================================================
-# Editor
-# =================================================
+theme = "catppuccin_mocha"
 
 [editor]
 bufferline = "always"
 color-modes = true
 completion-trigger-len = 1
 cursorline = true
-# minimum severity to show a diagnostic after the end of a line
 end-of-line-diagnostics = "hint"
 line-number = "relative"
 mouse = true
@@ -21,22 +12,21 @@ rulers = [100]
 shell = ["zsh", "-c"]
 true-color = true
 
-[editor.inline-diagnostics]
-# show a diagnostic on the primary cursor's line
-cursor-line = "error"
-
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
 select = "underline"
 
 [editor.file-picker]
-git-ignore = false
+git-ignore = true
 hidden = false
-ignore = false
+ignore = true
 
 [editor.indent-guides]
 render = true
+
+[editor.inline-diagnostics]
+cursor-line = "error"
 
 [editor.lsp]
 display-inlay-hints = true
@@ -44,32 +34,17 @@ display-messages = true
 
 [editor.statusline]
 center = []
-left = [
-  "mode",
-  "separator",
-  "version-control",
-  "spinner",
-  "diagnostics",
-  "workspace-diagnostics",
-]
-right = [
-  "selections",
-  "primary-selection-length",
-  "position",
-  "spacer",
-  "total-line-numbers",
-  "file-name",
-  "file-type",
-]
+left = ["mode", "separator", "version-control", "spinner", "diagnostics", "workspace-diagnostics"]
+right = ["selections", "primary-selection-length", "position", "spacer", "total-line-numbers", "file-name", "file-type"]
 separator = "│"
-
-[editor.whitespace.render]
-newline = "none"
-space = "all"
-tab = "all"
 
 [editor.whitespace.characters]
 nbsp = "⍽"
 space = "·"
 tab = "→"
 tabpad = "·"
+
+[editor.whitespace.render]
+newline = "none"
+space = "all"
+tab = "all"

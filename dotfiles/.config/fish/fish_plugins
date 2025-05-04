@@ -1,0 +1,10 @@
+# plugin manager for `fish`
+jorgebucaran/fisher
+# pure-fish `z` directory jumping
+jethrokuan/z
+# `fzf` plugin for `fish`
+patrickf1/fzf.fish
+# Catppuccin theme for `fish`
+catppuccin/fish
+# configurable `fzf` completions for `fish`
+gazorby/fifc

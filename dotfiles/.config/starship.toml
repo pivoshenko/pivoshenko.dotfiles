@@ -4,7 +4,7 @@
 # Themes
 # =================================================
 
-palette = "catppuccin_macchiato"
+palette = "catppuccin_mocha"
 
 [palettes.catppuccin_frappe]
 rosewater = "#f2d5cf"
@@ -119,7 +119,7 @@ mantle = "#181825"
 crust = "#11111b"
 
 # =================================================
-# Configuration Per Language/Package
+# Configuration per language/package
 # =================================================
 
 [aws]
@@ -253,6 +253,7 @@ symbol = " "
 
 [shell]
 zsh_indicator = "󰊠"
+fish_indicator = "󰊠"
 style = "green bold"
 disabled = false
 

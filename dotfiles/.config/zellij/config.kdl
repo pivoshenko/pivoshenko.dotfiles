@@ -12,7 +12,7 @@ mouse_mode true
 // =================================================
 
 // set custom theme
-theme "catppuccin-macchiato"
+theme "catppuccin-mocha"
 // set a minimalistic UI (without any arrows and frames)
 simplified_ui true
 
