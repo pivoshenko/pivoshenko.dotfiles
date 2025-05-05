@@ -91,6 +91,8 @@ brew "curl"
 brew "exercism"
 # modern replacement for `ls`
 brew "eza"
+# system information tool
+brew "fastfetch"
 # simple, fast and user-friendly alternative to `find`
 brew "fd"
 # command-line fuzzy finder written in Go
@@ -115,8 +117,6 @@ brew "k9s"
 brew "lazydocker"
 # Terminal UI for `git`
 brew "lazygit"
-# system information tool
-brew "neofetch"
 # pinentry for GPG on macOS
 brew "pinentry-mac"
 # fast search tool similar to `grep`
