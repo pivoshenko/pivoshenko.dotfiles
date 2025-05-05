@@ -112,7 +112,7 @@ I want to highlight it separately, as it's a truly amazing editor with a lot of 
 
 ### fzf
 
-Another highlight is [fzf](https://github.com/junegunn/fzf), which I heavily use for autocompletion in the shell. I can't imagine my workflow without it.
+Another highlight is [fzf](https://github.com/junegunn/fzf), which I heavily use for autocompletion and fuzzy search in the shell. I can't imagine my workflow without it.
 
 ## Applications
 
