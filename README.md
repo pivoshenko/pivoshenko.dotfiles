@@ -11,12 +11,11 @@
   </a>
 </p>
 
-
 - [pivoshenko's dotfiles](#pivoshenkos-dotfiles)
   - [Overview](#overview)
   - [Main principles](#main-principles)
   - [Usage](#usage)
-  - [MacOS](#macos)
+  - [macOS](#macos)
   - [CLI](#cli)
     - [Helix](#helix)
     - [fzf](#fzf)
@@ -74,9 +73,9 @@ dotdrop install -c dotdrop.config.yaml -p default --force
 dotdrop install -c dotdrop.config.yaml -p macos --force
 ```
 
-## MacOS
+## macOS
 
-To configure MacOS I am using [`defaults`](https://macos-defaults.com), my configuration can be found [here](macos/defaults.sh).
+To configure macOS I am using [`defaults`](https://macos-defaults.com), my configuration can be found [here](macos/defaults.sh).
 
 Run the following commands to configure macOS defaults:
 
@@ -123,11 +122,11 @@ I am using [Homebrew](https://brew.sh) to install both GUI applications and comm
 
 ### Application Launcher - Raycast
 
-I recently moved from the default MacOS Spotlight to [Raycast](https://www.raycast.com). While it offers an impressive range of features and a sleek user experience, many of its advanced capabilities are locked behind a Pro subscription, which I find limiting. As a result, I'm currently exploring alternative solutions.
+I recently moved from the default macOS Spotlight to [Raycast](https://www.raycast.com). While it offers an impressive range of features and a sleek user experience, many of its advanced capabilities are locked behind a Pro subscription, which I find limiting. As a result, I'm currently exploring alternative solutions.
 
 ### Hotkeys Daemon - Karabiner
 
-I primarily use an external keyboard, and in most of my apps, I rely on either Vi/Kakoune motions. I find it painful to use the mouse, as it requires moving my right hand off the keyboard and distracts my "zen" state. In most of the dev apps, you can enable such modes, but in the default MacOS apps or window manager, such functionality is absent. To resolve this issue, I am using [Karabiner](https://github.com/pqrs-org/Karabiner-Elements).
+I primarily use an external keyboard, and in most of my apps, I rely on either Vi/Kakoune motions. I find it painful to use the mouse, as it requires moving my right hand off the keyboard and distracts my "zen" state. In most of the dev apps, you can enable such modes, but in the default macOS apps or window manager, such functionality is absent. To resolve this issue, I am using [Karabiner](https://github.com/pqrs-org/Karabiner-Elements).
 
 My configuration can be found [here](dotfiles/.config/karabiner/karabiner.json). The main idea is to implement [home row mode](https://precondition.github.io/home-row-mods) using this [guide](https://havn.blog/2024/03/03/a-good-way.html).
 
