@@ -55,6 +55,9 @@ cask "zen-browser"
 # Programming languages
 # =================================================
 
+brew "elixir"
+# programming language for highly scalable real-time systems
+brew "erlang"
 # GNU compiler collection
 brew "gcc"
 # statically typed language for Erlang VM
@@ -69,6 +72,7 @@ brew "rustup"
 brew "pyenv"
 # Python package installer written in Rust
 brew "uv"
+# functional metaprogramming aware language built on Erlang VM
 
 # =================================================
 # DBs
