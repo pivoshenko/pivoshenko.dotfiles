@@ -105,6 +105,8 @@ brew "fzf"
 brew "fish"
 # syntax-highlighting pager for `git` and `diff` output
 brew "git-delta"
+# git extension for versioning large files
+brew "git-lfs"
 # GitHub command-line tool
 brew "gh"
 # GNU PGP package
