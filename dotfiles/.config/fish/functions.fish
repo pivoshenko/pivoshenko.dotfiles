@@ -23,7 +23,7 @@ function loadenv
         set --local key (string split -m 1 '=' $line)[1]
         set --local val (string split -m 1 '=' $line)[2]
         if test -n "$key" -a -n "$val"
-            set -gx $key $val
+            set -Ux $key $val
         end
     end
     echo "Loaded"
