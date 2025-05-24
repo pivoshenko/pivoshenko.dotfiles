@@ -101,4 +101,4 @@ set -Ux FZF_CTRL_R_OPTS " \
 "
 
 set -Ux fifc_custom_fzf_opts $FZF_DEFAULT_OPTS
-set -Ux fzf_preview_dir_cmd eza
+# set -Ux fzf_preview_dir_cmd eza
