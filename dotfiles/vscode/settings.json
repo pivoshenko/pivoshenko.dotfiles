@@ -12,8 +12,8 @@
   "workbench.preferredLightColorTheme": "Catppuccin Latte",
   "workbench.colorTheme": "Catppuccin Mocha",
   "workbench.colorCustomizations": {
-    // text #cad3f5
-    "statusBar.foreground": "#cad3f5"
+    // text #cdd6f4
+    "statusBar.foreground": "#cdd6f4"
   },
   "material-icon-theme.saturation": 1,
   "material-icon-theme.activeIconPack": "angular_ngrx",
@@ -121,12 +121,12 @@
   "terminal.integrated.gpuAcceleration": "on",
   "terminal.integrated.inheritEnv": true,
   "terminal.integrated.profiles.osx": {
-    "zsh": {
+    "fish": {
       "args": [
         "-l",
         "-i"
       ],
-      "path": "/bin/zsh"
+      "path": "/opt/homebrew/bin/fish"
     }
   },
   // =================================================
@@ -145,7 +145,7 @@
   "githubPullRequests.createOnPublishBranch": "never",
   "githubPullRequests.fileListLayout": "tree",
   // GitHub Copilot
-  "github.copilot.nextEditSuggestions.enabled": false,
+  "github.copilot.nextEditSuggestions.enabled": true,
   "github.copilot.editor.enableCodeActions": false,
   "github.copilot.chat.commitMessageGeneration.instructions": [
     {
@@ -153,12 +153,7 @@
     }
   ],
   "github.copilot.enable": {
-    "*": true,
-    "plaintext": true,
-    "markdown": true,
-    "scminput": true,
-    "gleam": true,
-    "python": true
+    "*": true
   },
   // Python
   "python.analysis.autoFormatStrings": true,
@@ -183,6 +178,9 @@
   // SQL
   "sqlfluff.env.useDotEnvFile": true,
   "sqlfluff.config": "pyproject.toml",
+  // Python
+  "python.analysis.extraPaths": [],
+  "python.analysis.typeCheckingMode": "standard",
   // TOML
   "evenBetterToml.formatter.allowedBlankLines": 1,
   "evenBetterToml.formatter.arrayAutoCollapse": true,
@@ -200,7 +198,7 @@
     "transparent": true,
     "titleBarOverlay": {
       // icons and text has the same centring in the title bar
-      "height": 35,
+      "height": 35
     }
   },
   "custom-ui-style.stylesheet": {
@@ -212,7 +210,7 @@
     // center the title with the filename
     ".monaco-workbench .editor-group-container>.title>.label-container>.title-label>.monaco-icon-label-container": {
       "margin-left": "50px !important",
-    },
+    }
   },
   // =================================================
   // Extensions files
