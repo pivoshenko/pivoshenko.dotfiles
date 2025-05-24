@@ -30,11 +30,11 @@ source $HOME/.config/fish/vimode.fish
 source $HOME/.config/fish/fzf.fish
 
 # load shell configuration specific to the current host
-if test -f $HOME/.shell/.local
-    source $HOME/.shell/.local
+if test -f $HOME/.config/fish/local.fish
+    source $HOME/.config/fish/local.fish
 end
 
 # load common environment variables / secrets
-if test -f $HOME/.shell/.env
-    source $HOME/.shell/.env
+if test -f $HOME/.config/fish/.env.fish
+    source $HOME/.config/fish/.env.fish
 end
