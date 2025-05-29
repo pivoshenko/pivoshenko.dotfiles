@@ -4,19 +4,19 @@ start-at-login = true
 # Commands
 # =================================================
 
-# commands that run after login to the macOS user session
+# Commands that run after login to the macOS user session
 after-login-command = []
-# commands that run after `aerospace` startup
-# colours are Catppuccin Mocha Mauve and Lavender
+# Commands that run after `aerospace` startup
+# Colours are Catppuccin Mocha Mauve and Lavender
 after-startup-command = ['exec-and-forget borders active_color=0xffcba6f7 inactive_color=0xffb4befe width=7.0']
-# list of callbacks to run arbitrary processes when the focused workspace changes
+# List of callbacks to run arbitrary processes when the focused workspace changes
 exec-on-workspace-change = []
 
 # =================================================
 # Padding
 # =================================================
 
-# gaps between windows (inner-*) and between monitor edges (outer-*)
+# Gaps between windows (inner-*) and between monitor edges (outer-*)
 [gaps]
 inner.horizontal = 10
 inner.vertical = 10
@@ -29,7 +29,7 @@ outer.right = 10
 # External monitors setup
 # =================================================
 
-# assign workspaces to always appear on particular monitors
+# Assign workspaces to always appear on particular monitors
 [workspace-to-monitor-force-assignment]
 1 = "built-in"
 2 = "built-in"
@@ -111,13 +111,13 @@ alt-shift-tab = "move-workspace-to-monitor --wrap-around next"
 # =================================================
 
 [mode.service.binding]
-# reload config
+# Reload config
 esc = ["reload-config", "mode main"]
-# reset layout
+# Reset layout
 r = ["flatten-workspace-tree", "mode main"]
-# toggle between floating and tiling layout
+# Toggle between floating and tiling layout
 f = ["layout floating tiling", "mode main"]
-# close all background windows
+# Close all background windows
 backspace = ["close-all-windows-but-current", "mode main"]
 alt-shift-h = ["join-with left", "mode main"]
 alt-shift-j = ["join-with down", "mode main"]

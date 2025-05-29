@@ -1,7 +1,7 @@
 """Reindex image files in subdirectories of the `wallpapers` directory.
 
 This script renames all .png, .jpg, and .jpeg files in each subdirectory of the
-'wallpapers' directory to a consistent format: `{subdir_name}_{index}{extension}`.
+`wallpapers` directory to a consistent format: `{subdir_name}_{index}{extension}`.
 
 Steps:
 1. Temporarily rename files to avoid conflicts.

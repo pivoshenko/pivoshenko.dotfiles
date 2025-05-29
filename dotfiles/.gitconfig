@@ -1,65 +1,65 @@
 [commit]
-# sign all commits with GPG
+# Sign all commits with GPG
 gpgsign = true
 
 [core]
-# enable CRLF line endings
+# Enable CRLF line endings
 autocrlf = input
-# set text editor for `commit` and `tag` commands
+# Set text editor for `commit` and `tag` commands
 editor = hx
-# set text viewer for git commands
+# Set text viewer for git commands
 pager = delta
 
 [credential]
-# use external helper for username/password credentials
+# Use external helper for username/password credentials
 helper = store
 
 [delta]
-# set syntax highlighting theme
+# Set syntax highlighting theme
 features = "catppuccin_mocha"
-# enable terminal hyperlinks support
+# Enable terminal hyperlinks support
 hyperlinks = true
-# use correct URL format for hyperlinks
+# Use correct URL format for hyperlinks
 hyperlinks-file-link-format = "file-line://{path}:{line}"
-# use dark mode only
+# Use dark mode only
 light = false
-# show line numbers in two columns
+# Show line numbers in two columns
 line-numbers = true
-# enable navigation keybindings
+# Enable navigation keybindings
 navigate = true
-# enable side-by-side view for diffs
+# Enable side-by-side view for diffs
 side-by-side = true
 
 [diff]
 colorMoved = default
 
 [include]
-# include custom themes for git-delta
+# Include custom themes for git-delta
 path = ~/.config/delta/catppuccin.gitconfig
-# include private configuration
+# Include private configuration
 path = ~/.gitconfig.local
 
 [init]
-# set default branch name for new repositories
+# Set default branch name for new repositories
 defaultBranch = main
 
 [interactive]
-# use git-delta for colorized diff output
+# Use git-delta for colorized diff output
 diffFilter = delta --color-only
 
 [merge]
-# set conflict style with markers and original text
+# Set conflict style with markers and original text
 conflictstyle = diff3
 
 [push]
-# push current branch to remote with same name
+# Push current branch to remote with same name
 default = simple
 
 [submodule]
-# disable parallel operations for submodules
+# Disable parallel operations for submodules
 fetchJobs = 0
 recurse = true
 
 [user]
-# use only configured user values
+# Use only configured user values
 useConfigOnly = true

@@ -2,18 +2,18 @@
 // Misc
 // =================================================
 
-// disable sessions serialization to the cache folder
+// Disable sessions serialization to the cache folder
 session_serialization false
-// enable mouse support
+// Enable mouse support
 mouse_mode true
 
 // =================================================
 // Theme
 // =================================================
 
-// set custom theme
+// Set custom theme
 theme "catppuccin-mocha"
-// set a minimalistic UI (without any arrows and frames)
+// Set a minimalistic UI (without any arrows and frames)
 simplified_ui true
 
 // =================================================

@@ -3,14 +3,14 @@
     // UI
     // =================================================
 
-    // set custom theme
+    // Set custom theme
     "theme": "Catppuccin Mocha",
     "preferred-light-theme": "Catppuccin Latte",
     "preferred-dark-theme": "Catppuccin Mocha",
     "theme-scrollbars": true,
     "adaptive-theme": false,
 
-    // set custom fonts
+    // Set custom fonts
     "overrides": {
         "code-font-family": "JetBrainsMono Nerd Font Mono",
         "code-font-size": "16",

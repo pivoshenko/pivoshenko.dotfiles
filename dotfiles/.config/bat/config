@@ -1,5 +1,5 @@
-# set custom theme
+# Set custom theme
 --theme="catppuccin_mocha"
 
-# show plain style without decorations
+# Show plain style without decorations
 --plain

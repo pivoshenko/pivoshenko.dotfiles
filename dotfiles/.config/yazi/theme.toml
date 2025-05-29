@@ -1,5 +1,3 @@
-# set Catppuccin Mocha theme
-
 [manager]
 cwd = { fg = "#94e2d5" }
 

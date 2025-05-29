@@ -2,7 +2,7 @@
   // =================================================
   // UI
   // =================================================
-  // set custom theme
+  // Set custom theme
   "catppuccin.accentColor": "mauve",
   "workbench.productIconTheme": "fluent-icons",
   "workbench.iconTheme": "material-icon-theme",
@@ -12,7 +12,7 @@
   "workbench.preferredLightColorTheme": "Catppuccin Latte",
   "workbench.colorTheme": "Catppuccin Mocha",
   "workbench.colorCustomizations": {
-    // text #cdd6f4
+    // Text #cdd6f4
     "statusBar.foreground": "#cdd6f4"
   },
   "material-icon-theme.saturation": 1,
@@ -23,35 +23,35 @@
   // UI Editor
   // =================================================
   "editor.acceptSuggestionOnEnter": "on",
-  // turn off screen reader support
+  // Turn off screen reader support
   "editor.accessibilitySupport": "off",
-  // enable display of inline code information like references
+  // Enable display of inline code information like references
   "editor.codeLens": true,
   "editor.guides.bracketPairs": true,
   "editor.inlineSuggest.enabled": true,
-  // always show toolbar for inline suggestions
+  // Always show toolbar for inline suggestions
   "editor.inlineSuggest.showToolbar": "always",
   "editor.lineNumbers": "relative",
   "editor.minimap.enabled": false,
-  // render all whitespace characters
+  // Render all whitespace characters
   "editor.renderWhitespace": "all",
-  // show ruler at the specified column
+  // Show ruler at the specified column
   "editor.rulers": [
     100
   ],
-  // hide horizontal scrollbar
+  // Hide horizontal scrollbar
   "editor.scrollbar.horizontal": "hidden",
-  // hide vertical scrollbar
+  // Hide vertical scrollbar
   "editor.scrollbar.vertical": "hidden",
-  // set vertical scrollbar size to zero
+  // Set vertical scrollbar size to zero
   "editor.scrollbar.verticalScrollbarSize": 0,
-  // show snippet suggestions at the top of suggestions list
+  // Show snippet suggestions at the top of suggestions list
   "editor.snippetSuggestions": "top",
-  // enable preview of suggestions
+  // Enable preview of suggestions
   "editor.suggest.preview": true,
-  // show method suggestions in autocomplete
+  // Show method suggestions in autocomplete
   "editor.suggest.showMethods": true,
-  // select the first suggestion by default
+  // Select the first suggestion by default
   "editor.suggestSelection": "first",
   // =================================================
   // UI Search
@@ -67,11 +67,11 @@
   "workbench.editor.labelFormat": "short",
   "workbench.editor.showIcons": false,
   "workbench.layoutControl.enabled": false,
-  // set sidebar location to the right
+  // Set sidebar location to the right
   "workbench.sideBar.location": "right",
-  // set startup editor to none
+  // Set startup editor to none
   "workbench.startupEditor": "none",
-  // disable workbench tips
+  // Disable workbench tips
   "workbench.tips.enabled": false,
   // =================================================
   // UI Window
@@ -80,7 +80,7 @@
   "window.commandCenter": false,
   "window.customTitleBarVisibility": "never",
   "window.titleBarStyle": "native",
-  // zen mode
+  // Zen mode
   "zenMode.hideLineNumbers": false,
   // =================================================
   // Fonts
@@ -192,24 +192,24 @@
   // Extensions APC
   // =================================================
   "custom-ui-style.electron": {
-    // removes the title bar
+    // Removes the title bar
     "frame": false,
-    // removes white line from the top
+    // Removes white line from the top
     "transparent": true,
     "titleBarOverlay": {
-      // icons and text has the same centring in the title bar
+      // Icons and text has the same centring in the title bar
       "height": 35
     }
   },
   "custom-ui-style.stylesheet": {
-    // hide extra items
+    // Hide extra items
     ".quick-input-list .scrollbar, .quick-input-list .action-label": {
       "visiblity": "hidden !important",
-      "display": "none !important",
+      "display": "none !important"
     },
-    // center the title with the filename
+    // Center the title with the filename
     ".monaco-workbench .editor-group-container>.title>.label-container>.title-label>.monaco-icon-label-container": {
-      "margin-left": "50px !important",
+      "margin-left": "50px !important"
     }
   },
   // =================================================

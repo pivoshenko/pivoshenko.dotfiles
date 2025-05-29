@@ -2,19 +2,19 @@
 # External tools
 # =================================================
 
-# initialize `starship` prompt
+# Initialize `starship` prompt
 starship init fish | source
 
-# initialize `zoxide`
+# Initialize `zoxide`
 zoxide init fish | source
 
-# initialize `fzf`
+# Initialize `fzf`
 fzf --fish | source
 
-# initialize `pyenv`
+# Initialize `pyenv`
 pyenv init - fish | source
 
-# display system information on shell startup
+# Display system information on shell startup
 function fish_greeting
     fastfetch
 end
@@ -29,12 +29,12 @@ source $HOME/.config/fish/functions.fish
 source $HOME/.config/fish/vimode.fish
 source $HOME/.config/fish/fzf.fish
 
-# load shell configuration specific to the current host
+# Load shell configuration specific to the current host
 if test -f $HOME/.config/fish/local.fish
     source $HOME/.config/fish/local.fish
 end
 
-# load common environment variables / secrets
+# Load common environment variables / secrets
 if test -f $HOME/.config/fish/.env.fish
     source $HOME/.config/fish/.env.fish
 end

@@ -12,43 +12,43 @@ cask "font-symbols-only-nerd-font"
 # GUI applications
 # =================================================
 
-# tiling window manager for macOS
+# Tiling window manager for macOS
 cask "aerospace"
-# database management tool
+# Database management tool
 cask "dbeaver-community"
-# platform for containerized applications
+# Platform for containerized applications
 cask "docker"
-# text expansion and automation tool
+# Text expansion and automation tool
 cask "espanso"
-# blue light reduction utility
+# Blue light reduction utility
 cask "flux"
 # API testing and development tool
 cask "insomnia"
-# terminal emulator for macOS
+# Terminal emulator for macOS
 cask "iterm2"
-# keyboard customization tool
+# Keyboard customization tool
 cask "karabiner-elements"
 # GUI for MongoDB database
 cask "mongodb-compass"
-# secure password manager
+# Secure password manager
 cask "nordpass"
 # VPN client
 cask "nordvpn"
-# knowledge base and note-taking application
+# Knowledge base and note-taking application
 cask "obsidian"
 # Spotlight replacement and productivity tool
 cask "raycast"
-# music streaming service
+# Music streaming service
 cask "spotify"
-# cloud-based messaging application
+# Cloud-based messaging application
 cask "telegram"
-# alternative Discord client
+# Alternative Discord client
 cask "vesktop"
-# code editor by Microsoft
+# Code editor by Microsoft
 cask "visual-studio-code"
-# high-performance code editor
+# High-performance code editor
 cask "zed"
-# distraction-free web browser
+# Distraction-free web browser
 cask "zen-browser"
 
 # =================================================
@@ -56,15 +56,15 @@ cask "zen-browser"
 # =================================================
 
 brew "elixir"
-# programming language for highly scalable real-time systems
+# Programming language for highly scalable real-time systems
 brew "erlang"
 # GNU compiler collection
 brew "gcc"
-# statically typed language for Erlang VM
+# Statically typed language for Erlang VM
 brew "gleam"
-# lightweight programming language
+# Lightweight programming language
 brew "lua"
-# safe, concurrent, practical language
+# Safe, concurrent, practical language
 brew "rust"
 # Rust toolchain installer
 brew "rustup"
@@ -78,74 +78,74 @@ brew "uv"
 # DBs
 # =================================================
 
-# embeddable SQL OLAP database management system
+# Embeddable SQL OLAP database management system
 brew "duckdb"
 
 # =================================================
 # Command-line tools
 # =================================================
 
-# clone of `cat` with syntax highlighting and Git integration
+# Clone of `cat` with syntax highlighting and Git integration
 brew "bat"
-# cross-platform system monitor
+# Cross-platform system monitor
 brew "bottom"
-# get a file from an HTTP, HTTPS or FTP server
+# Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
-# command-line tool to interact with exercism.io
+# Command-line tool to interact with exercism.io
 brew "exercism"
-# modern replacement for `ls`
+# Modern replacement for `ls`
 brew "eza"
-# system information tool
+# System information tool
 brew "fastfetch"
-# simple, fast and user-friendly alternative to `find`
+# Simple, fast and user-friendly alternative to `find`
 brew "fd"
-# command-line fuzzy finder written in Go
+# Command-line fuzzy finder written in Go
 brew "fzf"
-# command-line shell for UNIX-like operating systems
+# Command-line shell for UNIX-like operating systems
 brew "fish"
-# syntax-highlighting pager for `git` and `diff` output
+# Syntax-highlighting pager for `git` and `diff` output
 brew "git-delta"
-# git extension for versioning large files
+# Git extension for versioning large files
 brew "git-lfs"
 # GitHub command-line tool
 brew "gh"
 # GNU PGP package
 brew "gnupg"
-# graph visualization software from AT&T and Bell Labs
+# Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
-# post-modern modal text editor
+# Post-modern modal text editor
 brew "helix"
-# lightweight JSON processor
+# Lightweight JSON processor
 brew "jq"
-# terminal UI for Kubernetes
+# Terminal UI for Kubernetes
 brew "k9s"
-# terminal UI for Docker
+# Terminal UI for Docker
 brew "lazydocker"
 # Terminal UI for `git`
 brew "lazygit"
-# pinentry for GPG on macOS
+# Pinentry for GPG on macOS
 brew "pinentry-mac"
-# fast search tool similar to `grep`
+# Fast search tool similar to `grep`
 brew "ripgrep"
-# command-line tool to customize Spotify
+# Command-line tool to customize Spotify
 brew "spicetify-cli"
-# customizable cross-shell prompt
+# Customizable cross-shell prompt
 brew "starship"
-# a cross-platform, fast and extensible general purpose fuzzy finder TUI
+# A cross-platform, fast and extensible general purpose fuzzy finder TUI
 brew "television"
-# display directories as trees
+# Display directories as trees
 brew "tree"
-# terminal recorder
+# Terminal recorder
 brew "vhs"
-# internet file retriever
+# Internet file retriever
 brew "wget"
-# fast terminal file manager
+# Fast terminal file manager
 brew "yazi"
-# terminal workspace with multiplexer
+# Terminal workspace with multiplexer
 brew "zellij"
-# plugin manager for `zsh`
+# Plugin manager for `zsh`
 brew "zplug"
-# smarter `cd` command
+# Smarter `cd` command
 brew "zoxide"
 
 # =================================================
@@ -163,6 +163,7 @@ brew "yaml-language-server"
 # VSCode extensions
 # =================================================
 
+vscode "arr.marksman"
 vscode "catppuccin.catppuccin-vsc"
 vscode "charliermarsh.ruff"
 vscode "dorzey.vscode-sqlfluff"
@@ -174,6 +175,7 @@ vscode "gleam.gleam"
 vscode "kend.dancehelixkey"
 vscode "matangover.mypy"
 vscode "miguelsolorio.fluent-icons"
+vscode "ms-python.debugpy"
 vscode "ms-python.python"
 vscode "ms-python.vscode-pylance"
 vscode "ms-toolsai.jupyter"
@@ -181,15 +183,10 @@ vscode "ms-toolsai.jupyter-keymap"
 vscode "ms-toolsai.jupyter-renderers"
 vscode "ms-toolsai.vscode-jupyter-cell-tags"
 vscode "ms-toolsai.vscode-jupyter-slideshow"
-vscode "ms-vscode-remote.remote-containers"
-vscode "ms-vscode-remote.remote-ssh"
-vscode "ms-vscode-remote.remote-ssh-edit"
-vscode "ms-vscode-remote.vscode-remote-extensionpack"
-vscode "ms-vscode.remote-explorer"
-vscode "ms-vscode.remote-server"
 vscode "ms-windows-ai-studio.windows-ai-studio"
 vscode "naumovs.color-highlight"
 vscode "pkief.material-icon-theme"
+vscode "redhat.vscode-yaml"
 vscode "robertostermann.inline-parameters-extended"
 vscode "rodolphebarbanneau.python-docstring-highlighter"
 vscode "samuelcolvin.jinjahtml"

@@ -2,8 +2,6 @@
 # Theme
 # =================================================
 
-# set Catppuccin Mocha theme
-
 gui:
   theme:
     activeBorderColor:
@@ -34,7 +32,7 @@ gui:
 # =================================================
 
 customCommands:
-  # create a pull request on GitHub
+  # Create a pull request on GitHub
   - key: <c-r>
     command: gh pr create --fill --web
     context: global
