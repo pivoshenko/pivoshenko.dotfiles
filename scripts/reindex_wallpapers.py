@@ -20,7 +20,7 @@ from pathlib import Path
 
 import logging
 
-BASEPATH = Path.cwd() / "wallpapers"
+BASEPATH = Path.cwd() / "dotfiles" / ".config" / "wallpapers"
 
 
 def reindex_files_in_subdir(subdir: Path) -> None:
