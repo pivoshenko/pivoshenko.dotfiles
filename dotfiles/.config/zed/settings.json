@@ -2,13 +2,13 @@
   // =================================================
   // UI General
   // =================================================
-  // set custom theme
+  // Set custom theme
   "theme": {
     "dark": "Catppuccin Mocha",
     "light": "Catppuccin Latte",
     "mode": "system"
   },
-  // set custom fonts
+  // Set custom fonts
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "buffer_font_size": 16,
   "ui_font_family": "JetBrainsMono Nerd Font",
@@ -16,23 +16,23 @@
   // =================================================
   // UI Editor
   // =================================================
-  // render all whitespaces
+  // Render all whitespaces
   "show_whitespaces": "all",
   "soft_wrap": "editor_width",
-  // disable toolbar
+  // Disable toolbar
   "toolbar": {
     "breadcrumbs": true,
     "quick_actions": true,
     "selections_menu": true
   },
-  // make tabs more compact
+  // Make tabs more compact
   "tabs": {
     "activate_on_close": "history",
     "close_position": "right",
     "file_icons": false,
     "git_status": true
   },
-  // disable preview tabs
+  // Disable preview tabs
   "preview_tabs": {
     "enable_preview_from_code_navigation": false,
     "enable_preview_from_file_finder": false,
@@ -41,17 +41,17 @@
   // =================================================
   // UI Dock Left
   // =================================================
-  // disable chat panel
+  // Disable chat panel
   "chat_panel": {
     "button": "never",
     "dock": "left"
   },
-  // disable collaboration panel
+  // Disable collaboration panel
   "collaboration_panel": {
     "button": false,
     "dock": "left"
   },
-  // disable notification panel
+  // Disable notification panel
   "notification_panel": {
     "button": false,
     "dock": "left"
@@ -75,7 +75,7 @@
   "project_panel": {
     "dock": "right"
   },
-  // disable terminal panel
+  // Disable terminal panel
   "terminal": {
     "button": false
   },
@@ -111,7 +111,7 @@
   // Misc
   // =================================================
   "auto_update": true,
-  // disable stats collection
+  // Disable stats collection
   "telemetry": {
     "diagnostics": false,
     "metrics": false
@@ -121,31 +121,31 @@
   // =================================================
   "auto_install_extensions": {
     "catppuccin": true,
-    // syntax highlighting for the Docker Compose YAML files
+    // Syntax highlighting for the Docker Compose YAML files
     "docker-compose": true,
-    // syntax highlighting for the Dockerfile
+    // Syntax highlighting for the Dockerfile
     "dockerfile": true,
-    // syntax highlighting for the .env files
+    // Syntax highlighting for the .env files
     "env": true,
-    // syntax highlighting for the Gleam files
+    // Syntax highlighting for the Gleam files
     "gleam": true,
-    // syntax highlighting for the git files
+    // Syntax highlighting for the git files
     "git-firefly": true,
-    // syntax highlighting for the HTML files
+    // Syntax highlighting for the HTML files
     "html": true,
-    // syntax highlighting for the INI files
+    // Syntax highlighting for the INI files
     "ini": true,
-    // syntax highlighting for the KDL files
+    // Syntax highlighting for the KDL files
     "kdl": true,
-    // syntax highlighting for log files
+    // Syntax highlighting for log files
     "log": true,
-    // syntax highlighting for the Lua files
+    // Syntax highlighting for the Lua files
     "lua": true,
-    // support for `ruff` as the Python linter and formatter
+    // Support for `ruff` as the Python linter and formatter
     "ruff": true,
-    // syntax highlighting for the SQL files
+    // Syntax highlighting for the SQL files
     "sql": true,
-    // syntax highlighting for the TOML files
+    // Syntax highlighting for the TOML files
     "toml": true
   },
   "file_types": {

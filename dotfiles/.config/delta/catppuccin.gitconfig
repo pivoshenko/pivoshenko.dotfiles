@@ -26,7 +26,7 @@ map-styles = \
   bold blue => syntax "#bbcff5", \
   bold cyan => syntax "#b4def1", \
   bold yellow => syntax "#ebd9bf"
-# should match the name of the bat theme
+# Should match the name of the `bat` theme
 syntax-theme = catppuccin_latte
 
 [delta "catppuccin_frappe"]
@@ -57,7 +57,7 @@ map-styles = \
   bold blue => syntax "#475270", \
   bold cyan => syntax "#4a5b6b", \
   bold yellow => syntax "#5d5958"
-# should match the name of the bat theme
+# Should match the name of the `bat` theme
 syntax-theme = catppuccin_frappe
 
 [delta "catppuccin_macchiato"]
@@ -88,7 +88,7 @@ map-styles = \
   bold blue => syntax "#3e4868", \
   bold cyan => syntax "#3f5364", \
   bold yellow => syntax "#575253"
-# should match the name of the bat theme
+# Should match the name of the `bat` theme
 syntax-theme = catppuccin_macchiato
 
 [delta "catppuccin_mocha"]
@@ -119,5 +119,5 @@ map-styles = \
   bold blue => syntax "#384361", \
   bold cyan => syntax "#384d5d", \
   bold yellow => syntax "#544f4e"
-# should match the name of the bat theme
+# Should match the name of the `bat` theme
 syntax-theme = catppuccin_mocha

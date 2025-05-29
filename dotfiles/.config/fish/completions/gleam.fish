@@ -7,7 +7,7 @@ set -l targets erlang javascript
 set -l runtimes nodejs deno bun
 
 function __fish_gleam_project_root
-    # get project root (parent dir with gleam.toml)
+    # Get project root (parent dir with gleam.toml)
     for dir in (__fish_parent_directories (pwd --physical))
         if test -f $dir/gleam.toml
             echo $dir
@@ -28,7 +28,7 @@ end
 
 function __fish_gleam_deps_direct
     # 'gleam deps list' gives all dependencies but 'gleam remove' takes only
-    # direct project dependencies listed in 'gleam.toml'
+    # Direct project dependencies listed in 'gleam.toml'
     set -l gleam_version (gleam -V | string split -f2 " " | string split ".")
     if test $gleam_version[1] -eq 1 -a $gleam_version[2] -ge 8
         __fish_gleam_deps_parse_tree
@@ -53,9 +53,9 @@ function __fish_gleam_deps_parse_toml
         return 1
     end
     set -l current_table ''
-    # does not properly escape "#" inside a string but it should not matter
-    # since we only care about the keys (packages' names) and tables' names
-    # and those should not contain any "#"
+    # Does not properly escape "#" inside a string but it should not matter
+    # Since we only care about the keys (packages' names) and tables' names
+    # And those should not contain any "#"
     string replace -r '#.*' '' <$project_root/gleam.toml | string trim \
     | while read -l line
         if string match -q '[*]' $line
@@ -147,7 +147,7 @@ complete -c gleam -n '__fish_seen_subcommand_from revert' -l version -rf
 complete -c gleam -n '__fish_seen_subcommand_from publish; and not __fish_seen_subcommand_from docs' -l replace
 complete -c gleam -n '__fish_seen_subcommand_from publish; and not __fish_seen_subcommand_from docs' -s y -l yes
 
-# docs
+# Docs
 complete -c gleam -n '__fish_prev_arg_in docs' -a build   -d "Render HTML docs locally"
 complete -c gleam -n '__fish_prev_arg_in docs' -a publish -d "Publish HTML docs to HexDocs"
 complete -c gleam -n '__fish_prev_arg_in docs' -a remove  -d "Remove HTML docs from HexDocs"
@@ -155,7 +155,7 @@ complete -c gleam -n '__fish_seen_subcommand_from docs; and __fish_seen_subcomma
 complete -c gleam -n '__fish_seen_subcommand_from docs; and __fish_seen_subcommand_from remove' -l package -rf -a '(__fish_gleam_hex_packages)' -d "The name of the package"
 complete -c gleam -n '__fish_seen_subcommand_from docs; and __fish_seen_subcommand_from remove' -l version -rf -d "The version of the docs to remove"
 
-# export
+# Export
 complete -c gleam -n '__fish_prev_arg_in export' -a erlang-shipment    -d "Precompiled Erlang, suitable for deployment"
 complete -c gleam -n '__fish_prev_arg_in export' -a hex-tarball        -d "A bundled tarball, suitable for publishing to Hex"
 complete -c gleam -n '__fish_prev_arg_in export' -a javascript-prelude -d "The JavaScript prelude module"
@@ -164,12 +164,12 @@ complete -c gleam -n '__fish_prev_arg_in export' -a package-interface  -d "Infor
 complete -c gleam -n '__fish_prev_arg_in export' -a package-information -d "Information on the package (gleam.toml) in JSON format"
 complete -c gleam -n '__fish_prev_arg_in package-interface package-information' -l out -r -F  -d "The path to write the JSON file to"
 
-# format
+# Format
 complete -c gleam -n '__fish_seen_subcommand_from format; and __fish_not_contain_opt stdin' -F
 complete -c gleam -n '__fish_seen_subcommand_from format' -l stdin -d "Read source from STDIN"
 complete -c gleam -n '__fish_seen_subcommand_from format' -l check -d "Check if inputs are formatted without changing them"
 
-# new
+# New
 complete -c gleam -n '__fish_seen_subcommand_from new' -l name -r -d "Name of the project"
 complete -c gleam -n '__fish_seen_subcommand_from new' -l template -rf -a "$targets" -d "The template to use"
 complete -c gleam -n '__fish_seen_subcommand_from new' -l skip-git    -d "Skip git initialization"

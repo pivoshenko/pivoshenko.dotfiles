@@ -5,35 +5,35 @@
 // peach: #fab387
 
 layout {
-  // set default direction for the splits
+  // Set default direction for the splits
   pane split_direction="vertical" {
       pane
   }
-  // zjstatus
+  // Zjstatus
   pane size=1 borderless=true {
     plugin location="file:~/.config/zellij/plugins/zjstatus.wasm" {
-      // hide pane frames for tabs single panes
+      // Hide pane frames for tabs single panes
       hide_frame_for_single_pane "true"
       hide_frame_except_for_search "true"
 
-      // set the format for the status line
+      // Set the format for the status line
       format_left "{mode}#[fg=#cba6f7,bg=#181825,bold] {session}#[bg=#181825] {tabs}"
       format_right "#[fg=#cdd6f4,bg=#181825]::{datetime}"
       format_space "#[bg=#181825]"
 
-      // set colors for the mode indicator
+      // Set colors for the mode indicator
       mode_normal "#[bg=#cba6f7] "
       mode_tmux "#[bg=#fab387] "
       mode_default_to_mode "tmux"
 
-      // set colors and format for the tabs
+      // Set colors and format for the tabs
       tab_normal "#[fg=#cdd6f4,bg=#181825] {index} {name} {fullscreen_indicator}{sync_indicator}{floating_indicator}"
       tab_active "#[fg=#cdd6f4,bg=#181825,bold,italic] {index} {name} {fullscreen_indicator}{sync_indicator}{floating_indicator}"
       tab_fullscreen_indicator "□ "
       tab_sync_indicator "  "
       tab_floating_indicator "󰉈 "
 
-      // set colors and format for the datetime
+      // Set colors and format for the datetime
       datetime "#[fg=#cdd6f4,bg=#181825] {format} "
       datetime_format "%A, %d %b %Y %H:%M"
       datetime_timezone "Europe/London"
