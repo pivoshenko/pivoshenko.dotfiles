@@ -392,3 +392,11 @@ run = "layout floating"
 [[on-window-detected]]
 if.app-id = "pl.maketheweb.cleanshotx"
 run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "ai.perplexity.mac"
+run = "layout floating"
+
+[[on-window-detected]]
+if.app-id = "com.electron.dockerdesktop"
+run = "layout floating"
