@@ -55,6 +55,7 @@ cask "zen-browser"
 # Programming languages
 # =================================================
 
+# functional metaprogramming aware language built on Erlang VM
 brew "elixir"
 # Programming language for highly scalable real-time systems
 brew "erlang"
@@ -72,7 +73,6 @@ brew "rustup"
 brew "pyenv"
 # Python package installer written in Rust
 brew "uv"
-# functional metaprogramming aware language built on Erlang VM
 
 # =================================================
 # DBs
@@ -127,6 +127,8 @@ brew "lazygit"
 brew "pinentry-mac"
 # Fast search tool similar to `grep`
 brew "ripgrep"
+# Team communication and collaboration software
+brew "slack"
 # Command-line tool to customize Spotify
 brew "spicetify-cli"
 # Customizable cross-shell prompt
