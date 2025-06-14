@@ -32,6 +32,7 @@
     - [Messengers](#messengers)
       - [Messengers - Telegram](#messengers---telegram)
       - [Messengers - Discord](#messengers---discord)
+      - [Messengers - Slack](#messengers---slack)
     - [Text Expander - Espanso](#text-expander---espanso)
     - [Honourable Mentions](#honourable-mentions)
   - [Wallpapers](#wallpapers)
@@ -53,7 +54,7 @@ What's in here?
 - Minimalism in all aspects
 - Consistency throughout the configuration
 - Simplicity in design and configuration
-- Unified style [Catppuccin](https://github.com/catppuccin/catppuccin) and [JetBrains Mono Font](https://www.jetbrains.com/lp/mono)
+- Unified style [Catppuccin theme](https://github.com/catppuccin/catppuccin) and [JetBrains Mono font](https://www.jetbrains.com/lp/mono)
 
 ## Usage
 
@@ -85,7 +86,7 @@ sudo sh macos/defaults.sh
 
 ## CLI
 
-I am using [iTerm2](https://iterm2.com) as my main terminal with the [Catppuccin](https://github.com/catppuccin/iterm) theme applied. My configuration can be found [here](dotfiles/.config/iterm2).
+I am using [iTerm2](https://iterm2.com) as my main terminal with the [Catppuccin theme](https://github.com/catppuccin/iterm) applied. My configuration can be found [here](dotfiles/.config/iterm2).
 
 For the shell, I recently switched from `zsh` to [`fish`](https://fishshell.com), as out of the box it has all batteries included. To manage shell plugins, I am using [`fisher`](https://github.com/jorgebucaran/fisher), but there are only a few installed. My complete configuration can be found [here](dotfiles/.config/fish).
 
@@ -227,9 +228,14 @@ My main messenger is [Telegram](https://telegram.org) with my own version of [Ca
 To stay in touch with different communities, I am using [Discord](https://discord.com), but the official app lacks functionality, so instead I am using [Vesktop](https://github.com/Vencord/Vesktop) with the [Catppuccin theme](https://github.com/catppuccin/discord) installed via "Themes -> Online Themes".
 
 ```css
-@dark https://catppuccin.github.io/discord/dist/catppuccin-mocha-mauve.theme.css
+/* frappe, macchiato, mocha */
+@dark https://catppuccin.github.io/discord/dist/catppuccin-macchiato-mauve.theme.css
 @light https://catppuccin.github.io/discord/dist/catppuccin-latte-mauve.theme.css
 ```
+
+#### Messengers - Slack
+
+Recently, I started using [Slack](https://slack.com) for work-related communication. I use the official app with the [Catppuccin theme](https://github.com/catppuccin/slack), which I applied via the custom theme option.
 
 ### Text Expander - Espanso
 
