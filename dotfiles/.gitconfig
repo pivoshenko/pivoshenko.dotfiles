@@ -16,7 +16,7 @@ helper = store
 
 [delta]
 # Set syntax highlighting theme
-features = "catppuccin_mocha"
+features = "catppuccin_macchiato"
 # Enable terminal hyperlinks support
 hyperlinks = true
 # Use correct URL format for hyperlinks
