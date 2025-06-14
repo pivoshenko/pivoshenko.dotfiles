@@ -1,10 +1,10 @@
-// Key color represents Catppuccin Mocha Mauve rgb(203, 166, 247)
+// Key color represents Catppuccin Macchiato Mauve rgb(202, 158, 230)
 {
   "logo": {
     "type": "file",
     "source": "${HOME}/.config/fastfetch/assets/cat.txt",
     "color": {
-      "3": "38;2;203;166;247"
+      "3": "38;2;202;158;230"
     }
   },
   "display": {
@@ -14,31 +14,31 @@
     {
       "type": "os",
       "key": "",
-      "keyColor": "38;2;203;166;247",
+      "keyColor": "38;2;202;158;230",
       "format": "{name} {version}"
     },
     {
       "type": "cpu",
       "key": "󰘚",
-      "keyColor": "38;2;203;166;247",
+      "keyColor": "38;2;202;158;230",
       "showPeCoreCount": true,
       "temp": true
     },
     {
       "type": "gpu",
       "key": "󰡷",
-      "keyColor": "38;2;203;166;247",
+      "keyColor": "38;2;202;158;230",
       "temp": true
     },
     {
       "type": "memory",
       "key": "󰍛",
-      "keyColor": "38;2;203;166;247"
+      "keyColor": "38;2;202;158;230"
     },
     {
       "type": "disk",
       "key": "󰋊",
-      "keyColor": "38;2;203;166;247",
+      "keyColor": "38;2;202;158;230",
       "folders": "/"
     },
     {
@@ -47,7 +47,7 @@
     {
       "type": "media",
       "key": "",
-      "keyColor": "38;2;203;166;247"
+      "keyColor": "38;2;202;158;230"
     }
   ]
 }

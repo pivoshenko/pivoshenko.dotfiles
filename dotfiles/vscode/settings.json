@@ -6,14 +6,14 @@
   "catppuccin.accentColor": "mauve",
   "workbench.productIconTheme": "fluent-icons",
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.preferredDarkColorTheme": "Catppuccin Mocha",
-  "workbench.preferredHighContrastColorTheme": "Catppuccin Mocha",
+  "workbench.preferredDarkColorTheme": "Catppuccin Macchiato",
+  "workbench.preferredHighContrastColorTheme": "Catppuccin Macchiato",
   "workbench.preferredHighContrastLightColorTheme": "Catppuccin Latte",
   "workbench.preferredLightColorTheme": "Catppuccin Latte",
-  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.colorTheme": "Catppuccin Macchiato",
   "workbench.colorCustomizations": {
-    // Text #cdd6f4
-    "statusBar.foreground": "#cdd6f4"
+    // Text #cad3f5
+    "statusBar.foreground": "#cad3f5"
   },
   "material-icon-theme.saturation": 1,
   "material-icon-theme.activeIconPack": "angular_ngrx",
@@ -146,7 +146,7 @@
   "githubPullRequests.fileListLayout": "tree",
   // GitHub Copilot
   "github.copilot.nextEditSuggestions.enabled": true,
-  "github.copilot.editor.enableCodeActions": false,
+  "github.copilot.editor.enableCodeActions": true,
   "github.copilot.chat.commitMessageGeneration.instructions": [
     {
       "text": "Use conventional commit message format. Keep the first line under 50 characters."

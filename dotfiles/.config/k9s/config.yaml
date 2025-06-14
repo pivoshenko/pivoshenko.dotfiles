@@ -32,15 +32,15 @@ k9s:
     # toggles reactive UI. This option provide for watching on disk artifacts changes and update the UI live
     reactive: false
     # set custom theme
-    skin: catppuccin_mocha
+    skin: catppuccin_macchiato
     # allows to set certain views default fullscreen mode
     defaultsToFullScreen: false
     # show full resource GVR (Group/Version/Resource) vs just R
-    useGVRTitleFormat: false
+    # useGVRTitleFormat: false
 
-  noIcons: false
-  skipLatestRevCheck: false
-  keepMissingClusters: false
+  # noIcons: false
+  # skipLatestRevCheck: false
+  # keepMissingClusters: false
 
   logger:
     # defines the number of lines to return
@@ -68,9 +68,9 @@ k9s:
     # enable TTY
     tty: true
     hostPathVolume:
-    - name: docker-socket
-      # mount the Docker socket into the shell pod
-      mountPath: /var/run/docker.sock
-      # the path on the host to mount
-      hostPath: /var/run/docker.sock
-      readOnly: true
+      - name: docker-socket
+        # mount the Docker socket into the shell pod
+        mountPath: /var/run/docker.sock
+        # the path on the host to mount
+        hostPath: /var/run/docker.sock
+        readOnly: true

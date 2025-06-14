@@ -7,8 +7,8 @@ start-at-login = true
 # Commands that run after login to the macOS user session
 after-login-command = []
 # Commands that run after `aerospace` startup
-# Colours are Catppuccin Mocha Mauve and Lavender
-after-startup-command = ['exec-and-forget borders active_color=0xffcba6f7 inactive_color=0xffb4befe width=7.0']
+# Colours are Catppuccin Macchiato Mauve and Lavender
+after-startup-command = ['exec-and-forget borders active_color=0xffc6a0f6 inactive_color=0xffb7bdf8 width=7.0']
 # List of callbacks to run arbitrary processes when the focused workspace changes
 exec-on-workspace-change = []
 
