@@ -4,7 +4,7 @@
   // =================================================
   // Set custom theme
   "theme": {
-    "dark": "Catppuccin Mocha",
+    "dark": "Catppuccin Macchiato",
     "light": "Catppuccin Latte",
     "mode": "system"
   },

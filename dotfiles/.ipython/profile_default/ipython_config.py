@@ -27,4 +27,4 @@ c.TerminalInteractiveShell.editing_mode = "vi"  # type: ignore[name-defined]  # 
 
 # Set custom theme
 c.TerminalInteractiveShell.true_color = True  # type: ignore[attr-defined]  # noqa: F821
-c.TerminalInteractiveShell.highlighting_style = "catppuccin-mocha"  # type: ignore[attr-defined]  # noqa: F821
+c.TerminalInteractiveShell.highlighting_style = "catppuccin-macchiato"  # type: ignore[attr-defined]  # noqa: F821

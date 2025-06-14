@@ -4,7 +4,7 @@
 # Themes
 # =================================================
 
-palette = "catppuccin_mocha"
+palette = "catppuccin_macchiato"
 
 [palettes.catppuccin_frappe]
 rosewater = "#f2d5cf"

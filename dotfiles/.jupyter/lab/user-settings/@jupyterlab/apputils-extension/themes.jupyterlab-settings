@@ -4,11 +4,11 @@
     // =================================================
 
     // Set custom theme
-    "theme": "Catppuccin Mocha",
+    "theme": "Catppuccin Macchiato",
     "preferred-light-theme": "Catppuccin Latte",
-    "preferred-dark-theme": "Catppuccin Mocha",
+    "preferred-dark-theme": "Catppuccin Macchiato",
     "theme-scrollbars": true,
-    "adaptive-theme": false,
+    "adaptive-theme": true,
 
     // Set custom fonts
     "overrides": {
