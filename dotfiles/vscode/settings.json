@@ -153,7 +153,9 @@
     }
   ],
   "github.copilot.enable": {
-    "*": true
+    "*": true,
+    "plaintext": true,
+    "markdown": true
   },
   // Python
   "python.analysis.autoFormatStrings": true,
