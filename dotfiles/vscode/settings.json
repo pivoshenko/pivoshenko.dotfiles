@@ -4,17 +4,17 @@
   // =================================================
   // Set custom theme
   "catppuccin.accentColor": "mauve",
-  "workbench.productIconTheme": "fluent-icons",
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.preferredDarkColorTheme": "Catppuccin Macchiato",
   "workbench.preferredHighContrastColorTheme": "Catppuccin Macchiato",
   "workbench.preferredHighContrastLightColorTheme": "Catppuccin Latte",
+  "workbench.preferredDarkColorTheme": "Catppuccin Macchiato",
   "workbench.preferredLightColorTheme": "Catppuccin Latte",
   "workbench.colorTheme": "Catppuccin Macchiato",
   "workbench.colorCustomizations": {
     // Text #cad3f5
     "statusBar.foreground": "#cad3f5"
   },
+  "workbench.productIconTheme": "fluent-icons",
   "material-icon-theme.saturation": 1,
   "material-icon-theme.activeIconPack": "angular_ngrx",
   "material-icon-theme.hidesExplorerArrows": false,
@@ -182,7 +182,6 @@
   "sqlfluff.config": "pyproject.toml",
   // Python
   "python.analysis.extraPaths": [],
-  "python.analysis.typeCheckingMode": "standard",
   // TOML
   "evenBetterToml.formatter.allowedBlankLines": 1,
   "evenBetterToml.formatter.arrayAutoCollapse": true,
