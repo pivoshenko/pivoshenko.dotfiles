@@ -3,6 +3,7 @@
   // UI General
   // =================================================
   // Set custom theme
+  "icon_theme": "Material Icon Theme",
   "theme": {
     "dark": "Catppuccin Macchiato",
     "light": "Catppuccin Latte",
@@ -56,11 +57,10 @@
     "button": false,
     "dock": "left"
   },
-  "assistant": {
+  "agent": {
     "always_allow_tool_actions": true,
     "default_profile": "ask",
-    "dock": "left",
-    "version": "2"
+    "dock": "left"
   },
   "git_panel": {
     "button": true,
@@ -88,7 +88,7 @@
       "proxy": null,
       "proxy_no_verify": null
     },
-    "enabled_in_assistant": false
+    "enabled_in_text_threads": false
   },
   "features": {
     "edit_prediction_provider": "zed"
@@ -116,6 +116,14 @@
     "diagnostics": false,
     "metrics": false
   },
+  "file_types": {
+    "TOML": [
+      "poetry.lock"
+    ],
+    "SQL": [
+      "*.sql.j2"
+    ]
+  },
   // =================================================
   // Extensions
   // =================================================
@@ -137,6 +145,8 @@
     "ini": true,
     // Syntax highlighting for the KDL files
     "kdl": true,
+    // Material Design icons
+    "material-icon-theme": true,
     // Syntax highlighting for log files
     "log": true,
     // Syntax highlighting for the Lua files
@@ -147,13 +157,5 @@
     "sql": true,
     // Syntax highlighting for the TOML files
     "toml": true
-  },
-  "file_types": {
-    "TOML": [
-      "poetry.lock"
-    ],
-    "SQL": [
-      "*.sql.j2"
-    ]
   }
 }
