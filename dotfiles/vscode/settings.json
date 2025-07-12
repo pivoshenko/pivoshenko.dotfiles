@@ -217,9 +217,7 @@
   // Extensions files
   // =================================================
   "files.associations": {
-    "*.pyi": "python",
-    "*.zplugrc": "shellscript",
-    "**/.shell/**": "shellscript"
+    "*.pyi": "python"
   },
   "files.exclude": {
     "**/.git": true,
