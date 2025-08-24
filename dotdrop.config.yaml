@@ -80,9 +80,6 @@ dotfiles:
   d_television:
     dst: ~/.config/television
     src: .config/television
-  d_wallpapers:
-    dst: ~/.config/wallpapers
-    src: .config/wallpapers
   d_yazi:
     dst: ~/.config/yazi
     src: .config/yazi
@@ -139,7 +136,6 @@ profiles:
       - d_karabiner
       - d_stylus
       - d_television
-      - d_wallpapers
       - d_yazi
       - d_zed
       - d_zellij
