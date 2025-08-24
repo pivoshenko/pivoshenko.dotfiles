@@ -35,7 +35,6 @@
       - [Messengers - Slack](#messengers---slack)
     - [Text Expander - Espanso](#text-expander---espanso)
     - [Honourable Mentions](#honourable-mentions)
-  - [Wallpapers](#wallpapers)
 
 > [!NOTE]
 > For some applications, there is no easy way to save the config in the dotfiles, so it requires a bit of manual work. Please read the README to find out about them.
@@ -46,7 +45,7 @@ What's in here?
 
 - My `brew` dependencies, including apps, fonts, LSPs, extensions, etc., see [`Brewfile`](Brewfile)
 - My macOS default configurations, see [`macos/`](macos/defaults.sh)
-- My wallpapers, see [`wallpapers/`](dotfiles/.config/wallpapers)
+- My wallpapers, see [`wallpapers/`](https://github.com/pivoshenko/wallpapers)
 - My configs, see [`.config/`](dotfiles/.config)
 
 ## Main principles
@@ -252,7 +251,3 @@ My configuration includes a mix of personal and work-related expansions, and can
 [NordPass](https://nordpass.com) and [NordVPN](https://nordvpn.com) - simply the best password manager and VPN client.
 
 [DBeaver](https://dbeaver.io) - simple but powerful database manager.
-
-## Wallpapers
-
-My wallpaper collection can be found in this [directory](dotfiles/.config/wallpapers). They are organized by style, such as pixel art, or by OS (e.g., Asus ROG, macOS), etc.
