@@ -7,6 +7,7 @@ cask "font-symbols-only-nerd-font"
 
 # == Applications ==
 cask "aerospace"
+cask "cursor"
 cask "dbeaver-community"
 cask "docker"
 cask "flux"
