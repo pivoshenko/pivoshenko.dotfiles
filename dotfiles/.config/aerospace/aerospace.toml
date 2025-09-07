@@ -1,35 +1,20 @@
 start-at-login = true
 
-# =================================================
-# Commands
-# =================================================
-
-# Commands that run after login to the macOS user session
+# == Commands ==
 after-login-command = []
-# Commands that run after `aerospace` startup
-# Colours are Catppuccin Macchiato Mauve and Lavender
 after-startup-command = ['exec-and-forget borders active_color=0xffc6a0f6 inactive_color=0xffb7bdf8 width=7.0']
-# List of callbacks to run arbitrary processes when the focused workspace changes
 exec-on-workspace-change = []
 
-# =================================================
-# Padding
-# =================================================
-
-# Gaps between windows (inner-*) and between monitor edges (outer-*)
+# == Padding ==
 [gaps]
-inner.horizontal = 10
-inner.vertical = 10
-outer.left = 10
-outer.bottom = 10
-outer.top = 10
-outer.right = 10
+inner.horizontal = 7
+inner.vertical = 7
+outer.left = 7
+outer.bottom = 7
+outer.top = 7
+outer.right = 7
 
-# =================================================
-# External monitors setup
-# =================================================
-
-# Assign workspaces to always appear on particular monitors
+# == Monitors ==
 [workspace-to-monitor-force-assignment]
 1 = "built-in"
 2 = "built-in"
@@ -41,17 +26,10 @@ outer.right = 10
 8 = ["secondary", "dell"]
 9 = ["secondary", "dell"]
 
-# =================================================
-# Keybindings - modes switch
-# =================================================
-
+# == Keybindings ==
 [mode.main.binding]
 alt-shift-semicolon = "mode service"
 alt-shift-r = "mode resize"
-
-# =================================================
-# Keybindings - focus
-# =================================================
 
 alt-h = "focus left"
 alt-j = "focus down"
@@ -76,10 +54,6 @@ alt-z = "workspace prev"
 alt-rightSquareBracket = "focus-monitor next"
 alt-leftSquareBracket = "focus-monitor prev"
 
-# =================================================
-# Keybindings - layout
-# =================================================
-
 alt-f = "fullscreen"
 
 alt-shift-h = "move left"
@@ -89,10 +63,6 @@ alt-shift-l = "move right"
 
 alt-slash = "layout tiles horizontal vertical"
 alt-comma = "layout accordion horizontal vertical"
-
-# =================================================
-# Keybindings - workspaces
-# =================================================
 
 alt-shift-1 = "move-node-to-workspace 1"
 alt-shift-2 = "move-node-to-workspace 2"
@@ -105,10 +75,6 @@ alt-shift-8 = "move-node-to-workspace 8"
 alt-shift-9 = "move-node-to-workspace 9"
 
 alt-shift-tab = "move-workspace-to-monitor --wrap-around next"
-
-# =================================================
-# Keybindings - modes
-# =================================================
 
 [mode.service.binding]
 # Reload config
@@ -135,10 +101,7 @@ equal = "resize smart +50"
 enter = "mode main"
 esc = "mode main"
 
-# =================================================
-# Workspaces
-# =================================================
-
+# == Workspaces ==
 #1 Comms (Telegram, Discord, etc.)
 #2 Media (Spotify, Music, etc.)
 #3 Notes (Obsidian)
@@ -149,10 +112,7 @@ esc = "mode main"
 #8 Misc (Insomnia)
 #9 Misc
 
-# =================================================
-# Workspaces - #1
-# =================================================
-
+# == Workspace #1 ==
 [[on-window-detected]]
 if.app-id = "dev.vencord.vesktop"
 run = "move-node-to-workspace 1"
@@ -173,26 +133,17 @@ run = "move-node-to-workspace 1"
 if.app-id = "ru.keepcoder.Telegram"
 run = "move-node-to-workspace 1"
 
-# =================================================
-# Workspaces - #2
-# =================================================
-
+# == Workspace #2 ==
 [[on-window-detected]]
 if.app-id = "com.spotify.client"
 run = ["layout floating", "move-node-to-workspace 2"]
 
-# =================================================
-# Workspaces - #3
-# =================================================
-
+# == Workspace #3 ==
 [[on-window-detected]]
 if.app-id = "md.obsidian"
 run = "move-node-to-workspace 3"
 
-# =================================================
-# Workspaces - #4
-# =================================================
-
+# == Workspace #4 ==
 [[on-window-detected]]
 if.app-id = "app.zen-browser.zen"
 run = "move-node-to-workspace 4"
@@ -201,10 +152,7 @@ run = "move-node-to-workspace 4"
 if.app-id = "com.google.Chrome"
 run = "move-node-to-workspace 4"
 
-# =================================================
-# Workspaces - #5
-# =================================================
-
+# == Workspace #5 ==
 [[on-window-detected]]
 if.app-id = "com.googlecode.iterm2"
 run = "move-node-to-workspace 5"
@@ -213,10 +161,7 @@ run = "move-node-to-workspace 5"
 if.app-id = "co.zeit.hyper"
 run = "move-node-to-workspace 5"
 
-# =================================================
-# Workspace 6 - Coding
-# =================================================
-
+# == Workspace #6 ==
 [[on-window-detected]]
 if.app-id = "com.microsoft.VSCode"
 run = "move-node-to-workspace 6"
@@ -225,10 +170,11 @@ run = "move-node-to-workspace 6"
 if.app-id = "dev.zed.Zed"
 run = "move-node-to-workspace 6"
 
-# =================================================
-# Workspaces - #7
-# =================================================
+[[on-window-detected]]
+if.app-id = "com.todesktop.230313mzl4w4u92"
+run = "move-node-to-workspace 6"
 
+# == Workspace #7 ==
 [[on-window-detected]]
 if.app-id = "com.mongodb.compass"
 run = "move-node-to-workspace 7"
@@ -237,18 +183,12 @@ run = "move-node-to-workspace 7"
 if.app-id = "org.jkiss.dbeaver.core.product"
 run = "move-node-to-workspace 7"
 
-# =================================================
-# Workspaces - #8
-# =================================================
-
+# == Workspace #8 ==
 [[on-window-detected]]
 if.app-id = "com.insomnia.app"
 run = "move-node-to-workspace 8"
 
-# =================================================
-# Workspaces - floating applications
-# =================================================
-
+# == Floating applications ==
 [[on-window-detected]]
 if.app-id = "com.apple.ActivityMonitor"
 run = "layout floating"
