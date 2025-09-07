@@ -1,14 +1,10 @@
-# =================================================
-# Default commands
-# =================================================
+# == Core commands ==
+alias cat="bat"
+alias ls="eza"
+alias find="fd"
+alias grep="rg"
 
-alias cat="bat --paging never --decorations never --plain"
-alias ls="eza -a --level=1 --icons --color=always"
-
-# =================================================
-# External tools
-# =================================================
-
+# == External tools ==
 alias ld="lazydocker"
 alias lg="lazygit"
 alias zj="zellij"

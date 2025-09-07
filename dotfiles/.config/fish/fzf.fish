@@ -1,7 +1,4 @@
-# =================================================
-# Themes
-# =================================================
-
+# == Themes ==
 set -Ux FZF_CATPPUCCIN_LATTE " \
   --color=bg+:#CCD0DA,bg:#EFF1F5,spinner:#DC8A78,hl:#D20F39 \
   --color=fg:#4C4F69,header:#D20F39,info:#8839EF,pointer:#DC8A78 \
@@ -36,10 +33,7 @@ set -Ux FZF_CATPPUCCIN_MOCHA " \
 
 set -Ux FZF_THEME $FZF_CATPPUCCIN_MACCHIATO
 
-# =================================================
-# Commands
-# =================================================
-
+# == Commands ==
 set -Ux fifc_editor hx
 
 set -Ux FZF_DEFAULT_COMMAND "
@@ -77,10 +71,7 @@ set -Ux FZF_DEFAULT_COMMAND "
 set -Ux FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
 set -Ux FZF_ALT_C_COMMAND $FZF_DEFAULT_COMMAND
 
-# =================================================
-# Options
-# =================================================
-
+# == Options ==
 set -Ux FZF_DEFAULT_OPTS " \
   --height 30% -1 \
   --select-1 \
