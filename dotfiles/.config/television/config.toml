@@ -1,5 +1,0 @@
-[ui]
-theme = "catppuccin_macchiato.toml"
-
-[previewers.file]
-theme = "catppuccin_macchiato"

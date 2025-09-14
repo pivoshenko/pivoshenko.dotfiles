@@ -1,5 +1,3 @@
 [manager]
-# Show hidden files
 show_hidden = true
-# Show the path of the symlink file point to, after the filename
 show_symlink = true
