@@ -72,8 +72,7 @@
       --zen-primary-color: #8839ef !important;
     }
 
-    groupbox,
-    moz-card {
+    groupbox , moz-card{
       background: #eff1f5 !important;
     }
 
@@ -232,8 +231,7 @@
       --zen-primary-color: #c6a0f6 !important;
     }
 
-    groupbox,
-    moz-card {
+    groupbox , moz-card{
       background: #24273a !important;
     }
 

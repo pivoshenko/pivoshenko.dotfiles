@@ -69,10 +69,12 @@
 
   toolbar .toolbarbutton-1 {
     &:not([disabled]) {
-
-      &:is([open], [checked])> :is(.toolbarbutton-icon,
-        .toolbarbutton-text,
-        .toolbarbutton-badge-stack) {
+      &:is([open], [checked])
+        > :is(
+          .toolbarbutton-icon,
+          .toolbarbutton-text,
+          .toolbarbutton-badge-stack
+        ) {
         fill: #dce0e8;
       }
     }
@@ -116,6 +118,14 @@
   .identity-color-purple {
     --identity-tab-color: #8839ef !important;
     --identity-icon-color: #8839ef !important;
+  }
+
+  hbox#titlebar {
+    background-color: #e6e9ef !important;
+  }
+
+  #zen-appcontent-navbar-container {
+    background-color: #e6e9ef !important;
   }
 }
 
@@ -190,10 +200,12 @@
 
   toolbar .toolbarbutton-1 {
     &:not([disabled]) {
-
-      &:is([open], [checked])> :is(.toolbarbutton-icon,
-        .toolbarbutton-text,
-        .toolbarbutton-badge-stack) {
+      &:is([open], [checked])
+        > :is(
+          .toolbarbutton-icon,
+          .toolbarbutton-text,
+          .toolbarbutton-badge-stack
+        ) {
         fill: #11111b;
       }
     }
@@ -237,5 +249,13 @@
   .identity-color-purple {
     --identity-tab-color: #cba6f7 !important;
     --identity-icon-color: #cba6f7 !important;
+  }
+
+  hbox#titlebar {
+    background-color: #181825 !important;
+  }
+
+  #zen-appcontent-navbar-container {
+    background-color: #181825 !important;
   }
 }
