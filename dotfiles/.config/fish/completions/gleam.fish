@@ -174,4 +174,3 @@ complete -c gleam -n '__fish_seen_subcommand_from new' -l name -r -d "Name of th
 complete -c gleam -n '__fish_seen_subcommand_from new' -l template -rf -a "$targets" -d "The template to use"
 complete -c gleam -n '__fish_seen_subcommand_from new' -l skip-git    -d "Skip git initialization"
 complete -c gleam -n '__fish_seen_subcommand_from new' -l skip-github -d "Skip creation of .github/* files"
-
