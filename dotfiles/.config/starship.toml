@@ -1,10 +1,6 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
-# =================================================
-# Themes
-# =================================================
-
-palette = "catppuccin_macchiato"
+ palette = "catppuccin_macchiato"
 
 [palettes.catppuccin_frappe]
 rosewater = "#f2d5cf"
@@ -118,10 +114,6 @@ base = "#1e1e2e"
 mantle = "#181825"
 crust = "#11111b"
 
-# =================================================
-# Configuration per language/package
-# =================================================
-
 [aws]
 symbol = "󰸏 "
 force_display = false
@@ -139,6 +131,10 @@ symbol = " "
 [c]
 symbol = " "
 
+[character]
+success_symbol = "[❯](bold mauve)"
+vimcmd_symbol = "[❮](bold mauve)"
+
 [conda]
 symbol = " "
 
@@ -146,7 +142,7 @@ symbol = " "
 symbol = " "
 
 [directory]
-read_only = " "
+read_only = "  "
 truncation_length = 4
 style = "bold mauve"
 
@@ -177,6 +173,9 @@ tag_disabled = false
 
 [git_metrics]
 disabled = false
+
+[git_status]
+deleted = "✘ "
 
 [golang]
 symbol = " "
@@ -252,9 +251,8 @@ symbol = " "
 symbol = " "
 
 [shell]
-zsh_indicator = "󰊠"
-fish_indicator = "󰊠"
-style = "green bold"
+fish_indicator = ""
+style = "lavender bold"
 disabled = false
 
 [status]
