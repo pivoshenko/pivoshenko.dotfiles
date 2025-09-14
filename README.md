@@ -81,11 +81,11 @@ Run the following commands to configure macOS defaults:
 sudo sh macos/defaults.sh
 ```
 
-## CLI
+## Shell
 
-I am using [iTerm2](https://iterm2.com) as my main terminal with the [Catppuccin theme](https://github.com/catppuccin/iterm) applied. My configuration can be found [here](dotfiles/.config/iterm2).
+I am using [iTerm2](https://iterm2.com) as my main terminal with the [Catppuccin](https://github.com/catppuccin/iterm) theme applied. My configuration can be found [here](dotfiles/.config/iterm2).
 
-For the shell, I recently switched from `zsh` to [`fish`](https://fishshell.com), as out of the box it has all batteries included. To manage shell plugins, I am using [`fisher`](https://github.com/jorgebucaran/fisher), but there are only a few installed. My complete configuration can be found [here](dotfiles/.config/fish).
+For the shell, I am using [Fish](https://fishshell.com), as out of the box it has all batteries included. To manage shell plugins, I am using [Fisher](https://github.com/jorgebucaran/fisher), but there are only a few installed. My complete configuration can be found [here](dotfiles/.config/fish).
 
 In terms of command-line tools, I try to keep them minimal—only the ones I use daily, such as:
 
