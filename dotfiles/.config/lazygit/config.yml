@@ -1,10 +1,7 @@
 git:
   overrideGpg: true
 
-# =================================================
-# Theme
-# =================================================
-
+# == Theme ==
 gui:
   theme:
     activeBorderColor:
@@ -29,14 +26,3 @@ gui:
 
   authorColors:
     "*": "#b7bdf8"
-
-# =================================================
-# Keybinding
-# =================================================
-
-customCommands:
-  # Create a pull request on GitHub
-  - key: <c-r>
-    command: gh pr create --fill --web
-    context: global
-    loadingText: Creating pull request on GitHub
