@@ -16,9 +16,8 @@
   - [Main principles](#main-principles)
   - [Usage](#usage)
   - [macOS](#macos)
-  - [CLI](#cli)
+  - [Shell](#shell)
     - [Helix](#helix)
-    - [fzf](#fzf)
   - [Applications](#applications)
     - [Application Launcher - Raycast](#application-launcher---raycast)
     - [Hotkeys Daemon - Karabiner](#hotkeys-daemon---karabiner)
@@ -41,9 +40,8 @@
 
 What's in here?
 
-- My `brew` dependencies, including apps, fonts, LSPs, extensions, etc., see [`Brewfile`](Brewfile)
+- My Brew dependencies, including apps, fonts, LSPs, extensions, etc., see [Brewfile](Brewfile)
 - My macOS default configurations, see [`macos/`](macos/defaults.sh)
-- My wallpapers, see [`wallpapers/`](https://github.com/pivoshenko/wallpapers)
 - My configs, see [`.config/`](dotfiles/.config)
 
 ## Main principles
@@ -55,7 +53,7 @@ What's in here?
 
 ## Usage
 
-I am using [`dotdrop`](https://github.com/deadc0de6/dotdrop) to manage dotfiles.
+I am using [DotDrop](https://github.com/deadc0de6/dotdrop) to manage dotfiles.
 
 1. Fork this repository and clone it
 2. Run the following commands to install the necessary tooling:
@@ -73,7 +71,7 @@ dotdrop install -c dotdrop.config.yaml -p macos --force
 
 ## macOS
 
-To configure macOS I am using [`defaults`](https://macos-defaults.com), my configuration can be found [here](macos/defaults.sh).
+To configure macOS I am using [Defaults](https://macos-defaults.com), my configuration can be found [here](macos/defaults.sh).
 
 Run the following commands to configure macOS defaults:
 
@@ -83,36 +81,32 @@ sudo sh macos/defaults.sh
 
 ## Shell
 
-I am using [iTerm2](https://iterm2.com) as my main terminal with the [Catppuccin](https://github.com/catppuccin/iterm) theme applied. My configuration can be found [here](dotfiles/.config/iterm2).
+I am using [iTerm2](https://iterm2.com) as my main terminal with the [Catppuccin theme](https://github.com/catppuccin/iterm) applied. My configuration can be found [here](dotfiles/.config/iterm2).
 
 For the shell, I am using [Fish](https://fishshell.com), as out of the box it has all batteries included. To manage shell plugins, I am using [Fisher](https://github.com/jorgebucaran/fisher), but there are only a few installed. My complete configuration can be found [here](dotfiles/.config/fish).
 
 In terms of command-line tools, I try to keep them minimal—only the ones I use daily, such as:
 
-- [`bat`](https://github.com/sharkdp/bat)
-- [`bottom`](https://github.com/ClementTsang/bottom)
-- [`delta`](https://github.com/dandavison/delta)
-- [`exa`](https://github.com/ogham/exa)
-- [`fd`](https://github.com/sharkdp/fd)
-- [`fzf`](https://github.com/junegunn/fzf)
-- [`ripgrep`](https://github.com/BurntSushi/ripgrep)
-- [`k9s`](https://github.com/derailed/k9s)
-- [`lazygit`](https://github.com/jesseduffield/lazygit)
-- [`lazydocker`](https://github.com/jesseduffield/lazydocker)
-- [`yazi`](https://github.com/sxyazi/yazi)
-- [`zellij`](https://github.com/zellij-org/zellij)
-- [`zoxide`](https://github.com/ajeetdsouza/zoxide)
+- [Bat](https://github.com/sharkdp/bat)
+- [Bottom](https://github.com/ClementTsang/bottom)
+- [Delta](https://github.com/dandavison/delta)
+- [Eza](https://github.com/ogham/exa)
+- [Fd](https://github.com/sharkdp/fd)
+- [Fzf](https://github.com/junegunn/fzf)
+- [Ripgrep](https://github.com/BurntSushi/ripgrep)
+- [K9s](https://github.com/derailed/k9s)
+- [LazyGit](https://github.com/jesseduffield/lazygit)
+- [LazyDocker](https://github.com/jesseduffield/lazydocker)
+- [Yazi](https://github.com/sxyazi/yazi)
+- [Zellij](https://github.com/zellij-org/zellij)
+- [Zoxide](https://github.com/ajeetdsouza/zoxide)
 
-A complete list of configurations for each tool can be found in the [`.config`](dotfiles/.config) directory.
+A complete list of configurations for each tool can be found in the [`.config/`](dotfiles/.config) directory.
 
 ### Helix
 
 I use [Helix](https://helix-editor.com) as my main editor for CLI, and I am trying to move all my day-to-day work to it. My configuration can be found [here](dotfiles/.config/helix).
 I want to highlight it separately, as it's a truly amazing editor with a lot of features and very handy keybindings out of the box.
-
-### fzf
-
-Another highlight is [fzf](https://github.com/junegunn/fzf), which I heavily use for autocompletion and fuzzy search in the shell. I can't imagine my workflow without it.
 
 ## Applications
 
@@ -144,7 +138,7 @@ My configuration can be found [here](dotfiles/.config/aerospace/aerospace.toml).
 - #8 APIs: Insomnia, Postman etc.
 - #9 Misc
 
-Some applications, typically used in "quick pop-up" mode (e.g., macOS default apps), follow a **floating layout** and are not bound to any workspace.
+Some applications, typically used in "quick pop-up" mode (e.g., macOS default apps), follow a floating layout and are not bound to any workspace.
 
 ### Editors
 
@@ -152,7 +146,7 @@ Some applications, typically used in "quick pop-up" mode (e.g., macOS default ap
 
 I absolutely love [VSCode](https://code.visualstudio.com) - it's a simple and yet very extensible and powerful editor.
 
-Here's a list of [extensions](Brewfile) I use daily, but I try to keep my `VSCode` setup as simple as possible. It was also heavily influenced by [`makevscodeawesome`](https://makevscodeawesome.com).
+Here's a list of [extensions](Brewfile) I use daily, but I try to keep my VSCode setup as simple as possible. It was also heavily influenced by [MakeVSCodeAwesome](https://makevscodeawesome.com).
 
 My VSCode configuration can be found [here](dotfiles/vscode/settings.json).
 
@@ -166,15 +160,15 @@ My Zed plugins and configuration can be found [here](dotfiles/.config/zed/settin
 
 As a browser, I am using [Zen](https://zen-browser.app), with the following extensions installed:
 
-- [`custom-new-tab`](https://addons.mozilla.org/en-US/firefox/addon/custom-new-tab-page)
-- [`duckduckgo`](https://addons.mozilla.org/en-US/firefox/addon/duckduckgo-for-firefox)
-- [`nordpass`](https://addons.mozilla.org/en-US/firefox/addon/nordpass-password-management)
-- [`nordvpn`](https://addons.mozilla.org/en-US/firefox/addon/nordvpn-proxy-extension)
-- [`privacy-badger`](https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17)
-- [`raindropio`](https://addons.mozilla.org/en-US/firefox/addon/raindropio)
-- [`stylus`](https://addons.mozilla.org/en-US/firefox/addon/styl-us)
-- [`ublock`](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin)
-- [`vimium`](https://addons.mozilla.org/en-US/firefox/addon/vimium-ff)
+- [Custom New Tab](https://addons.mozilla.org/en-US/firefox/addon/custom-new-tab-page)
+- [DuckDuckGo](https://addons.mozilla.org/en-US/firefox/addon/duckduckgo-for-firefox)
+- [NordPass](https://addons.mozilla.org/en-US/firefox/addon/nordpass-password-management)
+- [NordVPN](https://addons.mozilla.org/en-US/firefox/addon/nordvpn-proxy-extension)
+- [Privacy Badger](https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17)
+- [RaindropIo](https://addons.mozilla.org/en-US/firefox/addon/raindropio)
+- [Stylus](https://addons.mozilla.org/en-US/firefox/addon/styl-us)
+- [uBlock](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin)
+- [Vimium](https://addons.mozilla.org/en-US/firefox/addon/vimium-ff)
 
 My `userChrome.css` and `userContent.css` can be found [here](dotfiles/.config/zen) and are required to be placed in the [`chrome/` subfolder](https://www.userchrome.org) in your Zen profile.
 
@@ -188,12 +182,12 @@ My current theme is [Catppuccin](https://github.com/catppuccin/obsidian), which 
 
 Additionally, I have a few plugins installed:
 
-- [`obsidian-copilot`](https://github.com/logancyang/obsidian-copilot)
-- [`obsidian-images-in-editor`](https://github.com/ozntel/oz-image-in-editor-obsidian)
-- [`obsidian-tag-wrangler`](https://github.com/pjeby/tag-wrangler)
-- [`obsidian-outliner`](https://github.com/vslinko/obsidian-outliner)
-- [`obsidian-style-settings`](https://github.com/mgmeyers/obsidian-style-settings)
-- [`obsidian-advanced-tables`](https://github.com/tgrosinger/advanced-tables-obsidian)
+- [Obsidian Copilot](https://github.com/logancyang/obsidian-copilot)
+- [Obsidian Images in-editor](https://github.com/ozntel/oz-image-in-editor-obsidian)
+- [Obsidian Tag Wrangler](https://github.com/pjeby/tag-wrangler)
+- [Obsidian Outliner](https://github.com/vslinko/obsidian-outliner)
+- [Obsidian Style Settings](https://github.com/mgmeyers/obsidian-style-settings)
+- [Obsidian Advanced Tables](https://github.com/tgrosinger/advanced-tables-obsidian)
 
 I also extended the length of readable mode (the default seems quite narrow) by adding custom CSS:
 
@@ -223,7 +217,7 @@ My main messenger is [Telegram](https://telegram.org) with my own version of Cat
 
 #### Messengers - Discord
 
-To stay in touch with different communities, I am using [Discord](https://discord.com), but the official app lacks functionality, so instead I am using [Vesktop](https://github.com/Vencord/Vesktop) with the [Catppuccin](https://github.com/catppuccin/discord) theme installed via "Themes -> Online Themes".
+To stay in touch with different communities, I am using [Discord](https://discord.com), but the official app lacks functionality, so instead I am using [Vesktop](https://github.com/Vencord/Vesktop) with the [Catppuccin theme](https://github.com/catppuccin/discord) installed via "Themes -> Online Themes".
 
 ```css
 /* frappe, macchiato, mocha */
@@ -240,4 +234,3 @@ To stay in touch with different communities, I am using [Discord](https://discor
 [NordPass](https://nordpass.com) and [NordVPN](https://nordvpn.com) - simply the best password manager and VPN client.
 
 [DBeaver](https://dbeaver.io) - simple but powerful database manager.
- 
