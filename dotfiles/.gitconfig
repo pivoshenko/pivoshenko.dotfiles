@@ -1,65 +1,45 @@
 [commit]
-# Sign all commits with GPG
 gpgsign = true
 
 [core]
-# Enable CRLF line endings
 autocrlf = input
-# Set text editor for `commit` and `tag` commands
 editor = hx
-# Set text viewer for git commands
 pager = delta
 
 [credential]
-# Use external helper for username/password credentials
 helper = store
 
 [delta]
-# Set syntax highlighting theme
 features = "catppuccin_macchiato"
-# Enable terminal hyperlinks support
 hyperlinks = true
-# Use correct URL format for hyperlinks
 hyperlinks-file-link-format = "file-line://{path}:{line}"
-# Use dark mode only
 light = false
-# Show line numbers in two columns
 line-numbers = true
-# Enable navigation keybindings
 navigate = true
-# Enable side-by-side view for diffs
 side-by-side = true
 
 [diff]
 colorMoved = default
 
 [include]
-# Include custom themes for git-delta
 path = ~/.config/delta/catppuccin.gitconfig
-# Include private configuration
 path = ~/.gitconfig.local
 
 [init]
-# Set default branch name for new repositories
 defaultBranch = main
 
 [interactive]
-# Use git-delta for colorized diff output
 diffFilter = delta --color-only
 
 [merge]
-# Set conflict style with markers and original text
 conflictstyle = diff3
 
 [push]
-# Push current branch to remote with same name
 default = simple
 
 [submodule]
-# Disable parallel operations for submodules
 fetchJobs = 0
 recurse = true
 
 [user]
-# Use only configured user values
 useConfigOnly = true
