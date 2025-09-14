@@ -1,7 +1,3 @@
-# =================================================
-# LSPs
-# =================================================
-
 [language-server.pylsp.config.pylsp.plugins]
 autopep8 = { enabled = false }
 black = { enabled = false }
@@ -20,10 +16,6 @@ yapf = { enabled = false }
 [language-server.ruff]
 command = "ruff"
 args = ["server"]
-
-# =================================================
-# Languages
-# =================================================
 
 [[language]]
 name = "markdown"
