@@ -1,4 +1,4 @@
-// Key color represents Catppuccin Macchiato Mauve rgb(202, 158, 230)
+// 38;2;202;158;230 - Catppuccin Macchiato Mauve
 {
   "logo": {
     "type": "file",
