@@ -2,10 +2,6 @@
 
 osascript -e 'tell application "System Preferences" to quit'
 
-# =================================================
-# Dock
-# =================================================
-
 # Add permanent item to dock
 permament_dock_item() {
   defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>$1</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"
@@ -34,22 +30,18 @@ defaults write com.apple.dock orientation -string "bottom"
 defaults write com.apple.dock persistent-apps -array
 
 # Add common applications to dock
-permament_dock_item "/System/Applications/NordPass.app"
-permament_dock_item "/System/Applications/NordVPN.app"
-permament_dock_item "/Applications/Spotify.app"
-permament_dock_item "/System/Applications/Launchpad.app"
-permament_dock_item "/Applications/Obsidian.app"
-permament_dock_item "/Applications/Telegram.app"
-permament_dock_item "/Applications/Vesktop.app"
-permament_dock_item "/Applications/Zen Browser.app"
-permament_dock_item "/Applications/Zed.app"
-permament_dock_item "/Applications/Visual Studio Code.app"
-permament_dock_item "/Applications/iTerm.app"
-permament_dock_item "/Applications/DBeaver.app"
-
-# =================================================
-# Finder
-# =================================================
+# permament_dock_item "/System/Applications/NordPass.app"
+# permament_dock_item "/System/Applications/NordVPN.app"
+# permament_dock_item "/Applications/Spotify.app"
+# permament_dock_item "/System/Applications/Launchpad.app"
+# permament_dock_item "/Applications/Obsidian.app"
+# permament_dock_item "/Applications/Telegram.app"
+# permament_dock_item "/Applications/Vesktop.app"
+# permament_dock_item "/Applications/Zen Browser.app"
+# permament_dock_item "/Applications/Zed.app"
+# permament_dock_item "/Applications/Visual Studio Code.app"
+# permament_dock_item "/Applications/iTerm.app"
+# permament_dock_item "/Applications/DBeaver.app"
 
 # Show all file extensions
 defaults write com.apple.finder AppleShowAllExtensions -bool true
@@ -66,25 +58,13 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 # Set Finder view style to column view
 defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 
-# =================================================
-# Screensaver
-# =================================================
-
 # Require password immediately after sleep or screensaver begins
 defaults write com.apple.screensaver askForPasswordDelay -int 0
-
-# =================================================
-# Menubar
-# =================================================
 
 # Show 24-hour format clock in menubar
 defaults write com.apple.menuextra.clock Show24Hour -bool true
 # Show date in menubar clock
 defaults write com.apple.menuextra.clock ShowDate -bool true
-
-# =================================================
-# Keyboard / Mouse / Trackpad
-# =================================================
 
 # Enable function keys as standard function keys
 defaults write NSGlobalDomain com.apple.keyboard.fnState -bool true
@@ -99,18 +79,10 @@ defaults write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -in
 # Enable natural scrolling
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool true
 
-# =================================================
-# Menubar
-# =================================================
-
 # Auto-hide the menubar
 defaults write NSGlobalDomain _HIHideMenuBar -bool true
 # Force 24-hour time format
 defaults write NSGlobalDomain AppleICUForce24HourTime -bool true
-
-# =================================================
-# Theme
-# =================================================
 
 # Set dark mode
 defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
@@ -121,18 +93,10 @@ defaults write NSGlobalDomain AppleScrollerPagingBehavior -bool true
 # Show scroll bars when scrolling
 defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
 
-# =================================================
-# Finder
-# =================================================
-
 # Show all file extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 # Show hidden files
 defaults write NSGlobalDomain AppleShowAllFiles -bool true
-
-# =================================================
-# Screenshot tool
-# =================================================
 
 # Keep screenshot shadows
 defaults write com.apple.screencapture disable-shadow -bool false
@@ -141,18 +105,10 @@ defaults write com.apple.screencapture show-thumbnail -bool true
 # Set screenshot save location
 defaults write com.apple.screencapture location -string "~/Pictures/screenshots"
 
-# =================================================
-# Misc
-# =================================================
-
 # Disable automatic macOS updates
 defaults write com.apple.SoftwareUpdate AutomaticallyInstallMacOSUpdates -bool false
 # Disable displays spanning spaces
 defaults write com.apple.spaces spans-displays -bool false
-
-# =================================================
-# Stage manager
-# =================================================
 
 # Hide widgets in Stage Manager
 defaults write com.apple.WindowManager StandardHideWidgets -bool true
@@ -166,10 +122,6 @@ defaults write com.apple.WindowManager HideDesktop -bool true
 defaults write com.apple.WindowManager StageManagerHideWidgets -bool true
 # Hide desktop icons in standard view
 defaults write com.apple.WindowManager StandardHideDesktopIcons -bool true
-
-# =================================================
-# Custom user preferences
-# =================================================
 
 # Show battery percentage in menubar
 defaults write com.apple.menuextra.battery ShowPercent -bool true
