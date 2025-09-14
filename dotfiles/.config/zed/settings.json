@@ -1,58 +1,50 @@
 {
-  // =================================================
-  // UI General
-  // =================================================
-  // Set custom theme
+  // == UI ==
   "icon_theme": "Material Icon Theme",
   "theme": {
     "dark": "Catppuccin Macchiato",
     "light": "Catppuccin Latte",
     "mode": "system"
   },
-  // Set custom fonts
+  // == Fonts ==
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "buffer_font_size": 16,
   "ui_font_family": "JetBrainsMono Nerd Font",
   "ui_font_size": 16,
-  // =================================================
-  // UI Editor
-  // =================================================
-  // Render all whitespaces
+  // == Eidtor ==
   "show_whitespaces": "all",
   "soft_wrap": "editor_width",
-  // Disable toolbar
   "toolbar": {
     "breadcrumbs": true,
     "quick_actions": true,
     "selections_menu": true
   },
-  // Make tabs more compact
   "tabs": {
     "activate_on_close": "history",
     "close_position": "right",
     "file_icons": false,
     "git_status": true
   },
-  // Disable preview tabs
   "preview_tabs": {
     "enable_preview_from_code_navigation": false,
     "enable_preview_from_file_finder": false,
     "enabled": false
   },
-  // =================================================
-  // UI Dock Left
-  // =================================================
-  // Disable chat panel
+  "relative_line_numbers": true,
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 500
+    }
+  },
+  // == Dock ==
   "chat_panel": {
     "button": "never",
     "dock": "left"
   },
-  // Disable collaboration panel
   "collaboration_panel": {
     "button": false,
     "dock": "left"
   },
-  // Disable notification panel
   "notification_panel": {
     "button": false,
     "dock": "left"
@@ -66,22 +58,16 @@
     "button": true,
     "dock": "left"
   },
-  // =================================================
-  // UI Dock Right
-  // =================================================
   "outline_panel": {
     "dock": "right"
   },
   "project_panel": {
     "dock": "right"
   },
-  // Disable terminal panel
   "terminal": {
     "button": false
   },
-  // =================================================
-  // AI
-  // =================================================
+  // == AI ==
   "edit_predictions": {
     "mode": "eager",
     "copilot": {
@@ -93,69 +79,40 @@
   "features": {
     "edit_prediction_provider": "zed"
   },
-  // =================================================
-  // Keybindings
-  // =================================================
+  // == Keybindings ==
   "base_keymap": "VSCode",
   "vim_mode": true,
-  // =================================================
-  // Editor
-  // =================================================
-  "relative_line_numbers": true,
-  "autosave": {
-    "after_delay": {
-      "milliseconds": 500
-    }
-  },
-  // =================================================
-  // Misc
-  // =================================================
+  // == Misc ==
   "auto_update": true,
-  // Disable stats collection
   "telemetry": {
     "diagnostics": false,
     "metrics": false
   },
   "file_types": {
     "TOML": [
-      "poetry.lock"
+      "poetry.lock",
+      "uv.lock"
     ],
     "SQL": [
       "*.sql.j2"
     ]
   },
-  // =================================================
-  // Extensions
-  // =================================================
+  // == Extensions ==
   "auto_install_extensions": {
     "catppuccin": true,
-    // Syntax highlighting for the Docker Compose YAML files
     "docker-compose": true,
-    // Syntax highlighting for the Dockerfile
     "dockerfile": true,
-    // Syntax highlighting for the .env files
     "env": true,
-    // Syntax highlighting for the Gleam files
     "gleam": true,
-    // Syntax highlighting for the git files
     "git-firefly": true,
-    // Syntax highlighting for the HTML files
     "html": true,
-    // Syntax highlighting for the INI files
     "ini": true,
-    // Syntax highlighting for the KDL files
     "kdl": true,
-    // Material Design icons
     "material-icon-theme": true,
-    // Syntax highlighting for log files
     "log": true,
-    // Syntax highlighting for the Lua files
     "lua": true,
-    // Support for `ruff` as the Python linter and formatter
     "ruff": true,
-    // Syntax highlighting for the SQL files
     "sql": true,
-    // Syntax highlighting for the TOML files
     "toml": true
   }
 }
