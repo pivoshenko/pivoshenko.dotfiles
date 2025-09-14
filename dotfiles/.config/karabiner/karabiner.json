@@ -1316,7 +1316,7 @@
             ]
           },
           {
-            "description": "Change command+h/j/k/l to arrows",
+            "description": "Vim - Command+H/J/K/L as Arrows",
             "manipulators": [
               {
                 "from": {
