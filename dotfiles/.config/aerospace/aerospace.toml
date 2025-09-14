@@ -2,6 +2,8 @@ start-at-login = true
 
 # == Commands ==
 after-login-command = []
+# 0xffc6a0f6 - Catppuccin Macchiato Mauve
+# 0xffb7bdf8 - Catppuccin Macchiato Lavander
 after-startup-command = ['exec-and-forget borders active_color=0xffc6a0f6 inactive_color=0xffb7bdf8 width=7.0']
 exec-on-workspace-change = []
 
