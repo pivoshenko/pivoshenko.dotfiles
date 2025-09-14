@@ -3,8 +3,6 @@ from IPython import get_ipython  # type: ignore[attr-defined]
 ipython = get_ipython()
 
 if "ipython" in globals():
-
-    # Enable `vi` mode
     ipython.editing_mode = "vi"  # type: ignore[attr-defined]
 
     # Autoreload modules/packages after their modification
