@@ -1,76 +1,41 @@
 k9s:
-  # enable periodic refresh of resource browser windows
   liveViewAutoRefresh: false
-  # the path to screen dump. Default: '%temp_dir%/k9s-screens-%username%' (k9s info)
   screenDumpDir: /tmp/dumps
-  # represents ui poll intervals in seconds
   refreshRate: 2
-  # overrides the default k8s api server requests timeout
   apiServerTimeout: 15s
-  # number of retries once the connection to the api-server is lost
   maxConnRetry: 5
-  # indicates whether modification commands like delete/kill/edit are disabled
   readOnly: false
-  # this setting allows users to specify the default view
   defaultView: ""
-  # toggles whether k9s should exit when CTRL-C is pressed
   noExitOnCtrlC: false
 
   ui:
-    # enable mouse support
     enableMouse: false
-    # set to true to hide K9s header
     headless: false
-    # set to true to hide the K9S logo
     logoless: false
-    # set to true to hide K9s crumbs
     crumbsless: false
-    # set to true to suppress the K9s splash screen on start
     splashless: false
-    # toggles icons display as not all terminal support these chars
     noIcons: false
-    # toggles reactive UI. This option provide for watching on disk artifacts changes and update the UI live
     reactive: false
-    # set custom theme
     skin: catppuccin_macchiato
-    # allows to set certain views default fullscreen mode
     defaultsToFullScreen: false
-    # show full resource GVR (Group/Version/Resource) vs just R
-    # useGVRTitleFormat: false
-
-  # noIcons: false
-  # skipLatestRevCheck: false
-  # keepMissingClusters: false
 
   logger:
-    # defines the number of lines to return
     tail: 200
-    # defines the total number of log lines to allow in the view
     buffer: 500
-    # represents how far to go back in the log timeline in seconds
     sinceSeconds: 300
-    # toggles log line wrap
     textWrap: false
-    # autoscroll in logs will be disabled
     disableAutoscroll: false
-    # toggles log line timestamp info
     showTime: false
 
   shellPod:
-    # the shell pod image to use
     image: killerAdmin
-    # the namespace to launch to shell pod into
     namespace: default
-    # the resource limit to set on the shell pod
     limits:
       cpu: 100m
       memory: 100Mi
-    # enable TTY
     tty: true
     hostPathVolume:
       - name: docker-socket
-        # mount the Docker socket into the shell pod
         mountPath: /var/run/docker.sock
-        # the path on the host to mount
         hostPath: /var/run/docker.sock
         readOnly: true
