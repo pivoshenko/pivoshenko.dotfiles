@@ -32,8 +32,6 @@
     - [Messengers](#messengers)
       - [Messengers - Telegram](#messengers---telegram)
       - [Messengers - Discord](#messengers---discord)
-      - [Messengers - Slack](#messengers---slack)
-    - [Text Expander - Espanso](#text-expander---espanso)
     - [Honourable Mentions](#honourable-mentions)
 
 > [!NOTE]
@@ -136,14 +134,14 @@ I use [AeroSpace](https://github.com/nikitabobko/AeroSpace) as a tiling window m
 
 My configuration can be found [here](dotfiles/.config/aerospace/aerospace.toml). The main idea is to define the following workspaces and bind relevant applications to them:
 
-- #1 Comms (Telegram, Discord, etc.)
-- #2 Media
-- #3 Notes (Obsidian)
-- #4 Browsing (Zen)
-- #5 Terminal (iTerm2)
-- #6 Coding (Zed, VSCode)
-- #7 Databases (MongoDB Compass, DBeaver)
-- #8 Misc (Insomnia)
+- #1 Comms: Telegram, Discord, etc
+- #2 Media: Spotify, Music, etc.
+- #3 Notes: Obsidian, etc.
+- #4 Browsing: Zen, Chrome, etc.
+- #5 Terminal: iTerm2
+- #6 Coding: Zed, VSCode, Cursor, etc.
+- #7 Databases: MongoDB Compass, DBeaver, etc.
+- #8 APIs: Insomnia, Postman etc.
 - #9 Misc
 
 Some applications, typically used in "quick pop-up" mode (e.g., macOS default apps), follow a **floating layout** and are not bound to any workspace.
@@ -207,7 +205,7 @@ body {
 
 ### Music - Spotify
 
-Spotify is my primary music app, and to customise it I am using [Spicetify](https://github.com/spicetify/cli) and [`spicetify-marketplace`](https://github.com/spicetify/marketplace).
+Spotify is my primary music app, and to customise it I am using [Spicetify](https://github.com/spicetify/cli) and [Spicetify Marketplace](https://github.com/spicetify/marketplace).
 
 My current theme is [Catppuccin](https://github.com/catppuccin/spicetify), which can be installed via Marketplace in the themes tab.
 
@@ -217,30 +215,21 @@ There are no other plugins installed apart from the theme.
 
 #### Messengers - Telegram
 
-My main messenger is [Telegram](https://telegram.org) with my own version of [Catppuccin themes](telegram). Both themes can be installed using Telegram's theme manager:
+My main messenger is [Telegram](https://telegram.org) with my own version of Catppuccin themes. Both themes can be installed using Telegram's theme manager:
 
 - [Catppuccin Latte](https://t.me/addtheme/catppuccin_latte_pivoshenko)
+- [Catppuccin Macchiato](https://t.me/addtheme/catppuccin_macchiato_pivoshenko)
 - [Catppuccin Mocha](https://t.me/addtheme/catppuccin_mocha_pivoshenko)
 
 #### Messengers - Discord
 
-To stay in touch with different communities, I am using [Discord](https://discord.com), but the official app lacks functionality, so instead I am using [Vesktop](https://github.com/Vencord/Vesktop) with the [Catppuccin theme](https://github.com/catppuccin/discord) installed via "Themes -> Online Themes".
+To stay in touch with different communities, I am using [Discord](https://discord.com), but the official app lacks functionality, so instead I am using [Vesktop](https://github.com/Vencord/Vesktop) with the [Catppuccin](https://github.com/catppuccin/discord) theme installed via "Themes -> Online Themes".
 
 ```css
 /* frappe, macchiato, mocha */
 @dark https://catppuccin.github.io/discord/dist/catppuccin-macchiato-mauve.theme.css
 @light https://catppuccin.github.io/discord/dist/catppuccin-latte-mauve.theme.css
 ```
-
-#### Messengers - Slack
-
-Recently, I started using [Slack](https://slack.com) for work-related communication. I use the official app with the [Catppuccin theme](https://github.com/catppuccin/slack), which I applied via the custom theme option.
-
-### Text Expander - Espanso
-
-For text expansion, I use [Espanso](https://espanso.org), a powerful cross-platform text expander. It lets me define custom snippets that trigger anywhere in the system, saving time and reducing repetitive typing.
-
-My configuration includes a mix of personal and work-related expansions, and can be found [here](dotfiles/espanso).
 
 ### Honourable Mentions
 
@@ -251,3 +240,4 @@ My configuration includes a mix of personal and work-related expansions, and can
 [NordPass](https://nordpass.com) and [NordVPN](https://nordvpn.com) - simply the best password manager and VPN client.
 
 [DBeaver](https://dbeaver.io) - simple but powerful database manager.
+ 

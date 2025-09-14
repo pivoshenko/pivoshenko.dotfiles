@@ -102,23 +102,19 @@ enter = "mode main"
 esc = "mode main"
 
 # == Workspaces ==
-#1 Comms (Telegram, Discord, etc.)
-#2 Media (Spotify, Music, etc.)
-#3 Notes (Obsidian)
-#4 Browsing (Zen)
-#5 Terminal (iTerm2)
-#6 Coding (Zed, VSCode)
-#7 Databases (MongoDB Compass, DBeaver)
-#8 Misc (Insomnia)
+#1 Comms: Telegram, Discord, etc
+#2 Media: Spotify, Music, etc.
+#3 Notes: Obsidian, etc.
+#4 Browsing: Zen, Chrome, etc.
+#5 Terminal: iTerm2
+#6 Coding: Zed, VSCode, Cursor, etc.
+#7 Databases: MongoDB Compass, DBeaver, etc.
+#8 APIs: Insomnia, Postman etc.
 #9 Misc
 
 # == Workspace #1 ==
 [[on-window-detected]]
 if.app-id = "dev.vencord.vesktop"
-run = "move-node-to-workspace 1"
-
-[[on-window-detected]]
-if.app-id = "com.tinyspeck.slackmacgap"
 run = "move-node-to-workspace 1"
 
 [[on-window-detected]]
