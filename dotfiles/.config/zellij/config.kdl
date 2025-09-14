@@ -1,25 +1,12 @@
-// =================================================
-// Misc
-// =================================================
-
-// Disable sessions serialization to the cache folder
+// == Misc ==
 session_serialization false
-// Enable mouse support
 mouse_mode true
 
-// =================================================
-// Theme
-// =================================================
-
-// Set custom theme
+// == Theme ==
 theme "catppuccin-macchiato"
-// Set a minimalistic UI (without any arrows and frames)
 simplified_ui true
 
-// =================================================
-// Keybindings
-// =================================================
-
+// == Keybindings ==
 keybinds {
   shared_except "locked" {
     bind "Ctrl h" {
