@@ -1,8 +1,8 @@
 {
     // == UI ==
-    "theme": "Catppuccin Macchiato",
+    "theme": "Catppuccin Mocha",
     "preferred-light-theme": "Catppuccin Latte",
-    "preferred-dark-theme": "Catppuccin Macchiato",
+    "preferred-dark-theme": "Catppuccin Mocha",
     "theme-scrollbars": true,
     "adaptive-theme": true,
 
@@ -13,6 +13,6 @@
         "content-font-family": "JetBrainsMono Nerd Font Mono",
         "content-font-size1": "16",
         "ui-font-family": "JetBrainsMono Nerd Font Mono",
-        "ui-font-size1": null
+        "ui-font-size1": 14
     }
 }

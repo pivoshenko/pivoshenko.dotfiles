@@ -1,8 +1,24 @@
+// Catppuccin Frappe
+// text: #c6d0f5
+// mantle: #292c3c
+// blue: #8caaee
+// mauve: #ca9ee6
+// peach: #ef9f76
+
 // Catppuccin Macchiato
 // text: #cad3f5
 // mantle: #1e2030
+// blue: #8aadf4
 // mauve: #c6a0f6
 // peach: #f5a97f
+
+// Catppuccin Mocha
+// text: #cdd6f4
+// mantle: #181825
+// blue: #89b4fa
+// mauve: #cba6f7
+// peach: #fab387
+
 
 layout {
   pane split_direction="vertical" {
@@ -13,21 +29,21 @@ layout {
       hide_frame_for_single_pane "true"
       hide_frame_except_for_search "true"
 
-      format_left "{mode}#[fg=#c6a0f6,bg=#1e2030,bold] {session}#[bg=#1e2030] {tabs}"
-      format_right "#[fg=#cad3f5,bg=#1e2030]::{datetime}"
-      format_space "#[bg=#1e2030]"
+      format_left "{mode}#[fg=#89b4fa,bg=#181825,bold] {session}#[bg=#181825] {tabs}"
+      format_right "#[fg=#cdd6f4,bg=#181825]::{datetime}"
+      format_space "#[bg=#181825]"
 
-      mode_normal "#[bg=#c6a0f6] "
-      mode_tmux "#[bg=#f5a97f] "
+      mode_normal "#[bg=#89b4fa] "
+      mode_tmux "#[bg=#fab387] "
       mode_default_to_mode "tmux"
 
-      tab_normal "#[fg=#cad3f5,bg=#1e2030] {index} {name} {fullscreen_indicator}{sync_indicator}{floating_indicator}"
-      tab_active "#[fg=#cad3f5,bg=#1e2030,bold,italic] {index} {name} {fullscreen_indicator}{sync_indicator}{floating_indicator}"
+      tab_normal "#[fg=#cdd6f4,bg=#181825] {index} {name} {fullscreen_indicator}{sync_indicator}{floating_indicator}"
+      tab_active "#[fg=#cdd6f4,bg=#181825,bold,italic] {index} {name} {fullscreen_indicator}{sync_indicator}{floating_indicator}"
       tab_fullscreen_indicator "□ "
       tab_sync_indicator "  "
       tab_floating_indicator "󰉈 "
 
-      datetime "#[fg=#cad3f5,bg=#1e2030] {format} "
+      datetime "#[fg=#cdd6f4,bg=#181825] {format} "
       datetime_format "%A, %d %b %Y %H:%M"
       datetime_timezone "Europe/London"
     }

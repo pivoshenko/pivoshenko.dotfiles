@@ -93,13 +93,13 @@ dotfiles:
 profiles:
   default:
     dotfiles:
-      # ~/
+      # == ~/ ==
       - d_gnupg
       - d_ssh
       - d_ipython
       - d_jupyter
       - f_gitconfig
-      # ~/.config
+      # == ~/.config ==
       - d_aerospace
       - d_bat
       - d_bottom
@@ -117,7 +117,7 @@ profiles:
       - f_starship
   macos:
     dotfiles:
-      # ~/Library/Application Support
+      # == ~/Library/Application Support ==
       - d_macos_k9s
       - d_macos_lazygit
       - f_macos_vscode

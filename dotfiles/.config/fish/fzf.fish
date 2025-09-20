@@ -31,7 +31,7 @@ set -Ux FZF_CATPPUCCIN_MOCHA " \
 --color=border:#6C7086,label:#CDD6F4
 "
 
-set -Ux FZF_THEME $FZF_CATPPUCCIN_MACCHIATO
+set -Ux FZF_THEME $FZF_CATPPUCCIN_MOCHA
 
 # == Commands ==
 set -Ux fifc_editor hx

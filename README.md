@@ -221,7 +221,7 @@ To stay in touch with different communities, I am using [Discord](https://discor
 
 ```css
 /* frappe, macchiato, mocha */
-@dark https://catppuccin.github.io/discord/dist/catppuccin-macchiato-mauve.theme.css
+@dark https://catppuccin.github.io/discord/dist/catppuccin-mocha-mauve.theme.css
 @light https://catppuccin.github.io/discord/dist/catppuccin-latte-mauve.theme.css
 ```
 
