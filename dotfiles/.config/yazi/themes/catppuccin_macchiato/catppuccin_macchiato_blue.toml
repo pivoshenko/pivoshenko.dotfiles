@@ -1,123 +1,123 @@
 [mgr]
 cwd = { fg = "#8bd5ca" }
 
-hovered         = { fg = "#24273a", bg = "#c6a0f6" }
+hovered = { fg = "#24273a", bg = "#8aadf4" }
 preview_hovered = { fg = "#24273a", bg = "#cad3f5" }
 
-find_keyword  = { fg = "#eed49f", italic = true }
+find_keyword = { fg = "#eed49f", italic = true }
 find_position = { fg = "#f5bde6", bg = "reset", italic = true }
 
-marker_copied   = { fg = "#a6da95", bg = "#a6da95" }
-marker_cut      = { fg = "#ed8796", bg = "#ed8796" }
-marker_marked   = { fg = "#8bd5ca", bg = "#8bd5ca" }
-marker_selected = { fg = "#c6a0f6", bg = "#c6a0f6" }
+marker_copied = { fg = "#a6da95", bg = "#a6da95" }
+marker_cut = { fg = "#ed8796", bg = "#ed8796" }
+marker_marked = { fg = "#8bd5ca", bg = "#8bd5ca" }
+marker_selected = { fg = "#8aadf4", bg = "#8aadf4" }
 
-count_copied   = { fg = "#24273a", bg = "#a6da95" }
-count_cut      = { fg = "#24273a", bg = "#ed8796" }
-count_selected = { fg = "#24273a", bg = "#c6a0f6" }
+count_copied = { fg = "#24273a", bg = "#a6da95" }
+count_cut = { fg = "#24273a", bg = "#ed8796" }
+count_selected = { fg = "#24273a", bg = "#8aadf4" }
 
 border_symbol = "│"
-border_style  = { fg = "#8087a2" }
+border_style = { fg = "#8087a2" }
 
-syntect_theme = "~/.config/yazi/Catppuccin-macchiato.tmTheme"
+syntect_theme = "~/.config/bat/themes/catppuccin_macchiato.tmTheme"
 
 [tabs]
-active   = { fg = "#24273a", bg = "#cad3f5", bold = true }
+active = { fg = "#24273a", bg = "#cad3f5", bold = true }
 inactive = { fg = "#cad3f5", bg = "#494d64" }
 
 [mode]
-normal_main = { fg = "#24273a", bg = "#c6a0f6", bold = true }
-normal_alt  = { fg = "#c6a0f6", bg = "#363a4f"}
+normal_main = { fg = "#24273a", bg = "#8aadf4", bold = true }
+normal_alt = { fg = "#8aadf4", bg = "#363a4f" }
 
 select_main = { fg = "#24273a", bg = "#a6da95", bold = true }
-select_alt  = { fg = "#a6da95", bg = "#363a4f"}
+select_alt = { fg = "#a6da95", bg = "#363a4f" }
 
-unset_main  = { fg = "#24273a", bg = "#f0c6c6", bold = true }
-unset_alt   = { fg = "#f0c6c6", bg = "#363a4f"}
+unset_main = { fg = "#24273a", bg = "#f0c6c6", bold = true }
+unset_alt = { fg = "#f0c6c6", bg = "#363a4f" }
 
 [status]
-sep_left  = { open = "", close = "" }
+sep_left = { open = "", close = "" }
 sep_right = { open = "", close = "" }
 
-progress_label  = { fg = "#ffffff", bold = true }
+progress_label = { fg = "#ffffff", bold = true }
 progress_normal = { fg = "#8aadf4", bg = "#494d64" }
-progress_error  = { fg = "#ed8796", bg = "#494d64" }
+progress_error = { fg = "#ed8796", bg = "#494d64" }
 
-perm_type  = { fg = "#8aadf4" }
-perm_read  = { fg = "#eed49f" }
+perm_type = { fg = "#8aadf4" }
+perm_read = { fg = "#eed49f" }
 perm_write = { fg = "#ed8796" }
-perm_exec  = { fg = "#a6da95" }
-perm_sep   = { fg = "#8087a2" }
+perm_exec = { fg = "#a6da95" }
+perm_sep = { fg = "#8087a2" }
 
 [input]
-border   = { fg = "#c6a0f6" }
-title    = {}
-value    = {}
+border = { fg = "#8aadf4" }
+title = {}
+value = {}
 selected = { reversed = true }
 
 [pick]
-border   = { fg = "#c6a0f6" }
-active   = { fg = "#f5bde6" }
+border = { fg = "#8aadf4" }
+active = { fg = "#f5bde6" }
 inactive = {}
 
 [confirm]
-border     = { fg = "#c6a0f6" }
-title      = { fg = "#c6a0f6" }
-content    = {}
-list       = {}
-btn_yes    = { reversed = true }
-btn_no     = {}
+border = { fg = "#8aadf4" }
+title = { fg = "#8aadf4" }
+content = {}
+list = {}
+btn_yes = { reversed = true }
+btn_no = {}
 
 [cmp]
-border = { fg = "#c6a0f6" }
+border = { fg = "#8aadf4" }
 
 [tasks]
-border  = { fg = "#c6a0f6" }
-title   = {}
+border = { fg = "#8aadf4" }
+title = {}
 hovered = { underline = true }
 
 [which]
-mask            = { bg = "#363a4f" }
-cand            = { fg = "#8bd5ca" }
-rest            = { fg = "#939ab7" }
-desc            = { fg = "#f5bde6" }
-separator       = "  "
+mask = { bg = "#363a4f" }
+cand = { fg = "#8bd5ca" }
+rest = { fg = "#939ab7" }
+desc = { fg = "#f5bde6" }
+separator = "  "
 separator_style = { fg = "#5b6078" }
 
 [help]
-on      = { fg = "#8bd5ca" }
-run     = { fg = "#f5bde6" }
-desc    = { fg = "#939ab7" }
+on = { fg = "#8bd5ca" }
+run = { fg = "#f5bde6" }
+desc = { fg = "#939ab7" }
 hovered = { bg = "#5b6078", bold = true }
-footer  = { fg = "#cad3f5", bg = "#494d64" }
+footer = { fg = "#cad3f5", bg = "#494d64" }
 
 [notify]
-title_info  = { fg = "#8bd5ca" }
-title_warn  = { fg = "#eed49f" }
+title_info = { fg = "#8bd5ca" }
+title_warn = { fg = "#eed49f" }
 title_error = { fg = "#ed8796" }
 
 [filetype]
 rules = [
-	# Media
-	{ mime = "image/*", fg = "#8bd5ca" },
-	{ mime = "{audio,video}/*", fg = "#eed49f" },
+  # Media
+  { mime = "image/*", fg = "#8bd5ca" },
+  { mime = "{audio,video}/*", fg = "#eed49f" },
 
-	# Archives
-	{ mime = "application/*zip", fg = "#f5bde6" },
-	{ mime = "application/x-{tar,bzip*,7z-compressed,xz,rar}", fg = "#f5bde6" },
+  # Archives
+  { mime = "application/*zip", fg = "#f5bde6" },
+  { mime = "application/x-{tar,bzip*,7z-compressed,xz,rar}", fg = "#f5bde6" },
 
-	# Documents
-	{ mime = "application/{pdf,doc,rtf}", fg = "#a6da95" },
+  # Documents
+  { mime = "application/{pdf,doc,rtf}", fg = "#a6da95" },
 
-	# Fallback
-	{ name = "*", fg = "#cad3f5" },
-	{ name = "*/", fg = "#c6a0f6" }
+  # Fallback
+  { name = "*", fg = "#cad3f5" },
+  { name = "*/", fg = "#8aadf4" }
 ]
 
 [spot]
-border = { fg = "#c6a0f6" }
-title  = { fg = "#c6a0f6" }
-tbl_cell = { fg = "#c6a0f6", reversed = true }
+border = { fg = "#8aadf4" }
+title = { fg = "#8aadf4" }
+tbl_cell = { fg = "#8aadf4", reversed = true }
 tbl_col = { bold = true }
 
 [icon]
@@ -297,7 +297,7 @@ files = [
   { name = ".prettierrc.js", text = "", fg = "#8aadf4" },
   { name = ".Xresources", text = "", fg = "#f5a97f" },
   { name = ".gitignore", text = "", fg = "#f5a97f" },
-  { name = ".justfile", text = "", fg = "#8087a2" },
+  { name = ".justfile", text = "", fg = "#8087a2" }
 ]
 exts = [
   { name = "otf", text = "", fg = "#f4dbd6" },
@@ -752,5 +752,5 @@ exts = [
   { name = "v", text = "󰍛", fg = "#a6da95" },
   { name = "kicad_pro", text = "", fg = "#f4dbd6" },
   { name = "liquid", text = "", fg = "#a6da95" },
-  { name = "zip", text = "", fg = "#eed49f" },
+  { name = "zip", text = "", fg = "#eed49f" }
 ]

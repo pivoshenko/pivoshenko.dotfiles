@@ -1,6 +1,6 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
- palette = "catppuccin_macchiato"
+ palette = "catppuccin_mocha"
 
 [palettes.catppuccin_frappe]
 rosewater = "#f2d5cf"
@@ -132,8 +132,8 @@ symbol = " "
 symbol = " "
 
 [character]
-success_symbol = "[❯](bold mauve)"
-vimcmd_symbol = "[❮](bold mauve)"
+success_symbol = "[❯](bold blue)"
+vimcmd_symbol = "[❮](bold blue)"
 
 [conda]
 symbol = " "
@@ -144,7 +144,7 @@ symbol = " "
 [directory]
 read_only = "  "
 truncation_length = 4
-style = "bold mauve"
+style = "bold blue"
 
 [docker_context]
 symbol = "󰡨 "

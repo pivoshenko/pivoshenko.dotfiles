@@ -10,7 +10,7 @@ pager = delta
 helper = store
 
 [delta]
-features = "catppuccin_macchiato"
+features = "catppuccin_mocha"
 hyperlinks = true
 hyperlinks-file-link-format = "file-line://{path}:{line}"
 light = false

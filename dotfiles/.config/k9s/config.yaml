@@ -16,7 +16,7 @@ k9s:
     splashless: false
     noIcons: false
     reactive: false
-    skin: catppuccin_macchiato
+    skin: catppuccin_mocha
     defaultsToFullScreen: false
 
   logger:

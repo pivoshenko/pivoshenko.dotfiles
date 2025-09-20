@@ -1316,7 +1316,7 @@
             ]
           },
           {
-            "description": "Vim - Command+H/J/K/L as Arrows",
+            "description": "Vim mode - Cmd+H/J/K/L as Arrows",
             "manipulators": [
               {
                 "from": {

@@ -2,7 +2,7 @@
   // == UI ==
   "icon_theme": "Material Icon Theme",
   "theme": {
-    "dark": "Catppuccin Macchiato",
+    "dark": "Catppuccin Mocha",
     "light": "Catppuccin Latte",
     "mode": "system"
   },
@@ -11,32 +11,37 @@
   "buffer_font_size": 16,
   "ui_font_family": "JetBrainsMono Nerd Font",
   "ui_font_size": 16,
-  // == Eidtor ==
-  "show_whitespaces": "all",
-  "soft_wrap": "editor_width",
-  "toolbar": {
-    "breadcrumbs": true,
-    "quick_actions": true,
-    "selections_menu": true
-  },
-  "tabs": {
-    "activate_on_close": "history",
-    "close_position": "right",
-    "file_icons": false,
-    "git_status": true
-  },
-  "preview_tabs": {
-    "enable_preview_from_code_navigation": false,
-    "enable_preview_from_file_finder": false,
-    "enabled": false
-  },
-  "relative_line_numbers": true,
+  // == Editor ==
   "autosave": {
     "after_delay": {
       "milliseconds": 500
     }
   },
+  "preview_tabs": {
+    "enabled": false,
+    "enable_preview_from_code_navigation": false,
+    "enable_preview_from_file_finder": false
+  },
+  "relative_line_numbers": true,
+  "show_whitespaces": "all",
+  "soft_wrap": "editor_width",
+  "tabs": {
+    "activate_on_close": "history",
+    "git_status": true,
+    "close_position": "right",
+    "file_icons": false
+  },
+  "toolbar": {
+    "breadcrumbs": true,
+    "quick_actions": true,
+    "selections_menu": true
+  },
   // == Dock ==
+  "agent": {
+    "always_allow_tool_actions": true,
+    "default_profile": "ask",
+    "dock": "left"
+  },
   "chat_panel": {
     "button": "never",
     "dock": "left"
@@ -45,17 +50,12 @@
     "button": false,
     "dock": "left"
   },
-  "notification_panel": {
-    "button": false,
-    "dock": "left"
-  },
-  "agent": {
-    "always_allow_tool_actions": true,
-    "default_profile": "ask",
-    "dock": "left"
-  },
   "git_panel": {
     "button": true,
+    "dock": "left"
+  },
+  "notification_panel": {
+    "button": false,
     "dock": "left"
   },
   "outline_panel": {
@@ -84,18 +84,18 @@
   "vim_mode": true,
   // == Misc ==
   "auto_update": true,
-  "telemetry": {
-    "diagnostics": false,
-    "metrics": false
-  },
   "file_types": {
+    "SQL": [
+      "*.sql.j2"
+    ],
     "TOML": [
       "poetry.lock",
       "uv.lock"
-    ],
-    "SQL": [
-      "*.sql.j2"
     ]
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
   },
   // == Extensions ==
   "auto_install_extensions": {
@@ -108,9 +108,9 @@
     "html": true,
     "ini": true,
     "kdl": true,
-    "material-icon-theme": true,
     "log": true,
     "lua": true,
+    "material-icon-theme": true,
     "ruff": true,
     "sql": true,
     "toml": true
