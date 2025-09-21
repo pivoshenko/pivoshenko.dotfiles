@@ -49,7 +49,7 @@ What's in here?
 - Minimalism in all aspects
 - Consistency throughout the configuration
 - Simplicity in design and configuration
-- Unified style [Catppuccin theme](https://github.com/catppuccin/catppuccin) and [JetBrains Mono font](https://www.jetbrains.com/lp/mono)
+- Unified style [Catppuccin Mocha theme](https://github.com/catppuccin/catppuccin) and [JetBrains Mono font](https://www.jetbrains.com/lp/mono)
 
 ## Usage
 
