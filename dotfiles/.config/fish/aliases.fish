@@ -2,7 +2,7 @@
 alias cat="bat"
 alias find="fd"
 alias grep="rg"
-alias ls="eza"
+alias ls="eza --all --icons=always"
 
 # == Git ==
 alias ga="git add"
