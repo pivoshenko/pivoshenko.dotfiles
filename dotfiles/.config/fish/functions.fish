@@ -1,3 +1,8 @@
+# == Activate a virtual environment ==
+function venv
+  source .venv/bin/activate.fish
+end
+
 # == Delete backup files ==
 function bakclean
   fd -H -e ".dotdropbak" -t f -x rm
