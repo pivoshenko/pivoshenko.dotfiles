@@ -1,0 +1,10 @@
+theme = catppuccin_mocha.conf
+
+font-family = IosevkaTerm Nerd Font
+font-feature = +liga
+font-feature = +calt
+font-feature = +dlig
+font-size = 16
+
+macos-non-native-fullscreen = true
+macos-titlebar-style = tabs
