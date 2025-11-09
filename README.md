@@ -65,8 +65,6 @@ dotdrop install -c dotdrop.config.yaml -p macos --force
 
 ## Shell
 
-I am using [iTerm2](https://iterm2.com) as my main terminal with the [Catppuccin theme](https://github.com/catppuccin/iterm) applied. My configuration can be found [here](dotfiles/.config/iterm2).
-
 For the shell, I am using [Fish](https://fishshell.com), as out of the box it has all batteries included. To manage shell plugins, I am using [Fisher](https://github.com/jorgebucaran/fisher), but there are only a few installed. My complete configuration can be found [here](dotfiles/.config/fish).
 
 In terms of command-line tools, I try to keep them minimal—only the ones I use daily, such as:

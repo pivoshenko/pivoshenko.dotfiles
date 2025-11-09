@@ -39,6 +39,9 @@ dotfiles:
   d_fish:
     dst: ~/.config/fish
     src: .config/fish
+  d_ghostty:
+    dst: ~/.config/ghostty
+    src: .config/ghostty
   d_fastfetch:
     dst: ~/.config/fastfetch
     src: .config/fastfetch
@@ -104,8 +107,9 @@ profiles:
       - d_bat
       - d_bottom
       - d_delta
-      - d_fish
       - d_fastfetch
+      - d_fish
+      - d_ghostty
       - d_helix
       - d_iterm2
       - d_karabiner
