@@ -7,9 +7,9 @@
     "mode": "system"
   },
   // == Fonts ==
-  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_family": "IosevkaTerm Nerd Font",
   "buffer_font_size": 16,
-  "ui_font_family": "JetBrainsMono Nerd Font",
+  "ui_font_family": "IosevkaTerm Nerd Font",
   "ui_font_size": 16,
   // == Editor ==
   "autosave": {

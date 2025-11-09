@@ -2,7 +2,7 @@
   // == Chat ==
   "chat.agent.enabled": true,
   "chat.fontFamily": "IosevkaTerm Nerd Font",
-  "chat.fontSize": 13,
+  "chat.fontSize": 14,
   "chat.instructionsFilesLocations": {
     ".github/instructions": true,
     "/Users/volodymyr.pivoshenko/.aitk/instructions/": true

@@ -1,4 +1,3 @@
-# == Theme ==
 [styles.cpu]
 all_entry_color = "#f5e0dc"
 avg_entry_color = "#eba0ac"
