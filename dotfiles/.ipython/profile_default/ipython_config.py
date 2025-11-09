@@ -1,7 +1,7 @@
 import sys
 
-from prompt_toolkit.key_binding.vi_state import InputMode
-from prompt_toolkit.key_binding.vi_state import ViState
+from prompt_toolkit.key_binding.vi_state import InputMode  # type: ignore
+from prompt_toolkit.key_binding.vi_state import ViState  # type: ignore
 
 
 def get_input_mode(self):

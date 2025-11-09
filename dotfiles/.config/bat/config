@@ -1,4 +1,4 @@
 --decorations never
---plain
 --paging never
+--plain
 --theme="catppuccin_mocha"

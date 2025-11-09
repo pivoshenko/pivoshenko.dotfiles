@@ -12,13 +12,11 @@
   - [Overview](#overview)
   - [Main principles](#main-principles)
   - [Usage](#usage)
-  - [macOS](#macos)
   - [Shell](#shell)
     - [Helix](#helix)
   - [Applications](#applications)
-    - [Application Launcher - Raycast](#application-launcher---raycast)
     - [Hotkeys Daemon - Karabiner](#hotkeys-daemon---karabiner)
-    - [Tiling Window Manager - Aerospace](#tiling-window-manager---aerospace)
+    - [Tiling Window Manager - Rectangle](#tiling-window-manager---rectangle)
     - [Editors](#editors)
       - [Editors - VSCode](#editors---vscode)
       - [Editors - Zed](#editors---zed)
@@ -38,7 +36,6 @@
 What's in here?
 
 - My Brew dependencies, including apps, fonts, LSPs, extensions, etc., see [Brewfile](Brewfile)
-- My macOS default configurations, see [`macos/`](macos/defaults.sh)
 - My configs, see [`.config/`](dotfiles/.config)
 
 ## Main principles
@@ -64,16 +61,6 @@ brew bundle
 ```shell
 dotdrop install -c dotdrop.config.yaml -p default --force
 dotdrop install -c dotdrop.config.yaml -p macos --force
-```
-
-## macOS
-
-To configure macOS I am using [Defaults](https://macos-defaults.com), my configuration can be found [here](macos/defaults.sh).
-
-Run the following commands to configure macOS defaults:
-
-```shell
-sudo sh macos/defaults.sh
 ```
 
 ## Shell
@@ -109,33 +96,15 @@ I want to highlight it separately, as it's a truly amazing editor with a lot of 
 
 I am using [Homebrew](https://brew.sh) to install both GUI applications and command-line tools. You can find a list of all applications, as well as LSPs and VSCode plugins, in the [`Brewfile`](Brewfile).
 
-### Application Launcher - Raycast
-
-I recently moved from the default macOS Spotlight to [Raycast](https://www.raycast.com). While it offers an impressive range of features and a sleek user experience, many of its advanced capabilities are locked behind a Pro subscription, which I find limiting. As a result, I'm currently exploring alternative solutions.
-
 ### Hotkeys Daemon - Karabiner
 
 I primarily use an external keyboard, and in most of my apps, I rely on either Vi/Kakoune motions. I find it painful to use the mouse, as it requires moving my right hand off the keyboard and distracts my "zen" state. In most of the dev apps, you can enable such modes, but in the default macOS apps or window manager, such functionality is absent. To resolve this issue, I am using [Karabiner](https://github.com/pqrs-org/Karabiner-Elements).
 
 My configuration can be found [here](dotfiles/.config/karabiner/karabiner.json). The main idea is to implement [home row mode](https://precondition.github.io/home-row-mods) using this [guide](https://havn.blog/2024/03/03/a-good-way.html).
 
-### Tiling Window Manager - Aerospace
+### Tiling Window Manager - Rectangle
 
-I use [AeroSpace](https://github.com/nikitabobko/AeroSpace) as a tiling window manager for macOS, which essentially replicates i3 functionality.
-
-My configuration can be found [here](dotfiles/.config/aerospace/aerospace.toml). The main idea is to define the following workspaces and bind relevant applications to them:
-
-- #1 Comms: Telegram, Discord, etc
-- #2 Media: Spotify, Music, etc.
-- #3 Notes: Obsidian, etc.
-- #4 Browsing: Zen, Chrome, etc.
-- #5 Terminal: iTerm2
-- #6 Coding: Zed, VSCode, Cursor, etc.
-- #7 Databases: MongoDB Compass, DBeaver, etc.
-- #8 APIs: Insomnia, Postman etc.
-- #9 Misc
-
-Some applications, typically used in "quick pop-up" mode (e.g., macOS default apps), follow a floating layout and are not bound to any workspace.
+I use [Rectangle](https://rectangleapp.com/) as a tiling window manager for macOS, which essentially replicates i3 functionality. My configuration can be found [here](dotfiles/.config/rectangle/config.json).
 
 ### Editors
 
@@ -225,8 +194,6 @@ To stay in touch with different communities, I am using [Discord](https://discor
 ### Honourable Mentions
 
 [f.lux](https://justgetflux.com) - the best application to control the color of a computer's display, adapting to the time of day: warm at night and like sunlight during the day (supports presets based on geolocation).
-
-[CleanShotX](https://cleanshot.com) - I found the default macOS screenshot tool quite odd; sometimes it blurs the screenshot. But still, for day-to-day screenshots, I am using the default app, but if I need to take a screenshot for some documentation, I am using this tool.
 
 [NordPass](https://nordpass.com) and [NordVPN](https://nordvpn.com) - simply the best password manager and VPN client.
 

@@ -1,6 +1,6 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
- palette = "catppuccin_mocha"
+palette = "catppuccin_mocha"
 
 [palettes.catppuccin_frappe]
 rosewater = "#f2d5cf"

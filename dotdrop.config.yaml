@@ -86,9 +86,9 @@ dotfiles:
   d_macos_lazygit:
     dst: ~/Library/Application Support/lazygit
     src: .config/lazygit
-  f_macos_vscode:
-    dst: ~/Library/Application Support/Code/User/settings.json
-    src: vscode/settings.json
+  d_macos_vscode:
+    dst: ~/Library/Application Support/Code/User
+    src: vscode
 
 profiles:
   default:
@@ -120,4 +120,4 @@ profiles:
       # == ~/Library/Application Support ==
       - d_macos_k9s
       - d_macos_lazygit
-      - f_macos_vscode
+      - d_macos_vscode
