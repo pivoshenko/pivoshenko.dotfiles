@@ -23,7 +23,7 @@
             ]
           },
           {
-            "description": "Homerow - R/U as Opt+Shift",
+            "description": "Enable homerow - R/U as Opt+Shift",
             "manipulators": [
               {
                 "from": {
@@ -94,7 +94,7 @@
             ]
           },
           {
-            "description": "Homerow - Shift, Ctrl, Opt, Cmd as A/L, S/K, D/J, F/H",
+            "description": "Enable homerow - Shift, Ctrl, Opt, Cmd as A/L, S/K, D/J, F/H",
             "manipulators": [
               {
                 "from": {
@@ -1316,7 +1316,7 @@
             ]
           },
           {
-            "description": "Vim mode - Cmd+H/J/K/L as Arrows",
+            "description": "Enable Vim mode - Cmd+H/J/K/L as Arrows",
             "manipulators": [
               {
                 "from": {
