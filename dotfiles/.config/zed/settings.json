@@ -22,7 +22,7 @@
     "enable_preview_from_code_navigation": false,
     "enable_preview_from_file_finder": false
   },
-  "relative_line_numbers": true,
+  "relative_line_numbers": "enabled",
   "show_whitespaces": "all",
   "soft_wrap": "editor_width",
   "tabs": {
@@ -40,10 +40,6 @@
   "agent": {
     "always_allow_tool_actions": true,
     "default_profile": "ask",
-    "dock": "left"
-  },
-  "chat_panel": {
-    "button": "never",
     "dock": "left"
   },
   "collaboration_panel": {
@@ -85,13 +81,8 @@
   // == Misc ==
   "auto_update": true,
   "file_types": {
-    "SQL": [
-      "*.sql.j2"
-    ],
-    "TOML": [
-      "poetry.lock",
-      "uv.lock"
-    ]
+    "SQL": ["*.sql.j2"],
+    "TOML": ["poetry.lock", "uv.lock"]
   },
   "telemetry": {
     "diagnostics": false,
@@ -106,10 +97,9 @@
     "gleam": true,
     "git-firefly": true,
     "html": true,
+    "justfile": true,
     "ini": true,
-    "kdl": true,
     "log": true,
-    "lua": true,
     "material-icon-theme": true,
     "ruff": true,
     "sql": true,
