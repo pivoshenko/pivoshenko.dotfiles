@@ -13,47 +13,41 @@ dotfiles:
   d_gnupg:
     dst: ~/.gnupg
     src: .gnupg
-  d_ssh:
-    dst: ~/.ssh
-    src: .ssh
   d_ipython:
     dst: ~/.ipython
     src: .ipython
   d_jupyter:
     dst: ~/.jupyter
     src: .jupyter
+  d_ssh:
+    dst: ~/.ssh
+    src: .ssh
   f_gitconfig:
     dst: ~/.gitconfig
     src: .gitconfig
 
   # == ~/.config ==
-  d_aerospace:
-    dst: ~/.config/aerospace
-    src: .config/aerospace
   d_bat:
     dst: ~/.config/bat
     src: .config/bat
   d_bottom:
     dst: ~/.config/bottom
     src: .config/bottom
+  d_delta:
+    dst: ~/.config/delta
+    src: .config/delta
+  d_fastfetch:
+    dst: ~/.config/fastfetch
+    src: .config/fastfetch
   d_fish:
     dst: ~/.config/fish
     src: .config/fish
   d_ghostty:
     dst: ~/.config/ghostty
     src: .config/ghostty
-  d_fastfetch:
-    dst: ~/.config/fastfetch
-    src: .config/fastfetch
-  d_delta:
-    dst: ~/.config/delta
-    src: .config/delta
   d_helix:
     dst: ~/.config/helix
     src: .config/helix
-  d_iterm2:
-    dst: ~/.config/iterm2
-    src: .config/iterm2
   d_k9s:
     dst: ~/.config/K9s
     src: .config/k9s
@@ -63,6 +57,9 @@ dotfiles:
   d_lazygit:
     dst: ~/.config/lazygit
     src: .config/lazygit
+  d_rectangle:
+    dst: ~/.config/rectangle
+    src: .config/rectangle
   d_stylus:
     dst: ~/.config/stylus
     src: .config/stylus
@@ -96,29 +93,27 @@ dotfiles:
 profiles:
   default:
     dotfiles:
-      # == ~/ ==
-      - d_gnupg
-      - d_ssh
-      - d_ipython
-      - d_jupyter
-      - f_gitconfig
-      # == ~/.config ==
-      - d_aerospace
       - d_bat
       - d_bottom
       - d_delta
       - d_fastfetch
       - d_fish
       - d_ghostty
+      - d_gnupg
       - d_helix
-      - d_iterm2
+      - d_ipython
+      - d_jupyter
       - d_karabiner
+      - d_rectangle
+      - d_ssh
       - d_stylus
       - d_yazi
       - d_zed
       - d_zellij
       - d_zen
+      - f_gitconfig
       - f_starship
+
   macos:
     dotfiles:
       # == ~/Library/Application Support ==

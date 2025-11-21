@@ -1,7 +1,7 @@
 {
   // == Chat ==
   "chat.agent.enabled": true,
-  "chat.fontFamily": "IosevkaTerm Nerd Font",
+  "chat.fontFamily": "JetBrainsMono Nerd Font",
   "chat.fontSize": 14,
   "chat.instructionsFilesLocations": {
     ".github/instructions": true,
@@ -9,14 +9,14 @@
   },
   // == Debug ==
   "debug.allowBreakpointsEverywhere": true,
-  "debug.console.fontFamily": "IosevkaTerm Nerd Font",
+  "debug.console.fontFamily": "JetBrainsMono Nerd Font",
   "debug.console.fontSize": 16,
   // == Editor ==
   "editor.acceptSuggestionOnEnter": "on",
   "editor.accessibilitySupport": "off",
   "editor.codeLens": true,
-  "editor.codeLensFontFamily": "IosevkaTerm Nerd Font",
-  "editor.fontFamily": "IosevkaTerm Nerd Font",
+  "editor.codeLensFontFamily": "JetBrainsMono Nerd Font",
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
   "editor.formatOnSave": true,
@@ -26,9 +26,9 @@
   "editor.gotoLocation.multipleReferences": "goto",
   "editor.gotoLocation.multipleTypeDefinitions": "goto",
   "editor.guides.bracketPairs": true,
-  "editor.inlayHints.fontFamily": "IosevkaTerm Nerd Font",
+  "editor.inlayHints.fontFamily": "JetBrainsMono Nerd Font",
   "editor.inlineSuggest.enabled": true,
-  "editor.inlineSuggest.fontFamily": "IosevkaTerm Nerd Font",
+  "editor.inlineSuggest.fontFamily": "JetBrainsMono Nerd Font",
   "editor.inlineSuggest.showToolbar": "always",
   "editor.letterSpacing": 0.5,
   "editor.lightbulb.enabled": "onCode",
@@ -66,8 +66,8 @@
       "height": 35,
     }
   },
-  "custom-ui-style.font.monospace": "IosevkaTerm Nerd Font",
-  "custom-ui-style.font.sansSerif": "IosevkaTerm Nerd Font",
+  "custom-ui-style.font.monospace": "JetBrainsMono Nerd Font",
+  "custom-ui-style.font.sansSerif": "JetBrainsMono Nerd Font",
   "custom-ui-style.stylesheet": {
     ".monaco-workbench .editor-group-container>.title>.label-container>.title-label>.monaco-icon-label-container": {
       "margin-left": "50px !important",
@@ -120,9 +120,9 @@
   // == Extensions - Notebook ==
   "notebook.formatOnSave.enabled": true,
   "notebook.lineNumbers": "on",
-  "notebook.markup.fontFamily": "IosevkaTerm Nerd Font",
+  "notebook.markup.fontFamily": "JetBrainsMono Nerd Font",
   "notebook.markup.fontSize": 16,
-  "notebook.output.fontFamily": "IosevkaTerm Nerd Font",
+  "notebook.output.fontFamily": "JetBrainsMono Nerd Font",
   "notebook.output.fontSize": 16,
   "notebook.output.textLineLimit": 1000,
   // == Extensions - Python ==
@@ -203,12 +203,11 @@
   "telemetry.telemetryLevel": "off",
   // == Terminal ==
   "terminal.explorerKind": "external",
-  "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.allowMnemonics": true,
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.defaultProfile.osx": "fish",
   "terminal.integrated.drawBoldTextInBrightColors": false,
-  "terminal.integrated.fontFamily": "IosevkaTerm Nerd Font",
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.fontWeight": "normal",
   "terminal.integrated.gpuAcceleration": "on",

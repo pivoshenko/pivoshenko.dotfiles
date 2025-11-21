@@ -19,7 +19,7 @@ count_selected = { fg = "#303446", bg = "#ca9ee6" }
 border_symbol = "│"
 border_style = { fg = "#838ba7" }
 
-syntect_theme = "~/.config/bat/themes/catppuccin_frappe.tmTheme"
+syntect_theme = "~/.config/yazi/Catppuccin-frappe.tmTheme"
 
 [tabs]
 active = { fg = "#303446", bg = "#c6d0f5", bold = true }

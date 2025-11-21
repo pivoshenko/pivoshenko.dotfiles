@@ -1,10 +1,17 @@
-theme = catppuccin_mocha.conf
+auto-update = download
 
-font-family = IosevkaTerm Nerd Font
-font-feature = +liga
+font-family = JetBrainsMono Nerd Font
 font-feature = +calt
 font-feature = +dlig
+font-feature = +liga
 font-size = 16
 
 macos-non-native-fullscreen = true
+macos-titlebar-proxy-icon = hidden
 macos-titlebar-style = tabs
+macos-window-buttons = hidden
+
+shell-integration = fish
+shell-integration-features = true
+
+theme = catppuccin_mocha.conf

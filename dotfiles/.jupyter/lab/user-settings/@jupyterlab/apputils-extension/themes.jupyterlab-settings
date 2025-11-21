@@ -8,11 +8,11 @@
 
     // == Fonts ==
     "overrides": {
-        "code-font-family": "IosevkaTerm Nerd Font Mono",
+        "code-font-family": "JetBrainsMono Nerd Font Mono",
         "code-font-size": "16",
-        "content-font-family": "IosevkaTerm Nerd Font Mono",
+        "content-font-family": "JetBrainsMono Nerd Font Mono",
         "content-font-size1": "16",
-        "ui-font-family": "IosevkaTerm Nerd Font Mono",
+        "ui-font-family": "JetBrainsMono Nerd Font Mono",
         "ui-font-size1": 14
     }
 }

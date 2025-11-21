@@ -1,41 +1,41 @@
 k9s:
-  liveViewAutoRefresh: false
-  screenDumpDir: /tmp/dumps
-  refreshRate: 2
   apiServerTimeout: 15s
-  maxConnRetry: 5
-  readOnly: false
   defaultView: ""
+  liveViewAutoRefresh: false
+  maxConnRetry: 5
   noExitOnCtrlC: false
-
-  ui:
-    enableMouse: false
-    headless: false
-    logoless: false
-    crumbsless: false
-    splashless: false
-    noIcons: false
-    reactive: false
-    skin: catppuccin_mocha
-    defaultsToFullScreen: false
+  readOnly: false
+  refreshRate: 2
+  screenDumpDir: /tmp/dumps
 
   logger:
-    tail: 200
     buffer: 500
-    sinceSeconds: 300
-    textWrap: false
     disableAutoscroll: false
     showTime: false
+    sinceSeconds: 300
+    tail: 200
+    textWrap: false
 
   shellPod:
+    hostPathVolume:
+      - hostPath: /var/run/docker.sock
+        mountPath: /var/run/docker.sock
+        name: docker-socket
+        readOnly: true
     image: killerAdmin
-    namespace: default
     limits:
       cpu: 100m
       memory: 100Mi
+    namespace: default
     tty: true
-    hostPathVolume:
-      - name: docker-socket
-        mountPath: /var/run/docker.sock
-        hostPath: /var/run/docker.sock
-        readOnly: true
+
+  ui:
+    crumbsless: false
+    defaultsToFullScreen: false
+    enableMouse: false
+    headless: false
+    logoless: false
+    noIcons: false
+    reactive: false
+    skin: catppuccin_mocha
+    splashless: false

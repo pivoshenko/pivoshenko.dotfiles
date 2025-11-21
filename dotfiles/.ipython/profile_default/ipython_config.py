@@ -22,6 +22,6 @@ def set_input_mode(self, mode):
 
 ViState._input_mode = InputMode.INSERT  # type: ignore[attr-defined]
 ViState.input_mode = property(get_input_mode, set_input_mode)  # type: ignore[method-assign, assignment]
-c.TerminalInteractiveShell.editing_mode = "vi"  # type: ignore[name-defined]  # noqa: F821
 
+c.TerminalInteractiveShell.editing_mode = "vi"  # type: ignore[name-defined]  # noqa: F821
 c.TerminalInteractiveShell.true_color = True  # type: ignore[attr-defined]  # noqa: F821
