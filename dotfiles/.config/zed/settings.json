@@ -81,8 +81,13 @@
   // == Misc ==
   "auto_update": true,
   "file_types": {
-    "SQL": ["*.sql.j2"],
-    "TOML": ["poetry.lock", "uv.lock"]
+    "SQL": [
+      "*.sql.j2"
+    ],
+    "TOML": [
+      "poetry.lock",
+      "uv.lock"
+    ]
   },
   "telemetry": {
     "diagnostics": false,
@@ -95,17 +100,19 @@
     "docker-compose": true,
     "dockerfile": true,
     "editorconfig": true,
+    "elixir": true,
     "env": true,
-    "gleam": true,
+    "fish": true,
     "git-firefly": true,
+    "gleam": true,
     "html": true,
     "ini": true,
     "jinja2": true,
     "just": true,
-    "justfile": true,
+    "kdl": true,
     "log": true,
+    "lua": true,
     "material-icon-theme": true,
-    "ruff": true,
     "sql": true,
     "toml": true
   }
