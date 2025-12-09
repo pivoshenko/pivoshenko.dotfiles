@@ -2,14 +2,13 @@
 tap "catppuccin/tap"
 
 # == Fonts ==
-cask "font-iosevka-term-nerd-font"
+cask "font-iosevka-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
 cask "font-space-mono-nerd-font"
 cask "font-symbols-only-nerd-font"
 cask "sf-symbols"
 
 # == Applications ==
-cask "cursor"
 cask "dbeaver-community"
 cask "docker-desktop"
 cask "flux-app"
@@ -36,6 +35,8 @@ brew "gcc"
 brew "gleam"
 brew "lua"
 brew "rust"
+
+# == Package managers ==
 brew "rustup"
 brew "uv"
 brew "poetry"
@@ -46,6 +47,7 @@ brew "duckdb"
 # == Command-line tools ==
 brew "bat"
 brew "bottom"
+brew "copilot"
 brew "curl"
 brew "docker-clean"
 brew "exercism"
@@ -60,6 +62,7 @@ brew "git-lfs"
 brew "gnupg"
 brew "graphviz"
 brew "helix"
+brew "hyperfine"
 brew "jq"
 brew "just"
 brew "k9s"
