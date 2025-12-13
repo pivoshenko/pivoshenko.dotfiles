@@ -20,8 +20,8 @@ dotfiles:
     dst: ~/.jupyter
     src: .jupyter
   d_scripts:
-    dst: ~/scripts
-    src: scripts
+    dst: ~/.scripts
+    src: ../scripts
   d_ssh:
     dst: ~/.ssh
     src: .ssh
