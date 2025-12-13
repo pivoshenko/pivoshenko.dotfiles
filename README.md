@@ -146,7 +146,6 @@ My current theme is [Catppuccin](https://github.com/catppuccin/obsidian), which 
 
 Additionally, I have a few plugins installed:
 
-- [Obsidian Copilot](https://github.com/logancyang/obsidian-copilot)
 - [Obsidian Images in-editor](https://github.com/ozntel/oz-image-in-editor-obsidian)
 - [Obsidian Tag Wrangler](https://github.com/pjeby/tag-wrangler)
 - [Obsidian Outliner](https://github.com/vslinko/obsidian-outliner)
@@ -185,8 +184,8 @@ To stay in touch with different communities, I am using [Discord](https://discor
 
 ```css
 /* frappe, macchiato, mocha */
-@dark https://catppuccin.github.io/discord/dist/catppuccin-mocha-mauve.theme.css
-@light https://catppuccin.github.io/discord/dist/catppuccin-latte-mauve.theme.css
+@dark https://catppuccin.github.io/discord/dist/catppuccin-mocha-blue.theme.css
+@light https://catppuccin.github.io/discord/dist/catppuccin-latte-blue.theme.css
 ```
 
 ### Honourable Mentions
