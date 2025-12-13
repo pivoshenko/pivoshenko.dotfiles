@@ -518,7 +518,6 @@ def main() -> int:
     manager.register(Fastfetch())
     manager.register(Fish())
     manager.register(Fzf())
-    manager.register(Ghostty())
     manager.register(Helix())
     manager.register(K9s())
     manager.register(Lazygit())
