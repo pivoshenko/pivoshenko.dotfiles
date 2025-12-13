@@ -15,9 +15,9 @@ cask "flux-app"
 cask "ghostty"
 cask "insomnia"
 cask "karabiner-elements"
+cask "logi-options+"
 cask "maccy"
 cask "mongodb-compass"
-cask "logi-options+"
 cask "nordpass"
 cask "nordvpn"
 cask "obsidian"
@@ -38,9 +38,9 @@ brew "lua"
 brew "rust"
 
 # == Package managers ==
+brew "poetry"
 brew "rustup"
 brew "uv"
-brew "poetry"
 
 # == Databases ==
 brew "duckdb"

@@ -49,7 +49,7 @@ dotfiles:
     dst: ~/.config/helix
     src: .config/helix
   d_k9s:
-    dst: ~/.config/K9s
+    dst: ~/.config/k9s
     src: .config/k9s
   d_karabiner:
     dst: ~/.config/karabiner
@@ -80,12 +80,6 @@ dotfiles:
     src: .config/starship.toml
 
   # == ~/Library/Application Support ==
-  d_macos_k9s:
-    dst: ~/Library/Application Support/K9s
-    src: .config/k9s
-  d_macos_lazygit:
-    dst: ~/Library/Application Support/lazygit
-    src: .config/lazygit
   d_macos_vscode:
     dst: ~/Library/Application Support/Code/User
     src: vscode
@@ -103,6 +97,8 @@ profiles:
       - d_helix
       - d_ipython
       - d_jupyter
+      - d_k9s
+      - d_lazygit
       - d_karabiner
       - d_rectangle
       - d_ssh
@@ -116,7 +112,4 @@ profiles:
 
   macos:
     dotfiles:
-      # == ~/Library/Application Support ==
-      - d_macos_k9s
-      - d_macos_lazygit
       - d_macos_vscode

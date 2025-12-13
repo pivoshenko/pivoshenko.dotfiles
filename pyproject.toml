@@ -1,1 +1,37 @@
+[project]
+name = "dotfiles"
+version = "1.0.0"
+description = "dotfiles"
+readme = "README.md"
+requires-python = "==3.13.*"
+dependencies = ["httpx>=0.28.1"]
 
+[dependency-groups]
+formatters = ["ruff>=0.14.8"]
+linters = ["ruff>=0.14.8"]
+
+[tool.ruff]
+fix = true
+line-length = 100
+target-version = "py313"
+unsafe-fixes = true
+
+[tool.ruff.lint]
+ignore = ["D", "INP001"]
+select = ["ALL"]
+
+[tool.ruff.lint.isort]
+force-single-line = true
+from-first = false
+length-sort-straight = true
+lines-after-imports = 2
+lines-between-types = 1
+required-imports = ["from __future__ import annotations"]
+
+[tool.ruff.lint.per-file-ignores]
+"dotfiles/.ipython/profile_default/startup/start.py" = ["ALL"]
+"dotfiles/.ipython/profile_default/ipython_config.py" = ["ALL"]
+
+[tool.ruff.format]
+docstring-code-format = true
+quote-style = "double"

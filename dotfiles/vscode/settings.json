@@ -143,7 +143,7 @@
   // == Extensions - SQLFluff ==
   "sqlfluff.config": "pyproject.toml",
   "sqlfluff.env.useDotEnvFile": true,
-  // == Extensions - VS Kubernetes ==
+  // == Extensions - Kubernetes ==
   "vs-kubernetes": {
     "vscode-kubernetes.helm-path-mac": "/Users/volodymyr.pivoshenko/.vs-kubernetes/tools/helm/darwin-arm64/helm"
   },
@@ -237,7 +237,6 @@
   "workbench.editor.pinnedTabSizing": "compact",
   "workbench.editor.showIcons": false,
   "workbench.editor.showTabs": "multiple",
-  "workbench.editor.tabActionCloseVisibility": false,
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
   },
