@@ -207,7 +207,16 @@ class Fish(Tool):
 
     def switch(self, *, is_dark: bool) -> None:
         theme = self.get_theme(is_dark=is_dark)
-        self.execute([f'echo y | fish -c "fish_config theme save \\"{theme}\\""'])
+        current_config = self.filepath.read_text()
+        updated_config = ""
+
+        for line in current_config.splitlines(keepends=True):
+            if line.strip().startswith("fish_config theme choose"):
+                updated_config += f'fish_config theme choose "{theme}"\n'
+            else:
+                updated_config += line
+
+        self.filepath.write_text(updated_config)
 
 
 @dataclasses.dataclass
