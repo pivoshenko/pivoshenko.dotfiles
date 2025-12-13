@@ -19,6 +19,9 @@ dotfiles:
   d_jupyter:
     dst: ~/.jupyter
     src: .jupyter
+  d_scripts:
+    dst: ~/scripts
+    src: scripts
   d_ssh:
     dst: ~/.ssh
     src: .ssh
@@ -101,6 +104,7 @@ profiles:
       - d_lazygit
       - d_karabiner
       - d_rectangle
+      - d_scripts
       - d_ssh
       - d_stylus
       - d_yazi
