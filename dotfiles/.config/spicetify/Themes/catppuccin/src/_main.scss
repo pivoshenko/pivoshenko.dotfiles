@@ -1,0 +1,38 @@
+:root .Root__main-view {
+
+  // Duration in album view
+  .UyzJidwrGk3awngSGIwv {
+    color: var(--spice-subtext);
+  }
+
+  // For that small dot on podcasts that notify us of new episodes
+  .main-home-content>section:first-child>.main-gridContainer-gridContainer>div span[aria-label],
+  span[aria-label="New episode"],
+  span[aria-label="New Podcast Episode"] {
+    background: var(--spice-text);
+  }
+
+  // Enhanced button
+  .Button-sm-buttonSecondary-useBrowserDefaultFocusStyle {
+    background-color: var(--spice-base);
+    color: var(--spice-text);
+    border: 1px solid var(--spice-overlay1);
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      border-color: var(--spice-text);
+      background-color: var(--spice-surface0);
+      transform: translateY(-1px);
+    }
+
+    &:active {
+      transform: translateY(0);
+      background-color: var(--spice-surface1);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--spice-text);
+      outline-offset: 2px;
+    }
+  }
+}
