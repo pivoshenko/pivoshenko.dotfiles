@@ -34,11 +34,9 @@ class Tool(abc.ABC):
         pass
 
     def get_theme(self, *, is_dark: bool) -> str:
-        match is_dark:
-            case True:
-                return self.dark_theme
-            case False:
-                return self.light_theme
+        if is_dark:
+            return self.dark_theme
+        return self.light_theme
 
     def execute(self, commands: str) -> None:
         for command in commands:
@@ -60,11 +58,10 @@ class Bat(Tool):
         updated_config = ""
 
         for line in current_config.splitlines(keepends=True):
-            match line.strip().startswith("--theme="):
-                case True:
-                    updated_config += f'--theme="{theme}"\n'
-                case False:
-                    updated_config += line
+            if line.strip().startswith("--theme="):
+                updated_config += f'--theme="{theme}"\n'
+            else:
+                updated_config += line
 
         self.filepath.write_text(updated_config)
         self.execute(["bat cache --build"])
@@ -91,22 +88,18 @@ class Bottom(Tool):
 
         for line in lines:
             stripped = line.strip()
-            match stripped.startswith("[styles."):
-                case True:
-                    in_styles_section = True
-                    continue
-            match in_styles_section:
-                case True:
-                    match stripped.startswith("[") and not stripped.startswith("[styles."):
-                        case True:
-                            in_styles_section = False
-                            updated_config += line
-                    continue
+            if stripped.startswith("[styles."):
+                in_styles_section = True
+                continue
+            if in_styles_section:
+                if stripped.startswith("[") and not stripped.startswith("[styles."):
+                    in_styles_section = False
+                    updated_config += line
+                continue
             updated_config += line
 
-        match updated_config and not updated_config.endswith("\n\n"):
-            case True:
-                updated_config = updated_config.rstrip() + "\n\n"
+        if updated_config and not updated_config.endswith("\n\n"):
+            updated_config = updated_config.rstrip() + "\n\n"
 
         updated_config += theme_content
 
@@ -158,26 +151,20 @@ class Delta(Tool):
         for line in current_config.splitlines(keepends=True):
             stripped = line.strip()
 
-            match (
-                stripped == "[delta]",
-                in_delta_section and stripped.startswith("["),
-                in_delta_section and stripped.startswith("features ="),
-                in_delta_section and stripped.startswith("light ="),
-            ):
-                case (True, _, _, _):
-                    in_delta_section = True
-                    updated_config += line
-                case (_, True, _, _):
-                    in_delta_section = False
-                    updated_config += line
-                case (_, _, True, _):
-                    indent = len(line) - len(line.lstrip())
-                    updated_config += f'{" " * indent}features = "{theme}"\n'
-                case (_, _, _, True):
-                    indent = len(line) - len(line.lstrip())
-                    updated_config += f"{' ' * indent}light = {str(not is_dark).lower()}\n"
-                case _:
-                    updated_config += line
+            if stripped == "[delta]":
+                in_delta_section = True
+                updated_config += line
+            elif in_delta_section and stripped.startswith("["):
+                in_delta_section = False
+                updated_config += line
+            elif in_delta_section and stripped.startswith("features ="):
+                indent = len(line) - len(line.lstrip())
+                updated_config += f'{" " * indent}features = "{theme}"\n'
+            elif in_delta_section and stripped.startswith("light ="):
+                indent = len(line) - len(line.lstrip())
+                updated_config += f"{' ' * indent}light = {str(not is_dark).lower()}\n"
+            else:
+                updated_config += line
 
         self.filepath.write_text(updated_config)
 
@@ -238,11 +225,10 @@ class Ghostty(Tool):
         updated_config = ""
 
         for line in current_config.splitlines(keepends=True):
-            match line.strip().startswith("theme ="):
-                case True:
-                    updated_config += f"theme = {theme}.conf\n"
-                case False:
-                    updated_config += line
+            if line.strip().startswith("theme ="):
+                updated_config += f"theme = {theme}.conf\n"
+            else:
+                updated_config += line
 
         self.filepath.write_text(updated_config)
 
@@ -262,11 +248,10 @@ class Helix(Tool):
         updated_config = ""
 
         for line in current_config.splitlines(keepends=True):
-            match line.strip().startswith("theme ="):
-                case True:
-                    updated_config += f'theme = "{theme}"\n'
-                case False:
-                    updated_config += line
+            if line.strip().startswith("theme ="):
+                updated_config += f'theme = "{theme}"\n'
+            else:
+                updated_config += line
 
         self.filepath.write_text(updated_config)
 
@@ -287,12 +272,11 @@ class K9s(Tool):
 
         for line in current_config.splitlines(keepends=True):
             stripped = line.strip()
-            match stripped.startswith("skin:"):
-                case True:
-                    indent = len(line) - len(line.lstrip())
-                    updated_config += f"{' ' * indent}skin: {theme}\n"
-                case False:
-                    updated_config += line
+            if stripped.startswith("skin:"):
+                indent = len(line) - len(line.lstrip())
+                updated_config += f"{' ' * indent}skin: {theme}\n"
+            else:
+                updated_config += line
 
         self.filepath.write_text(updated_config)
 
@@ -315,9 +299,8 @@ class Lazygit(Tool):
 
         updated_config = self._remove_gui_sections(current_config)
 
-        match "gui:" not in updated_config:
-            case True:
-                updated_config = self._add_gui_section(updated_config)
+        if "gui:" not in updated_config:
+            updated_config = self._add_gui_section(updated_config)
 
         updated_config = self._add_theme_content(updated_config, theme_content)
 
@@ -332,56 +315,46 @@ class Lazygit(Tool):
         for line in lines:
             stripped = line.strip()
 
-            match stripped == "gui:":
-                case True:
-                    in_gui = True
-                    result += line
+            if stripped == "gui:":
+                in_gui = True
+                result += line
+                continue
+
+            if in_gui:
+                if stripped.startswith(("theme:", "authorColors:")):
+                    skip_lines = True
                     continue
+                is_top_level = line and not line[0].isspace()
+                if is_top_level and not stripped.startswith("#"):
+                    in_gui = False
+                    skip_lines = False
+                if skip_lines and line and not line[0].isspace():
+                    skip_lines = False
 
-            match in_gui:
-                case True:
-                    match stripped.startswith(("theme:", "authorColors:")):
-                        case True:
-                            skip_lines = True
-                            continue
-                    is_top_level = line and not line[0].isspace()
-                    match is_top_level and not stripped.startswith("#"):
-                        case True:
-                            in_gui = False
-                            skip_lines = False
-                    match skip_lines and line and not line[0].isspace():
-                        case True:
-                            skip_lines = False
-
-            match not skip_lines:
-                case True:
-                    result += line
+            if not skip_lines:
+                result += line
 
         return result
 
     def _add_gui_section(self, config: str) -> str:
-        match config and not config.endswith("\n\n"):
-            case True:
-                config = config.rstrip() + "\n\n"
+        if config and not config.endswith("\n\n"):
+            config = config.rstrip() + "\n\n"
         return config + "gui:\n"
 
     def _add_theme_content(self, config: str, theme_content: str) -> str:
         indented_theme = ""
         for line in theme_content.splitlines(keepends=True):
-            match line.strip():
-                case "":
-                    indented_theme += line
-                case _:
-                    indented_theme += f"  {line}"
+            if line.strip() == "":
+                indented_theme += line
+            else:
+                indented_theme += f"  {line}"
 
-        match config.endswith("\n"):
-            case True:
-                config = config.rstrip("\n") + "\n" + indented_theme
-                match not config.endswith("\n"):
-                    case True:
-                        config += "\n"
-            case False:
-                config += "\n" + indented_theme
+        if config.endswith("\n"):
+            config = config.rstrip("\n") + "\n" + indented_theme
+            if not config.endswith("\n"):
+                config += "\n"
+        else:
+            config += "\n" + indented_theme
 
         return config
 
@@ -401,11 +374,10 @@ class Starship(Tool):
         updated_config = ""
 
         for line in current_config.splitlines(keepends=True):
-            match line.strip().startswith("palette ="):
-                case True:
-                    updated_config += f'palette = "{theme}"\n'
-                case False:
-                    updated_config += line
+            if line.strip().startswith("palette ="):
+                updated_config += f'palette = "{theme}"\n'
+            else:
+                updated_config += line
 
         self.filepath.write_text(updated_config)
 
@@ -466,12 +438,11 @@ class Zellij(Tool):
 
         for line in current_config.splitlines(keepends=True):
             stripped = line.strip()
-            match stripped.startswith("theme "):
-                case True:
-                    indent = len(line) - len(line.lstrip())
-                    updated_config += f'{" " * indent}theme "{theme}"\n'
-                case False:
-                    updated_config += line
+            if stripped.startswith("theme "):
+                indent = len(line) - len(line.lstrip())
+                updated_config += f'{" " * indent}theme "{theme}"\n'
+            else:
+                updated_config += line
 
         self.filepath.write_text(updated_config)
 
