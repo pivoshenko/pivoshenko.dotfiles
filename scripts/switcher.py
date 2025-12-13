@@ -211,6 +211,29 @@ class Fish(Tool):
 
 
 @dataclasses.dataclass
+class Fzf(Tool):
+    name: str = "Fzf"
+
+    dark_theme: str = "FZF_CATPPUCCIN_MOCHA"
+    light_theme: str = "FZF_CATPPUCCIN_LATTE"
+
+    filepath: pathlib.Path = pathlib.Path.home() / ".config" / "fish" / "fzf.fish"
+
+    def switch(self, *, is_dark: bool) -> None:
+        theme = self.get_theme(is_dark=is_dark)
+        current_config = self.filepath.read_text()
+        updated_config = ""
+
+        for line in current_config.splitlines(keepends=True):
+            if line.strip().startswith("set -Ux FZF_THEME"):
+                updated_config += f"set -Ux FZF_THEME ${theme}\n"
+            else:
+                updated_config += line
+
+        self.filepath.write_text(updated_config)
+
+
+@dataclasses.dataclass
 class Ghostty(Tool):
     name: str = "Ghostty"
 
@@ -494,6 +517,7 @@ def main() -> int:
     manager.register(Delta())
     manager.register(Fastfetch())
     manager.register(Fish())
+    manager.register(Fzf())
     manager.register(Ghostty())
     manager.register(Helix())
     manager.register(K9s())
