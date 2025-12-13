@@ -17,6 +17,7 @@ import bottom
 import stylus
 import ghostty
 import lazygit
+import spicitify
 
 
 if TYPE_CHECKING:
@@ -61,6 +62,7 @@ def main() -> int:
     manager.register(ghostty.Ghostty())
     manager.register(k9s.K9s())
     manager.register(lazygit.Lazygit())
+    manager.register(spicitify.Spicetify())
     manager.register(stylus.Stylus())
     manager.register(yazi.Yazi())
     manager.register(zen.Zen())
