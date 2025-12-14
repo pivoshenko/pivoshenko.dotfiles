@@ -64,7 +64,6 @@ class Bat(Tool):
                 updated_config += line
 
         self.filepath.write_text(updated_config)
-        self.execute(["bat cache --build"])
 
 
 @dataclasses.dataclass
@@ -217,7 +216,6 @@ class Fish(Tool):
                 updated_config += line
 
         self.filepath.write_text(updated_config)
-        self.execute([f'echo y | fish -c "fish_config theme save \\"{theme}\\""'])
 
 
 @dataclasses.dataclass
@@ -393,26 +391,6 @@ class Lazygit(Tool):
 
 
 @dataclasses.dataclass
-class Spicetify(Tool):
-    name: str = "Spicetify"
-
-    dark_theme: str = "mocha"
-    light_theme: str = "latte"
-
-    filepath: pathlib.Path = pathlib.Path.home() / ".config" / "spicetify"
-
-    def switch(self, *, is_dark: bool) -> None:
-        theme = self.get_theme(is_dark=is_dark)
-        commands = [
-            "spicetify config current_theme catppuccin",
-            f"spicetify config color_scheme {theme}",
-            "spicetify config inject_css 1 inject_theme_js 1 replace_colors 1 overwrite_assets 1",
-            "spicetify apply",
-        ]
-        self.execute(commands)
-
-
-@dataclasses.dataclass
 class Starship(Tool):
     name: str = "Starship"
 
@@ -551,7 +529,6 @@ def main() -> int:
     manager.register(Helix())
     manager.register(K9s())
     manager.register(Lazygit())
-    manager.register(Spicetify())
     manager.register(Starship())
     manager.register(Yazi())
     manager.register(Zellij())
