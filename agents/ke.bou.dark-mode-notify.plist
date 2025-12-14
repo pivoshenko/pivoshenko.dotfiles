@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>ke.bou.dark-mode-notify</string>
+    <key>KeepAlive</key>
+    <true/>
+    <key>StandardOutPath</key>
+    <string>/tmp/dark-mode-notify.stdout</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/dark-mode-notify.stderr</string>
+    <key>ProgramArguments</key>
+    <array>
+       <string>/usr/local/bin/dark-mode-notify</string>
+       <string>/Users/volodymyr.pivoshenko/.scripts/switcher.sh</string>
+    </array>
+</dict>
+</plist>
