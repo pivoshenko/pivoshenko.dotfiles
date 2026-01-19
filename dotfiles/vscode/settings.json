@@ -10,7 +10,7 @@
   // == Debug ==
   "debug.allowBreakpointsEverywhere": true,
   "debug.console.fontFamily": "JetBrainsMono Nerd Font",
-  "debug.console.fontSize": 16,
+  "debug.console.fontSize": 17,
   // == Editor ==
   "editor.acceptSuggestionOnEnter": "on",
   "editor.accessibilitySupport": "off",
@@ -18,7 +18,7 @@
   "editor.codeLensFontFamily": "JetBrainsMono Nerd Font",
   "editor.fontFamily": "JetBrainsMono Nerd Font",
   "editor.fontLigatures": true,
-  "editor.fontSize": 16,
+  "editor.fontSize": 17,
   "editor.formatOnSave": true,
   "editor.gotoLocation.multipleDeclarations": "goto",
   "editor.gotoLocation.multipleDefinitions": "goto",
@@ -36,7 +36,7 @@
   "editor.lineNumbers": "relative",
   "editor.minimap.enabled": false,
   "editor.pasteAs.preferences": [
-    "text.plain",
+    "text.plain"
   ],
   "editor.renderWhitespace": "all",
   "editor.rulers": [
@@ -63,21 +63,21 @@
     "transparent": true,
     "titleBarStyle": "hidden",
     "titleBarOverlay": {
-      "height": 35,
+      "height": 35
     }
   },
   "custom-ui-style.font.monospace": "JetBrainsMono Nerd Font",
   "custom-ui-style.font.sansSerif": "JetBrainsMono Nerd Font",
   "custom-ui-style.stylesheet": {
     ".monaco-workbench .editor-group-container>.title>.label-container>.title-label>.monaco-icon-label-container": {
-      "margin-left": "50px !important",
+      "margin-left": "50px !important"
     },
     ".composite.title.has-composite-bar": {
-      "margin-left": "50px !important",
+      "margin-left": "50px !important"
     },
     ".floating-click-widget": {
       "visibility": "hidden !important",
-      "display": "none !important",
+      "display": "none !important"
     },
   },
   // == Extensions - Even Better TOML ==
@@ -121,9 +121,9 @@
   "notebook.formatOnSave.enabled": true,
   "notebook.lineNumbers": "on",
   "notebook.markup.fontFamily": "JetBrainsMono Nerd Font",
-  "notebook.markup.fontSize": 16,
+  "notebook.markup.fontSize": 17,
   "notebook.output.fontFamily": "JetBrainsMono Nerd Font",
-  "notebook.output.fontSize": 16,
+  "notebook.output.fontSize": 17,
   "notebook.output.textLineLimit": 1000,
   // == Extensions - Python ==
   "python.analysis.autoFormatStrings": true,
@@ -139,7 +139,7 @@
   "python.testing.pytestEnabled": true,
   "python.testing.unittestArgs": [],
   // == Extensions - SCM ==
-  "scm.inputFontSize": 16,
+  "scm.inputFontSize": 17,
   // == Extensions - SQLFluff ==
   "sqlfluff.config": "pyproject.toml",
   "sqlfluff.env.useDotEnvFile": true,
@@ -208,7 +208,7 @@
   "terminal.integrated.defaultProfile.osx": "fish",
   "terminal.integrated.drawBoldTextInBrightColors": false,
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
-  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.fontSize": 17,
   "terminal.integrated.fontWeight": "normal",
   "terminal.integrated.gpuAcceleration": "on",
   "terminal.integrated.inheritEnv": true,

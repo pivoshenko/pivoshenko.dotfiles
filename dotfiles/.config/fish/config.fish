@@ -12,12 +12,6 @@ source $HOME/.config/fish/functions.fish
 source $HOME/.config/fish/vimode.fish
 
 # == Local configurations ==
-if test -f $HOME/.config/fish/.env.fish
-    source $HOME/.config/fish/.env.fish
-end
-if test -f $HOME/.config/fish/.secrets.fish
-    source $HOME/.config/fish/.secrets.fish
-end
 if test -f $HOME/.config/fish/local.fish
     source $HOME/.config/fish/local.fish
 end

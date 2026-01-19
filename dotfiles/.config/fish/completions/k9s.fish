@@ -1,5 +1,3 @@
-# fish completion for k9s                                  -*- shell-script -*-
-
 function __k9s_debug
     set -l file "$BASH_COMP_DEBUG_FILE"
     if test -n "$file"

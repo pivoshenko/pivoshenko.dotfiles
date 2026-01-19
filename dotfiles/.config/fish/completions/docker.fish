@@ -1,5 +1,3 @@
-# fish completion for docker                               -*- shell-script -*-
-
 function __docker_debug
     set -l file "$BASH_COMP_DEBUG_FILE"
     if test -n "$file"
