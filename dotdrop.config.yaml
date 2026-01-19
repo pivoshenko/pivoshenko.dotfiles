@@ -63,15 +63,12 @@ dotfiles:
   d_rectangle:
     dst: ~/.config/rectangle
     src: .config/rectangle
-  d_spicitify:
+  d_spicetify:
     dst: ~/.config/spicetify
     src: .config/spicetify
   d_stylus:
     dst: ~/.config/stylus
     src: .config/stylus
-  d_yazi:
-    dst: ~/.config/yazi
-    src: .config/yazi
   d_zed:
     dst: ~/.config/zed
     src: .config/zed
@@ -109,9 +106,8 @@ profiles:
       - d_rectangle
       - d_scripts
       - d_ssh
-      - d_spicitify
+      - d_spicetify
       - d_stylus
-      - d_yazi
       - d_zed
       - d_zellij
       - d_zen

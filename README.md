@@ -15,6 +15,8 @@
   - [Scripts](#scripts)
     - [Theme Switcher](#theme-switcher)
     - [Updater](#updater)
+  - [Terminal](#terminal)
+    - [Ghostty](#ghostty)
   - [Shell](#shell)
     - [Helix](#helix)
   - [Applications](#applications)
@@ -87,23 +89,31 @@ The switcher uses Catppuccin Latte for light mode and Catppuccin Mocha for dark 
 
 The updater is a Python tool ([`update/`](update/)) that automatically downloads and updates Catppuccin theme files from their official GitHub repositories for various applications. It ensures all theme files are kept up-to-date with the latest versions from upstream.
 
+## Terminal
+
+### Ghostty
+
+I use [Ghostty](https://ghostty-editor.com) as my primary terminal emulator. It's a fast, feature-rich, and GPU-accelerated terminal with native platform support for macOS. My configuration can be found [here](dotfiles/.config/ghostty).
+
 ## Shell
 
 For the shell, I am using [Fish](https://fishshell.com), as out of the box it has all batteries included. To manage shell plugins, I am using [Fisher](https://github.com/jorgebucaran/fisher), but there are only a few installed. My complete configuration can be found [here](dotfiles/.config/fish).
+
+For the prompt, I use [Starship](https://starship.rs) - a minimal, fast, and customizable prompt. My configuration can be found [here](dotfiles/.config/starship.toml).
 
 In terms of command-line tools, I try to keep them minimal—only the ones I use daily, such as:
 
 - [Bat](https://github.com/sharkdp/bat)
 - [Bottom](https://github.com/ClementTsang/bottom)
 - [Delta](https://github.com/dandavison/delta)
-- [Eza](https://github.com/ogham/exa)
+- [Eza](https://github.com/eza-community/eza)
+- [Fastfetch](https://github.com/fastfetch-cli/fastfetch)
 - [Fd](https://github.com/sharkdp/fd)
 - [Fzf](https://github.com/junegunn/fzf)
 - [Ripgrep](https://github.com/BurntSushi/ripgrep)
 - [K9s](https://github.com/derailed/k9s)
 - [LazyGit](https://github.com/jesseduffield/lazygit)
 - [LazyDocker](https://github.com/jesseduffield/lazydocker)
-- [Yazi](https://github.com/sxyazi/yazi)
 - [Zellij](https://github.com/zellij-org/zellij)
 - [Zoxide](https://github.com/ajeetdsouza/zoxide)
 
@@ -132,11 +142,11 @@ I use [Rectangle](https://rectangleapp.com/) as a tiling window manager for macO
 
 #### Editors - VSCode
 
-I absolutely love [VSCode](https://code.visualstudio.com) - it's a simple and yet very extensible and powerful editor.
+I absolutely love [VSCode](https://code.visualstudio.com) - it's a simple and yet very extensible and powerful editor. I also have [Cursor](https://cursor.com) installed as an AI-powered alternative that shares the same configuration.
 
 Here's a list of [extensions](Brewfile) I use daily, but I try to keep my VSCode setup as simple as possible. It was also heavily influenced by [MakeVSCodeAwesome](https://makevscodeawesome.com).
 
-My VSCode configuration can be found [here](dotfiles/vscode/settings.json).
+My VSCode/Cursor configuration can be found [here](dotfiles/vscode/settings.json).
 
 #### Editors - Zed
 
@@ -188,9 +198,7 @@ body {
 
 Spotify is my primary music app, and to customise it I am using [Spicetify](https://github.com/spicetify/cli) and [Spicetify Marketplace](https://github.com/spicetify/marketplace).
 
-My current theme is [Catppuccin](https://github.com/catppuccin/spicetify), which can be installed via Marketplace in the themes tab.
-
-There are no other plugins installed apart from the theme.
+My current theme is [Catppuccin](https://github.com/catppuccin/spicetify), which can be installed via Marketplace in the themes tab. My Spicetify configuration can be found [here](dotfiles/.config/spicetify).
 
 ### Messengers
 

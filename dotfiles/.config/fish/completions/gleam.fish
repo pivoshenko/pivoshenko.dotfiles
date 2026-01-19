@@ -1,5 +1,3 @@
-# Fish Completions for Gleam
-
 set -l commands add build check clean deps dev docs export fix format help hex lsp new publish remove run shell test update
 set -l commands_with_help deps docs export hex
 set -l targets erlang javascript

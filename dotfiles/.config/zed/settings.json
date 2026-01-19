@@ -8,9 +8,9 @@
   },
   // == Fonts ==
   "buffer_font_family": "JetBrainsMono Nerd Font",
-  "buffer_font_size": 16,
+  "buffer_font_size": 17,
   "ui_font_family": "JetBrainsMono Nerd Font",
-  "ui_font_size": 16,
+  "ui_font_size": 17,
   // == Editor ==
   "autosave": {
     "after_delay": {
@@ -107,11 +107,8 @@
     "gleam": true,
     "html": true,
     "ini": true,
-    "jinja2": true,
     "just": true,
-    "kdl": true,
     "log": true,
-    "lua": true,
     "material-icon-theme": true,
     "sql": true,
     "toml": true

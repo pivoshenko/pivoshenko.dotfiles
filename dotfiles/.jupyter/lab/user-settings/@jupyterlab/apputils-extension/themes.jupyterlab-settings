@@ -9,10 +9,10 @@
     // == Fonts ==
     "overrides": {
         "code-font-family": "JetBrainsMono Nerd Font Mono",
-        "code-font-size": "16",
+        "code-font-size": "17",
         "content-font-family": "JetBrainsMono Nerd Font Mono",
-        "content-font-size1": "16",
+        "content-font-size1": "17",
         "ui-font-family": "JetBrainsMono Nerd Font Mono",
-        "ui-font-size1": 14
+        "ui-font-size1": 17
     }
 }
