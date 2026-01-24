@@ -2,7 +2,7 @@
   // == UI ==
   "icon_theme": "Material Icon Theme",
   "theme": {
-    "dark": "Catppuccin Frappe",
+    "dark": "Catppuccin Frappé",
     "light": "Catppuccin Latte",
     "mode": "system"
   },
@@ -19,7 +19,7 @@
   },
   "preview_tabs": {
     "enabled": false,
-    "enable_preview_from_code_navigation": false,
+    "enable_keep_preview_on_code_navigation": false,
     "enable_preview_from_file_finder": false
   },
   "relative_line_numbers": "enabled",
