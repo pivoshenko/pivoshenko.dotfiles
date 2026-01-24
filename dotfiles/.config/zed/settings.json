@@ -2,7 +2,7 @@
   // == UI ==
   "icon_theme": "Material Icon Theme",
   "theme": {
-    "dark": "Catppuccin Frappé",
+    "dark": "Catppuccin Frappé (rosewater)",
     "light": "Catppuccin Latte",
     "mode": "system"
   },
