@@ -37,5 +37,5 @@ k9s:
     logoless: false
     noIcons: false
     reactive: false
-    skin: catppuccin_mocha
+    skin: catppuccin_frappe
     splashless: false

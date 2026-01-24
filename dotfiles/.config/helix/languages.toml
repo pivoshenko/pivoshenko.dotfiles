@@ -1,18 +1,3 @@
-[language-server.pylsp.config.pylsp.plugins]
-autopep8 = { enabled = false }
-black = { enabled = false }
-flake8 = { enabled = false }
-isort = { enabled = false }
-mccabe = { enabled = false }
-memestra = { enabled = false }
-pycodestyle = { enabled = false }
-pyflakes = { enabled = false }
-pylint = { enabled = false }
-rope = { enabled = true }
-rope_autoimport = { enabled = true }
-ruff = { enabled = false }
-yapf = { enabled = false }
-
 [language-server.ruff]
 command = "ruff"
 args = ["server"]
@@ -24,7 +9,7 @@ soft-wrap.enable = true
 [[language]]
 name = "python"
 auto-format = false
-language-servers = ["pylsp", "ruff"]
+language-servers = ["ruff"]
 
 [[language]]
 name = "sql"

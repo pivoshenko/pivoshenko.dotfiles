@@ -56,7 +56,7 @@
   "explorer.confirmDragAndDrop": false,
   "explorer.openEditors.visible": 1,
   // == Extensions - Catppuccin ==
-  "catppuccin.accentColor": "blue",
+  "catppuccin.accentColor": "rosewater",
   // == Extensions - Custom UI Style ==
   "custom-ui-style.electron": {
     "frame": false,
@@ -228,7 +228,7 @@
   "window.titleBarStyle": "custom",
   // == Workbench ==
   "workbench.activityBar.location": "top",
-  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.colorTheme": "Catppuccin Frappé",
   "workbench.editor.decorations.badges": false,
   "workbench.editor.decorations.colors": false,
   "workbench.editor.empty.hint": "hidden",
@@ -242,8 +242,8 @@
   },
   "workbench.iconTheme": "material-icon-theme",
   "workbench.layoutControl.enabled": false,
-  "workbench.preferredDarkColorTheme": "Catppuccin Mocha",
-  "workbench.preferredHighContrastColorTheme": "Catppuccin Mocha",
+  "workbench.preferredDarkColorTheme": "Catppuccin Frappé",
+  "workbench.preferredHighContrastColorTheme": "Catppuccin Frappé",
   "workbench.preferredHighContrastLightColorTheme": "Catppuccin Latte",
   "workbench.preferredLightColorTheme": "Catppuccin Latte",
   "workbench.productIconTheme": "fluent-icons",
