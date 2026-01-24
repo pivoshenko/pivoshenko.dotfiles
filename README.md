@@ -48,7 +48,7 @@ What's in here?
 - Minimalism in all aspects
 - Consistency throughout the configuration
 - Simplicity in design and configuration
-- Unified style [Catppuccin Latte & Mocha theme](https://github.com/catppuccin/catppuccin) and [JetBrains Mono font](https://www.jetbrains.com/lp/mono)
+- Unified style [Catppuccin theme](https://github.com/catppuccin/catppuccin) and [JetBrains Mono font](https://www.jetbrains.com/lp/mono)
 
 ## Usage
 
@@ -83,7 +83,7 @@ The theme switcher automatically changes themes across all configured applicatio
    - Restarts DBeaver and Spotify if running to apply changes
 3. **Launch agent** ([`agents/ke.bou.dark-mode-notify.plist`](agents/ke.bou.dark-mode-notify.plist)) - macOS launch agent that monitors system appearance changes and triggers the bash script automatically using [dark-mode-notify](https://github.com/bouk/dark-mode-notify).
 
-The switcher uses Catppuccin Latte for light mode and Catppuccin Mocha for dark mode, ensuring a consistent look across all applications.
+The switcher uses Catppuccin Latte for light mode and Catppuccin Frappe for dark mode, ensuring a consistent look across all applications.
 
 ### Updater
 
@@ -180,11 +180,11 @@ My current theme is [Catppuccin](https://github.com/catppuccin/obsidian), which 
 
 Additionally, I have a few plugins installed:
 
+- [Obsidian Advanced Tables](https://github.com/tgrosinger/advanced-tables-obsidian)
 - [Obsidian Images in-editor](https://github.com/ozntel/oz-image-in-editor-obsidian)
 - [Obsidian Tag Wrangler](https://github.com/pjeby/tag-wrangler)
 - [Obsidian Outliner](https://github.com/vslinko/obsidian-outliner)
 - [Obsidian Style Settings](https://github.com/mgmeyers/obsidian-style-settings)
-- [Obsidian Advanced Tables](https://github.com/tgrosinger/advanced-tables-obsidian)
 
 I also extended the length of readable mode (the default seems quite narrow) by adding custom CSS:
 
@@ -207,6 +207,7 @@ My current theme is [Catppuccin](https://github.com/catppuccin/spicetify), which
 My main messenger is [Telegram](https://telegram.org) with my own version of Catppuccin themes. Both themes can be installed using Telegram's theme manager:
 
 - [Catppuccin Latte](https://t.me/addtheme/catppuccin_latte_pivoshenko)
+- [Catppuccin Frappe](https://t.me/addtheme/catppuccin_frappe_pivoshenko)
 - [Catppuccin Macchiato](https://t.me/addtheme/catppuccin_macchiato_pivoshenko)
 - [Catppuccin Mocha](https://t.me/addtheme/catppuccin_mocha_pivoshenko)
 
@@ -215,9 +216,8 @@ My main messenger is [Telegram](https://telegram.org) with my own version of Cat
 To stay in touch with different communities, I am using [Discord](https://discord.com), but the official app lacks functionality, so instead I am using [Vesktop](https://github.com/Vencord/Vesktop) with the [Catppuccin theme](https://github.com/catppuccin/discord) installed via "Themes -> Online Themes".
 
 ```css
-/* frappe, macchiato, mocha */
-@dark https://catppuccin.github.io/discord/dist/catppuccin-mocha-blue.theme.css
-@light https://catppuccin.github.io/discord/dist/catppuccin-latte-blue.theme.css
+@dark https://catppuccin.github.io/discord/dist/catppuccin-frappe-rosewater.theme.css
+@light https://catppuccin.github.io/discord/dist/catppuccin-latte-rosewater.theme.css
 ```
 
 ### Honourable Mentions

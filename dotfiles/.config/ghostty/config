@@ -4,7 +4,7 @@ font-family = JetBrainsMono Nerd Font
 font-feature = +calt
 font-feature = +dlig
 font-feature = +liga
-font-size = 17
+font-size = 18
 
 macos-non-native-fullscreen = true
 macos-titlebar-proxy-icon = hidden
@@ -14,4 +14,4 @@ macos-window-buttons = visible
 shell-integration = fish
 shell-integration-features = true
 
-theme = dark:Catppuccin Mocha,light:Catppuccin Latte
+theme = dark:Catppuccin Frappe,light:Catppuccin Latte

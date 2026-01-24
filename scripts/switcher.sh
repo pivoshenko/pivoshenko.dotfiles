@@ -17,10 +17,10 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PYTHON_SCRIPT="$SCRIPT_DIR/switcher.py"
 
 LIGHT_THEME="catppuccin_latte"
-DARK_THEME="catppuccin_mocha"
+DARK_THEME="catppuccin_frappe"
 
 LIGHT_SCHEME="latte"
-DARK_SCHEME="mocha"
+DARK_SCHEME="frappe"
 
 if is_dark_mode; then
   echo "Dark mode detected - switching themes"

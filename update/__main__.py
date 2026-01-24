@@ -11,13 +11,12 @@ import bat
 import k9s
 import zen
 import fish
-import yazi
 import delta
 import bottom
 import stylus
 import ghostty
 import lazygit
-import update.spicetify as spicetify
+import spicetify
 
 
 if TYPE_CHECKING:
@@ -64,7 +63,6 @@ def main() -> int:
     manager.register(lazygit.Lazygit())
     manager.register(spicetify.Spicetify())
     manager.register(stylus.Stylus())
-    manager.register(yazi.Yazi())
     manager.register(zen.Zen())
     manager.update()
 

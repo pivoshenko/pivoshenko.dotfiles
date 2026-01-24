@@ -3,25 +3,25 @@ git:
 
 gui:
   authorColors:
-    "*": "#b4befe"
+    "*": "#babbf1"
 
   theme:
     activeBorderColor:
-      - "#89b4fa"
+      - "#f2d5cf"
       - bold
-    cherryPickedCommitBgColor:
-      - "#45475a"
-    cherryPickedCommitFgColor:
-      - "#89b4fa"
-    defaultFgColor:
-      - "#cdd6f4"
     inactiveBorderColor:
-      - "#a6adc8"
+      - "#a5adce"
     optionsTextColor:
-      - "#89b4fa"
-    searchingActiveBorderColor:
-      - "#f9e2af"
+      - "#8caaee"
     selectedLineBgColor:
-      - "#313244"
+      - "#414559"
+    cherryPickedCommitBgColor:
+      - "#51576d"
+    cherryPickedCommitFgColor:
+      - "#f2d5cf"
     unstagedChangesColor:
-      - "#f38ba8"
+      - "#e78284"
+    defaultFgColor:
+      - "#c6d0f5"
+    searchingActiveBorderColor:
+      - "#e5c890"

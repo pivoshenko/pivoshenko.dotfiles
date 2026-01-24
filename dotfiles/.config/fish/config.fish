@@ -17,4 +17,4 @@ if test -f $HOME/.config/fish/local.fish
 end
 
 # == Theme ==
-fish_config theme choose "catppuccin_mocha"
+fish_config theme choose "catppuccin_frappe"

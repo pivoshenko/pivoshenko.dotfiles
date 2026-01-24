@@ -1,21 +1,25 @@
 // == Catppuccin Latte ==
 // blue: 38;2;30;102;245
 // mauve: 38;2;136;57;239
+// rosewater: 38;2;220;138;120
 // == Catppuccin Frappe ==
 // blue: 38;2;140;170;238
 // mauve: 38;2;202;158;230
+// rosewater: 38;2;242;213;207
 // == Catppuccin Macchiato ==
 // blue: 38;2;138;173;244
 // mauve: 38;2;202;158;230
+// rosewater: 38;2;244;219;214
 // == Catppuccin Mocha ==
 // blue: 38;2;137;180;250
 // mauve: 38;2;203;166;247
+// rosewater: 38;2;245;224;220
 {
   "logo": {
     "type": "file",
     "source": "${HOME}/.config/fastfetch/assets/catppuccin.txt",
     "color": {
-      "3": "38;2;137;180;250"
+      "3": "38;2;242;213;207"
     }
   },
   "display": {
@@ -25,31 +29,31 @@
     {
       "type": "os",
       "key": "",
-      "keyColor": "38;2;137;180;250",
+      "keyColor": "38;2;242;213;207",
       "format": "{name} {version}"
     },
     {
       "type": "cpu",
       "key": "󰘚",
-      "keyColor": "38;2;137;180;250",
+      "keyColor": "38;2;242;213;207",
       "showPeCoreCount": true,
       "temp": true
     },
     {
       "type": "gpu",
       "key": "󰡷",
-      "keyColor": "38;2;137;180;250",
+      "keyColor": "38;2;242;213;207",
       "temp": true
     },
     {
       "type": "memory",
       "key": "󰍛",
-      "keyColor": "38;2;137;180;250"
+      "keyColor": "38;2;242;213;207"
     },
     {
       "type": "disk",
       "key": "󰋊",
-      "keyColor": "38;2;137;180;250",
+      "keyColor": "38;2;242;213;207",
       "folders": "/"
     },
     {
@@ -58,7 +62,7 @@
     {
       "type": "media",
       "key": "",
-      "keyColor": "38;2;137;180;250"
+      "keyColor": "38;2;242;213;207"
     }
   ]
 }

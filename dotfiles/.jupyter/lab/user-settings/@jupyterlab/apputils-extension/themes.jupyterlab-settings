@@ -1,8 +1,8 @@
 {
     // == UI ==
-    "theme": "Catppuccin Mocha",
+    "theme": "Catppuccin Frappe",
     "preferred-light-theme": "Catppuccin Latte",
-    "preferred-dark-theme": "Catppuccin Mocha",
+    "preferred-dark-theme": "Catppuccin Frappe",
     "theme-scrollbars": true,
     "adaptive-theme": true,
 
