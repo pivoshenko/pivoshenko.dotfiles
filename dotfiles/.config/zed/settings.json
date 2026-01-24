@@ -96,19 +96,16 @@
   // == Extensions ==
   "auto_install_extensions": {
     "catppuccin": true,
-    "color-highlight": true,
     "docker-compose": true,
     "dockerfile": true,
     "editorconfig": true,
-    "elixir": true,
     "env": true,
     "fish": true,
     "git-firefly": true,
-    "gleam": true,
     "html": true,
     "ini": true,
+    "jinja2": true,
     "just": true,
-    "log": true,
     "material-icon-theme": true,
     "sql": true,
     "toml": true
