@@ -18,5 +18,98 @@
     "key": "ctrl+shift+g",
     "command": "-workbench.view.scm",
     "when": "workbench.scm.active"
+  },
+  // Unbinds for yzhang.markdown-all-in-one
+  {
+    "command": "-markdown.extension.editing.toggleBold",
+    "when": "editorTextFocus && editorLangId == 'markdown'"
+  },
+  {
+    "command": "-markdown.extension.editing.toggleItalic",
+    "when": "editorTextFocus && editorLangId == 'markdown'"
+  },
+  {
+    "command": "-markdown.extension.editing.toggleCodeBlock",
+    "when": "editorTextFocus && editorLangId == 'markdown'"
+  },
+  {
+    "command": "-markdown.extension.editing.toggleBlockquote",
+    "when": "editorTextFocus && editorLangId == 'markdown'"
+  },
+  {
+    "command": "-markdown.extension.editing.toggleUnorderedList",
+    "when": "editorTextFocus && editorLangId == 'markdown'"
+  },
+  {
+    "command": "-markdown.extension.editing.toggleOrderedList",
+    "when": "editorTextFocus && editorLangId == 'markdown'"
+  },
+  {
+    "command": "-markdown.extension.editing.toggleTaskList",
+    "when": "editorTextFocus && editorLangId == 'markdown'"
+  },
+  {
+    "command": "-markdown.extension.editing.toggleHeading",
+    "when": "editorTextFocus && editorLangId == 'markdown'"
+  },
+  {
+    "command": "-markdown.extension.onEnter",
+    "when": "editorTextFocus && editorLangId == 'markdown'"
+  },
+  {
+    "command": "-markdown.extension.openPreview",
+    "when": "editorTextFocus && editorLangId == 'markdown'"
+  },
+  {
+    "command": "-markdown.extension.openPreviewToTheSide",
+    "when": "editorTextFocus && editorLangId == 'markdown'"
+  },
+  {
+    "command": "-markdown.extension.togglePreview",
+    "when": "editorTextFocus && editorLangId == 'markdown'"
+  },
+  {
+    "command": "-markdown.extension.printToHtml",
+    "when": "editorTextFocus && editorLangId == 'markdown'"
+  },
+  {
+    "command": "-markdown.extension.toc.create",
+    "when": "editorTextFocus && editorLangId == 'markdown'"
+  },
+  {
+    "command": "-markdown.extension.toc.update",
+    "when": "editorTextFocus && editorLangId == 'markdown'"
+  },
+  {
+    "command": "-markdown.extension.toc.remove",
+    "when": "editorTextFocus && editorLangId == 'markdown'"
+  },
+  {
+    "command": "-markdown.extension.copyCodeBlock",
+    "when": "editorTextFocus && editorLangId == 'markdown'"
+  },
+  {
+    "command": "-markdown.extension.tableFormatter.format",
+    "when": "editorTextFocus && editorLangId == 'markdown'"
+  },
+  {
+    "command": "-markdown.extension.tableFormatter.align",
+    "when": "editorTextFocus && editorLangId == 'markdown'"
+  },
+  {
+    "command": "-markdown.extension.toggleScrollSync",
+    "when": "editorTextFocus && editorLangId == 'markdown'"
+  },
+  {
+    "command": "-markdown.extension.syncPreview",
+    "when": "editorTextFocus && editorLangId == 'markdown'"
+  },
+  {
+    "command": "-markdown.extension.moveUp",
+    "when": "editorTextFocus && editorLangId == 'markdown'"
+  },
+  {
+    "command": "-markdown.extension.moveDown",
+    "when": "editorTextFocus && editorLangId == 'markdown'"
   }
 ]

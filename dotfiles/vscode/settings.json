@@ -4,9 +4,10 @@
   "chat.fontFamily": "JetBrainsMono Nerd Font",
   "chat.fontSize": 14,
   "chat.instructionsFilesLocations": {
-    ".github/instructions": true,
-    "/Users/volodymyr.pivoshenko/.aitk/instructions/": true
+    ".github/instructions": true
   },
+  "chat.mcp.gallery.enabled": true,
+  "chat.viewSessions.orientation": "stacked",
   // == Debug ==
   "debug.allowBreakpointsEverywhere": true,
   "debug.console.fontFamily": "JetBrainsMono Nerd Font",
@@ -57,29 +58,8 @@
   "explorer.openEditors.visible": 1,
   // == Extensions - Catppuccin ==
   "catppuccin.accentColor": "rosewater",
-  // == Extensions - Custom UI Style ==
-  "custom-ui-style.electron": {
-    "frame": false,
-    "transparent": true,
-    "titleBarStyle": "hidden",
-    "titleBarOverlay": {
-      "height": 35
-    }
-  },
   "custom-ui-style.font.monospace": "JetBrainsMono Nerd Font",
   "custom-ui-style.font.sansSerif": "JetBrainsMono Nerd Font",
-  "custom-ui-style.stylesheet": {
-    ".monaco-workbench .editor-group-container>.title>.label-container>.title-label>.monaco-icon-label-container": {
-      "margin-left": "50px !important"
-    },
-    ".composite.title.has-composite-bar": {
-      "margin-left": "50px !important"
-    },
-    ".floating-click-widget": {
-      "visibility": "hidden !important",
-      "display": "none !important"
-    },
-  },
   // == Extensions - Even Better TOML ==
   "evenBetterToml.formatter.allowedBlankLines": 1,
   "evenBetterToml.formatter.arrayAutoCollapse": true,
@@ -96,7 +76,7 @@
   // == Extensions - GitHub ==
   "github.copilot.chat.commitMessageGeneration.instructions": [
     {
-      "text": "Use angular conventional commit message format. Keep the first line under 50 characters."
+      "text": "Write commits using Angular Conventional Commits format and keep the first line under 50 characters, in imperative lowercase, with type: summary and no trailing period"
     }
   ],
   "github.copilot.editor.enableCodeActions": true,
@@ -108,15 +88,13 @@
   "github.copilot.nextEditSuggestions.enabled": true,
   "github.gitAuthentication": false,
   "github.gitProtocol": "ssh",
-  // == Extensions- Jupyter ==
+  // == Extensions - Jupyter ==
   "jupyter.askForKernelRestart": false,
   // == Extensions - Material Icons ==
   "material-icon-theme.activeIconPack": "angular_ngrx",
   "material-icon-theme.folders.theme": "specific",
   "material-icon-theme.hidesExplorerArrows": false,
   "material-icon-theme.saturation": 1,
-  // == Extensions - MyPy ==
-  "mypy.configFile": "pyproject.toml",
   // == Extensions - Notebook ==
   "notebook.formatOnSave.enabled": true,
   "notebook.lineNumbers": "on",
@@ -140,16 +118,11 @@
   "python.testing.unittestArgs": [],
   // == Extensions - SCM ==
   "scm.inputFontSize": 17,
-  // == Extensions - SQLFluff ==
-  "sqlfluff.config": "pyproject.toml",
-  "sqlfluff.env.useDotEnvFile": true,
-  // == Extensions - Kubernetes ==
-  "vs-kubernetes": {
-    "vscode-kubernetes.helm-path-mac": "/Users/volodymyr.pivoshenko/.vs-kubernetes/tools/helm/darwin-arm64/helm"
-  },
   // == Files ==
   "files.associations": {
-    "*.pyi": "python"
+    "*.pyi": "python",
+    "*.toml.template": "toml",
+    "*.json.template": "json"
   },
   "files.autoSave": "afterDelay",
   "files.exclude": {
@@ -175,18 +148,11 @@
     "**/node_modules": true,
     "**/Thumbs.db": true
   },
-  // == Formatters ==
-  "[jinja-sql]": {
-    "editor.defaultFormatter": "dorzey.vscode-sqlfluff"
-  },
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff"
-  },
-  "[sql]": {
-    "editor.defaultFormatter": "dorzey.vscode-sqlfluff"
   },
   "[toml]": {
     "editor.defaultFormatter": "tamasfe.even-better-toml"
@@ -223,10 +189,8 @@
   },
   // == Window ==
   "window.autoDetectColorScheme": true,
-  "window.commandCenter": false,
   "window.newWindowDimensions": "maximized",
   "window.titleBarStyle": "custom",
-  // == Workbench ==
   "workbench.activityBar.location": "top",
   "workbench.colorTheme": "Catppuccin Frappé",
   "workbench.editor.decorations.badges": false,
@@ -241,7 +205,6 @@
     "*.ipynb": "jupyter-notebook"
   },
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.layoutControl.enabled": false,
   "workbench.preferredDarkColorTheme": "Catppuccin Frappé",
   "workbench.preferredHighContrastColorTheme": "Catppuccin Frappé",
   "workbench.preferredHighContrastLightColorTheme": "Catppuccin Latte",
@@ -250,7 +213,6 @@
   "workbench.settings.editor": "json",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
-  "workbench.statusBar.visible": false,
   "workbench.tips.enabled": false,
   // == Zen Mode ==
   "zenMode.hideLineNumbers": false
