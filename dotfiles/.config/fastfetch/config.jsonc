@@ -19,7 +19,7 @@
     "type": "file",
     "source": "${HOME}/.config/fastfetch/assets/catppuccin.txt",
     "color": {
-      "3": "38;2;242;213;207"
+      "3": "38;2;244;219;214"
     }
   },
   "display": {
@@ -29,31 +29,31 @@
     {
       "type": "os",
       "key": "",
-      "keyColor": "38;2;242;213;207",
+      "keyColor": "38;2;244;219;214",
       "format": "{name} {version}"
     },
     {
       "type": "cpu",
       "key": "󰘚",
-      "keyColor": "38;2;242;213;207",
+      "keyColor": "38;2;244;219;214",
       "showPeCoreCount": true,
       "temp": true
     },
     {
       "type": "gpu",
       "key": "󰡷",
-      "keyColor": "38;2;242;213;207",
+      "keyColor": "38;2;244;219;214",
       "temp": true
     },
     {
       "type": "memory",
       "key": "󰍛",
-      "keyColor": "38;2;242;213;207"
+      "keyColor": "38;2;244;219;214"
     },
     {
       "type": "disk",
       "key": "󰋊",
-      "keyColor": "38;2;242;213;207",
+      "keyColor": "38;2;244;219;214",
       "folders": "/"
     },
     {
@@ -62,7 +62,7 @@
     {
       "type": "media",
       "key": "",
-      "keyColor": "38;2;242;213;207"
+      "keyColor": "38;2;244;219;214"
     }
   ]
 }

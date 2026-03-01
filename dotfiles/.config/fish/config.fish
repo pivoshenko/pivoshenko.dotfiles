@@ -15,6 +15,9 @@ source $HOME/.config/fish/vimode.fish
 if test -f $HOME/.config/fish/local.fish
     source $HOME/.config/fish/local.fish
 end
+if test -f $HOME/.config/fish/.secrets.fish
+    source $HOME/.config/fish/.secrets.fish
+end
 
 # == Theme ==
-fish_config theme choose "catppuccin_frappe"
+fish_config theme choose "catppuccin_macchiato"
