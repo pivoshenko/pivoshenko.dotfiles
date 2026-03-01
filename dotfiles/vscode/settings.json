@@ -148,14 +148,29 @@
     "**/node_modules": true,
     "**/Thumbs.db": true
   },
+  "[dockercompose]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff"
   },
+  "[skill]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
   "[toml]": {
     "editor.defaultFormatter": "tamasfe.even-better-toml"
+  },
+  // == JSON ==
+  "json.schemaDownload.trustedDomains": {
+    "https://schemastore.azurewebsites.net/": true,
+    "https://raw.githubusercontent.com/": true,
+    "https://www.schemastore.org/": true,
+    "https://json.schemastore.org/": true,
+    "https://json-schema.org/": true,
+    "https://biomejs.dev": true
   },
   // == Problems ==
   "problems.decorations.enabled": false,
@@ -191,8 +206,8 @@
   "window.autoDetectColorScheme": true,
   "window.newWindowDimensions": "maximized",
   "window.titleBarStyle": "custom",
-  "workbench.activityBar.location": "top",
-  "workbench.colorTheme": "Catppuccin Frappé",
+  // == Workbench ==
+  "workbench.colorTheme": "Catppuccin Macchiato",
   "workbench.editor.decorations.badges": false,
   "workbench.editor.decorations.colors": false,
   "workbench.editor.empty.hint": "hidden",
@@ -205,11 +220,12 @@
     "*.ipynb": "jupyter-notebook"
   },
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.preferredDarkColorTheme": "Catppuccin Frappé",
-  "workbench.preferredHighContrastColorTheme": "Catppuccin Frappé",
+  "workbench.preferredDarkColorTheme": "Catppuccin Macchiato",
+  "workbench.preferredHighContrastColorTheme": "Catppuccin Macchiato",
   "workbench.preferredHighContrastLightColorTheme": "Catppuccin Latte",
   "workbench.preferredLightColorTheme": "Catppuccin Latte",
   "workbench.productIconTheme": "fluent-icons",
+  "workbench.secondarySideBar.defaultVisibility": "visible",
   "workbench.settings.editor": "json",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",

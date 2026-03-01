@@ -1,13 +1,5 @@
 # pivoshenko's dotfiles
 
-![](https://raw.githubusercontent.com/pivoshenko/dotfiles/main/assets/preview.png)
-
-<p align="center">
-  <a href="https://stand-with-ukraine.pp.ua/">
-    <img alt="standwithukraine" src="https://img.shields.io/badge/Support-Ukraine-FFC93C?style=flat-square&labelColor=07689F">
-  </a>
-</p>
-
 - [pivoshenko's dotfiles](#pivoshenkos-dotfiles)
   - [Overview](#overview)
   - [Main principles](#main-principles)
@@ -83,7 +75,7 @@ The theme switcher automatically changes themes across all configured applicatio
    - Restarts DBeaver and Spotify if running to apply changes
 3. **Launch agent** ([`agents/ke.bou.dark-mode-notify.plist`](agents/ke.bou.dark-mode-notify.plist)) - macOS launch agent that monitors system appearance changes and triggers the bash script automatically using [dark-mode-notify](https://github.com/bouk/dark-mode-notify).
 
-The switcher uses Catppuccin Latte for light mode and Catppuccin Frappe for dark mode, ensuring a consistent look across all applications.
+The switcher uses Catppuccin Latte for light mode and Catppuccin Macchiato for dark mode, ensuring a consistent look across all applications.
 
 ### Updater
 
@@ -216,7 +208,7 @@ My main messenger is [Telegram](https://telegram.org) with my own version of Cat
 To stay in touch with different communities, I am using [Discord](https://discord.com), but the official app lacks functionality, so instead I am using [Vesktop](https://github.com/Vencord/Vesktop) with the [Catppuccin theme](https://github.com/catppuccin/discord) installed via "Themes -> Online Themes".
 
 ```css
-@dark https://catppuccin.github.io/discord/dist/catppuccin-frappe-rosewater.theme.css
+@dark https://catppuccin.github.io/discord/dist/catppuccin-macchiato-rosewater.theme.css
 @light https://catppuccin.github.io/discord/dist/catppuccin-latte-rosewater.theme.css
 ```
 
@@ -227,3 +219,5 @@ To stay in touch with different communities, I am using [Discord](https://discor
 [NordPass](https://nordpass.com) and [NordVPN](https://nordvpn.com) - simply the best password manager and VPN client.
 
 [DBeaver](https://dbeaver.io) - simple but powerful database manager.
+
+[Tailscale](https://tailscale.com) - great solution for secure access to private networks and devices.

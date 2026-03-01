@@ -14,4 +14,4 @@ macos-window-buttons = visible
 shell-integration = fish
 shell-integration-features = true
 
-theme = dark:Catppuccin Frappe,light:Catppuccin Latte
+theme = dark:Catppuccin Macchiato,light:Catppuccin Latte
