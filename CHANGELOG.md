@@ -1,3 +1,0 @@
-# CHANGELOG
-
-<!-- version list -->

@@ -1,6 +1,6 @@
-# pivoshenko's dotfiles
+# pivoshenko.dotfiles
 
-- [pivoshenko's dotfiles](#pivoshenkos-dotfiles)
+- [pivoshenko.dotfiles](#pivoshenkodotfiles)
   - [Overview](#overview)
   - [Main principles](#main-principles)
   - [Usage](#usage)
