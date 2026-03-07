@@ -56,8 +56,7 @@
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.openEditors.visible": 1,
-  // == Extensions - Catppuccin ==
-  "catppuccin.accentColor": "rosewater",
+  // == Extensions - Custom UI ==
   "custom-ui-style.font.monospace": "JetBrainsMono Nerd Font",
   "custom-ui-style.font.sansSerif": "JetBrainsMono Nerd Font",
   // == Extensions - Even Better TOML ==
@@ -207,7 +206,7 @@
   "window.newWindowDimensions": "maximized",
   "window.titleBarStyle": "custom",
   // == Workbench ==
-  "workbench.colorTheme": "Catppuccin Macchiato",
+  "workbench.colorTheme": "Morok Dark",
   "workbench.editor.decorations.badges": false,
   "workbench.editor.decorations.colors": false,
   "workbench.editor.empty.hint": "hidden",
@@ -220,10 +219,10 @@
     "*.ipynb": "jupyter-notebook"
   },
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.preferredDarkColorTheme": "Catppuccin Macchiato",
-  "workbench.preferredHighContrastColorTheme": "Catppuccin Macchiato",
-  "workbench.preferredHighContrastLightColorTheme": "Catppuccin Latte",
-  "workbench.preferredLightColorTheme": "Catppuccin Latte",
+  "workbench.preferredDarkColorTheme": "Morok Dark",
+  "workbench.preferredHighContrastColorTheme": "Morok Dark",
+  "workbench.preferredHighContrastLightColorTheme": "Morok Light",
+  "workbench.preferredLightColorTheme": "Morok Light",
   "workbench.productIconTheme": "fluent-icons",
   "workbench.secondarySideBar.defaultVisibility": "visible",
   "workbench.settings.editor": "json",

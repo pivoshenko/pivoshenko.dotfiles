@@ -2,26 +2,26 @@ git:
   overrideGpg: true
 
 gui:
-  authorColors:
-    "*": "#babbf1"
-
   theme:
     activeBorderColor:
-      - "#f4dbd6"
+      - "#7f98bf"
       - bold
     inactiveBorderColor:
-      - "#a5adcb"
+      - "#a8a29e"
     optionsTextColor:
-      - "#8aadf4"
+      - "#7f98bf"
     selectedLineBgColor:
-      - "#363a4f"
+      - "#1c1917"
     cherryPickedCommitBgColor:
-      - "#494d64"
+      - "#292524"
     cherryPickedCommitFgColor:
-      - "#f4dbd6"
+      - "#7f98bf"
     unstagedChangesColor:
-      - "#ed8796"
+      - "#c98787"
     defaultFgColor:
-      - "#cad3f5"
+      - "#e7e5e4"
     searchingActiveBorderColor:
-      - "#eed49f"
+      - "#c7b07a"
+
+  authorColors:
+    "*": "#9faece"

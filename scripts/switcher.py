@@ -47,8 +47,8 @@ class Tool(abc.ABC):
 class Bat(Tool):
     name: str = "Bat"
 
-    dark_theme: str = "catppuccin_mocha"
-    light_theme: str = "catppuccin_latte"
+    dark_theme: str = "morok_dark"
+    light_theme: str = "morok_light"
 
     filepath: pathlib.Path = pathlib.Path.home() / ".config" / "bat" / "config"
 
@@ -70,8 +70,8 @@ class Bat(Tool):
 class Bottom(Tool):
     name: str = "Bottom"
 
-    dark_theme: str = "catppuccin_mocha"
-    light_theme: str = "catppuccin_latte"
+    dark_theme: str = "morok_dark"
+    light_theme: str = "morok_light"
 
     filepath: pathlib.Path = pathlib.Path.home() / ".config" / "bottom" / "bottom.toml"
 
@@ -136,8 +136,8 @@ class DBeaver(Tool):
 class Delta(Tool):
     name: str = "Delta"
 
-    dark_theme: str = "catppuccin_mocha"
-    light_theme: str = "catppuccin_latte"
+    dark_theme: str = "morok_dark"
+    light_theme: str = "morok_light"
 
     filepath: pathlib.Path = pathlib.Path.home() / ".gitconfig"
 
@@ -199,8 +199,8 @@ class Fastfetch(Tool):
 class Fish(Tool):
     name: str = "Fish"
 
-    dark_theme: str = "catppuccin_mocha"
-    light_theme: str = "catppuccin_latte"
+    dark_theme: str = "morok_dark"
+    light_theme: str = "morok_light"
 
     filepath: pathlib.Path = pathlib.Path.home() / ".config" / "fish" / "config.fish"
 
@@ -222,8 +222,8 @@ class Fish(Tool):
 class Fzf(Tool):
     name: str = "Fzf"
 
-    dark_theme: str = "FZF_CATPPUCCIN_MOCHA"
-    light_theme: str = "FZF_CATPPUCCIN_LATTE"
+    dark_theme: str = "FZF_morok_dark"
+    light_theme: str = "FZF_morok_light"
 
     filepath: pathlib.Path = pathlib.Path.home() / ".config" / "fish" / "fzf.fish"
 
@@ -245,8 +245,8 @@ class Fzf(Tool):
 class Ghostty(Tool):
     name: str = "Ghostty"
 
-    dark_theme: str = "catppuccin_mocha"
-    light_theme: str = "catppuccin_latte"
+    dark_theme: str = "morok_dark"
+    light_theme: str = "morok_light"
 
     filepath: pathlib.Path = pathlib.Path.home() / ".config" / "ghostty" / "config"
 
@@ -268,8 +268,8 @@ class Ghostty(Tool):
 class Helix(Tool):
     name: str = "Helix"
 
-    dark_theme: str = "catppuccin_mocha"
-    light_theme: str = "catppuccin_latte"
+    dark_theme: str = "morok_dark"
+    light_theme: str = "morok_light"
 
     filepath: pathlib.Path = pathlib.Path.home() / ".config" / "helix" / "config.toml"
 
@@ -291,8 +291,8 @@ class Helix(Tool):
 class K9s(Tool):
     name: str = "K9s"
 
-    dark_theme: str = "catppuccin_mocha"
-    light_theme: str = "catppuccin_latte"
+    dark_theme: str = "morok_dark"
+    light_theme: str = "morok_light"
 
     filepath: pathlib.Path = pathlib.Path.home() / ".config" / "k9s" / "config.yaml"
 
@@ -316,8 +316,8 @@ class K9s(Tool):
 class Lazygit(Tool):
     name: str = "Lazygit"
 
-    dark_theme: str = "catppuccin_mocha_blue"
-    light_theme: str = "catppuccin_latte_blue"
+    dark_theme: str = "morok_dark_blue"
+    light_theme: str = "morok_light_blue"
 
     filepath: pathlib.Path = pathlib.Path.home() / ".config" / "lazygit" / "config.yml"
 
@@ -394,8 +394,8 @@ class Lazygit(Tool):
 class Starship(Tool):
     name: str = "Starship"
 
-    dark_theme: str = "catppuccin_mocha"
-    light_theme: str = "catppuccin_latte"
+    dark_theme: str = "morok_dark"
+    light_theme: str = "morok_light"
 
     filepath: pathlib.Path = pathlib.Path.home() / ".config" / "starship.toml"
 
@@ -417,8 +417,8 @@ class Starship(Tool):
 class Yazi(Tool):
     name: str = "Yazi"
 
-    dark_theme: str = "catppuccin_mocha_blue"
-    light_theme: str = "catppuccin_latte_blue"
+    dark_theme: str = "morok_dark_blue"
+    light_theme: str = "morok_light_blue"
 
     filepath: pathlib.Path = pathlib.Path.home() / ".config" / "yazi" / "theme.toml"
 

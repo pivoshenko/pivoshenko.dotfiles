@@ -10,7 +10,7 @@ pager = delta
 helper = store
 
 [delta]
-features = "catppuccin_macchiato"
+features = "morok"
 hyperlinks = true
 hyperlinks-file-link-format = "file-line://{path}:{line}"
 light = false
@@ -22,7 +22,7 @@ side-by-side = true
 colorMoved = default
 
 [include]
-path = ~/.config/delta/catppuccin.gitconfig
+path = ~/.config/delta/theme.gitconfig
 path = ~/.gitconfig.local
 
 [init]
