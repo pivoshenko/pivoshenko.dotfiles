@@ -16,9 +16,6 @@ dotfiles:
   d_ipython:
     dst: ~/.ipython
     src: .ipython
-  d_jupyter:
-    dst: ~/.jupyter
-    src: .jupyter
   d_scripts:
     dst: ~/.scripts
     src: ../scripts
@@ -99,7 +96,6 @@ profiles:
       - d_gnupg
       - d_helix
       - d_ipython
-      - d_jupyter
       - d_k9s
       - d_lazygit
       - d_karabiner
