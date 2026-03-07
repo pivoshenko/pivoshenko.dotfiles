@@ -16,8 +16,8 @@ is_spotify_running() {
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PYTHON_SCRIPT="$SCRIPT_DIR/switcher.py"
 
-LIGHT_THEME="catppuccin_latte"
-DARK_THEME="catppuccin_frappe"
+LIGHT_THEME="morok_light"
+DARK_THEME="morok_dark"
 
 LIGHT_SCHEME="latte"
 DARK_SCHEME="frappe"
