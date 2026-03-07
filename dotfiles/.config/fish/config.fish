@@ -20,4 +20,4 @@ if test -f $HOME/.config/fish/.secrets.fish
 end
 
 # == Theme ==
-fish_config theme choose "catppuccin_macchiato"
+fish_config theme choose "morok"

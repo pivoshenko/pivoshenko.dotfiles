@@ -3,5 +3,5 @@ session_serialization false
 mouse_mode true
 
 // == Theme ==
-theme "catppuccin-macchiato"
+theme "morok"
 simplified_ui true

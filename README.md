@@ -46,7 +46,7 @@ What's in here?
 - Minimalism in all aspects
 - Consistency throughout the configuration
 - Simplicity in design and configuration
-- Unified style [Catppuccin theme](https://github.com/catppuccin/catppuccin) and [JetBrains Mono font](https://www.jetbrains.com/lp/mono)
+- Unified style [Morok theme](https://github.com/pivoshenko/pivoshenko.theme) and [JetBrains Mono font](https://www.jetbrains.com/lp/mono)
 
 ## Usage
 
@@ -81,11 +81,11 @@ The theme switcher automatically changes themes across all configured applicatio
    - Restarts DBeaver and Spotify if running to apply changes
 3. **Launch agent** ([`agents/ke.bou.dark-mode-notify.plist`](agents/ke.bou.dark-mode-notify.plist)) - macOS launch agent that monitors system appearance changes and triggers the bash script automatically using [dark-mode-notify](https://github.com/bouk/dark-mode-notify).
 
-The switcher uses Catppuccin Latte for light mode and Catppuccin Macchiato for dark mode, ensuring a consistent look across all applications.
+The switcher uses Morok Light for light mode and Morok Dark for dark mode, ensuring a consistent look across all applications.
 
 ### Updater
 
-The updater is a Python tool ([`update/`](update/)) that automatically downloads and updates Catppuccin theme files from their official GitHub repositories for various applications. It ensures all theme files are kept up-to-date with the latest versions from upstream.
+The updater is a Python tool ([`update/`](update/)) that automatically downloads and updates Morok theme files from their official GitHub repositories for various applications. It ensures all theme files are kept up-to-date with the latest versions from upstream.
 
 ## Terminal
 
@@ -168,13 +168,13 @@ As a browser, I am using [Zen](https://zen-browser.app), with the following exte
 
 My `userChrome.css` and `userContent.css` can be found [here](dotfiles/.config/zen) and are required to be placed in the [`chrome/` subfolder](https://www.userchrome.org) in your Zen profile.
 
-To customise different websites, I am using [Catppuccin User Styles](https://github.com/catppuccin/userstyles) and my personal [configuration](dotfiles/.config/stylus), which should be imported in the extension's preferences.
+To customise different websites, I am using [Morok Userstyles](https://github.com/pivoshenko/pivoshenko.theme) and my personal [configuration](dotfiles/.config/stylus), which should be imported in the extension's preferences.
 
 ### Notes - Obsidian
 
 For note-taking, I am using [Obsidian](https://obsidian.md), a very flexible and extensible tool. As sync storage for the Vault (notes, settings, etc.), I am using iCloud.
 
-My current theme is [Catppuccin](https://github.com/catppuccin/obsidian), which can be installed via the built-in plugin manager.
+My current theme is [Morok](https://github.com/pivoshenko/pivoshenko.theme), which can be installed via the built-in plugin manager.
 
 Additionally, I have a few plugins installed:
 
@@ -204,18 +204,17 @@ My current theme is [Catppuccin](https://github.com/catppuccin/spicetify), which
 
 My main messenger is [Telegram](https://telegram.org) with my own version of Catppuccin themes. Both themes can be installed using Telegram's theme manager:
 
-- [Catppuccin Latte](https://t.me/addtheme/catppuccin_latte_pivoshenko)
-- [Catppuccin Frappe](https://t.me/addtheme/catppuccin_frappe_pivoshenko)
-- [Catppuccin Macchiato](https://t.me/addtheme/catppuccin_macchiato_pivoshenko)
-- [Catppuccin Mocha](https://t.me/addtheme/catppuccin_mocha_pivoshenko)
+- [Morok Light](https://t.me/addtheme/pivoshenko_theme_morok_light)
+- [Morok Dark](https://t.me/addtheme/pivoshenko_theme_morok_dark)
+
 
 #### Messengers - Discord
 
-To stay in touch with different communities, I am using [Discord](https://discord.com), but the official app lacks functionality, so instead I am using [Vesktop](https://github.com/Vencord/Vesktop) with the [Catppuccin theme](https://github.com/catppuccin/discord) installed via "Themes -> Online Themes".
+To stay in touch with different communities, I am using [Discord](https://discord.com), but the official app lacks functionality, so instead I am using [Vesktop](https://github.com/Vencord/Vesktop) with the [Morok theme](https://github.com/pivoshenko/pivoshenko.theme) installed via "Themes -> Online Themes".
 
 ```css
-@dark https://catppuccin.github.io/discord/dist/catppuccin-macchiato-rosewater.theme.css
-@light https://catppuccin.github.io/discord/dist/catppuccin-latte-rosewater.theme.css
+@dark https://pivoshenko.github.io/discord/dist/morok-dark.theme.css
+@light https://pivoshenko.github.io/discord/dist/morok-light.theme.css
 ```
 
 ### Honourable Mentions
