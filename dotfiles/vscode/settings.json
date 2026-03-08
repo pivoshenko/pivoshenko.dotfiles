@@ -56,7 +56,8 @@
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.openEditors.visible": 1,
-  // == Extensions - Custom UI ==
+  // == Extensions - Catppuccin ==
+  "catppuccin.accentColor": "blue",
   "custom-ui-style.font.monospace": "JetBrainsMono Nerd Font",
   "custom-ui-style.font.sansSerif": "JetBrainsMono Nerd Font",
   // == Extensions - Even Better TOML ==
@@ -206,7 +207,7 @@
   "window.newWindowDimensions": "maximized",
   "window.titleBarStyle": "custom",
   // == Workbench ==
-  "workbench.colorTheme": "Morok Dark",
+  "workbench.colorTheme": "Catppuccin Macchiato",
   "workbench.editor.decorations.badges": false,
   "workbench.editor.decorations.colors": false,
   "workbench.editor.empty.hint": "hidden",
@@ -219,10 +220,10 @@
     "*.ipynb": "jupyter-notebook"
   },
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.preferredDarkColorTheme": "Morok Dark",
-  "workbench.preferredHighContrastColorTheme": "Morok Dark",
-  "workbench.preferredHighContrastLightColorTheme": "Morok Light",
-  "workbench.preferredLightColorTheme": "Morok Light",
+  "workbench.preferredDarkColorTheme": "Catppuccin Macchiato",
+  "workbench.preferredHighContrastColorTheme": "Catppuccin Macchiato",
+  "workbench.preferredHighContrastLightColorTheme": "Catppuccin Latte",
+  "workbench.preferredLightColorTheme": "Catppuccin Latte",
   "workbench.productIconTheme": "fluent-icons",
   "workbench.secondarySideBar.defaultVisibility": "visible",
   "workbench.settings.editor": "json",
@@ -230,5 +231,36 @@
   "workbench.startupEditor": "none",
   "workbench.tips.enabled": false,
   // == Zen Mode ==
-  "zenMode.hideLineNumbers": false
+  "zenMode.hideLineNumbers": false,
+  // == Overrides ==
+  "catppuccin.colorOverrides": {
+    "macchiato": {
+      "rosewater": "#e2cfc6",
+      "flamingo": "#d8b8aa",
+      "pink": "#d1b2c9",
+      "mauve": "#a78cc4",
+      "red": "#c98787",
+      "maroon": "#b97a74",
+      "peach": "#d0a178",
+      "yellow": "#c7b07a",
+      "green": "#8ea98c",
+      "teal": "#7ea59d",
+      "sky": "#7da2b5",
+      "sapphire": "#7398ad",
+      "blue": "#7f98bf",
+      "lavender": "#9faece",
+      "text": "#e7e5e4",
+      "subtext1": "#d6d3d1",
+      "subtext0": "#a8a29e",
+      "overlay2": "#a8a29e",
+      "overlay1": "#78716c",
+      "overlay0": "#57534e",
+      "surface2": "#44403c",
+      "surface1": "#292524",
+      "surface0": "#1c1917",
+      "base": "#000000",
+      "mantle": "#0c0a09",
+      "crust": "#080706"
+    }
+  }
 }
