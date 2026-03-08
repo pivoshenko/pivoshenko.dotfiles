@@ -196,25 +196,20 @@ body {
 
 Spotify is my primary music app, and to customise it I am using [Spicetify](https://github.com/spicetify/cli) and [Spicetify Marketplace](https://github.com/spicetify/marketplace).
 
-My current theme is [Catppuccin](https://github.com/catppuccin/spicetify), which can be installed via Marketplace in the themes tab. My Spicetify configuration can be found [here](dotfiles/.config/spicetify).
+My current theme is [Morok](https://github.com/pivoshenko/pivoshenko.theme), which can be installed via Marketplace in the themes tab. My Spicetify configuration can be found [here](dotfiles/.config/spicetify).
 
 ### Messengers
 
 #### Messengers - Telegram
 
-My main messenger is [Telegram](https://telegram.org) with my own version of Catppuccin themes. Both themes can be installed using Telegram's theme manager:
-
-- [Morok Light](https://t.me/addtheme/pivoshenko_theme_morok_light)
-- [Morok Dark](https://t.me/addtheme/pivoshenko_theme_morok_dark)
-
+My main messenger is [Telegram](https://telegram.org) with my own version of Morok themes.
 
 #### Messengers - Discord
 
 To stay in touch with different communities, I am using [Discord](https://discord.com), but the official app lacks functionality, so instead I am using [Vesktop](https://github.com/Vencord/Vesktop) with the [Morok theme](https://github.com/pivoshenko/pivoshenko.theme) installed via "Themes -> Online Themes".
 
 ```css
-@dark https://pivoshenko.github.io/discord/dist/morok-dark.theme.css
-@light https://pivoshenko.github.io/discord/dist/morok-light.theme.css
+@dark https://raw.githubusercontent.com/pivoshenko/pivoshenko.theme/refs/heads/main/dist/discord/morok.theme.css
 ```
 
 ### Honourable Mentions
