@@ -11,6 +11,7 @@ cask "sf-symbols"
 # == Applications ==
 cask "codex"
 cask "copilot-cli"
+cask "claude"
 cask "claude-code"
 cask "dbeaver-community"
 cask "docker-desktop"
