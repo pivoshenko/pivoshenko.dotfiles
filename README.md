@@ -1,6 +1,6 @@
 # pivoshenko.dotfiles
 
-<p align="center">
+<p align="left">
   <a href="https://stand-with-ukraine.pp.ua/">
     <img alt="StandWithUkraine" src="https://img.shields.io/badge/Support-Ukraine-FFC93C?style=flat-square&labelColor=07689F">
   </a>
@@ -10,9 +10,6 @@
   - [Overview](#overview)
   - [Main principles](#main-principles)
   - [Usage](#usage)
-  - [Scripts](#scripts)
-    - [Theme Switcher](#theme-switcher)
-    - [Updater](#updater)
   - [Terminal](#terminal)
     - [Ghostty](#ghostty)
   - [Shell](#shell)
@@ -65,27 +62,6 @@ brew bundle
 dotdrop install -c dotdrop.config.yaml -p default --force
 dotdrop install -c dotdrop.config.yaml -p macos --force
 ```
-
-## Scripts
-
-### Theme Switcher
-
-The theme switcher automatically changes themes across all configured applications when macOS switches between light and dark mode. It consists of three components:
-
-1. **Python script** ([`scripts/switcher.py`](scripts/switcher.py)) - core theme switching logic that updates configuration files for various applications
-2. **Bash script** ([`scripts/switcher.sh`](scripts/switcher.sh)) - wrapper script that:
-   - Detects current macOS appearance mode (light/dark)
-   - Calls the Python script with the appropriate theme
-   - Rebuilds Bat cache
-   - Switches Fish and Spotify themes via their CLIs
-   - Restarts DBeaver and Spotify if running to apply changes
-3. **Launch agent** ([`agents/ke.bou.dark-mode-notify.plist`](agents/ke.bou.dark-mode-notify.plist)) - macOS launch agent that monitors system appearance changes and triggers the bash script automatically using [dark-mode-notify](https://github.com/bouk/dark-mode-notify).
-
-The switcher uses Morok Light for light mode and Morok Dark for dark mode, ensuring a consistent look across all applications.
-
-### Updater
-
-The updater is a Python tool ([`update/`](update/)) that automatically downloads and updates Morok theme files from their official GitHub repositories for various applications. It ensures all theme files are kept up-to-date with the latest versions from upstream.
 
 ## Terminal
 
