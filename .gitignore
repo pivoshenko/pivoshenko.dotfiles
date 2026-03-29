@@ -126,7 +126,6 @@ dmypy.json
 
 # IDEs
 .vscode
-.idea
 
 # OS
 .DS_Store
