@@ -16,9 +16,6 @@ dotfiles:
   d_ipython:
     dst: ~/.ipython
     src: .ipython
-  d_scripts:
-    dst: ~/.scripts
-    src: ../scripts
   d_ssh:
     dst: ~/.ssh
     src: .ssh
@@ -100,7 +97,6 @@ profiles:
       - d_lazygit
       - d_karabiner
       - d_rectangle
-      - d_scripts
       - d_ssh
       - d_spicetify
       - d_stylus
