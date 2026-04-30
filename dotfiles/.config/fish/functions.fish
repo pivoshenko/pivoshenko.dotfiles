@@ -24,3 +24,10 @@ end
 function rgp
   command find . -name ".git" -type d | sed 's/\/\.git//' | xargs -P10 -I{} sh -c 'git -C {} fetch --all && git -C {} pull --rebase'
 end
+
+# == Update system packages ==
+function update
+  brew update --force
+  brew upgrade --force
+  kst sync
+end
