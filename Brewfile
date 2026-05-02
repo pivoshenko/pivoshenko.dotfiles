@@ -9,7 +9,6 @@ cask "font-symbols-only-nerd-font"
 cask "sf-symbols"
 
 # == Applications ==
-cask "codex"
 cask "copilot-cli"
 cask "claude"
 cask "claude-code"
@@ -137,3 +136,5 @@ vscode "samuelcolvin.jinjahtml"
 vscode "skellock.just"
 vscode "subframe7536.custom-ui-style"
 vscode "tamasfe.even-better-toml"
+vscode "th3pool.all-files-formatter"
+vscode "yzhang.markdown-all-in-one"
