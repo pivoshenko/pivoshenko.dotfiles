@@ -1,6 +1,7 @@
 {
   // == General ==
   "auto_update": true,
+  "restore_on_startup": "none",
   "session": {
     "trust_all_worktrees": true,
   },
