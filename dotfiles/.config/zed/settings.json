@@ -1,9 +1,23 @@
 {
-  // == UI ==
-  "icon_theme": "Material Icon Theme",
+  // == General ==
+  "auto_update": true,
+  "session": {
+    "trust_all_worktrees": true,
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+  // == Theme ==
+  "icon_theme": {
+    "mode": "system",
+    "light": "Material Icon Theme",
+    "dark": "Material Icon Theme",
+  },
   "theme": {
+    "mode": "system",
+    "light": "morok",
     "dark": "morok",
-    "mode": "system"
   },
   // == Fonts ==
   "buffer_font_family": "JetBrainsMono Nerd Font",
@@ -13,84 +27,75 @@
   // == Editor ==
   "autosave": {
     "after_delay": {
-      "milliseconds": 500
-    }
+      "milliseconds": 500,
+    },
   },
   "preview_tabs": {
     "enabled": false,
     "enable_keep_preview_on_code_navigation": false,
-    "enable_preview_from_file_finder": false
+    "enable_preview_from_file_finder": false,
   },
   "relative_line_numbers": "enabled",
   "show_whitespaces": "all",
   "soft_wrap": "editor_width",
+  // == Tabs ==
   "tabs": {
     "activate_on_close": "history",
-    "git_status": true,
     "close_position": "right",
-    "file_icons": false
+    "file_icons": false,
+    "git_status": true,
   },
   "toolbar": {
     "breadcrumbs": true,
     "quick_actions": true,
-    "selections_menu": true
-  },
-  // == Dock ==
-  "agent": {
-    "always_allow_tool_actions": true,
-    "default_profile": "ask",
-    "dock": "left"
-  },
-  "collaboration_panel": {
-    "button": false,
-    "dock": "left"
-  },
-  "git_panel": {
-    "button": true,
-    "dock": "left"
-  },
-  "notification_panel": {
-    "button": false,
-    "dock": "left"
-  },
-  "outline_panel": {
-    "dock": "right"
-  },
-  "project_panel": {
-    "dock": "right"
-  },
-  "terminal": {
-    "button": false
-  },
-  // == AI ==
-  "edit_predictions": {
-    "mode": "eager",
-    "copilot": {
-      "proxy": null,
-      "proxy_no_verify": null
-    },
-    "enabled_in_text_threads": false
-  },
-  "features": {
-    "edit_prediction_provider": "zed"
+    "selections_menu": true,
   },
   // == Keybindings ==
   "base_keymap": "VSCode",
-  "vim_mode": true,
-  // == Misc ==
-  "auto_update": true,
-  "file_types": {
-    "SQL": [
-      "*.sql.j2"
-    ],
-    "TOML": [
-      "poetry.lock",
-      "uv.lock"
-    ]
+  "helix_mode": true,
+  "vim_mode": false,
+  "which_key": {
+    "enabled": true,
   },
-  "telemetry": {
-    "diagnostics": false,
-    "metrics": false
+  // == Panels ==
+  "agent": {
+    "default_profile": "ask",
+    "dock": "left",
+    "tool_permissions": {
+      "default": "allow",
+    },
+  },
+  "collaboration_panel": {
+    "button": false,
+    "dock": "right",
+  },
+  "git_panel": {
+    "button": true,
+    "dock": "right",
+  },
+  "outline_panel": {
+    "dock": "right",
+  },
+  "project_panel": {
+    "dock": "right",
+  },
+  "terminal": {
+    "button": false,
+  },
+  // == AI ==
+  "disable_ai": true,
+  "edit_predictions": {
+    "copilot": {
+      "proxy": null,
+      "proxy_no_verify": null,
+    },
+    "mode": "eager",
+    "provider": "zed",
+  },
+  // == File Types ==
+  "file_types": {
+    "SQL": ["*.sql.j2"],
+    "TOML": ["poetry.lock", "uv.lock"],
   },
   // == Extensions ==
   "auto_install_extensions": {
@@ -106,6 +111,6 @@
     "just": true,
     "material-icon-theme": true,
     "sql": true,
-    "toml": true
-  }
+    "toml": true,
+  },
 }
