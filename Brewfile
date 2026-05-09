@@ -9,7 +9,6 @@ cask "font-symbols-only-nerd-font"
 cask "sf-symbols"
 
 # == Applications ==
-cask "copilot-cli"
 cask "claude"
 cask "claude-code"
 cask "dbeaver-community"
@@ -51,7 +50,6 @@ brew "uv"
 brew "duckdb"
 
 # == Command-line tools ==
-brew "anomalyco/tap/opencode"
 brew "bat"
 brew "bottom"
 brew "curl"
