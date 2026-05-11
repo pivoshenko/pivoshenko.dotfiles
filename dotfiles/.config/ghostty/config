@@ -10,6 +10,7 @@ macos-non-native-fullscreen = true
 macos-titlebar-proxy-icon = hidden
 macos-titlebar-style = tabs
 macos-window-buttons = visible
+macos-icon = xray
 
 shell-integration = fish
 shell-integration-features = true
