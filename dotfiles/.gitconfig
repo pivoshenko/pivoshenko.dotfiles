@@ -35,6 +35,7 @@ diffFilter = delta --color-only
 conflictstyle = diff3
 
 [push]
+autoSetupRemote = true
 default = simple
 
 [submodule]
