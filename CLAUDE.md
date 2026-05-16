@@ -32,6 +32,7 @@ Files are copied, not symlinked (`link_dotfile_default: nolink`). No Jinja2 temp
 ### Directory Layout
 
 - `dotfiles/.config/` — XDG config home: fish, helix, ghostty, starship, bat, delta, k9s, lazygit, zed, zellij, karabiner, rectangle, and more
+- `dotfiles/.claude/` — Claude Code config (`settings.json`, `statusline-command.sh`)
 - `dotfiles/.gitconfig` — Git config (editor: helix, pager: delta, GPG signing)
 - `dotfiles/.ssh/`, `dotfiles/.gnupg/` — SSH and GPG configs
 - `dotfiles/vscode/` — VSCode/Cursor settings, keybindings, and Morok theme

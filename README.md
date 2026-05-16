@@ -98,6 +98,12 @@ A complete list of configurations for each tool can be found in the [`.config/`]
 I use [Helix](https://helix-editor.com) as my main editor for CLI, and I am trying to move all my day-to-day work to it. My configuration can be found [here](dotfiles/.config/helix).
 I want to highlight it separately, as it's a truly amazing editor with a lot of features and very handy keybindings out of the box.
 
+### Agentic Coding - Claude Code
+
+I use [Claude Code](https://claude.com/claude-code) as my AI coding assistant. My configuration (`settings.json` and a custom statusline) can be found [here](dotfiles/.claude).
+
+For distributing skills and MCPs across my coding agents, I use [Kasetto](https://www.kasetto.dev/). My Kasetto config lives in [pivoshenko/pivoshenko.ai](https://github.com/pivoshenko/pivoshenko.ai) — it includes both my personal and external skills and MCPs.
+
 ## Applications
 
 I am using [Homebrew](https://brew.sh) to install both GUI applications and command-line tools. You can find a list of all applications, as well as LSPs and VSCode plugins, in the [`Brewfile`](Brewfile).
