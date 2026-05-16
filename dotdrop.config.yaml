@@ -23,6 +23,14 @@ dotfiles:
     dst: ~/.gitconfig
     src: .gitconfig
 
+  # == ~/.claude ==
+  f_claude_settings:
+    dst: ~/.claude/settings.json
+    src: .claude/settings.json
+  f_claude_statusline:
+    dst: ~/.claude/statusline-command.sh
+    src: .claude/statusline-command.sh
+
   # == ~/.config ==
   d_bat:
     dst: ~/.config/bat
@@ -103,6 +111,8 @@ profiles:
       - d_zed
       - d_zellij
       - d_zen
+      - f_claude_settings
+      - f_claude_statusline
       - f_gitconfig
       - f_starship
 
