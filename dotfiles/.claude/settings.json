@@ -23,7 +23,10 @@
       "Bash(pnpm:*)",
       "Bash(uv:*)",
       "Bash(just:*)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Write",
+      "Edit",
+      "NotebookEdit"
     ]
   },
   "model": "opus",
