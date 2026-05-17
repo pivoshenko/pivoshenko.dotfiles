@@ -22,7 +22,8 @@
       "Bash(chmod:*)",
       "Bash(pnpm:*)",
       "Bash(uv:*)",
-      "Bash(just:*)"
+      "Bash(just:*)",
+      "Bash(curl:*)"
     ]
   },
   "model": "opus",
