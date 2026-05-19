@@ -30,18 +30,6 @@
     ]
   },
   "model": "opus",
-  "hooks": {
-    "SessionStart": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "npx buddy-reroll --apply-hook"
-          }
-        ]
-      }
-    ]
-  },
   "statusLine": {
     "type": "command",
     "command": "sh ~/.claude/statusline-command.sh"
