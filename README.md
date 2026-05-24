@@ -150,7 +150,7 @@ As a browser, I am using [Zen](https://zen-browser.app), with the following exte
 
 My `userChrome.css` and `userContent.css` can be found [here](dotfiles/.config/zen) and are required to be placed in the [`chrome/` subfolder](https://www.userchrome.org) in your Zen profile.
 
-To customise different websites, I am using [Morok Userstyles](https://github.com/pivoshenko/pivoshenko.theme) and my personal [configuration](dotfiles/.config/stylus), which should be imported in the extension's preferences.
+To customise different websites, I am using my own custom [Popil Userstyles](https://github.com/pivoshenko/pivoshenko.theme) and my personal [configuration](dotfiles/.config/stylus), which should be imported in the extension's preferences.
 
 ### Notes - Obsidian
 
