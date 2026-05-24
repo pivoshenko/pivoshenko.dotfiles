@@ -17,7 +17,7 @@
     --sidebar-text-color: #e7e5e4 !important;
     --lwt-sidebar-text-color: #e7e5e4 !important;
     --lwt-sidebar-background-color: #15110e !important;
-    --toolbar-bgcolor: #231e1a !important;
+    --toolbar-bgcolor: #161210 !important;
     --newtab-background-color: #1c1917 !important;
     --zen-themed-toolbar-bg: #161210 !important;
     --zen-main-browser-background: #161210 !important;
@@ -41,13 +41,13 @@
     background-color: #161210 !important;
   }
 
-  /* macOS traffic-light region: blend with the toolbar instead of painting a
-     separate darker patch behind the native window buttons */
-  .titlebar-buttonbox-container,
-  .titlebar-buttonbox,
-  #titlebar {
-    background: transparent !important;
-    background-color: transparent !important;
+  /* macOS: color the titlebar layer behind the native traffic lights so the
+     region matches the toolbar. NEVER set a background on .titlebar-buttonbox*
+     on macOS — that clobbers the native button appearance and the close/min/max
+     controls disappear. */
+  #titlebar,
+  #navigator-toolbox-background {
+    background-color: #161210 !important;
   }
 
   /* Safer Zen Twilight acrylic/seam fix */
@@ -101,6 +101,11 @@
   #main-window {
     background: #161210 !important;
     background-color: #161210 !important;
+  }
+
+  /* window background behind the transparent macOS traffic-light region */
+  #zen-browser-background {
+    --zen-main-browser-background: #161210 !important;
   }
 
   /* Remove seam shadows at sidebar/content corners */
