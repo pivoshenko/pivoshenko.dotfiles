@@ -1,6 +1,6 @@
 # == Themes ==
 # Synced from pivoshenko.theme via `just sync-theme` — switch flavor here + var below.
-source $HOME/.config/fish/themes/fzf-popil.fish
+source $HOME/.config/fish/themes/popil.fish
 set -Ux FZF_THEME $FZF_POPIL
 
 # == Commands ==
