@@ -24,6 +24,9 @@ dotfiles:
     src: .gitconfig
 
   # == ~/.claude ==
+  f_claude_md:
+    dst: ~/.claude/CLAUDE.md
+    src: .claude/CLAUDE.md
   f_claude_settings:
     dst: ~/.claude/settings.json
     src: .claude/settings.json
@@ -77,9 +80,6 @@ dotfiles:
   d_zellij:
     dst: ~/.config/zellij
     src: .config/zellij
-  d_zen:
-    dst: ~/.config/zen
-    src: .config/zen
   f_starship:
     dst: ~/.config/starship.toml
     src: .config/starship.toml
@@ -88,6 +88,17 @@ dotfiles:
   d_macos_vscode:
     dst: ~/Library/Application Support/Code/User
     src: vscode
+  # zen reads chrome CSS from the active browser profile; the profile id below is
+  # machine-specific — update it (and re-run install) if the zen profile changes.
+  f_zen_userchrome:
+    dst: "~/Library/Application Support/zen/Profiles/6im8xt7o.Default (release)/chrome/userChrome.css"
+    src: .config/zen/popil/userChrome.css
+  f_zen_usercontent:
+    dst: "~/Library/Application Support/zen/Profiles/6im8xt7o.Default (release)/chrome/userContent.css"
+    src: .config/zen/popil/userContent.css
+  f_zen_user_overrides:
+    dst: "~/Library/Application Support/zen/Profiles/6im8xt7o.Default (release)/user-overrides.js"
+    src: .config/zen/user-overrides.js
 
 profiles:
   default:
@@ -110,7 +121,7 @@ profiles:
       - d_stylus
       - d_zed
       - d_zellij
-      - d_zen
+      - f_claude_md
       - f_claude_settings
       - f_claude_statusline
       - f_gitconfig
@@ -119,3 +130,9 @@ profiles:
   macos:
     dotfiles:
       - d_macos_vscode
+
+  me:
+    dotfiles:
+      - f_zen_userchrome
+      - f_zen_usercontent
+      - f_zen_user_overrides
