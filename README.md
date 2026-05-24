@@ -43,7 +43,7 @@ What's in here?
 - Minimalism in all aspects
 - Consistency throughout the configuration
 - Simplicity in design and configuration
-- Unified style [Morok theme](https://github.com/pivoshenko/pivoshenko.theme) and [JetBrains Mono font](https://www.jetbrains.com/lp/mono)
+- Unified style [Popil theme](https://github.com/pivoshenko/pivoshenko.theme) and [JetBrains Mono font](https://www.jetbrains.com/lp/mono)
 
 ## Usage
 
@@ -156,7 +156,7 @@ To customise different websites, I am using [Morok Userstyles](https://github.co
 
 For note-taking, I am using [Obsidian](https://obsidian.md), a very flexible and extensible tool. As sync storage for the Vault (notes, settings, etc.), I am using iCloud.
 
-My current theme is [Morok](https://github.com/pivoshenko/pivoshenko.theme), which can be installed via the built-in plugin manager.
+My current theme is [Popil](https://github.com/pivoshenko/pivoshenko.theme), which can be installed via the built-in plugin manager.
 
 Additionally, I have a few plugins installed:
 
@@ -178,20 +178,20 @@ body {
 
 Spotify is my primary music app, and to customise it I am using [Spicetify](https://github.com/spicetify/cli) and [Spicetify Marketplace](https://github.com/spicetify/marketplace).
 
-My current theme is [Morok](https://github.com/pivoshenko/pivoshenko.theme), which can be installed via Marketplace in the themes tab. My Spicetify configuration can be found [here](dotfiles/.config/spicetify).
+My current theme is [Popil](https://github.com/pivoshenko/pivoshenko.theme), which can be installed via Marketplace in the themes tab. My Spicetify configuration can be found [here](dotfiles/.config/spicetify).
 
 ### Messengers
 
 #### Messengers - Telegram
 
-My main messenger is [Telegram](https://telegram.org) with my own version of Morok themes.
+My main messenger is [Telegram](https://telegram.org) with my own version of Popil themes.
 
 #### Messengers - Discord
 
-To stay in touch with different communities, I am using [Discord](https://discord.com), but the official app lacks functionality, so instead I am using [Vesktop](https://github.com/Vencord/Vesktop) with the [Morok theme](https://github.com/pivoshenko/pivoshenko.theme) installed via "Themes -> Online Themes".
+To stay in touch with different communities, I am using [Discord](https://discord.com), but the official app lacks functionality, so instead I am using [Vesktop](https://github.com/Vencord/Vesktop) with the [Popil theme](https://github.com/pivoshenko/pivoshenko.theme) installed via "Themes -> Online Themes".
 
 ```css
-@dark https://raw.githubusercontent.com/pivoshenko/pivoshenko.theme/refs/heads/main/dist/discord/morok.theme.css
+@dark https://raw.githubusercontent.com/pivoshenko/pivoshenko.theme/refs/heads/main/dist/discord/popil.theme.css
 ```
 
 ### Honourable Mentions
