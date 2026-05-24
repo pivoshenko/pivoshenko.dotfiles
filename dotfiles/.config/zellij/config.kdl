@@ -3,5 +3,7 @@ session_serialization false
 mouse_mode true
 
 // == Theme ==
-theme "morok"
+theme "popil"
 simplified_ui true
+
+default_layout "minimal"

@@ -17,8 +17,8 @@
   },
   "theme": {
     "mode": "system",
-    "light": "morok",
-    "dark": "morok",
+    "light": "popil",
+    "dark": "popil",
   },
   // == Fonts ==
   "buffer_font_family": "JetBrainsMono Nerd Font",
