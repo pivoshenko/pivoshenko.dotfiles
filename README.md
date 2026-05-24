@@ -184,7 +184,7 @@ My current theme is [Popil](https://github.com/pivoshenko/pivoshenko.theme), whi
 
 #### Messengers - Telegram
 
-My main messenger is [Telegram](https://telegram.org) with my own version of Popil themes.
+My main messenger is [Telegram](https://telegram.org) with my own version of Popil themes. The theme can be installed via [t.me/addtheme/pivoshenko_theme_popil](https://t.me/addtheme/pivoshenko_theme_popil).
 
 #### Messengers - Discord
 
