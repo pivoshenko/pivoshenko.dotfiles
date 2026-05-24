@@ -5,7 +5,7 @@ k9s:
     logoColor: "#a78cc4"
   prompt:
     fgColor: "#e7e5e4"
-    bgColor: "#161210"
+    bgColor: "#1c1917"
     suggestColor: "#7f98bf"
   help:
     fgColor: "#e7e5e4"
