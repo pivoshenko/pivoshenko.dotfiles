@@ -41,6 +41,15 @@
     background-color: #161210 !important;
   }
 
+  /* macOS traffic-light region: blend with the toolbar instead of painting a
+     separate darker patch behind the native window buttons */
+  .titlebar-buttonbox-container,
+  .titlebar-buttonbox,
+  #titlebar {
+    background: transparent !important;
+    background-color: transparent !important;
+  }
+
   /* Safer Zen Twilight acrylic/seam fix */
   #sidebar-splitter,
   #zen-sidebar-splitter {
