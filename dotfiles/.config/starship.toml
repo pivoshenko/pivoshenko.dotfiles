@@ -1,8 +1,8 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
-palette = "morok"
+palette = "popil"
 
-[palettes.morok]
+[palettes.popil]
 rosewater = "#e2cfc6"
 flamingo = "#d8b8aa"
 pink = "#d1b2c9"
@@ -23,12 +23,12 @@ subtext0 = "#a8a29e"
 overlay2 = "#a8a29e"
 overlay1 = "#78716c"
 overlay0 = "#57534e"
-surface2 = "#44403c"
-surface1 = "#292524"
-surface0 = "#1c1917"
-base = "#000000"
-mantle = "#0c0a09"
-crust = "#080706"
+surface2 = "#36302b"
+surface1 = "#2c2622"
+surface0 = "#231e1a"
+base = "#1c1917"
+mantle = "#161210"
+crust = "#15110e"
 
 [aws]
 symbol = "󰸏 "

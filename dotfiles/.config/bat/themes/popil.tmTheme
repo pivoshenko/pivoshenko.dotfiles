@@ -3,13 +3,13 @@
 <plist version="1.0">
   <dict>
     <key>name</key>
-    <string>morok</string>
+    <string>popil</string>
     <key>semanticClass</key>
-    <string>theme.dark.morok</string>
+    <string>theme.dark.popil</string>
     <key>uuid</key>
     <string>627ce890-fabb-4d39-9819-7be71f4bdca7</string>
     <key>author</key>
-    <string>pivoshenko.theme.morok</string>
+    <string>pivoshenko.theme.popil</string>
     <key>colorSpaceName</key>
     <string>sRGB</string>
     <key>settings</key>
@@ -18,13 +18,13 @@
         <key>settings</key>
         <dict>
           <key>background</key>
-          <string>#000000</string>
+          <string>#1c1917</string>
           <key>foreground</key>
           <string>#e7e5e4</string>
           <key>caret</key>
           <string>#e2cfc6</string>
           <key>lineHighlight</key>
-          <string>#1c1917</string>
+          <string>#231e1a</string>
           <key>misspelling</key>
           <string>#c98787</string>
           <key>accent</key>
@@ -32,9 +32,9 @@
           <key>selection</key>
           <string>#a8a29e40</string>
           <key>activeGuide</key>
-          <string>#292524</string>
+          <string>#2c2622</string>
           <key>findHighlight</key>
-          <string>#2c393f</string>
+          <string>#3e494e</string>
           <key>gutterForeground</key>
           <string>#78716c</string>
         </dict>
