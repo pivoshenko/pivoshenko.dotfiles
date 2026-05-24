@@ -10,7 +10,7 @@ pager = delta
 helper = store
 
 [delta]
-features = "morok"
+features = "popil"
 hyperlinks = true
 hyperlinks-file-link-format = "file-line://{path}:{line}"
 light = false

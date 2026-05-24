@@ -1,5 +1,5 @@
-[delta "morok"]
-blame-palette = "#000000 #0c0a09 #080706 #1c1917 #292524"
+[delta "popil"]
+blame-palette = "#1c1917 #161210 #15110e #231e1a #2c2622"
 commit-decoration-style = "#57534e" bold box ul
 dark = true
 file-decoration-style = "#57534e"
@@ -13,13 +13,13 @@ line-numbers-minus-style = bold "#c98787"
 line-numbers-plus-style = bold "#8ea98c"
 line-numbers-right-style = "#57534e"
 line-numbers-zero-style = "#57534e"
-minus-emph-style = bold syntax "#462f2f"
-minus-style = syntax "#281b1b"
-plus-emph-style = bold syntax "#323b31"
-plus-style = syntax "#1c221c"
+minus-emph-style = bold syntax "#59403e"
+minus-style = syntax "#3f2f2d"
+plus-emph-style = bold syntax "#444b40"
+plus-style = syntax "#33362e"
 map-styles = \
-bold purple => syntax "#3a3145", \
-bold blue => syntax "#2c3543", \
-bold cyan => syntax "#28353d", \
-bold yellow => syntax "#463e2b"
-syntax-theme = morok
+bold purple => syntax "#4d4154", \
+bold blue => syntax "#3f4552", \
+bold cyan => syntax "#3a454c", \
+bold yellow => syntax "#584e3a"
+syntax-theme = popil

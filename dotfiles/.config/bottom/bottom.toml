@@ -1,7 +1,7 @@
 [styles.cpu]
 all_entry_color = "#e2cfc6"
 avg_entry_color = "#b97a74"
-cpu_core_colors = ["#c98787", "#d0a178", "#c7b07a", "#8ea98c", "#7398ad", "#a78cc4"]
+cpu_core_colors = ["#c98787", "#d0a178", "#c7b07a",  "#8ea98c", "#7398ad", "#a78cc4"]
 
 [styles.memory]
 ram_color = "#8ea98c"
@@ -29,9 +29,9 @@ graph_color = "#a8a29e"
 legend_text = { color = "#a8a29e" }
 
 [styles.widgets]
-border_color = "#44403c"
-selected_border_color = "#d1b2c9"
+border_color = "#36302b"
+selected_border_color = "#7f98bf"
 widget_title = { color = "#d8b8aa" }
 text = { color = "#e7e5e4" }
-selected_text = { color = "#080706", bg_color = "#a78cc4" }
-disabled_text = { color = "#000000" }
+selected_text = { color = "#15110e", bg_color = "#7f98bf" }
+disabled_text = { color = "#1c1917" }
