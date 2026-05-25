@@ -29,9 +29,9 @@ graph_color = "#a8a29e"
 legend_text = { color = "#a8a29e" }
 
 [styles.widgets]
-border_color = "#36302b"
+border_color = "#292929"
 selected_border_color = "#7f98bf"
 widget_title = { color = "#d8b8aa" }
 text = { color = "#e7e5e4" }
-selected_text = { color = "#15110e", bg_color = "#7f98bf" }
-disabled_text = { color = "#1c1917" }
+selected_text = { color = "#000000", bg_color = "#7f98bf" }
+disabled_text = { color = "#111111" }
