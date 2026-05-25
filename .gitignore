@@ -132,3 +132,8 @@ dmypy.json
 
 # homebrew
 Brewfile.lock.json
+
+# Purged from history (regenerated/vendored, keep out to avoid bloat)
+fonts/
+dotfiles/.config/zellij/plugins/*.wasm
+dotfiles/.config/stylus/catppuccin*
