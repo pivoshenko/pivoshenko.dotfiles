@@ -48,7 +48,7 @@ Primary config in `dotfiles/.config/fish/`:
 
 ### Popil Theme
 
-Custom theme applied consistently to: fish, starship, helix, VSCode, zed, ghostty, k9s, bottom, lazygit, zellij, bat, spicetify, zen, stylus (browser CSS). Source: `github.com/pivoshenko/pivoshenko.theme`. Exception: stylus userstyles remain on the **morok** bundle (no popil userstyle bundle is rendered yet).
+Custom theme applied consistently to: fish, starship, helix, VSCode, zed, ghostty, k9s, bottom, lazygit, zellij, bat, spicetify, zen, stylus (browser CSS). Source: `github.com/pivoshenko/pivoshenko.theme`. Only the **popil** flavor is vendored here; the morok bundle has been removed.
 
 **Syncing theme changes:** the theme is vendored from the sibling `../pivoshenko.theme` repo. After re-rendering there (`just render`), run `just sync-theme` from the `me/` root (script: `../scripts/sync-theme.py`) to pull the artifacts into this repo. The script does verbatim copies for tools that load a theme file natively (ghostty, helix, zed, bat, k9s, lazygit theme, zellij, vscode, zen, spicetify, fish fzf), and patches in place the two configs that embed the palette inline with no include mechanism: `starship.toml` (`[palettes.<flavor>]` block — starship has no include) and `lazygit/config.yml` (`gui.theme` — hand-maintained with comments). fzf colors live in `.config/fish/themes/fzf-<flavor>.fish`, sourced by `fzf.fish`. Switch flavor by passing `just sync-theme <flavor>` and updating the hardcoded flavor name in each tool's loader (`ghostty/config`, `helix/config.toml`, `zed/settings.json`, `fzf.fish`, etc.).
 
