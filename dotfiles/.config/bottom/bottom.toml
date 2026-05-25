@@ -25,13 +25,13 @@ low_battery_color = "#c98787"
 headers = { color = "#e2cfc6" }
 
 [styles.graphs]
-graph_color = "#a8a29e"
-legend_text = { color = "#a8a29e" }
+graph_color = "#a09c97"
+legend_text = { color = "#a09c97" }
 
 [styles.widgets]
-border_color = "#292929"
+border_color = "#373634"
 selected_border_color = "#7f98bf"
 widget_title = { color = "#d8b8aa" }
-text = { color = "#e7e5e4" }
-selected_text = { color = "#000000", bg_color = "#7f98bf" }
-disabled_text = { color = "#111111" }
+text = { color = "#e4e2de" }
+selected_text = { color = "#151514", bg_color = "#7f98bf" }
+disabled_text = { color = "#1f1f1e" }
