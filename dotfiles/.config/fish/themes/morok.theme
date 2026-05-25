@@ -1,5 +1,5 @@
 [dark]
-fish_color_normal e4e2de
+fish_color_normal e7e5e4
 fish_color_command 7f98bf
 fish_color_param d8b8aa
 fish_color_keyword a78cc4
@@ -9,8 +9,8 @@ fish_color_end d0a178
 fish_color_comment 78716c
 fish_color_error c98787
 fish_color_gray 57534e
-fish_color_selection --background=262625
-fish_color_search_match --background=262625
+fish_color_selection --background=191919
+fish_color_search_match --background=191919
 fish_color_option 8ea98c
 fish_color_operator d1b2c9
 fish_color_escape b97a74
@@ -23,5 +23,5 @@ fish_color_host_remote 8ea98c
 fish_color_status c98787
 fish_pager_color_progress 57534e
 fish_pager_color_prefix d1b2c9
-fish_pager_color_completion e4e2de
+fish_pager_color_completion e7e5e4
 fish_pager_color_description 57534e

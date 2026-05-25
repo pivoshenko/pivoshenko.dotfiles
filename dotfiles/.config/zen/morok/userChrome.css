@@ -1,27 +1,27 @@
 @media (prefers-color-scheme: dark) {
   :root {
-    --zen-colors-primary: #262625 !important;
+    --zen-colors-primary: #191919 !important;
     --zen-primary-color: #7f98bf !important;
-    --zen-colors-secondary: #262625 !important;
-    --zen-colors-tertiary: #1a1a19 !important;
+    --zen-colors-secondary: #191919 !important;
+    --zen-colors-tertiary: #0d0d0d !important;
     --zen-colors-border: #7f98bf !important;
     --toolbarbutton-icon-fill: #7f98bf !important;
-    --lwt-text-color: #e4e2de !important;
-    --toolbar-field-color: #e4e2de !important;
-    --tab-selected-textcolor: #b2bdce !important;
-    --toolbar-field-focus-color: #e4e2de !important;
-    --toolbar-color: #e4e2de !important;
-    --newtab-text-primary-color: #e4e2de !important;
-    --arrowpanel-color: #e4e2de !important;
-    --arrowpanel-background: #1f1f1e !important;
-    --sidebar-text-color: #e4e2de !important;
-    --lwt-sidebar-text-color: #e4e2de !important;
-    --lwt-sidebar-background-color: #151514 !important;
-    --toolbar-bgcolor: #1a1a19 !important;
-    --newtab-background-color: #1f1f1e !important;
-    --zen-themed-toolbar-bg: #1a1a19 !important;
-    --zen-main-browser-background: #1a1a19 !important;
-    --toolbox-bgcolor-inactive: #1a1a19 !important;
+    --lwt-text-color: #e7e5e4 !important;
+    --toolbar-field-color: #e7e5e4 !important;
+    --tab-selected-textcolor: #b3bed2 !important;
+    --toolbar-field-focus-color: #e7e5e4 !important;
+    --toolbar-color: #e7e5e4 !important;
+    --newtab-text-primary-color: #e7e5e4 !important;
+    --arrowpanel-color: #e7e5e4 !important;
+    --arrowpanel-background: #111111 !important;
+    --sidebar-text-color: #e7e5e4 !important;
+    --lwt-sidebar-text-color: #e7e5e4 !important;
+    --lwt-sidebar-background-color: #000000 !important;
+    --toolbar-bgcolor: #0d0d0d !important;
+    --newtab-background-color: #111111 !important;
+    --zen-themed-toolbar-bg: #0d0d0d !important;
+    --zen-main-browser-background: #0d0d0d !important;
+    --toolbox-bgcolor-inactive: #0d0d0d !important;
     --zen-element-separation: 8px !important;
     --zen-webview-border-radius: 10px !important;
   }
@@ -33,12 +33,12 @@
   .sidebar-placesTree,
   #zen-workspaces-button,
   .urlbar-background {
-    background-color: #1f1f1e !important;
+    background-color: #111111 !important;
   }
 
   #TabsToolbar,
   #zen-appcontent-navbar-container {
-    background-color: #1a1a19 !important;
+    background-color: #0d0d0d !important;
   }
 
   /* macOS: color the titlebar layer behind the native traffic lights so the
@@ -47,17 +47,17 @@
      controls disappear. */
   #titlebar,
   #navigator-toolbox-background {
-    background-color: #1a1a19 !important;
+    background-color: #0d0d0d !important;
   }
 
   /* Safer Zen Twilight acrylic/seam fix */
   #sidebar-splitter,
   #zen-sidebar-splitter {
-    --themed-splitter-idle: #1a1a19;
+    --themed-splitter-idle: #0d0d0d;
     --themed-splitter-hover: color-mix(
       in srgb,
       white 28%,
-      #1a1a19 72%
+      #0d0d0d 72%
     );
     border: none !important;
     opacity: 1 !important;
@@ -99,13 +99,13 @@
   #navigator-toolbox,
   #tabbrowser-tabbox,
   #main-window {
-    background: #1a1a19 !important;
-    background-color: #1a1a19 !important;
+    background: #0d0d0d !important;
+    background-color: #0d0d0d !important;
   }
 
   /* window background behind the transparent macOS traffic-light region */
   #zen-browser-background {
-    --zen-main-browser-background: #1a1a19 !important;
+    --zen-main-browser-background: #0d0d0d !important;
   }
 
   /* Remove seam shadows at sidebar/content corners */
@@ -115,7 +115,7 @@
   }
 
   .content-shortcuts {
-    background-color: #1f1f1e !important;
+    background-color: #111111 !important;
     border-color: #7f98bf !important;
   }
 
@@ -124,11 +124,11 @@
   }
 
   #zenEditBookmarkPanelFaviconContainer {
-    background: #151514 !important;
+    background: #000000 !important;
   }
 
   #zen-media-controls-toolbar #zen-media-progress-bar::-moz-range-track {
-    background: #262625 !important;
+    background: #191919 !important;
   }
 
   .identity-color-blue { --identity-tab-color: #7f98bf !important; --identity-icon-color: #7f98bf !important; }
