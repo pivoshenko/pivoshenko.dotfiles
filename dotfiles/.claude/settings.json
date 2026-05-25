@@ -27,7 +27,8 @@
       "Write",
       "Edit",
       "NotebookEdit"
-    ]
+    ],
+    "defaultMode": "auto"
   },
   "model": "opus",
   "statusLine": {
