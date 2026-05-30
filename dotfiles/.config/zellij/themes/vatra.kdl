@@ -1,0 +1,15 @@
+themes {
+  vatra {
+    bg "#373634"
+    fg "#e4e2de"
+    red "#ea6962"
+    green "#a9b665"
+    blue "#7daea3"
+    yellow "#e0b04a"
+    magenta "#ec7f3e"
+    orange "#ec7f3e"
+    cyan "#7daea3"
+    black "#1a1a19"
+    white "#e4e2de"
+  }
+}
