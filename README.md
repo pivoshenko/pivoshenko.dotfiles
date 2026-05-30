@@ -44,7 +44,7 @@ What's in here?
 - Minimalism in all aspects
 - Consistency throughout the configuration
 - Simplicity in design and configuration
-- Unified style [Popil theme](https://github.com/pivoshenko/pivoshenko.theme) and [JetBrains Mono font](https://www.jetbrains.com/lp/mono)
+- Unified style via [pivoshenko.theme](https://github.com/pivoshenko/pivoshenko.theme) — actively running the **Popil** flavor (warm ash, Anthropic-aligned muted terracotta). The theme also ships **Morok** (pitch black, cool accents) and **Vatra** (Carpathian hearth fire, gruvbox-warm) flavors; all three are synced into this repo so swapping is just a config line change. Typography is [JetBrains Mono](https://www.jetbrains.com/lp/mono).
 
 ## Usage
 
