@@ -1,0 +1,32 @@
+{
+  "catppuccin.colorOverrides": {
+    "macchiato": {
+      "rosewater": "#ddc7a1",
+      "flamingo": "#ec7f3e",
+      "pink": "#ec7f3e",
+      "mauve": "#d3869b",
+      "red": "#ea6962",
+      "maroon": "#d65d0e",
+      "peach": "#ec7f3e",
+      "yellow": "#e0b04a",
+      "green": "#a9b665",
+      "teal": "#89b482",
+      "sky": "#7daea3",
+      "sapphire": "#89b482",
+      "blue": "#7daea3",
+      "lavender": "#d3869b",
+      "text": "#e4e2de",
+      "subtext1": "#d4be98",
+      "subtext0": "#a89984",
+      "overlay2": "#a8a29e",
+      "overlay1": "#78716c",
+      "overlay0": "#57534e",
+      "surface2": "#373634",
+      "surface1": "#2e2e2c",
+      "surface0": "#262625",
+      "base": "#1f1f1e",
+      "mantle": "#1a1a19",
+      "crust": "#151514"
+    }
+  }
+}
