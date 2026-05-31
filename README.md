@@ -6,9 +6,6 @@
   </a>
 </p>
 
-> [!NOTE]
-> A few apps still need a manual step — currently **Telegram** and **Discord** (theme install through each app's own UI). Each section below documents what to do.
-
 ## Overview
 
 Personal dotfiles focused on minimalism, consistency, and cross-tool theming, bundling:
@@ -38,6 +35,9 @@ just install
 ```
 
 This runs `brew bundle` and deploys both dotdrop profiles. Use `just brew` or `just dotfiles` to run halves separately; `just` lists every recipe.
+
+> [!NOTE]
+> A few apps still need a manual step — currently **Telegram** and **Discord** (theme install through each app's own UI). Each section below documents what to do.
 
 ## Terminal — Ghostty
 
