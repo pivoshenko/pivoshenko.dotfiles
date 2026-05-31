@@ -40,5 +40,6 @@
   "skipDangerousModePermissionPrompt": true,
   "theme": "dark-ansi",
   "agentPushNotifEnabled": true,
-  "voiceEnabled": true
+  "voiceEnabled": true,
+  "skipAutoPermissionPrompt": true
 }
