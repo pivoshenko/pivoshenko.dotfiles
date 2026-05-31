@@ -1,11 +1,11 @@
-// == Popil ==
-// blue: 38;2;127;152;191
+// popil
+// keyColor (accent.info): 38;2;123;160;196
 {
   "logo": {
     "type": "file",
     "source": "${HOME}/.config/fastfetch/assets/cat.txt",
     "color": {
-      "3": "38;2;127;152;191"
+      "3": "38;2;123;160;196"
     }
   },
   "display": {
@@ -14,32 +14,32 @@
   "modules": [
     {
       "type": "os",
-      "key": "",
-      "keyColor": "38;2;127;152;191",
+      "key": "",
+      "keyColor": "38;2;123;160;196",
       "format": "{name} {version}"
     },
     {
       "type": "cpu",
       "key": "󰘚",
-      "keyColor": "38;2;127;152;191",
+      "keyColor": "38;2;123;160;196",
       "showPeCoreCount": true,
       "temp": true
     },
     {
       "type": "gpu",
       "key": "󰡷",
-      "keyColor": "38;2;127;152;191",
+      "keyColor": "38;2;123;160;196",
       "temp": true
     },
     {
       "type": "memory",
       "key": "󰍛",
-      "keyColor": "38;2;127;152;191"
+      "keyColor": "38;2;123;160;196"
     },
     {
       "type": "disk",
       "key": "󰋊",
-      "keyColor": "38;2;127;152;191",
+      "keyColor": "38;2;123;160;196",
       "folders": "/"
     },
     {
@@ -47,8 +47,8 @@
     },
     {
       "type": "media",
-      "key": "",
-      "keyColor": "38;2;127;152;191"
+      "key": "",
+      "keyColor": "38;2;123;160;196"
     }
   ]
 }

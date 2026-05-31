@@ -6,203 +6,147 @@
   </a>
 </p>
 
-- [pivoshenko.dotfiles](#pivoshenkodotfiles)
-  - [Overview](#overview)
-  - [Main principles](#main-principles)
-  - [Usage](#usage)
-  - [Terminal](#terminal)
-    - [Ghostty](#ghostty)
-  - [Shell](#shell)
-    - [Helix](#helix)
-  - [Agentic Coding - Claude Code](#agentic-coding---claude-code)
-  - [Applications](#applications)
-    - [Hotkeys Daemon - Karabiner](#hotkeys-daemon---karabiner)
-    - [Tiling Window Manager - Rectangle](#tiling-window-manager---rectangle)
-    - [Editors](#editors)
-      - [Editors - VSCode](#editors---vscode)
-      - [Editors - Zed](#editors---zed)
-    - [Browser - Zen](#browser---zen)
-    - [Notes - Obsidian](#notes---obsidian)
-    - [Music - Spotify](#music---spotify)
-    - [Messengers](#messengers)
-      - [Messengers - Telegram](#messengers---telegram)
-      - [Messengers - Discord](#messengers---discord)
-    - [Honourable Mentions](#honourable-mentions)
-
 > [!NOTE]
-> For some applications, there is no easy way to save the config in the dotfiles, so it requires a bit of manual work. Please read the README to find out about them.
+> A few apps still need a manual step — currently **Telegram** and **Discord** (theme install through each app's own UI). Each section below documents what to do.
 
 ## Overview
 
-What's in here?
-
-- My Brew dependencies, including apps, fonts, LSPs, extensions, etc., see [Brewfile](Brewfile)
-- My configs, see [`.config/`](dotfiles/.config)
+- Brew dependencies — apps, fonts, LSPs, extensions — in [`Brewfile`](Brewfile)
+- Tool configs — in [`dotfiles/.config/`](dotfiles/.config)
+- [Claude Code](https://claude.com/claude-code) setup — global `CLAUDE.md`, `settings.json`, statusline — in [`dotfiles/.claude/`](dotfiles/.claude)
+- Git, SSH, GPG — [`.gitconfig`](dotfiles/.gitconfig), [`.ssh/`](dotfiles/.ssh), [`.gnupg/`](dotfiles/.gnupg)
+- Zen Browser theme overrides + arkenfox `user-overrides.js` (machine-specific `me` profile)
 
 ## Main principles
 
-- Minimalism in all aspects
-- Consistency throughout the configuration
-- Simplicity in design and configuration
-- Unified style via [pivoshenko.theme](https://github.com/pivoshenko/pivoshenko.theme) — actively running the **Popil** flavor (warm ash, Anthropic-aligned muted terracotta). The theme also ships **Morok** (pitch black, cool accents) and **Vatra** (Carpathian hearth fire, gruvbox-warm) flavors; all three are synced into this repo so swapping is just a config line change. Typography is [JetBrains Mono](https://www.jetbrains.com/lp/mono).
+- Minimalism, consistency, simplicity
+- Unified style via [pivoshenko.theme](https://github.com/pivoshenko/pivoshenko.theme) — currently running **Popil** (warm ash, muted terracotta). **Morok** (pitch black, cool accents) and **Vatra** (Carpathian hearth, gruvbox-warm) are also vendored
+- Typography: [JetBrains Mono](https://www.jetbrains.com/lp/mono) everywhere
 
-## Usage
+Swap flavors with `just set-flavor <morok|popil|vatra>` followed by `just dotfiles`.
 
-I am using [DotDrop](https://github.com/deadc0de6/dotdrop) to manage dotfiles.
+## Installation
 
-1. Fork this repository and clone it
-2. Run the following commands to install the necessary tooling:
+Dotfiles are managed via [dotdrop](https://github.com/deadc0de6/dotdrop) and driven through [just](https://github.com/casey/just).
 
-```shell
-brew bundle
-```
-
-3. Run the following commands to install the dotfiles:
+1. Fork and clone this repository
+2. Install everything:
 
 ```shell
-dotdrop install -c dotdrop.config.yaml -p default --force
-dotdrop install -c dotdrop.config.yaml -p macos --force
+just install
 ```
 
-## Terminal
+This runs `brew bundle` and deploys both dotdrop profiles. Use `just brew` or `just dotfiles` to run halves separately; `just` lists every recipe.
 
-### Ghostty
+## Terminal — Ghostty
 
-I use [Ghostty](https://ghostty-editor.com) as my primary terminal emulator. It's a fast, feature-rich, and GPU-accelerated terminal with native platform support for macOS. My configuration can be found [here](dotfiles/.config/ghostty).
+[Ghostty](https://ghostty.org) — fast, GPU-accelerated, native macOS terminal from Mitchell Hashimoto. The first terminal in years that feels like it was designed end-to-end rather than evolved by accretion; zero perceptible latency and a config format that doesn't insult the reader. Config: [`dotfiles/.config/ghostty`](dotfiles/.config/ghostty).
 
-## Shell
+## Shell — Fish
 
-For the shell, I am using [Fish](https://fishshell.com), as out of the box it has all batteries included. To manage shell plugins, I am using [Fisher](https://github.com/jorgebucaran/fisher), but there are only a few installed. My complete configuration can be found [here](dotfiles/.config/fish).
+[Fish](https://fishshell.com) ships batteries-included — autosuggestions, syntax highlighting, and sane scripting without the bash compatibility tax. Plugins are managed via [Fisher](https://github.com/jorgebucaran/fisher) — only a few installed. Config: [`dotfiles/.config/fish`](dotfiles/.config/fish).
 
-For the prompt, I use [Starship](https://starship.rs) - a minimal, fast, and customizable prompt. My configuration can be found [here](dotfiles/.config/starship.toml).
+Prompt: [Starship](https://starship.rs) — single binary, single TOML, works in every shell; fast enough that I forget it's there. Config: [`dotfiles/.config/starship.toml`](dotfiles/.config/starship.toml).
 
-In terms of command-line tools, I try to keep them minimal—only the ones I use daily, such as:
+### CLI Tools
 
-- [Bat](https://github.com/sharkdp/bat)
-- [Bottom](https://github.com/ClementTsang/bottom)
-- [Delta](https://github.com/dandavison/delta)
-- [Eza](https://github.com/eza-community/eza)
-- [Fastfetch](https://github.com/fastfetch-cli/fastfetch)
-- [Fd](https://github.com/sharkdp/fd)
-- [Fzf](https://github.com/junegunn/fzf)
-- [Ripgrep](https://github.com/BurntSushi/ripgrep)
-- [K9s](https://github.com/derailed/k9s)
-- [LazyGit](https://github.com/jesseduffield/lazygit)
-- [LazyDocker](https://github.com/jesseduffield/lazydocker)
-- [Zellij](https://github.com/zellij-org/zellij)
-- [Zoxide](https://github.com/ajeetdsouza/zoxide)
+Daily-driver CLI tools (all configured under [`.config/`](dotfiles/.config)):
 
-A complete list of configurations for each tool can be found in the [`.config/`](dotfiles/.config) directory.
+- [Bat](https://github.com/sharkdp/bat) — `cat` with syntax highlighting and git gutters; the drop-in I never want to live without
+- [Bottom](https://github.com/ClementTsang/bottom) — `htop` reimagined: keyboard-driven, themable, and actually readable on a wide monitor
+- [Delta](https://github.com/dandavison/delta) — turns `git diff` into something I read for fun instead of squinting at
+- [Eza](https://github.com/eza-community/eza) — modern `ls` with icons, git status, and tree mode that doesn't choke on big repositories
+- [Fastfetch](https://github.com/fastfetch-cli/fastfetch) — the only fetch tool worth the screen real estate; fast, configurable, JSONC-driven
+- [Fd](https://github.com/sharkdp/fd) — `find` with sane defaults and an order of magnitude less typing
+- [Fzf](https://github.com/junegunn/fzf) — the single CLI tool I'd save from a fire; fuzzy-finds everything, integrates everywhere
+- [Ripgrep](https://github.com/BurntSushi/ripgrep) — fastest grep on the planet, respects `.gitignore` by default
+- [K9s](https://github.com/derailed/k9s) — the only Kubernetes UI that keeps me out of `kubectl get pods | grep` purgatory
+- [LazyGit](https://github.com/jesseduffield/lazygit) — interactive staging, rebases, and cherry-picks at TUI speed; replaced every GUI client for me
+- [LazyDocker](https://github.com/jesseduffield/lazydocker) — same magic as LazyGit, applied to containers and compose stacks
+- [Zellij](https://github.com/zellij-org/zellij) — `tmux` with a discoverable UI and sane defaults out of the box
+- [Zoxide](https://github.com/ajeetdsouza/zoxide) — smarter `cd` that learns where you actually live; `z foo` and you're there
 
-### Helix
+## Editors
 
-I use [Helix](https://helix-editor.com) as my main editor for CLI, and I am trying to move all my day-to-day work to it. My configuration can be found [here](dotfiles/.config/helix).
-I want to highlight it separately, as it's a truly amazing editor with a lot of features and very handy keybindings out of the box.
+### Editor — Helix
 
-## Agentic Coding - Claude Code
+[Helix](https://helix-editor.com) — primary CLI editor; gradually moving day-to-day work to it. The selection-first modal model (selection → action, à la Kakoune) is, in my opinion, a real step up from Vim's verb-object grammar — multiple cursors and tree-sitter selections feel native instead of bolted on, and the batteries-included LSP setup means zero plugin yak-shaving. Config: [`dotfiles/.config/helix`](dotfiles/.config/helix).
 
-I use [Claude Code](https://claude.com/claude-code) as my AI coding assistant. My configuration (`settings.json` and a custom statusline) can be found [here](dotfiles/.claude).
+### Editor — Zed
 
-For distributing skills and MCPs across my coding agents, I use [Kasetto](https://www.kasetto.dev/). My Kasetto config lives in [pivoshenko/pivoshenko.ai](https://github.com/pivoshenko/pivoshenko.ai) — it includes both my personal and external skills and MCPs.
+[Zed](https://zed.dev) — daily editor. Rust-native, GPU-accelerated, collaborative — and unlike most "modern" editors it actually ships Vim, Helix, and Whichkey modes out of the box instead of leaving them to flaky plugins. Config: [`dotfiles/.config/zed/settings.json`](dotfiles/.config/zed/settings.json).
 
-For structuring my global `CLAUDE.md`, I drew inspiration from *Andrej Karpathy's CLAUDE.md*.
+## Agentic Coding — Claude Code
 
-## Applications
+[Claude Code](https://claude.com/claude-code) is my coding assistant. Config (`settings.json` + custom statusline): [`dotfiles/.claude`](dotfiles/.claude).
 
-I am using [Homebrew](https://brew.sh) to install both GUI applications and command-line tools. You can find a list of all applications, as well as LSPs and VSCode plugins, in the [`Brewfile`](Brewfile).
+Skills and MCPs are distributed across hosts via [Kasetto](https://www.kasetto.dev/). The Kasetto config lives in [`pivoshenko/pivoshenko.ai`](https://github.com/pivoshenko/pivoshenko.ai) — personal and external skills/MCPs both included.
 
-### Hotkeys Daemon - Karabiner
+Global `CLAUDE.md` structure was inspired by *Andrej Karpathy's CLAUDE.md*.
 
-I primarily use an external keyboard, and in most of my apps, I rely on either Vi/Kakoune motions. I find it painful to use the mouse, as it requires moving my right hand off the keyboard and distracts my "zen" state. In most of the dev apps, you can enable such modes, but in the default macOS apps or window manager, such functionality is absent. To resolve this issue, I am using [Karabiner](https://github.com/pqrs-org/Karabiner-Elements).
+## macOS
 
-My configuration can be found [here](dotfiles/.config/karabiner/karabiner.json). The main idea is to implement [home row mode](https://precondition.github.io/home-row-mods) using this [guide](https://havn.blog/2024/03/03/a-good-way.html).
+### Hotkeys Daemon — Karabiner
 
-### Tiling Window Manager - Rectangle
+I drive everything from the keyboard via Vi/Kakoune motions. Where macOS or the window manager doesn't support that, [Karabiner](https://github.com/pqrs-org/Karabiner-Elements) fills the gap — built around [home row mode](https://precondition.github.io/home-row-mods) following this [guide](https://havn.blog/2024/03/03/a-good-way.html).
 
-I use [Rectangle](https://rectangleapp.com/) as a tiling window manager for macOS, which essentially replicates i3 functionality. My configuration can be found [here](dotfiles/.config/rectangle/config.json).
+Config: [`dotfiles/.config/karabiner/karabiner.json`](dotfiles/.config/karabiner/karabiner.json).
 
-### Editors
+### Tiling Window Manager — Rectangle
 
-#### Editors - VSCode
+[Rectangle](https://rectangleapp.com/) replicates i3-style tiling on macOS. Tried yabai and Aerospace; Rectangle wins on the "just works after every macOS update, no SIP gymnastics" axis. Config: [`dotfiles/.config/rectangle/config.json`](dotfiles/.config/rectangle/config.json).
 
-I absolutely love [VSCode](https://code.visualstudio.com) - it's a simple and yet very extensible and powerful editor. I also have [Cursor](https://cursor.com) installed as an AI-powered alternative that shares the same configuration.
+## Browser — Zen
 
-Here's a list of [extensions](Brewfile) I use daily, but I try to keep my VSCode setup as simple as possible. It was also heavily influenced by [MakeVSCodeAwesome](https://makevscodeawesome.com).
+[Zen](https://zen-browser.app) — a Firefox fork that finally gives the browser the keyboard-driven, vertical-tabs, minimal-chrome UX I've been bolting on with userChrome hacks for years. Extensions:
 
-My VSCode/Cursor configuration can be found [here](dotfiles/vscode/settings.json).
+- [Custom New Tab](https://addons.mozilla.org/en-US/firefox/addon/custom-new-tab-page) — points new tabs at my own [startpage](https://startpage.pivoshenko.dev) instead of Mozilla's noisy default
+- [DuckDuckGo](https://addons.mozilla.org/en-US/firefox/addon/duckduckgo-for-firefox) — default search; Google's results just aren't worth the tracking anymore
+- [NordPass](https://addons.mozilla.org/en-US/firefox/addon/nordpass-password-management) — password manager I've stuck with for years; the autofill genuinely stays out of the way
+- [NordVPN](https://addons.mozilla.org/en-US/firefox/addon/nordvpn-proxy-extension) — same family, same story; never had to think about it, which is the highest praise I give a VPN
+- [Privacy Badger](https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17) — EFF's heuristic tracker blocker; pairs nicely with uBlock without overlapping
+- [RaindropIo](https://addons.mozilla.org/en-US/firefox/addon/raindropio) — bookmarks that don't feel like bookmarks; tags, collections, and a UI I actually want to revisit
+- [Stylus](https://addons.mozilla.org/en-US/firefox/addon/styl-us) — userstyles without the abandoned-extension drama of Stylish
+- [uBlock](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin) — the only ad blocker; the rest are noise. Thank you, Raymond Hill
+- [Vimium](https://addons.mozilla.org/en-US/firefox/addon/vimium-ff) — keyboard navigation everywhere; once you've used `f` to follow a link, the mouse feels broken
 
-#### Editors - Zed
+`userChrome.css` / `userContent.css` live in [`dotfiles/.config/zen`](dotfiles/.config/zen) and deploy into the active profile's [`chrome/` subfolder](https://www.userchrome.org).
 
-Despite my love for VSCode, it still has limitations and I like to explore new tools, so currently I am trying to move my day-to-day work to [Zed](https://zed.dev), which I think, as an editor, has a bright future. I personally like how it can be configured and the way plugins are installed.
+Per-site styling uses [Stylus](https://addons.mozilla.org/en-US/firefox/addon/styl-us) — userstyles export at [`dotfiles/.config/stylus`](dotfiles/.config/stylus), imported via the extension's preferences.
 
-My Zed plugins and configuration can be found [here](dotfiles/.config/zed/settings.json).
+## Notes — Obsidian
 
-### Browser - Zen
+[Obsidian](https://obsidian.md) for notes — local-first, plain Markdown on disk, no lock-in, and the plugin ecosystem covers anything Notion does without the SaaS tax. Vault synced through iCloud. Vendored themes + snippets in [`dotfiles/.config/obsidian`](dotfiles/.config/obsidian) deploy via the `me` profile into `<vault>/.obsidian/{themes,snippets}/` — the vault path is machine-specific (set in [`dotdrop.config.yaml`](dotdrop.config.yaml)). Active theme is picked inside Obsidian's appearance settings.
 
-As a browser, I am using [Zen](https://zen-browser.app), with the following extensions installed:
+Plugins:
 
-- [Custom New Tab](https://addons.mozilla.org/en-US/firefox/addon/custom-new-tab-page)
-- [DuckDuckGo](https://addons.mozilla.org/en-US/firefox/addon/duckduckgo-for-firefox)
-- [NordPass](https://addons.mozilla.org/en-US/firefox/addon/nordpass-password-management)
-- [NordVPN](https://addons.mozilla.org/en-US/firefox/addon/nordvpn-proxy-extension)
-- [Privacy Badger](https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17)
-- [RaindropIo](https://addons.mozilla.org/en-US/firefox/addon/raindropio)
-- [Stylus](https://addons.mozilla.org/en-US/firefox/addon/styl-us)
-- [uBlock](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin)
-- [Vimium](https://addons.mozilla.org/en-US/firefox/addon/vimium-ff)
+- [Obsidian Advanced Tables](https://github.com/tgrosinger/advanced-tables-obsidian) — makes Markdown tables tolerable; auto-formats columns as you type
+- [Obsidian Images in-editor](https://github.com/ozntel/oz-image-in-editor-obsidian) — inline image previews in source mode so I don't have to keep flipping to preview
+- [Obsidian Tag Wrangler](https://github.com/pjeby/tag-wrangler) — rename and merge tags without grep-and-replace across the vault
+- [Obsidian Outliner](https://github.com/vslinko/obsidian-outliner) — bullet handling that finally behaves like Workflowy / Roam
+- [Obsidian Style Settings](https://github.com/mgmeyers/obsidian-style-settings) — exposes theme variables in the UI so I'm not editing CSS every time I want a different accent
 
-My `userChrome.css` and `userContent.css` can be found [here](dotfiles/.config/zen) and are required to be placed in the [`chrome/` subfolder](https://www.userchrome.org) in your Zen profile.
+## Music — Spotify
 
-To customise different websites, I am using my own custom [Popil Userstyles](https://github.com/pivoshenko/pivoshenko.theme) and my personal [configuration](dotfiles/.config/stylus), which should be imported in the extension's preferences.
+Spotify is customised via [Spicetify](https://github.com/spicetify/cli). Themes live in [`dotfiles/.config/spicetify/Themes`](dotfiles/.config/spicetify/Themes) — activate a flavor with `just spicetify <morok|popil|vatra>`.
 
-### Notes - Obsidian
+## Messengers
 
-For note-taking, I am using [Obsidian](https://obsidian.md), a very flexible and extensible tool. As sync storage for the Vault (notes, settings, etc.), I am using iCloud.
+### Messenger — Telegram
 
-My current theme is [Popil](https://github.com/pivoshenko/pivoshenko.theme), which can be installed via the built-in plugin manager.
+[Telegram](https://telegram.org) with my Popil theme — installed via [t.me/addtheme/pivoshenko_theme_popil](https://t.me/addtheme/pivoshenko_theme_popil).
 
-Additionally, I have a few plugins installed:
+### Messenger — Discord
 
-- [Obsidian Advanced Tables](https://github.com/tgrosinger/advanced-tables-obsidian)
-- [Obsidian Images in-editor](https://github.com/ozntel/oz-image-in-editor-obsidian)
-- [Obsidian Tag Wrangler](https://github.com/pjeby/tag-wrangler)
-- [Obsidian Outliner](https://github.com/vslinko/obsidian-outliner)
-- [Obsidian Style Settings](https://github.com/mgmeyers/obsidian-style-settings)
-
-I also extended the length of readable mode (the default seems quite narrow) by adding custom CSS:
-
-```css
-body {
-  --file-line-width:1100px
-}
-```
-
-### Music - Spotify
-
-Spotify is my primary music app, and to customise it I am using [Spicetify](https://github.com/spicetify/cli) and [Spicetify Marketplace](https://github.com/spicetify/marketplace).
-
-My current theme is [Popil](https://github.com/pivoshenko/pivoshenko.theme), which can be installed via Marketplace in the themes tab. My Spicetify configuration can be found [here](dotfiles/.config/spicetify).
-
-### Messengers
-
-#### Messengers - Telegram
-
-My main messenger is [Telegram](https://telegram.org) with my own version of Popil themes. The theme can be installed via [t.me/addtheme/pivoshenko_theme_popil](https://t.me/addtheme/pivoshenko_theme_popil).
-
-#### Messengers - Discord
-
-To stay in touch with different communities, I am using [Discord](https://discord.com), but the official app lacks functionality, so instead I am using [Vesktop](https://github.com/Vencord/Vesktop) with the [Popil theme](https://github.com/pivoshenko/pivoshenko.theme) installed via "Themes -> Online Themes".
+The official Discord client lacks functionality, so I run [Vesktop](https://github.com/Vencord/Vesktop) instead. Install the Popil theme via *Themes → Online Themes*:
 
 ```css
 @dark https://raw.githubusercontent.com/pivoshenko/pivoshenko.theme/refs/heads/main/dist/discord/popil.theme.css
 ```
 
-### Honourable Mentions
+## Other Apps
 
-[f.lux](https://justgetflux.com) - the best application to control the color of a computer's display, adapting to the time of day: warm at night and like sunlight during the day (supports presets based on geolocation).
-
-[NordPass](https://nordpass.com) and [NordVPN](https://nordvpn.com) - simply the best password manager and VPN client.
-
-[DBeaver](https://dbeaver.io) - simple but powerful database manager.
-
-[Tailscale](https://tailscale.com) - great solution for secure access to private networks and devices.
+- [f.lux](https://justgetflux.com) — warms the display after sunset; my eyes notice immediately when I'm on a machine without it
+- [NordPass](https://nordpass.com) / [NordVPN](https://nordvpn.com) — boring, reliable, and that's exactly what I want from a password manager and a VPN. Been on both for years
+- [DBeaver](https://dbeaver.io) — one client for every database I touch; ugly Eclipse bones, but it's the only tool that handles Postgres, MySQL, SQLite, and Mongo without me hunting for vendor GUIs
+- [Tailscale](https://tailscale.com) — WireGuard with the UX problem solved; my home NAS, work boxes, and phone are all on one flat network and I haven't thought about VPN config in years

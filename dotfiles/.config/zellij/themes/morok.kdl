@@ -1,0 +1,15 @@
+themes {
+  morok {
+    bg "#292929"
+    fg "#e7e5e4"
+    red "#d97777"
+    green "#8ea98c"
+    blue "#7f98bf"
+    yellow "#d4b070"
+    magenta "#d1b2c9"
+    orange "#d99a6a"
+    cyan "#7da2b5"
+    black "#0d0d0d"
+    white "#e7e5e4"
+  }
+}

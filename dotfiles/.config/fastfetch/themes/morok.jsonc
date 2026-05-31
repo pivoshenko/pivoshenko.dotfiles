@@ -1,0 +1,54 @@
+// morok
+// keyColor (accent.info): 38;2;126;165;157
+{
+  "logo": {
+    "type": "file",
+    "source": "${HOME}/.config/fastfetch/assets/cat.txt",
+    "color": {
+      "3": "38;2;126;165;157"
+    }
+  },
+  "display": {
+    "separator": " "
+  },
+  "modules": [
+    {
+      "type": "os",
+      "key": "",
+      "keyColor": "38;2;126;165;157",
+      "format": "{name} {version}"
+    },
+    {
+      "type": "cpu",
+      "key": "󰘚",
+      "keyColor": "38;2;126;165;157",
+      "showPeCoreCount": true,
+      "temp": true
+    },
+    {
+      "type": "gpu",
+      "key": "󰡷",
+      "keyColor": "38;2;126;165;157",
+      "temp": true
+    },
+    {
+      "type": "memory",
+      "key": "󰍛",
+      "keyColor": "38;2;126;165;157"
+    },
+    {
+      "type": "disk",
+      "key": "󰋊",
+      "keyColor": "38;2;126;165;157",
+      "folders": "/"
+    },
+    {
+      "type": "break"
+    },
+    {
+      "type": "media",
+      "key": "",
+      "keyColor": "38;2;126;165;157"
+    }
+  ]
+}
