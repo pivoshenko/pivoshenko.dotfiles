@@ -1,0 +1,25 @@
+[delta "vatra"]
+blame-palette = "#1f1f1e #1a1a19 #151514 #262625 #2e2e2c"
+commit-decoration-style = "#57534e" bold box ul
+dark = true
+file-decoration-style = "#57534e"
+file-style = "#e4e2de"
+hunk-header-decoration-style = "#57534e" box ul
+hunk-header-file-style = bold
+hunk-header-line-number-style = bold "#a89984"
+hunk-header-style = file line-number syntax
+line-numbers-left-style = "#57534e"
+line-numbers-minus-style = bold "#ea6962"
+line-numbers-plus-style = bold "#a9b665"
+line-numbers-right-style = "#57534e"
+line-numbers-zero-style = "#57534e"
+minus-emph-style = bold syntax "#663936"
+minus-style = syntax "#482e2c"
+plus-emph-style = bold syntax "#4f5437"
+plus-style = syntax "#3b3d2c"
+map-styles = \
+bold purple => syntax "#5e434a", \
+bold blue => syntax "#40514d", \
+bold cyan => syntax "#445341", \
+bold yellow => syntax "#63522d"
+syntax-theme = vatra
