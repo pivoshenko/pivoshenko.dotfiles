@@ -11,11 +11,12 @@
 
 ## Overview
 
+Personal dotfiles focused on minimalism, consistency, and cross-tool theming, bundling:
+
 - Brew dependencies — apps, fonts, LSPs, extensions — in [`Brewfile`](Brewfile)
-- Tool configs — in [`dotfiles/.config/`](dotfiles/.config)
+- Apps and tools config — in [`dotfiles/.config/`](dotfiles/.config)
 - [Claude Code](https://claude.com/claude-code) setup — global `CLAUDE.md`, `settings.json`, statusline — in [`dotfiles/.claude/`](dotfiles/.claude)
 - Git, SSH, GPG — [`.gitconfig`](dotfiles/.gitconfig), [`.ssh/`](dotfiles/.ssh), [`.gnupg/`](dotfiles/.gnupg)
-- Zen Browser theme overrides + arkenfox `user-overrides.js` (machine-specific `me` profile)
 
 ## Main principles
 
