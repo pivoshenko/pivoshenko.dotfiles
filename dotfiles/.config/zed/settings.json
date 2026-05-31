@@ -1,7 +1,7 @@
 {
   // == General ==
   "auto_update": true,
-  "restore_on_startup": "none",
+  "restore_on_startup": "launchpad",
   "session": {
     "trust_all_worktrees": true,
   },
