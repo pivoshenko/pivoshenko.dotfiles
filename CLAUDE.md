@@ -4,7 +4,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-Personal dotfiles for macOS managed by **DotDrop**. All config sources live in `dotfiles/` and get copied (not symlinked) to their destinations. A unified **Popil** theme is applied across all tools.
+Personal dotfiles focused on minimalism, consistency, and cross-tool theming, bundling:
+
+- **Brew dependencies** — apps, fonts, LSPs, extensions — in `Brewfile`.
+- **Apps and tools config** — in `dotfiles/.config/`.
+- **Claude Code setup** — global `CLAUDE.md`, `settings.json`, statusline — in `dotfiles/.claude/`.
+- **Git, SSH, GPG** — `.gitconfig`, `.ssh/`, `.gnupg/`.
+
+Managed by **DotDrop**: config sources live in `dotfiles/` and get copied (not symlinked) to their destinations. A unified theme (`morok` / `popil` / `vatra`) is applied across all tools.
 
 ## Key Commands
 
