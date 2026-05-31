@@ -1,0 +1,142 @@
+@media (prefers-color-scheme: dark) {
+  :root {
+    --zen-colors-primary: #191919 !important;
+    --zen-primary-color: #7f98bf !important;
+    --zen-colors-secondary: #191919 !important;
+    --zen-colors-tertiary: #0d0d0d !important;
+    --zen-colors-border: #7f98bf !important;
+    --toolbarbutton-icon-fill: #7f98bf !important;
+    --lwt-text-color: #e7e5e4 !important;
+    --toolbar-field-color: #e7e5e4 !important;
+    --tab-selected-textcolor: #b3bed2 !important;
+    --toolbar-field-focus-color: #e7e5e4 !important;
+    --toolbar-color: #e7e5e4 !important;
+    --newtab-text-primary-color: #e7e5e4 !important;
+    --arrowpanel-color: #e7e5e4 !important;
+    --arrowpanel-background: #111111 !important;
+    --sidebar-text-color: #e7e5e4 !important;
+    --lwt-sidebar-text-color: #e7e5e4 !important;
+    --lwt-sidebar-background-color: #000000 !important;
+    --toolbar-bgcolor: #0d0d0d !important;
+    --newtab-background-color: #111111 !important;
+    --zen-themed-toolbar-bg: #0d0d0d !important;
+    --zen-main-browser-background: #0d0d0d !important;
+    --toolbox-bgcolor-inactive: #0d0d0d !important;
+    --zen-element-separation: 8px !important;
+    --zen-webview-border-radius: 10px !important;
+  }
+
+  #permissions-granted-icon {
+    --identity-icon-color: #a78cc4 !important;
+  }
+
+  .sidebar-placesTree,
+  #zen-workspaces-button,
+  .urlbar-background {
+    background-color: #111111 !important;
+  }
+
+  #TabsToolbar,
+  #zen-appcontent-navbar-container {
+    background-color: #0d0d0d !important;
+  }
+
+  /* macOS: color the titlebar layer behind the native traffic lights so the
+     region matches the toolbar. NEVER set a background on .titlebar-buttonbox*
+     on macOS — that clobbers the native button appearance and the close/min/max
+     controls disappear. */
+  #titlebar,
+  #navigator-toolbox-background {
+    background-color: #0d0d0d !important;
+  }
+
+  /* Safer Zen Twilight acrylic/seam fix */
+  #sidebar-splitter,
+  #zen-sidebar-splitter {
+    --themed-splitter-idle: #0d0d0d;
+    --themed-splitter-hover: color-mix(
+      in srgb,
+      white 28%,
+      #0d0d0d 72%
+    );
+    border: none !important;
+    opacity: 1 !important;
+    background: var(--themed-splitter-idle) !important;
+    background-color: var(--themed-splitter-idle) !important;
+    transition:
+      background-color 0.18s ease-in-out,
+      background 0.18s ease-in-out,
+      opacity 0.18s ease-in-out !important;
+  }
+
+  #sidebar-splitter::before,
+  #zen-sidebar-splitter::before {
+    display: none !important;
+    opacity: 0 !important;
+  }
+
+  #sidebar-splitter:hover,
+  #zen-sidebar-splitter:hover {
+    background: var(--themed-splitter-hover) !important;
+    background-color: var(--themed-splitter-hover) !important;
+  }
+
+  /* Wrapper appearance reset */
+  #zen-main-app-wrapper,
+  #zen-appcontent-wrapper,
+  #zen-sidebar-splitter,
+  #zen-browser-background {
+    appearance: unset !important;
+    -moz-default-appearance: none !important;
+  }
+
+  /* Wrapper/background painting */
+  #zen-main-app-wrapper,
+  #zen-appcontent-wrapper,
+  #zen-browser-background,
+  .zen-browser-generic-background,
+  .zen-toolbar-background,
+  #navigator-toolbox,
+  #tabbrowser-tabbox,
+  #main-window {
+    background: #0d0d0d !important;
+    background-color: #0d0d0d !important;
+  }
+
+  /* window background behind the transparent macOS traffic-light region */
+  #zen-browser-background {
+    --zen-main-browser-background: #0d0d0d !important;
+  }
+
+  /* Remove seam shadows at sidebar/content corners */
+  #zen-tabbox-wrapper #sidebar-box,
+  #tabbrowser-tabbox #tabbrowser-tabpanels .browserSidebarContainer {
+    box-shadow: none !important;
+  }
+
+  .content-shortcuts {
+    background-color: #111111 !important;
+    border-color: #7f98bf !important;
+  }
+
+  .urlbarView-url {
+    color: #7f98bf !important;
+  }
+
+  #zenEditBookmarkPanelFaviconContainer {
+    background: #000000 !important;
+  }
+
+  #zen-media-controls-toolbar #zen-media-progress-bar::-moz-range-track {
+    background: #191919 !important;
+  }
+
+  .identity-color-blue { --identity-tab-color: #7f98bf !important; --identity-icon-color: #7f98bf !important; }
+  .identity-color-turquoise { --identity-tab-color: #7ea59d !important; --identity-icon-color: #7ea59d !important; }
+  .identity-color-green { --identity-tab-color: #8ea98c !important; --identity-icon-color: #8ea98c !important; }
+  .identity-color-yellow { --identity-tab-color: #d4b070 !important; --identity-icon-color: #d4b070 !important; }
+  .identity-color-orange { --identity-tab-color: #d99a6a !important; --identity-icon-color: #d99a6a !important; }
+  .identity-color-red { --identity-tab-color: #d97777 !important; --identity-icon-color: #d97777 !important; }
+  .identity-color-pink { --identity-tab-color: #d1b2c9 !important; --identity-icon-color: #d1b2c9 !important; }
+  .identity-color-purple { --identity-tab-color: #a78cc4 !important; --identity-icon-color: #a78cc4 !important; }
+}
