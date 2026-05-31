@@ -30,7 +30,10 @@ user_pref("browser.newtabpage.activity-stream.section.highlights.includeVisited"
 user_pref("browser.newtabpage.activity-stream.showSearch", false);
 user_pref("browser.newtabpage.activity-stream.showWeather", false);
 user_pref("browser.newtabpage.enabled", false);
-user_pref("browser.pageActions.persistedActions", "{\"ids\":[\"bookmark\"],\"idsInUrlbar\":[\"bookmark\"],\"idsInUrlbarPreProton\":[],\"version\":1}");
+user_pref(
+  "browser.pageActions.persistedActions",
+  '{"ids":["bookmark"],"idsInUrlbar":["bookmark"],"idsInUrlbarPreProton":[],"version":1}',
+);
 user_pref("browser.search.serpEventTelemetryCategorization.regionEnabled", false);
 user_pref("browser.search.suggest.enabled.private", false);
 user_pref("browser.shell.didSkipDefaultBrowserCheckOnFirstRun", true);
@@ -39,7 +42,10 @@ user_pref("browser.startup.homepage", "about:blank");
 user_pref("browser.theme.content-theme", 1);
 user_pref("browser.theme.toolbar-theme", 1);
 user_pref("browser.translations.panelShown", true);
-user_pref("browser.uiCustomization.state", "{\"placements\":{\"widget-overflow-fixed-list\":[],\"unified-extensions-area\":[\"jid1-mnnxcxisbpnsxq_jetpack-browser-action\",\"ublock0_raymondhill_net-browser-action\",\"jid1-zadieub7xozojw_jetpack-browser-action\",\"_f01b6ea5-5910-4359-afee-9f0de052c7a1_-browser-action\"],\"nav-bar\":[\"back-button\",\"forward-button\",\"vertical-spacer\",\"urlbar-container\",\"unified-extensions-button\"],\"TabsToolbar\":[\"firefox-view-button\",\"tabbrowser-tabs\"],\"vertical-tabs\":[],\"PersonalToolbar\":[\"import-button\",\"personal-bookmarks\"],\"zen-sidebar-top-buttons\":[],\"zen-sidebar-bottom-buttons\":[\"zen-workspaces-button\"]},\"seen\":[\"developer-button\",\"ublock0_raymondhill_net-browser-action\",\"jid1-mnnxcxisbpnsxq_jetpack-browser-action\",\"jid1-zadieub7xozojw_jetpack-browser-action\",\"_f01b6ea5-5910-4359-afee-9f0de052c7a1_-browser-action\"],\"dirtyAreaCache\":[\"nav-bar\",\"vertical-tabs\",\"zen-sidebar-bottom-buttons\",\"PersonalToolbar\",\"TabsToolbar\",\"unified-extensions-area\",\"zen-sidebar-top-buttons\"],\"currentVersion\":21,\"newElementCount\":15}");
+user_pref(
+  "browser.uiCustomization.state",
+  '{"placements":{"widget-overflow-fixed-list":[],"unified-extensions-area":["jid1-mnnxcxisbpnsxq_jetpack-browser-action","ublock0_raymondhill_net-browser-action","jid1-zadieub7xozojw_jetpack-browser-action","_f01b6ea5-5910-4359-afee-9f0de052c7a1_-browser-action"],"nav-bar":["back-button","forward-button","vertical-spacer","urlbar-container","unified-extensions-button"],"TabsToolbar":["firefox-view-button","tabbrowser-tabs"],"vertical-tabs":[],"PersonalToolbar":["import-button","personal-bookmarks"],"zen-sidebar-top-buttons":[],"zen-sidebar-bottom-buttons":["zen-workspaces-button"]},"seen":["developer-button","ublock0_raymondhill_net-browser-action","jid1-mnnxcxisbpnsxq_jetpack-browser-action","jid1-zadieub7xozojw_jetpack-browser-action","_f01b6ea5-5910-4359-afee-9f0de052c7a1_-browser-action"],"dirtyAreaCache":["nav-bar","vertical-tabs","zen-sidebar-bottom-buttons","PersonalToolbar","TabsToolbar","unified-extensions-area","zen-sidebar-top-buttons"],"currentVersion":21,"newElementCount":15}',
+);
 user_pref("browser.urlbar.maxRichResults", 10);
 user_pref("browser.urlbar.quicksuggest.scenario", "history");
 user_pref("browser.urlbar.shortcuts.bookmarks", false);
@@ -83,7 +89,7 @@ user_pref("privacy.purge_trackers.date_in_cookie_database", "0");
 user_pref("privacy.query_stripping.enabled", true);
 user_pref("privacy.query_stripping.enabled.pbmode", true);
 user_pref("privacy.sanitize.clearOnShutdown.hasMigratedToNewPrefs2", true);
-user_pref("privacy.sanitize.pending", "[{\"id\":\"newtab-container\",\"itemsToClear\":[],\"options\":{}}]");
+user_pref("privacy.sanitize.pending", '[{"id":"newtab-container","itemsToClear":[],"options":{}}]');
 user_pref("privacy.trackingprotection.emailtracking.enabled", true);
 user_pref("privacy.trackingprotection.enabled", true);
 user_pref("privacy.trackingprotection.socialtracking.enabled", true);
@@ -93,7 +99,7 @@ user_pref("services.sync.clients.lastSync", "0");
 user_pref("services.sync.declinedEngines", "");
 user_pref("services.sync.engine.addresses.available", true);
 user_pref("services.sync.globalScore", 0);
-user_pref("sidebar.backupState", "{\"width\":\"\",\"command\":\"\",\"expanded\":false,\"hidden\":true}");
+user_pref("sidebar.backupState", '{"width":"","command":"","expanded":false,"hidden":true}');
 user_pref("signon.rememberSignons", false);
 user_pref("storage.vacuum.last.index", 1);
 user_pref("toolkit.telemetry.reportingpolicy.firstRun", false);
@@ -145,10 +151,10 @@ user_pref("zen.workspaces.individual-pinned-tabs", false);
 // Archenfox fixes:
 
 // Do not clear history on shutdown:
-user_pref("privacy.cpd.cache", false);    // [DEFAULT: true]
+user_pref("privacy.cpd.cache", false); // [DEFAULT: true]
 user_pref("privacy.clearHistory.cache", false);
 user_pref("privacy.cpd.formdata", false); // [DEFAULT: true]
-user_pref("privacy.cpd.history", true);  // [DEFAULT: true]
+user_pref("privacy.cpd.history", true); // [DEFAULT: true]
 user_pref("privacy.clearHistory.historyFormDataAndDownloads", false);
 user_pref("privacy.cpd.cookies", false);
 user_pref("privacy.cpd.sessions", false); // [DEFAULT: true]
@@ -159,13 +165,13 @@ user_pref("privacy.clearSiteData.cookiesAndStorage", false);
 user_pref("privacy.clearSiteData.historyFormDataAndDownloads", false);
 user_pref("privacy.clearOnShutdown.cookies", false); // Cookies
 user_pref("privacy.clearOnShutdown.offlineApps", false); // Site Data
-user_pref("privacy.clearOnShutdown.sessions", false);  // Active Logins [DEFAULT: true]
+user_pref("privacy.clearOnShutdown.sessions", false); // Active Logins [DEFAULT: true]
 user_pref("privacy.clearOnShutdown_v2.cookiesAndStorage", false); // Cookies, Site Data, Active Logins [FF128+]
-user_pref("privacy.clearOnShutdown.cache", false);     // [DEFAULT: true]
-user_pref("privacy.clearOnShutdown_v2.cache", false);  // [FF128+] [DEFAULT: true]
+user_pref("privacy.clearOnShutdown.cache", false); // [DEFAULT: true]
+user_pref("privacy.clearOnShutdown_v2.cache", false); // [FF128+] [DEFAULT: true]
 user_pref("privacy.clearOnShutdown.downloads", false); // [DEFAULT: true]
-user_pref("privacy.clearOnShutdown.formdata", false);  // [DEFAULT: true]
-user_pref("privacy.clearOnShutdown.history", false);   // [DEFAULT: true]
+user_pref("privacy.clearOnShutdown.formdata", false); // [DEFAULT: true]
+user_pref("privacy.clearOnShutdown.history", false); // [DEFAULT: true]
 user_pref("privacy.clearOnShutdown_v2.historyFormDataAndDownloads", false);
 user_pref("privacy.cpd.openWindows", false);
 user_pref("privacy.sanitize.timeSpan", 1);

@@ -13,7 +13,3 @@ trim_trailing_whitespace = true
 [{*.py,*.pyi,*.ipynb}]
 indent_size = 4
 tab_width = 4
-
-[{justfile,*.just}]
-indent_size = 4
-tab_width = 4
