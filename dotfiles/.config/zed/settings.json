@@ -93,6 +93,12 @@
     "mode": "eager",
     "provider": "zed",
   },
+  // == Languages ==
+  "languages": {
+    "Python": {
+      "language_servers": ["ty", "!pyright"],
+    },
+  },
   // == File Types ==
   "file_types": {
     "SQL": ["*.sql.j2"],
@@ -113,5 +119,6 @@
     "material-icon-theme": true,
     "sql": true,
     "toml": true,
+    "ty": true,
   },
 }
