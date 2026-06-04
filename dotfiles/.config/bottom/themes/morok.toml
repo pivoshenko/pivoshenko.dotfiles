@@ -30,8 +30,8 @@ legend_text = { color = "#a8a29e" }
 
 [styles.widgets]
 border_color = "#292929"
-selected_border_color = "#7f98bf"
+selected_border_color = "#7ea59d"
 widget_title = { color = "#d8b8aa" }
 text = { color = "#e7e5e4" }
-selected_text = { color = "#000000", bg_color = "#7f98bf" }
+selected_text = { color = "#000000", bg_color = "#7ea59d" }
 disabled_text = { color = "#111111" }

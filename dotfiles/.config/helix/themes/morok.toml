@@ -67,29 +67,29 @@
 
 # User Interface
 # --------------
-"ui.background" = { fg = "text", bg = "base" }
+"ui.background" = { fg = "fg_default", bg = "bg_canvas" }
 
 "ui.linenr" = { fg = "surface1" }
 "ui.linenr.selected" = { fg = "lavender" }
 
-"ui.statusline" = { fg = "subtext1", bg = "mantle" }
-"ui.statusline.inactive" = { fg = "surface2", bg = "mantle" }
-"ui.statusline.normal" = { fg = "base", bg = "rosewater", modifiers = ["bold"] }
-"ui.statusline.insert" = { fg = "base", bg = "green", modifiers = ["bold"] }
-"ui.statusline.select" = { fg = "base", bg = "lavender", modifiers = ["bold"] }
+"ui.statusline" = { fg = "fg_muted", bg = "bg_sunken" }
+"ui.statusline.inactive" = { fg = "surface2", bg = "bg_sunken" }
+"ui.statusline.normal" = { fg = "bg_canvas", bg = "rosewater", modifiers = ["bold"] }
+"ui.statusline.insert" = { fg = "bg_canvas", bg = "accent_success", modifiers = ["bold"] }
+"ui.statusline.select" = { fg = "bg_canvas", bg = "lavender", modifiers = ["bold"] }
 
-"ui.popup" = { fg = "text", bg = "surface0" }
+"ui.popup" = { fg = "fg_default", bg = "bg_surface" }
 "ui.window" = { fg = "crust" }
-"ui.help" = { fg = "overlay2", bg = "surface0" }
+"ui.help" = { fg = "overlay2", bg = "bg_surface" }
 
-"ui.bufferline" = { fg = "subtext0", bg = "mantle" }
-"ui.bufferline.active" = { fg = "mauve", bg = "base", underline = { color = "mauve", style = "line" } }
+"ui.bufferline" = { fg = "fg_subtle", bg = "bg_sunken" }
+"ui.bufferline.active" = { fg = "mauve", bg = "bg_canvas", underline = { color = "mauve", style = "line" } }
 "ui.bufferline.background" = { bg = "crust" }
 
-"ui.text" = "text"
-"ui.text.focus" = { fg = "text", bg = "surface0", modifiers = ["bold"] }
-"ui.text.inactive" = { fg = "overlay1" }
-"ui.text.directory" = { fg = "blue" }
+"ui.text" = "fg_default"
+"ui.text.focus" = { fg = "fg_default", bg = "bg_surface", modifiers = ["bold"] }
+"ui.text.inactive" = { fg = "fg_faint" }
+"ui.text.directory" = { fg = "accent_info" }
 
 "ui.virtual" = "overlay0"
 "ui.virtual.ruler" = { bg = "surface0" }
@@ -118,21 +118,41 @@
 "ui.menu" = { fg = "overlay2", bg = "surface0" }
 "ui.menu.selected" = { fg = "text", bg = "surface1", modifiers = ["bold"] }
 
-"diagnostic.error" = { underline = { color = "red", style = "curl" } }
-"diagnostic.warning" = { underline = { color = "yellow", style = "curl" } }
+"diagnostic.error" = { underline = { color = "accent_danger", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "accent_warning", style = "curl" } }
 "diagnostic.info" = { underline = { color = "sky", style = "curl" } }
 "diagnostic.hint" = { underline = { color = "teal", style = "curl" } }
 "diagnostic.unnecessary" = { modifiers = ["dim"] }
 "diagnostic.deprecated" = { modifiers = ["crossed_out"] }
 
-error = "red"
-warning = "yellow"
+error = "accent_danger"
+warning = "accent_warning"
 info = "sky"
 hint = "teal"
 
 rainbow = ["red", "peach", "yellow", "green", "sapphire", "lavender"]
 
 [palette]
+# Semantic roles
+bg_canvas = "#111111"
+bg_surface = "#191919"
+bg_raised = "#212121"
+bg_sunken = "#0d0d0d"
+bg_overlay = "#57534e"
+fg_default = "#e7e5e4"
+fg_muted = "#d6d3d1"
+fg_subtle = "#a8a29e"
+fg_faint = "#78716c"
+border_subtle = "#191919"
+border_default = "#212121"
+border_strong = "#292929"
+accent_primary = "#7f98bf"
+accent_secondary = "#9faece"
+accent_success = "#8ea98c"
+accent_warning = "#d4b070"
+accent_danger = "#d97777"
+accent_info = "#7ea59d"
+# Raw color slots
 rosewater = "#e2cfc6"
 flamingo = "#d8b8aa"
 pink = "#d1b2c9"
