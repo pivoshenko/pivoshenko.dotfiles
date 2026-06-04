@@ -10,6 +10,9 @@ config:
 
 dotfiles:
   # == ~/ ==
+  d_aoe:
+    dst: ~/.agent-of-empires
+    src: .agent-of-empires
   d_gnupg:
     dst: ~/.gnupg
     src: .gnupg
@@ -111,6 +114,7 @@ dotfiles:
 profiles:
   default:
     dotfiles:
+      - d_aoe
       - d_bat
       - d_bottom
       - d_delta
