@@ -2,11 +2,11 @@ k9s:
   body:
     fgColor: "#e7e5e4"
     bgColor: "#111111"
-    logoColor: "#7f98bf"
+    logoColor: "#7ea59d"
   prompt:
     fgColor: "#e7e5e4"
     bgColor: "#111111"
-    suggestColor: "#7f98bf"
+    suggestColor: "#7ea59d"
     border:
       defaultColor: "#78716c"
       commandColor: "#78716c"
@@ -14,7 +14,7 @@ k9s:
     fgColor: "#e7e5e4"
     bgColor: "#111111"
     sectionColor: "#8ea98c"
-    keyColor: "#7f98bf"
+    keyColor: "#7ea59d"
     numKeyColor: "#c47068"
   frame:
     title:
@@ -28,23 +28,23 @@ k9s:
       focusColor: "#9faece"
     menu:
       fgColor: "#e7e5e4"
-      keyColor: "#7f98bf"
+      keyColor: "#7ea59d"
       numKeyColor: "#c47068"
     crumbs:
       fgColor: "#111111"
       bgColor: "#c47068"
       activeColor: "#d8b8aa"
     status:
-      newColor: "#7f98bf"
+      newColor: "#7ea59d"
       modifyColor: "#9faece"
       addColor: "#8ea98c"
-      pendingColor: "#d99a6a"
+      pendingColor: "#7f98bf"
       errorColor: "#d97777"
       highlightColor: "#7da2b5"
       killColor: "#a78cc4"
       completedColor: "#57534e"
   info:
-    fgColor: "#d99a6a"
+    fgColor: "#7f98bf"
     sectionColor: "#e7e5e4"
   views:
     table:
@@ -81,7 +81,7 @@ k9s:
           - "#d4b070"
           - "#d99a6a"
     yaml:
-      keyColor: "#7f98bf"
+      keyColor: "#7ea59d"
       valueColor: "#e7e5e4"
       colonColor: "#a8a29e"
     logs:
