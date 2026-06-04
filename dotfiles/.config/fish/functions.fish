@@ -22,7 +22,7 @@ end
 
 # == Iterate over sub-directories and pull Git repositories ==
 function rgp
-  command find . -name ".git" -type d | sed 's/\/\.git//' | xargs -P10 -I{} sh -c 'git -C {} fetch --all && git -C {} pull --rebase'
+  command find . -name ".git" -type d | sed 's/\/\.git//' | xargs -P10 -I{} sh -c 'echo "==> updating {}" && git -C {} fetch --all && git -C {} fetch --prune origin && git -C {} pull --rebase'
 end
 
 # == Update system packages ==
