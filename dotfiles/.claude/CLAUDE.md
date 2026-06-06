@@ -1,4 +1,4 @@
-# CLAUDE.md
+# Andrej Karpathy Workflow
 
 Behavioral guidelines to reduce common LLM coding mistakes. Merge with project-specific instructions as needed.
 
@@ -59,6 +59,18 @@ For multi-step tasks, state a brief plan:
 ```
 
 Strong success criteria let you loop independently. Weak criteria ("make it work") require constant clarification.
+
+# CLAUDE Autoupdate
+
+**Whenever a non-trivial change lands, check if the project `CLAUDE.md` needs updating.**
+
+After any non-trivial change (new tool/config, new convention, renamed paths, changed workflows, new commands, architectural shifts), re-read the project's `CLAUDE.md` and update it so future sessions reflect current reality. Trivial changes (typo fixes, single-line tweaks, formatting) do not require a check.
+
+# CLAUDE Workflows
+
+**Whenever there is a list of tasks to implement, submit workflows for development implementation using the Sonnet model.**
+
+When a request decomposes into a list of implementation tasks, use the `Workflow` tool to fan them out — set `model: 'sonnet'` on each `agent()` call. Use `pipeline()` by default; reach for `parallel()` only when a barrier is genuinely required.
 
 ---
 
