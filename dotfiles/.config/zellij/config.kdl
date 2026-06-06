@@ -5,5 +5,3 @@ mouse_mode true
 // == Theme ==
 theme "popil"
 simplified_ui true
-
-default_layout "minimal"
