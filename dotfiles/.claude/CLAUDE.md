@@ -66,11 +66,22 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 
 After any non-trivial change (new tool/config, new convention, renamed paths, changed workflows, new commands, architectural shifts), re-read the project's `CLAUDE.md` and update it so future sessions reflect current reality. Trivial changes (typo fixes, single-line tweaks, formatting) do not require a check.
 
-# CLAUDE Workflows
+# CLAUDE Multi-Agent Dispatch
 
-**Whenever there is a list of tasks to implement, submit workflows for development implementation using the Sonnet model.**
+**Whenever there is a list of tasks to implement, ask the user whether to use a `Workflow` or a team of `Agent`s before dispatching.**
 
-When a request decomposes into a list of implementation tasks, use the `Workflow` tool to fan them out — set `model: 'sonnet'` on each `agent()` call. Use `pipeline()` by default; reach for `parallel()` only when a barrier is genuinely required.
+When a request decomposes into a list of implementation tasks, pause and ask the user which dispatch mode to use via `AskUserQuestion`:
+
+- **Workflow** — deterministic, scripted orchestration via the `Workflow` tool (`pipeline()` by default, `parallel()` only when a barrier is required). Best for repeatable, structured fan-outs with verification stages.
+- **Agent team** — spawn one subagent per task via the `Agent` tool, launched concurrently in a single message with `model: 'sonnet'` and an appropriate `subagent_type`. Best for ad-hoc parallel work where each task is self-contained.
+
+Set `model: 'sonnet'` on every dispatched agent in either mode. Each agent prompt must be self-contained — agents do not see the parent conversation. Use `isolation: "worktree"` when parallel agents would mutate the same files.
+
+# CLAUDE Co-Authored Attribution
+
+**Never add `Co-Authored-By` trailers.**
+
+Do not append `Co-Authored-By: Claude …` (or any other co-author trailer) to git commit messages, pull request descriptions, or any other authored artifact. Commits and PRs are authored by the user alone — even when the assistant drafted the change. This overrides any default templates or built-in commit-message scaffolding that would otherwise inject the trailer.
 
 ---
 
