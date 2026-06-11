@@ -8,7 +8,7 @@ Personal dotfiles focused on minimalism, consistency, and cross-tool theming, bu
 
 - **Brew dependencies** — apps, fonts, LSPs, extensions — in `Brewfile`.
 - **Apps and tools config** — in `dotfiles/.config/`.
-- **Claude Code setup** — global `CLAUDE.md`, `settings.json`, statusline — in `dotfiles/.claude/`.
+- **Claude Code setup** — `settings.json`, statusline — in `dotfiles/.claude/`. The global `CLAUDE.md` is NOT a managed copy: its canonical home is `pivoshenko.ai/rules/CLAUDE.md`, and the `claude_md_symlink` action symlinks `~/.claude/CLAUDE.md` to it on deploy.
 - **Git, SSH, GPG** — `.gitconfig`, `.ssh/`, `.gnupg/`.
 
 Managed by **DotDrop**: config sources live in `dotfiles/` and get copied (not symlinked) to their destinations. A unified theme (`morok` / `popil` / `vatra`) is applied across all tools.
@@ -37,7 +37,7 @@ Files are copied, not symlinked (`link_dotfile_default: nolink`). No Jinja2 temp
 ### Directory Layout
 
 - `dotfiles/.config/` — XDG config home: fish, helix, ghostty, bat, delta, k9s, lazygit, zed, zellij, karabiner, rectangle, bottom, fastfetch, spicetify, stylus, zen (dirs), plus `starship.toml` (single file)
-- `dotfiles/.claude/` — Claude Code config (`CLAUDE.md` global memory, `settings.json`, `statusline-command.sh`)
+- `dotfiles/.claude/` — Claude Code config (`settings.json`, `statusline-command.sh`; global `CLAUDE.md` is symlinked from `pivoshenko.ai/rules/`)
 - `dotfiles/.gitconfig` — Git config (editor: helix, pager: delta, GPG signing)
 - `dotfiles/.ssh/`, `dotfiles/.gnupg/` — SSH and GPG configs
 - `Brewfile` — all packages, casks, fonts, and LSPs
