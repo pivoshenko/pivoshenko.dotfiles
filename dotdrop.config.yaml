@@ -27,12 +27,13 @@ dotfiles:
     src: .gitconfig
 
   # == ~/.claude ==
-  f_claude_md:
-    dst: ~/.claude/CLAUDE.md
-    src: .claude/CLAUDE.md
+  # ~/.claude/CLAUDE.md is NOT managed here — it is a symlink to its canonical
+  # home in pivoshenko.ai/rules/CLAUDE.md, created by the claude_md_symlink action.
   f_claude_settings:
     dst: ~/.claude/settings.json
     src: .claude/settings.json
+    actions:
+      - claude_md_symlink
   f_claude_statusline:
     dst: ~/.claude/statusline-command.sh
     src: .claude/statusline-command.sh
@@ -111,6 +112,9 @@ dotfiles:
     dst: "~/Library/Application Support/zen/Profiles/6im8xt7o.Default (release)/user-overrides.js"
     src: .config/zen/user-overrides.js
 
+actions:
+  claude_md_symlink: ln -sfn "$HOME/Development/sources/pivoshenko.ai/rules/CLAUDE.md" "$HOME/.claude/CLAUDE.md"
+
 profiles:
   default:
     dotfiles:
@@ -133,7 +137,6 @@ profiles:
       - d_stylus
       - d_zed
       - d_zellij
-      - f_claude_md
       - f_claude_settings
       - f_claude_statusline
       - f_gitconfig
