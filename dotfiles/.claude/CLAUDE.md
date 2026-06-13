@@ -62,7 +62,7 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 
 # Personal Wiki (Obsidian vault)
 
-**The vault at `/Users/volodymyr.pivoshenko/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault` is the user's second brain, maintained primarily by Claude.**
+**The vault at `~/Vault` (symlink → `~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault`) is the user's second brain, maintained primarily by Claude.**
 
 - Before working inside the vault, read its `CLAUDE.md` (schema: folder map, frontmatter contract, linking rules, standing duties) and `INDEX.md` (catalog).
 - Wiki workflows are skills: `wiki-capture`, `wiki-summarize`, `wiki-project`, `wiki-write`, `wiki-lint`. Use them when the user wants something captured, summarized, or maintained in the wiki.
