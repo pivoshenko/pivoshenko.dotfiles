@@ -8,7 +8,10 @@ dotfiles:
     dotdrop install -c dotdrop.config.yaml -p default --force
     dotdrop install -c dotdrop.config.yaml -p me --force
 
-install: brew dotfiles
+vault-link:
+    ln -sfn "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault" ~/Vault
+
+install: brew dotfiles vault-link
 
 # Activate a theme flavor (morok | popil | vatra) across every loader
 set-flavor FLAVOR:
