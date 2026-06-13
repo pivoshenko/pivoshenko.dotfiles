@@ -90,7 +90,7 @@ dotfiles:
   # == iCloud (Obsidian vault) ==
   # Obsidian stores config inside the vault at <vault>/.obsidian — only the
   # theme + snippet dirs are tracked here; everything else (workspace, plugins,
-  # app state) stays vault-owned. Vault path is machine-specific.
+  # app state) stays vault-owned. ~/Vault symlinks to the iCloud path (see vault-link recipe).
   d_obsidian_themes:
     dst: "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault/.obsidian/themes"
     src: .config/obsidian/themes
