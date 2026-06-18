@@ -27,9 +27,6 @@ dotfiles:
     src: .gitconfig
 
   # == ~/.claude ==
-  f_claude_md:
-    dst: ~/.claude/CLAUDE.md
-    src: .claude/CLAUDE.md
   f_claude_settings:
     dst: ~/.claude/settings.json
     src: .claude/settings.json
@@ -133,7 +130,6 @@ profiles:
       - d_stylus
       - d_zed
       - d_zellij
-      - f_claude_md
       - f_claude_settings
       - f_claude_statusline
       - f_gitconfig

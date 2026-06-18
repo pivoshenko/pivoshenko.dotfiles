@@ -12,7 +12,7 @@ Personal dotfiles focused on minimalism, consistency, and cross-tool theming, bu
 
 - Brew dependencies — apps, fonts, LSPs, extensions — in [`Brewfile`](Brewfile)
 - Apps and tools config — in [`dotfiles/.config/`](dotfiles/.config)
-- [Claude Code](https://claude.com/claude-code) setup — global `CLAUDE.md`, `settings.json`, statusline — in [`dotfiles/.claude/`](dotfiles/.claude)
+- [Claude Code](https://claude.com/claude-code) setup — `settings.json`, statusline — in [`dotfiles/.claude/`](dotfiles/.claude) (global rules now sync via Kasetto, see below)
 - Git, SSH, GPG — [`.gitconfig`](dotfiles/.gitconfig), [`.ssh/`](dotfiles/.ssh), [`.gnupg/`](dotfiles/.gnupg)
 
 ## Main principles
@@ -81,9 +81,9 @@ Daily-driver CLI tools (all configured under [`.config/`](dotfiles/.config)):
 
 [Claude Code](https://claude.com/claude-code) is my coding assistant. Config (`settings.json` + custom statusline): [`dotfiles/.claude`](dotfiles/.claude).
 
-Skills and MCPs are distributed across hosts via [Kasetto](https://www.kasetto.dev/). The Kasetto config lives in [`pivoshenko/pivoshenko.ai`](https://github.com/pivoshenko/pivoshenko.ai) — personal and external skills/MCPs both included.
+Skills, MCPs, and instructions (the global `CLAUDE.md` / `AGENTS.md` rules) are distributed across hosts via [Kasetto](https://www.kasetto.dev/). The Kasetto config lives in [`pivoshenko/pivoshenko.ai`](https://github.com/pivoshenko/pivoshenko.ai) — personal and external sources both included.
 
-Global `CLAUDE.md` structure was inspired by *Andrej Karpathy's CLAUDE.md*.
+The global rules — formerly a single `CLAUDE.md` in this repo — now live as individual instruction files in [`pivoshenko.ai/instructions`](https://github.com/pivoshenko/pivoshenko.ai/tree/main/instructions); their structure was inspired by *Andrej Karpathy's CLAUDE.md*.
 
 ## macOS
 
