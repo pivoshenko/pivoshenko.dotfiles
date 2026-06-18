@@ -96,14 +96,49 @@
   // == Languages ==
   "languages": {
     "Python": {
-      "language_servers": ["ty", "!pyright"],
+      "language_servers": ["ty", "ruff", "!pyright"],
     },
   },
   // == File Types ==
   "file_types": {
-    "SQL": ["*.sql.j2"],
+    "SQL": ["**/*.sql.j2"],
     "TOML": ["poetry.lock", "uv.lock"],
   },
+  // == File Scan Exclusions ==
+  "file_scan_exclusions": [
+    // defaults
+    "**/.git",
+    "**/.svn",
+    "**/.hg",
+    "**/CVS",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "**/.classpath",
+    "**/.settings",
+    // python tooling caches
+    "**/__pycache__",
+    "**/*.pyc",
+    "**/.ruff_cache",
+    "**/.pytest_cache",
+    "**/.mypy_cache",
+    "**/.ty_cache",
+    "**/.tox",
+    "**/.nox",
+    "**/.hypothesis",
+    "**/.coverage",
+    "**/htmlcov",
+    "**/*.egg-info",
+    "**/.venv",
+    "**/.import_linter_cache",
+    // js/next tooling caches
+    "**/node_modules",
+    "**/.next",
+    "**/.turbo",
+    // build output
+    "**/dist",
+    "**/build",
+    "**/.cache",
+  ],
   // == Extensions ==
   "auto_install_extensions": {
     "docker-compose": true,
