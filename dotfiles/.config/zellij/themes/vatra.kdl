@@ -29,11 +29,13 @@ themes {
       emphasis_3 "#e0b04a"
     }
     // inactive tab: muted chip
+    // emphasis_1 is the tab-bar "alternate tab" colour (zebra striping) -- keep
+    // it a subtle bg step so every other tab doesn't turn a loud accent colour
     ribbon_unselected {
       base "#d4be98"
       background "#262625"
       emphasis_0 "#ec7f3e"
-      emphasis_1 "#89b482"
+      emphasis_1 "#2e2e2c"
       emphasis_2 "#a9b665"
       emphasis_3 "#e0b04a"
     }
