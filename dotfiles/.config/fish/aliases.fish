@@ -8,8 +8,6 @@ alias bd="brew doctor"
 
 # == Core ==
 alias cat="bat"
-alias find="fd"
-alias grep="rg"
 alias ls="eza --all --icons=always"
 
 # == Docker ==
@@ -35,7 +33,8 @@ alias gd="git diff"
 alias gp="git push"
 alias gl="git pull --rebase"
 alias gr="git reset"
-alias gri="git rebase -i"
+alias grb="git rebase"
+alias grbi="git rebase -i"
 alias gs="git switch"
 alias gst="git status"
 

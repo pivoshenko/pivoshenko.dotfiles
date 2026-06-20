@@ -40,14 +40,14 @@ function venv
 end
 
 # == Iterate over sub-directories and pull Git repositories ==
-function gpr
+function glr
   __log "Pulling all Git repositories under (pwd)"
-  command find . -name ".git" -type d | sed 's/\/\.git//' | xargs -P10 -I{} sh -c 'echo "==> updating {}" && git -C {} fetch --all && git -C {} fetch --prune origin && git -C {} pull --rebase'
+  find . -name ".git" -type d | sed 's/\/\.git//' | xargs -P10 -I{} sh -c 'echo "==> updating {}" && git -C {} fetch --all && git -C {} fetch --prune origin && git -C {} pull --rebase'
   __log_ok "Repositories updated"
 end
 
 # == Delete local and remote branches already merged into the main branch ==
-function gcl
+function gbc
   set -l main (git symbolic-ref --quiet --short refs/remotes/origin/HEAD 2>/dev/null | sed 's|^origin/||')
   test -z "$main"; and set main main
   __log "Cleaning branches merged into $main"
