@@ -1,15 +1,135 @@
 themes {
   morok {
-    bg "#292929"
-    fg "#e7e5e4"
-    red "#d97777"
-    green "#78716c"
-    blue "#7f98bf"
-    yellow "#d4b070"
-    magenta "#d1b2c9"
-    orange "#d99a6a"
-    cyan "#7da2b5"
-    black "#0d0d0d"
-    white "#e7e5e4"
+    // == Status / mode bar text ==
+    text_unselected {
+      base "#d6d3d1"
+      background "#0d0d0d"
+      emphasis_0 "#7f98bf"
+      emphasis_1 "#7ea59d"
+      emphasis_2 "#8ea98c"
+      emphasis_3 "#9faece"
+    }
+    text_selected {
+      base "#e7e5e4"
+      background "#212121"
+      emphasis_0 "#7f98bf"
+      emphasis_1 "#7ea59d"
+      emphasis_2 "#8ea98c"
+      emphasis_3 "#9faece"
+    }
+
+    // == Tabs (ribbons) ==
+    // active tab: bright accent, prominent
+    ribbon_selected {
+      base "#0d0d0d"
+      background "#7f98bf"
+      emphasis_0 "#0d0d0d"
+      emphasis_1 "#7ea59d"
+      emphasis_2 "#8ea98c"
+      emphasis_3 "#9faece"
+    }
+    // inactive tab: muted chip
+    ribbon_unselected {
+      base "#d6d3d1"
+      background "#191919"
+      emphasis_0 "#7f98bf"
+      emphasis_1 "#7ea59d"
+      emphasis_2 "#8ea98c"
+      emphasis_3 "#9faece"
+    }
+
+    // == Tables (session manager, etc.) ==
+    table_title {
+      base "#7f98bf"
+      background "#0d0d0d"
+      emphasis_0 "#7ea59d"
+      emphasis_1 "#8ea98c"
+      emphasis_2 "#9faece"
+      emphasis_3 "#d97777"
+    }
+    table_cell_selected {
+      base "#e7e5e4"
+      background "#212121"
+      emphasis_0 "#7f98bf"
+      emphasis_1 "#7ea59d"
+      emphasis_2 "#8ea98c"
+      emphasis_3 "#9faece"
+    }
+    table_cell_unselected {
+      base "#d6d3d1"
+      background "#0d0d0d"
+      emphasis_0 "#7f98bf"
+      emphasis_1 "#7ea59d"
+      emphasis_2 "#8ea98c"
+      emphasis_3 "#9faece"
+    }
+
+    // == Lists (fuzzy finders, pickers) ==
+    list_selected {
+      base "#e7e5e4"
+      background "#212121"
+      emphasis_0 "#7f98bf"
+      emphasis_1 "#7ea59d"
+      emphasis_2 "#8ea98c"
+      emphasis_3 "#9faece"
+    }
+    list_unselected {
+      base "#d6d3d1"
+      background "#0d0d0d"
+      emphasis_0 "#7f98bf"
+      emphasis_1 "#7ea59d"
+      emphasis_2 "#8ea98c"
+      emphasis_3 "#9faece"
+    }
+
+    // == Pane frames ==
+    frame_selected {
+      base "#7f98bf"
+      background "#0d0d0d"
+      emphasis_0 "#9faece"
+      emphasis_1 "#7ea59d"
+      emphasis_2 "#8ea98c"
+      emphasis_3 "#d97777"
+    }
+    frame_highlight {
+      base "#9faece"
+      background "#0d0d0d"
+      emphasis_0 "#7f98bf"
+      emphasis_1 "#7ea59d"
+      emphasis_2 "#8ea98c"
+      emphasis_3 "#d97777"
+    }
+
+    // == Exit codes ==
+    exit_code_success {
+      base "#8ea98c"
+      background "#0d0d0d"
+      emphasis_0 "#7ea59d"
+      emphasis_1 "#7f98bf"
+      emphasis_2 "#9faece"
+      emphasis_3 "#d97777"
+    }
+    exit_code_error {
+      base "#d97777"
+      background "#0d0d0d"
+      emphasis_0 "#9faece"
+      emphasis_1 "#7ea59d"
+      emphasis_2 "#8ea98c"
+      emphasis_3 "#7f98bf"
+    }
+
+    // == Collaborators ==
+    multiplayer_user_colors {
+      player_1 "#7f98bf"
+      player_2 "#7ea59d"
+      player_3 "#8ea98c"
+      player_4 "#d1b2c9"
+      player_5 "#9faece"
+      player_6 "#9faece"
+      player_7 "#d97777"
+      player_8 "#7ea59d"
+      player_9 "#7da2b5"
+      player_10 "#e2cfc6"
+    }
   }
 }
