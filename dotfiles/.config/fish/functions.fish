@@ -40,7 +40,7 @@ function venv
 end
 
 # == Iterate over sub-directories and pull Git repositories ==
-function glr
+function gplr
   __log "Pulling all Git repositories under (pwd)"
   find . -name ".git" -type d | sed 's/\/\.git//' | xargs -P10 -I{} sh -c 'echo "==> updating {}" && git -C {} fetch --all && git -C {} fetch --prune origin && git -C {} pull --rebase'
   __log_ok "Repositories updated"
@@ -70,7 +70,7 @@ end
 function update
   __log "Updating Homebrew packages"
   brew update --force
-  brew upgrade --force
+  brew upgrade --force --yes
   __log "Syncing Kasetto environment"
   kst sync -u
   __log_ok "System packages updated"
