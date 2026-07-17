@@ -31,6 +31,8 @@
     "defaultMode": "auto"
   },
   "model": "opus",
+  "includeCoAuthoredBy": false,
+  "tui": "fullscreen",
   "statusLine": {
     "type": "command",
     "command": "sh ~/.claude/statusline-command.sh"
