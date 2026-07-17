@@ -30,7 +30,7 @@
     ],
     "defaultMode": "auto"
   },
-  "model": "opus",
+  "model": "claude-fable-5[1m]",
   "includeCoAuthoredBy": false,
   "tui": "fullscreen",
   "statusLine": {
@@ -38,7 +38,7 @@
     "command": "sh ~/.claude/statusline-command.sh"
   },
   "enabledPlugins": {},
-  "effortLevel": "medium",
+  "effortLevel": "high",
   "skipDangerousModePermissionPrompt": true,
   "theme": "dark-ansi",
   "agentPushNotifEnabled": true,
