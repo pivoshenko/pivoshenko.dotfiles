@@ -1,6 +1,3 @@
-# == Taps ==
-tap "catppuccin/tap"
-
 # == Fonts ==
 cask "font-iosevka-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
@@ -14,6 +11,7 @@ cask "claude-code"
 cask "dbeaver-community"
 cask "docker-desktop"
 cask "flux-app"
+cask "gcloud-cli"
 cask "ghostty"
 cask "karabiner-elements"
 cask "logi-options+"
@@ -46,7 +44,6 @@ brew "uv"
 brew "duckdb"
 
 # == Command-line tools ==
-brew "aoe"
 brew "bat"
 brew "bottom"
 brew "curl"
@@ -75,6 +72,7 @@ brew "mas"
 brew "maturin"
 brew "minikube"
 brew "mole"
+brew "opentofu"
 brew "prettier"
 brew "pnpm"
 brew "pinentry-mac"
