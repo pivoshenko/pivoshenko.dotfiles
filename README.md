@@ -67,6 +67,8 @@ Daily-driver CLI tools (all configured under [`.config/`](dotfiles/.config)):
 - [Zellij](https://github.com/zellij-org/zellij) — `tmux` with a discoverable UI and sane defaults out of the box
 - [Zoxide](https://github.com/ajeetdsouza/zoxide) — smarter `cd` that learns where you actually live; `z foo` and you're there
 
+The complete list of installed CLI tools is in the [`Brewfile`](Brewfile).
+
 ## Editors
 
 ### Editor — Helix
