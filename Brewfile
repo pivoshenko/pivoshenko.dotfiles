@@ -20,6 +20,7 @@ cask "nordpass"
 cask "nordvpn"
 cask "obsidian"
 cask "rectangle"
+cask "redis-insight"
 cask "spotify"
 cask "tailscale-app"
 cask "telegram"
@@ -42,6 +43,7 @@ brew "uv"
 
 # == Databases ==
 brew "duckdb"
+brew "redis"
 
 # == Command-line tools ==
 brew "bat"
