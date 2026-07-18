@@ -155,6 +155,7 @@ The official Discord client is missing too much for me, so I run [Vesktop](https
 - [f.lux](https://justgetflux.com) — warms the display after sunset; I notice right away on a machine that doesn't have it
 - [NordPass](https://nordpass.com) / [NordVPN](https://nordvpn.com) — a password manager and a VPN I've run for years without having to think about either. That's the whole point
 - [DBeaver](https://dbeaver.io) — one client for every database I touch. The Eclipse bones are ugly, but it handles Postgres, MySQL, SQLite, and Mongo without me hunting down a vendor GUI for each
+- [Redis Insight](https://redis.io/insight) — the one exception to DBeaver: Redis's own GUI reads streams, keyspaces, and memory in a way a generic SQL client never quite matches
 - [Tailscale](https://tailscale.com) — WireGuard with the setup pain removed. My NAS, work boxes, and phone all sit on one flat network, and I haven't touched VPN config in years
 - [Maccy](https://maccy.app) — clipboard-history manager: lightweight, keyboard-driven, and out of the way until I hit the hotkey
 - [Logi Options+](https://www.logitech.com/software/logi-options-plus.html) — per-app buttons and gestures for the Logitech mouse, which is what finally makes the extra thumb buttons worth having
