@@ -103,8 +103,11 @@ Config: [`dotfiles/.config/karabiner/karabiner.json`](dotfiles/.config/karabiner
 
 - [Custom New Tab](https://addons.mozilla.org/en-US/firefox/addon/custom-new-tab-page) — points new tabs at my own [startpage](https://startpage.pivoshenko.dev) instead of Mozilla's noisy default
 - [DuckDuckGo](https://addons.mozilla.org/en-US/firefox/addon/duckduckgo-for-firefox) — default search; Google's results just aren't worth the tracking anymore
+- [MetaMask](https://addons.mozilla.org/en-US/firefox/addon/ether-metamask) — Ethereum/EVM wallet; the one every dapp assumes you already have
 - [NordPass](https://addons.mozilla.org/en-US/firefox/addon/nordpass-password-management) — password manager I've stuck with for years; the autofill genuinely stays out of the way
 - [NordVPN](https://addons.mozilla.org/en-US/firefox/addon/nordvpn-proxy-extension) — same family, same story; never had to think about it, which is the highest praise I give a VPN
+- [Obsidian Web Clipper](https://addons.mozilla.org/en-US/firefox/addon/web-clipper-obsidian) — clips articles straight into the vault as clean Markdown, no copy-paste dance
+- [Phantom](https://addons.mozilla.org/en-US/firefox/addon/phantom-app) — Solana-first multichain wallet; cleaner UX than MetaMask when I'm off EVM
 - [Privacy Badger](https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17) — EFF's heuristic tracker blocker; pairs nicely with uBlock without overlapping
 - [RaindropIo](https://addons.mozilla.org/en-US/firefox/addon/raindropio) — bookmarks that don't feel like bookmarks; tags, collections, and a UI I actually want to revisit
 - [Stylus](https://addons.mozilla.org/en-US/firefox/addon/styl-us) — userstyles without the abandoned-extension drama of Stylish
@@ -121,7 +124,6 @@ Per-site styling uses [Stylus](https://addons.mozilla.org/en-US/firefox/addon/st
 
 Plugins:
 
-- [Obsidian Advanced Tables](https://github.com/tgrosinger/advanced-tables-obsidian) — makes Markdown tables tolerable; auto-formats columns as you type
 - [Obsidian Images in-editor](https://github.com/ozntel/oz-image-in-editor-obsidian) — inline image previews in source mode so I don't have to keep flipping to preview
 - [Obsidian Tag Wrangler](https://github.com/pjeby/tag-wrangler) — rename and merge tags without grep-and-replace across the vault
 - [Obsidian Outliner](https://github.com/vslinko/obsidian-outliner) — bullet handling that finally behaves like Workflowy / Roam
@@ -151,3 +153,6 @@ The official Discord client lacks functionality, so I run [Vesktop](https://gith
 - [NordPass](https://nordpass.com) / [NordVPN](https://nordvpn.com) — boring, reliable, and that's exactly what I want from a password manager and a VPN. Been on both for years
 - [DBeaver](https://dbeaver.io) — one client for every database I touch; ugly Eclipse bones, but it's the only tool that handles Postgres, MySQL, SQLite, and Mongo without me hunting for vendor GUIs
 - [Tailscale](https://tailscale.com) — WireGuard with the UX problem solved; my home NAS, work boxes, and phone are all on one flat network and I haven't thought about VPN config in years
+- [Maccy](https://maccy.app) — clipboard-history manager; lightweight, keyboard-driven, and out of the way until I hit the hotkey
+- [Logi Options+](https://www.logitech.com/software/logi-options-plus.html) — per-app buttons and gestures for the Logitech mouse; the only reason the extra thumb buttons earn their keep
+- [Docker Desktop](https://www.docker.com/products/docker-desktop) — the container runtime everything else assumes; LazyDocker just drives what it provides
