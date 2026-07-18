@@ -194,6 +194,7 @@ symbol = " "
 symbol = " "
 
 [gcloud]
+format = 'on [$symbol$project]($style) '
 symbol = " "
 
 [git_branch]
@@ -299,3 +300,21 @@ symbol = " "
 
 [terraform]
 symbol = "󱁢 "
+
+[custom.hcloud]
+description = "Active Hetzner Cloud context"
+command = "hcloud context active"
+when = 'test -n "$(hcloud context active)"'
+symbol = "󰅟 "
+format = 'on [$symbol$output]($style) '
+style = "red bold"
+shell = ["sh"]
+
+[custom.vercel]
+description = "Linked Vercel project"
+command = 'jq -r ".projectName // .projectId" .vercel/project.json'
+detect_folders = [".vercel"]
+symbol = "▲ "
+format = 'on [$symbol$output]($style) '
+style = "bold white"
+shell = ["sh"]
