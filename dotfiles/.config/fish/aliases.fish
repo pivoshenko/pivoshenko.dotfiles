@@ -53,6 +53,9 @@ alias kl="kubectl logs"
 alias klf="kubectl logs -f"
 alias kns="kubens"
 
+# == Terraform ==
+alias terraform="tofu"
+
 # == UV ==
 alias u="uv"
 alias uva="uv add"
