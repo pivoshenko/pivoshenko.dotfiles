@@ -124,6 +124,7 @@ Per-site styling uses [Stylus](https://addons.mozilla.org/en-US/firefox/addon/st
 
 Plugins:
 
+- [Obsidian Admonition](https://github.com/javalent/admonitions) — styled callout/admonition blocks (notes, warnings, tips) that survive as plain Markdown
 - [Obsidian Images in-editor](https://github.com/ozntel/oz-image-in-editor-obsidian) — inline image previews in source mode so I don't have to keep flipping to preview
 - [Obsidian Tag Wrangler](https://github.com/pjeby/tag-wrangler) — rename and merge tags without grep-and-replace across the vault
 - [Obsidian Outliner](https://github.com/vslinko/obsidian-outliner) — bullet handling that finally behaves like Workflowy / Roam
