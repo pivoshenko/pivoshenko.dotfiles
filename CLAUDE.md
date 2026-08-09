@@ -4,66 +4,76 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-Personal dotfiles focused on minimalism, consistency, and cross-tool theming, bundling:
+Personal macOS dotfiles. Not an application: there is no build, no test suite, and no linter. The repository is a source of truth that gets deployed onto the machine, plus two Python scripts that keep theming consistent.
 
-- Brew dependencies (apps, fonts, LSPs, extensions) in `Brewfile`
-- Apps and tools config in `dotfiles/.config/`
-- Claude Code setup, `settings.json` and statusline, in `dotfiles/.claude/`. The global rules (formerly `CLAUDE.md` here) now sync via Kasetto from `pivoshenko.ai/instructions`
-- Git, SSH, GPG in `.gitconfig`, `.ssh/`, `.gnupg/`
+Three moving parts:
 
-Managed by DotDrop: config sources live in `dotfiles/` and get copied (not symlinked) to their destinations. A unified theme (`morok` / `popil` / `vatra`) is applied across all tools.
+- `Brewfile` - every cask, formula, font, and VSCode extension (`brew bundle`)
+- `dotfiles/` - the config tree that gets deployed (`dotdrop`)
+- `scripts/set_flavor.py` - flips the active theme flavor across every tool's loader
 
-## Key Commands
+## Commands
 
-```bash
-just install              # everything: brew + dotfiles
-just brew                 # Homebrew packages, casks, fonts, extensions only
-just dotfiles             # deploy dotfiles to the system (all profiles) only
-just set-flavor FLAVOR    # activate a theme flavor (morok | popil | vatra)
+```shell
+just                      # list every recipe
+just install              # brew + dotfiles + vault-link
+just brew                 # brew bundle --force --cleanup --upgrade
+just dotfiles             # dotdrop install for both profiles (default, me)
+just vault-link           # symlink the iCloud Obsidian vault to ~/Vault
+just set-flavor FLAVOR    # activate morok | popil | vatra across all loaders
+just spicetify FLAVOR     # spicetify config + apply (separate, not covered by set-flavor)
 ```
 
-`install` is just `brew` + `dotfiles`. Run either alone when you only need one half. No linter or test suite. Theme **sync** (vendoring all flavors from `pivoshenko.theme/themes/dist`) lives one level up: run `just sync-theme` from the `me/` root (script: `../scripts/sync_theme.py`). Theme **activation** is local: `just set-flavor <flavor>` flips every loader in this repository to the chosen flavor (script: `scripts/set_flavor.py`); run `just dotfiles` afterward to deploy onto the system.
+`just dotfiles` runs `dotdrop install -c dotdrop.config.yaml -p <profile> --force` for both profiles. `--force` overwrites whatever is on the system, so edit under `dotfiles/`, never in `~`.
+
+Theme **sync** lives outside this repository: `python3 ../scripts/sync_theme.py` (the sibling `scripts/` directory at the `sources/` root; the script resolves its own paths, so cwd does not matter). It vendors all three flavors from `../pivoshenko.theme/themes/dist` into `dotfiles/`. There is no `justfile` at that level despite what the script's docstring implies.
 
 ## Architecture
 
-### DotDrop (`dotdrop.config.yaml`)
+### Deployment: dotdrop
 
-Maps source paths under `dotfiles/` to destination paths on the system. Two profiles:
-- `default` - cross-platform configs (`~/.config/*`, `~/.gitconfig`, `~/.ssh`, etc.)
-- `me` - machine-specific personal targets: the zen browser theme (`userChrome.css`/`userContent.css` -> the active profile's `chrome/`, plus arkenfox `user-overrides.js` -> the profile root). The zen profile id in `dotdrop.config.yaml` is machine-specific.
+`dotdrop.config.yaml` maps `src` paths (relative to `dotpath: dotfiles`) to absolute `dst` paths. Files are **copied, not symlinked** (`link_dotfile_default: nolink`), and no Jinja2 templating is used, so a deployed file is byte-identical to its source.
 
-Files are copied, not symlinked (`link_dotfile_default: nolink`). No Jinja2 templating is used.
+Two profiles:
 
-### Directory Layout
+- `default` - portable configs: `~/.config/*`, `~/.gitconfig`, `~/.ssh`, `~/.gnupg`, `~/.ipython`, `~/.claude/{settings.json,statusline-command.sh}`
+- `me` - machine-specific destinations: the Obsidian vault's `.obsidian/{themes,snippets}` under an iCloud path, and Zen's `userChrome.css` / `userContent.css` / `user-overrides.js` under a hard-coded profile id (`6im8xt7o.Default (release)`). Both paths must be edited by hand on a new machine.
 
-- `dotfiles/.config/` - XDG config home: fish, helix, ghostty, bat, delta, k9s, lazygit, zed, zellij, karabiner, rectangle, bottom, fastfetch, spicetify, stylus, zen (dirs), plus `starship.toml` and `herdr/config.toml` (single files; herdr's directory also holds sockets, logs, and session state, so only the config file is managed)
-- `dotfiles/.claude/` - Claude Code config (`settings.json`, `statusline-command.sh`). The global rules are no longer here. They live as instruction files in `pivoshenko.ai/instructions` and sync via Kasetto into `~/.claude/CLAUDE.md`.
-- `dotfiles/.gitconfig` - Git config (editor: helix, pager: delta, GPG signing)
-- `dotfiles/.ssh/`, `dotfiles/.gnupg/` - SSH and GPG configs
-- `Brewfile` - all packages, casks, fonts, and LSPs
+Most entries map a whole directory (`d_*`). A few map a single file (`f_*`) because the destination directory holds runtime state that must not be clobbered - notably `f_herdr_config` (`~/.config/herdr` also holds sockets, logs, and session state) and `f_starship`.
 
-### Shell: Fish
+Adding a tool: create `dotfiles/.config/<tool>/`, add a `d_<tool>` (or `f_<tool>`) entry, and list it under a profile.
 
-Primary config in `dotfiles/.config/fish/`:
-- `config.fish` - initializes fzf, pyenv, starship, zoxide
-- `aliases.fish` - aliases for brew, git, docker, helm, kubernetes, uv
-- `exports.fish` - environment variables (EDITOR=hx, XDG paths, GPG_TTY)
-- `functions.fish` - custom functions (bakclean, venv, rgp)
-- `fish_plugins` - Fisher plugins
-- Local overrides: `~/.config/fish/local.fish` and `~/.config/fish/.secrets.fish` (gitignored)
+### Theming: three flavors, one active
 
-### Theme (morok / popil / vatra)
+Flavors are `morok`, `popil`, `vatra`; `popil` is currently active. Every themed tool has **all three flavors vendored side by side** under `dotfiles/.config/<tool>/themes/`, and a loader line elsewhere picks one. Sync writes the flavor files; `set_flavor.py` rewrites the loaders. These are strictly separate steps.
 
-Custom theme applied consistently to: fish, starship, helix, zed, ghostty, k9s, bottom, lazygit, zellij, bat, fastfetch, herdr, spicetify, zen, stylus (browser CSS), obsidian. Source: `github.com/pivoshenko/pivoshenko.theme`. All three flavors (morok, popil, vatra) are vendored side-by-side under each tool's themes/ directory; one is active at a time.
+`scripts/set_flavor.py` handles four categories, and any new themed tool must be added to the right one:
 
-**Sync (vendor every flavor):** `just sync-theme` from the `me/` root (script: `../scripts/sync_theme.py`) pulls all flavors from `../pivoshenko.theme/themes/dist`. Most tools load a theme file natively (ghostty, helix, zed, bat, k9s, lazygit theme, zellij, zen, spicetify, fish, fzf), and sync copies one file per flavor into `.config/<tool>/themes/<flavor>.<ext>`. The one config that can't include externally, `starship.toml`, has all three `[palettes.<flavor>]` blocks spliced in by sync, and the top-level `palette = "<flavor>"` picks the active one. Delta themes live in `.config/delta/themes/<flavor>.gitconfig`, all 3 included from `.gitconfig`; `[delta] features = "<flavor>"` picks.
+1. **Regex swap in a loader line** - `starship.toml` (`palette = `), `helix/config.toml` (`theme = `), `zellij/config.kdl`, `k9s/config.yaml` (`skin: `), `bat/config` (`--theme=`), `ghostty/config` (`theme = <f>.conf`), `.gitconfig` (`[delta] features = `), `zed/settings.json` (`theme.light` + `theme.dark`), `fish/config.fish` (`fish_config theme choose`), `fish/fzf.fish` (`themes/fzf-<f>.fish` + `$FZF_<F>`)
+2. **Whole file copied from `themes/<flavor>.<ext>`** - `bottom/bottom.toml`, `fastfetch/config.jsonc`, `herdr/config.toml`. These configs are *only* theme, so they are replaced wholesale; never hand-edit them, edit the vendored flavor file
+3. **Spliced block** - `lazygit/config.yml`, where the surrounding config is hand-maintained so only the `gui.theme:` block is replaced from `lazygit/themes/<flavor>.yml`
+4. **Path rewrite in `dotdrop.config.yaml`** - Zen ships a directory per flavor (`.config/zen/<flavor>/userC*.css`), so the flavor lives in the `src:` path, not inside the file
 
-**Activate (flip the active flavor):** `just set-flavor <flavor>` (script: `scripts/set_flavor.py`) rewrites every loader in this repository to point at the chosen flavor: `palette = ...`, `theme = ...`, `features = ...`, `skin: ...`, `--theme=...`, ghostty `theme = <f>.conf`, `source themes/fzf-<f>.fish`, `$FZF_<F>`, zed `theme.{light,dark}`, fish `fish_config theme choose`. Configs with no include mechanism are rewritten wholesale from their `themes/<f>.*` file: `.config/bottom/bottom.toml` (from `bottom/themes/<f>.toml`), `.config/fastfetch/config.jsonc` (from `fastfetch/themes/<f>.jsonc`), `.config/herdr/config.toml` (from `herdr/themes/<f>.toml`), and the `gui.theme:` block in `lazygit/config.yml` (spliced from `lazygit/themes/<f>.yml`). Zen `src:` paths in `dotdrop.config.yaml` are flipped too. After running, `just dotfiles` deploys onto the system. For tools whose theme is picked by a UI/CLI (Stylus, Obsidian, Spicetify, VSCode), switch inside the tool; sync still drops every flavor file in place.
+Two configs cannot include an external palette, so both carry all three inline: `starship.toml` has `[palettes.morok|popil|vatra]` blocks spliced in by sync with `palette = "<flavor>"` choosing; `.gitconfig` includes all three `delta/themes/<flavor>.gitconfig` files with `[delta] features` choosing.
+
+Tools whose theme is picked by their own UI or CLI are outside `set-flavor`: Spicetify (`just spicetify <flavor>`), Obsidian (appearance settings), Stylus, Telegram, Discord/Vesktop, VSCode. Sync still drops every flavor file into place for them.
+
+After `just set-flavor`, run `just dotfiles` to deploy.
+
+### Shell: fish
+
+`dotfiles/.config/fish/config.fish` is the entry point: initializes fzf, pyenv, starship, zoxide; sources `aliases.fish`, `exports.fish`, `fzf.fish`, `functions.fish`, `vimode.fish`; then optionally `local.fish` and `.secrets.fish` (untracked, machine-local); then picks the fish theme. `exports.fish` uses `set -Ux` (universal + exported) - values persist in fish's universal variable store, so removing a line here does not unset it on an already-configured machine.
+
+### Claude Code config
+
+`dotfiles/.claude/` holds only `settings.json` and `statusline-command.sh`. The global rules are **not** in this repository: they live as instruction files in `pivoshenko/pivoshenko.ai` under `instructions/` and sync into `~/.claude/CLAUDE.md` via Kasetto, along with skills and MCP servers.
 
 ## Conventions
 
-- Formatting: UTF-8, LF line endings, 2-space indent (4 for Python), 120-char max line length, trailing whitespace trimmed (see `.editorconfig`)
-- Font: JetBrains Mono Nerd Font everywhere
-- Adding a new tool config: create directory under `dotfiles/.config/<tool>/`, add a dotfile entry in `dotdrop.config.yaml`, and include it in the appropriate profile
-- Wording: never use "repo", always write "repository" in prose, comments, and commit messages
-- Python module docstrings open with `Module that contains ...`; `__init__.py` opens with `Package that contains ...`
+- `.editorconfig`: UTF-8, LF, 2-space indent (4 for Python and Rust), 120-char lines, trailing whitespace trimmed, final newline
+- Config files use `# == Section ==` banner comments for grouping (`Brewfile`, fish configs, `dotdrop.config.yaml`, the scripts)
+- Prose, comments, and commit messages say "repository", never "repo"
+- Python module docstrings open with `Module that contains ...`; `__init__.py` with `Package that contains ...`
+- Commits follow Angular conventional commits with a tool-named scope where it applies (`feat(fish):`, `docs(readme):`, `feat(brew):`)
+- JetBrains Mono Nerd Font everywhere
+- Vendored theme files under any `themes/` directory are generated by sync - fix them in `pivoshenko.theme` and re-sync, do not patch them here
