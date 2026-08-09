@@ -77,6 +77,9 @@ dotfiles:
   d_zellij:
     dst: ~/.config/zellij
     src: .config/zellij
+  f_herdr_config:
+    dst: ~/.config/herdr/config.toml
+    src: .config/herdr/config.toml
   f_starship:
     dst: ~/.config/starship.toml
     src: .config/starship.toml
@@ -124,6 +127,7 @@ profiles:
       - f_claude_settings
       - f_claude_statusline
       - f_gitconfig
+      - f_herdr_config
       - f_starship
 
   me:
