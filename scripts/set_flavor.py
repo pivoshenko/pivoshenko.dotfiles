@@ -1,20 +1,4 @@
-#!/usr/bin/env python3
-"""Activate a theme flavor across every loader in this dotfiles repo.
-
-Usage: python3 scripts/set_flavor.py <morok|popil|vatra>
-       just set-flavor <flavor>
-
-All three flavors live under each tool's themes/ directory (vendored by
-`just sync-theme` at the `me/` root). This script flips the *active* flavor
-reference in every loader: theme-name strings (`palette = "..."`, `theme = "..."`,
-`features = "..."`, etc.), source paths (fzf, ghostty), the bottom config
-(no native include), the lazygit gui.theme block (no native include), and the
-zen path in dotdrop.config.yaml.
-
-After running, deploy with `just dotfiles` to copy configs onto the system.
-For tools whose theme is selected by a UI/CLI (vscode, stylus, obsidian,
-spicetify), this script can't flip it — switch inside the tool itself.
-"""
+"""Activate a theme flavor across every loader."""
 
 import pathlib
 import re
@@ -47,12 +31,12 @@ print(f"set-flavor: flavor={F}")
 
 # == simple regex swaps ==
 
-edit(".config/starship.toml", lambda t: re.sub(r'^palette = "\w+"', f'palette = "{F}"', t, count=1, flags=re.M))
-edit(".config/helix/config.toml", lambda t: re.sub(r'^theme = "\w+"', f'theme = "{F}"', t, count=1, flags=re.M))
-edit(".config/zellij/config.kdl", lambda t: re.sub(r'^theme "\w+"', f'theme "{F}"', t, count=1, flags=re.M))
+edit(".config/starship.toml", lambda t: re.sub(r'^palette = "\w+"', f'palette = "{F}"', t, count=1, flags=re.MULTILINE))
+edit(".config/helix/config.toml", lambda t: re.sub(r'^theme = "\w+"', f'theme = "{F}"', t, count=1, flags=re.MULTILINE))
+edit(".config/zellij/config.kdl", lambda t: re.sub(r'^theme "\w+"', f'theme "{F}"', t, count=1, flags=re.MULTILINE))
 edit(".config/k9s/config.yaml", lambda t: re.sub(r"skin: \w+", f"skin: {F}", t, count=1))
 edit(".config/bat/config", lambda t: re.sub(r'--theme="\w+"', f'--theme="{F}"', t, count=1))
-edit(".config/ghostty/config", lambda t: re.sub(r"^theme = \w+\.conf", f"theme = {F}.conf", t, count=1, flags=re.M))
+edit(".config/ghostty/config", lambda t: re.sub(r"^theme = \w+\.conf", f"theme = {F}.conf", t, count=1, flags=re.MULTILINE))
 edit(".gitconfig", lambda t: re.sub(r'(\[delta\]\nfeatures = )"\w+"', rf'\1"{F}"', t, count=1))
 
 edit(
@@ -107,7 +91,7 @@ def patch_lazygit(text: str) -> str:
         lg_block,
         text,
         count=1,
-        flags=re.M,
+        flags=re.MULTILINE,
     )
 
 
