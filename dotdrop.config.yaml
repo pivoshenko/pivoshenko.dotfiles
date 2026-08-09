@@ -82,9 +82,6 @@ dotfiles:
     src: .config/starship.toml
 
   # == iCloud (Obsidian vault) ==
-  # Obsidian stores config inside the vault at <vault>/.obsidian — only the
-  # theme + snippet dirs are tracked here; everything else (workspace, plugins,
-  # app state) stays vault-owned. ~/Vault symlinks to the iCloud path (see vault-link recipe).
   d_obsidian_themes:
     dst: "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault/.obsidian/themes"
     src: .config/obsidian/themes
@@ -93,8 +90,6 @@ dotfiles:
     src: .config/obsidian/snippets
 
   # == ~/Library/Application Support ==
-  # zen reads chrome CSS from the active browser profile; the profile id below is
-  # machine-specific — update it (and re-run install) if the zen profile changes.
   f_zen_userchrome:
     dst: "~/Library/Application Support/zen/Profiles/6im8xt7o.Default (release)/chrome/userChrome.css"
     src: .config/zen/popil/userChrome.css
