@@ -1,3 +1,5 @@
+"""Module that contains the IPython startup script that enables vi mode and autoreload."""
+
 from IPython import get_ipython  # type: ignore[attr-defined]
 
 ipython = get_ipython()

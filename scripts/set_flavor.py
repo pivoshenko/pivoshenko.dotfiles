@@ -1,4 +1,4 @@
-"""Activate a theme flavor across every loader."""
+"""Module that contains the script that activates a theme flavor across every loader."""
 
 import pathlib
 import re
