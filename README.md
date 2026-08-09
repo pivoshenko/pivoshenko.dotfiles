@@ -15,7 +15,7 @@ My personal dotfiles. The whole thing leans on three ideas: keep it minimal, kee
 - [Claude Code](https://claude.com/claude-code) setup, `settings.json` and statusline, in [`dotfiles/.claude/`](dotfiles/.claude) (global rules sync via Kasetto, see below)
 - Git, SSH, GPG in [`.gitconfig`](dotfiles/.gitconfig), [`.ssh/`](dotfiles/.ssh), [`.gnupg/`](dotfiles/.gnupg)
 
-## Main principles
+## Main Principles
 
 - Minimalism, consistency, simplicity
 - One unified look via [pivoshenko.theme](https://github.com/pivoshenko/pivoshenko.theme). Right now I'm running **Popil** (warm ash, muted terracotta). **Morok** (pitch black, cool accents) and **Vatra** (Carpathian hearth, gruvbox-warm) are vendored alongside it
