@@ -59,10 +59,14 @@ def patch_fzf(text: str) -> str:
 edit(".config/fish/fzf.fish", patch_fzf)
 
 
-# == bottom + fastfetch: whole config is the theme; replace from themes/<F>.* ==
-for name, ext in (("bottom", "toml"), ("fastfetch", "jsonc")):
+# == bottom + fastfetch + herdr: whole config is the theme; replace from themes/<F>.* ==
+for name, ext, filename in (
+    ("bottom", "toml", "bottom.toml"),
+    ("fastfetch", "jsonc", "config.jsonc"),
+    ("herdr", "toml", "config.toml"),
+):
     src = DOT / f".config/{name}/themes/{F}.{ext}"
-    dst = DOT / f".config/{name}/{'bottom.toml' if name == 'bottom' else 'config.jsonc'}"
+    dst = DOT / f".config/{name}/{filename}"
     if src.read_text() != dst.read_text():
         shutil.copyfile(src, dst)
         print(f"  patch  {dst.relative_to(DOT)} (← themes/{F}.{ext})")

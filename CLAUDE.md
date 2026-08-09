@@ -36,7 +36,7 @@ Files are copied, not symlinked (`link_dotfile_default: nolink`). No Jinja2 temp
 
 ### Directory Layout
 
-- `dotfiles/.config/` — XDG config home: fish, helix, ghostty, bat, delta, k9s, lazygit, zed, zellij, karabiner, rectangle, bottom, fastfetch, spicetify, stylus, zen (dirs), plus `starship.toml` (single file)
+- `dotfiles/.config/` — XDG config home: fish, helix, ghostty, bat, delta, k9s, lazygit, zed, zellij, karabiner, rectangle, bottom, fastfetch, spicetify, stylus, zen (dirs), plus `starship.toml` and `herdr/config.toml` (single files — herdr's directory also holds sockets, logs, and session state, so only the config file is managed)
 - `dotfiles/.claude/` — Claude Code config (`settings.json`, `statusline-command.sh`). The global rules are no longer here — they live as instruction files in `pivoshenko.ai/instructions` and sync via Kasetto into `~/.claude/CLAUDE.md`.
 - `dotfiles/.gitconfig` — Git config (editor: helix, pager: delta, GPG signing)
 - `dotfiles/.ssh/`, `dotfiles/.gnupg/` — SSH and GPG configs
@@ -54,11 +54,11 @@ Primary config in `dotfiles/.config/fish/`:
 
 ### Theme (morok / popil / vatra)
 
-Custom theme applied consistently to: fish, starship, helix, zed, ghostty, k9s, bottom, lazygit, zellij, bat, fastfetch, spicetify, zen, stylus (browser CSS), obsidian. Source: `github.com/pivoshenko/pivoshenko.theme`. All three flavors — **morok**, **popil**, **vatra** — are vendored side-by-side under each tool's themes/ directory; one is active at a time.
+Custom theme applied consistently to: fish, starship, helix, zed, ghostty, k9s, bottom, lazygit, zellij, bat, fastfetch, herdr, spicetify, zen, stylus (browser CSS), obsidian. Source: `github.com/pivoshenko/pivoshenko.theme`. All three flavors — **morok**, **popil**, **vatra** — are vendored side-by-side under each tool's themes/ directory; one is active at a time.
 
 **Sync (vendor every flavor):** `just sync-theme` from the `me/` root (script: `../scripts/sync_theme.py`) pulls all flavors from `../pivoshenko.theme/themes/dist`. Most tools load a theme file natively (ghostty, helix, zed, bat, k9s, lazygit theme, zellij, zen, spicetify, fish, fzf) — sync copies one file per flavor into `.config/<tool>/themes/<flavor>.<ext>`. The one config that can't include externally — `starship.toml` — has all three `[palettes.<flavor>]` blocks spliced in by sync, and the top-level `palette = "<flavor>"` picks the active one. Delta themes live in `.config/delta/themes/<flavor>.gitconfig`, all 3 included from `.gitconfig`; `[delta] features = "<flavor>"` picks.
 
-**Activate (flip the active flavor):** `just set-flavor <flavor>` (script: `scripts/set_flavor.py`) rewrites every loader in this repository to point at the chosen flavor — `palette = …`, `theme = …`, `features = …`, `skin: …`, `--theme=…`, ghostty `theme = <f>.conf`, `source themes/fzf-<f>.fish`, `$FZF_<F>`, zed `theme.{light,dark}`, fish `fish_config theme choose`. Configs with no include mechanism are rewritten wholesale from their `themes/<f>.*` file: `.config/bottom/bottom.toml` (← `bottom/themes/<f>.toml`), `.config/fastfetch/config.jsonc` (← `fastfetch/themes/<f>.jsonc`), and the `gui.theme:` block in `lazygit/config.yml` (spliced from `lazygit/themes/<f>.yml`). Zen `src:` paths in `dotdrop.config.yaml` are flipped too. After running, `just dotfiles` deploys onto the system. For tools whose theme is picked by a UI/CLI (Stylus, Obsidian, Spicetify, VSCode), switch inside the tool — sync still drops every flavor file in place.
+**Activate (flip the active flavor):** `just set-flavor <flavor>` (script: `scripts/set_flavor.py`) rewrites every loader in this repository to point at the chosen flavor — `palette = …`, `theme = …`, `features = …`, `skin: …`, `--theme=…`, ghostty `theme = <f>.conf`, `source themes/fzf-<f>.fish`, `$FZF_<F>`, zed `theme.{light,dark}`, fish `fish_config theme choose`. Configs with no include mechanism are rewritten wholesale from their `themes/<f>.*` file: `.config/bottom/bottom.toml` (← `bottom/themes/<f>.toml`), `.config/fastfetch/config.jsonc` (← `fastfetch/themes/<f>.jsonc`), `.config/herdr/config.toml` (← `herdr/themes/<f>.toml`), and the `gui.theme:` block in `lazygit/config.yml` (spliced from `lazygit/themes/<f>.yml`). Zen `src:` paths in `dotdrop.config.yaml` are flipped too. After running, `just dotfiles` deploys onto the system. For tools whose theme is picked by a UI/CLI (Stylus, Obsidian, Spicetify, VSCode), switch inside the tool — sync still drops every flavor file in place.
 
 ## Conventions
 
