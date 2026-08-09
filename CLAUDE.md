@@ -66,3 +66,4 @@ Custom theme applied consistently to: fish, starship, helix, zed, ghostty, k9s, 
 - Font: JetBrains Mono Nerd Font everywhere
 - Adding a new tool config: create directory under `dotfiles/.config/<tool>/`, add a dotfile entry in `dotdrop.config.yaml`, and include it in the appropriate profile
 - Wording: never use "repo", always write "repository" in prose, comments, and commit messages
+- Python module docstrings open with `Module that contains ...`; `__init__.py` opens with `Package that contains ...`
