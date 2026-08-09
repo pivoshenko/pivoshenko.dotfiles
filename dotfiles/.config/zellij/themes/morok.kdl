@@ -1,6 +1,5 @@
 themes {
   morok {
-    // == Status / mode bar text ==
     text_unselected {
       base "#d6d3d1"
       background "#0d0d0d"
@@ -18,8 +17,6 @@ themes {
       emphasis_3 "#9faece"
     }
 
-    // == Tabs (ribbons) ==
-    // active tab: bright accent, prominent
     ribbon_selected {
       base "#0d0d0d"
       background "#7f98bf"
@@ -28,9 +25,6 @@ themes {
       emphasis_2 "#8ea98c"
       emphasis_3 "#9faece"
     }
-    // inactive tab: muted chip
-    // emphasis_1 is the tab-bar "alternate tab" colour (zebra striping) -- keep
-    // it a subtle bg step so every other tab doesn't turn a loud accent colour
     ribbon_unselected {
       base "#d6d3d1"
       background "#191919"
@@ -40,7 +34,6 @@ themes {
       emphasis_3 "#9faece"
     }
 
-    // == Tables (session manager, etc.) ==
     table_title {
       base "#7f98bf"
       background "#0d0d0d"
@@ -66,7 +59,6 @@ themes {
       emphasis_3 "#9faece"
     }
 
-    // == Lists (fuzzy finders, pickers) ==
     list_selected {
       base "#e7e5e4"
       background "#212121"
@@ -84,7 +76,6 @@ themes {
       emphasis_3 "#9faece"
     }
 
-    // == Pane frames ==
     frame_selected {
       base "#7f98bf"
       background "#0d0d0d"
@@ -102,7 +93,6 @@ themes {
       emphasis_3 "#d97777"
     }
 
-    // == Exit codes ==
     exit_code_success {
       base "#8ea98c"
       background "#0d0d0d"
@@ -120,7 +110,6 @@ themes {
       emphasis_3 "#7f98bf"
     }
 
-    // == Collaborators ==
     multiplayer_user_colors {
       player_1 "#7f98bf"
       player_2 "#7ea59d"
