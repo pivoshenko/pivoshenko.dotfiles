@@ -148,7 +148,7 @@ user_pref("zen.workspaces.hide-deactivated-workspaces", true);
 user_pref("zen.workspaces.hide-default-container-indicator", false);
 user_pref("zen.workspaces.individual-pinned-tabs", false);
 
-// Archenfox fixes:
+// Arkenfox fixes:
 
 // Do not clear history on shutdown:
 user_pref("privacy.cpd.cache", false); // [DEFAULT: true]
