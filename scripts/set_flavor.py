@@ -69,12 +69,12 @@ for name, ext, filename in (
     dst = DOT / f".config/{name}/{filename}"
     if src.read_text() != dst.read_text():
         shutil.copyfile(src, dst)
-        print(f"  patch  {dst.relative_to(DOT)} (← themes/{F}.{ext})")
+        print(f"  patch  {dst.relative_to(DOT)} (<- themes/{F}.{ext})")
     else:
         print(f"  ok     {dst.relative_to(DOT)}")
 
 
-# == lazygit: gui.theme is hand-maintained around. Splice from themes/<F>.yml ==
+# == lazygit: the rest of config.yml is hand-maintained, so splice gui.theme from themes/<F>.yml ==
 dist_lg = (DOT / f".config/lazygit/themes/{F}.yml").read_text().splitlines()
 theme_body: list[str] = []
 in_theme = False
@@ -107,7 +107,6 @@ def patch_dotdrop(text: str) -> str:
     return re.sub(r"(src: \.config/zen/)\w+(/userC)", rf"\1{F}\2", text)
 
 
-# dotdrop.config.yaml lives one level up from dotfiles/, in the repo root.
 ddrop = ROOT / "dotdrop.config.yaml"
 before = ddrop.read_text()
 after = patch_dotdrop(before)
@@ -117,4 +116,4 @@ if before != after:
 else:
     print("  ok     dotdrop.config.yaml")
 
-print("set-flavor: done — run `just dotfiles` to deploy onto the system")
+print("set-flavor: done, run `just dotfiles` to deploy onto the system")
