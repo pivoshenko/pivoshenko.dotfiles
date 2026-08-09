@@ -30,7 +30,6 @@
     ],
     "defaultMode": "auto"
   },
-  "model": "claude-fable-5[1m]",
   "includeCoAuthoredBy": false,
   "tui": "fullscreen",
   "statusLine": {
