@@ -1,3 +1,5 @@
+"""Module that contains the IPython profile configuration for vi-mode editing and cursor shape."""
+
 import sys
 
 from prompt_toolkit.key_binding.vi_state import (  # pyright: ignore[reportMissingImports]
