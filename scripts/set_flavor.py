@@ -59,11 +59,10 @@ def patch_fzf(text: str) -> str:
 edit(".config/fish/fzf.fish", patch_fzf)
 
 
-# == bottom + fastfetch + herdr: whole config is the theme; replace from themes/<F>.* ==
+# == bottom + fastfetch: whole config is the theme; replace from themes/<F>.* ==
 for name, ext, filename in (
     ("bottom", "toml", "bottom.toml"),
     ("fastfetch", "jsonc", "config.jsonc"),
-    ("herdr", "toml", "config.toml"),
 ):
     src = DOT / f".config/{name}/themes/{F}.{ext}"
     dst = DOT / f".config/{name}/{filename}"
@@ -72,6 +71,12 @@ for name, ext, filename in (
         print(f"  patch  {dst.relative_to(DOT)} (<- themes/{F}.{ext})")
     else:
         print(f"  ok     {dst.relative_to(DOT)}")
+
+
+# == herdr: the [keys] block is hand-maintained, so splice the theme from themes/<F>.toml ==
+herdr_theme = (DOT / f".config/herdr/themes/{F}.toml").read_text().rstrip() + "\n"
+
+edit(".config/herdr/config.toml", lambda t: herdr_theme + "\n" + t[t.index("# == Keys ==") :])
 
 
 # == lazygit: the rest of config.yml is hand-maintained, so splice gui.theme from themes/<F>.yml ==
