@@ -18,3 +18,59 @@ red = "#c87a72"
 blue = "#7ba0c4"
 teal = "#87a896"
 peach = "#d97757"
+
+# == Keys ==
+# Zellij's modes flattened onto herdr's single prefix: bare letters are
+# zellij's pane mode, shift is its tab mode, alt is herdr's spaces, and
+# ctrl carries the rest - zellij's move mode and herdr's agent panel
+[keys]
+prefix = "ctrl+b"
+
+# panes - zellij pane mode
+split_horizontal = "prefix+d"
+split_vertical = "prefix+r"
+close_pane = "prefix+x"
+zoom = "prefix+f"
+rename_pane = "prefix+c"
+cycle_pane_next = "prefix+p"
+cycle_pane_previous = "prefix+shift+tab"
+last_pane = "prefix+tab"
+focus_pane_left = "prefix+h"
+focus_pane_down = "prefix+j"
+focus_pane_up = "prefix+k"
+focus_pane_right = "prefix+l"
+resize_mode = "prefix+n"
+copy_mode = "prefix+["
+
+# tabs - zellij tab mode
+new_tab = "prefix+shift+n"
+rename_tab = "prefix+shift+r"
+close_tab = "prefix+shift+x"
+previous_tab = "prefix+shift+h"
+next_tab = "prefix+shift+l"
+switch_tab = "prefix+1..9"
+
+# spaces - no zellij equivalent, so the same letters one layer up
+new_workspace = "prefix+alt+n"
+rename_workspace = "prefix+alt+r"
+close_workspace = "prefix+alt+x"
+previous_workspace = "prefix+alt+h"
+next_workspace = "prefix+alt+l"
+switch_workspace = "prefix+alt+1..9"
+new_worktree = "prefix+alt+g"
+open_worktree = "prefix+alt+shift+g"
+remove_worktree = "prefix+alt+shift+x"
+
+# moving panes - zellij move mode, which has no flat equivalent
+swap_pane_left = "prefix+ctrl+h"
+swap_pane_down = "prefix+ctrl+j"
+swap_pane_up = "prefix+ctrl+k"
+swap_pane_right = "prefix+ctrl+l"
+
+# agents - herdr's own panel, so no zellij counterpart
+previous_agent = "prefix+ctrl+p"
+next_agent = "prefix+ctrl+n"
+focus_agent = "prefix+ctrl+1..9"
+
+# displaced by the tab layer
+reload_config = "prefix+ctrl+r"
