@@ -50,8 +50,8 @@ Flavors are `morok`, `popil`, `vatra`; `popil` is currently active. Every themed
 `scripts/set_flavor.py` handles four categories, and any new themed tool must be added to the right one:
 
 1. **Regex swap in a loader line** - `starship.toml` (`palette = `), `helix/config.toml` (`theme = `), `zellij/config.kdl`, `k9s/config.yaml` (`skin: `), `bat/config` (`--theme=`), `ghostty/config` (`theme = <f>.conf`), `.gitconfig` (`[delta] features = `), `zed/settings.json` (`theme.light` + `theme.dark`), `fish/config.fish` (`fish_config theme choose`), `fish/fzf.fish` (`themes/fzf-<f>.fish` + `$FZF_<F>`)
-2. **Whole file copied from `themes/<flavor>.<ext>`** - `bottom/bottom.toml`, `fastfetch/config.jsonc`, `herdr/config.toml`. These configs are *only* theme, so they are replaced wholesale; never hand-edit them, edit the vendored flavor file
-3. **Spliced block** - `lazygit/config.yml`, where the surrounding config is hand-maintained so only the `gui.theme:` block is replaced from `lazygit/themes/<flavor>.yml`
+2. **Whole file copied from `themes/<flavor>.<ext>`** - `bottom/bottom.toml`, `fastfetch/config.jsonc`. These configs are *only* theme, so they are replaced wholesale; never hand-edit them, edit the vendored flavor file
+3. **Spliced block** - `lazygit/config.yml`, where the surrounding config is hand-maintained so only the `gui.theme:` block is replaced from `lazygit/themes/<flavor>.yml`, and `herdr/config.toml`, where everything above the `# == Keys ==` banner is replaced from `herdr/themes/<flavor>.toml` and the `[keys]` block below it is hand-maintained
 4. **Path rewrite in `dotdrop.config.yaml`** - Zen ships a directory per flavor (`.config/zen/<flavor>/userC*.css`), so the flavor lives in the `src:` path, not inside the file
 
 Two configs cannot include an external palette, so both carry all three inline: `starship.toml` has `[palettes.morok|popil|vatra]` blocks spliced in by sync with `palette = "<flavor>"` choosing; `.gitconfig` includes all three `delta/themes/<flavor>.gitconfig` files with `[delta] features` choosing.
