@@ -3,14 +3,33 @@ input=$(cat)
 
 # == Directory ==
 dir=$(echo "$input" | jq -r '.workspace.current_dir // .cwd')
-short_dir=$(echo "$dir" | sed "s|$HOME|~|")
+short_dir=$(basename "$dir")
 
-# == Git branch ==
+# == Git branch and status ==
 branch=$(git -C "$dir" symbolic-ref --short HEAD 2>/dev/null \
   || git -C "$dir" rev-parse --short HEAD 2>/dev/null)
 if [ -n "$branch" ]; then
-  dirty=$(git -C "$dir" status --porcelain --ignore-submodules 2>/dev/null)
-  [ -n "$dirty" ] && branch="${branch}*"
+  # +staged ~unstaged ?untracked
+  counts=$(git -C "$dir" status --porcelain --ignore-submodules 2>/dev/null | awk '
+    /^\?\?/ { untracked++; next }
+    { x = substr($0, 1, 1); y = substr($0, 2, 1) }
+    x != " " { staged++ }
+    y != " " { unstaged++ }
+    END {
+      if (staged)    printf " +%d", staged
+      if (unstaged)  printf " ~%d", unstaged
+      if (untracked) printf " ?%d", untracked
+    }
+  ')
+  # up/down against the upstream branch, if any
+  tracking=$(git -C "$dir" rev-list --left-right --count '@{upstream}...HEAD' 2>/dev/null)
+  if [ -n "$tracking" ]; then
+    behind=$(echo "$tracking" | awk '{print $1}')
+    ahead=$(echo "$tracking" | awk '{print $2}')
+    [ "$ahead" -gt 0 ] 2>/dev/null && branch="$branch ↑$ahead"
+    [ "$behind" -gt 0 ] 2>/dev/null && branch="$branch ↓$behind"
+  fi
+  branch="${branch}${counts}"
 fi
 
 # == Context used ==
