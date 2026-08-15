@@ -74,3 +74,12 @@ focus_agent = "prefix+ctrl+1..9"
 
 # displaced by the tab layer
 reload_config = "prefix+ctrl+r"
+
+# navigate mode - j/k walk the space list like the up/down arrows, h/l stay on
+# panes like the left/right arrows, so vertical is spaces and horizontal is panes
+navigate_workspace_down = "j"
+navigate_workspace_up = "k"
+navigate_pane_left = "h"
+navigate_pane_right = "l"
+navigate_pane_down = ""
+navigate_pane_up = ""
