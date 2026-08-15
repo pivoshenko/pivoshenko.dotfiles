@@ -85,7 +85,7 @@ The full list of installed CLI tools is in the [`Brewfile`](Brewfile).
 
 [Claude Code](https://claude.com/claude-code) is my coding assistant. Config (`settings.json` plus a custom statusline): [`dotfiles/.claude`](dotfiles/.claude).
 
-Skills, MCPs, and instructions (the global `CLAUDE.md` / `AGENTS.md` rules) are distributed across hosts with [Kasetto](https://www.kasetto.dev/). The Kasetto config lives in [`pivoshenko/pivoshenko.ai`](https://github.com/pivoshenko/pivoshenko.ai), with personal and external sources both included.
+Skills, MCPs, and instructions (the global `CLAUDE.md` / `AGENTS.md` rules) are distributed across hosts with [Kasetto](https://kasetto.dev/). The Kasetto config lives in [`pivoshenko/pivoshenko.ai`](https://github.com/pivoshenko/pivoshenko.ai), with personal and external sources both included.
 
 The global rules used to be a single `CLAUDE.md` in this repository. They now live as individual instruction files in [`pivoshenko.ai/instructions`](https://github.com/pivoshenko/pivoshenko.ai/tree/main/instructions), with a structure loosely inspired by *Andrej Karpathy's CLAUDE.md*.
 
