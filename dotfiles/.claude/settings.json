@@ -23,6 +23,7 @@
       "Bash(pnpm:*)",
       "Bash(uv:*)",
       "Bash(just:*)",
+      "Bash(terraform:*)",
       "Bash(curl:*)",
       "Write",
       "Edit",
