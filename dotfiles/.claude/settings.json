@@ -39,6 +39,7 @@
   },
   "enabledPlugins": {},
   "effortLevel": "high",
+  "outputStyle": "Concise",
   "skipDangerousModePermissionPrompt": true,
   "theme": "dark-ansi",
   "agentPushNotifEnabled": true,
