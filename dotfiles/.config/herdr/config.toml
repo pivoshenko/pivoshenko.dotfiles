@@ -97,6 +97,12 @@ command = "lazygit"
 width = "80%"
 height = "80%"
 
+# zed on the focused pane's directory, detached so it never holds a pane
+[[keys.command]]
+key = "prefix+ctrl+e"
+type = "shell"
+command = 'zed "${HERDR_ACTIVE_PANE_CWD:-.}"'
+
 # == Agent panel ==
 # surface what each claude is actually working on rather than a bare label
 [ui.sidebar.agents.rows_by_agent]
