@@ -16,7 +16,6 @@ herdr-integration:
 
 herdr-plugins:
     herdr plugin install thanhdat77/herdr-navigator -y
-    herdr plugin install persiyanov/herdr-reviewr -y
 
 install: brew dotfiles vault-link herdr-integration herdr-plugins
 
