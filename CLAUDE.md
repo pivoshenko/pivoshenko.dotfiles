@@ -21,7 +21,7 @@ just brew                 # brew bundle --force --cleanup --upgrade
 just dotfiles             # dotdrop install for both profiles (default, me)
 just vault-link           # symlink the iCloud Obsidian vault to ~/Vault
 just herdr-integration    # reinstall the herdr agent-state hook for Claude Code
-just herdr-plugins        # reinstall the herdr plugins (navigator, reviewr)
+just herdr-plugins        # reinstall the herdr plugins (navigator)
 just set-flavor FLAVOR    # activate morok | popil | vatra across all loaders
 just spicetify FLAVOR     # spicetify config + apply (separate, not covered by set-flavor)
 ```
