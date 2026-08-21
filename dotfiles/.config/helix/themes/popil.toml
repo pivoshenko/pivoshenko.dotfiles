@@ -1,3 +1,5 @@
+# Syntax highlighting
+# -------------------
 "attribute" = "yellow"
 
 "type" = "yellow"
@@ -63,6 +65,8 @@
 "diff.minus" = "red"
 "diff.delta" = "blue"
 
+# User Interface
+# --------------
 "ui.background" = { fg = "fg_default", bg = "bg_canvas" }
 
 "ui.linenr" = { fg = "surface1" }
@@ -129,6 +133,7 @@ hint = "teal"
 rainbow = ["red", "peach", "yellow", "green", "sapphire", "lavender"]
 
 [palette]
+# Semantic roles
 bg_canvas = "#1f1f1e"
 bg_surface = "#262625"
 bg_raised = "#2e2e2c"
@@ -147,6 +152,7 @@ accent_success = "#8a9d68"
 accent_warning = "#d4a85a"
 accent_danger = "#c87a72"
 accent_info = "#7ba0c4"
+# Raw color slots
 rosewater = "#ddc7c2"
 flamingo = "#d97757"
 pink = "#c89aa4"
