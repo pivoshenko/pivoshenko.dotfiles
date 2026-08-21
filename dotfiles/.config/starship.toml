@@ -3,6 +3,7 @@
 palette = "popil"
 
 [palettes.morok]
+# Semantic roles
 bg_canvas = "#111111"
 bg_surface = "#191919"
 bg_raised = "#212121"
@@ -21,6 +22,7 @@ accent_success = "#8ea98c"
 accent_warning = "#d4b070"
 accent_danger = "#d97777"
 accent_info = "#7ea59d"
+# Raw color slots
 rosewater = "#e2cfc6"
 flamingo = "#d8b8aa"
 pink = "#d1b2c9"
@@ -49,6 +51,7 @@ mantle = "#0d0d0d"
 crust = "#000000"
 
 [palettes.popil]
+# Semantic roles
 bg_canvas = "#1f1f1e"
 bg_surface = "#262625"
 bg_raised = "#2e2e2c"
@@ -67,6 +70,7 @@ accent_success = "#8a9d68"
 accent_warning = "#d4a85a"
 accent_danger = "#c87a72"
 accent_info = "#7ba0c4"
+# Raw color slots
 rosewater = "#ddc7c2"
 flamingo = "#d97757"
 pink = "#c89aa4"
@@ -95,6 +99,7 @@ mantle = "#1a1a19"
 crust = "#151514"
 
 [palettes.vatra]
+# Semantic roles
 bg_canvas = "#1f1f1e"
 bg_surface = "#262625"
 bg_raised = "#2e2e2c"
@@ -113,6 +118,7 @@ accent_success = "#a9b665"
 accent_warning = "#e0b04a"
 accent_danger = "#ea6962"
 accent_info = "#89b482"
+# Raw color slots
 rosewater = "#ddc7a1"
 flamingo = "#ec7f3e"
 pink = "#ec7f3e"
