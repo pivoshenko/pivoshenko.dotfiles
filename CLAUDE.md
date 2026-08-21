@@ -16,11 +16,12 @@ Three moving parts:
 
 ```shell
 just                      # list every recipe
-just install              # brew + dotfiles + vault-link + herdr-integration
+just install              # brew + dotfiles + vault-link + herdr-integration + herdr-plugins
 just brew                 # brew bundle --force --cleanup --upgrade
 just dotfiles             # dotdrop install for both profiles (default, me)
 just vault-link           # symlink the iCloud Obsidian vault to ~/Vault
 just herdr-integration    # reinstall the herdr agent-state hook for Claude Code
+just herdr-plugins        # reinstall the herdr plugins (navigator, reviewr)
 just set-flavor FLAVOR    # activate morok | popil | vatra across all loaders
 just spicetify FLAVOR     # spicetify config + apply (separate, not covered by set-flavor)
 ```
@@ -70,6 +71,8 @@ After `just set-flavor`, run `just dotfiles` to deploy.
 `dotfiles/.claude/` holds only `settings.json` and `statusline-command.sh`. The global rules are **not** in this repository: they live as instruction files in `pivoshenko/pivoshenko.ai` under `instructions/` and sync into `~/.claude/CLAUDE.md` via Kasetto, along with skills and MCP servers.
 
 `settings.json` carries a `hooks.SessionStart` entry that runs herdr's agent-state hook, which is what lets the herdr sidebar report whether Claude is working, blocked, or idle. The hook *script* is herdr-managed and deliberately untracked - `herdr integration install claude` writes it to `~/.claude/hooks/herdr-agent-state.sh` and overwrites it on every update, so `just herdr-integration` restores it on a new machine.
+
+herdr plugins install into `~/.config/herdr/plugins/`, which is runtime state and therefore untracked - only `config.toml` is mapped. `just herdr-plugins` reinstalls them on a new machine; their `[[keys.command]]` bindings live in `config.toml` and are tracked. Note that `herdr server reload-config` does *not* validate plugin action ids: a binding naming a plugin that isn't installed reloads clean and simply does nothing.
 
 The `command` string must stay byte-identical to what herdr writes, absolute path and inner quotes included. herdr matches on that exact string to decide the hook is already present; rewrite it to `~/.claude/...` and herdr stops recognizing it and appends a second copy, so the hook fires twice.
 
