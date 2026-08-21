@@ -14,7 +14,11 @@ vault-link:
 herdr-integration:
     herdr integration install claude
 
-install: brew dotfiles vault-link herdr-integration
+herdr-plugins:
+    herdr plugin install thanhdat77/herdr-navigator -y
+    herdr plugin install persiyanov/herdr-reviewr -y
+
+install: brew dotfiles vault-link herdr-integration herdr-plugins
 
 # Activate a theme flavor (morok | popil | vatra) across every loader
 set-flavor FLAVOR:
