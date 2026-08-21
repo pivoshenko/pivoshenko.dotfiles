@@ -118,9 +118,3 @@ key = "prefix+ctrl+o"
 type = "plugin_action"
 command = "herdr-navigator.open"
 description = "navigator"
-
-[[keys.command]]
-key = "prefix+ctrl+d"
-type = "plugin_action"
-command = "persiyanov.reviewr.toggle"
-description = "reviewr"
