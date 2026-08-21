@@ -86,3 +86,22 @@ navigate_pane_left = "h"
 navigate_pane_right = "l"
 navigate_pane_down = ""
 navigate_pane_up = ""
+
+# == Commands ==
+# lazygit as a session-modal popup, so the pane layout stays untouched.
+# ctrl+g is the only free slot in the ctrl layer - alt+g is new_worktree
+[[keys.command]]
+key = "prefix+ctrl+g"
+type = "popup"
+command = "lazygit"
+width = "80%"
+height = "80%"
+
+# == Agent panel ==
+# surface what each claude is actually working on rather than a bare label
+[ui.sidebar.agents.rows_by_agent]
+claude = [["state_icon", "workspace", "tab"], ["terminal_title_stripped"], ["agent"]]
+
+# == Notifications ==
+[ui.toast]
+delivery = "system"

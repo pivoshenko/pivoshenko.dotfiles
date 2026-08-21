@@ -11,7 +11,10 @@ dotfiles:
 vault-link:
     ln -sfn "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault" ~/Vault
 
-install: brew dotfiles vault-link
+herdr-integration:
+    herdr integration install claude
+
+install: brew dotfiles vault-link herdr-integration
 
 # Activate a theme flavor (morok | popil | vatra) across every loader
 set-flavor FLAVOR:
