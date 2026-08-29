@@ -10,7 +10,9 @@ fd \
 --strip-cwd-prefix \
 --type f \
 --type l \
---follow
+--follow \
+--hidden \
+--exclude .git
 "
 
 set -Ux FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
