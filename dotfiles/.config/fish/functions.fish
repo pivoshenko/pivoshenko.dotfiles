@@ -75,3 +75,14 @@ function update
   kst sync -u
   __log_ok "System packages updated"
 end
+
+# == Fuzzy-find a file and open it in the editor ==
+function __fzf_edit
+  set -l file (fzf --height 60% --preview 'bat --style=numbers --color=always {}')
+  if test -n "$file"
+    commandline --replace "hx "(string escape -- $file)
+    commandline --function execute
+  else
+    commandline --function repaint
+  end
+end
