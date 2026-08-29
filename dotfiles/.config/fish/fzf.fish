@@ -16,7 +16,14 @@ fd \
 "
 
 set -Ux FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
-set -Ux FZF_ALT_C_COMMAND $FZF_DEFAULT_COMMAND
+set -Ux FZF_ALT_C_COMMAND "
+fd \
+--strip-cwd-prefix \
+--type d \
+--follow \
+--hidden \
+--exclude .git
+"
 
 # == Options ==
 set -Ux FZF_DEFAULT_OPTS " \
