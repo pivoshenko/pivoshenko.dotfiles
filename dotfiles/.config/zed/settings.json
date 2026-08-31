@@ -59,13 +59,6 @@
     "enabled": true,
   },
   // == Panels ==
-  "agent": {
-    "default_profile": "ask",
-    "dock": "left",
-    "tool_permissions": {
-      "default": "allow",
-    },
-  },
   "collaboration_panel": {
     "button": false,
     "dock": "right",
@@ -85,14 +78,6 @@
   },
   // == AI ==
   "disable_ai": true,
-  "edit_predictions": {
-    "copilot": {
-      "proxy": null,
-      "proxy_no_verify": null,
-    },
-    "mode": "eager",
-    "provider": "zed",
-  },
   // == Languages ==
   "languages": {
     "Python": {
@@ -106,7 +91,6 @@
   },
   // == File Scan Exclusions ==
   "file_scan_exclusions": [
-    // defaults
     "**/.git",
     "**/.svn",
     "**/.hg",
@@ -115,7 +99,6 @@
     "**/Thumbs.db",
     "**/.classpath",
     "**/.settings",
-    // python tooling caches
     "**/__pycache__",
     "**/*.pyc",
     "**/.ruff_cache",
@@ -130,11 +113,9 @@
     "**/*.egg-info",
     "**/.venv",
     "**/.import_linter_cache",
-    // js/next tooling caches
     "**/node_modules",
     "**/.next",
     "**/.turbo",
-    // build output
     "**/dist",
     "**/build",
     "**/.cache",

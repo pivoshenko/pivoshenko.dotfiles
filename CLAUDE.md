@@ -8,7 +8,7 @@ Personal macOS dotfiles. Not an application: there is no build, no test suite, a
 
 Three moving parts:
 
-- `Brewfile` - every cask, formula, font, and VSCode extension (`brew bundle`)
+- `Brewfile` - every cask, formula, and font (`brew bundle`)
 - `dotfiles/` - the config tree that gets deployed (`dotdrop`)
 - `scripts/set_flavor.py` - flips the active theme flavor across every tool's loader
 
@@ -16,9 +16,11 @@ Three moving parts:
 
 ```shell
 just                      # list every recipe
-just install              # brew + dotfiles + vault-link + herdr-integration + herdr-plugins
+just install              # brew + dotfiles + fish-plugins + bat-cache + vault-link + herdr-*
 just brew                 # brew bundle --force --cleanup --upgrade
 just dotfiles             # dotdrop install for both profiles (default, me)
+just fish-plugins         # bootstrap Fisher, then install everything in fish_plugins
+just bat-cache            # bat cache --build, required before bat can resolve --theme
 just vault-link           # symlink the iCloud Obsidian vault to ~/Vault
 just herdr-integration    # reinstall the herdr agent-state hook for Claude Code
 just herdr-plugins        # reinstall the herdr plugins (navigator)
@@ -51,20 +53,28 @@ Flavors are `morok`, `popil`, `vatra`; `popil` is currently active. Every themed
 
 `scripts/set_flavor.py` handles four categories, and any new themed tool must be added to the right one:
 
-1. **Regex swap in a loader line** - `starship.toml` (`palette = `), `helix/config.toml` (`theme = `), `zellij/config.kdl`, `k9s/config.yaml` (`skin: `), `bat/config` (`--theme=`), `ghostty/config` (`theme = <f>.conf`), `.gitconfig` (`[delta] features = `), `zed/settings.json` (`theme.light` + `theme.dark`), `fish/config.fish` (`fish_config theme choose`), `fish/fzf.fish` (`themes/fzf-<f>.fish` + `$FZF_<F>`)
+1. **Regex swap in a loader line** - `starship.toml` (`palette = `), `helix/config.toml` (`theme = `), `k9s/config.yaml` (`skin: `), `bat/config` (`--theme=`), `ghostty/config` (`theme = <f>.conf`), `.gitconfig` (`[delta] features = `), `zed/settings.json` (`theme.light` + `theme.dark`), `fish/config.fish` (`fish_config theme choose`), `fish/fzf.fish` (`themes/fzf-<f>.fish` + `$FZF_<F>`)
 2. **Whole file copied from `themes/<flavor>.<ext>`** - `bottom/bottom.toml`, `fastfetch/config.jsonc`. These configs are *only* theme, so they are replaced wholesale; never hand-edit them, edit the vendored flavor file
-3. **Spliced block** - `lazygit/config.yml`, where the surrounding config is hand-maintained so only the `gui.theme:` block is replaced from `lazygit/themes/<flavor>.yml`, and `herdr/config.toml`, where everything above the `# == Keys ==` banner is replaced from `herdr/themes/<flavor>.toml` and the `[keys]` block below it is hand-maintained
+3. **Spliced block** - `lazygit/config.yml`, where the surrounding config is hand-maintained so only the `gui.theme:` block is replaced from `lazygit/themes/<flavor>.yml`, and `herdr/config.toml`, where only the span from `[theme]` up to the `# == Keys ==` banner is replaced from `herdr/themes/<flavor>.toml`; both the preamble above `[theme]` (which carries `onboarding = false`) and the `[keys]` block below the banner are hand-maintained
 4. **Path rewrite in `dotdrop.config.yaml`** - Zen ships a directory per flavor (`.config/zen/<flavor>/userC*.css`), so the flavor lives in the `src:` path, not inside the file
 
 Two configs cannot include an external palette, so both carry all three inline: `starship.toml` has `[palettes.morok|popil|vatra]` blocks spliced in by sync with `palette = "<flavor>"` choosing; `.gitconfig` includes all three `delta/themes/<flavor>.gitconfig` files with `[delta] features` choosing.
 
-Tools whose theme is picked by their own UI or CLI are outside `set-flavor`: Spicetify (`just spicetify <flavor>`), Obsidian (appearance settings), Stylus, Telegram, Discord/Vesktop, VSCode. Sync still drops every flavor file into place for them.
+Tools whose theme is picked by their own UI or CLI are outside `set-flavor`: Spicetify (`just spicetify <flavor>`), Obsidian (appearance settings), Stylus, Telegram, Discord/Vesktop. Sync still drops every flavor file into place for them.
 
 After `just set-flavor`, run `just dotfiles` to deploy.
 
 ### Shell: fish
 
-`dotfiles/.config/fish/config.fish` is the entry point: initializes fzf, pyenv, starship, zoxide; sources `aliases.fish`, `exports.fish`, `fzf.fish`, `functions.fish`, `vimode.fish`; then optionally `local.fish` and `.secrets.fish` (untracked, machine-local); then picks the fish theme. `exports.fish` uses `set -Ux` (universal + exported) - values persist in fish's universal variable store, so removing a line here does not unset it on an already-configured machine.
+`dotfiles/.config/fish/config.fish` is the entry point: initializes fzf, pyenv, starship, zoxide; sources `aliases.fish`, `exports.fish`, `fzf.fish`, `functions.fish`, `vimode.fish`; then optionally `local.fish` and `.secrets.fish` (untracked, machine-local); then picks the fish theme. `exports.fish` uses `set -Ux` (universal + exported) - values persist in fish's universal variable store, so removing a line here does not unset it on an already-configured machine. PATH additions are the exception: they use `fish_add_path -g`, which is idempotent and stays out of the universal store.
+
+### Machine-local files
+
+Three files are deliberately untracked and must exist on each machine; nothing in this repository creates them:
+
+- `~/.gitconfig.local` - included by `.gitconfig` and the only place `[user]` lives. `.gitconfig` sets `useConfigOnly = true`, so without it git refuses to commit. It also holds `user.signingkey`, which is required because `commit.gpgsign = true` and the configured email is a GitHub noreply address that matches no GPG uid
+- `~/.config/fish/local.fish` - machine-specific shell setup
+- `~/.config/fish/.secrets.fish` - tokens and keys, never committed
 
 ### Claude Code config
 

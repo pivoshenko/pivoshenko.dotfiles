@@ -1,7 +1,0 @@
-// == Misc ==
-session_serialization false
-mouse_mode true
-
-// == Theme ==
-theme "popil"
-simplified_ui true

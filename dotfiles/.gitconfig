@@ -1,5 +1,5 @@
 [commit]
-gpgsign = false
+gpgsign = true
 
 [core]
 autocrlf = input

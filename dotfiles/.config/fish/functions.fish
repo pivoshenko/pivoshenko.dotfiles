@@ -42,7 +42,11 @@ end
 # == Iterate over sub-directories and pull Git repositories ==
 function gplr
   __log "Pulling all Git repositories under (pwd)"
-  find . -name ".git" -type d | sed 's/\/\.git//' | xargs -P10 -I{} sh -c 'echo "==> updating {}" && git -C {} fetch --all && git -C {} fetch --prune origin && git -C {} pull --rebase'
+  set -l steps 'echo "==> updating {}"' \
+    'git -C {} fetch --all' \
+    'git -C {} fetch --prune origin' \
+    'git -C {} pull --rebase'
+  find . -name ".git" -type d | sed 's/\/\.git//' | xargs -P10 -I{} sh -c (string join ' && ' $steps)
   __log_ok "Repositories updated"
 end
 
@@ -59,7 +63,10 @@ function gbc
     git branch -d $branch
   end
   __log "Deleting remote merged branches on origin"
-  for branch in (git branch -r --merged origin/$main | grep -vE "origin/($main|master|develop)\$|->" | sed 's|^\s*origin/||' | string trim)
+  set -l remote_merged (git branch -r --merged origin/$main \
+    | grep -vE "origin/($main|master|develop)\$|->" \
+    | sed 's|^\s*origin/||' | string trim)
+  for branch in $remote_merged
     __log "deleting remote origin/$branch"
     git push origin --delete $branch
   end
