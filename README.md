@@ -10,7 +10,7 @@
 
 My personal dotfiles. The whole thing leans on three ideas: keep it minimal, keep it consistent, and make every tool look like it belongs to the same family. What's here:
 
-- Brew dependencies (apps, fonts, LSPs, extensions) in [`Brewfile`](Brewfile)
+- Brew dependencies (apps, fonts, LSPs) in [`Brewfile`](Brewfile)
 - Apps and tools config in [`dotfiles/.config/`](dotfiles/.config)
 - [Claude Code](https://claude.com/claude-code) setup, `settings.json` and statusline, in [`dotfiles/.claude/`](dotfiles/.claude) (global rules sync via Kasetto, see below)
 - Git, SSH, GPG in [`.gitconfig`](dotfiles/.gitconfig), [`.ssh/`](dotfiles/.ssh), [`.gnupg/`](dotfiles/.gnupg)
@@ -34,10 +34,16 @@ Everything is managed with [dotdrop](https://github.com/deadc0de6/dotdrop) and d
 just install
 ```
 
-That runs `brew bundle` and deploys both dotdrop profiles. Need only one half? `just brew` or `just dotfiles`. Run `just` on its own to see every recipe.
+That runs `brew bundle`, deploys both dotdrop profiles, bootstraps Fisher and the fish plugins, builds the `bat` theme cache, links the vault, and reinstalls the herdr hook and plugins. Need only one part? Every step is its own recipe - run `just` on its own to see them.
+
+Three files stay untracked and have to be created by hand on a new machine:
+
+- `~/.gitconfig.local` - your `[user]` block. [`.gitconfig`](dotfiles/.gitconfig) sets `useConfigOnly = true`, so git refuses to commit until this exists. Commits are GPG-signed, so it also needs `signingkey = <your key id>`
+- `~/.config/fish/local.fish` - anything shell-related that is specific to this machine
+- `~/.config/fish/.secrets.fish` - tokens and keys
 
 > [!NOTE]
-> A couple of apps still want a manual step: **Telegram** and **Discord**, where the theme installs through each app's own UI. The relevant sections below spell out what to do.
+> A few things still want a manual step, because the app owns its own settings store rather than reading a file: **Telegram** and **Discord** (theme installs through the app's UI), **Obsidian** (theme picked in appearance settings), and **Stylus** and **Rectangle** (import the exported JSON). The relevant sections below spell out what to do.
 
 ## Terminal - Ghostty
 
@@ -64,7 +70,6 @@ The tools I reach for every day, all configured under [`.config/`](dotfiles/.con
 - [K9s](https://github.com/derailed/k9s) - a Kubernetes UI that keeps me out of `kubectl get pods | grep`
 - [LazyGit](https://github.com/jesseduffield/lazygit) - staging, rebases, and cherry-picks at TUI speed. It replaced every GUI git client I used to run
 - [LazyDocker](https://github.com/jesseduffield/lazydocker) - the same idea as LazyGit, pointed at containers and compose stacks
-- [Zellij](https://github.com/zellij-org/zellij) - `tmux` with a discoverable UI and defaults I don't have to fight
 - [Zoxide](https://github.com/ajeetdsouza/zoxide) - a smarter `cd` that learns the directories you actually use. Type `z foo` and you're there
 
 The full list of installed CLI tools is in the [`Brewfile`](Brewfile).
@@ -105,7 +110,7 @@ Config: [`dotfiles/.config/karabiner/karabiner.json`](dotfiles/.config/karabiner
 
 ### Tiling Window Manager - Rectangle
 
-[Rectangle](https://rectangleapp.com/) gives me i3-style tiling on macOS. I tried yabai and Aerospace first; Rectangle won on the boring but decisive point of surviving every macOS update without any SIP gymnastics. Config: [`dotfiles/.config/rectangle/config.json`](dotfiles/.config/rectangle/config.json).
+[Rectangle](https://rectangleapp.com/) gives me i3-style tiling on macOS. I tried yabai and Aerospace first; Rectangle won on the boring but decisive point of surviving every macOS update without any SIP gymnastics. Config: [`dotfiles/.config/rectangle/config.json`](dotfiles/.config/rectangle/config.json). Rectangle keeps its live settings in its own preferences plist, so this file is an export - import it from *Preferences -> ... -> Import*, the same way the Stylus and Telegram themes go in.
 
 ## Browser - Zen
 

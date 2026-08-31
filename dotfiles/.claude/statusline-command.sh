@@ -9,7 +9,6 @@ short_dir=$(basename "$dir")
 branch=$(git -C "$dir" symbolic-ref --short HEAD 2>/dev/null \
   || git -C "$dir" rev-parse --short HEAD 2>/dev/null)
 if [ -n "$branch" ]; then
-  # +staged ~unstaged ?untracked
   counts=$(git -C "$dir" status --porcelain --ignore-submodules 2>/dev/null | awk '
     /^\?\?/ { untracked++; next }
     { x = substr($0, 1, 1); y = substr($0, 2, 1) }
@@ -21,7 +20,6 @@ if [ -n "$branch" ]; then
       if (untracked) printf " ?%d", untracked
     }
   ')
-  # up/down against the upstream branch, if any
   tracking=$(git -C "$dir" rev-list --left-right --count '@{upstream}...HEAD' 2>/dev/null)
   if [ -n "$tracking" ]; then
     behind=$(echo "$tracking" | awk '{print $1}')

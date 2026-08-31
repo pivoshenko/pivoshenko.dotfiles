@@ -33,16 +33,24 @@ print(f"set-flavor: flavor={F}")
 
 edit(".config/starship.toml", lambda t: re.sub(r'^palette = "\w+"', f'palette = "{F}"', t, count=1, flags=re.MULTILINE))
 edit(".config/helix/config.toml", lambda t: re.sub(r'^theme = "\w+"', f'theme = "{F}"', t, count=1, flags=re.MULTILINE))
-edit(".config/zellij/config.kdl", lambda t: re.sub(r'^theme "\w+"', f'theme "{F}"', t, count=1, flags=re.MULTILINE))
 edit(".config/k9s/config.yaml", lambda t: re.sub(r"skin: \w+", f"skin: {F}", t, count=1))
 edit(".config/bat/config", lambda t: re.sub(r'--theme="\w+"', f'--theme="{F}"', t, count=1))
-edit(".config/ghostty/config", lambda t: re.sub(r"^theme = \w+\.conf", f"theme = {F}.conf", t, count=1, flags=re.MULTILINE))
+edit(
+    ".config/ghostty/config",
+    lambda t: re.sub(r"^theme = \w+\.conf", f"theme = {F}.conf", t, count=1, flags=re.MULTILINE),
+)
 edit(".gitconfig", lambda t: re.sub(r'(\[delta\]\nfeatures = )"\w+"', rf'\1"{F}"', t, count=1))
 
-edit(
-    ".config/zed/settings.json",
-    lambda t: re.sub(r'("light":\s*)"\w+"', rf'\1"{F}"', re.sub(r'("dark":\s*)"\w+"', rf'\1"{F}"', t, count=1), count=1),
-)
+
+def patch_zed(text: str) -> str:
+    def swap(block: str) -> str:
+        block = re.sub(r'("light":\s*)"\w+"', rf'\1"{F}"', block, count=1)
+        return re.sub(r'("dark":\s*)"\w+"', rf'\1"{F}"', block, count=1)
+
+    return re.sub(r'"theme":\s*\{[^}]*\}', lambda m: swap(m.group(0)), text, count=1)
+
+
+edit(".config/zed/settings.json", patch_zed)
 
 edit(
     ".config/fish/config.fish",
@@ -52,7 +60,9 @@ edit(
 
 def patch_fzf(text: str) -> str:
     text = re.sub(r"themes/fzf-\w+\.fish", f"themes/fzf-{F}.fish", text, count=1)
-    text = re.sub(r"\$FZF_\w+", f"$FZF_{F.upper()}", text, count=1)
+    text = re.sub(
+        r"^(set -Ux FZF_THEME )\$FZF_\w+", rf"\1$FZF_{F.upper()}", text, count=1, flags=re.MULTILINE
+    )
     return text
 
 
@@ -73,10 +83,17 @@ for name, ext, filename in (
         print(f"  ok     {dst.relative_to(DOT)}")
 
 
-# == herdr: the [keys] block is hand-maintained, so splice the theme from themes/<F>.toml ==
+# == herdr: the preamble and the [keys] block are hand-maintained, so splice only the theme ==
 herdr_theme = (DOT / f".config/herdr/themes/{F}.toml").read_text().rstrip() + "\n"
 
-edit(".config/herdr/config.toml", lambda t: herdr_theme + "\n" + t[t.index("# == Keys ==") :])
+
+def patch_herdr(text: str) -> str:
+    head = text[: text.index("[theme]")]
+    tail = text[text.index("# == Keys ==") :]
+    return head + herdr_theme + "\n" + tail
+
+
+edit(".config/herdr/config.toml", patch_herdr)
 
 
 # == lazygit: the rest of config.yml is hand-maintained, so splice gui.theme from themes/<F>.yml ==

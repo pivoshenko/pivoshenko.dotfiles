@@ -1,20 +1,15 @@
-# OS
 .DS_Store
 Thumbs.db
 
-# Editors
 .zed/
 .idea/
 .vscode/
 
-# Env
 .env
 .env.local
 .env.*.local
 
-# Logs
 *.log
 
-# Misc
 .cache/
 .tmp/
