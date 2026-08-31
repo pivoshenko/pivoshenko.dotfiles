@@ -16,14 +16,13 @@ end
 # == Delete backup files ==
 function bakclean
   __log "Removing backup files"
-  fd -H -e ".dotdropbak" -t f -x rm
   fd -H -e ".bak" -t f -x rm
   fd -H -e ".backup" -t f -x rm
   __log_ok "Backup files removed"
 end
 
 # == Reload Fish configuration ==
-function fish
+function reload
   source ~/.config/fish/config.fish
 end
 
