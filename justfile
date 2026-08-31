@@ -17,9 +17,19 @@ herdr-integration:
 herdr-plugins:
     herdr plugin install thanhdat77/herdr-navigator -y
 
-install: brew dotfiles vault-link herdr-integration herdr-plugins
+fish-plugins:
+    #!/usr/bin/env fish
+    if not functions -q fisher
+        curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source
+        fisher install jorgebucaran/fisher
+    end
+    fisher update
 
-# Activate a theme flavor (morok | popil | vatra) across every loader
+bat-cache:
+    bat cache --build
+
+install: brew dotfiles fish-plugins bat-cache vault-link herdr-integration herdr-plugins
+
 set-flavor FLAVOR:
     python3 scripts/set_flavor.py {{ FLAVOR }}
 

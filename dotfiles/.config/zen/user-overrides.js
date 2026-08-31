@@ -1,5 +1,3 @@
-// https://github.com/arkenfox/user.js
-
 user_pref("accessibility.tabfocus", 1);
 user_pref("accessibility.typeaheadfind.flashBar", 0);
 user_pref("app.normandy.first_run", false);
@@ -148,9 +146,6 @@ user_pref("zen.workspaces.hide-deactivated-workspaces", true);
 user_pref("zen.workspaces.hide-default-container-indicator", false);
 user_pref("zen.workspaces.individual-pinned-tabs", false);
 
-// Arkenfox fixes:
-
-// Do not clear history on shutdown:
 user_pref("privacy.cpd.cache", false); // [DEFAULT: true]
 user_pref("privacy.clearHistory.cache", false);
 user_pref("privacy.cpd.formdata", false); // [DEFAULT: true]
@@ -177,5 +172,4 @@ user_pref("privacy.cpd.openWindows", false);
 user_pref("privacy.sanitize.timeSpan", 1);
 user_pref("privacy.sanitize.sanitizeOnShutdown", false);
 
-// Reopen previous session on browser close:
 user_pref("browser.startup.page", 3);

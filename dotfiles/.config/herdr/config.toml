@@ -1,3 +1,6 @@
+# == Misc ==
+onboarding = false
+
 [theme]
 name = "catppuccin"
 
@@ -23,13 +26,9 @@ teal = "#87a896"
 peach = "#d97757"
 
 # == Keys ==
-# Zellij's modes flattened onto herdr's single prefix: bare letters are
-# zellij's pane mode, shift is its tab mode, alt is herdr's spaces, and
-# ctrl carries the rest - zellij's move mode and herdr's agent panel
 [keys]
 prefix = "ctrl+b"
 
-# panes - zellij pane mode
 split_horizontal = "prefix+d"
 split_vertical = "prefix+r"
 close_pane = "prefix+x"
@@ -45,7 +44,6 @@ focus_pane_right = "prefix+l"
 resize_mode = "prefix+n"
 copy_mode = "prefix+["
 
-# tabs - zellij tab mode
 new_tab = "prefix+shift+n"
 rename_tab = "prefix+shift+r"
 close_tab = "prefix+shift+x"
@@ -53,7 +51,6 @@ previous_tab = "prefix+shift+h"
 next_tab = "prefix+shift+l"
 switch_tab = "prefix+1..9"
 
-# spaces - no zellij equivalent, so the same letters one layer up
 new_workspace = "prefix+alt+n"
 rename_workspace = "prefix+alt+r"
 close_workspace = "prefix+alt+x"
@@ -64,22 +61,17 @@ new_worktree = "prefix+alt+g"
 open_worktree = "prefix+alt+shift+g"
 remove_worktree = "prefix+alt+shift+x"
 
-# moving panes - zellij move mode, which has no flat equivalent
 swap_pane_left = "prefix+ctrl+h"
 swap_pane_down = "prefix+ctrl+j"
 swap_pane_up = "prefix+ctrl+k"
 swap_pane_right = "prefix+ctrl+l"
 
-# agents - herdr's own panel, so no zellij counterpart
 previous_agent = "prefix+ctrl+p"
 next_agent = "prefix+ctrl+n"
 focus_agent = "prefix+ctrl+1..9"
 
-# displaced by the tab layer
 reload_config = "prefix+ctrl+r"
 
-# navigate mode - j/k walk the space list like the up/down arrows, h/l stay on
-# panes like the left/right arrows, so vertical is spaces and horizontal is panes
 navigate_workspace_down = "j"
 navigate_workspace_up = "k"
 navigate_pane_left = "h"
@@ -88,8 +80,6 @@ navigate_pane_down = ""
 navigate_pane_up = ""
 
 # == Commands ==
-# lazygit as a session-modal popup, so the pane layout stays untouched.
-# ctrl+g is the only free slot in the ctrl layer - alt+g is new_worktree
 [[keys.command]]
 key = "prefix+ctrl+g"
 type = "popup"
@@ -97,14 +87,12 @@ command = "lazygit"
 width = "80%"
 height = "80%"
 
-# zed on the focused pane's directory, detached so it never holds a pane
 [[keys.command]]
 key = "prefix+ctrl+e"
 type = "shell"
 command = 'zed "${HERDR_ACTIVE_PANE_CWD:-.}"'
 
 # == Agent panel ==
-# surface what each claude is actually working on rather than a bare label
 [ui.sidebar.agents.rows_by_agent]
 claude = [["state_icon", "workspace", "tab"], ["terminal_title_stripped"], ["agent"]]
 

@@ -74,9 +74,6 @@ dotfiles:
   d_zed:
     dst: ~/.config/zed
     src: .config/zed
-  d_zellij:
-    dst: ~/.config/zellij
-    src: .config/zellij
   f_herdr_config:
     dst: ~/.config/herdr/config.toml
     src: .config/herdr/config.toml
@@ -123,7 +120,6 @@ profiles:
       - d_spicetify
       - d_stylus
       - d_zed
-      - d_zellij
       - f_claude_settings
       - f_claude_statusline
       - f_gitconfig

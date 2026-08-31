@@ -21,7 +21,6 @@ alias dx="docker exec -it"
 # == External tools ==
 alias ld="lazydocker"
 alias lg="lazygit"
-alias zj="zellij"
 
 # == Git ==
 alias g="git"
@@ -41,7 +40,6 @@ alias gst="git status"
 # == Kubernetes ==
 alias k="kubectl"
 alias ka="kubectl apply -f"
-alias kc="kubectx"
 alias kcn="kubectl config set-context --current --namespace"
 alias kd="kubectl describe"
 alias kdel="kubectl delete"
@@ -51,7 +49,6 @@ alias kgd="kubectl get deployments"
 alias kgp="kubectl get pod"
 alias kl="kubectl logs"
 alias klf="kubectl logs -f"
-alias kns="kubens"
 
 # == UV ==
 alias u="uv"
