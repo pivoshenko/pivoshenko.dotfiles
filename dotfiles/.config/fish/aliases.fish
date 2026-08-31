@@ -19,6 +19,7 @@ alias dpsl="docker ps -l -q"
 alias dx="docker exec -it"
 
 # == External tools ==
+alias cld="claude"
 alias ld="lazydocker"
 alias lg="lazygit"
 
