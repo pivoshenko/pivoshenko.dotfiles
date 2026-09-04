@@ -5,6 +5,7 @@ gpgsign = true
 autocrlf = input
 editor = hx
 pager = delta
+symlinks = true
 
 [credential]
 helper = store
