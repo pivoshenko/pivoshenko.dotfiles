@@ -68,7 +68,7 @@ swap_pane_right = "prefix+ctrl+l"
 
 previous_agent = "prefix+ctrl+p"
 next_agent = "prefix+ctrl+n"
-focus_agent = "prefix+ctrl+1..9"
+focus_agent = "prefix+ctrl+alt+1..9"
 
 reload_config = "prefix+ctrl+r"
 
