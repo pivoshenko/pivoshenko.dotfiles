@@ -48,6 +48,11 @@ fi
 # == Thinking effort level ==
 effort=$(echo "$input" | jq -r '.effort.level // empty')
 
+# == Other running agents ==
+session_id=$(echo "$input" | jq -r '.session_id // empty')
+agents=$(claude agents --json 2>/dev/null \
+  | jq -r --arg sid "$session_id" '[.[] | select(.sessionId != $sid)] | length' 2>/dev/null)
+
 # == Assemble ==
 out="$short_dir"
 [ -n "$branch" ] && out="$out  $branch"
@@ -59,4 +64,5 @@ if [ -n "$model_short" ]; then
     out="$out  $model_short"
   fi
 fi
+[ -n "$agents" ] && [ "$agents" -gt 0 ] 2>/dev/null && out="$out  agents:$agents"
 printf '%s' "$out"
