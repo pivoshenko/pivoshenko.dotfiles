@@ -102,7 +102,10 @@ claude = [["state_icon", "workspace", "tab"], ["terminal_title_stripped"], ["age
 
 # == Notifications ==
 [ui.toast]
-delivery = "system"
+delivery = "herdr"
+
+[ui.toast.herdr]
+position = "bottom-right"
 
 # == Plugins ==
 [[keys.command]]
