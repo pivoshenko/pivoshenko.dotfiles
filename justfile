@@ -1,5 +1,7 @@
 default:
-    @just --list
+    @just --list --unsorted
+
+install: brew dotfiles fish-plugins bat-cache vault-link herdr-integration herdr-plugins
 
 brew:
     brew bundle --force --cleanup --upgrade
@@ -7,15 +9,6 @@ brew:
 dotfiles:
     dotdrop install -c dotdrop.config.yaml -p default --force
     dotdrop install -c dotdrop.config.yaml -p me --force
-
-vault-link:
-    ln -sfn "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault" ~/Vault
-
-herdr-integration:
-    herdr integration install claude
-
-herdr-plugins:
-    herdr plugin install thanhdat77/herdr-navigator -y
 
 fish-plugins:
     #!/usr/bin/env fish
@@ -28,7 +21,14 @@ fish-plugins:
 bat-cache:
     bat cache --build
 
-install: brew dotfiles fish-plugins bat-cache vault-link herdr-integration herdr-plugins
+vault-link:
+    ln -sfn "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault" ~/Vault
+
+herdr-integration:
+    herdr integration install claude
+
+herdr-plugins:
+    grep -v '^\s*\(#\|$\)' herdr.plugins | xargs -I {} herdr plugin install {} -y
 
 set-flavor FLAVOR:
     python3 scripts/set_flavor.py {{ FLAVOR }}
