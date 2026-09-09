@@ -65,7 +65,7 @@
   },
   "git_panel": {
     "button": true,
-    "dock": "right",
+    "dock": "left",
   },
   "outline_panel": {
     "dock": "right",
