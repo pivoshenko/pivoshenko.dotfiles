@@ -100,6 +100,8 @@ The global rules used to be a single `CLAUDE.md` in this repository. They now li
 
 Config: [`dotfiles/.config/herdr/config.toml`](dotfiles/.config/herdr/config.toml). Only the config file is managed, since the rest of `~/.config/herdr` holds sockets, logs, and session state.
 
+Plugins are listed one per line in [`herdr.plugins`](herdr.plugins), the same way Fisher tracks fish plugins in `fish_plugins`. `just herdr-plugins` reads that file and installs each entry, so adding a plugin means adding a line rather than editing a recipe. The plugins themselves install into `~/.config/herdr/plugins` and stay untracked; their key bindings live in the managed `config.toml`.
+
 ## macOS
 
 ### Hotkeys Daemon - Karabiner

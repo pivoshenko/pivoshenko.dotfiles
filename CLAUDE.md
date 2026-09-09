@@ -23,7 +23,7 @@ just fish-plugins         # bootstrap Fisher if missing, then fisher update
 just bat-cache            # bat cache --build, required before bat can resolve --theme
 just vault-link           # symlink the iCloud Obsidian vault to ~/Vault
 just herdr-integration    # herdr integration install claude (reinstalls the agent-state hook)
-just herdr-plugins        # herdr plugin install thanhdat77/herdr-navigator -y
+just herdr-plugins        # herdr plugin install for every entry in herdr.plugins
 just set-flavor FLAVOR    # activate morok | popil | vatra across all loaders
 just spicetify FLAVOR     # spicetify config + apply (separate, not covered by set-flavor)
 ```
@@ -84,7 +84,9 @@ Three files are deliberately untracked and must exist on each machine; nothing i
 
 The hook's `command` string must stay byte-identical to what herdr writes, absolute path and inner quotes included. herdr matches on that exact string to decide the hook is already present; rewrite it to `~/.claude/...` and herdr stops recognizing it and appends a second copy, so the hook fires twice.
 
-herdr plugins install into `~/.config/herdr/plugins/`, which is runtime state and therefore untracked - only `config.toml` is mapped. `just herdr-plugins` reinstalls them on a new machine; their key bindings live in the tracked `config.toml`.
+herdr plugins install into `~/.config/herdr/plugins/`, which is runtime state and therefore untracked - only `config.toml` is mapped. The wanted set is tracked instead as one repository-per-line manifest at `herdr.plugins` (repository root, mirroring Fisher's `fish_plugins`); `just herdr-plugins` pipes each non-comment line into `herdr plugin install <repo> -y`, so a new plugin is a new line, not a recipe edit. Their key bindings live in the tracked `config.toml`.
+
+Plugins that build from source need a working toolchain on `PATH` - `herdr-navigator` runs `cargo build --release`, and brew's `rustup` keeps its shims in `/opt/homebrew/opt/rustup/bin`, which nothing adds to `PATH`, so the build fails with `No such file or directory` until it is.
 
 ## Conventions
 
