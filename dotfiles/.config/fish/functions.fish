@@ -31,6 +31,13 @@ function fish_greeting
   fastfetch
 end
 
+# == Show the running command in the terminal/tab title ==
+function fish_title
+  set -l command (status current-command)
+  test "$command" = fish; and set command (prompt_pwd -d 1 -D 1)
+  echo -- $command
+end
+
 # == Activate a virtual environment ==
 function venv
   __log "Activating virtual environment"
