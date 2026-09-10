@@ -11,3 +11,4 @@ set -Ux PYTHONBREAKPOINT IPython.terminal.debugger.set_trace
 
 # == Path ==
 fish_add_path -g $HOME/.docker/bin
+fish_add_path -g /opt/homebrew/opt/rustup/bin
