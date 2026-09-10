@@ -86,7 +86,7 @@ The hook's `command` string must stay byte-identical to what herdr writes, absol
 
 herdr plugins install into `~/.config/herdr/plugins/`, which is runtime state and therefore untracked - only `config.toml` is mapped. The wanted set is tracked instead as one repository-per-line manifest at `herdr.plugins` (repository root, mirroring Fisher's `fish_plugins`); `just herdr-plugins` pipes each non-comment line into `herdr plugin install <repo> -y`, so a new plugin is a new line, not a recipe edit. Their key bindings live in the tracked `config.toml`.
 
-Plugins that build from source need a working toolchain on `PATH` - `herdr-navigator` runs `cargo build --release`, and brew's `rustup` keeps its shims in `/opt/homebrew/opt/rustup/bin`, which nothing adds to `PATH`, so the build fails with `No such file or directory` until it is.
+Plugins that build from source need a working toolchain on `PATH` - `herdr-navigator` runs `cargo build --release`, and brew's `rustup` keeps its shims in `/opt/homebrew/opt/rustup/bin`, which `exports.fish` adds via `fish_add_path -g`; without it the build fails with `No such file or directory`.
 
 ## Conventions
 
