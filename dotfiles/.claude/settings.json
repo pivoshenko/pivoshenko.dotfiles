@@ -45,6 +45,11 @@
   "theme": "dark-ansi",
   "agentPushNotifEnabled": true,
   "voiceEnabled": true,
+  "voice": {
+    "enabled": true,
+    "mode": "hold",
+    "autoSubmit": true
+  },
   "skipAutoPermissionPrompt": true,
   "hooks": {
     "SessionStart": [
