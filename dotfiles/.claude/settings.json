@@ -43,7 +43,6 @@
   "outputStyle": "Concise",
   "skipDangerousModePermissionPrompt": true,
   "theme": "dark-ansi",
-  "editorMode": "vim",
   "showThinkingSummaries": false,
   "spinnerTipsEnabled": false,
   "cleanupPeriodDays": 14,
