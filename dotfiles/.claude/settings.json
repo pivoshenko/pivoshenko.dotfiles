@@ -50,6 +50,7 @@
   "precomputeCompactionEnabled": true,
   "autoContinueAtUsageLimit": true,
   "agentPushNotifEnabled": true,
+  "inputNeededNotifEnabled": true,
   "voiceEnabled": true,
   "voice": {
     "enabled": true,
