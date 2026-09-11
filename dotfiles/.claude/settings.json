@@ -43,6 +43,7 @@
   "outputStyle": "Concise",
   "skipDangerousModePermissionPrompt": true,
   "theme": "dark-ansi",
+  "editorMode": "vim",
   "agentPushNotifEnabled": true,
   "voiceEnabled": true,
   "voice": {
