@@ -45,6 +45,7 @@
   "theme": "dark-ansi",
   "editorMode": "vim",
   "showThinkingSummaries": false,
+  "spinnerTipsEnabled": false,
   "agentPushNotifEnabled": true,
   "voiceEnabled": true,
   "voice": {
