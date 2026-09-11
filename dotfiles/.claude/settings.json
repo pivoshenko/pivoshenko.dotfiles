@@ -46,6 +46,7 @@
   "editorMode": "vim",
   "showThinkingSummaries": false,
   "spinnerTipsEnabled": false,
+  "cleanupPeriodDays": 14,
   "agentPushNotifEnabled": true,
   "voiceEnabled": true,
   "voice": {
