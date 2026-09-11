@@ -47,6 +47,7 @@
   "showThinkingSummaries": false,
   "spinnerTipsEnabled": false,
   "cleanupPeriodDays": 14,
+  "precomputeCompactionEnabled": true,
   "agentPushNotifEnabled": true,
   "voiceEnabled": true,
   "voice": {
