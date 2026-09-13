@@ -1,16 +1,19 @@
 default:
-    @just --list --unsorted
+    @just --list
 
-install: brew dotfiles fish-plugins bat-cache vault-link herdr-integration herdr-plugins
+install: install-brew-packages install-dotfiles install-fish-plugins build-bat-cache link-vault install-herdr-integration install-herdr-plugins
 
-brew:
+build-bat-cache:
+    bat cache --build
+
+install-brew-packages:
     brew bundle --force --cleanup --upgrade
 
-dotfiles:
+install-dotfiles:
     dotdrop install -c dotdrop.config.yaml -p default --force
     dotdrop install -c dotdrop.config.yaml -p me --force
 
-fish-plugins:
+install-fish-plugins:
     #!/usr/bin/env fish
     if not functions -q fisher
         curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source
@@ -18,21 +21,18 @@ fish-plugins:
     end
     fisher update
 
-bat-cache:
-    bat cache --build
-
-vault-link:
-    ln -sfn "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault" ~/Vault
-
-herdr-integration:
+install-herdr-integration:
     herdr integration install claude
 
-herdr-plugins:
+install-herdr-plugins:
     grep -v '^\s*\(#\|$\)' herdr.plugins | xargs -I {} herdr plugin install {} -y
+
+link-vault:
+    ln -sfn "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault" ~/Vault
 
 set-flavor FLAVOR:
     python3 scripts/set_flavor.py {{ FLAVOR }}
 
-spicetify FLAVOR:
+set-spicetify-flavor FLAVOR:
     spicetify config current_theme {{ FLAVOR }} color_scheme {{ FLAVOR }}
     spicetify apply

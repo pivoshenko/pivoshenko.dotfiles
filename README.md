@@ -21,7 +21,7 @@ My personal dotfiles. The whole thing leans on three ideas: keep it minimal, kee
 - One unified look via [pivoshenko.theme](https://github.com/pivoshenko/pivoshenko.theme). Right now I'm running **Popil** (warm ash, muted terracotta). **Morok** (pitch black, cool accents) and **Vatra** (Carpathian hearth, gruvbox-warm) are vendored alongside it
 - [JetBrains Mono](https://www.jetbrains.com/lp/mono), everywhere
 
-To switch flavors: `just set-flavor <morok|popil|vatra>`, then `just dotfiles`.
+To switch flavors: `just set-flavor <morok|popil|vatra>`, then `just install-dotfiles`.
 
 ## Installation
 
@@ -100,7 +100,7 @@ The global rules used to be a single `CLAUDE.md` in this repository. They now li
 
 Config: [`dotfiles/.config/herdr/config.toml`](dotfiles/.config/herdr/config.toml). Only the config file is managed, since the rest of `~/.config/herdr` holds sockets, logs, and session state.
 
-Plugins are listed one per line in [`herdr.plugins`](herdr.plugins), the same way Fisher tracks fish plugins in `fish_plugins`. `just herdr-plugins` reads that file and installs each entry, so adding a plugin means adding a line rather than editing a recipe. The plugins themselves install into `~/.config/herdr/plugins` and stay untracked; their key bindings live in the managed `config.toml`.
+Plugins are listed one per line in [`herdr.plugins`](herdr.plugins), the same way Fisher tracks fish plugins in `fish_plugins`. `just install-herdr-plugins` reads that file and installs each entry, so adding a plugin means adding a line rather than editing a recipe. The plugins themselves install into `~/.config/herdr/plugins` and stay untracked; their key bindings live in the managed `config.toml`.
 
 ## macOS
 
@@ -149,7 +149,7 @@ Plugins:
 
 ## Music - Spotify
 
-Spotify is customized through [Spicetify](https://github.com/spicetify/cli). Themes live in [`dotfiles/.config/spicetify/Themes`](dotfiles/.config/spicetify/Themes); activate a flavor with `just spicetify <morok|popil|vatra>`.
+Spotify is customized through [Spicetify](https://github.com/spicetify/cli). Themes live in [`dotfiles/.config/spicetify/Themes`](dotfiles/.config/spicetify/Themes); activate a flavor with `just set-spicetify-flavor <morok|popil|vatra>`.
 
 ## Messengers
 
