@@ -1,17 +1,17 @@
-# == External tools ==
+# == External Tools ==
 fzf --fish | source
 pyenv init - fish | source
 starship init fish | source
 zoxide init fish | source
 
-# == Individual configurations ==
+# == Individual Configurations ==
 source $HOME/.config/fish/aliases.fish
 source $HOME/.config/fish/exports.fish
 source $HOME/.config/fish/fzf.fish
 source $HOME/.config/fish/functions.fish
 source $HOME/.config/fish/vimode.fish
 
-# == Local configurations ==
+# == Local Configurations ==
 if test -f $HOME/.config/fish/local.fish
     source $HOME/.config/fish/local.fish
 end
