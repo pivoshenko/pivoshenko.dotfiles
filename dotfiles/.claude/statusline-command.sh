@@ -5,7 +5,7 @@ input=$(cat)
 dir=$(echo "$input" | jq -r '.workspace.current_dir // .cwd')
 short_dir=$(basename "$dir")
 
-# == Git branch and status ==
+# == Git Branch and Status ==
 branch=$(git -C "$dir" symbolic-ref --short HEAD 2>/dev/null \
   || git -C "$dir" rev-parse --short HEAD 2>/dev/null)
 if [ -n "$branch" ]; then
@@ -30,10 +30,10 @@ if [ -n "$branch" ]; then
   branch="${branch}${counts}"
 fi
 
-# == Context used ==
+# == Context Used ==
 used=$(echo "$input" | jq -r '.context_window.used_percentage // empty')
 
-# == Model short name ==
+# == Model Short Name ==
 model_display=$(echo "$input" | jq -r '.model.display_name // empty')
 model_short=""
 if [ -n "$model_display" ]; then
@@ -45,10 +45,10 @@ if [ -n "$model_display" ]; then
   esac
 fi
 
-# == Thinking effort level ==
+# == Thinking Effort Level ==
 effort=$(echo "$input" | jq -r '.effort.level // empty')
 
-# == Other running agents ==
+# == Other Running Agents ==
 session_id=$(echo "$input" | jq -r '.session_id // empty')
 agents=$(claude agents --json 2>/dev/null \
   | jq -r --arg sid "$session_id" '[.[] | select(.sessionId != $sid)] | length' 2>/dev/null)

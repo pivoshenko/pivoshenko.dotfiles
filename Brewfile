@@ -32,14 +32,14 @@ cask "vesktop"
 cask "zed"
 cask "zen"
 
-# == Programming languages ==
+# == Programming Languages ==
 brew "elixir"
 brew "erlang"
 brew "gcc"
 brew "gleam"
 brew "lua"
 
-# == Package managers ==
+# == Package Managers ==
 brew "poetry"
 brew "rustup"
 brew "uv"
@@ -48,7 +48,7 @@ brew "uv"
 brew "duckdb"
 brew "redis"
 
-# == Command-line tools ==
+# == Command-Line Tools ==
 brew "bat"
 brew "bottom"
 brew "curl"
@@ -94,7 +94,7 @@ brew "wget"
 brew "whalebrew"
 brew "zoxide"
 
-# == Language server protocols ==
+# == Language Server Protocols ==
 brew "elixir-ls"
 brew "marksman"
 brew "taplo"
@@ -103,7 +103,7 @@ brew "tex-fmt"
 brew "vscode-langservers-extracted"
 brew "yaml-language-server"
 
-# == Python packages ==
+# == Python Packages ==
 brew "pyupgrade"
 brew "ruff"
 brew "sqlfluff"
