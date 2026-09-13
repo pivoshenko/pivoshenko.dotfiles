@@ -18,7 +18,7 @@ Three moving parts:
 just                              # list every recipe
 just build-bat-cache              # bat cache --build, required before bat can resolve --theme
 just install                      # brew packages, dotfiles, fish plugins, bat cache, vault, herdr integration, herdr plugins
-just install-brew-packages        # brew bundle --force --cleanup --upgrade
+just install-brew-packages        # brew bundle --force --upgrade, then brew bundle cleanup --force
 just install-dotfiles             # dotdrop install for both profiles (default, me)
 just install-fish-plugins         # bootstrap Fisher if missing, then fisher update
 just install-herdr-integration    # herdr integration install claude (reinstalls the agent-state hook)
