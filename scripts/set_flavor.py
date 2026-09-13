@@ -138,4 +138,4 @@ if before != after:
 else:
     print("  ok     dotdrop.config.yaml")
 
-print("set-flavor: done, run `just dotfiles` to deploy onto the system")
+print("set-flavor: done, run `just install-dotfiles` to deploy onto the system")

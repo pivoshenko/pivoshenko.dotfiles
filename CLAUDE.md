@@ -15,20 +15,20 @@ Three moving parts:
 ## Commands
 
 ```shell
-just                      # list every recipe
-just install              # brew + dotfiles + fish-plugins + bat-cache + vault-link + herdr-integration + herdr-plugins
-just brew                 # brew bundle --force --cleanup --upgrade
-just dotfiles             # dotdrop install for both profiles (default, me)
-just fish-plugins         # bootstrap Fisher if missing, then fisher update
-just bat-cache            # bat cache --build, required before bat can resolve --theme
-just vault-link           # symlink the iCloud Obsidian vault to ~/Vault
-just herdr-integration    # herdr integration install claude (reinstalls the agent-state hook)
-just herdr-plugins        # herdr plugin install for every entry in herdr.plugins
-just set-flavor FLAVOR    # activate morok | popil | vatra across all loaders
-just spicetify FLAVOR     # spicetify config + apply (separate, not covered by set-flavor)
+just                              # list every recipe
+just build-bat-cache              # bat cache --build, required before bat can resolve --theme
+just install                      # brew packages, dotfiles, fish plugins, bat cache, vault, herdr integration, herdr plugins
+just install-brew-packages        # brew bundle --force --cleanup --upgrade
+just install-dotfiles             # dotdrop install for both profiles (default, me)
+just install-fish-plugins         # bootstrap Fisher if missing, then fisher update
+just install-herdr-integration    # herdr integration install claude (reinstalls the agent-state hook)
+just install-herdr-plugins        # herdr plugin install for every entry in herdr.plugins
+just link-vault                   # symlink the iCloud Obsidian vault to ~/Vault
+just set-flavor FLAVOR            # activate morok | popil | vatra across all loaders
+just set-spicetify-flavor FLAVOR  # spicetify config + apply (separate, not covered by set-flavor)
 ```
 
-`just dotfiles` runs `dotdrop install -c dotdrop.config.yaml -p <profile> --force` for both profiles. `--force` overwrites whatever is on the system, so edit under `dotfiles/`, never in `~`.
+`just install-dotfiles` runs `dotdrop install -c dotdrop.config.yaml -p <profile> --force` for both profiles. `--force` overwrites whatever is on the system, so edit under `dotfiles/`, never in `~`.
 
 Theme **sync** lives outside this repository: `python3 ../scripts/sync_theme.py` (the sibling `scripts/` directory at the `sources/` root; the script resolves its own paths, so cwd does not matter). It vendors all three flavors from `../pivoshenko.theme/themes/dist` into `dotfiles/`. Its docstring mentions `just sync-theme`, but no justfile exists at that level.
 
@@ -60,9 +60,9 @@ Flavors come from [pivoshenko.theme](https://github.com/pivoshenko/pivoshenko.th
 
 Two configs cannot include an external palette, so both carry all three inline: `starship.toml` has `[palettes.morok|popil|vatra]` blocks with `palette = "<flavor>"` choosing; `.gitconfig` includes all three `delta/themes/<flavor>.gitconfig` files with `[delta] features` choosing.
 
-Tools whose theme is picked by their own UI or CLI are outside `set-flavor`: Spicetify (`just spicetify <flavor>`), Obsidian (appearance settings), Stylus, Telegram, Discord/Vesktop. Sync still drops every flavor file into place for them.
+Tools whose theme is picked by their own UI or CLI are outside `set-flavor`: Spicetify (`just set-spicetify-flavor <flavor>`), Obsidian (appearance settings), Stylus, Telegram, Discord/Vesktop. Sync still drops every flavor file into place for them.
 
-After `just set-flavor`, run `just dotfiles` to deploy.
+After `just set-flavor`, run `just install-dotfiles` to deploy.
 
 ### Shell: fish
 
@@ -80,11 +80,11 @@ Three files are deliberately untracked and must exist on each machine; nothing i
 
 `dotfiles/.claude/` holds only `settings.json` and `statusline-command.sh`. The global rules are **not** in this repository: they live as instruction files in [`pivoshenko/pivoshenko.ai`](https://github.com/pivoshenko/pivoshenko.ai) under `instructions/` and sync into `~/.claude/CLAUDE.md` via Kasetto, along with skills and MCP servers.
 
-`settings.json` carries a `hooks.SessionStart` entry that runs herdr's agent-state hook, which is what lets the herdr sidebar report whether Claude is working, blocked, or idle. The hook *script* is herdr-managed and deliberately untracked - `herdr integration install claude` writes it to `~/.claude/hooks/herdr-agent-state.sh` and overwrites it on every update, so `just herdr-integration` restores it on a new machine.
+`settings.json` carries a `hooks.SessionStart` entry that runs herdr's agent-state hook, which is what lets the herdr sidebar report whether Claude is working, blocked, or idle. The hook *script* is herdr-managed and deliberately untracked - `herdr integration install claude` writes it to `~/.claude/hooks/herdr-agent-state.sh` and overwrites it on every update, so `just install-herdr-integration` restores it on a new machine.
 
 The hook's `command` string must stay byte-identical to what herdr writes, absolute path and inner quotes included. herdr matches on that exact string to decide the hook is already present; rewrite it to `~/.claude/...` and herdr stops recognizing it and appends a second copy, so the hook fires twice.
 
-herdr plugins install into `~/.config/herdr/plugins/`, which is runtime state and therefore untracked - only `config.toml` is mapped. The wanted set is tracked instead as one repository-per-line manifest at `herdr.plugins` (repository root, mirroring Fisher's `fish_plugins`); `just herdr-plugins` pipes each non-comment line into `herdr plugin install <repo> -y`, so a new plugin is a new line, not a recipe edit. Their key bindings live in the tracked `config.toml`.
+herdr plugins install into `~/.config/herdr/plugins/`, which is runtime state and therefore untracked - only `config.toml` is mapped. The wanted set is tracked instead as one repository-per-line manifest at `herdr.plugins` (repository root, mirroring Fisher's `fish_plugins`); `just install-herdr-plugins` pipes each non-comment line into `herdr plugin install <repo> -y`, so a new plugin is a new line, not a recipe edit. Their key bindings live in the tracked `config.toml`.
 
 Plugins that build from source need a working toolchain on `PATH` - `herdr-navigator` runs `cargo build --release`, and brew's `rustup` keeps its shims in `/opt/homebrew/opt/rustup/bin`, which `exports.fish` adds via `fish_add_path -g`; without it the build fails with `No such file or directory`.
 
