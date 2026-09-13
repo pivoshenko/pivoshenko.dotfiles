@@ -2,6 +2,15 @@
 command = "ruff"
 args = ["server"]
 
+[language-server.texlab.config.texlab.build]
+executable = "tectonic"
+args = ["-X", "compile", "%f", "--synctex", "--keep-logs", "--keep-intermediates"]
+
+[[language]]
+name = "latex"
+auto-format = true
+formatter = { command = "tex-fmt", args = ["--stdin"] }
+
 [[language]]
 name = "markdown"
 soft-wrap.enable = true
