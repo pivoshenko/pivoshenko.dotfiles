@@ -34,20 +34,20 @@ Theme **sync** lives outside this repository: `python3 ../scripts/sync_theme.py`
 
 ## Architecture
 
-### Deployment: dotdrop
+### Deployment: Dotdrop
 
 `dotdrop.config.yaml` maps `src` paths (relative to `dotpath: dotfiles`) to absolute `dst` paths. Files are **copied, not symlinked** (`link_dotfile_default: nolink`), and no Jinja2 templating is used, so a deployed file is byte-identical to its source.
 
 Two profiles:
 
 - `default` - portable configs: `~/.config/*`, `~/.gitconfig`, `~/.ssh`, `~/.gnupg`, `~/.ipython`, `~/.claude/{settings.json,statusline-command.sh}`
-- `me` - machine-specific destinations: the Obsidian vault's `.obsidian/{themes,snippets}` under an iCloud path, and Zen's `userChrome.css` / `userContent.css` / `user-overrides.js` under a hard-coded profile id (`6im8xt7o.Default (release)`). Both paths must be edited by hand on a new machine.
+- `me` - machine-specific destinations: the Obsidian vault's `.obsidian/{themes,snippets}` under an iCloud path, and Zen's `userChrome.css` / `userContent.css` / `user-overrides.js` under a hard-coded profile id (`6im8xt7o.Default (release)`). Both paths must be edited by hand on a new machine
 
 Most entries map a whole directory (`d_*`). A few map a single file (`f_*`) because the destination directory holds runtime state that must not be clobbered - notably `f_herdr_config` (`~/.config/herdr` also holds sockets, logs, and session state) and `f_starship`.
 
 Adding a tool: create `dotfiles/.config/<tool>/`, add a `d_<tool>` (or `f_<tool>`) entry in `dotdrop.config.yaml`, and list it under a profile.
 
-### Theming: three flavors, one active
+### Theming: Three Flavors, One Active
 
 Flavors come from [pivoshenko.theme](https://github.com/pivoshenko/pivoshenko.theme): `morok`, `popil`, `vatra`; `popil` is currently active. Every themed tool has **all three flavors vendored side by side** under `dotfiles/.config/<tool>/themes/`, and a loader line elsewhere picks one. Sync writes the flavor files; `set_flavor.py` rewrites the loaders. These are strictly separate steps.
 
@@ -64,11 +64,11 @@ Tools whose theme is picked by their own UI or CLI are outside `set-flavor`: Spi
 
 After `just set-flavor`, run `just install-dotfiles` to deploy.
 
-### Shell: fish
+### Shell: Fish
 
 `dotfiles/.config/fish/config.fish` is the entry point: initializes fzf, pyenv, starship, zoxide; sources `aliases.fish`, `exports.fish`, `fzf.fish`, `functions.fish`, `vimode.fish`; then optionally `local.fish` and `.secrets.fish` (untracked, machine-local); then picks the fish theme. `exports.fish` uses `set -Ux` (universal + exported) - values persist in fish's universal variable store, so removing a line here does not unset it on an already-configured machine. PATH additions are the exception: they use `fish_add_path -g`, which is idempotent and stays out of the universal store. Plugins are pinned in `fish_plugins` (Fisher's manifest).
 
-### Machine-local files
+### Machine-Local Files
 
 Three files are deliberately untracked and must exist on each machine; nothing in this repository creates them:
 
@@ -76,7 +76,7 @@ Three files are deliberately untracked and must exist on each machine; nothing i
 - `~/.config/fish/local.fish` - machine-specific shell setup
 - `~/.config/fish/.secrets.fish` - tokens and keys, never committed
 
-### Claude Code config
+### Claude Code Config
 
 `dotfiles/.claude/` holds only `settings.json` and `statusline-command.sh`. The global rules are **not** in this repository: they live as instruction files in [`pivoshenko/pivoshenko.ai`](https://github.com/pivoshenko/pivoshenko.ai) under `instructions/` and sync into `~/.claude/CLAUDE.md` via Kasetto, along with skills and MCP servers.
 
