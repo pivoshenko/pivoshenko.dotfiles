@@ -81,7 +81,7 @@ dotfiles:
     dst: ~/.config/starship.toml
     src: .config/starship.toml
 
-  # == iCloud (Obsidian vault) ==
+  # == iCloud (Obsidian Vault) ==
   d_obsidian_themes:
     dst: "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault/.obsidian/themes"
     src: .config/obsidian/themes

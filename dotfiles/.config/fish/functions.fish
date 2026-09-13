@@ -1,4 +1,4 @@
-# == Logging helpers ==
+# == Logging Helpers ==
 function __log
   set_color --bold cyan
   printf '==> '
@@ -13,7 +13,7 @@ function __log_ok
   printf '%s\n' "$argv"
 end
 
-# == Delete backup files ==
+# == Delete Backup Files ==
 function bakclean
   __log "Removing backup files"
   fd -H -e ".bak" -t f -x rm
@@ -21,31 +21,31 @@ function bakclean
   __log_ok "Backup files removed"
 end
 
-# == Reload Fish configuration ==
+# == Reload Fish Configuration ==
 function reload
   source ~/.config/fish/config.fish
 end
 
-# == Display system information on shell startup ==
+# == Display System Information on Shell Startup ==
 function fish_greeting
   fastfetch
 end
 
-# == Show the running command in the terminal/tab title ==
+# == Show the Running Command in the Terminal/Tab Title ==
 function fish_title
   set -l command (status current-command)
   test "$command" = fish; and set command (prompt_pwd -d 1 -D 1)
   echo -- $command
 end
 
-# == Activate a virtual environment ==
+# == Activate a Virtual Environment ==
 function venv
   __log "Activating virtual environment"
   source .venv/bin/activate.fish
   __log_ok "Virtual environment activated"
 end
 
-# == Iterate over sub-directories and pull Git repositories ==
+# == Iterate over Sub-Directories and Pull Git Repositories ==
 function gplr
   __log "Pulling all Git repositories under (pwd)"
   set -l steps 'echo "==> updating {}"' \
@@ -56,7 +56,7 @@ function gplr
   __log_ok "Repositories updated"
 end
 
-# == Delete local and remote branches already merged into the main branch ==
+# == Delete Local and Remote Branches Already Merged into the Main Branch ==
 function gbc
   set -l main (git symbolic-ref --quiet --short refs/remotes/origin/HEAD 2>/dev/null | sed 's|^origin/||')
   test -z "$main"; and set main main
@@ -79,7 +79,7 @@ function gbc
   __log_ok "Merged branches cleaned"
 end
 
-# == Update system packages ==
+# == Update System Packages ==
 function update
   __log "Updating Homebrew packages"
   brew update --force
@@ -89,7 +89,7 @@ function update
   __log_ok "System packages updated"
 end
 
-# == Fuzzy-find a file and open it in the editor ==
+# == Fuzzy-Find a File and Open It in the Editor ==
 function __fzf_edit
   set -l file (fzf --height 60% --preview 'bat --style=numbers --color=always {}')
   if test -n "$file"
