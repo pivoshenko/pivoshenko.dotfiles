@@ -1,6 +1,9 @@
 {
   // == General ==
   "auto_update": true,
+  "feature_flags": {
+    "notebooks": "on",
+  },
   "restore_on_startup": "launchpad",
   "session": {
     "trust_all_worktrees": true,
