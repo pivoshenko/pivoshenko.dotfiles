@@ -4,95 +4,80 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-Personal macOS dotfiles. There is no build, lint, or test suite. The repository is a source of truth deployed onto the machine with [dotdrop](https://github.com/deadc0de6/dotdrop), driven through `just`, plus one Python script that keeps theming consistent.
-
-Three moving parts:
-
-- `Brewfile` - every cask, formula, and font (`brew bundle`)
-- `dotfiles/` - the config tree that gets deployed (dotdrop `dotpath`)
-- `scripts/set_flavor.py` - flips the active theme flavor across every tool's loader
+`pivoshenko.dotfiles` is a personal macOS dotfiles repository. There is no application to build and no test suite - the "product" is the `dotfiles/` staging tree, which [dotdrop](https://github.com/deadc0de6/dotdrop) deploys into `$HOME`, orchestrated by [just](https://github.com/casey/just). The only standalone script is `scripts/set_flavor.py` (stdlib Python 3, no dependencies); the rest of the executable code is itself deployed config - `dotfiles/.claude/statusline-command.sh`, the fish files under `dotfiles/.config/fish/`, and `dotfiles/.ipython/profile_default/startup/start.py`.
 
 ## Commands
 
-```shell
-just                              # list every recipe
-just build-bat-cache              # bat cache --build, required before bat can resolve --theme
-just install                      # brew packages, dotfiles, fish plugins, bat cache, vault, herdr integration, herdr plugins
-just install-brew-packages        # brew bundle --force --upgrade, then brew bundle cleanup --force
-just install-dotfiles             # dotdrop install for both profiles (default, me)
-just install-fish-plugins         # bootstrap Fisher if missing, then fisher update
-just install-herdr-integration    # herdr integration install claude (reinstalls the agent-state hook)
-just install-herdr-plugins        # herdr plugin install for every entry in herdr.plugins
-just link-vault                   # symlink the iCloud Obsidian vault to ~/Vault
-just set-flavor FLAVOR            # activate morok | popil | vatra across all loaders
-just set-spicetify-flavor FLAVOR  # spicetify config + apply (separate, not covered by set-flavor)
-```
+`just --list` is the index. The ones that matter:
 
-`just install-dotfiles` runs `dotdrop install -c dotdrop.config.yaml -p <profile> --force` for both profiles. `--force` overwrites whatever is on the system, so edit under `dotfiles/`, never in `~`.
+- `just install` - full bootstrap (brew bundle, both dotdrop profiles, Fisher plugins, `bat` cache, vault symlink, herdr integration and plugins)
+- `just install-dotfiles` - deploy the `default` and `me` profiles with `--force`; this is the verification step after any change under `dotfiles/`
+- `just set-flavor <morok|popil|vatra>` - rewrite the repo's configs to a theme flavor, then `just install-dotfiles` to deploy
+- `just set-spicetify-flavor <morok|popil|vatra>` - Spotify only, applied directly to the live spicetify install
+- `just install-brew-packages` - `brew bundle` plus `brew bundle cleanup --force`, so removing a line from `Brewfile` uninstalls the package
 
-Theme **sync** lives outside this repository: `python3 ../scripts/sync_theme.py` (the sibling `scripts/` directory at the `sources/` root; the script resolves its own paths, so cwd does not matter). It vendors all three flavors from `../pivoshenko.theme/themes/dist` into `dotfiles/`. Its docstring mentions `just sync-theme`, but no justfile exists at that level.
+There are no linters, formatters, or GitHub Actions workflows wired up in this repository. `CONTRIBUTING.md` mentions tests; none exist here.
 
 ## Architecture
 
-### Deployment: Dotdrop
+### Staging Tree and Deployment
 
-`dotdrop.config.yaml` maps `src` paths (relative to `dotpath: dotfiles`) to absolute `dst` paths. Files are **copied, not symlinked** (`link_dotfile_default: nolink`), and no Jinja2 templating is used, so a deployed file is byte-identical to its source.
+`dotfiles/` mirrors the layout of `$HOME` (`dotfiles/.config/fish/` -> `~/.config/fish/`). `dotdrop.config.yaml` maps each entry explicitly and assigns it to a profile:
 
-Two profiles:
+- `default` - everything machine-agnostic (shell, editors, CLI tools, git, ssh, gpg, Claude settings)
+- `me` - entries with hardcoded personal paths: the iCloud Obsidian vault and the Zen browser profile directory (`6im8xt7o.Default (release)`)
 
-- `default` - portable configs: `~/.config/*`, `~/.gitconfig`, `~/.ssh`, `~/.gnupg`, `~/.ipython`, `~/.claude/{settings.json,statusline-command.sh}`
-- `me` - machine-specific destinations: the Obsidian vault's `.obsidian/{themes,snippets}` under an iCloud path, and Zen's `userChrome.css` / `userContent.css` / `user-overrides.js` under a hard-coded profile id (`6im8xt7o.Default (release)`). Both paths must be edited by hand on a new machine
+`link_dotfile_default: nolink`, so dotdrop **copies** rather than symlinks. Editing a file under `~/.config/` does not flow back into the repository. Always edit under `dotfiles/` and redeploy.
 
-Most entries map a whole directory (`d_*`). A few map a single file (`f_*`) because the destination directory holds runtime state that must not be clobbered - notably `f_herdr_config` (`~/.config/herdr` also holds sockets, logs, and session state) and `f_starship`.
+Adding a newly managed config is three coordinated edits:
 
-Adding a tool: create `dotfiles/.config/<tool>/`, add a `d_<tool>` (or `f_<tool>`) entry in `dotdrop.config.yaml`, and list it under a profile.
+1. Add the file or directory under `dotfiles/`
+2. Add a `d_*` (directory) or `f_*` (file) entry to the `dotfiles:` block in `dotdrop.config.yaml`
+3. Add that key to a profile under `profiles:`
 
-### Theming: Three Flavors, One Active
+### Theme Flavors
 
-Flavors come from [pivoshenko.theme](https://github.com/pivoshenko/pivoshenko.theme): `morok`, `popil`, `vatra`; `popil` is currently active. Every themed tool has **all three flavors vendored side by side** under `dotfiles/.config/<tool>/themes/`, and a loader line elsewhere picks one. Sync writes the flavor files; `set_flavor.py` rewrites the loaders. These are strictly separate steps.
+The repo vendors three flavors of [pivoshenko.theme](https://github.com/pivoshenko/pivoshenko.theme) - `morok`, `popil`, `vatra` - and most themed tools keep all three on disk under a `themes/` (or `skins/`, `Themes/`) subdirectory. Three do not: starship inlines all three `[palettes.<flavor>]` tables in `starship.toml`, Zen keeps a directory per flavor at `dotfiles/.config/zen/<flavor>/`, and Stylus keeps flat `dotfiles/.config/stylus/<flavor>.json` files. `scripts/set_flavor.py` is the single authority that flips the live config over, and it uses four distinct mechanisms depending on what the tool supports:
 
-`scripts/set_flavor.py` handles four categories, and any new themed tool must be added to the right one:
+- **Selector rewrite** - regex-swap a name in the live config: starship `palette`, helix `theme`, k9s `skin`, bat `--theme`, ghostty `theme = <f>.conf`, zed `"theme"` block, fish `fish_config theme choose`, `fzf.fish` source line and `FZF_THEME`, and `.gitconfig`'s `[delta] features` (all three delta gitconfigs are `[include]`d, so only the selector changes)
+- **Whole-file copy** - `themes/<flavor>.<ext>` overwrites the live config: bottom, fastfetch
+- **Block splice** - the flavor file's body is spliced into a section of the live config: herdr (between `[theme]` and the `# == Keys ==` marker) and lazygit (the `gui.theme:` block, re-indented)
+- **dotdrop source rewrite** - Zen has no runtime theme selector, so the script rewrites `src: .config/zen/<flavor>/userC*` inside `dotdrop.config.yaml`
 
-1. **Regex swap in a loader line** - `starship.toml` (`palette = `), `helix/config.toml` (`theme = `), `k9s/config.yaml` (`skin: `), `bat/config` (`--theme=`), `ghostty/config` (`theme = <f>.conf`), `.gitconfig` (`[delta] features = `), `zed/settings.json` (`theme.light` + `theme.dark`), `fish/config.fish` (`fish_config theme choose`), `fish/fzf.fish` (`themes/fzf-<f>.fish` + `$FZF_<F>`)
-2. **Whole file copied from `themes/<flavor>.<ext>`** - `bottom/bottom.toml`, `fastfetch/config.jsonc`. These configs are *only* theme, so they are replaced wholesale; never hand-edit them, edit the vendored flavor file
-3. **Spliced block** - `lazygit/config.yml`, where the surrounding config is hand-maintained so only the `gui.theme:` block is replaced from `lazygit/themes/<flavor>.yml`, and `herdr/config.toml`, where only the span from `[theme]` up to the `# == Keys ==` banner is replaced from `herdr/themes/<flavor>.toml`; both the preamble above `[theme]` (which carries `onboarding = false`) and the `[keys]` block below the banner are hand-maintained
-4. **Path rewrite in `dotdrop.config.yaml`** - Zen ships a directory per flavor (`.config/zen/<flavor>/userC*.css`), so the flavor lives in the `src:` path, not inside the file
+Consequences when touching theming:
 
-Two configs cannot include an external palette, so both carry all three inline: `starship.toml` has `[palettes.morok|popil|vatra]` blocks with `palette = "<flavor>"` choosing; `.gitconfig` includes all three `delta/themes/<flavor>.gitconfig` files with `[delta] features` choosing.
+- Those anchors are load-bearing, and they fail differently. Removing the `# == Keys ==` comment from `herdr/config.toml` aborts `set_flavor.py` loudly, with a `ValueError` from `text.index`. Reindenting or moving lazygit's `gui.theme` block fails silently instead: the regex stops matching, so `edit` sees no change and prints `ok` while patching nothing. Reflowing zed's `"theme": { ... }` onto one line is safe - `patch_zed`'s regexes match either form
+- A new themed tool needs a vendored file per flavor **and** a corresponding step in `set_flavor.py`
+- `set_flavor.py` only edits the repository; nothing reaches the system until `just install-dotfiles`
+- Apps that own their own settings store stay manual: Obsidian, Telegram, Discord/Vesktop, Stylus, Rectangle. `README.md` documents each
 
-Tools whose theme is picked by their own UI or CLI are outside `set-flavor`: Spicetify (`just set-spicetify-flavor <flavor>`), Obsidian (appearance settings), Stylus, Telegram, Discord/Vesktop. Sync still drops every flavor file into place for them.
+### Plugin Manifests
 
-After `just set-flavor`, run `just install-dotfiles` to deploy.
+Plugins are tracked as plain line-per-entry manifests rather than recipe arguments, so adding one is a one-line diff:
 
-### Shell: Fish
+- `dotfiles/.config/fish/fish_plugins` - read by Fisher
+- `herdr.plugins` - read by `just install-herdr-plugins` (blank lines and `#` comments skipped)
 
-`dotfiles/.config/fish/config.fish` is the entry point: initializes fzf, pyenv, starship, zoxide; sources `aliases.fish`, `exports.fish`, `fzf.fish`, `functions.fish`, `vimode.fish`; then optionally `local.fish` and `.secrets.fish` (untracked, machine-local); then picks the fish theme. `exports.fish` uses `set -Ux` (universal + exported) - values persist in fish's universal variable store, so removing a line here does not unset it on an already-configured machine. PATH additions are the exception: they use `fish_add_path -g`, which is idempotent and stays out of the universal store. Plugins are pinned in `fish_plugins` (Fisher's manifest).
+### Agent Configuration
 
-### Machine-Local Files
+`dotfiles/.claude/` carries only `settings.json` and `statusline-command.sh`. The global `CLAUDE.md`/`AGENTS.md` instruction set does **not** live here - it is distributed across machines by [Kasetto](https://kasetto.dev/) from [`pivoshenko/pivoshenko.ai`](https://github.com/pivoshenko/pivoshenko.ai), as individual instruction files under `instructions/`. Do not reintroduce global agent rules into this repository.
 
-Three files are deliberately untracked and must exist on each machine; nothing in this repository creates them:
+`AGENTS.md` at the repo root is a symlink to `CLAUDE.md`. Edit `CLAUDE.md`; keep the symlink.
 
-- `~/.gitconfig.local` - included by `.gitconfig` and the only place `[user]` lives. `.gitconfig` sets `useConfigOnly = true`, so without it git refuses to commit. It also must hold `user.signingkey`, because `commit.gpgsign = true`
-- `~/.config/fish/local.fish` - machine-specific shell setup
-- `~/.config/fish/.secrets.fish` - tokens and keys, never committed
+## Untracked Local Files
 
-### Claude Code Config
+Three files are deliberately not in the repo and must exist on each machine:
 
-`dotfiles/.claude/` holds only `settings.json` and `statusline-command.sh`. The global rules are **not** in this repository: they live as instruction files in [`pivoshenko/pivoshenko.ai`](https://github.com/pivoshenko/pivoshenko.ai) under `instructions/` and sync into `~/.claude/CLAUDE.md` via Kasetto, along with skills and MCP servers.
+- `~/.gitconfig.local` - the `[user]` block. `.gitconfig` sets `useConfigOnly = true` and `commit.gpgsign = true`, so git refuses to commit without it and needs a `signingkey`
+- `~/.config/fish/local.fish` - machine-specific shell config
+- `~/.config/fish/.secrets.fish` - tokens and keys
 
-`settings.json` carries a `hooks.SessionStart` entry that runs herdr's agent-state hook, which is what lets the herdr sidebar report whether Claude is working, blocked, or idle. The hook *script* is herdr-managed and deliberately untracked - `herdr integration install claude` writes it to `~/.claude/hooks/herdr-agent-state.sh` and overwrites it on every update, so `just install-herdr-integration` restores it on a new machine.
-
-The hook's `command` string must stay byte-identical to what herdr writes, absolute path and inner quotes included. herdr matches on that exact string to decide the hook is already present; rewrite it to `~/.claude/...` and herdr stops recognizing it and appends a second copy, so the hook fires twice.
-
-herdr plugins install into `~/.config/herdr/plugins/`, which is runtime state and therefore untracked - only `config.toml` is mapped. The wanted set is tracked instead as one repository-per-line manifest at `herdr.plugins` (repository root, mirroring Fisher's `fish_plugins`); `just install-herdr-plugins` pipes each non-comment line into `herdr plugin install <repo> -y`, so a new plugin is a new line, not a recipe edit. Their key bindings live in the tracked `config.toml`.
-
-Plugins that build from source need a working toolchain on `PATH` - `herdr-navigator` runs `cargo build --release`, and brew's `rustup` keeps its shims in `/opt/homebrew/opt/rustup/bin`, which `exports.fish` adds via `fish_add_path -g`; without it the build fails with `No such file or directory`.
+Both fish files are sourced conditionally at the end of `config.fish`.
 
 ## Conventions
 
-- `.editorconfig`: UTF-8, LF, 2-space indent (4 for Python and Rust), 120-char lines, trailing whitespace trimmed, final newline
-- Config files use `# == Section ==` banner comments for grouping (`Brewfile`, fish configs, `dotdrop.config.yaml`)
-- Prose, comments, and commit messages say "repository", never "repo"
-- Python module docstrings open with `Module that contains ...`
-- Commits follow Angular conventional commits with a tool-named scope where it applies (`feat(fish):`, `feat(herdr):`, `feat(claude):`, `chore(theme):`)
-- Vendored theme files under any `themes/` directory are generated by sync - fix them in `pivoshenko.theme` and re-sync, do not patch them here
+- Config files group related settings under `# == Group ==` headers (Brewfile, `dotdrop.config.yaml`, the fish files, `herdr/config.toml`, the statusline script). Match that style rather than inventing separators
+- `.editorconfig`: LF, UTF-8, 2-space indent (4 for Python and Rust), 120-column max, trailing whitespace trimmed
+- Conventional Commits with an area scope, imperative lowercase subject, no trailing period: `feat(fish): add the cargo bin directory to PATH`
+- Branches are `<type>/<kebab-description>` using the same type prefixes
+- Keep `README.md` and `CONTRIBUTING.md`'s recipe table in sync when adding or renaming a `just` recipe
