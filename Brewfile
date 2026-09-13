@@ -1,3 +1,7 @@
+# == Taps ==
+tap "hashicorp/tap", trusted: true
+tap "pivoshenko/tap", trusted: true
+
 # == Fonts ==
 cask "font-iosevka-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
