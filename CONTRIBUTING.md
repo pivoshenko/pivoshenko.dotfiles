@@ -1,0 +1,159 @@
+# Contributing
+
+- [Contributing](#contributing)
+  - [Reporting Bugs](#reporting-bugs)
+    - [How to Submit a Bug Report](#how-to-submit-a-bug-report)
+  - [Suggesting Enhancements](#suggesting-enhancements)
+    - [How to Submit an Enhancement](#how-to-submit-an-enhancement)
+  - [Code Contributions](#code-contributions)
+    - [Local Development](#local-development)
+    - [CI/CD](#cicd)
+    - [Branches](#branches)
+    - [Commits](#commits)
+    - [Pull Requests](#pull-requests)
+
+Thank you for taking the time to contribute.
+
+These guidelines are intended to make contributions consistent and easy to review across repositories. They are guidance, not hard instructions, and maintainers may adapt them when needed.
+
+## Reporting Bugs
+
+Before creating a bug report, search existing issues to avoid duplicates.
+
+When opening a bug report, include enough context for someone else to reproduce the issue and understand the impact.
+
+> [!NOTE]
+> If you find a closed issue that looks similar, open a new issue and link the previous one.
+
+### How to Submit a Bug Report
+
+Open a bug report and provide the following:
+
+- A clear, descriptive title
+- Reproduction steps (minimal and reliable if possible)
+- Current behavior and expected behavior
+- Relevant environment details (for example OS, runtime, browser, framework versions)
+- Logs, stack traces, screenshots, or recordings when useful
+
+If the issue is intermittent, describe how often it happens and known triggers.
+If the issue appeared after a change, mention the last known working version or commit if available.
+
+## Suggesting Enhancements
+
+Before submitting an enhancement, check whether a similar request already exists.
+
+Enhancement requests can include new features, changes to existing behavior, usability improvements, or performance improvements.
+
+### How to Submit an Enhancement
+
+Open a feature request and provide the following:
+
+- A clear problem statement
+- The proposed solution
+- Alternatives considered or current workarounds
+- Expected impact (who benefits and how)
+
+Concrete examples, API sketches, UI mockups, or references are helpful when relevant.
+
+## Code Contributions
+
+### Local Development
+
+You need [`just`](https://github.com/casey/just), [Homebrew](https://brew.sh), [dotdrop](https://github.com/deadc0de6/dotdrop), [fish](https://fishshell.com), and Python 3 (for `scripts/set_flavor.py`) on a macOS machine.
+
+This project uses [`just`](https://github.com/casey/just) as its task runner. Run `just --list` for the full set; these are the ones you need day to day:
+
+| Command | What it does |
+| ------- | ------------ |
+| `just install` | Runs the full bootstrap: brew packages, dotfiles, fish plugins, `bat` cache, vault link, and the herdr integration and plugins |
+| `just install-brew-packages` | Installs and upgrades every package in the `Brewfile`, then drops anything no longer listed |
+| `just install-dotfiles` | Deploys both dotdrop profiles (`default` and `me`) from `dotdrop.config.yaml` with `--force` |
+| `just install-fish-plugins` | Bootstraps Fisher if it is missing, then syncs the fish plugins |
+| `just install-herdr-integration` | Installs the herdr integration for Claude |
+| `just install-herdr-plugins` | Reads the non-comment lines of `herdr.plugins` and installs each plugin listed |
+| `just build-bat-cache` | Rebuilds the `bat` theme cache so the vendored themes are picked up |
+| `just link-vault` | Symlinks the iCloud Obsidian vault to `~/Vault` |
+| `just set-flavor FLAVOR` | Switches the theme flavor (`morok`, `popil`, `vatra`) across the managed configs via `scripts/set_flavor.py` |
+| `just set-spicetify-flavor FLAVOR` | Points spicetify at the given theme and color scheme, then applies it |
+
+1. Fork the repository and clone your fork
+2. Create a branch for your change
+3. Run `just install-dotfiles` before opening a pull request, to confirm the dotdrop templates still render and deploy cleanly
+
+> [!IMPORTANT]
+> Behavioral code changes should include or update tests.
+
+### CI/CD
+
+This repository has no GitHub Actions workflows; run the checks above locally before opening a pull request.
+
+### Branches
+
+Branch names follow the pattern `<type>/<short-description>` using the same type prefixes as commits.
+The description should be lowercase kebab-case, brief, and specific enough to identify the change at a glance.
+
+Examples:
+
+```
+feat/github-token-refresh
+fix/private-repo-archive-auth
+docs/update-sync-flow-diagram
+refactor/mcps-schema-alignment
+```
+
+A branch covering multiple unrelated changes should be split. One concern per branch makes review and bisect much easier.
+
+### Commits
+
+Use clear, focused commits with descriptive messages.
+
+This project follows [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
+
+**Format**
+
+```
+<type>(<scope>): <subject>
+
+[optional body]
+```
+
+- **type** - one of the prefixes from the table below
+- **scope** - the module, command, or area being changed (e.g. `sync`, `mcps`, `github`, `landing`, `config`); omit when the change is truly cross-cutting
+- **subject** - imperative mood, lowercase, no trailing period, 72 characters or fewer
+- **body** - optional; use it to explain *why*, not *what*; wrap at 72 characters
+
+**Type prefixes**
+
+| Prefix     | When to use                                                                                             |
+| ---------- | ------------------------------------------------------------------------------------------------------- |
+| `feat`     | A new feature or user-facing capability                                                                 |
+| `fix`      | A bug fix that corrects incorrect behavior                                                              |
+| `docs`     | Changes to documentation only (README, comments, guides)                                                |
+| `refactor` | Code restructuring that does not change external behavior (renaming, extracting functions, simplifying) |
+| `test`     | Adding, updating, or fixing tests without changing production code                                      |
+| `chore`    | Maintenance tasks that don't affect source code or tests (dependency bumps, config tweaks, .gitignore)  |
+| `ci`       | Changes to CI/CD configuration and scripts (GitHub Actions, workflows, pipelines)                       |
+| `build`    | Changes to the build system or external dependencies (Cargo.toml, build scripts, Makefile)              |
+| `perf`     | A code change that improves performance without altering functionality                                  |
+| `style`    | Formatting-only changes (whitespace, semicolons, linting) with no logic changes                         |
+| `design`   | Changes to visual or UI design assets and layout                                                        |
+| `revert`   | Reverts a previous commit (reference the reverted commit hash in the body)                              |
+
+**Examples**
+
+```
+feat(sync): support skills source sub-directory selection
+fix(github): url-encode git refs in API tarball endpoint
+refactor(mcps): align mcps[] schema with skills[]
+docs(config): document browser URL auto-rewriting for --config
+```
+
+### Pull Requests
+
+- Fill out the pull request template completely
+- Keep the pull request focused and scoped to one change set
+- Ensure tests and checks pass before requesting review
+- Update documentation when behavior or interfaces change
+- Respond to review feedback and keep the branch up to date with the target branch
+
+Maintainers may ask for changes, additional tests, or scope adjustments before merging.
