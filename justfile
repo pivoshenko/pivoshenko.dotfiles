@@ -7,7 +7,8 @@ build-bat-cache:
     bat cache --build
 
 install-brew-packages:
-    brew bundle --force --cleanup --upgrade
+    brew bundle --force --upgrade
+    brew bundle cleanup --force
 
 install-dotfiles:
     dotdrop install -c dotdrop.config.yaml -p default --force
