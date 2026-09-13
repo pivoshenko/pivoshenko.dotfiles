@@ -91,7 +91,7 @@ Plugins that build from source need a working toolchain on `PATH` - `herdr-navig
 ## Conventions
 
 - `.editorconfig`: UTF-8, LF, 2-space indent (4 for Python and Rust), 120-char lines, trailing whitespace trimmed, final newline
-- Config files use `# == Section ==` banner comments for grouping (`Brewfile`, fish configs, `dotdrop.config.yaml`, the scripts)
+- Config files use `# == Section ==` banner comments for grouping (`Brewfile`, fish configs, `dotdrop.config.yaml`)
 - Prose, comments, and commit messages say "repository", never "repo"
 - Python module docstrings open with `Module that contains ...`
 - Commits follow Angular conventional commits with a tool-named scope where it applies (`feat(fish):`, `feat(herdr):`, `feat(claude):`, `chore(theme):`)

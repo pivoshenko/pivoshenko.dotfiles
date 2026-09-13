@@ -29,8 +29,6 @@ def edit(rel: str, transform) -> None:
 print(f"set-flavor: flavor={F}")
 
 
-# == simple regex swaps ==
-
 edit(".config/starship.toml", lambda t: re.sub(r'^palette = "\w+"', f'palette = "{F}"', t, count=1, flags=re.MULTILINE))
 edit(".config/helix/config.toml", lambda t: re.sub(r'^theme = "\w+"', f'theme = "{F}"', t, count=1, flags=re.MULTILINE))
 edit(".config/k9s/config.yaml", lambda t: re.sub(r"skin: \w+", f"skin: {F}", t, count=1))
@@ -69,7 +67,6 @@ def patch_fzf(text: str) -> str:
 edit(".config/fish/fzf.fish", patch_fzf)
 
 
-# == bottom + fastfetch: whole config is the theme; replace from themes/<F>.* ==
 for name, ext, filename in (
     ("bottom", "toml", "bottom.toml"),
     ("fastfetch", "jsonc", "config.jsonc"),
@@ -83,7 +80,6 @@ for name, ext, filename in (
         print(f"  ok     {dst.relative_to(DOT)}")
 
 
-# == herdr: the preamble and the [keys] block are hand-maintained, so splice only the theme ==
 herdr_theme = (DOT / f".config/herdr/themes/{F}.toml").read_text().rstrip() + "\n"
 
 
@@ -96,7 +92,6 @@ def patch_herdr(text: str) -> str:
 edit(".config/herdr/config.toml", patch_herdr)
 
 
-# == lazygit: the rest of config.yml is hand-maintained, so splice gui.theme from themes/<F>.yml ==
 dist_lg = (DOT / f".config/lazygit/themes/{F}.yml").read_text().splitlines()
 theme_body: list[str] = []
 in_theme = False
@@ -124,7 +119,6 @@ def patch_lazygit(text: str) -> str:
 edit(".config/lazygit/config.yml", patch_lazygit)
 
 
-# == dotdrop: zen src paths reference flavor dir name ==
 def patch_dotdrop(text: str) -> str:
     return re.sub(r"(src: \.config/zen/)\w+(/userC)", rf"\1{F}\2", text)
 
