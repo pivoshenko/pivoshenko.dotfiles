@@ -9,6 +9,10 @@ set -Ux HOMEBREW_NO_ANALYTICS 1
 
 set -Ux PYTHONBREAKPOINT IPython.terminal.debugger.set_trace
 
+# == Colors ==
+
+source $HOME/.config/fish/themes/ls-colors-popil.fish
+
 # == Path ==
 fish_add_path -g $HOME/.cargo/bin
 fish_add_path -g $HOME/.docker/bin
