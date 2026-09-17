@@ -15,10 +15,10 @@ k9s:
     bgColor: "#1f1f1e"
     sectionColor: "#8a9d68"
     keyColor: "#7ba0c4"
-    numKeyColor: "#b06a5e"
+    numKeyColor: "#d2897c"
   frame:
     title:
-      fgColor: "#87a896"
+      fgColor: "#83aaa0"
       bgColor: "#1f1f1e"
       highlightColor: "#c89aa4"
       counterColor: "#d4a85a"
@@ -29,18 +29,18 @@ k9s:
     menu:
       fgColor: "#e4e2de"
       keyColor: "#7ba0c4"
-      numKeyColor: "#b06a5e"
+      numKeyColor: "#d2897c"
     crumbs:
       fgColor: "#1f1f1e"
-      bgColor: "#b06a5e"
-      activeColor: "#d97757"
+      bgColor: "#d2897c"
+      activeColor: "#dd797e"
     status:
       newColor: "#7ba0c4"
       modifyColor: "#a89bb5"
       addColor: "#8a9d68"
       pendingColor: "#d97757"
-      errorColor: "#c87a72"
-      highlightColor: "#7ba0c4"
+      errorColor: "#e05d55"
+      highlightColor: "#68a8b3"
       killColor: "#b88aa0"
       completedColor: "#57534e"
   info:
@@ -56,7 +56,7 @@ k9s:
       header:
         fgColor: "#d4a85a"
         bgColor: "#1f1f1e"
-        sorterColor: "#7ba0c4"
+        sorterColor: "#68a8b3"
     xray:
       fgColor: "#e4e2de"
       bgColor: "#1f1f1e"
@@ -69,10 +69,10 @@ k9s:
       dialBgColor: "#1f1f1e"
       defaultDialColors:
         - "#8a9d68"
-        - "#c87a72"
+        - "#e05d55"
       defaultChartColors:
         - "#8a9d68"
-        - "#c87a72"
+        - "#e05d55"
       resourceColors:
         cpu:
           - "#b88aa0"

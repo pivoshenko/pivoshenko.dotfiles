@@ -3,7 +3,7 @@
     "type": "file",
     "source": "${HOME}/.config/fastfetch/assets/cat.txt",
     "color": {
-      "3": "38;2;137;180;130"
+      "3": "38;2;145;166;200"
     }
   },
   "display": {
@@ -13,31 +13,31 @@
     {
       "type": "os",
       "key": "",
-      "keyColor": "38;2;137;180;130",
+      "keyColor": "38;2;145;166;200",
       "format": "{name} {version}"
     },
     {
       "type": "cpu",
       "key": "󰘚",
-      "keyColor": "38;2;137;180;130",
+      "keyColor": "38;2;145;166;200",
       "showPeCoreCount": true,
       "temp": true
     },
     {
       "type": "gpu",
       "key": "󰡷",
-      "keyColor": "38;2;137;180;130",
+      "keyColor": "38;2;145;166;200",
       "temp": true
     },
     {
       "type": "memory",
       "key": "󰍛",
-      "keyColor": "38;2;137;180;130"
+      "keyColor": "38;2;145;166;200"
     },
     {
       "type": "disk",
       "key": "󰋊",
-      "keyColor": "38;2;137;180;130",
+      "keyColor": "38;2;145;166;200",
       "folders": "/"
     },
     {
@@ -46,7 +46,7 @@
     {
       "type": "media",
       "key": "",
-      "keyColor": "38;2;137;180;130"
+      "keyColor": "38;2;145;166;200"
     }
   ]
 }
