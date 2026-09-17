@@ -43,8 +43,8 @@
 
   /* macOS: color the titlebar layer behind the native traffic lights so the
      region matches the toolbar. NEVER set a background on .titlebar-buttonbox*
-     on macOS — that clobbers the native button appearance and the close/min/max
-     controls disappear. */
+     on macOS - that clobbers the native button appearance and the close/min/max
+     controls disappear */
   #titlebar,
   #navigator-toolbox-background {
     background-color: #1a1a19 !important;
@@ -132,11 +132,11 @@
   }
 
   .identity-color-blue { --identity-tab-color: #7ba0c4 !important; --identity-icon-color: #7ba0c4 !important; }
-  .identity-color-turquoise { --identity-tab-color: #87a896 !important; --identity-icon-color: #87a896 !important; }
+  .identity-color-turquoise { --identity-tab-color: #83aaa0 !important; --identity-icon-color: #83aaa0 !important; }
   .identity-color-green { --identity-tab-color: #8a9d68 !important; --identity-icon-color: #8a9d68 !important; }
   .identity-color-yellow { --identity-tab-color: #d4a85a !important; --identity-icon-color: #d4a85a !important; }
   .identity-color-orange { --identity-tab-color: #d97757 !important; --identity-icon-color: #d97757 !important; }
-  .identity-color-red { --identity-tab-color: #c87a72 !important; --identity-icon-color: #c87a72 !important; }
+  .identity-color-red { --identity-tab-color: #e05d55 !important; --identity-icon-color: #e05d55 !important; }
   .identity-color-pink { --identity-tab-color: #c89aa4 !important; --identity-icon-color: #c89aa4 !important; }
   .identity-color-purple { --identity-tab-color: #b88aa0 !important; --identity-icon-color: #b88aa0 !important; }
 }

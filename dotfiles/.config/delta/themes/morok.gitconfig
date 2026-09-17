@@ -20,6 +20,6 @@ plus-style = syntax "#2a2f2a"
 map-styles = \
 bold purple => syntax "#463c50", \
 bold blue => syntax "#38404e", \
-bold cyan => syntax "#334048", \
+bold cyan => syntax "#324146", \
 bold yellow => syntax "#554932"
 syntax-theme = morok
