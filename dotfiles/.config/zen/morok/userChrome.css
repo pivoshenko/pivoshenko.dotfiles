@@ -43,8 +43,8 @@
 
   /* macOS: color the titlebar layer behind the native traffic lights so the
      region matches the toolbar. NEVER set a background on .titlebar-buttonbox*
-     on macOS — that clobbers the native button appearance and the close/min/max
-     controls disappear. */
+     on macOS - that clobbers the native button appearance and the close/min/max
+     controls disappear */
   #titlebar,
   #navigator-toolbox-background {
     background-color: #0d0d0d !important;
@@ -132,7 +132,7 @@
   }
 
   .identity-color-blue { --identity-tab-color: #7f98bf !important; --identity-icon-color: #7f98bf !important; }
-  .identity-color-turquoise { --identity-tab-color: #7ea59d !important; --identity-icon-color: #7ea59d !important; }
+  .identity-color-turquoise { --identity-tab-color: #53a6a4 !important; --identity-icon-color: #53a6a4 !important; }
   .identity-color-green { --identity-tab-color: #8ea98c !important; --identity-icon-color: #8ea98c !important; }
   .identity-color-yellow { --identity-tab-color: #d4b070 !important; --identity-icon-color: #d4b070 !important; }
   .identity-color-orange { --identity-tab-color: #d99a6a !important; --identity-icon-color: #d99a6a !important; }
