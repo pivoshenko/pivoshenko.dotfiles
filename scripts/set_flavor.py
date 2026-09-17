@@ -56,6 +56,12 @@ edit(
 )
 
 
+edit(
+    ".config/fish/exports.fish",
+    lambda t: re.sub(r"themes/ls-colors-\w+\.fish", f"themes/ls-colors-{F}.fish", t, count=1),
+)
+
+
 def patch_fzf(text: str) -> str:
     text = re.sub(r"themes/fzf-\w+\.fish", f"themes/fzf-{F}.fish", text, count=1)
     text = re.sub(
