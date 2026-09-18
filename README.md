@@ -102,6 +102,8 @@ Config: [`dotfiles/.config/herdr/config.toml`](dotfiles/.config/herdr/config.tom
 
 Plugins are listed one per line in [`herdr.plugins`](herdr.plugins), the same way Fisher tracks fish plugins in `fish_plugins`. `just install-herdr-plugins` reads that file and installs each entry, so adding a plugin means adding a line rather than editing a recipe. The plugins themselves install into `~/.config/herdr/plugins` and stay untracked; their key bindings live in the managed `config.toml`.
 
+Entries are GitHub shorthand, and a manifest in a subdirectory works too - that is how [`agents-fleet`](https://github.com/pivoshenko/pivoshenko.ai/tree/main/plugins/agents-fleet) is pulled from [`pivoshenko.ai`](https://github.com/pivoshenko/pivoshenko.ai) rather than a repository of its own. It is a status board for every coding agent on the machine, served on loopback.
+
 ## macOS
 
 ### Hotkeys Daemon - Karabiner
