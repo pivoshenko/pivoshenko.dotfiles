@@ -2,7 +2,7 @@
 name = "catppuccin"
 
 [theme.custom]
-accent = "#d97757"
+accent = "#7ba0c4"
 panel_bg = "#1f1f1e"
 sidebar_bg = "#1a1a19"
 active_row_bg = "#1f1f1e"
