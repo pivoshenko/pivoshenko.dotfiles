@@ -9,8 +9,8 @@ fish_color_end e48d66
 fish_color_comment 78716c
 fish_color_error ec7470
 fish_color_gray 57534e
-fish_color_selection --background=292929
-fish_color_search_match --background=292929
+fish_color_selection --background=292928
+fish_color_search_match --background=292928
 fish_color_option 91ab78
 fish_color_operator ce9db9
 fish_color_escape d99d8f
