@@ -1,6 +1,6 @@
 set -Ux FZF_POPIL "\
---color=bg+:#262625,bg:#1f1f1e,spinner:#ddc7c2,hl:#7ba0c4 \
---color=fg:#e4e2de,header:#7ba0c4,info:#b88aa0,pointer:#ddc7c2 \
---color=marker:#a89bb5,fg+:#e4e2de,prompt:#b88aa0,hl+:#7ba0c4 \
---color=selected-bg:#2e2e2c \
+--color=bg+:#2b2926,bg:#1f1f1e,spinner:#ddc7c2,hl:#8da7d1 \
+--color=fg:#e4e2de,header:#8da7d1,info:#ad8cc0,pointer:#ddc7c2 \
+--color=marker:#b8b9d7,fg+:#e4e2de,prompt:#ad8cc0,hl+:#8da7d1 \
+--color=selected-bg:#343230 \
 --color=border:#57534e,label:#e4e2de"

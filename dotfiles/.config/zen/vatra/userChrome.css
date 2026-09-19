@@ -1,44 +1,44 @@
 @media (prefers-color-scheme: dark) {
   :root {
-    --zen-colors-primary: #262625 !important;
-    --zen-primary-color: #91a6c8 !important;
-    --zen-colors-secondary: #262625 !important;
-    --zen-colors-tertiary: #1a1a19 !important;
-    --zen-colors-border: #91a6c8 !important;
-    --toolbarbutton-icon-fill: #91a6c8 !important;
-    --lwt-text-color: #e4e2de !important;
-    --toolbar-field-color: #e4e2de !important;
-    --tab-selected-textcolor: #bac4d3 !important;
-    --toolbar-field-focus-color: #e4e2de !important;
-    --toolbar-color: #e4e2de !important;
-    --newtab-text-primary-color: #e4e2de !important;
-    --arrowpanel-color: #e4e2de !important;
-    --arrowpanel-background: #1f1f1e !important;
-    --sidebar-text-color: #e4e2de !important;
-    --lwt-sidebar-text-color: #e4e2de !important;
-    --lwt-sidebar-background-color: #151514 !important;
-    --toolbar-bgcolor: #1a1a19 !important;
-    --newtab-background-color: #1f1f1e !important;
-    --zen-themed-toolbar-bg: #1a1a19 !important;
-    --zen-main-browser-background: #1a1a19 !important;
-    --toolbox-bgcolor-inactive: #1a1a19 !important;
+    --zen-colors-primary: #2a2928 !important;
+    --zen-primary-color: #80a6d1 !important;
+    --zen-colors-secondary: #2a2928 !important;
+    --zen-colors-tertiary: #1a1a1a !important;
+    --zen-colors-border: #80a6d1 !important;
+    --toolbarbutton-icon-fill: #80a6d1 !important;
+    --lwt-text-color: #f3e0ba !important;
+    --toolbar-field-color: #f3e0ba !important;
+    --tab-selected-textcolor: #bac3c6 !important;
+    --toolbar-field-focus-color: #f3e0ba !important;
+    --toolbar-color: #f3e0ba !important;
+    --newtab-text-primary-color: #f3e0ba !important;
+    --arrowpanel-color: #f3e0ba !important;
+    --arrowpanel-background: #1f1f1f !important;
+    --sidebar-text-color: #f3e0ba !important;
+    --lwt-sidebar-text-color: #f3e0ba !important;
+    --lwt-sidebar-background-color: #151515 !important;
+    --toolbar-bgcolor: #1a1a1a !important;
+    --newtab-background-color: #1f1f1f !important;
+    --zen-themed-toolbar-bg: #1a1a1a !important;
+    --zen-main-browser-background: #1a1a1a !important;
+    --toolbox-bgcolor-inactive: #1a1a1a !important;
     --zen-element-separation: 8px !important;
     --zen-webview-border-radius: 10px !important;
   }
 
   #permissions-granted-icon {
-    --identity-icon-color: #ae91d1 !important;
+    --identity-icon-color: #b98dd2 !important;
   }
 
   .sidebar-placesTree,
   #zen-workspaces-button,
   .urlbar-background {
-    background-color: #1f1f1e !important;
+    background-color: #1f1f1f !important;
   }
 
   #TabsToolbar,
   #zen-appcontent-navbar-container {
-    background-color: #1a1a19 !important;
+    background-color: #1a1a1a !important;
   }
 
   /* macOS: color the titlebar layer behind the native traffic lights so the
@@ -47,17 +47,17 @@
      controls disappear */
   #titlebar,
   #navigator-toolbox-background {
-    background-color: #1a1a19 !important;
+    background-color: #1a1a1a !important;
   }
 
   /* Safer Zen Twilight acrylic/seam fix */
   #sidebar-splitter,
   #zen-sidebar-splitter {
-    --themed-splitter-idle: #1a1a19;
+    --themed-splitter-idle: #1a1a1a;
     --themed-splitter-hover: color-mix(
       in srgb,
       white 28%,
-      #1a1a19 72%
+      #1a1a1a 72%
     );
     border: none !important;
     opacity: 1 !important;
@@ -99,13 +99,13 @@
   #navigator-toolbox,
   #tabbrowser-tabbox,
   #main-window {
-    background: #1a1a19 !important;
-    background-color: #1a1a19 !important;
+    background: #1a1a1a !important;
+    background-color: #1a1a1a !important;
   }
 
   /* window background behind the transparent macOS traffic-light region */
   #zen-browser-background {
-    --zen-main-browser-background: #1a1a19 !important;
+    --zen-main-browser-background: #1a1a1a !important;
   }
 
   /* Remove seam shadows at sidebar/content corners */
@@ -115,28 +115,28 @@
   }
 
   .content-shortcuts {
-    background-color: #1f1f1e !important;
-    border-color: #91a6c8 !important;
+    background-color: #1f1f1f !important;
+    border-color: #80a6d1 !important;
   }
 
   .urlbarView-url {
-    color: #91a6c8 !important;
+    color: #80a6d1 !important;
   }
 
   #zenEditBookmarkPanelFaviconContainer {
-    background: #151514 !important;
+    background: #151515 !important;
   }
 
   #zen-media-controls-toolbar #zen-media-progress-bar::-moz-range-track {
-    background: #262625 !important;
+    background: #2a2928 !important;
   }
 
-  .identity-color-blue { --identity-tab-color: #91a6c8 !important; --identity-icon-color: #91a6c8 !important; }
-  .identity-color-turquoise { --identity-tab-color: #67bcb0 !important; --identity-icon-color: #67bcb0 !important; }
-  .identity-color-green { --identity-tab-color: #a9b665 !important; --identity-icon-color: #a9b665 !important; }
-  .identity-color-yellow { --identity-tab-color: #e0b04a !important; --identity-icon-color: #e0b04a !important; }
-  .identity-color-orange { --identity-tab-color: #ed8438 !important; --identity-icon-color: #ed8438 !important; }
-  .identity-color-red { --identity-tab-color: #ea6962 !important; --identity-icon-color: #ea6962 !important; }
-  .identity-color-pink { --identity-tab-color: #d283be !important; --identity-icon-color: #d283be !important; }
-  .identity-color-purple { --identity-tab-color: #ae91d1 !important; --identity-icon-color: #ae91d1 !important; }
+  .identity-color-blue { --identity-tab-color: #80a6d1 !important; --identity-icon-color: #80a6d1 !important; }
+  .identity-color-turquoise { --identity-tab-color: #60bead !important; --identity-icon-color: #60bead !important; }
+  .identity-color-green { --identity-tab-color: #a6bc6a !important; --identity-icon-color: #a6bc6a !important; }
+  .identity-color-yellow { --identity-tab-color: #e2b54c !important; --identity-icon-color: #e2b54c !important; }
+  .identity-color-orange { --identity-tab-color: #f18c46 !important; --identity-icon-color: #f18c46 !important; }
+  .identity-color-red { --identity-tab-color: #f7716e !important; --identity-icon-color: #f7716e !important; }
+  .identity-color-pink { --identity-tab-color: #d985c0 !important; --identity-icon-color: #d985c0 !important; }
+  .identity-color-purple { --identity-tab-color: #b98dd2 !important; --identity-icon-color: #b98dd2 !important; }
 }

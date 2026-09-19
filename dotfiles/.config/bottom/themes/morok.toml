@@ -1,25 +1,25 @@
 [styles.cpu]
 all_entry_color = "#e2cfc6"
-avg_entry_color = "#c47068"
-cpu_core_colors = ["#d97777", "#d99a6a", "#d4b070",  "#8ea98c", "#6f9aa9", "#a78cc4"]
+avg_entry_color = "#dc99a4"
+cpu_core_colors = ["#df7c7b", "#d99a6a", "#d4b070",  "#8aaf86", "#49a4bf", "#aa89c2"]
 
 [styles.memory]
-ram_color = "#8ea98c"
-cache_color = "#d97777"
+ram_color = "#8aaf86"
+cache_color = "#df7c7b"
 swap_color = "#d99a6a"
-gpu_colors = ["#6f9aa9", "#a78cc4", "#d97777", "#d99a6a", "#d4b070", "#8ea98c"]
-arc_color = "#82afb7"
+gpu_colors = ["#49a4bf", "#aa89c2", "#df7c7b", "#d99a6a", "#d4b070", "#8aaf86"]
+arc_color = "#7fb7bd"
 
 [styles.network]
-rx_color = "#8ea98c"
-tx_color = "#d97777"
-rx_total_color = "#82afb7"
-tx_total_color = "#8ea98c"
+rx_color = "#8aaf86"
+tx_color = "#df7c7b"
+rx_total_color = "#7fb7bd"
+tx_total_color = "#8aaf86"
 
 [styles.battery]
-high_battery_color = "#8ea98c"
+high_battery_color = "#8aaf86"
 medium_battery_color = "#d4b070"
-low_battery_color = "#d97777"
+low_battery_color = "#df7c7b"
 
 [styles.tables]
 headers = { color = "#e2cfc6" }
@@ -29,9 +29,9 @@ graph_color = "#a8a29e"
 legend_text = { color = "#a8a29e" }
 
 [styles.widgets]
-border_color = "#292929"
-selected_border_color = "#7f98bf"
-widget_title = { color = "#d8b8aa" }
+border_color = "#303030"
+selected_border_color = "#8da1c7"
+widget_title = { color = "#e6aea0" }
 text = { color = "#e7e5e4" }
-selected_text = { color = "#000000", bg_color = "#7f98bf" }
+selected_text = { color = "#000000", bg_color = "#8da1c7" }
 disabled_text = { color = "#111111" }

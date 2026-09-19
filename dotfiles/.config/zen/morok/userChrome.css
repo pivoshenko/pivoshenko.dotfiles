@@ -1,14 +1,14 @@
 @media (prefers-color-scheme: dark) {
   :root {
-    --zen-colors-primary: #191919 !important;
-    --zen-primary-color: #7f98bf !important;
-    --zen-colors-secondary: #191919 !important;
+    --zen-colors-primary: #1b1b1b !important;
+    --zen-primary-color: #8da1c7 !important;
+    --zen-colors-secondary: #1b1b1b !important;
     --zen-colors-tertiary: #0d0d0d !important;
-    --zen-colors-border: #7f98bf !important;
-    --toolbarbutton-icon-fill: #7f98bf !important;
+    --zen-colors-border: #8da1c7 !important;
+    --toolbarbutton-icon-fill: #8da1c7 !important;
     --lwt-text-color: #e7e5e4 !important;
     --toolbar-field-color: #e7e5e4 !important;
-    --tab-selected-textcolor: #b3bed2 !important;
+    --tab-selected-textcolor: #bac3d6 !important;
     --toolbar-field-focus-color: #e7e5e4 !important;
     --toolbar-color: #e7e5e4 !important;
     --newtab-text-primary-color: #e7e5e4 !important;
@@ -27,7 +27,7 @@
   }
 
   #permissions-granted-icon {
-    --identity-icon-color: #a78cc4 !important;
+    --identity-icon-color: #aa89c2 !important;
   }
 
   .sidebar-placesTree,
@@ -116,11 +116,11 @@
 
   .content-shortcuts {
     background-color: #111111 !important;
-    border-color: #7f98bf !important;
+    border-color: #8da1c7 !important;
   }
 
   .urlbarView-url {
-    color: #7f98bf !important;
+    color: #8da1c7 !important;
   }
 
   #zenEditBookmarkPanelFaviconContainer {
@@ -128,15 +128,15 @@
   }
 
   #zen-media-controls-toolbar #zen-media-progress-bar::-moz-range-track {
-    background: #191919 !important;
+    background: #1b1b1b !important;
   }
 
-  .identity-color-blue { --identity-tab-color: #7f98bf !important; --identity-icon-color: #7f98bf !important; }
-  .identity-color-turquoise { --identity-tab-color: #53a6a4 !important; --identity-icon-color: #53a6a4 !important; }
-  .identity-color-green { --identity-tab-color: #8ea98c !important; --identity-icon-color: #8ea98c !important; }
+  .identity-color-blue { --identity-tab-color: #8da1c7 !important; --identity-icon-color: #8da1c7 !important; }
+  .identity-color-turquoise { --identity-tab-color: #58aea8 !important; --identity-icon-color: #58aea8 !important; }
+  .identity-color-green { --identity-tab-color: #8aaf86 !important; --identity-icon-color: #8aaf86 !important; }
   .identity-color-yellow { --identity-tab-color: #d4b070 !important; --identity-icon-color: #d4b070 !important; }
   .identity-color-orange { --identity-tab-color: #d99a6a !important; --identity-icon-color: #d99a6a !important; }
-  .identity-color-red { --identity-tab-color: #d97777 !important; --identity-icon-color: #d97777 !important; }
-  .identity-color-pink { --identity-tab-color: #d1b2c9 !important; --identity-icon-color: #d1b2c9 !important; }
-  .identity-color-purple { --identity-tab-color: #a78cc4 !important; --identity-icon-color: #a78cc4 !important; }
+  .identity-color-red { --identity-tab-color: #df7c7b !important; --identity-icon-color: #df7c7b !important; }
+  .identity-color-pink { --identity-tab-color: #d4a9ca !important; --identity-icon-color: #d4a9ca !important; }
+  .identity-color-purple { --identity-tab-color: #aa89c2 !important; --identity-icon-color: #aa89c2 !important; }
 }
