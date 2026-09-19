@@ -1,5 +1,5 @@
 [delta "popil"]
-blame-palette = "#1f1f1e #1a1a19 #151514 #2b2926 #343230"
+blame-palette = "#1f1f1e #1a1a19 #151514 #292929 #323232"
 commit-decoration-style = "#57534e" bold box ul
 dark = true
 file-decoration-style = "#57534e"
