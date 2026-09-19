@@ -29,7 +29,7 @@ graph_color = "#9b958a"
 legend_text = { color = "#9b958a" }
 
 [styles.widgets]
-border_color = "#3d3d3d"
+border_color = "#3d3d3c"
 selected_border_color = "#8da7d1"
 widget_title = { color = "#e38191" }
 text = { color = "#e4e2de" }
