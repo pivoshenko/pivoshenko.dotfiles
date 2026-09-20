@@ -22,7 +22,7 @@ My personal dotfiles. The whole thing leans on three ideas: keep it minimal, kee
 ## Main Principles
 
 - Minimalism, consistency, simplicity
-- One unified look via [pivoshenko.theme](https://github.com/pivoshenko/pivoshenko.theme). Right now I'm running **Popil** (warm ash, muted terracotta). **Morok** (pitch black, cool accents) and **Vatra** (Carpathian hearth, gruvbox-warm) are vendored alongside it
+- One unified look via [pivoshenko.theme](https://github.com/pivoshenko/pivoshenko.theme)
 - [JetBrains Mono](https://www.jetbrains.com/lp/mono), everywhere
 
 To switch flavors: `just set-flavor <morok|popil|vatra>`, then `just install-dotfiles`.
