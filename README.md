@@ -6,6 +6,10 @@
   </a>
 </p>
 
+<p align="center">
+  <img alt="Ghostty preview" src="assets/ghostty_preview.png">
+</p>
+
 ## Overview
 
 My personal dotfiles. The whole thing leans on three ideas: keep it minimal, keep it consistent, and make every tool look like it belongs to the same family. What's here:
