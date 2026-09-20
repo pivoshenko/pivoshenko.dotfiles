@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <img alt="Ghostty preview" src="assets/ghostty_preview.png">
+  <img alt="Ghostty preview" src="assets/preview_ghostty.png">
 </p>
 
 ## Overview
