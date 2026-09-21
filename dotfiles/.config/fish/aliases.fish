@@ -19,7 +19,7 @@ alias dpsl="docker ps -l -q"
 alias dx="docker exec -it"
 
 # == External Tools ==
-alias cld="claude"
+alias cld='claude --remote-control (basename $PWD)'
 alias ld="lazydocker"
 alias lg="lazygit"
 
