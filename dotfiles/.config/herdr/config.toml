@@ -113,3 +113,40 @@ key = "prefix+ctrl+o"
 type = "plugin_action"
 command = "herdr-navigator.open"
 description = "navigator"
+
+# == mfp.player ==
+[[keys.command]]
+key = "prefix+ctrl+s"
+type = "plugin_action"
+command = "mfp.player.play-stop"
+description = "mfp: play/stop"
+
+[[keys.command]]
+key = "prefix+ctrl+m"
+type = "plugin_action"
+command = "mfp.player.open"
+description = "mfp: player"
+
+[[keys.command]]
+key = "prefix+ctrl+t"
+type = "plugin_action"
+command = "mfp.player.toggle"
+description = "mfp: play/pause"
+
+[[keys.command]]
+key = "prefix+ctrl+f"
+type = "plugin_action"
+command = "mfp.player.next"
+description = "mfp: next"
+
+[[keys.command]]
+key = "prefix+ctrl+comma"
+type = "plugin_action"
+command = "mfp.player.prev"
+description = "mfp: previous"
+
+[[keys.command]]
+key = "prefix+ctrl+i"
+type = "plugin_action"
+command = "mfp.player.now-playing"
+description = "mfp: now playing"
