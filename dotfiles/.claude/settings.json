@@ -40,6 +40,7 @@
   },
   "enabledPlugins": {},
   "effortLevel": "high",
+  "advisorModel": "fable",
   "outputStyle": "Concise",
   "skipDangerousModePermissionPrompt": true,
   "theme": "dark-ansi",
