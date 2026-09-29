@@ -1,7 +1,7 @@
 default:
     @just --list
 
-install: install-brew-packages install-dotfiles install-fish-plugins build-bat-cache link-vault install-herdr-integration install-herdr-plugins
+install: install-brew-packages install-dotfiles install-fish-plugins build-bat-cache link-vault install-herdr-integration install-herdr-plugins install-paperclip
 
 build-bat-cache:
     bat cache --build
@@ -27,6 +27,9 @@ install-herdr-integration:
 
 install-herdr-plugins:
     grep -v '^\s*\(#\|$\)' herdr.plugins | xargs -I {} herdr plugin install {} -y
+
+install-paperclip:
+    npx paperclipai onboard --yes
 
 link-vault:
     ln -sfn "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault" ~/Vault

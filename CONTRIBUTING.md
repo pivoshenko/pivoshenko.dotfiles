@@ -65,12 +65,13 @@ This project uses [`just`](https://github.com/casey/just) as its task runner. Ru
 
 | Command | What it does |
 | ------- | ------------ |
-| `just install` | Runs the full bootstrap: brew packages, dotfiles, fish plugins, `bat` cache, vault link, and the herdr integration and plugins |
+| `just install` | Runs the full bootstrap: brew packages, dotfiles, fish plugins, `bat` cache, vault link, the herdr integration and plugins, and the Paperclip onboarding |
 | `just install-brew-packages` | Installs and upgrades every package in the `Brewfile`, then drops anything no longer listed |
 | `just install-dotfiles` | Deploys both dotdrop profiles (`default` and `me`) from `dotdrop.config.yaml` with `--force` |
 | `just install-fish-plugins` | Bootstraps Fisher if it is missing, then syncs the fish plugins |
 | `just install-herdr-integration` | Installs the herdr integration for Claude |
 | `just install-herdr-plugins` | Reads the non-comment lines of `herdr.plugins` and installs each plugin listed |
+| `just install-paperclip` | Runs the Paperclip onboarding so the agent tooling is registered on this machine |
 | `just build-bat-cache` | Rebuilds the `bat` theme cache so the vendored themes are picked up |
 | `just link-vault` | Symlinks the iCloud Obsidian vault to `~/Vault` |
 | `just set-flavor FLAVOR` | Switches the theme flavor (`morok`, `popil`, `vatra`) across the managed configs via `scripts/set_flavor.py` |

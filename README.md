@@ -38,7 +38,7 @@ Everything is managed with [dotdrop](https://github.com/deadc0de6/dotdrop) and d
 just install
 ```
 
-That runs `brew bundle`, deploys both dotdrop profiles, bootstraps Fisher and the fish plugins, builds the `bat` theme cache, links the vault, and reinstalls the herdr hook and plugins. Need only one part? Every step is its own recipe - run `just` on its own to see them.
+That runs `brew bundle`, deploys both dotdrop profiles, bootstraps Fisher and the fish plugins, builds the `bat` theme cache, links the vault, reinstalls the herdr hook and plugins, and runs the Paperclip onboarding. Need only one part? Every step is its own recipe - run `just` on its own to see them.
 
 Three files stay untracked and have to be created by hand on a new machine:
 
