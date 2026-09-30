@@ -5,6 +5,8 @@
   },
   "permissions": {
     "allow": [
+      "Bash(gh:*)",
+      "Bash(ssh:*)",
       "Bash(git:*)",
       "Bash(ls:*)",
       "Bash(cp:*)",
@@ -33,6 +35,10 @@
     "defaultMode": "auto"
   },
   "includeCoAuthoredBy": false,
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
   "tui": "fullscreen",
   "statusLine": {
     "type": "command",
