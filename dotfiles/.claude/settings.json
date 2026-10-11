@@ -1,81 +1,88 @@
 {
-  "skillListingBudgetFraction": 0.02,
-  "env": {
-    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
-  },
-  "permissions": {
-    "allow": [
-      "Bash(gh:*)",
-      "Bash(ssh:*)",
-      "Bash(git:*)",
-      "Bash(ls:*)",
-      "Bash(cp:*)",
-      "Bash(mv:*)",
-      "Bash(mkdir:*)",
-      "Bash(rm:*)",
-      "Bash(cat:*)",
-      "Bash(grep:*)",
-      "Bash(rg:*)",
-      "Bash(find:*)",
-      "Bash(pwd)",
-      "Bash(echo:*)",
-      "Bash(which:*)",
-      "Bash(touch:*)",
-      "Bash(chmod:*)",
-      "Bash(pnpm:*)",
-      "Bash(uv:*)",
-      "Bash(just:*)",
-      "Bash(terraform:*)",
-      "Bash(curl:*)",
-      "Bash(herdr:*)",
-      "Write",
-      "Edit",
-      "NotebookEdit"
-    ],
-    "defaultMode": "auto"
-  },
-  "includeCoAuthoredBy": false,
+  "advisorModel": "fable",
+  "agentPushNotifEnabled": true,
   "attribution": {
     "commit": "",
     "pr": ""
   },
-  "tui": "fullscreen",
-  "statusLine": {
-    "type": "command",
-    "command": "sh ~/.claude/statusline-command.sh"
-  },
-  "enabledPlugins": {},
-  "effortLevel": "high",
-  "advisorModel": "fable",
-  "outputStyle": "Concise",
-  "skipDangerousModePermissionPrompt": true,
-  "theme": "dark-ansi",
-  "showThinkingSummaries": false,
-  "spinnerTipsEnabled": false,
-  "cleanupPeriodDays": 14,
-  "precomputeCompactionEnabled": true,
   "autoContinueAtUsageLimit": true,
-  "agentPushNotifEnabled": true,
-  "inputNeededNotifEnabled": true,
-  "voiceEnabled": true,
-  "voice": {
-    "enabled": true,
-    "mode": "hold",
-    "autoSubmit": true
+  "autoMode": {
+    "allow": [
+      "$defaults",
+      "Running `ssh` (and `scp`) against the user's own servers, such as the production box reached over Tailscale, including deploy, restart and maintenance commands",
+      "Triggering GitHub Actions workflows with `gh workflow run` in the user's own repositories, including release and production deploy workflows, and watching or inspecting them with `gh run`"
+    ]
   },
-  "skipAutoPermissionPrompt": true,
+  "cleanupPeriodDays": 14,
+  "effortLevel": "high",
+  "enabledPlugins": {},
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  },
   "hooks": {
     "SessionStart": [
       {
-        "matcher": "*",
         "hooks": [
           {
-            "type": "command",
             "command": "bash '/Users/volodymyr.pivoshenko/.claude/hooks/herdr-agent-state.sh' session",
-            "timeout": 10
+            "timeout": 10,
+            "type": "command"
           }
-        ]
+        ],
+        "matcher": "*"
       }
     ]
-  }
+  },
+  "includeCoAuthoredBy": false,
+  "inputNeededNotifEnabled": true,
+  "outputStyle": "Concise",
+  "permissions": {
+    "allow": [
+      "Bash(cat:*)",
+      "Bash(chmod:*)",
+      "Bash(cp:*)",
+      "Bash(curl:*)",
+      "Bash(echo:*)",
+      "Bash(find:*)",
+      "Bash(gh:*)",
+      "Bash(git:*)",
+      "Bash(grep:*)",
+      "Bash(herdr:*)",
+      "Bash(just:*)",
+      "Bash(ls:*)",
+      "Bash(mkdir:*)",
+      "Bash(mv:*)",
+      "Bash(pnpm:*)",
+      "Bash(pwd)",
+      "Bash(rg:*)",
+      "Bash(rm:*)",
+      "Bash(ssh:*)",
+      "Bash(terraform:*)",
+      "Bash(touch:*)",
+      "Bash(uv:*)",
+      "Bash(which:*)",
+      "Edit",
+      "NotebookEdit",
+      "Write"
+    ],
+    "defaultMode": "auto"
+  },
+  "precomputeCompactionEnabled": true,
+  "showThinkingSummaries": false,
+  "skillListingBudgetFraction": 0.02,
+  "skipAutoPermissionPrompt": true,
+  "skipDangerousModePermissionPrompt": true,
+  "spinnerTipsEnabled": false,
+  "statusLine": {
+    "command": "sh ~/.claude/statusline-command.sh",
+    "type": "command"
+  },
+  "theme": "dark-ansi",
+  "tui": "fullscreen",
+  "voice": {
+    "autoSubmit": true,
+    "enabled": true,
+    "mode": "hold"
+  },
+  "voiceEnabled": true
 }
