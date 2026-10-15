@@ -179,5 +179,5 @@ The official Discord client is missing too much for me, so I run [Vesktop](https
 - [Redis Insight](https://redis.io/insight) - the one exception to DBeaver: Redis's own GUI reads streams, keyspaces, and memory in a way a generic SQL client never quite matches
 - [Tailscale](https://tailscale.com) - WireGuard with the setup pain removed. My NAS, work boxes, and phone all sit on one flat network, and I haven't touched VPN config in years
 - [Maccy](https://maccy.app) - clipboard-history manager: lightweight, keyboard-driven, and out of the way until I hit the hotkey
-- [OpenLogi](https://openlogi.org) - a local-first alternative to Logi Options+ for configuring the Logitech mouse, which is what finally makes the extra thumb buttons worth having
+- [Logi Options+](https://www.logitech.com/software/logi-options-plus.html) - per-app buttons and gestures for the Logitech mouse, which is what finally makes the extra thumb buttons worth having
 - [Docker Desktop](https://www.docker.com/products/docker-desktop) - the container runtime everything else assumes; LazyDocker just drives what it provides
