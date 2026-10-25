@@ -48,6 +48,7 @@ Consequences when touching theming:
 
 - Those anchors are load-bearing, and they fail differently. Removing the `# == Keys ==` comment from `herdr/config.toml` aborts `set_flavor.py` loudly, with a `ValueError` from `text.index`. Reindenting or moving lazygit's `gui.theme` block fails silently instead: the regex stops matching, so `edit` sees no change and prints `ok` while patching nothing. Reflowing zed's `"theme": { ... }` onto one line is safe - `patch_zed`'s regexes match either form
 - A new themed tool needs a vendored file per flavor **and** a corresponding step in `set_flavor.py`
+- The lazygit flavor files must keep `authorColors` nested under `theme:`. The splice loop stops at the first top-level key, so a flattened `authorColors:` is excluded from the block and silently dropped from `config.yml` - and `gui.authorColors` is the wrong path anyway, lazygit reads it at `gui.theme.authorColors`
 - `set_flavor.py` only edits the repository; nothing reaches the system until `just install-dotfiles`
 - Apps that own their own settings store stay manual: Obsidian, Telegram, Discord/Vesktop, Stylus, Rectangle. `README.md` documents each
 
