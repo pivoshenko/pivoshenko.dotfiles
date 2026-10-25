@@ -35,6 +35,11 @@
   },
   "includeCoAuthoredBy": false,
   "inputNeededNotifEnabled": true,
+  "modelSettings": {
+    "claude-opus-5-5": {
+      "effortLevel": "high"
+    }
+  },
   "outputStyle": "Concise",
   "permissions": {
     "allow": [
