@@ -1,6 +1,7 @@
 {
   // == General ==
   "auto_update": true,
+  "cli_default_open_behavior": "existing_window",
   "feature_flags": {
     "notebooks": "on",
   },
