@@ -88,6 +88,10 @@ The full list of installed CLI tools is in the [`Brewfile`](Brewfile).
 
 [Zed](https://zed.dev) is my daily editor. It's Rust-native, GPU-accelerated, and collaborative, and it ships Vim, Helix, and Whichkey modes in the box instead of leaving them to third-party plugins. Config: [`dotfiles/.config/zed/settings.json`](dotfiles/.config/zed/settings.json).
 
+### Editor - VS Code
+
+[VS Code](https://code.visualstudio.com) is the fallback for the extension ecosystem Zed doesn't cover. Config: [`dotfiles/.config/vscode/settings.json`](dotfiles/.config/vscode/settings.json).
+
 ## Agentic Coding
 
 ### Agent - Claude Code

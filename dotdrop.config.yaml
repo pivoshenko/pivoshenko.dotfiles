@@ -90,6 +90,9 @@ dotfiles:
     src: .config/obsidian/snippets
 
   # == ~/Library/Application Support ==
+  f_vscode_settings:
+    dst: "~/Library/Application Support/Code/User/settings.json"
+    src: .config/vscode/settings.json
   f_zen_userchrome:
     dst: "~/Library/Application Support/zen/Profiles/6im8xt7o.Default (release)/chrome/userChrome.css"
     src: .config/zen/popil/userChrome.css
@@ -125,6 +128,7 @@ profiles:
       - f_gitconfig
       - f_herdr_config
       - f_starship
+      - f_vscode_settings
 
   me:
     dotfiles:
