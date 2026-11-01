@@ -86,7 +86,7 @@
     "button": false,
   },
   // == AI ==
-  "disable_ai": true,
+  "disable_ai": false,
   // == Languages ==
   "languages": {
     "Python": {
