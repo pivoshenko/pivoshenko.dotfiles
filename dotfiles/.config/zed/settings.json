@@ -86,6 +86,11 @@
     "button": false,
   },
   // == AI ==
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry"
+    }
+  },
   "disable_ai": false,
   // == Languages ==
   "languages": {
