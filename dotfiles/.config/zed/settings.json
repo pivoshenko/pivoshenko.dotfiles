@@ -131,6 +131,7 @@
   ],
   // == Extensions ==
   "auto_install_extensions": {
+    "catppuccin": true,
     "docker-compose": true,
     "dockerfile": true,
     "editorconfig": true,
@@ -143,10 +144,12 @@
     "ini": true,
     "jinja2": true,
     "just": true,
+    "justfile": true,
     "kdl": true,
     "latex": true,
     "mako": true,
     "material-icon-theme": true,
+    "ruby": true,
     "scss": true,
     "sql": true,
     "swift": true,
