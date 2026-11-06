@@ -15,8 +15,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `just set-flavor <morok|popil|vatra>` - rewrite the repo's configs to a theme flavor, then `just install-dotfiles` to deploy
 - `just set-spicetify-flavor <morok|popil|vatra>` - Spotify only, applied directly to the live spicetify install
 - `just install-brew-packages` - `brew bundle` plus `brew bundle cleanup --force`, so removing a line from `Brewfile` uninstalls the package
+- `just format` / `just lint` - Ruff and ty over the Python files, `fish_indent` over the tracked fish files. `fish_indent` drops quotes around single words, so `scripts/set_flavor.py` matches `fish_config theme choose <flavor>` unquoted
 
-There are no linters, formatters, or GitHub Actions workflows wired up in this repository. `CONTRIBUTING.md` mentions tests; none exist here.
+There are no GitHub Actions workflows in this repository. `CONTRIBUTING.md` mentions tests; none exist here, and `just test` skips through the `.no-tests` sentinel.
 
 ## Architecture
 
