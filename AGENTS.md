@@ -10,10 +10,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 `just --list` is the index. The ones that matter:
 
-- `just install` - full bootstrap (brew bundle, both dotdrop profiles, Fisher plugins, `bat` cache, vault symlink, herdr integration and plugins)
+- `just install` - full bootstrap (brew bundle, both dotdrop profiles, Fisher plugins, `bat` cache, vault symlink, herdr integration and plugins, macOS app defaults)
 - `just install-dotfiles` - deploy the `default` and `me` profiles with `--force`; this is the verification step after any change under `dotfiles/`
 - `just set-flavor <morok|popil|vatra>` - rewrite the repo's configs to a theme flavor, then `just install-dotfiles` to deploy
 - `just set-spicetify-flavor <morok|popil|vatra>` - Spotify only, applied directly to the live spicetify install
+- `just install-macos-defaults` - `defaults write` for apps configured only through their preferences plist (f.lux, Tailscale). Keys are written one by one rather than importing a whole plist, which would carry window frames, update timestamps, and device IDs
 - `just install-brew-packages` - `brew bundle` plus `brew bundle cleanup --force`, so removing a line from `Brewfile` uninstalls the package
 - `just format` / `just lint` - Ruff and ty over the Python files, `fish_indent` over the tracked fish files. `fish_indent` drops quotes around single words, so `scripts/set_flavor.py` matches `fish_config theme choose <flavor>` unquoted
 

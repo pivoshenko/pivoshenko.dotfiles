@@ -1,7 +1,7 @@
 default:
     @just --list
 
-install: install-brew-packages install-dotfiles install-fish-plugins build-bat-cache link-vault install-herdr-integration install-herdr-plugins
+install: install-brew-packages install-dotfiles install-fish-plugins build-bat-cache link-vault install-herdr-integration install-herdr-plugins install-macos-defaults
 
 build-bat-cache:
     bat cache --build
@@ -27,6 +27,16 @@ install-herdr-integration:
 
 install-herdr-plugins:
     grep -v '^\s*\(#\|$\)' herdr.plugins | xargs -I {} herdr plugin install {} -y
+
+install-macos-defaults:
+    defaults write org.herf.Flux lateColorTemp -int 1900
+    defaults write org.herf.Flux nightColorTemp -int 3400
+    defaults write org.herf.Flux wakeTime -int 480
+    defaults write org.herf.Flux locationType -string L
+    defaults write org.herf.Flux locationTextField -string London
+    defaults write org.herf.Flux location -string "51.508530,-0.125740"
+    defaults write io.tailscale.ipn.macsys HideDockIcon -bool true
+    defaults write io.tailscale.ipn.macsys TailscaleStartOnLogin -bool true
 
 format: format-py format-fish
 
