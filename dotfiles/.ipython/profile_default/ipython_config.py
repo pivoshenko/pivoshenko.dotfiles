@@ -4,8 +4,8 @@ from __future__ import annotations
 
 import sys
 
-from prompt_toolkit.key_binding.vi_state import InputMode  # ty: ignore[unresolved-import]
-from prompt_toolkit.key_binding.vi_state import ViState  # ty: ignore[unresolved-import]
+from prompt_toolkit.key_binding.vi_state import InputMode
+from prompt_toolkit.key_binding.vi_state import ViState
 
 
 def get_input_mode(self):
@@ -25,8 +25,8 @@ def set_input_mode(self, mode):
     self._input_mode = mode
 
 
-ViState._input_mode = InputMode.INSERT  # type: ignore[attr-defined]
-ViState.input_mode = property(get_input_mode, set_input_mode)  # type: ignore[method-assign, assignment]
+ViState._input_mode = InputMode.INSERT  # ty: ignore[unresolved-attribute]
+ViState.input_mode = property(get_input_mode, set_input_mode)  # ty: ignore[invalid-assignment]
 
 c.TerminalInteractiveShell.editing_mode = "vi"  # noqa: F821  # ty: ignore[unresolved-reference]
 c.TerminalInteractiveShell.true_color = True  # noqa: F821  # ty: ignore[unresolved-reference]
