@@ -59,7 +59,7 @@ Concrete examples, API sketches, UI mockups, or references are helpful when rele
 
 ### Local Development
 
-You need [`just`](https://github.com/casey/just), [Homebrew](https://brew.sh), [dotdrop](https://github.com/deadc0de6/dotdrop), [fish](https://fishshell.com), and Python 3 (for `scripts/set_flavor.py`) on a macOS machine.
+You need [`just`](https://github.com/casey/just), [Homebrew](https://brew.sh), [dotdrop](https://github.com/deadc0de6/dotdrop), [fish](https://fishshell.com), Python 3 (for `scripts/set_flavor.py`), and [uv](https://docs.astral.sh/uv/) (for the Python linting) on a macOS machine.
 
 This project uses [`just`](https://github.com/casey/just) as its task runner. Run `just --list` for the full set; these are the ones you need day to day:
 
@@ -75,10 +75,15 @@ This project uses [`just`](https://github.com/casey/just) as its task runner. Ru
 | `just link-vault` | Symlinks the iCloud Obsidian vault to `~/Vault` |
 | `just set-flavor FLAVOR` | Switches the theme flavor (`morok`, `popil`, `vatra`) across the managed configs via `scripts/set_flavor.py` |
 | `just set-spicetify-flavor FLAVOR` | Points spicetify at the given theme and color scheme, then applies it |
+| `just format` | Applies Ruff's autofixes and formatting to the Python files, and `fish_indent` to the fish files |
+| `just lint` | Checks the Python files with Ruff and ty, and the fish files with `fish_indent --check`, without changing anything |
+| `just test` | Skips through the `.no-tests` sentinel; there are no tests |
+| `just check` | Runs `lint` then `test` |
+| `just update` | Upgrades `uv.lock`, then realigns the `pyproject.toml` constraints to it with uv-upsync |
 
 1. Fork the repository and clone your fork
 2. Create a branch for your change
-3. Run `just install-dotfiles` before opening a pull request, to confirm the dotdrop templates still render and deploy cleanly
+3. Run `just check` and `just install-dotfiles` before opening a pull request, to confirm the files are formatted and the dotdrop templates still render and deploy cleanly
 
 > [!IMPORTANT]
 > Behavioral code changes should include or update tests.
