@@ -74,6 +74,9 @@ dotfiles:
   d_zed:
     dst: ~/.config/zed
     src: .config/zed
+  f_git_ignore:
+    dst: ~/.config/git/ignore
+    src: .config/git/ignore
   f_herdr_config:
     dst: ~/.config/herdr/config.toml
     src: .config/herdr/config.toml
@@ -126,6 +129,7 @@ profiles:
       - f_claude_settings
       - f_claude_statusline
       - f_gitconfig
+      - f_git_ignore
       - f_herdr_config
       - f_starship
       - f_vscode_settings
