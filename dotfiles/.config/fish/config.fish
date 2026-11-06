@@ -19,4 +19,4 @@ if test -f $HOME/.config/fish/.secrets.fish
 end
 
 # == Theme ==
-fish_config theme choose "popil"
+fish_config theme choose popil

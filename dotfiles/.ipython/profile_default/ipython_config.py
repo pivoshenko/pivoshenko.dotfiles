@@ -1,11 +1,11 @@
 """Module that contains the IPython profile configuration for vi-mode editing and cursor shape."""
 
+from __future__ import annotations
+
 import sys
 
-from prompt_toolkit.key_binding.vi_state import (  # ty: ignore[unresolved-import]
-    InputMode,
-    ViState,
-)
+from prompt_toolkit.key_binding.vi_state import InputMode  # ty: ignore[unresolved-import]
+from prompt_toolkit.key_binding.vi_state import ViState  # ty: ignore[unresolved-import]
 
 
 def get_input_mode(self):
@@ -15,10 +15,11 @@ def get_input_mode(self):
 def set_input_mode(self, mode):
     shape = {InputMode.NAVIGATION: 1, InputMode.REPLACE: 3}.get(mode, 5)
     raw = f"\x1b[{shape} q"
-    if hasattr(sys.stdout, "_cli"):
-        out = sys.stdout._cli.output.write_raw  # type: ignore[attr-defined]  # ty: ignore[unresolved-attribute]
-    else:
-        out = sys.stdout.write
+    out = (
+        sys.stdout._cli.output.write_raw  # type: ignore[attr-defined]  # ty: ignore[unresolved-attribute]
+        if hasattr(sys.stdout, "_cli")
+        else sys.stdout.write
+    )
     out(raw)
     sys.stdout.flush()
     self._input_mode = mode

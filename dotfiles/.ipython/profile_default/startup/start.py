@@ -1,8 +1,9 @@
 """Module that contains the IPython startup script that enables autoreload."""
 
-from IPython import (  # ty: ignore[unresolved-import]
-    get_ipython,  # type: ignore[attr-defined]
-)
+from __future__ import annotations
+
+from IPython import get_ipython  # ty: ignore[unresolved-import]  # type: ignore[attr-defined]
+
 
 ipython = get_ipython()
 
