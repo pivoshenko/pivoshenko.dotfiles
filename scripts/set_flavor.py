@@ -1,21 +1,31 @@
 """Module that contains the script that activates a theme flavor across every loader."""
 
-import pathlib
+from __future__ import annotations
+
 import re
-import shutil
 import sys
+import shutil
+import pathlib
+
+from typing import TYPE_CHECKING
+
+
+if TYPE_CHECKING:
+    from collections.abc import Callable
+
 
 FLAVORS = ("morok", "popil", "vatra")
 
-if len(sys.argv) != 2 or sys.argv[1] not in FLAVORS:
+ARGS = sys.argv[1:]
+if len(ARGS) != 1 or ARGS[0] not in FLAVORS:
     sys.exit(f"usage: set_flavor.py <{'|'.join(FLAVORS)}>")
 
-F = sys.argv[1]
+F = ARGS[0]
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DOT = ROOT / "dotfiles"
 
 
-def edit(rel: str, transform) -> None:
+def edit(rel: str, transform: Callable[[str], str]) -> None:
     p = DOT / rel
     before = p.read_text()
     after = transform(before)
@@ -29,8 +39,14 @@ def edit(rel: str, transform) -> None:
 print(f"set-flavor: flavor={F}")
 
 
-edit(".config/starship.toml", lambda t: re.sub(r'^palette = "\w+"', f'palette = "{F}"', t, count=1, flags=re.MULTILINE))
-edit(".config/helix/config.toml", lambda t: re.sub(r'^theme = "\w+"', f'theme = "{F}"', t, count=1, flags=re.MULTILINE))
+edit(
+    ".config/starship.toml",
+    lambda t: re.sub(r'^palette = "\w+"', f'palette = "{F}"', t, count=1, flags=re.MULTILINE),
+)
+edit(
+    ".config/helix/config.toml",
+    lambda t: re.sub(r'^theme = "\w+"', f'theme = "{F}"', t, count=1, flags=re.MULTILINE),
+)
 edit(".config/k9s/config.yaml", lambda t: re.sub(r"skin: \w+", f"skin: {F}", t, count=1))
 edit(".config/bat/config", lambda t: re.sub(r'--theme="\w+"', f'--theme="{F}"', t, count=1))
 edit(
@@ -52,7 +68,7 @@ edit(".config/zed/settings.json", patch_zed)
 
 edit(
     ".config/fish/config.fish",
-    lambda t: re.sub(r'fish_config theme choose "\w+"', f'fish_config theme choose "{F}"', t, count=1),
+    lambda t: re.sub(r"fish_config theme choose \w+", f"fish_config theme choose {F}", t, count=1),
 )
 
 
@@ -64,10 +80,13 @@ edit(
 
 def patch_fzf(text: str) -> str:
     text = re.sub(r"themes/fzf-\w+\.fish", f"themes/fzf-{F}.fish", text, count=1)
-    text = re.sub(
-        r"^(set -Ux FZF_THEME )\$FZF_\w+", rf"\1$FZF_{F.upper()}", text, count=1, flags=re.MULTILINE
+    return re.sub(
+        r"^(set -Ux FZF_THEME )\$FZF_\w+",
+        rf"\1$FZF_{F.upper()}",
+        text,
+        count=1,
+        flags=re.MULTILINE,
     )
-    return text
 
 
 edit(".config/fish/fzf.fish", patch_fzf)
