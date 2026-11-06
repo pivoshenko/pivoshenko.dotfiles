@@ -4,36 +4,47 @@ version = "1.0.0"
 description = "pivoshenko.dotfiles"
 readme = "README.md"
 requires-python = ">=3.13"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+]
 dependencies = []
 
 [dependency-groups]
+dev = ["ipdb~=0.13.13", "ipython~=9.18.1", "uv-upsync~=2.4.2"]
 formatters = ["ruff~=0.17.4"]
 linters = ["ruff~=0.17.4", "ty~=0.0.99"]
 
-[tool.ty.environment]
-python-version = "3.13"
-
 [tool.ruff]
-fix = true
-line-length = 100
 target-version = "py313"
-
-[tool.ruff.lint]
-ignore = ["COM812", "CPY001", "D", "G004", "INP001", "T201"]
-select = ["ALL"]
-
-[tool.ruff.lint.isort]
-force-single-line = true
-from-first = false
-length-sort-straight = true
-lines-after-imports = 2
-lines-between-types = 1
-required-imports = ["from __future__ import annotations"]
-
+line-length = 100
+fix = true
+unsafe-fixes = true
+format.quote-style = "double"
+format.docstring-code-format = true
+lint.select = ["ALL"]
+lint.ignore = [
+  "COM812",
+  "CPY001",
+  "D101",
+  "D102",
+  "D103",
+  "D107",
+  "D203",
+  "D213",
+  "G004",
+  "INP001",
+  "T201",
+]
 # IPython configs patch prompt_toolkit internals through untyped callbacks
-[tool.ruff.lint.per-file-ignores]
-"dotfiles/**" = ["ANN", "SLF001"]
+lint.per-file-ignores."dotfiles/**" = ["ANN", "SLF001"]
+lint.isort.force-single-line = true
+lint.isort.from-first = false
+lint.isort.length-sort-straight = true
+lint.isort.lines-after-imports = 2
+lint.isort.lines-between-types = 1
+lint.isort.required-imports = ["from __future__ import annotations"]
 
-[tool.ruff.format]
-docstring-code-format = true
-quote-style = "double"
+[tool.ty]
+environment.python-version = "3.13"
