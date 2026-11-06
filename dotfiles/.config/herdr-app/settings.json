@@ -1,0 +1,11 @@
+{
+  "zoom": 1,
+  "sounds": {
+    "enabled": true
+  },
+  "font_ligatures": false,
+  "minimum_contrast": 1,
+  "theme": "popil",
+  "font_size": 17,
+  "ui_font": "JetBrains Mono"
+}
