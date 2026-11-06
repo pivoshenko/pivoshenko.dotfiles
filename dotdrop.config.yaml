@@ -80,6 +80,15 @@ dotfiles:
   f_herdr_config:
     dst: ~/.config/herdr/config.toml
     src: .config/herdr/config.toml
+  f_herdr_app_keys:
+    dst: ~/.config/herdr-app/keys.json
+    src: .config/herdr-app/keys.json
+  f_herdr_app_settings:
+    dst: ~/.config/herdr-app/settings.json
+    src: .config/herdr-app/settings.json
+  f_herdr_app_theme:
+    dst: ~/.config/herdr-app/themes/popil.json
+    src: .config/herdr-app/themes/popil.json
   f_starship:
     dst: ~/.config/starship.toml
     src: .config/starship.toml
@@ -131,6 +140,9 @@ profiles:
       - f_gitconfig
       - f_git_ignore
       - f_herdr_config
+      - f_herdr_app_keys
+      - f_herdr_app_settings
+      - f_herdr_app_theme
       - f_starship
       - f_vscode_settings
 
