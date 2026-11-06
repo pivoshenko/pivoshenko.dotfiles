@@ -3,10 +3,7 @@ tap "hashicorp/tap", trusted: true
 tap "pivoshenko/tap", trusted: true
 
 # == Fonts ==
-cask "font-iosevka-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
-cask "font-space-mono-nerd-font"
-cask "font-symbols-only-nerd-font"
 cask "sf-symbols"
 
 # == Applications ==
@@ -45,7 +42,6 @@ brew "gleam"
 brew "lua"
 
 # == Package Managers ==
-brew "poetry"
 brew "rustup"
 brew "uv"
 
@@ -80,7 +76,6 @@ brew "k9s"
 brew "lazydocker"
 brew "lazygit"
 brew "maturin"
-brew "minikube"
 brew "mole"
 brew "openspec"
 brew "hashicorp/tap/terraform"
@@ -89,15 +84,12 @@ brew "pnpm"
 brew "pinentry-mac"
 brew "pivoshenko/tap/kasetto"
 brew "pivoshenko/tap/musicforprogramming"
-brew "pyenv"
 brew "ripgrep"
 brew "spicetify-cli"
 brew "starship"
 brew "tectonic"
 brew "vercel"
 brew "vhs"
-brew "wget"
-brew "whalebrew"
 brew "zoxide"
 
 # == Language Server Protocols ==
@@ -110,7 +102,6 @@ brew "vscode-langservers-extracted"
 brew "yaml-language-server"
 
 # == Python Packages ==
-brew "pyupgrade"
 brew "ruff"
 brew "sqlfluff"
 brew "ty"
