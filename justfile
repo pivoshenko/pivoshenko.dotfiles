@@ -53,7 +53,7 @@ check: lint test
 
 update:
     uv lock --upgrade
-    uvx uv-upsync
+    uv run uv-upsync
 
 link-vault:
     ln -sfn "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault" ~/Vault
