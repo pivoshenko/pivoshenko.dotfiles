@@ -126,6 +126,7 @@
     "**/htmlcov",
     "**/*.egg-info",
     "**/.venv",
+    "**/.ipynb_checkpoints",
     "**/.import_linter_cache",
     "**/node_modules",
     "**/.next",
