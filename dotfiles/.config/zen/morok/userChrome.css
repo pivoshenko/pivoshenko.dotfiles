@@ -1,8 +1,8 @@
 @media (prefers-color-scheme: dark) {
   :root {
-    --zen-colors-primary: #1b1b1b !important;
+    --zen-colors-primary: #181818 !important;
     --zen-primary-color: #8da1c7 !important;
-    --zen-colors-secondary: #1b1b1b !important;
+    --zen-colors-secondary: #181818 !important;
     --zen-colors-tertiary: #0d0d0d !important;
     --zen-colors-border: #8da1c7 !important;
     --toolbarbutton-icon-fill: #8da1c7 !important;
@@ -128,7 +128,7 @@
   }
 
   #zen-media-controls-toolbar #zen-media-progress-bar::-moz-range-track {
-    background: #1b1b1b !important;
+    background: #181818 !important;
   }
 
   .identity-color-blue { --identity-tab-color: #8da1c7 !important; --identity-icon-color: #8da1c7 !important; }

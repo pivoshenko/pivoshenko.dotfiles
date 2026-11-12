@@ -16,4 +16,4 @@ macos-icon = xray
 shell-integration = fish
 shell-integration-features = true
 
-theme = popil.conf
+theme = morok.conf

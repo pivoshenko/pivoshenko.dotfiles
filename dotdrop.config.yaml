@@ -89,6 +89,9 @@ dotfiles:
   f_herdr_app_theme:
     dst: ~/.config/herdr-app/themes/popil.json
     src: .config/herdr-app/themes/popil.json
+  f_herdr_app_theme_morok:
+    dst: ~/.config/herdr-app/themes/morok.json
+    src: .config/herdr-app/themes/morok.json
   f_starship:
     dst: ~/.config/starship.toml
     src: .config/starship.toml
@@ -107,10 +110,10 @@ dotfiles:
     src: .config/vscode/settings.json
   f_zen_userchrome:
     dst: "~/Library/Application Support/zen/Profiles/6im8xt7o.Default (release)/chrome/userChrome.css"
-    src: .config/zen/popil/userChrome.css
+    src: .config/zen/morok/userChrome.css
   f_zen_usercontent:
     dst: "~/Library/Application Support/zen/Profiles/6im8xt7o.Default (release)/chrome/userContent.css"
-    src: .config/zen/popil/userContent.css
+    src: .config/zen/morok/userContent.css
   f_zen_user_overrides:
     dst: "~/Library/Application Support/zen/Profiles/6im8xt7o.Default (release)/user-overrides.js"
     src: .config/zen/user-overrides.js
@@ -143,6 +146,7 @@ profiles:
       - f_herdr_app_keys
       - f_herdr_app_settings
       - f_herdr_app_theme
+      - f_herdr_app_theme_morok
       - f_starship
       - f_vscode_settings
 

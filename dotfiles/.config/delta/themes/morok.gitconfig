@@ -1,5 +1,5 @@
 [delta "morok"]
-blame-palette = "#111111 #0d0d0d #000000 #1b1b1b #262626"
+blame-palette = "#111111 #0d0d0d #000000 #181818 #212121"
 commit-decoration-style = "#57534e" bold box ul
 dark = true
 file-decoration-style = "#57534e"

@@ -1,37 +1,37 @@
 [styles.cpu]
-all_entry_color = "#ddc7c2"
-avg_entry_color = "#d99d8f"
-cpu_core_colors = ["#ec7470", "#e48d66", "#d4aa5c",  "#91ab78", "#5ba7c5", "#ad8cc0"]
+all_entry_color = "#e2cfc6"
+avg_entry_color = "#dc99a4"
+cpu_core_colors = ["#df7c7b", "#d99a6a", "#d4b070",  "#8aaf86", "#49a4bf", "#aa89c2"]
 
 [styles.memory]
-ram_color = "#91ab78"
-cache_color = "#ec7470"
-swap_color = "#e48d66"
-gpu_colors = ["#5ba7c5", "#ad8cc0", "#ec7470", "#e48d66", "#d4aa5c", "#91ab78"]
-arc_color = "#6cb7c0"
+ram_color = "#8aaf86"
+cache_color = "#df7c7b"
+swap_color = "#d99a6a"
+gpu_colors = ["#49a4bf", "#aa89c2", "#df7c7b", "#d99a6a", "#d4b070", "#8aaf86"]
+arc_color = "#7fb7bd"
 
 [styles.network]
-rx_color = "#91ab78"
-tx_color = "#ec7470"
-rx_total_color = "#6cb7c0"
-tx_total_color = "#91ab78"
+rx_color = "#8aaf86"
+tx_color = "#df7c7b"
+rx_total_color = "#7fb7bd"
+tx_total_color = "#8aaf86"
 
 [styles.battery]
-high_battery_color = "#91ab78"
-medium_battery_color = "#d4aa5c"
-low_battery_color = "#ec7470"
+high_battery_color = "#8aaf86"
+medium_battery_color = "#d4b070"
+low_battery_color = "#df7c7b"
 
 [styles.tables]
-headers = { color = "#ddc7c2" }
+headers = { color = "#e2cfc6" }
 
 [styles.graphs]
-graph_color = "#9b958a"
-legend_text = { color = "#9b958a" }
+graph_color = "#a8a29e"
+legend_text = { color = "#a8a29e" }
 
 [styles.widgets]
-border_color = "#3d3d3c"
-selected_border_color = "#8da7d1"
-widget_title = { color = "#e38191" }
-text = { color = "#e4e2de" }
-selected_text = { color = "#151514", bg_color = "#8da7d1" }
-disabled_text = { color = "#1f1f1e" }
+border_color = "#2a2a2a"
+selected_border_color = "#8da1c7"
+widget_title = { color = "#e6aea0" }
+text = { color = "#e7e5e4" }
+selected_text = { color = "#000000", bg_color = "#8da1c7" }
+disabled_text = { color = "#111111" }

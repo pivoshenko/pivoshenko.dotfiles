@@ -1434,9 +1434,9 @@ settings:
   --ctp-overlay2: 168, 162, 158;
   --ctp-overlay1: 120, 113, 108;
   --ctp-overlay0: 87, 83, 78;
-  --ctp-surface2: 48, 48, 48;
-  --ctp-surface1: 38, 38, 38;
-  --ctp-surface0: 27, 27, 27;
+  --ctp-surface2: 42, 42, 42;
+  --ctp-surface1: 33, 33, 33;
+  --ctp-surface0: 24, 24, 24;
   --ctp-base: 17, 17, 17;
   --ctp-mantle: 13, 13, 13;
   --ctp-crust: 0, 0, 0;

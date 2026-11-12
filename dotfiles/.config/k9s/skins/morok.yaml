@@ -57,8 +57,8 @@ k9s:
     table:
       fgColor: "#e7e5e4"
       bgColor: "#111111"
-      cursorFgColor: "#1b1b1b"
-      cursorBgColor: "#262626"
+      cursorFgColor: "#181818"
+      cursorBgColor: "#212121"
       markColor: "#e2cfc6"
       header:
         fgColor: "#d4b070"
@@ -68,7 +68,7 @@ k9s:
     xray:
       fgColor: "#e7e5e4"
       bgColor: "#111111"
-      cursorColor: "#262626"
+      cursorColor: "#212121"
       cursorTextColor: "#111111"
       graphicColor: "#d4a9ca"
     charts:
