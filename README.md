@@ -167,14 +167,14 @@ Spotify is customized through [Spicetify](https://github.com/spicetify/cli). The
 
 ### Messenger - Telegram
 
-[Telegram](https://telegram.org) with my Popil theme, installed from [t.me/addtheme/pivoshenko_theme_popil](https://t.me/addtheme/pivoshenko_theme_popil).
+[Telegram](https://telegram.org) with my Morok theme, installed from [t.me/addtheme/pivoshenko_theme_morok](https://t.me/addtheme/pivoshenko_theme_morok). That link serves the copy uploaded to Telegram, so a palette change only reaches it once the theme is re-uploaded from [`themes/dist/telegram/`](https://github.com/pivoshenko/pivoshenko.theme/tree/main/themes/dist/telegram) in pivoshenko.theme.
 
 ### Messenger - Discord
 
-The official Discord client is missing too much for me, so I run [Vesktop](https://github.com/Vencord/Vesktop) instead. Install the Popil theme through *Themes -> Online Themes*:
+The official Discord client is missing too much for me, so I run [Vesktop](https://github.com/Vencord/Vesktop) instead. Install the Morok theme through *Themes -> Online Themes*:
 
 ```css
-@dark https://raw.githubusercontent.com/pivoshenko/pivoshenko.theme/refs/heads/main/dist/discord/popil.theme.css
+@dark https://raw.githubusercontent.com/pivoshenko/pivoshenko.theme/refs/heads/main/themes/dist/discord/morok.theme.css
 ```
 
 ## Other Apps
