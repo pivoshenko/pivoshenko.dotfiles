@@ -1,6 +1,6 @@
 # == Themes ==
-source $HOME/.config/fish/themes/fzf-popil.fish
-set -Ux FZF_THEME $FZF_POPIL
+source $HOME/.config/fish/themes/fzf-morok.fish
+set -Ux FZF_THEME $FZF_MOROK
 
 # == Commands ==
 set -Ux fifc_editor hx

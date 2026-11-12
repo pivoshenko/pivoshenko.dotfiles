@@ -13,8 +13,8 @@
   @-moz-document url("about:newtab"), url("about:home") {
     :root {
       --newtab-background-color: #111111 !important;
-      --newtab-background-color-secondary: #1b1b1b !important;
-      --newtab-element-hover-color: #1b1b1b !important;
+      --newtab-background-color-secondary: #181818 !important;
+      --newtab-element-hover-color: #181818 !important;
       --newtab-text-primary-color: #e7e5e4 !important;
       --newtab-wordmark-color: #e7e5e4 !important;
       --newtab-primary-action-background: #8da1c7 !important;
@@ -38,8 +38,8 @@
       --in-content-text-color: #e7e5e4 !important;
       --link-color: #8da1c7 !important;
       --link-color-hover: #9fafcd !important;
-      --zen-colors-primary: #1b1b1b !important;
-      --in-content-box-background: #1b1b1b !important;
+      --zen-colors-primary: #181818 !important;
+      --in-content-box-background: #181818 !important;
       --zen-primary-color: #8da1c7 !important;
     }
 
@@ -50,7 +50,7 @@
 
     button,
     groupbox menulist {
-      background: #1b1b1b !important;
+      background: #181818 !important;
       color: #e7e5e4 !important;
     }
 
@@ -74,14 +74,14 @@
       --fingerprinter-color: #d4b070 !important;
       --cryptominer-color: #babcd8 !important;
       --tracker-color: #8aaf86 !important;
-      --in-content-primary-button-background-hover: #393939 !important;
+      --in-content-primary-button-background-hover: #353534 !important;
       --in-content-primary-button-text-color-hover: #e7e5e4 !important;
-      --in-content-primary-button-background: #262626 !important;
+      --in-content-primary-button-background: #212121 !important;
       --in-content-primary-button-text-color: #e7e5e4 !important;
     }
 
     .card {
-      background-color: #1b1b1b !important;
+      background-color: #181818 !important;
     }
   }
 }

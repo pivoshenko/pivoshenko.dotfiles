@@ -11,7 +11,7 @@ set -Ux PYTHONBREAKPOINT IPython.terminal.debugger.set_trace
 
 # == Colors ==
 
-source $HOME/.config/fish/themes/ls-colors-popil.fish
+source $HOME/.config/fish/themes/ls-colors-morok.fish
 
 # == Path ==
 fish_add_path -g $HOME/.cargo/bin

@@ -11,7 +11,7 @@ symlinks = true
 helper = store
 
 [delta]
-features = "popil"
+features = "morok"
 hyperlinks = true
 hyperlinks-file-link-format = "file-line://{path}:{line}"
 light = false
