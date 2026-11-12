@@ -1,7 +1,7 @@
 default:
     @just --list
 
-install: install-brew-packages install-dotfiles install-fish-plugins build-bat-cache link-vault install-herdr-integration install-herdr-plugins install-macos-defaults
+install: install-brew-packages install-dotfiles install-fish-plugins build-bat-cache link-vault install-herdr-integration install-macos-defaults
 
 build-bat-cache:
     bat cache --build
@@ -24,9 +24,6 @@ install-fish-plugins:
 
 install-herdr-integration:
     herdr integration install claude
-
-install-herdr-plugins:
-    grep -v '^\s*\(#\|$\)' herdr.plugins | xargs -I {} herdr plugin install {} -y
 
 install-macos-defaults:
     defaults write org.herf.Flux lateColorTemp -int 1900

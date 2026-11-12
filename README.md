@@ -38,7 +38,7 @@ Everything is managed with [dotdrop](https://github.com/deadc0de6/dotdrop) and d
 just install
 ```
 
-That runs `brew bundle`, deploys both dotdrop profiles, bootstraps Fisher and the fish plugins, builds the `bat` theme cache, links the vault, reinstalls the herdr hook and plugins, and writes the f.lux and Tailscale preferences with `defaults write`. Need only one part? Every step is its own recipe - run `just` on its own to see them.
+That runs `brew bundle`, deploys both dotdrop profiles, bootstraps Fisher and the fish plugins, builds the `bat` theme cache, links the vault, reinstalls the herdr hook, and writes the f.lux and Tailscale preferences with `defaults write`. Need only one part? Every step is its own recipe - run `just` on its own to see them.
 
 Three files stay untracked and have to be created by hand on a new machine:
 
@@ -109,10 +109,6 @@ The global rules used to be a single `CLAUDE.md` in this repository. They now li
 Config: [`dotfiles/.config/herdr/config.toml`](dotfiles/.config/herdr/config.toml). Only the config file is managed, since the rest of `~/.config/herdr` holds sockets, logs, and session state.
 
 The Herdr desktop app reads a separate `~/.config/herdr-app`. Only the hand-written files are managed there: [`settings.json`](dotfiles/.config/herdr-app/settings.json), [`keys.json`](dotfiles/.config/herdr-app/keys.json), the [`morok`](dotfiles/.config/herdr-app/themes/morok.json) and [`popil`](dotfiles/.config/herdr-app/themes/popil.json) themes, and the [`main-plain`](dotfiles/.config/herdr-app/layouts/main-plain.json) layout with its [`workspace-chrome-plain`](dotfiles/.config/herdr-app/mods/workspace-chrome-plain) sidebar header - clones of the shipped `main` layout and `workspace-chrome` mod without the Herdr logo and name. The shipped layouts, mods, and window state are the app's and stay untracked. The active layout is app state, so on a new machine pick it once: `herdr-app do layout.switch '{"name":"main-plain"}'`.
-
-Plugins are listed one per line in [`herdr.plugins`](herdr.plugins), the same way Fisher tracks fish plugins in `fish_plugins`. `just install-herdr-plugins` reads that file and installs each entry, so adding a plugin means adding a line rather than editing a recipe. The plugins themselves install into `~/.config/herdr/plugins` and stay untracked; their key bindings live in the managed `config.toml`.
-
-Entries are GitHub shorthand, and a manifest in a subdirectory works too - that is how [`mfp.player`](https://github.com/pivoshenko/musicforprogramming/tree/main/plugins/herdr/mfp.player) is pulled from [`musicforprogramming`](https://github.com/pivoshenko/musicforprogramming) rather than a repository of its own.
 
 ## macOS
 
