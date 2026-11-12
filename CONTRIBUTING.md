@@ -70,7 +70,6 @@ This project uses [`just`](https://github.com/casey/just) as its task runner. Ru
 | `just install-dotfiles` | Deploys both dotdrop profiles (`default` and `me`) from `dotdrop.config.yaml` with `--force` |
 | `just install-fish-plugins` | Bootstraps Fisher if it is missing, then syncs the fish plugins |
 | `just install-herdr-integration` | Installs the herdr integration for Claude |
-| `just install-herdr-plugins` | Reads the non-comment lines of `herdr.plugins` and installs each plugin listed |
 | `just install-macos-defaults` | Writes the f.lux and Tailscale preferences with `defaults write`; restart the app to pick them up |
 | `just build-bat-cache` | Rebuilds the `bat` theme cache so the vendored themes are picked up |
 | `just link-vault` | Symlinks the iCloud Obsidian vault to `~/Vault` |

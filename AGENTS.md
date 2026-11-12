@@ -59,7 +59,6 @@ Consequences when touching theming:
 Plugins are tracked as plain line-per-entry manifests rather than recipe arguments, so adding one is a one-line diff:
 
 - `dotfiles/.config/fish/fish_plugins` - read by Fisher
-- `herdr.plugins` - read by `just install-herdr-plugins` (blank lines and `#` comments skipped)
 
 ### Agent Configuration
 
