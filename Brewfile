@@ -40,6 +40,7 @@ brew "erlang"
 brew "gcc"
 brew "gleam"
 brew "lua"
+brew "ruby"
 
 # == Package Managers ==
 brew "rustup"

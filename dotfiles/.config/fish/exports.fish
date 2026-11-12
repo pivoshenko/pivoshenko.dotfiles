@@ -17,3 +17,4 @@ source $HOME/.config/fish/themes/ls-colors-morok.fish
 fish_add_path -g $HOME/.cargo/bin
 fish_add_path -g $HOME/.docker/bin
 fish_add_path -g /opt/homebrew/opt/rustup/bin
+fish_add_path -g /opt/homebrew/opt/ruby/bin /opt/homebrew/lib/ruby/gems/4.0.0/bin
