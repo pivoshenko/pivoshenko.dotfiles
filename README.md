@@ -25,7 +25,7 @@ My personal dotfiles. The whole thing leans on three ideas: keep it minimal, kee
 - One unified look via [pivoshenko.theme](https://github.com/pivoshenko/pivoshenko.theme)
 - [JetBrains Mono](https://www.jetbrains.com/lp/mono), everywhere
 
-To switch flavors: `just set-flavor <morok|popil|vatra>`, then `just install-dotfiles`.
+The active flavor is **morok**. To switch flavors: `just set-flavor <morok|popil|vatra>`, then `just install-dotfiles`. Spotify switches separately with `just set-spicetify-flavor <flavor>`, and the apps listed below with a manual step pick their theme in their own settings.
 
 ## Installation
 
