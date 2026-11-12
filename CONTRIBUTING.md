@@ -77,6 +77,7 @@ This project uses [`just`](https://github.com/casey/just) as its task runner. Ru
 | `just set-spicetify-flavor FLAVOR` | Points spicetify at the given theme and color scheme, then applies it |
 | `just format` | Applies Ruff's autofixes and formatting to the Python files, and `fish_indent` to the fish files |
 | `just lint` | Checks the Python files with Ruff and ty, and the fish files with `fish_indent --check`, without changing anything |
+| `just audit` | Checks the dependencies for known vulnerabilities (uv) |
 | `just test` | Skips through the `.no-tests` sentinel; there are no tests |
 | `just check` | Runs `lint` then `test` |
 | `just update` | Upgrades `uv.lock`, then realigns the `pyproject.toml` constraints to it with uv-upsync |
