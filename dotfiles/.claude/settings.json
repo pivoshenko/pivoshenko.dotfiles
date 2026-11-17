@@ -19,6 +19,15 @@
   "env": {
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
   },
+  "extraKnownMarketplaces": {
+    "cursor-plugins": {
+      "autoUpdate": true,
+      "source": {
+        "repo": "cursor/plugins",
+        "source": "github"
+      }
+    }
+  },
   "includeCoAuthoredBy": false,
   "inputNeededNotifEnabled": true,
   "modelSettings": {
