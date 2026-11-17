@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "morok",
+  "version": "1.0.0",
+  "description": "The morok flavor of pivoshenko.theme",
+  "theme": {
+    "colors": {
+      "frame": [13, 13, 13],
+      "frame_inactive": [0, 0, 0],
+      "frame_incognito": [0, 0, 0],
+      "frame_incognito_inactive": [0, 0, 0],
+      "background_tab": [13, 13, 13],
+      "background_tab_inactive": [0, 0, 0],
+      "background_tab_incognito": [0, 0, 0],
+      "background_tab_incognito_inactive": [0, 0, 0],
+      "toolbar": [24, 24, 24],
+      "toolbar_text": [231, 229, 228],
+      "toolbar_button_icon": [141, 161, 199],
+      "tab_text": [231, 229, 228],
+      "tab_background_text": [168, 162, 158],
+      "tab_background_text_inactive": [120, 113, 108],
+      "tab_background_text_incognito": [168, 162, 158],
+      "tab_background_text_incognito_inactive": [120, 113, 108],
+      "bookmark_text": [214, 211, 209],
+      "omnibox_background": [17, 17, 17],
+      "omnibox_text": [231, 229, 228],
+      "ntp_background": [17, 17, 17],
+      "ntp_text": [231, 229, 228],
+      "ntp_link": [141, 161, 199],
+      "ntp_header": [24, 24, 24]
+    },
+    "properties": {
+      "ntp_logo_alternate": 1
+    }
+  }
+}

@@ -47,7 +47,7 @@ Three files stay untracked and have to be created by hand on a new machine:
 - `~/.config/fish/.secrets.fish` - tokens and keys
 
 > [!NOTE]
-> A few things still want a manual step, because the app owns its own settings store rather than reading a file: **Telegram** and **Discord** (theme installs through the app's UI), **Obsidian** (theme picked in appearance settings), and **Stylus** and **Rectangle** (import the exported JSON). The relevant sections below spell out what to do.
+> A few things still want a manual step, because the app owns its own settings store rather than reading a file: **Telegram** and **Discord** (theme installs through the app's UI), **Obsidian** (theme picked in appearance settings), **Chrome** (theme loaded as an unpacked extension), and **Stylus** and **Rectangle** (import the exported JSON). The relevant sections below spell out what to do.
 
 ## Terminal - Ghostty
 
@@ -142,6 +142,8 @@ Config: [`dotfiles/.config/karabiner/karabiner.json`](dotfiles/.config/karabiner
 `userChrome.css` / `userContent.css` live in [`dotfiles/.config/zen`](dotfiles/.config/zen) and deploy into the active profile's [`chrome/` subfolder](https://www.userchrome.org).
 
 Per-site styling is handled by [Stylus](https://addons.mozilla.org/en-US/firefox/addon/styl-us). The userstyles export to [`dotfiles/.config/stylus`](dotfiles/.config/stylus) and get imported through the extension's preferences.
+
+Chrome gets the theme as an unpacked extension: [`dotfiles/.config/chrome`](dotfiles/.config/chrome) deploys one folder per flavor to `~/.config/chrome/<flavor>/`. Open `chrome://extensions`, enable Developer mode, click *Load unpacked*, and pick `~/.config/chrome/morok`. After a redeploy, hit the reload icon on the theme's card.
 
 ## Notes - Obsidian
 

@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "vatra",
+  "version": "1.0.0",
+  "description": "The vatra flavor of pivoshenko.theme",
+  "theme": {
+    "colors": {
+      "frame": [26, 26, 26],
+      "frame_inactive": [21, 21, 21],
+      "frame_incognito": [21, 21, 21],
+      "frame_incognito_inactive": [21, 21, 21],
+      "background_tab": [26, 26, 26],
+      "background_tab_inactive": [21, 21, 21],
+      "background_tab_incognito": [21, 21, 21],
+      "background_tab_incognito_inactive": [21, 21, 21],
+      "toolbar": [42, 41, 40],
+      "toolbar_text": [243, 224, 186],
+      "toolbar_button_icon": [128, 166, 209],
+      "tab_text": [243, 224, 186],
+      "tab_background_text": [170, 153, 131],
+      "tab_background_text_inactive": [125, 112, 99],
+      "tab_background_text_incognito": [170, 153, 131],
+      "tab_background_text_incognito_inactive": [125, 112, 99],
+      "bookmark_text": [209, 190, 160],
+      "omnibox_background": [31, 31, 31],
+      "omnibox_text": [243, 224, 186],
+      "ntp_background": [31, 31, 31],
+      "ntp_text": [243, 224, 186],
+      "ntp_link": [128, 166, 209],
+      "ntp_header": [42, 41, 40]
+    },
+    "properties": {
+      "ntp_logo_alternate": 1
+    }
+  }
+}

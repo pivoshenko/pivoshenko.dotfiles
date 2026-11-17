@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "popil",
+  "version": "1.0.0",
+  "description": "The popil flavor of pivoshenko.theme",
+  "theme": {
+    "colors": {
+      "frame": [26, 26, 25],
+      "frame_inactive": [21, 21, 20],
+      "frame_incognito": [21, 21, 20],
+      "frame_incognito_inactive": [21, 21, 20],
+      "background_tab": [26, 26, 25],
+      "background_tab_inactive": [21, 21, 20],
+      "background_tab_incognito": [21, 21, 20],
+      "background_tab_incognito_inactive": [21, 21, 20],
+      "toolbar": [41, 41, 40],
+      "toolbar_text": [228, 226, 222],
+      "toolbar_button_icon": [141, 167, 209],
+      "tab_text": [228, 226, 222],
+      "tab_background_text": [155, 149, 138],
+      "tab_background_text_inactive": [120, 113, 108],
+      "tab_background_text_incognito": [155, 149, 138],
+      "tab_background_text_incognito_inactive": [120, 113, 108],
+      "bookmark_text": [184, 179, 168],
+      "omnibox_background": [31, 31, 30],
+      "omnibox_text": [228, 226, 222],
+      "ntp_background": [31, 31, 30],
+      "ntp_text": [228, 226, 222],
+      "ntp_link": [141, 167, 209],
+      "ntp_header": [41, 41, 40]
+    },
+    "properties": {
+      "ntp_logo_alternate": 1
+    }
+  }
+}

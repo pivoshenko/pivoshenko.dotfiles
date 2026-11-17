@@ -44,6 +44,9 @@ dotfiles:
   d_fastfetch:
     dst: ~/.config/fastfetch
     src: .config/fastfetch
+  d_chrome:
+    dst: ~/.config/chrome
+    src: .config/chrome
   d_fish:
     dst: ~/.config/fish
     src: .config/fish
@@ -135,6 +138,7 @@ profiles:
       - d_ghostty
       - d_gnupg
       - d_helix
+      - d_chrome
       - d_ipython
       - d_k9s
       - d_lazygit
