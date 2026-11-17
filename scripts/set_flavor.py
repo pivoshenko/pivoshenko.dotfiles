@@ -54,6 +54,10 @@ edit(
     lambda t: re.sub(r"^theme = \w+\.conf", f"theme = {F}.conf", t, count=1, flags=re.MULTILINE),
 )
 edit(".gitconfig", lambda t: re.sub(r'(\[delta\]\nfeatures = )"\w+"', rf'\1"{F}"', t, count=1))
+edit(
+    ".claude/settings.json",
+    lambda t: re.sub(r'"theme": "custom:\w+"', f'"theme": "custom:{F}"', t, count=1),
+)
 
 
 def patch_zed(text: str) -> str:
@@ -92,12 +96,13 @@ def patch_fzf(text: str) -> str:
 edit(".config/fish/fzf.fish", patch_fzf)
 
 
-for name, ext, filename in (
-    ("bottom", "toml", "bottom.toml"),
-    ("fastfetch", "jsonc", "config.jsonc"),
+for root, ext, filename in (
+    (".config/bottom", "toml", "bottom.toml"),
+    (".config/fastfetch", "jsonc", "config.jsonc"),
+    (".claude/skills/pivoshenko-theme", "js", "hooks/register.js"),
 ):
-    src = DOT / f".config/{name}/themes/{F}.{ext}"
-    dst = DOT / f".config/{name}/{filename}"
+    src = DOT / f"{root}/themes/{F}.{ext}"
+    dst = DOT / f"{root}/{filename}"
     if src.read_text() != dst.read_text():
         shutil.copyfile(src, dst)
         print(f"  patch  {dst.relative_to(DOT)} (<- themes/{F}.{ext})")

@@ -30,6 +30,12 @@ dotfiles:
   f_claude_statusline:
     dst: ~/.claude/statusline-command.sh
     src: .claude/statusline-command.sh
+  d_claude_themes:
+    dst: ~/.claude/themes
+    src: .claude/themes
+  d_claude_theme_mod:
+    dst: ~/.claude/skills/pivoshenko-theme
+    src: .claude/skills/pivoshenko-theme
 
   # == ~/.config ==
   d_bat:
@@ -38,15 +44,15 @@ dotfiles:
   d_bottom:
     dst: ~/.config/bottom
     src: .config/bottom
+  d_chrome:
+    dst: ~/.config/chrome
+    src: .config/chrome
   d_delta:
     dst: ~/.config/delta
     src: .config/delta
   d_fastfetch:
     dst: ~/.config/fastfetch
     src: .config/fastfetch
-  d_chrome:
-    dst: ~/.config/chrome
-    src: .config/chrome
   d_fish:
     dst: ~/.config/fish
     src: .config/fish
@@ -132,13 +138,13 @@ profiles:
     dotfiles:
       - d_bat
       - d_bottom
+      - d_chrome
       - d_delta
       - d_fastfetch
       - d_fish
       - d_ghostty
       - d_gnupg
       - d_helix
-      - d_chrome
       - d_ipython
       - d_k9s
       - d_lazygit
@@ -148,6 +154,8 @@ profiles:
       - d_spicetify
       - d_stylus
       - d_zed
+      - d_claude_themes
+      - d_claude_theme_mod
       - f_claude_settings
       - f_claude_statusline
       - f_gitconfig
