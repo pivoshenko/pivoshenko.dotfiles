@@ -8,7 +8,7 @@ cask "sf-symbols"
 
 # == Applications ==
 cask "claude"
-cask "claude-code"
+cask "claude-code@latest"
 cask "dbeaver-community"
 cask "docker-desktop"
 cask "flux-app"
