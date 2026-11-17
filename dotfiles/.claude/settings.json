@@ -82,7 +82,7 @@
     "command": "sh ~/.claude/statusline-command.sh",
     "type": "command"
   },
-  "theme": "custom:morok",
+  "theme": "dark-ansi",
   "tui": "fullscreen",
   "voice": {
     "autoSubmit": true,

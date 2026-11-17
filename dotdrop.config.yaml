@@ -30,9 +30,6 @@ dotfiles:
   f_claude_statusline:
     dst: ~/.claude/statusline-command.sh
     src: .claude/statusline-command.sh
-  d_claude_themes:
-    dst: ~/.claude/themes
-    src: .claude/themes
 
   # == ~/.config ==
   d_bat:
@@ -151,7 +148,6 @@ profiles:
       - d_spicetify
       - d_stylus
       - d_zed
-      - d_claude_themes
       - f_claude_settings
       - f_claude_statusline
       - f_gitconfig
