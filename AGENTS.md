@@ -39,7 +39,7 @@ Adding a newly managed config is three coordinated edits:
 
 ### Theme Flavors
 
-The repo vendors three flavors of [pivoshenko.theme](https://github.com/pivoshenko/pivoshenko.theme) - `morok`, `popil`, `vatra` - and most themed tools keep all three on disk under a `themes/` (or `skins/`, `Themes/`) subdirectory. Three do not: starship inlines all three `[palettes.<flavor>]` tables in `starship.toml`, Zen keeps a directory per flavor at `dotfiles/.config/zen/<flavor>/`, and Stylus keeps flat `dotfiles/.config/stylus/<flavor>.json` files. `scripts/set_flavor.py` is the single authority that flips the live config over, and it uses four distinct mechanisms depending on what the tool supports:
+The repo vendors three flavors of [pivoshenko.theme](https://github.com/pivoshenko/pivoshenko.theme) - `morok`, `popil`, `vatra` - and most themed tools keep all three on disk under a `themes/` (or `skins/`, `Themes/`) subdirectory. Four do not: starship inlines all three `[palettes.<flavor>]` tables in `starship.toml`, Zen and Chrome keep a directory per flavor at `dotfiles/.config/{zen,chrome}/<flavor>/`, and Stylus keeps flat `dotfiles/.config/stylus/<flavor>.json` files. `scripts/set_flavor.py` is the single authority that flips the live config over, and it uses four distinct mechanisms depending on what the tool supports:
 
 - **Selector rewrite** - regex-swap a name in the live config: starship `palette`, helix `theme`, k9s `skin`, bat `--theme`, ghostty `theme = <f>.conf`, zed `"theme"` block, fish `fish_config theme choose`, `fzf.fish` source line and `FZF_THEME`, and `.gitconfig`'s `[delta] features` (all three delta gitconfigs are `[include]`d, so only the selector changes)
 - **Whole-file copy** - `themes/<flavor>.<ext>` overwrites the live config: bottom, fastfetch
@@ -52,7 +52,7 @@ Consequences when touching theming:
 - A new themed tool needs a vendored file per flavor **and** a corresponding step in `set_flavor.py`
 - The lazygit flavor files must keep `authorColors` nested under `theme:`. The splice loop stops at the first top-level key, so a flattened `authorColors:` is excluded from the block and silently dropped from `config.yml` - and `gui.authorColors` is the wrong path anyway, lazygit reads it at `gui.theme.authorColors`
 - `set_flavor.py` only edits the repository; nothing reaches the system until `just install-dotfiles`
-- Apps that own their own settings store stay manual: Obsidian, Telegram, Discord/Vesktop, Stylus, Rectangle. `README.md` documents each
+- Apps that own their own settings store stay manual: Obsidian, Telegram, Discord/Vesktop, Stylus, Chrome, Rectangle. `README.md` documents each
 
 ### Plugin Manifests
 
