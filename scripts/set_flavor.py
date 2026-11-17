@@ -99,7 +99,6 @@ edit(".config/fish/fzf.fish", patch_fzf)
 for root, ext, filename in (
     (".config/bottom", "toml", "bottom.toml"),
     (".config/fastfetch", "jsonc", "config.jsonc"),
-    (".claude/skills/pivoshenko-theme", "js", "hooks/register.js"),
 ):
     src = DOT / f"{root}/themes/{F}.{ext}"
     dst = DOT / f"{root}/{filename}"

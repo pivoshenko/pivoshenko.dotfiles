@@ -42,7 +42,7 @@ Adding a newly managed config is three coordinated edits:
 The repo vendors three flavors of [pivoshenko.theme](https://github.com/pivoshenko/pivoshenko.theme) - `morok`, `popil`, `vatra` - and most themed tools keep all three on disk under a `themes/` (or `skins/`, `Themes/`) subdirectory. Four do not: starship inlines all three `[palettes.<flavor>]` tables in `starship.toml`, Zen and Chrome keep a directory per flavor at `dotfiles/.config/{zen,chrome}/<flavor>/`, and Stylus keeps flat `dotfiles/.config/stylus/<flavor>.json` files. `scripts/set_flavor.py` is the single authority that flips the live config over, and it uses four distinct mechanisms depending on what the tool supports:
 
 - **Selector rewrite** - regex-swap a name in the live config: starship `palette`, helix `theme`, k9s `skin`, bat `--theme`, ghostty `theme = <f>.conf`, zed `"theme"` block, Claude Code `"theme": "custom:<f>"` in `.claude/settings.json`, fish `fish_config theme choose`, `fzf.fish` source line and `FZF_THEME`, and `.gitconfig`'s `[delta] features` (all three delta gitconfigs are `[include]`d, so only the selector changes)
-- **Whole-file copy** - `themes/<flavor>.<ext>` overwrites the live config: bottom, fastfetch, and the Claude Desktop colors mod (`.claude/skills/pivoshenko-theme/themes/<f>.js` -> `hooks/register.js`)
+- **Whole-file copy** - `themes/<flavor>.<ext>` overwrites the live config: bottom and fastfetch
 - **Block splice** - the flavor file's body is spliced into a section of the live config: herdr (between `[theme]` and the `# == Keys ==` marker) and lazygit (the `gui.theme:` block, re-indented)
 - **dotdrop source rewrite** - Zen has no runtime theme selector, so the script rewrites `src: .config/zen/<flavor>/userC*` inside `dotdrop.config.yaml`
 
@@ -62,7 +62,7 @@ Plugins are tracked as plain line-per-entry manifests rather than recipe argumen
 
 ### Agent Configuration
 
-`dotfiles/.claude/` carries only `settings.json`, `statusline-command.sh`, the three theme flavors under `themes/`, and the `skills/pivoshenko-theme/` mod that paints the Desktop Code tab. Its `hooks/make-colors.js` and `.d.ts` are copied verbatim from Claude Code's `plugin-authoring` skill - leave them unedited, and recopy them when Claude Code updates. The global `CLAUDE.md`/`AGENTS.md` instruction set does **not** live here - it is distributed across machines by [Kasetto](https://kasetto.dev/) from [`pivoshenko/pivoshenko.ai`](https://github.com/pivoshenko/pivoshenko.ai), as individual instruction files under `instructions/`. Do not reintroduce global agent rules into this repository.
+`dotfiles/.claude/` carries only `settings.json`, `statusline-command.sh`, and the three theme flavors under `themes/`. The global `CLAUDE.md`/`AGENTS.md` instruction set does **not** live here - it is distributed across machines by [Kasetto](https://kasetto.dev/) from [`pivoshenko/pivoshenko.ai`](https://github.com/pivoshenko/pivoshenko.ai), as individual instruction files under `instructions/`. Do not reintroduce global agent rules into this repository.
 
 ## Untracked Local Files
 

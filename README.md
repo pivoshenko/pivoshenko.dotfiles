@@ -16,7 +16,7 @@ My personal dotfiles. The whole thing leans on three ideas: keep it minimal, kee
 
 - Brew dependencies (apps, fonts, LSPs) in [`Brewfile`](Brewfile)
 - Apps and tools config in [`dotfiles/.config/`](dotfiles/.config)
-- [Claude Code](https://claude.com/claude-code) setup, `settings.json`, statusline, CLI themes and a Desktop colors mod, in [`dotfiles/.claude/`](dotfiles/.claude)
+- [Claude Code](https://claude.com/claude-code) setup, `settings.json`, statusline and CLI themes, in [`dotfiles/.claude/`](dotfiles/.claude)
 - Git, SSH, GPG in [`.gitconfig`](dotfiles/.gitconfig), [`.ssh/`](dotfiles/.ssh), [`.gnupg/`](dotfiles/.gnupg)
 
 ## Main Principles
