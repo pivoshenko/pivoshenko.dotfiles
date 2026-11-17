@@ -91,7 +91,7 @@
       "type": "registry"
     }
   },
-  "disable_ai": false,
+  "disable_ai": true,
   // == Languages ==
   "languages": {
     "Python": {
