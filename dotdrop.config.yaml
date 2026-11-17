@@ -33,9 +33,6 @@ dotfiles:
   d_claude_themes:
     dst: ~/.claude/themes
     src: .claude/themes
-  d_claude_theme_mod:
-    dst: ~/.claude/skills/pivoshenko-theme
-    src: .claude/skills/pivoshenko-theme
 
   # == ~/.config ==
   d_bat:
@@ -155,7 +152,6 @@ profiles:
       - d_stylus
       - d_zed
       - d_claude_themes
-      - d_claude_theme_mod
       - f_claude_settings
       - f_claude_statusline
       - f_gitconfig
