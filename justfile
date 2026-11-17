@@ -1,7 +1,7 @@
 default:
     @just --list
 
-install: install-brew-packages install-dotfiles install-fish-plugins build-bat-cache link-vault install-herdr-integration install-macos-defaults
+install: install-brew-packages install-dotfiles install-fish-plugins build-bat-cache link-vault install-macos-defaults
 
 build-bat-cache:
     bat cache --build
@@ -21,9 +21,6 @@ install-fish-plugins:
         fisher install jorgebucaran/fisher
     end
     fisher update
-
-install-herdr-integration:
-    herdr integration install claude
 
 install-macos-defaults:
     defaults write org.herf.Flux lateColorTemp -int 1900
