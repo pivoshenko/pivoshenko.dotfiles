@@ -94,17 +94,13 @@ The full list of installed CLI tools is in the [`Brewfile`](Brewfile).
 
 [Claude Code](https://claude.com/claude-code) is my coding assistant. Config (`settings.json` plus a custom statusline): [`dotfiles/.claude`](dotfiles/.claude).
 
-Skills, MCPs, and instructions (the global `CLAUDE.md` / `AGENTS.md` rules) are distributed across hosts with [Kasetto](https://kasetto.dev/). The Kasetto config lives in [`pivoshenko/pivoshenko.ai`](https://github.com/pivoshenko/pivoshenko.ai), with personal and external sources both included.
-
-The global rules used to be a single `CLAUDE.md` in this repository. They now live as individual instruction files in [`pivoshenko.ai/instructions`](https://github.com/pivoshenko/pivoshenko.ai/tree/main/instructions), with a structure loosely inspired by *Andrej Karpathy's CLAUDE.md*.
+Skills, MCPs, and instructions (the global `CLAUDE.md` / `AGENTS.md` rules) are distributed across hosts with [Kasetto](https://kasetto.dev). The Kasetto config lives in [`pivoshenko/pivoshenko.ai`](https://github.com/pivoshenko/pivoshenko.ai), with personal and external sources both included.
 
 ### Agent Runtime - Herdr
 
 [Herdr](https://herdr.dev) is the daemon my agents run on. It keeps real terminal sessions open in the background, so a long task survives the lid closing or the network dropping and is still there when I come back. It drives several agents across workspaces at once and shows at a glance which ones are working, blocked, or idle.
 
-Config: [`dotfiles/.config/herdr/config.toml`](dotfiles/.config/herdr/config.toml). Only the config file is managed, since the rest of `~/.config/herdr` holds sockets, logs, and session state.
-
-The Herdr desktop app reads a separate `~/.config/herdr-app`. Only the hand-written files are managed there: [`settings.json`](dotfiles/.config/herdr-app/settings.json), [`keys.json`](dotfiles/.config/herdr-app/keys.json), the [`morok`](dotfiles/.config/herdr-app/themes/morok.json) and [`popil`](dotfiles/.config/herdr-app/themes/popil.json) themes, and the [`main-plain`](dotfiles/.config/herdr-app/layouts/main-plain.json) layout with its [`workspace-chrome-plain`](dotfiles/.config/herdr-app/mods/workspace-chrome-plain) sidebar header - clones of the shipped `main` layout and `workspace-chrome` mod without the Herdr logo and name. The shipped layouts, mods, and window state are the app's and stay untracked. The active layout is app state, so on a new machine pick it once: `herdr-app do layout.switch '{"name":"main-plain"}'`.
+Config: [`dotfiles/.config/herdr/config.toml`](dotfiles/.config/herdr/config.toml), desktop app: [`dotfiles/.config/herdr-app`](dotfiles/.config/herdr-app). On a new machine, select the app layout once with `herdr-app do layout.switch '{"name":"main-plain"}'`.
 
 ## macOS
 
