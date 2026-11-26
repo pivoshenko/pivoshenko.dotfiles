@@ -1,107 +1,108 @@
 # == Taps ==
-tap "hashicorp/tap", trusted: true
-tap "pivoshenko/tap", trusted: true
+tap 'hashicorp/tap', trusted: true
+tap 'pivoshenko/tap', trusted: true
 
 # == Fonts ==
-cask "font-jetbrains-mono-nerd-font"
-cask "sf-symbols"
+cask 'font-jetbrains-mono-nerd-font'
+cask 'sf-symbols'
 
 # == Applications ==
-cask "claude"
-cask "claude-code@latest"
-cask "dbeaver-community"
-cask "docker-desktop"
-cask "flux-app"
-cask "gcloud-cli"
-cask "ghostty"
-cask "godot"
-cask "google-chrome"
-cask "karabiner-elements"
-cask "logi-options+"
-cask "maccy"
-cask "nordpass"
-cask "nordvpn"
-cask "obsidian"
-cask "rectangle"
-cask "redis-insight"
-cask "spotify"
-cask "steam"
-cask "tailscale-app"
-cask "telegram"
-cask "vesktop"
-cask "visual-studio-code"
-cask "zed"
-cask "zed-delta"
-cask "zen"
+cask 'claude'
+cask 'claude-code@latest'
+cask 'dbeaver-community'
+cask 'docker-desktop'
+cask 'flux-app'
+cask 'gcloud-cli'
+cask 'ghostty'
+cask 'godot'
+cask 'google-chrome'
+cask 'karabiner-elements'
+cask 'linear'
+cask 'logi-options+'
+cask 'maccy'
+cask 'nordpass'
+cask 'nordvpn'
+cask 'obsidian'
+cask 'rectangle'
+cask 'redis-insight'
+cask 'spotify'
+cask 'steam'
+cask 'tailscale-app'
+cask 'telegram'
+cask 'vesktop'
+cask 'visual-studio-code'
+cask 'zed'
+cask 'zed-delta'
+cask 'zen'
 
 # == Programming Languages ==
-brew "elixir"
-brew "erlang"
-brew "gcc"
-brew "gleam"
-brew "lua"
-brew "ruby"
+brew 'elixir'
+brew 'erlang'
+brew 'gcc'
+brew 'gleam'
+brew 'lua'
+brew 'ruby'
 
 # == Package Managers ==
-brew "rustup"
-brew "uv"
+brew 'rustup'
+brew 'uv'
 
 # == Databases ==
-brew "duckdb"
-brew "redis"
+brew 'duckdb'
+brew 'redis'
 
 # == Command-Line Tools ==
-brew "bat"
-brew "bottom"
-brew "curl"
-brew "dotdrop"
-brew "exercism"
-brew "eza"
-brew "fastfetch"
-brew "fd"
-brew "fish"
-brew "fzf"
-brew "gh"
-brew "git-delta"
-brew "git-lfs"
-brew "git-filter-repo"
-brew "gnupg"
-brew "graphviz"
-brew "hcloud"
-brew "helix"
-brew "herdr"
-brew "hyperfine"
-brew "jq"
-brew "just"
-brew "k9s"
-brew "lazydocker"
-brew "lazygit"
-brew "maturin"
-brew "mole"
-brew "hashicorp/tap/terraform"
-brew "prettier"
-brew "pnpm"
-brew "pinentry-mac"
-brew "pivoshenko/tap/kasetto"
-brew "pivoshenko/tap/musicforprogramming"
-brew "ripgrep"
-brew "spicetify-cli"
-brew "starship"
-brew "tectonic"
-brew "vercel"
-brew "vhs"
-brew "zoxide"
+brew 'bat'
+brew 'bottom'
+brew 'curl'
+brew 'dotdrop'
+brew 'exercism'
+brew 'eza'
+brew 'fastfetch'
+brew 'fd'
+brew 'fish'
+brew 'fzf'
+brew 'gh'
+brew 'git-delta'
+brew 'git-lfs'
+brew 'git-filter-repo'
+brew 'gnupg'
+brew 'graphviz'
+brew 'hcloud'
+brew 'helix'
+brew 'herdr'
+brew 'hyperfine'
+brew 'jq'
+brew 'just'
+brew 'k9s'
+brew 'lazydocker'
+brew 'lazygit'
+brew 'maturin'
+brew 'mole'
+brew 'hashicorp/tap/terraform'
+brew 'prettier'
+brew 'pnpm'
+brew 'pinentry-mac'
+brew 'pivoshenko/tap/kasetto'
+brew 'pivoshenko/tap/musicforprogramming'
+brew 'ripgrep'
+brew 'spicetify-cli'
+brew 'starship'
+brew 'tectonic'
+brew 'vercel'
+brew 'vhs'
+brew 'zoxide'
 
 # == Language Server Protocols ==
-brew "elixir-ls"
-brew "marksman"
-brew "taplo"
-brew "texlab"
-brew "tex-fmt"
-brew "vscode-langservers-extracted"
-brew "yaml-language-server"
+brew 'elixir-ls'
+brew 'marksman'
+brew 'taplo'
+brew 'texlab'
+brew 'tex-fmt'
+brew 'vscode-langservers-extracted'
+brew 'yaml-language-server'
 
 # == Python Packages ==
-brew "ruff"
-brew "sqlfluff"
-brew "ty"
+brew 'ruff'
+brew 'sqlfluff'
+brew 'ty'
