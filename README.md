@@ -21,7 +21,7 @@ My personal dotfiles. The whole thing leans on three ideas: keep it minimal, kee
 - One unified look via [pivoshenko.theme](https://github.com/pivoshenko/pivoshenko.theme)
 - [JetBrains Mono](https://www.jetbrains.com/lp/mono), everywhere
 
-The active flavor is **morok**. To switch flavors: `just set-flavor <morok|popil|vatra>`, then `just install-dotfiles`. Spotify switches separately with `just set-spicetify-flavor <flavor>`, and the apps listed below with a manual step pick their theme in their own settings.
+The flavor is **morok**, the only one vendored here. The apps listed below with a manual step pick it in their own settings.
 
 ## Installation
 
@@ -135,7 +135,7 @@ Config: [`dotfiles/.config/karabiner/karabiner.json`](dotfiles/.config/karabiner
 
 Per-site styling is handled by [Stylus](https://addons.mozilla.org/en-US/firefox/addon/styl-us). The userstyles export to [`dotfiles/.config/stylus`](dotfiles/.config/stylus) and get imported through the extension's preferences.
 
-Chrome gets the theme as an unpacked extension: [`dotfiles/.config/chrome`](dotfiles/.config/chrome) deploys one folder per flavor to `~/.config/chrome/<flavor>/`. Open `chrome://extensions`, enable Developer mode, click *Load unpacked*, and pick `~/.config/chrome/morok`. After a redeploy, hit the reload icon on the theme's card.
+Chrome gets the theme as an unpacked extension: [`dotfiles/.config/chrome`](dotfiles/.config/chrome) deploys to `~/.config/chrome/`. Open `chrome://extensions`, enable Developer mode, click *Load unpacked*, and pick `~/.config/chrome`. After a redeploy, hit the reload icon on the theme's card.
 
 ## Notes - Obsidian
 
@@ -151,7 +151,7 @@ Plugins:
 
 ## Music - Spotify
 
-Spotify is customized through [Spicetify](https://github.com/spicetify/cli). Themes live in [`dotfiles/.config/spicetify/Themes`](dotfiles/.config/spicetify/Themes); activate a flavor with `just set-spicetify-flavor <morok|popil|vatra>`.
+Spotify is customized through [Spicetify](https://github.com/spicetify/cli). Themes live in [`dotfiles/.config/spicetify/Themes`](dotfiles/.config/spicetify/Themes); activate it once with `spicetify config current_theme morok color_scheme morok && spicetify apply`.
 
 ## Messengers
 

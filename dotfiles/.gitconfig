@@ -24,8 +24,6 @@ colorMoved = default
 
 [include]
 path = ~/.config/delta/themes/morok.gitconfig
-path = ~/.config/delta/themes/popil.gitconfig
-path = ~/.config/delta/themes/vatra.gitconfig
 path = ~/.gitconfig.local
 
 [init]

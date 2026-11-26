@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-`pivoshenko.dotfiles` is a personal macOS dotfiles repository. There is no application to build and no test suite - the "product" is the `dotfiles/` staging tree, which [dotdrop](https://github.com/deadc0de6/dotdrop) deploys into `$HOME`, orchestrated by [just](https://github.com/casey/just). The only standalone script is `scripts/set_flavor.py` (stdlib Python 3, no dependencies); the rest of the executable code is itself deployed config - `dotfiles/.claude/statusline-command.sh`, the fish files under `dotfiles/.config/fish/`, and `dotfiles/.ipython/profile_default/startup/start.py`.
+`pivoshenko.dotfiles` is a personal macOS dotfiles repository. There is no application to build and no test suite - the "product" is the `dotfiles/` staging tree, which [dotdrop](https://github.com/deadc0de6/dotdrop) deploys into `$HOME`, orchestrated by [just](https://github.com/casey/just). There are no standalone scripts; the executable code is itself deployed config - `dotfiles/.claude/statusline-command.sh`, the fish files under `dotfiles/.config/fish/`, and `dotfiles/.ipython/profile_default/startup/start.py`.
 
 ## Commands
 
@@ -12,11 +12,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 - `just install` - full bootstrap (brew bundle, both dotdrop profiles, Fisher plugins, `bat` cache, vault symlink, macOS app defaults)
 - `just install-dotfiles` - deploy the `default` and `me` profiles with `--force`; this is the verification step after any change under `dotfiles/`
-- `just set-flavor <morok|popil|vatra>` - rewrite the repo's configs to a theme flavor, then `just install-dotfiles` to deploy
-- `just set-spicetify-flavor <morok|popil|vatra>` - Spotify only, applied directly to the live spicetify install
 - `just install-macos-defaults` - `defaults write` for apps configured only through their preferences plist (f.lux, Tailscale). Keys are written one by one rather than importing a whole plist, which would carry window frames, update timestamps, and device IDs
 - `just install-brew-packages` - `brew bundle` plus `brew bundle cleanup --force`, so removing a line from `Brewfile` uninstalls the package
-- `just format` / `just lint` - Ruff and ty over the Python files, `fish_indent` over the tracked fish files. `fish_indent` drops quotes around single words, so `scripts/set_flavor.py` matches `fish_config theme choose <flavor>` unquoted
+- `just format` / `just lint` - Ruff and ty over the Python files, `fish_indent` over the tracked fish files.
 
 There are no GitHub Actions workflows in this repository. `CONTRIBUTING.md` mentions tests; none exist here, and `just test` skips through the `.no-tests` sentinel.
 
@@ -37,22 +35,19 @@ Adding a newly managed config is three coordinated edits:
 2. Add a `d_*` (directory) or `f_*` (file) entry to the `dotfiles:` block in `dotdrop.config.yaml`
 3. Add that key to a profile under `profiles:`
 
-### Theme Flavors
+### Theme
 
-The repo vendors three flavors of [pivoshenko.theme](https://github.com/pivoshenko/pivoshenko.theme) - `morok`, `popil`, `vatra` - and most themed tools keep all three on disk under a `themes/` (or `skins/`, `Themes/`) subdirectory. Four do not: starship inlines all three `[palettes.<flavor>]` tables in `starship.toml`, Zen and Chrome keep a directory per flavor at `dotfiles/.config/{zen,chrome}/<flavor>/`, and Stylus keeps flat `dotfiles/.config/stylus/<flavor>.json` files. `scripts/set_flavor.py` is the single authority that flips the live config over, and it uses four distinct mechanisms depending on what the tool supports:
+The repo vendors one flavor of [pivoshenko.theme](https://github.com/pivoshenko/pivoshenko.theme), `morok`, and each tool loads it the way it natively supports:
 
-- **Selector rewrite** - regex-swap a name in the live config: starship `palette`, helix `theme`, k9s `skin`, bat `--theme`, ghostty `theme = <f>.conf`, zed `"theme"` block, fish `fish_config theme choose`, `fzf.fish` source line and `FZF_THEME`, and `.gitconfig`'s `[delta] features` (all three delta gitconfigs are `[include]`d, so only the selector changes)
-- **Whole-file copy** - `themes/<flavor>.<ext>` overwrites the live config: bottom, fastfetch
-- **Block splice** - the flavor file's body is spliced into a section of the live config: herdr (between `[theme]` and the `# == Keys ==` marker) and lazygit (the `gui.theme:` block, re-indented)
-- **dotdrop source rewrite** - Zen has no runtime theme selector, so the script rewrites `src: .config/zen/<flavor>/userC*` inside `dotdrop.config.yaml`
+- **Named theme file** - the live config selects `morok` and the file sits beside it: helix, k9s (`skins/`), bat, ghostty, zed, fish (`fish_config theme choose`, plus `ls-colors-morok.fish` and `fzf-morok.fish`), delta (`[delta] features` and an `[include]` in `.gitconfig`), herdr-app (`"theme"` in `settings.json`), Obsidian, Spicetify (`Themes/morok/`)
+- **Inlined** - the colors live inside the live config itself: starship `[palettes.morok]`, bottom, fastfetch, herdr `[theme]`, lazygit `gui.theme`
+- **Plain files** - Zen `userChrome.css`/`userContent.css`, the Chrome unpacked-extension `manifest.json`, the Stylus `morok.json` export
 
 Consequences when touching theming:
 
-- Those anchors are load-bearing, and they fail differently. Removing the `# == Keys ==` comment from `herdr/config.toml` aborts `set_flavor.py` loudly, with a `ValueError` from `text.index`. Reindenting or moving lazygit's `gui.theme` block fails silently instead: the regex stops matching, so `edit` sees no change and prints `ok` while patching nothing. Reflowing zed's `"theme": { ... }` onto one line is safe - `patch_zed`'s regexes match either form
-- A new themed tool needs a vendored file per flavor **and** a corresponding step in `set_flavor.py`
-- The lazygit flavor files must keep `authorColors` nested under `theme:`. The splice loop stops at the first top-level key, so a flattened `authorColors:` is excluded from the block and silently dropped from `config.yml` - and `gui.authorColors` is the wrong path anyway, lazygit reads it at `gui.theme.authorColors`
-- `set_flavor.py` only edits the repository; nothing reaches the system until `just install-dotfiles`
-- Apps that own their own settings store stay manual: Obsidian, Telegram, Discord/Vesktop, Stylus, Chrome, Rectangle. `README.md` documents each
+- A palette change upstream is re-vendored by hand: copy the new `morok` files over, and edit the inlined blocks in place
+- lazygit reads `authorColors` at `gui.theme.authorColors`; `gui.authorColors` is the wrong path
+- Apps that own their own settings store stay manual: Obsidian, Telegram, Discord/Vesktop, Stylus, Chrome, Rectangle, Spotify. `README.md` documents each
 
 ### Plugin Manifests
 
