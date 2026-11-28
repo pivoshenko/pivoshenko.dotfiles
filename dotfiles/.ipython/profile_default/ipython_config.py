@@ -16,7 +16,7 @@ def set_input_mode(self, mode):
     shape = {InputMode.NAVIGATION: 1, InputMode.REPLACE: 3}.get(mode, 5)
     raw = f"\x1b[{shape} q"
     out = (
-        sys.stdout._cli.output.write_raw  # type: ignore[attr-defined]  # ty: ignore[unresolved-attribute]
+        sys.stdout._cli.output.write_raw  # type: ignore[attr-defined]  # ty: ignore[missing-attribute]
         if hasattr(sys.stdout, "_cli")
         else sys.stdout.write
     )
@@ -25,7 +25,7 @@ def set_input_mode(self, mode):
     self._input_mode = mode
 
 
-ViState._input_mode = InputMode.INSERT  # ty: ignore[unresolved-attribute]
+ViState._input_mode = InputMode.INSERT  # ty: ignore[missing-attribute]
 ViState.input_mode = property(get_input_mode, set_input_mode)  # ty: ignore[invalid-assignment]
 
 c.TerminalInteractiveShell.editing_mode = "vi"  # noqa: F821  # ty: ignore[unresolved-reference]
