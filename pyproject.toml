@@ -3,7 +3,7 @@ name = "pivoshenko-dotfiles"
 version = "1.0.0"
 description = "pivoshenko.dotfiles"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.14"
 classifiers = [
   "Programming Language :: Python :: 3 :: Only",
   "Programming Language :: Python :: 3.13",
@@ -12,12 +12,18 @@ classifiers = [
 dependencies = []
 
 [dependency-groups]
-dev = ["ipdb~=0.13.13", "ipython~=9.18.1", "uv-upsync~=2.4.2"]
-formatters = ["ruff~=0.17.4"]
-linters = ["ruff~=0.17.4", "ty~=0.0.99"]
+dev = ["ipdb~=0.13.13", "ipython~=9.19.1"]
+formatters = ["ruff~=0.17.6"]
+linters = ["ruff~=0.17.6", "ty~=0.0.112"]
+tests = [
+  "pytest~=9.2.0",
+  "pytest-cov~=7.1.0",
+  "pytest-mock~=3.17.0",
+  "pytest-sugar~=1.1.1",
+]
 
 [tool.ruff]
-target-version = "py313"
+target-version = "py314"
 line-length = 100
 fix = true
 unsafe-fixes = true
@@ -39,6 +45,7 @@ lint.ignore = [
 ]
 # IPython configs patch prompt_toolkit internals through untyped callbacks
 lint.per-file-ignores."dotfiles/**" = ["ANN", "SLF001"]
+lint.per-file-ignores."tests/**" = ["INP001", "PLR2004", "S101", "SLF001"]
 lint.isort.force-single-line = true
 lint.isort.from-first = false
 lint.isort.length-sort-straight = true
@@ -48,3 +55,14 @@ lint.isort.required-imports = ["from __future__ import annotations"]
 
 [tool.ty]
 environment.python-version = "3.13"
+
+[tool.pytest]
+ini_options.testpaths = ["tests"]
+ini_options.addopts = [
+  "--color=yes",
+  "--cov=dotfiles/.ipython",
+  "--cov-report=term-missing",
+]
+
+[tool.coverage]
+run.omit = ["*/__init__.py"]
