@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-`pivoshenko.dotfiles` is a personal macOS dotfiles repository. There is no application to build and no test suite - the "product" is the `dotfiles/` staging tree, which [dotdrop](https://github.com/deadc0de6/dotdrop) deploys into `$HOME`, orchestrated by [just](https://github.com/casey/just). There are no standalone scripts; the executable code is itself deployed config - `dotfiles/.claude/statusline-command.sh`, the fish files under `dotfiles/.config/fish/`, and `dotfiles/.ipython/profile_default/startup/start.py`.
+`pivoshenko.dotfiles` is a personal macOS dotfiles repository. There is no application to build, and the only tests are a small pytest suite over the IPython config - the "product" is the `dotfiles/` staging tree, which [dotdrop](https://github.com/deadc0de6/dotdrop) deploys into `$HOME`, orchestrated by [just](https://github.com/casey/just). There are no standalone scripts; the executable code is itself deployed config - `dotfiles/.claude/statusline-command.sh`, the fish files under `dotfiles/.config/fish/`, and `dotfiles/.ipython/profile_default/startup/start.py`.
 
 ## Commands
 
@@ -16,7 +16,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `just install-brew-packages` - `brew bundle` plus `brew bundle cleanup --force`, so removing a line from `Brewfile` uninstalls the package
 - `just format` / `just lint` - Ruff and ty over the Python files, `fish_indent` over the tracked fish files.
 
-There are no GitHub Actions workflows in this repository. `CONTRIBUTING.md` mentions tests; none exist here, and `just test` skips through the `.no-tests` sentinel.
+There are no GitHub Actions workflows in this repository. `just test` runs the pytest suite in `tests/` (it covers the IPython profile files via `runpy`, since `dotfiles/` is not an importable package).
 
 ## Architecture
 

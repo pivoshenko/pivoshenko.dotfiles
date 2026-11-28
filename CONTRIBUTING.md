@@ -75,9 +75,10 @@ This project uses [`just`](https://github.com/casey/just) as its task runner. Ru
 | `just format` | Applies Ruff's autofixes and formatting to the Python files, and `fish_indent` to the fish files |
 | `just lint` | Checks the Python files with Ruff and ty, and the fish files with `fish_indent --check`, without changing anything |
 | `just audit` | Checks the dependencies for known vulnerabilities (uv) |
-| `just test` | Skips through the `.no-tests` sentinel; there are no tests |
-| `just check` | Runs `lint` then `test` |
+| `just test` | Runs the pytest suite under `tests/` with coverage |
+| `just check` | Runs `lint`, `audit`, then `test` |
 | `just update` | Upgrades `uv.lock`, then realigns the `pyproject.toml` constraints to it with uv-upsync |
+| `just refresh` | Runs `install` (the full bootstrap), `update`, `format`, then `check` |
 
 1. Fork the repository and clone your fork
 2. Create a branch for your change
