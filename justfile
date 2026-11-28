@@ -1,10 +1,24 @@
 default:
     @just --list
 
-install: install-brew-packages install-dotfiles install-fish-plugins build-bat-cache link-vault install-macos-defaults
+audit:
+    uv audit --preview-features audit-command
 
 build-bat-cache:
     bat cache --build
+
+check: lint audit test
+
+format: format-py format-fish
+
+format-fish:
+    git ls-files '*.fish' | xargs fish_indent --write
+
+format-py:
+    uv run ruff check --fix .
+    uv run ruff format .
+
+install: install-brew-packages install-dotfiles install-fish-plugins build-bat-cache link-vault install-macos-defaults
 
 install-brew-packages:
     brew bundle --force --upgrade
@@ -32,35 +46,23 @@ install-macos-defaults:
     defaults write io.tailscale.ipn.macsys HideDockIcon -bool true
     defaults write io.tailscale.ipn.macsys TailscaleStartOnLogin -bool true
 
-format: format-py format-fish
-
-format-py:
-    uv run ruff check --fix .
-    uv run ruff format .
-
-format-fish:
-    git ls-files '*.fish' | xargs fish_indent --write
+link-vault:
+    ln -sfn "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault" ~/Vault
 
 lint: lint-py lint-fish
+
+lint-fish:
+    git ls-files '*.fish' | xargs fish_indent --check
 
 lint-py:
     uv run ruff check .
     uv run ty check .
 
-lint-fish:
-    git ls-files '*.fish' | xargs fish_indent --check
-
-audit:
-    uv audit --preview-features audit-command
+refresh: install update format check
 
 test:
-    @[ -f .no-tests ] && echo "skipping (.no-tests sentinel)" || { echo "no test command, add tests or restore .no-tests" >&2; exit 1; }
-
-check: lint test
+    uv run pytest .
 
 update:
     uv lock --upgrade
-    uv run uv-upsync
-
-link-vault:
-    ln -sfn "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault" ~/Vault
+    uvx uv-upsync@latest
