@@ -15,6 +15,7 @@ Thumbs.db
 .tmp/
 
 .venv/
+__pycache__/
 
 .coverage
 .coverage.*
